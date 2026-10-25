@@ -2,7 +2,7 @@
 # Transaction Fraud Detection Analytics Platform — Full Dependencies
 # Used for data pipeline execution, mathematical audits, and E2E testing
 # ==============================================================================
-pandas>=2.2.0
+pandas>=3.1.0
 numpy>=2.0.0
 scikit-learn>=1.5.0
 lightgbm>=4.5.0
