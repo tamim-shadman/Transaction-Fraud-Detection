@@ -1,6 +1,6 @@
 # Validation report
 
-Generated: **2026-10-25T14:02:19**  
+Generated: **2026-10-25T14:04:30**  
 Scope: **196 checks** against the workbook's generated tables, notebook, logs and app data layer.  
 Result: **196 passed / 0 failed**  
 Known source caveats recorded separately: **11**
