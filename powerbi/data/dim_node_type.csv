@@ -1,0 +1,12 @@
+﻿node_type,label,node_count,sort_order
+figure,Figure,129,1
+finding,Finding,64,2
+table,Table,46,3
+issue,Workspace issue,16,4
+phase,Phase,9,5
+rq,Research question,8,6
+interactive,Interactive artifact,7,7
+source,Source,6,8
+audit,Audit note,5,9
+run,Run,1,10
+notebook,Notebook,1,11

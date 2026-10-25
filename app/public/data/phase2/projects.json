@@ -1,0 +1,674 @@
+{
+  "generatedAt": "2026-10-21T16:49:12+00:00",
+  "programTitle": "Sparkov Card-Fraud Research Program",
+  "summary": {
+    "totalProjects": 7,
+    "completeProjects": 7,
+    "totalTracks": 7,
+    "totalPhases": 9,
+    "totalFindings": 64,
+    "strongFindings": 30,
+    "totalArtifacts": 182
+  },
+  "tracks": [
+    "Data Quality & Forensics",
+    "Exploratory Data Science",
+    "Feature Engineering",
+    "Machine Learning & Robustness",
+    "Risk Economics & Strategy",
+    "Statistical Methodology",
+    "Unsupervised Learning"
+  ],
+  "projects": [
+    {
+      "id": "PROJ-01",
+      "title": "Data Integrity, Forensic Verification & Contract Audit",
+      "shortTitle": "Data Forensics & Audit",
+      "track": "Data Quality & Forensics",
+      "leadRole": "Lead Forensic Data Scientist",
+      "phases": [
+        "P0"
+      ],
+      "phaseRange": "P0 (§01)",
+      "cellRange": "1–8",
+      "purpose": "Audit schema, evaluate contract invariants, and expose synthetic generator artifacts in merchant coordinates.",
+      "objectives": [
+        "Validate schema definitions and detect identifier leaks (trans_num, cc_num).",
+        "Expose coordinate jitter forensics in merchant locations (non-physical distance signal).",
+        "Establish baseline class imbalance across train and test temporal splits."
+      ],
+      "keyMetric": {
+        "label": "Imbalance Drift",
+        "value": "0.579% train → 0.386% test",
+        "interpretation": "Extreme imbalance with temporal drift"
+      },
+      "riskLevel": "High",
+      "riskNote": "Generator jitter artifacts in merchant coordinates create artificial discriminative signals.",
+      "deliverables": [
+        "Data contract assertions table (phase0_contracts.csv)",
+        "Generator forensic discrepancy register",
+        "Temporal boundary split verification (2020-06-21 12:13:37)"
+      ],
+      "limitations": [
+        "Raw source datasets (fraudTrain.csv, fraudTest.csv) are not in the local workspace.",
+        "Merchant coordinates represent per-transaction jitter, not physical store geography."
+      ],
+      "route": "/data-audit",
+      "status": "Complete",
+      "findingCount": 7,
+      "strongCount": 2,
+      "supportsCount": 2,
+      "caveatCount": 3,
+      "weakCount": 0,
+      "artifactCount": 8,
+      "figureCount": 4,
+      "tableCount": 4,
+      "rqs": [
+        "RQ1",
+        "RQ4",
+        "RQ6"
+      ],
+      "topFindings": [
+        {
+          "id": "F-003",
+          "title": "Class imbalance: train 7506/1296675 = 0.5789%, test 2145/555719 = 0.3860% — extreme imbalance, drift between splits detected",
+          "grade": "strong",
+          "rq": "RQ1",
+          "phase": "P0"
+        },
+        {
+          "id": "F-004",
+          "title": "Temporal split: train ends 2020-06-21 12:13:37, test starts 2020-06-21 12:14:25 — time-series CV is REQUIRED for any modeling (walk-forward implemented in §08)",
+          "grade": "strong",
+          "rq": "RQ1",
+          "phase": "P0"
+        },
+        {
+          "id": "F-002",
+          "title": "Schema audited; identifiers (cc_num/zip/trans_num) excluded from numeric analyses",
+          "grade": "supports",
+          "rq": "RQ1",
+          "phase": "P0"
+        },
+        {
+          "id": "F-005",
+          "title": "999 cards × ~1,471 median txns — repeated-measures structure ⇒ card-clustered inference (§06) is mandatory",
+          "grade": "supports",
+          "rq": "RQ1",
+          "phase": "P0"
+        }
+      ],
+      "phasesDetail": [
+        {
+          "id": "P0",
+          "name": "Data Audit & Generator Forensics",
+          "shortName": "Data audit",
+          "cellRange": "13–18",
+          "findings": 7,
+          "artifacts": 8
+        }
+      ]
+    },
+    {
+      "id": "PROJ-02",
+      "title": "Behavioral Patterns, Multi-Way Interactions & Temporal Dynamics",
+      "shortTitle": "Exploratory & Spatio-Temporal",
+      "track": "Exploratory Data Science",
+      "leadRole": "Principal Behavioral Scientist",
+      "phases": [
+        "P1",
+        "P2",
+        "P3"
+      ],
+      "phaseRange": "P1–P3 (§02–§04)",
+      "cellRange": "9–32",
+      "purpose": "Map univariate, bivariate and multi-way risk concentration across categories, amounts, cardholder history and temporal cycles.",
+      "objectives": [
+        "Characterize amount distributions, right-tail skew, and non-linear risk escalation.",
+        "Quantify category × hour of day interactions (e.g. night online shopping risk).",
+        "Decompose temporal series with STL (seasonality, day-of-week periodicity, change points)."
+      ],
+      "keyMetric": {
+        "label": "Night Interaction Risk",
+        "value": "42× baseline",
+        "interpretation": "Risk multiplier for night + risky categories + amt ≥ $500"
+      },
+      "riskLevel": "Medium",
+      "riskNote": "Card-level fraud incidence in simulator (97.7%) is opposite of production fraud concentration.",
+      "deliverables": [
+        "Amount quantile & monetary exposure ledger",
+        "Category × hour risk interaction heatmaps",
+        "STL time-series decomposition and autocorrelation profiles"
+      ],
+      "limitations": [
+        "Card-level fraud incidence is an artifact of the simulator's per-card allocation.",
+        "Structural breaks are driven by simulation campaigns rather than real calendar holidays."
+      ],
+      "route": "/interactions",
+      "status": "Complete",
+      "findingCount": 18,
+      "strongCount": 6,
+      "supportsCount": 9,
+      "caveatCount": 2,
+      "weakCount": 1,
+      "artifactCount": 70,
+      "figureCount": 59,
+      "tableCount": 11,
+      "rqs": [
+        "RQ1",
+        "RQ2",
+        "RQ3",
+        "RQ4",
+        "RQ5",
+        "RQ6"
+      ],
+      "topFindings": [
+        {
+          "id": "F-008",
+          "title": "Fraud amounts are strongly shifted right vs non-fraud (see §06 effect sizes: Cliff's delta with bootstrap CI)",
+          "grade": "strong",
+          "rq": "RQ2",
+          "phase": "P1"
+        },
+        {
+          "id": "F-010",
+          "title": "Night hours (00–06) show markedly elevated fraud rate vs volume share (see phase1_hour figure + §06 forest plot with CIs)",
+          "grade": "strong",
+          "rq": "RQ3",
+          "phase": "P1"
+        },
+        {
+          "id": "F-013",
+          "title": "Category × hour interaction: online-shopping-type categories concentrate fraud in the 22:00–06:00 window (see heatmap)",
+          "grade": "strong",
+          "rq": "RQ6",
+          "phase": "P2"
+        },
+        {
+          "id": "F-016",
+          "title": "Per-card fraud rate is bimodal: 2.3% of cards never defrauded, 97.7% defrauded at least once — fraud is card-clustered, not exchangeable across transactions",
+          "grade": "strong",
+          "rq": "RQ5",
+          "phase": "P2"
+        }
+      ],
+      "phasesDetail": [
+        {
+          "id": "P1",
+          "name": "Univariate Distributions",
+          "shortName": "Univariate",
+          "cellRange": "19–26",
+          "findings": 5,
+          "artifacts": 30
+        },
+        {
+          "id": "P2",
+          "name": "Bivariate & Interaction Analysis",
+          "shortName": "Bivariate",
+          "cellRange": "27–36",
+          "findings": 9,
+          "artifacts": 33
+        },
+        {
+          "id": "P3",
+          "name": "Temporal Structure",
+          "shortName": "Temporal",
+          "cellRange": "37–40",
+          "findings": 4,
+          "artifacts": 13
+        }
+      ]
+    },
+    {
+      "id": "PROJ-03",
+      "title": "Unsupervised Anomaly Detection & Manifold Representations",
+      "shortTitle": "Unsupervised & Manifold Discovery",
+      "track": "Unsupervised Learning",
+      "leadRole": "Staff Machine Learning Researcher",
+      "phases": [
+        "P4"
+      ],
+      "phaseRange": "P4 (§05)",
+      "cellRange": "33–42",
+      "purpose": "Evaluate whether fraud separates from genuine transactions in low-dimensional embeddings and unsupervised outlier detection.",
+      "objectives": [
+        "Test 2D manifold projections (PCA, UMAP, t-SNE) for class separability.",
+        "Measure clustering stability using K-Means and DBSCAN density clustering.",
+        "Benchmark unsupervised detectors: Isolation Forest, Local Outlier Factor (LOF), Autoencoders."
+      ],
+      "keyMetric": {
+        "label": "Peak Unsupervised AUC",
+        "value": "0.8810 (LOF)",
+        "interpretation": "Contextual outlier detection on sample"
+      },
+      "riskLevel": "Medium",
+      "riskNote": "High false positive rate under extreme class imbalance without behavioral card history.",
+      "deliverables": [
+        "2D embedding separability benchmark table",
+        "Cluster purity and fraud density analysis",
+        "Unsupervised detector comparison report"
+      ],
+      "limitations": [
+        "LOF evaluated on 5,000 transaction subsample due to quadratic distance complexity.",
+        "Unsupervised geometry reflects transaction volume density rather than fraud clusters."
+      ],
+      "route": "/advanced",
+      "status": "Complete",
+      "findingCount": 4,
+      "strongCount": 1,
+      "supportsCount": 3,
+      "caveatCount": 0,
+      "weakCount": 0,
+      "artifactCount": 31,
+      "figureCount": 27,
+      "tableCount": 4,
+      "rqs": [
+        "RQ7"
+      ],
+      "topFindings": [
+        {
+          "id": "F-029",
+          "title": "Unsupervised anomaly detection isolates fraud only weakly (AUCs 0.731–0.881): fraud is contextual relative to card history, not pointwise-outlying — motivates per-card features (§07)",
+          "grade": "strong",
+          "rq": "RQ7",
+          "phase": "P4"
+        },
+        {
+          "id": "F-026",
+          "title": "Embedding separability: best = PCA(2) (logistic AUC 0.816); embeddings show partial fraud structure but no clean separation — consistent with noisy-overlap fraud signatures",
+          "grade": "supports",
+          "rq": "RQ7",
+          "phase": "P4"
+        },
+        {
+          "id": "F-027",
+          "title": "K-Means (k=3): densest cluster reaches 1.9× baseline fraud rate — clusters capture some risk structure but no pure-fraud cluster",
+          "grade": "supports",
+          "rq": "RQ7",
+          "phase": "P4"
+        },
+        {
+          "id": "F-028",
+          "title": "Clustering stability: hierarchical vs K-Means ARI = 0.74; DBSCAN finds 1 clusters + 4% noise — structure is dominated by volume, not by fraud",
+          "grade": "supports",
+          "rq": "RQ7",
+          "phase": "P4"
+        }
+      ],
+      "phasesDetail": [
+        {
+          "id": "P4",
+          "name": "Advanced Visualization & Dimensionality Reduction",
+          "shortName": "Unsupervised",
+          "cellRange": "41–48",
+          "findings": 4,
+          "artifacts": 32
+        }
+      ]
+    },
+    {
+      "id": "PROJ-04",
+      "title": "Inferential Statistics, Non-Parametric Effect Sizes & Clustered Inference",
+      "shortTitle": "Statistical Inference & Effect Sizes",
+      "track": "Statistical Methodology",
+      "leadRole": "Lead Biostatistician & Quantitative Methodologist",
+      "phases": [
+        "P5"
+      ],
+      "phaseRange": "P5 (§06)",
+      "cellRange": "43–49",
+      "purpose": "Establish robust, non-parametric effect sizes with bootstrap intervals and control for repeated cardholder transaction clustering.",
+      "objectives": [
+        "Compute Cliff's delta and Kolmogorov-Smirnov distance with 95% bootstrap intervals.",
+        "Construct forest plots with Wilson confidence intervals and Benjamini-Hochberg FDR control.",
+        "Fit cluster-robust logit with card-level clusters to evaluate repeated-measures shrinkage."
+      ],
+      "keyMetric": {
+        "label": "Amount Cliff's Delta",
+        "value": "0.669 [0.656, 0.680]",
+        "interpretation": "Statistically robust rightward fraud amount shift"
+      },
+      "riskLevel": "Low",
+      "riskNote": "Rigorous inference; repeated-measures adjustments prevent over-claiming per-transaction effects.",
+      "deliverables": [
+        "Non-parametric effect size catalogue with bootstrap CIs",
+        "Category rate forest plot with Wilson intervals",
+        "Cardholder cluster-robust logistic regression coefficients"
+      ],
+      "limitations": [
+        "Single-seed synthetic simulation limits cross-environment generalization.",
+        "Statistical significance does not equal operational cost-effectiveness."
+      ],
+      "route": "/statistics",
+      "status": "Complete",
+      "findingCount": 5,
+      "strongCount": 5,
+      "supportsCount": 0,
+      "caveatCount": 0,
+      "weakCount": 0,
+      "artifactCount": 9,
+      "figureCount": 4,
+      "tableCount": 5,
+      "rqs": [
+        "RQ2",
+        "RQ3",
+        "RQ6"
+      ],
+      "topFindings": [
+        {
+          "id": "F-030",
+          "title": "Amount shift quantified: Cliff's delta = 0.669 [bootstrap CI 0.656, 0.680], KS D = 0.724 [0.715, 0.732], BH-q = 0",
+          "grade": "strong",
+          "rq": "RQ2",
+          "phase": "P5"
+        },
+        {
+          "id": "F-031",
+          "title": "Categorical associations with target: category V=0.067 > state > gender — effect sizes (not just p) reported per plan §7.2",
+          "grade": "strong",
+          "rq": "RQ6",
+          "phase": "P5"
+        },
+        {
+          "id": "F-032",
+          "title": "Hour forest: night hours carry statistically robust rate elevations (Wilson CIs exclude baseline after BH correction)",
+          "grade": "strong",
+          "rq": "RQ3",
+          "phase": "P5"
+        },
+        {
+          "id": "F-033",
+          "title": "Category forest identifies the high-risk merchant categories with CIs — the forest plot is the primary evidence table for categorical risk",
+          "grade": "strong",
+          "rq": "RQ6",
+          "phase": "P5"
+        }
+      ],
+      "phasesDetail": [
+        {
+          "id": "P5",
+          "name": "Statistical Testing & Effect Sizes",
+          "shortName": "Statistics",
+          "cellRange": "49–50",
+          "findings": 5,
+          "artifacts": 9
+        }
+      ]
+    },
+    {
+      "id": "PROJ-05",
+      "title": "Behavioral Feature Engineering, Leak-Aware Encodings & Survival Dynamics",
+      "shortTitle": "Behavioral Feature Engineering",
+      "track": "Feature Engineering",
+      "leadRole": "Principal Feature Engineer",
+      "phases": [
+        "P6"
+      ],
+      "phaseRange": "P6 (§07)",
+      "cellRange": "50–58",
+      "purpose": "Engineer leak-aware velocity features, cyclical temporal transforms, empirical Bayes shrinkage, and hazard models.",
+      "objectives": [
+        "Formulate causal expanding target encodings without future-to-past leakage.",
+        "Construct trailing velocity counters, cumulative spend, and implied travel speeds.",
+        "Model discrete-time fraud arrival hazard across customer account lifecycle."
+      ],
+      "keyMetric": {
+        "label": "Velocity Escalation",
+        "value": "Monotonic with speed",
+        "interpretation": "Strongest behavioral predictive signal"
+      },
+      "riskLevel": "Low",
+      "riskNote": "Expanding priors strictly respect causality; naive encodings leak future labels.",
+      "deliverables": [
+        "Target encoding causality proof and leakage demonstration",
+        "Velocity window definitions (1h, 24h, 7d, 30d)",
+        "Discrete-time hazard curves and cohort retention tables"
+      ],
+      "limitations": [
+        "Implied speed features depend on coordinate jitter noise rather than actual customer mobility.",
+        "Expanding window features induce severe distribution shift across long temporal horizons."
+      ],
+      "route": "/features",
+      "status": "Complete",
+      "findingCount": 11,
+      "strongCount": 5,
+      "supportsCount": 5,
+      "caveatCount": 1,
+      "weakCount": 0,
+      "artifactCount": 17,
+      "figureCount": 12,
+      "tableCount": 5,
+      "rqs": [
+        "RQ4",
+        "RQ5",
+        "RQ6",
+        "RQ8"
+      ],
+      "topFindings": [
+        {
+          "id": "F-035",
+          "title": "Velocity features are the strongest behavioral signals: fraud rate rises monotonically with implied speed and with trailing-window counts (see next figure)",
+          "grade": "strong",
+          "rq": "RQ5",
+          "phase": "P6"
+        },
+        {
+          "id": "F-038",
+          "title": "Leakage demo: naive group-mean TE correlates with the test target at ρ=0.048 vs causal ρ=0.048 — every published pipeline using full-data target encodings on this dataset overstates its signal",
+          "grade": "strong",
+          "rq": "RQ8",
+          "phase": "P6"
+        },
+        {
+          "id": "F-039",
+          "title": "Interaction check: night + risky categories + amt≥500 multiplies risk 42× vs baseline — interactions materially beat main effects (SHAP interactions in §08 for the model view)",
+          "grade": "strong",
+          "rq": "RQ6",
+          "phase": "P6"
+        },
+        {
+          "id": "F-043",
+          "title": "Repeated-fraud: 0.0% of affected cards experience ≥2 distinct fraud events; event-size distribution shows bursty multi-txn compromises rather than persistent re-fraud",
+          "grade": "strong",
+          "rq": "RQ5",
+          "phase": "P6"
+        }
+      ],
+      "phasesDetail": [
+        {
+          "id": "P6",
+          "name": "Feature Engineering & Depth Analyses",
+          "shortName": "Feature engineering",
+          "cellRange": "51–54",
+          "findings": 11,
+          "artifacts": 17
+        }
+      ]
+    },
+    {
+      "id": "PROJ-06",
+      "title": "Supervised Modeling, Decomposed Ablation & Out-of-Domain Transfer",
+      "shortTitle": "Supervised Modeling & OOD Transfer",
+      "track": "Machine Learning & Robustness",
+      "leadRole": "Lead Machine Learning Engineer",
+      "phases": [
+        "P7"
+      ],
+      "phaseRange": "P7 (§08)",
+      "cellRange": "59–75",
+      "purpose": "Train causal leak-free LightGBM, quantify out-of-domain transfer collapse, and isolate drift mechanisms via ablation.",
+      "objectives": [
+        "Train baseline leak-free LightGBM classifier with early stopping.",
+        "Conduct walk-forward time-ordered cross-validation (4 folds) for honest generalization.",
+        "Decompose ablation: isolate card_prior_fraud as the primary driver of OOD transfer failure.",
+        "Perform adversarial validation (AUC = 1.000) and PSI feature drift ranking."
+      ],
+      "keyMetric": {
+        "label": "In-Domain vs OOD Gap",
+        "value": "Δ = 0.478 PR-AUC",
+        "interpretation": "0.9510 in-domain vs 0.473 test score across folds"
+      },
+      "riskLevel": "High",
+      "riskNote": "Adversarial validation separates train and test perfectly (AUC = 1.000) via cumulative features.",
+      "deliverables": [
+        "Full causal LightGBM model scorecard",
+        "Decomposed feature-family ablation matrix",
+        "Population Stability Index (PSI) drift register"
+      ],
+      "limitations": [
+        "Single-seed experiment lacks variance bounds for hyperparameter tuning.",
+        "Cumulative velocity features do not transfer across temporal split boundaries."
+      ],
+      "route": "/model",
+      "status": "Complete",
+      "findingCount": 15,
+      "strongCount": 9,
+      "supportsCount": 6,
+      "caveatCount": 0,
+      "weakCount": 0,
+      "artifactCount": 37,
+      "figureCount": 23,
+      "tableCount": 14,
+      "rqs": [
+        "RQ8"
+      ],
+      "topFindings": [
+        {
+          "id": "F-046",
+          "title": "Adversarial validation achieves held-out AUC = 1.000 (FIX #3) — train and test are (near-)perfectly separable by cumulative-history features (top: te_category, te_state, n_prior). Every train→test metric in this notebook (final PR-AUC, ablation delta, learning curve) measures out-of-distribution transfer under temporal drift, NOT typical generalization; walk-forward CV within the train period is the honest generalization estimate, and the ablation / learning-curve deltas must be read through this OOD lens",
+          "grade": "strong",
+          "rq": "RQ8",
+          "phase": "P7"
+        },
+        {
+          "id": "F-047",
+          "title": "PSI per feature confirms which features drive the AUC=1.000 adversarial split: 7 of 27 features are SEVERE (PSI≥0.25) — top: month_sin=6.51, n_prior=5.10, month_cos=1.45. This corroborates the ablation: expanding target encodings and cumulative-history counts carry the train/test drift, so their within-model weight is a drift signal rather than a fraud signal",
+          "grade": "strong",
+          "rq": "RQ8",
+          "phase": "P7"
+        },
+        {
+          "id": "F-048",
+          "title": "Walk-forward CV (time-ordered, 4 folds): PR-AUC 0.9510 ± 0.0152 — single-carve-out estimates would understate variance (review rigor item)",
+          "grade": "strong",
+          "rq": "RQ8",
+          "phase": "P7"
+        },
+        {
+          "id": "F-049",
+          "title": "OOD transfer quantified (FIX #10): the SAME fold models score PR-AUC 0.951±0.015 in-domain but 0.473±0.076 on the held-out test split — mean OOD gap = +0.478 per fold. This is the cleanest single number for 'within-train generalisation minus cross-boundary transfer' and should be cited whenever anyone quotes a single train→test metric on this dataset",
+          "grade": "strong",
+          "rq": "RQ8",
+          "phase": "P7"
+        }
+      ],
+      "phasesDetail": [
+        {
+          "id": "P7",
+          "name": "Model Closure & Evaluation",
+          "shortName": "Model lab",
+          "cellRange": "55–63",
+          "findings": 19,
+          "artifacts": 37
+        }
+      ]
+    },
+    {
+      "id": "PROJ-07",
+      "title": "Decision Policy Economics, Operating Thresholds & Dollar Capture",
+      "shortTitle": "Decision Economics & Policy",
+      "track": "Risk Economics & Strategy",
+      "leadRole": "Director of Fraud Risk Operations",
+      "phases": [
+        "P7",
+        "P8"
+      ],
+      "phaseRange": "P7–P8 (§08–§09)",
+      "cellRange": "76–84",
+      "purpose": "Optimize review operating thresholds under variable friction costs ($1–$50 FP) and evaluate capture@k budget curves.",
+      "objectives": [
+        "Derive cost-sensitive operating thresholds minimizing expected total financial loss.",
+        "Evaluate review budget capacity: dollar capture and event recall at 1%–5% review bandwidth.",
+        "Audit segment-level error distributions and financial exposure trade-offs."
+      ],
+      "keyMetric": {
+        "label": "Capture @ 1% Budget",
+        "value": "68.7% fraud dollars",
+        "interpretation": "Captures 65.5% fraud events, 68.7% dollars in top 1% reviews"
+      },
+      "riskLevel": "Medium",
+      "riskNote": "Optimal operating point swings 443× depending on friction cost per review ($1 vs $50).",
+      "deliverables": [
+        "Expected loss minimization threshold curves",
+        "Capture@k budget table (1%, 2%, 5%, 10%)",
+        "Cost-sensitivity frontier and segment error diagnostics"
+      ],
+      "limitations": [
+        "Assumes static $5 baseline review friction cost without model retraining.",
+        "Excludes downstream customer friction, merchant dispute costs, and investigator queue latency."
+      ],
+      "route": "/economics",
+      "status": "Complete",
+      "findingCount": 4,
+      "strongCount": 2,
+      "supportsCount": 2,
+      "caveatCount": 0,
+      "weakCount": 0,
+      "artifactCount": 40,
+      "figureCount": 23,
+      "tableCount": 17,
+      "rqs": [
+        "RQ6",
+        "RQ8"
+      ],
+      "topFindings": [
+        {
+          "id": "F-058",
+          "title": "Cost-sensitive operating point: threshold 0.0000 minimizes expected loss (FP $5 friction vs full fraud amount) — recall 0.842 with $92,044 missed",
+          "grade": "strong",
+          "rq": "RQ8",
+          "phase": "P7"
+        },
+        {
+          "id": "F-060",
+          "title": "Review budget: flagging top 1% of test by score captures 65.5% of fraud events and 68.7% of fraud dollars",
+          "grade": "strong",
+          "rq": "RQ8",
+          "phase": "P7"
+        },
+        {
+          "id": "F-059",
+          "title": "Cost sensitivity (FIX #12): the cost-min threshold is fragile under FP-cost assumptions from $1 to $50 (threshold ratio 443.6×, optimal thresholds 0.0000–0.0004) — 70.2%–91.6% recall range across the sweep",
+          "grade": "supports",
+          "rq": "RQ8",
+          "phase": "P7"
+        },
+        {
+          "id": "F-064",
+          "title": "Segment errors at the operating point: weakest recall in health_fitness, kids_pets, personal_care — where fraud is rare or amounts are small (see table for state/hour breakdowns)",
+          "grade": "supports",
+          "rq": "RQ6",
+          "phase": "P7"
+        }
+      ],
+      "phasesDetail": [
+        {
+          "id": "P7",
+          "name": "Model Closure & Evaluation",
+          "shortName": "Model lab",
+          "cellRange": "55–63",
+          "findings": 19,
+          "artifacts": 37
+        },
+        {
+          "id": "P8",
+          "name": "Report & Reproducibility",
+          "shortName": "Report",
+          "cellRange": "64–65",
+          "findings": 0,
+          "artifacts": 3
+        }
+      ]
+    }
+  ]
+}

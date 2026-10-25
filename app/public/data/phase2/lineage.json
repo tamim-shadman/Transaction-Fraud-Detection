@@ -1,0 +1,6323 @@
+{
+  "generatedAt": "2026-10-21T16:49:12+00:00",
+  "counts": {
+    "nodes": 292,
+    "links": 374,
+    "verifiedLinks": 365,
+    "inferredLinks": 9,
+    "nodeTypes": {
+      "run": 1,
+      "notebook": 1,
+      "source": 6,
+      "phase": 9,
+      "rq": 8,
+      "finding": 64,
+      "audit": 5,
+      "issue": 16,
+      "figure": 129,
+      "interactive": 7,
+      "table": 46
+    }
+  },
+  "nodes": [
+    {
+      "id": "run",
+      "label": "RUN-20261020-1630",
+      "type": "run",
+      "phase": "RUN",
+      "route": "/artifacts?tab=run",
+      "meta": {
+        "label": "Full research run",
+        "duration": 5513,
+        "seed": 42
+      }
+    },
+    {
+      "id": "notebook",
+      "label": "EDA notebook",
+      "type": "notebook",
+      "phase": "RUN",
+      "route": "/artifacts?tab=notebook",
+      "meta": {
+        "cells": 66,
+        "codeCells": 33
+      }
+    },
+    {
+      "id": "src:fraudTrain.csv",
+      "label": "fraudTrain.csv",
+      "type": "source",
+      "phase": "SOURCE",
+      "absent": true,
+      "route": "/artifacts?tab=run",
+      "meta": {
+        "role": "Raw training data",
+        "bytes": 368259891.2,
+        "present": false,
+        "hash": "fd7139200dbfcbed"
+      }
+    },
+    {
+      "id": "src:fraudTest.csv",
+      "label": "fraudTest.csv",
+      "type": "source",
+      "phase": "SOURCE",
+      "absent": true,
+      "route": "/artifacts?tab=run",
+      "meta": {
+        "role": "Raw test data",
+        "bytes": 157705830.4,
+        "present": false,
+        "hash": "12d553ab19440c75"
+      }
+    },
+    {
+      "id": "src:fraud_eda_colab.ipynb",
+      "label": "fraud_eda_colab.ipynb",
+      "type": "source",
+      "phase": "SOURCE",
+      "absent": false,
+      "route": "/artifacts?tab=run",
+      "meta": {
+        "role": "Research notebook",
+        "bytes": 4052809,
+        "present": true,
+        "hash": null
+      }
+    },
+    {
+      "id": "src:findings_ledger.json",
+      "label": "findings_ledger.json",
+      "type": "source",
+      "phase": "SOURCE",
+      "absent": false,
+      "route": "/artifacts?tab=run",
+      "meta": {
+        "role": "Evidence ledger",
+        "bytes": 29737,
+        "present": true,
+        "hash": null
+      }
+    },
+    {
+      "id": "src:figures/",
+      "label": "figures/",
+      "type": "source",
+      "phase": "SOURCE",
+      "absent": false,
+      "route": "/artifacts?tab=run",
+      "meta": {
+        "role": "Generated figures",
+        "bytes": 21055859,
+        "present": true,
+        "hash": null
+      }
+    },
+    {
+      "id": "src:tables/",
+      "label": "tables/",
+      "type": "source",
+      "phase": "SOURCE",
+      "absent": false,
+      "route": "/artifacts?tab=run",
+      "meta": {
+        "role": "Generated tables",
+        "bytes": 415794,
+        "present": true,
+        "hash": null
+      }
+    },
+    {
+      "id": "phase:P0",
+      "label": "P0 · Data audit",
+      "type": "phase",
+      "phase": "P0",
+      "route": "/data-audit",
+      "meta": {
+        "name": "Data Audit & Generator Forensics",
+        "cells": "13–18",
+        "methods": 8,
+        "artifacts": 8
+      }
+    },
+    {
+      "id": "phase:P1",
+      "label": "P1 · Univariate",
+      "type": "phase",
+      "phase": "P1",
+      "route": "/distributions",
+      "meta": {
+        "name": "Univariate Distributions",
+        "cells": "19–26",
+        "methods": 6,
+        "artifacts": 30
+      }
+    },
+    {
+      "id": "phase:P2",
+      "label": "P2 · Bivariate",
+      "type": "phase",
+      "phase": "P2",
+      "route": "/interactions",
+      "meta": {
+        "name": "Bivariate & Interaction Analysis",
+        "cells": "27–36",
+        "methods": 7,
+        "artifacts": 33
+      }
+    },
+    {
+      "id": "phase:P3",
+      "label": "P3 · Temporal",
+      "type": "phase",
+      "phase": "P3",
+      "route": "/temporal",
+      "meta": {
+        "name": "Temporal Structure",
+        "cells": "37–40",
+        "methods": 6,
+        "artifacts": 13
+      }
+    },
+    {
+      "id": "phase:P4",
+      "label": "P4 · Unsupervised",
+      "type": "phase",
+      "phase": "P4",
+      "route": "/advanced",
+      "meta": {
+        "name": "Advanced Visualization & Dimensionality Reduction",
+        "cells": "41–48",
+        "methods": 12,
+        "artifacts": 32
+      }
+    },
+    {
+      "id": "phase:P5",
+      "label": "P5 · Statistics",
+      "type": "phase",
+      "phase": "P5",
+      "route": "/statistics",
+      "meta": {
+        "name": "Statistical Testing & Effect Sizes",
+        "cells": "49–50",
+        "methods": 7,
+        "artifacts": 9
+      }
+    },
+    {
+      "id": "phase:P6",
+      "label": "P6 · Feature engineering",
+      "type": "phase",
+      "phase": "P6",
+      "route": "/features",
+      "meta": {
+        "name": "Feature Engineering & Depth Analyses",
+        "cells": "51–54",
+        "methods": 8,
+        "artifacts": 17
+      }
+    },
+    {
+      "id": "phase:P7",
+      "label": "P7 · Model lab",
+      "type": "phase",
+      "phase": "P7",
+      "route": "/model",
+      "meta": {
+        "name": "Model Closure & Evaluation",
+        "cells": "55–63",
+        "methods": 16,
+        "artifacts": 37
+      }
+    },
+    {
+      "id": "phase:P8",
+      "label": "P8 · Report",
+      "type": "phase",
+      "phase": "P8",
+      "route": "/artifacts",
+      "meta": {
+        "name": "Report & Reproducibility",
+        "cells": "64–65",
+        "methods": 5,
+        "artifacts": 3
+      }
+    },
+    {
+      "id": "rq:RQ1",
+      "label": "RQ1",
+      "type": "rq",
+      "phase": "RQ",
+      "route": "/findings?rq=RQ1",
+      "meta": {
+        "question": "Class imbalance & drift — how extreme and how stable is the fraud rate across time and splits?",
+        "findings": 6,
+        "strong": 2
+      }
+    },
+    {
+      "id": "rq:RQ2",
+      "label": "RQ2",
+      "type": "rq",
+      "phase": "RQ",
+      "route": "/findings?rq=RQ2",
+      "meta": {
+        "question": "Amount structure — do fraud and non-fraud amount distributions differ, and by how much?",
+        "findings": 2,
+        "strong": 2
+      }
+    },
+    {
+      "id": "rq:RQ3",
+      "label": "RQ3",
+      "type": "rq",
+      "phase": "RQ",
+      "route": "/findings?rq=RQ3",
+      "meta": {
+        "question": "Temporal concentration — when (hour / weekday / month / era) does fraud concentrate?",
+        "findings": 6,
+        "strong": 2
+      }
+    },
+    {
+      "id": "rq:RQ4",
+      "label": "RQ4",
+      "type": "rq",
+      "phase": "RQ",
+      "route": "/findings?rq=RQ4",
+      "meta": {
+        "question": "Geography — is risk spatially structured (state, city, ZIP3, card→merchant distance)?",
+        "findings": 6,
+        "strong": 0
+      }
+    },
+    {
+      "id": "rq:RQ5",
+      "label": "RQ5",
+      "type": "rq",
+      "phase": "RQ",
+      "route": "/findings?rq=RQ5",
+      "meta": {
+        "question": "Cardholder behavior — do velocity / history signatures separate fraud from genuine activity?",
+        "findings": 10,
+        "strong": 4
+      }
+    },
+    {
+      "id": "rq:RQ6",
+      "label": "RQ6",
+      "type": "rq",
+      "phase": "RQ",
+      "route": "/findings?rq=RQ6",
+      "meta": {
+        "question": "Categorical risk structure — which categories, states, jobs and merchants carry elevated risk?",
+        "findings": 11,
+        "strong": 7
+      }
+    },
+    {
+      "id": "rq:RQ7",
+      "label": "RQ7",
+      "type": "rq",
+      "phase": "RQ",
+      "route": "/findings?rq=RQ7",
+      "meta": {
+        "question": "Unsupervised separability — do embeddings, clusters and anomaly scores isolate fraud without labels?",
+        "findings": 4,
+        "strong": 1
+      }
+    },
+    {
+      "id": "rq:RQ8",
+      "label": "RQ8",
+      "type": "rq",
+      "phase": "RQ",
+      "route": "/findings?rq=RQ8",
+      "meta": {
+        "question": "Causal predictive ceiling — what leak-free performance is achievable and which feature families drive it?",
+        "findings": 19,
+        "strong": 12
+      }
+    },
+    {
+      "id": "finding:F-001",
+      "label": "F-001",
+      "type": "finding",
+      "phase": "P0",
+      "grade": "caveat",
+      "route": "/findings?finding=F-001",
+      "meta": {
+        "title": "Data contracts evaluated with actual min/max printed (FIX #5)",
+        "rq": "RQ1",
+        "cellRange": "13–18",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-002",
+      "label": "F-002",
+      "type": "finding",
+      "phase": "P0",
+      "grade": "supports",
+      "route": "/findings?finding=F-002",
+      "meta": {
+        "title": "Schema audited; identifiers (cc_num/zip/trans_num) excluded from numeric analyses",
+        "rq": "RQ1",
+        "cellRange": "13–18",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-003",
+      "label": "F-003",
+      "type": "finding",
+      "phase": "P0",
+      "grade": "strong",
+      "route": "/findings?finding=F-003",
+      "meta": {
+        "title": "Class imbalance: train 7506/1296675 = 0.5789%, test 2145/555719 = 0.3860% — extreme imbalance, drift between splits detected",
+        "rq": "RQ1",
+        "cellRange": "13–18",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-004",
+      "label": "F-004",
+      "type": "finding",
+      "phase": "P0",
+      "grade": "strong",
+      "route": "/findings?finding=F-004",
+      "meta": {
+        "title": "Temporal split: train ends 2020-06-21 12:13:37, test starts 2020-06-21 12:14:25 — time-series CV is REQUIRED for any modeling (walk-forward implemented in §08)",
+        "rq": "RQ1",
+        "cellRange": "13–18",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-005",
+      "label": "F-005",
+      "type": "finding",
+      "phase": "P0",
+      "grade": "supports",
+      "route": "/findings?finding=F-005",
+      "meta": {
+        "title": "999 cards × ~1,471 median txns — repeated-measures structure ⇒ card-clustered inference (§06) is mandatory",
+        "rq": "RQ1",
+        "cellRange": "13–18",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-006",
+      "label": "F-006",
+      "type": "finding",
+      "phase": "P0",
+      "grade": "caveat",
+      "route": "/findings?finding=F-006",
+      "meta": {
+        "title": "merchant → category is deterministic (collinearity): merchant-level effects are category-level effects + noise from finite counts",
+        "rq": "RQ6",
+        "cellRange": "13–18",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-007",
+      "label": "F-007",
+      "type": "finding",
+      "phase": "P0",
+      "grade": "caveat",
+      "route": "/findings?finding=F-007",
+      "meta": {
+        "title": "Merchant coordinates are per-transaction jitter (no fixed store locations): any card→merchant distance signal is a property of the noise model, not geography — reported honestly wherever dist_km is used (see §07)",
+        "rq": "RQ4",
+        "cellRange": "13–18",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-008",
+      "label": "F-008",
+      "type": "finding",
+      "phase": "P1",
+      "grade": "strong",
+      "route": "/findings?finding=F-008",
+      "meta": {
+        "title": "Fraud amounts are strongly shifted right vs non-fraud (see §06 effect sizes: Cliff's delta with bootstrap CI)",
+        "rq": "RQ2",
+        "cellRange": "19–26",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-009",
+      "label": "F-009",
+      "type": "finding",
+      "phase": "P1",
+      "grade": "supports",
+      "route": "/findings?finding=F-009",
+      "meta": {
+        "title": "COVID window (Mar–Jun 2020) fraud-rate shift quantified vs adjacent windows",
+        "rq": "RQ3",
+        "cellRange": "19–26",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-010",
+      "label": "F-010",
+      "type": "finding",
+      "phase": "P1",
+      "grade": "strong",
+      "route": "/findings?finding=F-010",
+      "meta": {
+        "title": "Night hours (00–06) show markedly elevated fraud rate vs volume share (see phase1_hour figure + §06 forest plot with CIs)",
+        "rq": "RQ3",
+        "cellRange": "19–26",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-011",
+      "label": "F-011",
+      "type": "finding",
+      "phase": "P1",
+      "grade": "supports",
+      "route": "/findings?finding=F-011",
+      "meta": {
+        "title": "State-level fraud-rate gradient exists but small-n states shrink toward baseline under EB — geographic claims restricted to well-populated states",
+        "rq": "RQ4",
+        "cellRange": "19–26",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-012",
+      "label": "F-012",
+      "type": "finding",
+      "phase": "P1",
+      "grade": "supports",
+      "route": "/findings?finding=F-012",
+      "meta": {
+        "title": "Age gradient in fraud rate quantified by bin (see figure + §06 MW test with effect size for age)",
+        "rq": "RQ6",
+        "cellRange": "19–26",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-013",
+      "label": "F-013",
+      "type": "finding",
+      "phase": "P2",
+      "grade": "strong",
+      "route": "/findings?finding=F-013",
+      "meta": {
+        "title": "Category × hour interaction: online-shopping-type categories concentrate fraud in the 22:00–06:00 window (see heatmap)",
+        "rq": "RQ6",
+        "cellRange": "27–36",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-014",
+      "label": "F-014",
+      "type": "finding",
+      "phase": "P2",
+      "grade": "caveat",
+      "route": "/findings?finding=F-014",
+      "meta": {
+        "title": "dist_km separates classes (KS D=0.007) BUT is generator noise per §01 forensics — discriminative signal is an artifact of the simulator's fraud coordinate sampling, not physical travel",
+        "rq": "RQ4",
+        "cellRange": "27–36",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-015",
+      "label": "F-015",
+      "type": "finding",
+      "phase": "P2",
+      "grade": "supports",
+      "route": "/findings?finding=F-015",
+      "meta": {
+        "title": "zip3 regional structure: 1 states max per zip3 (purity=100.0%); zip3 EB rates add granularity beyond state for high-volume prefixes",
+        "rq": "RQ4",
+        "cellRange": "27–36",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-016",
+      "label": "F-016",
+      "type": "finding",
+      "phase": "P2",
+      "grade": "strong",
+      "route": "/findings?finding=F-016",
+      "meta": {
+        "title": "Per-card fraud rate is bimodal: 2.3% of cards never defrauded, 97.7% defrauded at least once — fraud is card-clustered, not exchangeable across transactions",
+        "rq": "RQ5",
+        "cellRange": "27–36",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-017",
+      "label": "F-017",
+      "type": "finding",
+      "phase": "P2",
+      "grade": "caveat",
+      "route": "/findings?finding=F-017",
+      "meta": {
+        "title": "GENERATOR ARTIFACT (do NOT transfer as a prior): 97.7% of cards have ≥1 fraud event on this dataset — Sparkov gives fraud to nearly every card, which is the OPPOSITE of production card data where most cards never see fraud. Card-level fraud rates here are a property of the simulator's per-card fraud-minting process, not of real cards",
+        "rq": "RQ5",
+        "cellRange": "27–36",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-018",
+      "label": "F-018",
+      "type": "finding",
+      "phase": "P2",
+      "grade": "supports",
+      "route": "/findings?finding=F-018",
+      "meta": {
+        "title": "Money lens: total fraud exposure $5,121,414; Gini=0.418; top-1% fraud txns = 2.3% of $ loss",
+        "rq": "RQ1",
+        "cellRange": "27–36",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-019",
+      "label": "F-019",
+      "type": "finding",
+      "phase": "P2",
+      "grade": "strong",
+      "route": "/findings?finding=F-019",
+      "meta": {
+        "title": "Fraud-dollar ranking by category (not just count) — review-budget tables in §08 use $ capture, not only recall",
+        "rq": "RQ6",
+        "cellRange": "27–36",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-020",
+      "label": "F-020",
+      "type": "finding",
+      "phase": "P2",
+      "grade": "supports",
+      "route": "/findings?finding=F-020",
+      "meta": {
+        "title": "MI ranking: behavioral/velocity features rank alongside amount — motivates the ablation experiment in §08",
+        "rq": "RQ5",
+        "cellRange": "27–36",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-021",
+      "label": "F-021",
+      "type": "finding",
+      "phase": "P2",
+      "grade": "supports",
+      "route": "/findings?finding=F-021",
+      "meta": {
+        "title": "Cramér's V: category vs target strongest categorical association; merchant↔category V≈1.0 (deterministic, §01) — drop one in modeling",
+        "rq": "RQ6",
+        "cellRange": "27–36",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-022",
+      "label": "F-022",
+      "type": "finding",
+      "phase": "P3",
+      "grade": "supports",
+      "route": "/findings?finding=F-022",
+      "meta": {
+        "title": "STL: weekly seasonality strength = 0.21 in daily fraud rate (trend + seasonality + residual plotted separately)",
+        "rq": "RQ3",
+        "cellRange": "37–40",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-023",
+      "label": "F-023",
+      "type": "finding",
+      "phase": "P3",
+      "grade": "supports",
+      "route": "/findings?finding=F-023",
+      "meta": {
+        "title": "Autocorrelation: daily volume lag-7 = 0.87 (weekly periodicity); fraud-rate lag-1 = 0.50 — evidence of temporal clustering of fraud",
+        "rq": "RQ3",
+        "cellRange": "37–40",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-024",
+      "label": "F-024",
+      "type": "finding",
+      "phase": "P3",
+      "grade": "weak",
+      "route": "/findings?finding=F-024",
+      "meta": {
+        "title": "Structural breaks in daily fraud-rate stable across PELT penalties (2 consensus breaks); holiday proximity: 0 coincidences — breaks are generator-campaign driven, not calendar-driven",
+        "rq": "RQ3",
+        "cellRange": "37–40",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-025",
+      "label": "F-025",
+      "type": "finding",
+      "phase": "P3",
+      "grade": "strong",
+      "route": "/findings?finding=F-025",
+      "meta": {
+        "title": "Fraud is LESS likely than genuine txns to follow >72h card silence (0.2% vs 0.6%; ratio 0.32) — among fraud txns that have a prior txn on the same card, 90.7% follow another FRAUD txn — the mechanism is rapid clustering, not dormancy: it is genuine spending that resumes after dormancy. The visual 'bursts after dormancy' impression from card timelines is quantitatively wrong (direction auto-graded from the data)",
+        "rq": "RQ5",
+        "cellRange": "37–40",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-026",
+      "label": "F-026",
+      "type": "finding",
+      "phase": "P4",
+      "grade": "supports",
+      "route": "/findings?finding=F-026",
+      "meta": {
+        "title": "Embedding separability: best = PCA(2) (logistic AUC 0.816); embeddings show partial fraud structure but no clean separation — consistent with noisy-overlap fraud signatures",
+        "rq": "RQ7",
+        "cellRange": "41–48",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-027",
+      "label": "F-027",
+      "type": "finding",
+      "phase": "P4",
+      "grade": "supports",
+      "route": "/findings?finding=F-027",
+      "meta": {
+        "title": "K-Means (k=3): densest cluster reaches 1.9× baseline fraud rate — clusters capture some risk structure but no pure-fraud cluster",
+        "rq": "RQ7",
+        "cellRange": "41–48",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-028",
+      "label": "F-028",
+      "type": "finding",
+      "phase": "P4",
+      "grade": "supports",
+      "route": "/findings?finding=F-028",
+      "meta": {
+        "title": "Clustering stability: hierarchical vs K-Means ARI = 0.74; DBSCAN finds 1 clusters + 4% noise — structure is dominated by volume, not by fraud",
+        "rq": "RQ7",
+        "cellRange": "41–48",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-029",
+      "label": "F-029",
+      "type": "finding",
+      "phase": "P4",
+      "grade": "strong",
+      "route": "/findings?finding=F-029",
+      "meta": {
+        "title": "Unsupervised anomaly detection isolates fraud only weakly (AUCs 0.731–0.881): fraud is contextual relative to card history, not pointwise-outlying — motivates per-card features (§07)",
+        "rq": "RQ7",
+        "cellRange": "41–48",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-030",
+      "label": "F-030",
+      "type": "finding",
+      "phase": "P5",
+      "grade": "strong",
+      "route": "/findings?finding=F-030",
+      "meta": {
+        "title": "Amount shift quantified: Cliff's delta = 0.669 [bootstrap CI 0.656, 0.680], KS D = 0.724 [0.715, 0.732], BH-q = 0",
+        "rq": "RQ2",
+        "cellRange": "49–50",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-031",
+      "label": "F-031",
+      "type": "finding",
+      "phase": "P5",
+      "grade": "strong",
+      "route": "/findings?finding=F-031",
+      "meta": {
+        "title": "Categorical associations with target: category V=0.067 > state > gender — effect sizes (not just p) reported per plan §7.2",
+        "rq": "RQ6",
+        "cellRange": "49–50",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-032",
+      "label": "F-032",
+      "type": "finding",
+      "phase": "P5",
+      "grade": "strong",
+      "route": "/findings?finding=F-032",
+      "meta": {
+        "title": "Hour forest: night hours carry statistically robust rate elevations (Wilson CIs exclude baseline after BH correction)",
+        "rq": "RQ3",
+        "cellRange": "49–50",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-033",
+      "label": "F-033",
+      "type": "finding",
+      "phase": "P5",
+      "grade": "strong",
+      "route": "/findings?finding=F-033",
+      "meta": {
+        "title": "Category forest identifies the high-risk merchant categories with CIs — the forest plot is the primary evidence table for categorical risk",
+        "rq": "RQ6",
+        "cellRange": "49–50",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-034",
+      "label": "F-034",
+      "type": "finding",
+      "phase": "P5",
+      "grade": "strong",
+      "route": "/findings?finding=F-034",
+      "meta": {
+        "title": "Cluster-robust logit (cards as clusters, n_cards=961): 5 of 8 effects survive card-clustered SEs — per-transaction effects are smaller than naive SEs suggest (repeated-measures structure matters)",
+        "rq": "RQ6",
+        "cellRange": "49–50",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-035",
+      "label": "F-035",
+      "type": "finding",
+      "phase": "P6",
+      "grade": "strong",
+      "route": "/findings?finding=F-035",
+      "meta": {
+        "title": "Velocity features are the strongest behavioral signals: fraud rate rises monotonically with implied speed and with trailing-window counts (see next figure)",
+        "rq": "RQ5",
+        "cellRange": "51–54",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-036",
+      "label": "F-036",
+      "type": "finding",
+      "phase": "P6",
+      "grade": "caveat",
+      "route": "/findings?finding=F-036",
+      "meta": {
+        "title": "Interpretation boundary: dist_km carries signal only because the generator jitters merchant coordinates per transaction and samples the jitter differently for fraud events — a property of the simulator, NOT of real-world geography. Distance features must be re-validated on real data.",
+        "rq": "RQ4",
+        "cellRange": "51–54",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-037",
+      "label": "F-037",
+      "type": "finding",
+      "phase": "P6",
+      "grade": "supports",
+      "route": "/findings?finding=F-037",
+      "meta": {
+        "title": "Hour-encoding comparison (ADDED): raw vs sin/cos vs one-hot PR-AUC 0.859 / 0.859 / 0.847 — cyclical is compact; one-hot marginally better if the hourly profile is non-smooth",
+        "rq": "RQ5",
+        "cellRange": "51–54",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-038",
+      "label": "F-038",
+      "type": "finding",
+      "phase": "P6",
+      "grade": "strong",
+      "route": "/findings?finding=F-038",
+      "meta": {
+        "title": "Leakage demo: naive group-mean TE correlates with the test target at ρ=0.048 vs causal ρ=0.048 — every published pipeline using full-data target encodings on this dataset overstates its signal",
+        "rq": "RQ8",
+        "cellRange": "51–54",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-039",
+      "label": "F-039",
+      "type": "finding",
+      "phase": "P6",
+      "grade": "strong",
+      "route": "/findings?finding=F-039",
+      "meta": {
+        "title": "Interaction check: night + risky categories + amt≥500 multiplies risk 42× vs baseline — interactions materially beat main effects (SHAP interactions in §08 for the model view)",
+        "rq": "RQ6",
+        "cellRange": "51–54",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-040",
+      "label": "F-040",
+      "type": "finding",
+      "phase": "P6",
+      "grade": "supports",
+      "route": "/findings?finding=F-040",
+      "meta": {
+        "title": "Cohort analysis: fraud risk varies by card age (early-card months differ from mature months) — see cohort heatmap; campaign-like arrival quantified next via survival analysis",
+        "rq": "RQ5",
+        "cellRange": "51–54",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-041",
+      "label": "F-041",
+      "type": "finding",
+      "phase": "P6",
+      "grade": "supports",
+      "route": "/findings?finding=F-041",
+      "meta": {
+        "title": "Time-to-first-fraud: hazard peaks at month 23 (48.889% vs flat 8.721%) — compared AGAINST the flat baseline hazard (FIX #8), so the 'fraud arrives early after card entry' claim is now supported rather than asserted; note this remains consistent with both campaign timing and generator card-aging, not proof of the former",
+        "rq": "RQ5",
+        "cellRange": "51–54",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-042",
+      "label": "F-042",
+      "type": "finding",
+      "phase": "P6",
+      "grade": "supports",
+      "route": "/findings?finding=F-042",
+      "meta": {
+        "title": "Customer lifetime: median 556 transactions before the first fraud; 9.3% of defrauded cards are hit on their very first transaction",
+        "rq": "RQ5",
+        "cellRange": "51–54",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-043",
+      "label": "F-043",
+      "type": "finding",
+      "phase": "P6",
+      "grade": "strong",
+      "route": "/findings?finding=F-043",
+      "meta": {
+        "title": "Repeated-fraud: 0.0% of affected cards experience ≥2 distinct fraud events; event-size distribution shows bursty multi-txn compromises rather than persistent re-fraud",
+        "rq": "RQ5",
+        "cellRange": "51–54",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-044",
+      "label": "F-044",
+      "type": "finding",
+      "phase": "P6",
+      "grade": "strong",
+      "route": "/findings?finding=F-044",
+      "meta": {
+        "title": "Merchant hierarchical EB (merchant∈category): shrinking toward the category EB prior prevents small-n merchants from dominating risk rankings — top merchants are consistently risky, not lucky",
+        "rq": "RQ6",
+        "cellRange": "51–54",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-045",
+      "label": "F-045",
+      "type": "finding",
+      "phase": "P6",
+      "grade": "supports",
+      "route": "/findings?finding=F-045",
+      "meta": {
+        "title": "Zip3→state hierarchy verified (100% single-state zip3s): zip3 rates are a consistent refinement of state rates for downstream encoding",
+        "rq": "RQ4",
+        "cellRange": "51–54",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-046",
+      "label": "F-046",
+      "type": "finding",
+      "phase": "P7",
+      "grade": "strong",
+      "route": "/findings?finding=F-046",
+      "meta": {
+        "title": "Adversarial validation achieves held-out AUC = 1.000 (FIX #3) — train and test are (near-)perfectly separable by cumulative-history features (top: te_category, te_state, n_prior). Every train→test metric in this notebook (final PR-AUC, ablation delta, learning curve) measures out-of-distribution transfer under temporal drift, NOT typical generalization; walk-forward CV within the train period is the honest generalization estimate, and the ablation / learning-curve deltas must be read through this OOD lens",
+        "rq": "RQ8",
+        "cellRange": "55–63",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-047",
+      "label": "F-047",
+      "type": "finding",
+      "phase": "P7",
+      "grade": "strong",
+      "route": "/findings?finding=F-047",
+      "meta": {
+        "title": "PSI per feature confirms which features drive the AUC=1.000 adversarial split: 7 of 27 features are SEVERE (PSI≥0.25) — top: month_sin=6.51, n_prior=5.10, month_cos=1.45. This corroborates the ablation: expanding target encodings and cumulative-history counts carry the train/test drift, so their within-model weight is a drift signal rather than a fraud signal",
+        "rq": "RQ8",
+        "cellRange": "55–63",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-048",
+      "label": "F-048",
+      "type": "finding",
+      "phase": "P7",
+      "grade": "strong",
+      "route": "/findings?finding=F-048",
+      "meta": {
+        "title": "Walk-forward CV (time-ordered, 4 folds): PR-AUC 0.9510 ± 0.0152 — single-carve-out estimates would understate variance (review rigor item)",
+        "rq": "RQ8",
+        "cellRange": "55–63",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-049",
+      "label": "F-049",
+      "type": "finding",
+      "phase": "P7",
+      "grade": "strong",
+      "route": "/findings?finding=F-049",
+      "meta": {
+        "title": "OOD transfer quantified (FIX #10): the SAME fold models score PR-AUC 0.951±0.015 in-domain but 0.473±0.076 on the held-out test split — mean OOD gap = +0.478 per fold. This is the cleanest single number for 'within-train generalisation minus cross-boundary transfer' and should be cited whenever anyone quotes a single train→test metric on this dataset",
+        "rq": "RQ8",
+        "cellRange": "55–63",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-050",
+      "label": "F-050",
+      "type": "finding",
+      "phase": "P7",
+      "grade": "strong",
+      "route": "/findings?finding=F-050",
+      "meta": {
+        "title": "Leak-free causal model — test PR-AUC = 0.5575, ROC-AUC = 0.9677 (expanding TE + velocity features, train-only prior; all published numbers on this dataset that use full-data encodings are not comparable)",
+        "rq": "RQ8",
+        "cellRange": "55–63",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-051",
+      "label": "F-051",
+      "type": "finding",
+      "phase": "P7",
+      "grade": "supports",
+      "route": "/findings?finding=F-051",
+      "meta": {
+        "title": "Time-decay weighting (half-life 180d): PR-AUC 0.5408 vs unweighted 0.5575 — recency weighting hurts on OOD test",
+        "rq": "RQ8",
+        "cellRange": "55–63",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-052",
+      "label": "F-052",
+      "type": "finding",
+      "phase": "P7",
+      "grade": "supports",
+      "route": "/findings?finding=F-052",
+      "meta": {
+        "title": "Monotonic constraints (4 constraints on fraud-directional features: log_amt, is_night, cnt_24h, card_prior_fraud): PR-AUC 0.5922 vs unconstrained 0.5575 — helps accuracy while making the model audit-compliant",
+        "rq": "RQ8",
+        "cellRange": "55–63",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-053",
+      "label": "F-053",
+      "type": "finding",
+      "phase": "P7",
+      "grade": "supports",
+      "route": "/findings?finding=F-053",
+      "meta": {
+        "title": "Fold-ensemble vs single final model: PR-AUC 0.5128 vs 0.5575 — single wins under OOD transfer",
+        "rq": "RQ8",
+        "cellRange": "55–63",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-054",
+      "label": "F-054",
+      "type": "finding",
+      "phase": "P7",
+      "grade": "supports",
+      "route": "/findings?finding=F-054",
+      "meta": {
+        "title": "Calibration: Brier = 0.00241, ECE = 0.0019 — probabilities are reasonably trustworthy (review rigor item)",
+        "rq": "RQ8",
+        "cellRange": "55–63",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-055",
+      "label": "F-055",
+      "type": "finding",
+      "phase": "P7",
+      "grade": "supports",
+      "route": "/findings?finding=F-055",
+      "meta": {
+        "title": "Temperature scaling (T=1.418) improves ECE from 0.0002 to 0.0001 on the early-stopping split — calibration is materially improved post-hoc",
+        "rq": "RQ8",
+        "cellRange": "55–63",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-056",
+      "label": "F-056",
+      "type": "finding",
+      "phase": "P7",
+      "grade": "strong",
+      "route": "/findings?finding=F-056",
+      "meta": {
+        "title": "Bootstrap 95% CI on test PR-AUC: [0.5365, 0.5784] around 0.5575 (n_boot=200) — the point estimate is a specific sample, not a generalisation claim (FIX #13)",
+        "rq": "RQ8",
+        "cellRange": "55–63",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-057",
+      "label": "F-057",
+      "type": "finding",
+      "phase": "P7",
+      "grade": "supports",
+      "route": "/findings?finding=F-057",
+      "meta": {
+        "title": "Leave-card-out CV (FIX #14): PR-AUC drops from 0.9948 on seen cards to 0.9639 on held-out cards (Δ = 0.0308) — the model uses per-card history that doesn't fully transfer to genuinely new customers; test rows of held-out cards score 0.5541. ((a) is partially in-sample, so the seen-vs-held gap is an upper bound on the new-customer penalty)",
+        "rq": "RQ8",
+        "cellRange": "55–63",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-058",
+      "label": "F-058",
+      "type": "finding",
+      "phase": "P7",
+      "grade": "strong",
+      "route": "/findings?finding=F-058",
+      "meta": {
+        "title": "Cost-sensitive operating point: threshold 0.0000 minimizes expected loss (FP $5 friction vs full fraud amount) — recall 0.842 with $92,044 missed",
+        "rq": "RQ8",
+        "cellRange": "55–63",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-059",
+      "label": "F-059",
+      "type": "finding",
+      "phase": "P7",
+      "grade": "supports",
+      "route": "/findings?finding=F-059",
+      "meta": {
+        "title": "Cost sensitivity (FIX #12): the cost-min threshold is fragile under FP-cost assumptions from $1 to $50 (threshold ratio 443.6×, optimal thresholds 0.0000–0.0004) — 70.2%–91.6% recall range across the sweep",
+        "rq": "RQ8",
+        "cellRange": "55–63",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-060",
+      "label": "F-060",
+      "type": "finding",
+      "phase": "P7",
+      "grade": "strong",
+      "route": "/findings?finding=F-060",
+      "meta": {
+        "title": "Review budget: flagging top 1% of test by score captures 65.5% of fraud events and 68.7% of fraud dollars",
+        "rq": "RQ8",
+        "cellRange": "55–63",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-061",
+      "label": "F-061",
+      "type": "finding",
+      "phase": "P7",
+      "grade": "strong",
+      "route": "/findings?finding=F-061",
+      "meta": {
+        "title": "Learning curve is NON-MONOTONIC: test PR-AUC peaks at frac=0.25 (n=324,168, PR-AUC=0.627) then falls to 0.525 on the full train set (drop 0.101) — more train-period data does NOT help, because train→test is a distribution shift (see the adversarial-validation finding: near-perfect split separability). All train→test metrics here measure OOD transfer; the walk-forward CV numbers are the honest generalization estimate",
+        "rq": "RQ8",
+        "cellRange": "55–63",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-062",
+      "label": "F-062",
+      "type": "finding",
+      "phase": "P7",
+      "grade": "strong",
+      "route": "/findings?finding=F-062",
+      "meta": {
+        "title": "Decomposed ablation (FIX #11): the biggest single contributor to the OOD failure is 'MINUS card_prior_fraud' — removing it recovers PR-AUC by +0.2740 (0.5575 → 0.8315). All-family deltas vs raw-only: FULL (all features)=-0.278; MINUS card_prior_fraud=-0.004; MINUS te_* (4 features)=-0.168; MINUS cnt_*/n_prior (3 features)=-0.270; MINUS velocity (4 features)=-0.150. This localises the drift mechanism: card_prior_fraud is what does not transfer across the split",
+        "rq": "RQ8",
+        "cellRange": "55–63",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-063",
+      "label": "F-063",
+      "type": "finding",
+      "phase": "P7",
+      "grade": "strong",
+      "route": "/findings?finding=F-063",
+      "meta": {
+        "title": "SHAP: top drivers are the behavioral/TE block (te_category, card_prior_fraud, cnt_24h...) + amount — consistent with the ablation",
+        "rq": "RQ8",
+        "cellRange": "55–63",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "finding:F-064",
+      "label": "F-064",
+      "type": "finding",
+      "phase": "P7",
+      "grade": "supports",
+      "route": "/findings?finding=F-064",
+      "meta": {
+        "title": "Segment errors at the operating point: weakest recall in health_fitness, kids_pets, personal_care — where fraud is rare or amounts are small (see table for state/hour breakdowns)",
+        "rq": "RQ6",
+        "cellRange": "55–63",
+        "source": "logs/findings_ledger.json"
+      }
+    },
+    {
+      "id": "note:AN-01",
+      "label": "AN-01",
+      "type": "audit",
+      "phase": "P6",
+      "route": "/findings?note=AN-01",
+      "meta": {
+        "title": "The leakage-demo claim is not supported by its own numbers",
+        "status": "contradicted",
+        "observation": "The recorded Spearman correlations are 0.048 for the naive encoding and 0.048 for the causal encoding—equal at the displayed precision. The notebook output does not demonstrate inflation."
+      }
+    },
+    {
+      "id": "note:AN-02",
+      "label": "AN-02",
+      "type": "audit",
+      "phase": "P2",
+      "route": "/findings?note=AN-02",
+      "meta": {
+        "title": "“Bimodal” card fraud is really zero-inflation plus a broad rate distribution",
+        "status": "wording",
+        "observation": "The 999 card profiles show 23 cards with zero fraud and 976 with one or more events. The positive cards have fraud rates spread from near zero to 100%; that is not a two-peak distribution."
+      }
+    },
+    {
+      "id": "note:AN-03",
+      "label": "AN-03",
+      "type": "audit",
+      "phase": "P0",
+      "route": "/findings?note=AN-03",
+      "meta": {
+        "title": "Merchant→category is near-deterministic, not strictly deterministic",
+        "status": "discrepancy",
+        "observation": "The generator forensics record merchant_single_category = False and max categories per merchant = 2."
+      }
+    },
+    {
+      "id": "note:AN-04",
+      "label": "AN-04",
+      "type": "audit",
+      "phase": "P5",
+      "route": "/findings?note=AN-04",
+      "meta": {
+        "title": "Cramér's V is compared across very different cardinalities",
+        "status": "method",
+        "observation": "Category V = 0.067 over 14 levels, but ZIP3 V = 0.148 over 532 levels. Uncorrected Cramér's V rises mechanically with cardinality and the table does not apply a bias correction."
+      }
+    },
+    {
+      "id": "note:AN-05",
+      "label": "AN-05",
+      "type": "audit",
+      "phase": "P8",
+      "route": "/findings?note=AN-05",
+      "meta": {
+        "title": "Artifact count differs from the notebook's closing summary",
+        "status": "discrepancy",
+        "observation": "The workspace contains 46 CSV tables, including figure_index.csv, findings_ledger.csv and reproducibility_checklist.csv."
+      }
+    },
+    {
+      "id": "issue:ISS-01",
+      "label": "ISS-01",
+      "type": "issue",
+      "phase": "P0",
+      "severity": "High",
+      "route": "/artifacts?tab=run",
+      "meta": {
+        "title": "Raw source datasets are absent from the workspace",
+        "status": "Open",
+        "scope": "Workspace",
+        "category": "Reproducibility"
+      }
+    },
+    {
+      "id": "issue:ISS-02",
+      "label": "ISS-02",
+      "type": "issue",
+      "phase": "P7",
+      "severity": "High",
+      "route": "/artifacts?tab=run",
+      "meta": {
+        "title": "Train→test shift makes every test metric an OOD estimate",
+        "status": "Open",
+        "scope": "Project",
+        "category": "Model risk"
+      }
+    },
+    {
+      "id": "issue:ISS-03",
+      "label": "ISS-03",
+      "type": "issue",
+      "phase": "P7",
+      "severity": "High",
+      "route": "/artifacts?tab=run",
+      "meta": {
+        "title": "card_prior_fraud dominates the transfer failure",
+        "status": "Open",
+        "scope": "Project",
+        "category": "Model risk"
+      }
+    },
+    {
+      "id": "issue:ISS-04",
+      "label": "ISS-04",
+      "type": "issue",
+      "phase": "P0",
+      "severity": "High",
+      "route": "/artifacts?tab=run",
+      "meta": {
+        "title": "Simulator artifacts limit external validity",
+        "status": "Open",
+        "scope": "Project",
+        "category": "External validity"
+      }
+    },
+    {
+      "id": "issue:ISS-05",
+      "label": "ISS-05",
+      "type": "issue",
+      "phase": "P6",
+      "severity": "Medium",
+      "route": "/artifacts?tab=run",
+      "meta": {
+        "title": "One strong finding is contradicted by its own evidence",
+        "status": "Open",
+        "scope": "Evidence",
+        "category": "Evidence quality"
+      }
+    },
+    {
+      "id": "issue:ISS-06",
+      "label": "ISS-06",
+      "type": "issue",
+      "phase": "P5",
+      "severity": "Medium",
+      "route": "/artifacts?tab=run",
+      "meta": {
+        "title": "Cramér's V comparisons ignore cardinality bias",
+        "status": "Open",
+        "scope": "Project",
+        "category": "Statistics"
+      }
+    },
+    {
+      "id": "issue:ISS-07",
+      "label": "ISS-07",
+      "type": "issue",
+      "phase": "P0",
+      "severity": "Low",
+      "route": "/artifacts?tab=run",
+      "meta": {
+        "title": "Age contract violation is unresolved",
+        "status": "Open",
+        "scope": "Project",
+        "category": "Data quality"
+      }
+    },
+    {
+      "id": "issue:ISS-08",
+      "label": "ISS-08",
+      "type": "issue",
+      "phase": "P0",
+      "severity": "Medium",
+      "route": "/artifacts?tab=run",
+      "meta": {
+        "title": "ZIP codes lose leading zeros",
+        "status": "Open",
+        "scope": "Project",
+        "category": "Data quality"
+      }
+    },
+    {
+      "id": "issue:ISS-09",
+      "label": "ISS-09",
+      "type": "issue",
+      "phase": "P0",
+      "severity": "Medium",
+      "route": "/artifacts?tab=run",
+      "meta": {
+        "title": "Structural missingness reaches 10.79%",
+        "status": "Open",
+        "scope": "Project",
+        "category": "Data quality"
+      }
+    },
+    {
+      "id": "issue:ISS-10",
+      "label": "ISS-10",
+      "type": "issue",
+      "phase": "P7",
+      "severity": "Medium",
+      "route": "/artifacts?tab=run",
+      "meta": {
+        "title": "The cost-minimizing operating point is precision-costly",
+        "status": "Open",
+        "scope": "Project",
+        "category": "Operations"
+      }
+    },
+    {
+      "id": "issue:ISS-11",
+      "label": "ISS-11",
+      "type": "issue",
+      "phase": "P7",
+      "severity": "Medium",
+      "route": "/artifacts?tab=run",
+      "meta": {
+        "title": "Optimal threshold is fragile to the false-positive cost",
+        "status": "Open",
+        "scope": "Project",
+        "category": "Decision risk"
+      }
+    },
+    {
+      "id": "issue:ISS-12",
+      "label": "ISS-12",
+      "type": "issue",
+      "phase": "P8",
+      "severity": "Medium",
+      "route": "/artifacts?tab=run",
+      "meta": {
+        "title": "Evidence excerpts are capped at 400 characters",
+        "status": "Open",
+        "scope": "Evidence",
+        "category": "Evidence quality"
+      }
+    },
+    {
+      "id": "issue:ISS-13",
+      "label": "ISS-13",
+      "type": "issue",
+      "phase": "P8",
+      "severity": "Medium",
+      "route": "/artifacts?tab=run",
+      "meta": {
+        "title": "Phase numbering is inconsistent across artifacts",
+        "status": "Mitigated",
+        "scope": "Workspace",
+        "category": "Metadata"
+      }
+    },
+    {
+      "id": "issue:ISS-14",
+      "label": "ISS-14",
+      "type": "issue",
+      "phase": "P4",
+      "severity": "Medium",
+      "route": "/artifacts?tab=run",
+      "meta": {
+        "title": "Runtime and resource telemetry is largely absent",
+        "status": "Open",
+        "scope": "Project",
+        "category": "Observability"
+      }
+    },
+    {
+      "id": "issue:ISS-15",
+      "label": "ISS-15",
+      "type": "issue",
+      "phase": "P4",
+      "severity": "Low",
+      "route": "/artifacts?tab=run",
+      "meta": {
+        "title": "Seven interactive maps have no static preview",
+        "status": "Accepted",
+        "scope": "Project",
+        "category": "Artifact quality"
+      }
+    },
+    {
+      "id": "issue:ISS-16",
+      "label": "ISS-16",
+      "type": "issue",
+      "phase": "P8",
+      "severity": "Medium",
+      "route": "/artifacts?tab=run",
+      "meta": {
+        "title": "Output bundle and full provenance digests are missing",
+        "status": "Open",
+        "scope": "Workspace",
+        "category": "Reproducibility"
+      }
+    },
+    {
+      "id": "artifact:phase0_missing_bar",
+      "label": "phase0_missing_bar",
+      "type": "figure",
+      "phase": "P0",
+      "route": "/artifacts?tab=figures&figure=phase0_missing_bar",
+      "provenance": "verified",
+      "meta": {
+        "title": "Missingno bar",
+        "cell": 19,
+        "bytes": 329588,
+        "group": "Data quality"
+      }
+    },
+    {
+      "id": "artifact:phase0_missing_matrix",
+      "label": "phase0_missing_matrix",
+      "type": "figure",
+      "phase": "P0",
+      "route": "/artifacts?tab=figures&figure=phase0_missing_matrix",
+      "provenance": "verified",
+      "meta": {
+        "title": "Missingno matrix",
+        "cell": 19,
+        "bytes": 28745,
+        "group": "Data quality"
+      }
+    },
+    {
+      "id": "artifact:phase0_temporal_coverage",
+      "label": "phase0_temporal_coverage",
+      "type": "figure",
+      "phase": "P0",
+      "route": "/artifacts?tab=figures&figure=phase0_temporal_coverage",
+      "provenance": "verified",
+      "meta": {
+        "title": "Daily volume by split + boundary",
+        "cell": 19,
+        "bytes": 185183,
+        "group": "Data quality"
+      }
+    },
+    {
+      "id": "artifact:phase0_txns_per_card",
+      "label": "phase0_txns_per_card",
+      "type": "figure",
+      "phase": "P0",
+      "route": "/artifacts?tab=figures&figure=phase0_txns_per_card",
+      "provenance": "verified",
+      "meta": {
+        "title": "Identifier audit: activity per card",
+        "cell": 19,
+        "bytes": 34873,
+        "group": "Data quality"
+      }
+    },
+    {
+      "id": "artifact:phase1_age",
+      "label": "phase1_age",
+      "type": "figure",
+      "phase": "P1",
+      "route": "/artifacts?tab=figures&figure=phase1_age",
+      "provenance": "verified",
+      "meta": {
+        "title": "Age distribution + fraud overlay",
+        "cell": 27,
+        "bytes": 83582,
+        "group": "Distribution & association"
+      }
+    },
+    {
+      "id": "artifact:phase1_age_bins",
+      "label": "phase1_age_bins",
+      "type": "figure",
+      "phase": "P1",
+      "route": "/artifacts?tab=figures&figure=phase1_age_bins",
+      "provenance": "verified",
+      "meta": {
+        "title": "Age bins 18-25/26-35/36-50/51-65/65+ (plan §3.4)",
+        "cell": 27,
+        "bytes": 84481,
+        "group": "Distribution & association"
+      }
+    },
+    {
+      "id": "artifact:phase1_amt_box_violin",
+      "label": "phase1_amt_box_violin",
+      "type": "figure",
+      "phase": "P1",
+      "route": "/artifacts?tab=figures&figure=phase1_amt_box_violin",
+      "provenance": "verified",
+      "meta": {
+        "title": "Amount box + violin",
+        "cell": 21,
+        "bytes": 47984,
+        "group": "Amount"
+      }
+    },
+    {
+      "id": "artifact:phase1_amt_ecdf",
+      "label": "phase1_amt_ecdf",
+      "type": "figure",
+      "phase": "P1",
+      "route": "/artifacts?tab=figures&figure=phase1_amt_ecdf",
+      "provenance": "verified",
+      "meta": {
+        "title": "Amount ECDF — fraud vs non-fraud",
+        "cell": 21,
+        "bytes": 45235,
+        "group": "Amount"
+      }
+    },
+    {
+      "id": "artifact:phase1_amt_hist",
+      "label": "phase1_amt_hist",
+      "type": "figure",
+      "phase": "P1",
+      "route": "/artifacts?tab=figures&figure=phase1_amt_hist",
+      "provenance": "verified",
+      "meta": {
+        "title": "Amount distribution raw + log",
+        "cell": 21,
+        "bytes": 51261,
+        "group": "Amount"
+      }
+    },
+    {
+      "id": "artifact:phase1_amt_overlay",
+      "label": "phase1_amt_overlay",
+      "type": "figure",
+      "phase": "P1",
+      "route": "/artifacts?tab=figures&figure=phase1_amt_overlay",
+      "provenance": "verified",
+      "meta": {
+        "title": "Amount density — fraud vs non-fraud (log10 x)",
+        "cell": 21,
+        "bytes": 72233,
+        "group": "Amount"
+      }
+    },
+    {
+      "id": "artifact:phase1_category",
+      "label": "phase1_category",
+      "type": "figure",
+      "phase": "P1",
+      "route": "/artifacts?tab=figures&figure=phase1_category",
+      "provenance": "verified",
+      "meta": {
+        "title": "Category volume + fraud rate (labels consistent across all plots)",
+        "cell": 25,
+        "bytes": 160003,
+        "group": "Distribution & association"
+      }
+    },
+    {
+      "id": "artifact:phase1_citypop",
+      "label": "phase1_citypop",
+      "type": "figure",
+      "phase": "P1",
+      "route": "/artifacts?tab=figures&figure=phase1_citypop",
+      "provenance": "verified",
+      "meta": {
+        "title": "City population distribution",
+        "cell": 27,
+        "bytes": 46159,
+        "group": "Geography"
+      }
+    },
+    {
+      "id": "artifact:phase1_citypop_bins",
+      "label": "phase1_citypop_bins",
+      "type": "figure",
+      "phase": "P1",
+      "route": "/artifacts?tab=figures&figure=phase1_citypop_bins",
+      "provenance": "verified",
+      "meta": {
+        "title": "City_pop binning",
+        "cell": 27,
+        "bytes": 89118,
+        "group": "Geography"
+      }
+    },
+    {
+      "id": "artifact:phase1_covid_window",
+      "label": "phase1_covid_window",
+      "type": "figure",
+      "phase": "P1",
+      "route": "/artifacts?tab=figures&figure=phase1_covid_window",
+      "provenance": "verified",
+      "meta": {
+        "title": "COVID behavioral shift focus (plan §3.2)",
+        "cell": 23,
+        "bytes": 108784,
+        "group": "Distribution & association"
+      }
+    },
+    {
+      "id": "artifact:phase1_dow",
+      "label": "phase1_dow",
+      "type": "figure",
+      "phase": "P1",
+      "route": "/artifacts?tab=figures&figure=phase1_dow",
+      "provenance": "verified",
+      "meta": {
+        "title": "Weekday pattern; Mon=0",
+        "cell": 23,
+        "bytes": 86080,
+        "group": "Distribution & association"
+      }
+    },
+    {
+      "id": "artifact:phase1_gender",
+      "label": "phase1_gender",
+      "type": "figure",
+      "phase": "P1",
+      "route": "/artifacts?tab=figures&figure=phase1_gender",
+      "provenance": "verified",
+      "meta": {
+        "title": "Gender (plan §3.3)",
+        "cell": 25,
+        "bytes": 65769,
+        "group": "Distribution & association"
+      }
+    },
+    {
+      "id": "artifact:phase1_gender_x_category",
+      "label": "phase1_gender_x_category",
+      "type": "figure",
+      "phase": "P1",
+      "route": "/artifacts?tab=figures&figure=phase1_gender_x_category",
+      "provenance": "verified",
+      "meta": {
+        "title": "Target interaction matrix (plan §3.5)",
+        "cell": 27,
+        "bytes": 62949,
+        "group": "Distribution & association"
+      }
+    },
+    {
+      "id": "artifact:phase1_geo_scatter",
+      "label": "phase1_geo_scatter",
+      "type": "figure",
+      "phase": "P1",
+      "route": "/artifacts?tab=figures&figure=phase1_geo_scatter",
+      "provenance": "verified",
+      "meta": {
+        "title": "Coordinate clouds — note merchant jitter (§01 forensics)",
+        "cell": 27,
+        "bytes": 153567,
+        "group": "Geography"
+      }
+    },
+    {
+      "id": "artifact:phase1_hour",
+      "label": "phase1_hour",
+      "type": "figure",
+      "phase": "P1",
+      "route": "/artifacts?tab=figures&figure=phase1_hour",
+      "provenance": "verified",
+      "meta": {
+        "title": "Night-time fraud concentration (plan §3.2)",
+        "cell": 23,
+        "bytes": 80835,
+        "group": "Distribution & association"
+      }
+    },
+    {
+      "id": "artifact:phase1_hour_by_year",
+      "label": "phase1_hour_by_year",
+      "type": "figure",
+      "phase": "P1",
+      "route": "/artifacts?tab=figures&figure=phase1_hour_by_year",
+      "provenance": "verified",
+      "meta": {
+        "title": "2019 vs 2020 hourly fraud-rate comparison",
+        "cell": 23,
+        "bytes": 59880,
+        "group": "Distribution & association"
+      }
+    },
+    {
+      "id": "artifact:phase1_job",
+      "label": "phase1_job",
+      "type": "figure",
+      "phase": "P1",
+      "route": "/artifacts?tab=figures&figure=phase1_job",
+      "provenance": "verified",
+      "meta": {
+        "title": "Long-tail jobs merged into 'Other'",
+        "cell": 25,
+        "bytes": 266684,
+        "group": "Distribution & association"
+      }
+    },
+    {
+      "id": "artifact:phase1_merchant_topN",
+      "label": "phase1_merchant_topN",
+      "type": "figure",
+      "phase": "P1",
+      "route": "/artifacts?tab=figures&figure=phase1_merchant_topN",
+      "provenance": "verified",
+      "meta": {
+        "title": "ADDED: merchant top-N by volume and by fraud rate",
+        "cell": 25,
+        "bytes": 185386,
+        "group": "Distribution & association"
+      }
+    },
+    {
+      "id": "artifact:phase1_month",
+      "label": "phase1_month",
+      "type": "figure",
+      "phase": "P1",
+      "route": "/artifacts?tab=figures&figure=phase1_month",
+      "provenance": "verified",
+      "meta": {
+        "title": "Monthly drift",
+        "cell": 23,
+        "bytes": 120314,
+        "group": "Other"
+      }
+    },
+    {
+      "id": "artifact:phase1_night",
+      "label": "phase1_night",
+      "type": "figure",
+      "phase": "P1",
+      "route": "/artifacts?tab=figures&figure=phase1_night",
+      "provenance": "verified",
+      "meta": {
+        "title": "Is_night flag",
+        "cell": 23,
+        "bytes": 78340,
+        "group": "Distribution & association"
+      }
+    },
+    {
+      "id": "artifact:phase1_qq_amt_age",
+      "label": "phase1_qq_amt_age",
+      "type": "figure",
+      "phase": "P1",
+      "route": "/artifacts?tab=figures&figure=phase1_qq_amt_age",
+      "provenance": "verified",
+      "meta": {
+        "title": "ADDED: QQ plots amount vs lognormal / age vs normal",
+        "cell": 21,
+        "bytes": 86162,
+        "group": "Amount"
+      }
+    },
+    {
+      "id": "artifact:phase1_state_forest",
+      "label": "phase1_state_forest",
+      "type": "figure",
+      "phase": "P1",
+      "route": "/artifacts?tab=figures&figure=phase1_state_forest",
+      "provenance": "verified",
+      "meta": {
+        "title": "States with largest n; grey = not sig.",
+        "cell": 25,
+        "bytes": 140501,
+        "group": "Geography"
+      }
+    },
+    {
+      "id": "artifact:phase1_target_donut",
+      "label": "phase1_target_donut",
+      "type": "figure",
+      "phase": "P1",
+      "route": "/artifacts?tab=figures&figure=phase1_target_donut",
+      "provenance": "verified",
+      "meta": {
+        "title": "Class imbalance donut (plan §3.5)",
+        "cell": 27,
+        "bytes": 43842,
+        "group": "Distribution & association"
+      }
+    },
+    {
+      "id": "artifact:phase1_weekend",
+      "label": "phase1_weekend",
+      "type": "figure",
+      "phase": "P1",
+      "route": "/artifacts?tab=figures&figure=phase1_weekend",
+      "provenance": "verified",
+      "meta": {
+        "title": "Is_weekend flag",
+        "cell": 23,
+        "bytes": 81496,
+        "group": "Distribution & association"
+      }
+    },
+    {
+      "id": "artifact:phase2_age_x_category",
+      "label": "phase2_age_x_category",
+      "type": "figure",
+      "phase": "P2",
+      "route": "/artifacts?tab=figures&figure=phase2_age_x_category",
+      "provenance": "verified",
+      "meta": {
+        "title": "Fraud rate — age bin × category",
+        "cell": 33,
+        "bytes": 80280,
+        "group": "Distribution & association"
+      }
+    },
+    {
+      "id": "artifact:phase2_amt_by_category",
+      "label": "phase2_amt_by_category",
+      "type": "figure",
+      "phase": "P2",
+      "route": "/artifacts?tab=figures&figure=phase2_amt_by_category",
+      "provenance": "verified",
+      "meta": {
+        "title": "Conditional amount by category",
+        "cell": 29,
+        "bytes": 210026,
+        "group": "Amount"
+      }
+    },
+    {
+      "id": "artifact:phase2_amt_cdf",
+      "label": "phase2_amt_cdf",
+      "type": "figure",
+      "phase": "P2",
+      "route": "/artifacts?tab=figures&figure=phase2_amt_cdf",
+      "provenance": "verified",
+      "meta": {
+        "title": "Amount CDF — fraud vs non-fraud",
+        "cell": 29,
+        "bytes": 45001,
+        "group": "Amount"
+      }
+    },
+    {
+      "id": "artifact:phase2_amtbin_x_hour",
+      "label": "phase2_amtbin_x_hour",
+      "type": "figure",
+      "phase": "P2",
+      "route": "/artifacts?tab=figures&figure=phase2_amtbin_x_hour",
+      "provenance": "verified",
+      "meta": {
+        "title": "Amount bins [0,10)/[10,50)/[50,100)/[100,500)/[500+ (plan §4.1)",
+        "cell": 29,
+        "bytes": 55899,
+        "group": "Amount"
+      }
+    },
+    {
+      "id": "artifact:phase2_card_rate_hist",
+      "label": "phase2_card_rate_hist",
+      "type": "figure",
+      "phase": "P2",
+      "route": "/artifacts?tab=figures&figure=phase2_card_rate_hist",
+      "provenance": "verified",
+      "meta": {
+        "title": "Per-card fraud rate bimodality (plan §4.5)",
+        "cell": 35,
+        "bytes": 40593,
+        "group": "Other"
+      }
+    },
+    {
+      "id": "artifact:phase2_card_scatter",
+      "label": "phase2_card_scatter",
+      "type": "figure",
+      "phase": "P2",
+      "route": "/artifacts?tab=figures&figure=phase2_card_scatter",
+      "provenance": "verified",
+      "meta": {
+        "title": "Mean amount vs txn count colored by fraud rate (plan §4.5)",
+        "cell": 35,
+        "bytes": 99140,
+        "group": "Other"
+      }
+    },
+    {
+      "id": "artifact:phase2_category_x_hour",
+      "label": "phase2_category_x_hour",
+      "type": "figure",
+      "phase": "P2",
+      "route": "/artifacts?tab=figures&figure=phase2_category_x_hour",
+      "provenance": "verified",
+      "meta": {
+        "title": "Does fraud concentrate in specific time-category combinations?",
+        "cell": 29,
+        "bytes": 94911,
+        "group": "Distribution & association"
+      }
+    },
+    {
+      "id": "artifact:phase2_citypop_x_category",
+      "label": "phase2_citypop_x_category",
+      "type": "figure",
+      "phase": "P2",
+      "route": "/artifacts?tab=figures&figure=phase2_citypop_x_category",
+      "provenance": "verified",
+      "meta": {
+        "title": "Fraud rate — city-pop bin × category",
+        "cell": 33,
+        "bytes": 80137,
+        "group": "Geography"
+      }
+    },
+    {
+      "id": "artifact:phase2_cramers_v",
+      "label": "phase2_cramers_v",
+      "type": "figure",
+      "phase": "P2",
+      "route": "/artifacts?tab=figures&figure=phase2_cramers_v",
+      "provenance": "verified",
+      "meta": {
+        "title": "Categorical association matrix",
+        "cell": 37,
+        "bytes": 94548,
+        "group": "Distribution & association"
+      }
+    },
+    {
+      "id": "artifact:phase2_dist_overlay",
+      "label": "phase2_dist_overlay",
+      "type": "figure",
+      "phase": "P2",
+      "route": "/artifacts?tab=figures&figure=phase2_dist_overlay",
+      "provenance": "verified",
+      "meta": {
+        "title": "Distance density — fraud vs non-fraud",
+        "cell": 31,
+        "bytes": 70187,
+        "group": "Geography"
+      }
+    },
+    {
+      "id": "artifact:phase2_dist_rate",
+      "label": "phase2_dist_rate",
+      "type": "figure",
+      "phase": "P2",
+      "route": "/artifacts?tab=figures&figure=phase2_dist_rate",
+      "provenance": "verified",
+      "meta": {
+        "title": "Distance threshold effect (plan §4.3)",
+        "cell": 31,
+        "bytes": 33327,
+        "group": "Geography"
+      }
+    },
+    {
+      "id": "artifact:phase2_dow_x_hour_rate",
+      "label": "phase2_dow_x_hour_rate",
+      "type": "figure",
+      "phase": "P2",
+      "route": "/artifacts?tab=figures&figure=phase2_dow_x_hour_rate",
+      "provenance": "verified",
+      "meta": {
+        "title": "Fraud rate — weekday × hour",
+        "cell": 29,
+        "bytes": 48760,
+        "group": "Distribution & association"
+      }
+    },
+    {
+      "id": "artifact:phase2_dow_x_hour_vol",
+      "label": "phase2_dow_x_hour_vol",
+      "type": "figure",
+      "phase": "P2",
+      "route": "/artifacts?tab=figures&figure=phase2_dow_x_hour_vol",
+      "provenance": "verified",
+      "meta": {
+        "title": "Plan §4.2",
+        "cell": 29,
+        "bytes": 37157,
+        "group": "Distribution & association"
+      }
+    },
+    {
+      "id": "artifact:phase2_gender_x_category",
+      "label": "phase2_gender_x_category",
+      "type": "figure",
+      "phase": "P2",
+      "route": "/artifacts?tab=figures&figure=phase2_gender_x_category",
+      "provenance": "verified",
+      "meta": {
+        "title": "Fraud rate — gender × category",
+        "cell": 33,
+        "bytes": 68671,
+        "group": "Distribution & association"
+      }
+    },
+    {
+      "id": "artifact:phase2_joint_amt_age",
+      "label": "phase2_joint_amt_age",
+      "type": "figure",
+      "phase": "P2",
+      "route": "/artifacts?tab=figures&figure=phase2_joint_amt_age",
+      "provenance": "verified",
+      "meta": {
+        "title": "ADDED: jointplot amount × age",
+        "cell": 33,
+        "bytes": 266495,
+        "group": "Amount"
+      }
+    },
+    {
+      "id": "artifact:phase2_joint_amt_dist",
+      "label": "phase2_joint_amt_dist",
+      "type": "figure",
+      "phase": "P2",
+      "route": "/artifacts?tab=figures&figure=phase2_joint_amt_dist",
+      "provenance": "verified",
+      "meta": {
+        "title": "ADDED: jointplot amount × distance",
+        "cell": 33,
+        "bytes": 271057,
+        "group": "Geography"
+      }
+    },
+    {
+      "id": "artifact:phase2_lorenz_fraud",
+      "label": "phase2_lorenz_fraud",
+      "type": "figure",
+      "phase": "P2",
+      "route": "/artifacts?tab=figures&figure=phase2_lorenz_fraud",
+      "provenance": "verified",
+      "meta": {
+        "title": "Money lens: concentration of fraud dollars",
+        "cell": 35,
+        "bytes": 66639,
+        "group": "Amount"
+      }
+    },
+    {
+      "id": "artifact:phase2_mi",
+      "label": "phase2_mi",
+      "type": "figure",
+      "phase": "P2",
+      "route": "/artifacts?tab=figures&figure=phase2_mi",
+      "provenance": "verified",
+      "meta": {
+        "title": "MI feature ranking (plan §4.6)",
+        "cell": 37,
+        "bytes": 52292,
+        "group": "Other"
+      }
+    },
+    {
+      "id": "artifact:phase2_money_category",
+      "label": "phase2_money_category",
+      "type": "figure",
+      "phase": "P2",
+      "route": "/artifacts?tab=figures&figure=phase2_money_category",
+      "provenance": "verified",
+      "meta": {
+        "title": "Money lens: fraud $ by category",
+        "cell": 35,
+        "bytes": 90704,
+        "group": "Amount"
+      }
+    },
+    {
+      "id": "artifact:phase2_money_month",
+      "label": "phase2_money_month",
+      "type": "figure",
+      "phase": "P2",
+      "route": "/artifacts?tab=figures&figure=phase2_money_month",
+      "provenance": "verified",
+      "meta": {
+        "title": "Money lens: monthly fraud $",
+        "cell": 35,
+        "bytes": 84114,
+        "group": "Amount"
+      }
+    },
+    {
+      "id": "artifact:phase2_pairplot",
+      "label": "phase2_pairplot",
+      "type": "figure",
+      "phase": "P2",
+      "route": "/artifacts?tab=figures&figure=phase2_pairplot",
+      "provenance": "verified",
+      "meta": {
+        "title": "ADDED: pairplot colored by fraud",
+        "cell": 33,
+        "bytes": 545806,
+        "group": "Other"
+      }
+    },
+    {
+      "id": "artifact:phase2_spearman",
+      "label": "phase2_spearman",
+      "type": "figure",
+      "phase": "P2",
+      "route": "/artifacts?tab=figures&figure=phase2_spearman",
+      "provenance": "verified",
+      "meta": {
+        "title": "Correlation structure (plan §4.6)",
+        "cell": 37,
+        "bytes": 218820,
+        "group": "Other"
+      }
+    },
+    {
+      "id": "artifact:phase2_zip3_forest",
+      "label": "phase2_zip3_forest",
+      "type": "figure",
+      "phase": "P2",
+      "route": "/artifacts?tab=figures&figure=phase2_zip3_forest",
+      "provenance": "verified",
+      "meta": {
+        "title": "ADDED: zip-prefix regional risk",
+        "cell": 31,
+        "bytes": 107863,
+        "group": "Geography"
+      }
+    },
+    {
+      "id": "artifact:phase3_acf_pacf",
+      "label": "phase3_acf_pacf",
+      "type": "figure",
+      "phase": "P3",
+      "route": "/artifacts?tab=figures&figure=phase3_acf_pacf",
+      "provenance": "verified",
+      "meta": {
+        "title": "ACF/PACF of daily volume & fraud rate (plan §5.2)",
+        "cell": 39,
+        "bytes": 85960,
+        "group": "Temporal"
+      }
+    },
+    {
+      "id": "artifact:phase3_card_timelines",
+      "label": "phase3_card_timelines",
+      "type": "figure",
+      "phase": "P3",
+      "route": "/artifacts?tab=figures&figure=phase3_card_timelines",
+      "provenance": "verified",
+      "meta": {
+        "title": "Card-level time lines (plan §5.5)",
+        "cell": 41,
+        "bytes": 131366,
+        "group": "Temporal"
+      }
+    },
+    {
+      "id": "artifact:phase3_changepoint",
+      "label": "phase3_changepoint",
+      "type": "figure",
+      "phase": "P3",
+      "route": "/artifacts?tab=figures&figure=phase3_changepoint",
+      "provenance": "verified",
+      "meta": {
+        "title": "Structural break detection with penalty sensitivity",
+        "cell": 41,
+        "bytes": 231510,
+        "group": "Temporal"
+      }
+    },
+    {
+      "id": "artifact:phase3_daily_rolling",
+      "label": "phase3_daily_rolling",
+      "type": "figure",
+      "phase": "P3",
+      "route": "/artifacts?tab=figures&figure=phase3_daily_rolling",
+      "provenance": "verified",
+      "meta": {
+        "title": "Daily aggregates with rolling means (plan §5.1)",
+        "cell": 39,
+        "bytes": 589849,
+        "group": "Temporal"
+      }
+    },
+    {
+      "id": "artifact:phase3_hour_x_dow_rate",
+      "label": "phase3_hour_x_dow_rate",
+      "type": "figure",
+      "phase": "P3",
+      "route": "/artifacts?tab=figures&figure=phase3_hour_x_dow_rate",
+      "provenance": "verified",
+      "meta": {
+        "title": "Fraud rate — hour × weekday",
+        "cell": 41,
+        "bytes": 48297,
+        "group": "Temporal"
+      }
+    },
+    {
+      "id": "artifact:phase3_hour_x_dow_vol",
+      "label": "phase3_hour_x_dow_vol",
+      "type": "figure",
+      "phase": "P3",
+      "route": "/artifacts?tab=figures&figure=phase3_hour_x_dow_vol",
+      "provenance": "verified",
+      "meta": {
+        "title": "Volume — hour × weekday",
+        "cell": 41,
+        "bytes": 37093,
+        "group": "Temporal"
+      }
+    },
+    {
+      "id": "artifact:phase3_hour_x_month",
+      "label": "phase3_hour_x_month",
+      "type": "figure",
+      "phase": "P3",
+      "route": "/artifacts?tab=figures&figure=phase3_hour_x_month",
+      "provenance": "verified",
+      "meta": {
+        "title": "Fraud rate — hour × month",
+        "cell": 41,
+        "bytes": 63112,
+        "group": "Temporal"
+      }
+    },
+    {
+      "id": "artifact:phase3_interarrival",
+      "label": "phase3_interarrival",
+      "type": "figure",
+      "phase": "P3",
+      "route": "/artifacts?tab=figures&figure=phase3_interarrival",
+      "provenance": "verified",
+      "meta": {
+        "title": "Inter-transaction time distribution",
+        "cell": 41,
+        "bytes": 36535,
+        "group": "Other"
+      }
+    },
+    {
+      "id": "artifact:phase3_month_x_dow",
+      "label": "phase3_month_x_dow",
+      "type": "figure",
+      "phase": "P3",
+      "route": "/artifacts?tab=figures&figure=phase3_month_x_dow",
+      "provenance": "verified",
+      "meta": {
+        "title": "Fraud rate — month × weekday",
+        "cell": 41,
+        "bytes": 47864,
+        "group": "Temporal"
+      }
+    },
+    {
+      "id": "artifact:phase3_stl",
+      "label": "phase3_stl",
+      "type": "figure",
+      "phase": "P3",
+      "route": "/artifacts?tab=figures&figure=phase3_stl",
+      "provenance": "verified",
+      "meta": {
+        "title": "STL decomposition (plan §5.1)",
+        "cell": 39,
+        "bytes": 437320,
+        "group": "Temporal"
+      }
+    },
+    {
+      "id": "artifact:phase3_weekly_rate",
+      "label": "phase3_weekly_rate",
+      "type": "figure",
+      "phase": "P3",
+      "route": "/artifacts?tab=figures&figure=phase3_weekly_rate",
+      "provenance": "verified",
+      "meta": {
+        "title": "Weekly aggregation (plan §5.1)",
+        "cell": 39,
+        "bytes": 102849,
+        "group": "Temporal"
+      }
+    },
+    {
+      "id": "artifact:phase3_year_x_month",
+      "label": "phase3_year_x_month",
+      "type": "figure",
+      "phase": "P3",
+      "route": "/artifacts?tab=figures&figure=phase3_year_x_month",
+      "provenance": "verified",
+      "meta": {
+        "title": "Fraud rate — year × month",
+        "cell": 41,
+        "bytes": 41930,
+        "group": "Temporal"
+      }
+    },
+    {
+      "id": "artifact:phase4_ae_error",
+      "label": "phase4_ae_error",
+      "type": "figure",
+      "phase": "P4",
+      "route": "/artifacts?tab=figures&figure=phase4_ae_error",
+      "provenance": "verified",
+      "meta": {
+        "title": "Autoencoder reconstruction error — fraud vs non-fraud (AUC=0.731)",
+        "cell": 47,
+        "bytes": 49863,
+        "group": "Other"
+      }
+    },
+    {
+      "id": "artifact:phase4_andrews",
+      "label": "phase4_andrews",
+      "type": "figure",
+      "phase": "P4",
+      "route": "/artifacts?tab=figures&figure=phase4_andrews",
+      "provenance": "verified",
+      "meta": {
+        "title": "Andrews curves",
+        "cell": 49,
+        "bytes": 627375,
+        "group": "Unsupervised"
+      }
+    },
+    {
+      "id": "artifact:phase4_dbscan_kdist",
+      "label": "phase4_dbscan_kdist",
+      "type": "figure",
+      "phase": "P4",
+      "route": "/artifacts?tab=figures&figure=phase4_dbscan_kdist",
+      "provenance": "verified",
+      "meta": {
+        "title": "DBSCAN eps tuning",
+        "cell": 45,
+        "bytes": 45939,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "artifact:phase4_dbscan_rate",
+      "label": "phase4_dbscan_rate",
+      "type": "figure",
+      "phase": "P4",
+      "route": "/artifacts?tab=figures&figure=phase4_dbscan_rate",
+      "provenance": "verified",
+      "meta": {
+        "title": "DBSCAN fraud rate per cluster incl. noise",
+        "cell": 45,
+        "bytes": 28612,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "artifact:phase4_dendrogram",
+      "label": "phase4_dendrogram",
+      "type": "figure",
+      "phase": "P4",
+      "route": "/artifacts?tab=figures&figure=phase4_dendrogram",
+      "provenance": "verified",
+      "meta": {
+        "title": "Hierarchical dendrogram",
+        "cell": 45,
+        "bytes": 38920,
+        "group": "Unsupervised"
+      }
+    },
+    {
+      "id": "artifact:phase4_hexbin_rate_contours",
+      "label": "phase4_hexbin_rate_contours",
+      "type": "figure",
+      "phase": "P4",
+      "route": "/artifacts?tab=figures&figure=phase4_hexbin_rate_contours",
+      "provenance": "verified",
+      "meta": {
+        "title": "Hexbin density + fraud-rate contours",
+        "cell": 49,
+        "bytes": 323161,
+        "group": "Unsupervised"
+      }
+    },
+    {
+      "id": "artifact:phase4_if_scores",
+      "label": "phase4_if_scores",
+      "type": "figure",
+      "phase": "P4",
+      "route": "/artifacts?tab=figures&figure=phase4_if_scores",
+      "provenance": "verified",
+      "meta": {
+        "title": "IF anomaly score — fraud vs non-fraud (AUC=0.843)",
+        "cell": 47,
+        "bytes": 74798,
+        "group": "Other"
+      }
+    },
+    {
+      "id": "artifact:phase4_if_vs_amt",
+      "label": "phase4_if_vs_amt",
+      "type": "figure",
+      "phase": "P4",
+      "route": "/artifacts?tab=figures&figure=phase4_if_vs_amt",
+      "provenance": "verified",
+      "meta": {
+        "title": "IF score vs amount",
+        "cell": 47,
+        "bytes": 381158,
+        "group": "Amount"
+      }
+    },
+    {
+      "id": "artifact:phase4_kmeans_fraud_rate",
+      "label": "phase4_kmeans_fraud_rate",
+      "type": "figure",
+      "phase": "P4",
+      "route": "/artifacts?tab=figures&figure=phase4_kmeans_fraud_rate",
+      "provenance": "verified",
+      "meta": {
+        "title": "Fraud rate per cluster",
+        "cell": 45,
+        "bytes": 37779,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "artifact:phase4_kmeans_radar",
+      "label": "phase4_kmeans_radar",
+      "type": "figure",
+      "phase": "P4",
+      "route": "/artifacts?tab=figures&figure=phase4_kmeans_radar",
+      "provenance": "verified",
+      "meta": {
+        "title": "Radar chart of cluster centers",
+        "cell": 45,
+        "bytes": 154790,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "artifact:phase4_kmeans_selection",
+      "label": "phase4_kmeans_selection",
+      "type": "figure",
+      "phase": "P4",
+      "route": "/artifacts?tab=figures&figure=phase4_kmeans_selection",
+      "provenance": "verified",
+      "meta": {
+        "title": "KMeans elbow + silhouette + CH (plan §6.2)",
+        "cell": 45,
+        "bytes": 78075,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "artifact:phase4_kmeans_x_category",
+      "label": "phase4_kmeans_x_category",
+      "type": "figure",
+      "phase": "P4",
+      "route": "/artifacts?tab=figures&figure=phase4_kmeans_x_category",
+      "provenance": "verified",
+      "meta": {
+        "title": "Cluster composition by category",
+        "cell": 45,
+        "bytes": 71111,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "artifact:phase4_lof_scores",
+      "label": "phase4_lof_scores",
+      "type": "figure",
+      "phase": "P4",
+      "route": "/artifacts?tab=figures&figure=phase4_lof_scores",
+      "provenance": "verified",
+      "meta": {
+        "title": "LOF score — fraud vs non-fraud (AUC=0.881)",
+        "cell": 47,
+        "bytes": 48489,
+        "group": "Other"
+      }
+    },
+    {
+      "id": "artifact:phase4_parallel_coords",
+      "label": "phase4_parallel_coords",
+      "type": "figure",
+      "phase": "P4",
+      "route": "/artifacts?tab=figures&figure=phase4_parallel_coords",
+      "provenance": "verified",
+      "meta": {
+        "title": "Parallel coordinates fraud vs non-fraud",
+        "cell": 49,
+        "bytes": 1101732,
+        "group": "Unsupervised"
+      }
+    },
+    {
+      "id": "artifact:phase4_pca_biplot",
+      "label": "phase4_pca_biplot",
+      "type": "figure",
+      "phase": "P4",
+      "route": "/artifacts?tab=figures&figure=phase4_pca_biplot",
+      "provenance": "verified",
+      "meta": {
+        "title": "PCA biplot (plan §6.1)",
+        "cell": 43,
+        "bytes": 118470,
+        "group": "Unsupervised"
+      }
+    },
+    {
+      "id": "artifact:phase4_pca_contours",
+      "label": "phase4_pca_contours",
+      "type": "figure",
+      "phase": "P4",
+      "route": "/artifacts?tab=figures&figure=phase4_pca_contours",
+      "provenance": "verified",
+      "meta": {
+        "title": "Density contour overlay on PCA",
+        "cell": 43,
+        "bytes": 122290,
+        "group": "Unsupervised"
+      }
+    },
+    {
+      "id": "artifact:phase4_pca_scatter",
+      "label": "phase4_pca_scatter",
+      "type": "figure",
+      "phase": "P4",
+      "route": "/artifacts?tab=figures&figure=phase4_pca_scatter",
+      "provenance": "verified",
+      "meta": {
+        "title": "PC1-PC2 scatter (plan §6.1)",
+        "cell": 43,
+        "bytes": 296897,
+        "group": "Unsupervised"
+      }
+    },
+    {
+      "id": "artifact:phase4_pca_scree",
+      "label": "phase4_pca_scree",
+      "type": "figure",
+      "phase": "P4",
+      "route": "/artifacts?tab=figures&figure=phase4_pca_scree",
+      "provenance": "verified",
+      "meta": {
+        "title": "PCA scree plot (plan §6.1)",
+        "cell": 43,
+        "bytes": 60312,
+        "group": "Unsupervised"
+      }
+    },
+    {
+      "id": "artifact:phase4_raincloud_amt_category",
+      "label": "phase4_raincloud_amt_category",
+      "type": "figure",
+      "phase": "P4",
+      "route": "/artifacts?tab=figures&figure=phase4_raincloud_amt_category",
+      "provenance": "verified",
+      "meta": {
+        "title": "Raincloud amount by category",
+        "cell": 49,
+        "bytes": 314268,
+        "group": "Unsupervised"
+      }
+    },
+    {
+      "id": "artifact:phase4_separability",
+      "label": "phase4_separability",
+      "type": "figure",
+      "phase": "P4",
+      "route": "/artifacts?tab=figures&figure=phase4_separability",
+      "provenance": "verified",
+      "meta": {
+        "title": "Separability comparison across embeddings",
+        "cell": 43,
+        "bytes": 51974,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "artifact:phase4_swarm_amt",
+      "label": "phase4_swarm_amt",
+      "type": "figure",
+      "phase": "P4",
+      "route": "/artifacts?tab=figures&figure=phase4_swarm_amt",
+      "provenance": "verified",
+      "meta": {
+        "title": "Swarm plot for small stratified samples",
+        "cell": 49,
+        "bytes": 118659,
+        "group": "Unsupervised"
+      }
+    },
+    {
+      "id": "artifact:phase4_tsne_p100",
+      "label": "phase4_tsne_p100",
+      "type": "figure",
+      "phase": "P4",
+      "route": "/artifacts?tab=figures&figure=phase4_tsne_p100",
+      "provenance": "verified",
+      "meta": {
+        "title": "T-SNE perplexity=100, n=20000",
+        "cell": 43,
+        "bytes": 512628,
+        "group": "Unsupervised"
+      }
+    },
+    {
+      "id": "artifact:phase4_tsne_p30",
+      "label": "phase4_tsne_p30",
+      "type": "figure",
+      "phase": "P4",
+      "route": "/artifacts?tab=figures&figure=phase4_tsne_p30",
+      "provenance": "verified",
+      "meta": {
+        "title": "T-SNE perplexity=30, n=20000",
+        "cell": 43,
+        "bytes": 651284,
+        "group": "Unsupervised"
+      }
+    },
+    {
+      "id": "artifact:phase4_tsne_p50",
+      "label": "phase4_tsne_p50",
+      "type": "figure",
+      "phase": "P4",
+      "route": "/artifacts?tab=figures&figure=phase4_tsne_p50",
+      "provenance": "verified",
+      "meta": {
+        "title": "T-SNE perplexity=50, n=20000",
+        "cell": 43,
+        "bytes": 572456,
+        "group": "Unsupervised"
+      }
+    },
+    {
+      "id": "artifact:phase4_umap_nn15_md0.1",
+      "label": "phase4_umap_nn15_md0.1",
+      "type": "figure",
+      "phase": "P4",
+      "route": "/artifacts?tab=figures&figure=phase4_umap_nn15_md0.1",
+      "provenance": "verified",
+      "meta": {
+        "title": "UMAP n_neighbors=15 min_dist=0.1",
+        "cell": 43,
+        "bytes": 234827,
+        "group": "Geography"
+      }
+    },
+    {
+      "id": "artifact:phase4_umap_nn15_md0.5",
+      "label": "phase4_umap_nn15_md0.5",
+      "type": "figure",
+      "phase": "P4",
+      "route": "/artifacts?tab=figures&figure=phase4_umap_nn15_md0.5",
+      "provenance": "verified",
+      "meta": {
+        "title": "UMAP n_neighbors=15 min_dist=0.5",
+        "cell": 43,
+        "bytes": 523633,
+        "group": "Geography"
+      }
+    },
+    {
+      "id": "artifact:phase4_umap_nn50_md0.1",
+      "label": "phase4_umap_nn50_md0.1",
+      "type": "figure",
+      "phase": "P4",
+      "route": "/artifacts?tab=figures&figure=phase4_umap_nn50_md0.1",
+      "provenance": "verified",
+      "meta": {
+        "title": "UMAP n_neighbors=50 min_dist=0.1",
+        "cell": 43,
+        "bytes": 196769,
+        "group": "Geography"
+      }
+    },
+    {
+      "id": "artifact:phase5_effectsize_forest",
+      "label": "phase5_effectsize_forest",
+      "type": "figure",
+      "phase": "P5",
+      "route": "/artifacts?tab=figures&figure=phase5_effectsize_forest",
+      "provenance": "verified",
+      "meta": {
+        "title": "ADDED: effect-size forest with bootstrap CIs + FDR",
+        "cell": 51,
+        "bytes": 64628,
+        "group": "Distribution & association"
+      }
+    },
+    {
+      "id": "artifact:phase5_forest_category",
+      "label": "phase5_forest_category",
+      "type": "figure",
+      "phase": "P5",
+      "route": "/artifacts?tab=figures&figure=phase5_forest_category",
+      "provenance": "verified",
+      "meta": {
+        "title": "Forest plot of category fraud rates vs baseline (plan §7.3)",
+        "cell": 51,
+        "bytes": 102839,
+        "group": "Distribution & association"
+      }
+    },
+    {
+      "id": "artifact:phase5_forest_hour",
+      "label": "phase5_forest_hour",
+      "type": "figure",
+      "phase": "P5",
+      "route": "/artifacts?tab=figures&figure=phase5_forest_hour",
+      "provenance": "verified",
+      "meta": {
+        "title": "Hour forest — night elevation with CIs",
+        "cell": 51,
+        "bytes": 117935,
+        "group": "Distribution & association"
+      }
+    },
+    {
+      "id": "artifact:phase5_forest_job",
+      "label": "phase5_forest_job",
+      "type": "figure",
+      "phase": "P5",
+      "route": "/artifacts?tab=figures&figure=phase5_forest_job",
+      "provenance": "verified",
+      "meta": {
+        "title": "ADDED depth: job-level rates with uncertainty",
+        "cell": 51,
+        "bytes": 146636,
+        "group": "Distribution & association"
+      }
+    },
+    {
+      "id": "artifact:phase7_card_age_curve",
+      "label": "phase7_card_age_curve",
+      "type": "figure",
+      "phase": "P6",
+      "route": "/artifacts?tab=figures&figure=phase7_card_age_curve",
+      "provenance": "verified",
+      "meta": {
+        "title": "Customer-lifetime framing",
+        "cell": 55,
+        "bytes": 53030,
+        "group": "Temporal"
+      }
+    },
+    {
+      "id": "artifact:phase7_cnt24h_rate",
+      "label": "phase7_cnt24h_rate",
+      "type": "figure",
+      "phase": "P6",
+      "route": "/artifacts?tab=figures&figure=phase7_cnt24h_rate",
+      "provenance": "verified",
+      "meta": {
+        "title": "Trailing 24h window count vs fraud rate",
+        "cell": 53,
+        "bytes": 30204,
+        "group": "Other"
+      }
+    },
+    {
+      "id": "artifact:phase7_cohort_heatmap",
+      "label": "phase7_cohort_heatmap",
+      "type": "figure",
+      "phase": "P6",
+      "route": "/artifacts?tab=figures&figure=phase7_cohort_heatmap",
+      "provenance": "verified",
+      "meta": {
+        "title": "Cohort analysis (review depth item)",
+        "cell": 55,
+        "bytes": 110081,
+        "group": "Temporal"
+      }
+    },
+    {
+      "id": "artifact:phase7_combo_lift",
+      "label": "phase7_combo_lift",
+      "type": "figure",
+      "phase": "P6",
+      "route": "/artifacts?tab=figures&figure=phase7_combo_lift",
+      "provenance": "verified",
+      "meta": {
+        "title": "Interaction risk concentration",
+        "cell": 53,
+        "bytes": 52822,
+        "group": "Distribution & association"
+      }
+    },
+    {
+      "id": "artifact:phase7_discrete_hazard",
+      "label": "phase7_discrete_hazard",
+      "type": "figure",
+      "phase": "P6",
+      "route": "/artifacts?tab=figures&figure=phase7_discrete_hazard",
+      "provenance": "verified",
+      "meta": {
+        "title": "Discrete-time hazard vs flat baseline (FIX #8)",
+        "cell": 55,
+        "bytes": 70966,
+        "group": "Temporal"
+      }
+    },
+    {
+      "id": "artifact:phase7_dist_artifact",
+      "label": "phase7_dist_artifact",
+      "type": "figure",
+      "phase": "P6",
+      "route": "/artifacts?tab=figures&figure=phase7_dist_artifact",
+      "provenance": "verified",
+      "meta": {
+        "title": "Distance artifact narrative (plan + review narrative)",
+        "cell": 53,
+        "bytes": 56815,
+        "group": "Geography"
+      }
+    },
+    {
+      "id": "artifact:phase7_fraud_event_sizes",
+      "label": "phase7_fraud_event_sizes",
+      "type": "figure",
+      "phase": "P6",
+      "route": "/artifacts?tab=figures&figure=phase7_fraud_event_sizes",
+      "provenance": "verified",
+      "meta": {
+        "title": "Repeated-fraud event analysis (review depth item)",
+        "cell": 55,
+        "bytes": 38225,
+        "group": "Other"
+      }
+    },
+    {
+      "id": "artifact:phase7_km_first_fraud",
+      "label": "phase7_km_first_fraud",
+      "type": "figure",
+      "phase": "P6",
+      "route": "/artifacts?tab=figures&figure=phase7_km_first_fraud",
+      "provenance": "verified",
+      "meta": {
+        "title": "KM time-to-first-fraud (plan §11 review: FIX #8)",
+        "cell": 55,
+        "bytes": 66166,
+        "group": "Other"
+      }
+    },
+    {
+      "id": "artifact:phase7_merchant_hier_eb",
+      "label": "phase7_merchant_hier_eb",
+      "type": "figure",
+      "phase": "P6",
+      "route": "/artifacts?tab=figures&figure=phase7_merchant_hier_eb",
+      "provenance": "verified",
+      "meta": {
+        "title": "Merchant hierarchical EB ranking (review depth item)",
+        "cell": 55,
+        "bytes": 179414,
+        "group": "Distribution & association"
+      }
+    },
+    {
+      "id": "artifact:phase7_speed_rate",
+      "label": "phase7_speed_rate",
+      "type": "figure",
+      "phase": "P6",
+      "route": "/artifacts?tab=figures&figure=phase7_speed_rate",
+      "provenance": "verified",
+      "meta": {
+        "title": "Velocity feature: fraud rate by speed bin (plan §8.1)",
+        "cell": 53,
+        "bytes": 30960,
+        "group": "Distribution & association"
+      }
+    },
+    {
+      "id": "artifact:phase7_te_leak_demo",
+      "label": "phase7_te_leak_demo",
+      "type": "figure",
+      "phase": "P6",
+      "route": "/artifacts?tab=figures&figure=phase7_te_leak_demo",
+      "provenance": "verified",
+      "meta": {
+        "title": "ADDED: leakage quantification naive vs causal TE",
+        "cell": 53,
+        "bytes": 49805,
+        "group": "Distribution & association"
+      }
+    },
+    {
+      "id": "artifact:phase7_txns_before_fraud",
+      "label": "phase7_txns_before_fraud",
+      "type": "figure",
+      "phase": "P6",
+      "route": "/artifacts?tab=figures&figure=phase7_txns_before_fraud",
+      "provenance": "verified",
+      "meta": {
+        "title": "Lifetime distribution (review depth item)",
+        "cell": 55,
+        "bytes": 47949,
+        "group": "Other"
+      }
+    },
+    {
+      "id": "artifact:phase8_ablation_decomposed",
+      "label": "phase8_ablation_decomposed",
+      "type": "figure",
+      "phase": "P7",
+      "route": "/artifacts?tab=figures&figure=phase8_ablation_decomposed",
+      "provenance": "verified",
+      "meta": {
+        "title": "FIX #11: decomposed ablation — which feature family drives the OOD failure",
+        "cell": 62,
+        "bytes": 83829,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "artifact:phase8_adversarial_importance",
+      "label": "phase8_adversarial_importance",
+      "type": "figure",
+      "phase": "P7",
+      "route": "/artifacts?tab=figures&figure=phase8_adversarial_importance",
+      "provenance": "verified",
+      "meta": {
+        "title": "ADDED FIX #3: adversarial validation w/ held-out AUC",
+        "cell": 57,
+        "bytes": 51666,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "artifact:phase8_calibration",
+      "label": "phase8_calibration",
+      "type": "figure",
+      "phase": "P7",
+      "route": "/artifacts?tab=figures&figure=phase8_calibration",
+      "provenance": "verified",
+      "meta": {
+        "title": "ADDED: calibration + Brier + ECE",
+        "cell": 59,
+        "bytes": 59879,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "artifact:phase8_calibration_temp",
+      "label": "phase8_calibration_temp",
+      "type": "figure",
+      "phase": "P7",
+      "route": "/artifacts?tab=figures&figure=phase8_calibration_temp",
+      "provenance": "verified",
+      "meta": {
+        "title": "FIX #15: post-hoc temperature scaling — does calibration improve without retraining?",
+        "cell": 59,
+        "bytes": 68696,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "artifact:phase8_capture_at_k",
+      "label": "phase8_capture_at_k",
+      "type": "figure",
+      "phase": "P7",
+      "route": "/artifacts?tab=figures&figure=phase8_capture_at_k",
+      "provenance": "verified",
+      "meta": {
+        "title": "Review-budget economics (plan + review)",
+        "cell": 62,
+        "bytes": 73657,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "artifact:phase8_confusion_f1max",
+      "label": "phase8_confusion_f1max",
+      "type": "figure",
+      "phase": "P7",
+      "route": "/artifacts?tab=figures&figure=phase8_confusion_f1max",
+      "provenance": "verified",
+      "meta": {
+        "title": "ADDED: confusion matrix at F1-max threshold",
+        "cell": 59,
+        "bytes": 26138,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "artifact:phase8_cost_curve",
+      "label": "phase8_cost_curve",
+      "type": "figure",
+      "phase": "P7",
+      "route": "/artifacts?tab=figures&figure=phase8_cost_curve",
+      "provenance": "verified",
+      "meta": {
+        "title": "Cost-sensitive loss vs threshold",
+        "cell": 62,
+        "bytes": 59969,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "artifact:phase8_cost_sensitivity",
+      "label": "phase8_cost_sensitivity",
+      "type": "figure",
+      "phase": "P7",
+      "route": "/artifacts?tab=figures&figure=phase8_cost_sensitivity",
+      "provenance": "verified",
+      "meta": {
+        "title": "FIX #12: operating-point stability under FP-cost sweep — is the cost-min threshold robust to the friction assumption?",
+        "cell": 62,
+        "bytes": 89261,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "artifact:phase8_ensemble_comparison",
+      "label": "phase8_ensemble_comparison",
+      "type": "figure",
+      "phase": "P7",
+      "route": "/artifacts?tab=figures&figure=phase8_ensemble_comparison",
+      "provenance": "verified",
+      "meta": {
+        "title": "FIX #16: single final model vs mean-prediction ensemble of the walk-forward fold models",
+        "cell": 59,
+        "bytes": 76735,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "artifact:phase8_learning_curve",
+      "label": "phase8_learning_curve",
+      "type": "figure",
+      "phase": "P7",
+      "route": "/artifacts?tab=figures&figure=phase8_learning_curve",
+      "provenance": "verified",
+      "meta": {
+        "title": "Learning curve",
+        "cell": 62,
+        "bytes": 53208,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "artifact:phase8_leave_card_out",
+      "label": "phase8_leave_card_out",
+      "type": "figure",
+      "phase": "P7",
+      "route": "/artifacts?tab=figures&figure=phase8_leave_card_out",
+      "provenance": "verified",
+      "meta": {
+        "title": "FIX #14: leave-card-out CV — cross-customer generalisation vs within-customer",
+        "cell": 60,
+        "bytes": 58194,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "artifact:phase8_pdp_ice",
+      "label": "phase8_pdp_ice",
+      "type": "figure",
+      "phase": "P7",
+      "route": "/artifacts?tab=figures&figure=phase8_pdp_ice",
+      "provenance": "verified",
+      "meta": {
+        "title": "PDP + ICE curves (review missing item)",
+        "cell": 64,
+        "bytes": 89185,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "artifact:phase8_psi",
+      "label": "phase8_psi",
+      "type": "figure",
+      "phase": "P7",
+      "route": "/artifacts?tab=figures&figure=phase8_psi",
+      "provenance": "verified",
+      "meta": {
+        "title": "Population Stability Index, train vs test (FIX #9: per-feature drift diagnostic)",
+        "cell": 57,
+        "bytes": 118819,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "artifact:phase8_roc_pr_curves",
+      "label": "phase8_roc_pr_curves",
+      "type": "figure",
+      "phase": "P7",
+      "route": "/artifacts?tab=figures&figure=phase8_roc_pr_curves",
+      "provenance": "verified",
+      "meta": {
+        "title": "ADDED: ROC + PR curves",
+        "cell": 59,
+        "bytes": 75412,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "artifact:phase8_segment_recall",
+      "label": "phase8_segment_recall",
+      "type": "figure",
+      "phase": "P7",
+      "route": "/artifacts?tab=figures&figure=phase8_segment_recall",
+      "provenance": "verified",
+      "meta": {
+        "title": "Residual analysis by segment",
+        "cell": 64,
+        "bytes": 104391,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "artifact:phase8_shap_beeswarm",
+      "label": "phase8_shap_beeswarm",
+      "type": "figure",
+      "phase": "P7",
+      "route": "/artifacts?tab=figures&figure=phase8_shap_beeswarm",
+      "provenance": "verified",
+      "meta": {
+        "title": "SHAP beeswarm (FIX #7 sizing)",
+        "cell": 64,
+        "bytes": 191855,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "artifact:phase8_shap_dep_card_prior_f",
+      "label": "phase8_shap_dep_card_prior_f",
+      "type": "figure",
+      "phase": "P7",
+      "route": "/artifacts?tab=figures&figure=phase8_shap_dep_card_prior_f",
+      "provenance": "verified",
+      "meta": {
+        "title": "SHAP dependence — card_prior_fraud",
+        "cell": 64,
+        "bytes": 93046,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "artifact:phase8_shap_dep_cat_code",
+      "label": "phase8_shap_dep_cat_code",
+      "type": "figure",
+      "phase": "P7",
+      "route": "/artifacts?tab=figures&figure=phase8_shap_dep_cat_code",
+      "provenance": "verified",
+      "meta": {
+        "title": "SHAP dependence — cat_code",
+        "cell": 64,
+        "bytes": 60190,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "artifact:phase8_shap_dep_log_amt",
+      "label": "phase8_shap_dep_log_amt",
+      "type": "figure",
+      "phase": "P7",
+      "route": "/artifacts?tab=figures&figure=phase8_shap_dep_log_amt",
+      "provenance": "verified",
+      "meta": {
+        "title": "SHAP dependence — log_amt",
+        "cell": 64,
+        "bytes": 142962,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "artifact:phase8_shap_dep_n_prior",
+      "label": "phase8_shap_dep_n_prior",
+      "type": "figure",
+      "phase": "P7",
+      "route": "/artifacts?tab=figures&figure=phase8_shap_dep_n_prior",
+      "provenance": "verified",
+      "meta": {
+        "title": "SHAP dependence — n_prior",
+        "cell": 64,
+        "bytes": 174223,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "artifact:phase8_shap_importance",
+      "label": "phase8_shap_importance",
+      "type": "figure",
+      "phase": "P7",
+      "route": "/artifacts?tab=figures&figure=phase8_shap_importance",
+      "provenance": "verified",
+      "meta": {
+        "title": "SHAP global importance",
+        "cell": 64,
+        "bytes": 63413,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "artifact:phase8_walkforward_cv",
+      "label": "phase8_walkforward_cv",
+      "type": "figure",
+      "phase": "P7",
+      "route": "/artifacts?tab=figures&figure=phase8_walkforward_cv",
+      "provenance": "verified",
+      "meta": {
+        "title": "Time-series CV (review rigor item)",
+        "cell": 59,
+        "bytes": 43949,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "artifact:phase8_wf_vs_test",
+      "label": "phase8_wf_vs_test",
+      "type": "figure",
+      "phase": "P7",
+      "route": "/artifacts?tab=figures&figure=phase8_wf_vs_test",
+      "provenance": "verified",
+      "meta": {
+        "title": "FIX #10: within-train walk-forward vs same-model-on-test — the visual form of the OOD-generalisation gap",
+        "cell": 59,
+        "bytes": 44453,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "artifact:phase1_state_n_choro",
+      "label": "phase1_state_n_choro",
+      "type": "interactive",
+      "phase": "P1",
+      "route": "/artifacts?tab=interactive",
+      "provenance": "inferred",
+      "meta": {
+        "title": "State sample size — interactive choropleth",
+        "cell": null,
+        "bytes": 9154,
+        "group": "Interactive"
+      }
+    },
+    {
+      "id": "artifact:phase1_state_rate_choro",
+      "label": "phase1_state_rate_choro",
+      "type": "interactive",
+      "phase": "P1",
+      "route": "/artifacts?tab=interactive",
+      "provenance": "inferred",
+      "meta": {
+        "title": "State fraud rate — interactive choropleth",
+        "cell": null,
+        "bytes": 9905,
+        "group": "Interactive"
+      }
+    },
+    {
+      "id": "artifact:phase2_city_map",
+      "label": "phase2_city_map",
+      "type": "interactive",
+      "phase": "P2",
+      "route": "/artifacts?tab=interactive",
+      "provenance": "inferred",
+      "meta": {
+        "title": "City-level fraud map — interactive",
+        "cell": null,
+        "bytes": 65985,
+        "group": "Interactive"
+      }
+    },
+    {
+      "id": "artifact:phase2_map_scatter",
+      "label": "phase2_map_scatter",
+      "type": "interactive",
+      "phase": "P2",
+      "route": "/artifacts?tab=interactive",
+      "provenance": "inferred",
+      "meta": {
+        "title": "Stratified transaction map — interactive",
+        "cell": null,
+        "bytes": 568108,
+        "group": "Interactive"
+      }
+    },
+    {
+      "id": "artifact:phase2_state_eb_choro",
+      "label": "phase2_state_eb_choro",
+      "type": "interactive",
+      "phase": "P2",
+      "route": "/artifacts?tab=interactive",
+      "provenance": "inferred",
+      "meta": {
+        "title": "State fraud rate (EB-shrunk) — interactive",
+        "cell": null,
+        "bytes": 9937,
+        "group": "Interactive"
+      }
+    },
+    {
+      "id": "artifact:phase2_state_n_choro",
+      "label": "phase2_state_n_choro",
+      "type": "interactive",
+      "phase": "P2",
+      "route": "/artifacts?tab=interactive",
+      "provenance": "inferred",
+      "meta": {
+        "title": "State sample size — interactive choropleth",
+        "cell": null,
+        "bytes": 9232,
+        "group": "Interactive"
+      }
+    },
+    {
+      "id": "artifact:phase4_pca_3d",
+      "label": "phase4_pca_3d",
+      "type": "interactive",
+      "phase": "P4",
+      "route": "/artifacts?tab=interactive",
+      "provenance": "inferred",
+      "meta": {
+        "title": "3D PCA scatter — interactive",
+        "cell": null,
+        "bytes": 2930518,
+        "group": "Interactive"
+      }
+    },
+    {
+      "id": "table:figure_index",
+      "label": "figure_index",
+      "type": "table",
+      "phase": "P8",
+      "route": "/artifacts?tab=tables&table=figure_index",
+      "provenance": "inferred",
+      "meta": {
+        "title": "Figure index",
+        "cell": null,
+        "bytes": 11386,
+        "group": "Report metadata"
+      }
+    },
+    {
+      "id": "table:findings_ledger",
+      "label": "findings_ledger",
+      "type": "table",
+      "phase": "P8",
+      "route": "/artifacts?tab=tables&table=findings_ledger",
+      "provenance": "inferred",
+      "meta": {
+        "title": "Findings ledger",
+        "cell": null,
+        "bytes": 24141,
+        "group": "Report metadata"
+      }
+    },
+    {
+      "id": "table:phase0_class_balance",
+      "label": "phase0_class_balance",
+      "type": "table",
+      "phase": "P0",
+      "route": "/artifacts?tab=tables&table=phase0_class_balance",
+      "provenance": "verified",
+      "meta": {
+        "title": "Class balance by split",
+        "cell": 19,
+        "bytes": 153,
+        "group": "Data quality"
+      }
+    },
+    {
+      "id": "table:phase0_contracts",
+      "label": "phase0_contracts",
+      "type": "table",
+      "phase": "P0",
+      "route": "/artifacts?tab=tables&table=phase0_contracts",
+      "provenance": "verified",
+      "meta": {
+        "title": "Data contracts",
+        "cell": 15,
+        "bytes": 464,
+        "group": "Data quality"
+      }
+    },
+    {
+      "id": "table:phase0_generator_forensics",
+      "label": "phase0_generator_forensics",
+      "type": "table",
+      "phase": "P0",
+      "route": "/artifacts?tab=tables&table=phase0_generator_forensics",
+      "provenance": "verified",
+      "meta": {
+        "title": "Generator forensics",
+        "cell": 19,
+        "bytes": 249,
+        "group": "Data quality"
+      }
+    },
+    {
+      "id": "table:phase0_schema",
+      "label": "phase0_schema",
+      "type": "table",
+      "phase": "P0",
+      "route": "/artifacts?tab=tables&table=phase0_schema",
+      "provenance": "verified",
+      "meta": {
+        "title": "Schema profile",
+        "cell": 19,
+        "bytes": 4260,
+        "group": "Data quality"
+      }
+    },
+    {
+      "id": "table:phase1_amt_quantiles",
+      "label": "phase1_amt_quantiles",
+      "type": "table",
+      "phase": "P1",
+      "route": "/artifacts?tab=tables&table=phase1_amt_quantiles",
+      "provenance": "verified",
+      "meta": {
+        "title": "Amount quantiles",
+        "cell": 21,
+        "bytes": 277,
+        "group": "Descriptive"
+      }
+    },
+    {
+      "id": "table:phase1_category_table",
+      "label": "phase1_category_table",
+      "type": "table",
+      "phase": "P1",
+      "route": "/artifacts?tab=tables&table=phase1_category_table",
+      "provenance": "verified",
+      "meta": {
+        "title": "Category volumes & rates",
+        "cell": 25,
+        "bytes": 634,
+        "group": "Descriptive"
+      }
+    },
+    {
+      "id": "table:phase1_covid_window",
+      "label": "phase1_covid_window",
+      "type": "table",
+      "phase": "P1",
+      "route": "/artifacts?tab=tables&table=phase1_covid_window",
+      "provenance": "verified",
+      "meta": {
+        "title": "COVID-window rates",
+        "cell": 23,
+        "bytes": 158,
+        "group": "Descriptive"
+      }
+    },
+    {
+      "id": "table:phase1_merchant_table",
+      "label": "phase1_merchant_table",
+      "type": "table",
+      "phase": "P1",
+      "route": "/artifacts?tab=tables&table=phase1_merchant_table",
+      "provenance": "verified",
+      "meta": {
+        "title": "Merchant rates",
+        "cell": 25,
+        "bytes": 32643,
+        "group": "Descriptive"
+      }
+    },
+    {
+      "id": "table:phase2_card_profiles",
+      "label": "phase2_card_profiles",
+      "type": "table",
+      "phase": "P2",
+      "route": "/artifacts?tab=tables&table=phase2_card_profiles",
+      "provenance": "verified",
+      "meta": {
+        "title": "Cardholder profiles",
+        "cell": 35,
+        "bytes": 93112,
+        "group": "Behavioral"
+      }
+    },
+    {
+      "id": "table:phase2_city_table",
+      "label": "phase2_city_table",
+      "type": "table",
+      "phase": "P2",
+      "route": "/artifacts?tab=tables&table=phase2_city_table",
+      "provenance": "verified",
+      "meta": {
+        "title": "City-level risk",
+        "cell": 31,
+        "bytes": 49718,
+        "group": "Geography"
+      }
+    },
+    {
+      "id": "table:phase2_dist_rate_table",
+      "label": "phase2_dist_rate_table",
+      "type": "table",
+      "phase": "P2",
+      "route": "/artifacts?tab=tables&table=phase2_dist_rate_table",
+      "provenance": "verified",
+      "meta": {
+        "title": "Distance bins",
+        "cell": 31,
+        "bytes": 245,
+        "group": "Geography"
+      }
+    },
+    {
+      "id": "table:phase2_mi_table",
+      "label": "phase2_mi_table",
+      "type": "table",
+      "phase": "P2",
+      "route": "/artifacts?tab=tables&table=phase2_mi_table",
+      "provenance": "verified",
+      "meta": {
+        "title": "Mutual information",
+        "cell": 37,
+        "bytes": 442,
+        "group": "Association"
+      }
+    },
+    {
+      "id": "table:phase2_money_category",
+      "label": "phase2_money_category",
+      "type": "table",
+      "phase": "P2",
+      "route": "/artifacts?tab=tables&table=phase2_money_category",
+      "provenance": "verified",
+      "meta": {
+        "title": "Fraud dollars by category",
+        "cell": 35,
+        "bytes": 744,
+        "group": "Money lens"
+      }
+    },
+    {
+      "id": "table:phase2_zip3_table",
+      "label": "phase2_zip3_table",
+      "type": "table",
+      "phase": "P2",
+      "route": "/artifacts?tab=tables&table=phase2_zip3_table",
+      "provenance": "verified",
+      "meta": {
+        "title": "ZIP3 empirical Bayes",
+        "cell": 31,
+        "bytes": 90266,
+        "group": "Geography"
+      }
+    },
+    {
+      "id": "table:phase3_weekly_rate_table",
+      "label": "phase3_weekly_rate_table",
+      "type": "table",
+      "phase": "P3",
+      "route": "/artifacts?tab=tables&table=phase3_weekly_rate_table",
+      "provenance": "verified",
+      "meta": {
+        "title": "Weekly fraud rate",
+        "cell": 39,
+        "bytes": 4344,
+        "group": "Temporal"
+      }
+    },
+    {
+      "id": "table:phase4_anomaly_summary",
+      "label": "phase4_anomaly_summary",
+      "type": "table",
+      "phase": "P4",
+      "route": "/artifacts?tab=tables&table=phase4_anomaly_summary",
+      "provenance": "verified",
+      "meta": {
+        "title": "Anomaly detector comparison",
+        "cell": 47,
+        "bytes": 231,
+        "group": "Unsupervised"
+      }
+    },
+    {
+      "id": "table:phase4_dbscan_clusters",
+      "label": "phase4_dbscan_clusters",
+      "type": "table",
+      "phase": "P4",
+      "route": "/artifacts?tab=tables&table=phase4_dbscan_clusters",
+      "provenance": "verified",
+      "meta": {
+        "title": "DBSCAN clusters",
+        "cell": 45,
+        "bytes": 86,
+        "group": "Clustering"
+      }
+    },
+    {
+      "id": "table:phase4_kmeans_cluster_rate",
+      "label": "phase4_kmeans_cluster_rate",
+      "type": "table",
+      "phase": "P4",
+      "route": "/artifacts?tab=tables&table=phase4_kmeans_cluster_rate",
+      "provenance": "verified",
+      "meta": {
+        "title": "K-Means clusters",
+        "cell": 45,
+        "bytes": 127,
+        "group": "Clustering"
+      }
+    },
+    {
+      "id": "table:phase4_separability_table",
+      "label": "phase4_separability_table",
+      "type": "table",
+      "phase": "P4",
+      "route": "/artifacts?tab=tables&table=phase4_separability_table",
+      "provenance": "verified",
+      "meta": {
+        "title": "Embedding separability",
+        "cell": 43,
+        "bytes": 242,
+        "group": "Unsupervised"
+      }
+    },
+    {
+      "id": "table:phase5_category_posthoc_pairs",
+      "label": "phase5_category_posthoc_pairs",
+      "type": "table",
+      "phase": "P5",
+      "route": "/artifacts?tab=tables&table=phase5_category_posthoc_pairs",
+      "provenance": "verified",
+      "meta": {
+        "title": "Category post-hoc pairs",
+        "cell": 51,
+        "bytes": 7696,
+        "group": "Statistics"
+      }
+    },
+    {
+      "id": "table:phase5_category_rates",
+      "label": "phase5_category_rates",
+      "type": "table",
+      "phase": "P5",
+      "route": "/artifacts?tab=tables&table=phase5_category_rates",
+      "provenance": "verified",
+      "meta": {
+        "title": "Category rates with intervals",
+        "cell": 51,
+        "bytes": 2316,
+        "group": "Statistics"
+      }
+    },
+    {
+      "id": "table:phase5_chi2_cramers",
+      "label": "phase5_chi2_cramers",
+      "type": "table",
+      "phase": "P5",
+      "route": "/artifacts?tab=tables&table=phase5_chi2_cramers",
+      "provenance": "verified",
+      "meta": {
+        "title": "Categorical association",
+        "cell": 51,
+        "bytes": 275,
+        "group": "Statistics"
+      }
+    },
+    {
+      "id": "table:phase5_cluster_robust_logit",
+      "label": "phase5_cluster_robust_logit",
+      "type": "table",
+      "phase": "P5",
+      "route": "/artifacts?tab=tables&table=phase5_cluster_robust_logit",
+      "provenance": "verified",
+      "meta": {
+        "title": "Cluster-robust logit",
+        "cell": 51,
+        "bytes": 788,
+        "group": "Statistics"
+      }
+    },
+    {
+      "id": "table:phase5_mw_effect_sizes",
+      "label": "phase5_mw_effect_sizes",
+      "type": "table",
+      "phase": "P5",
+      "route": "/artifacts?tab=tables&table=phase5_mw_effect_sizes",
+      "provenance": "verified",
+      "meta": {
+        "title": "Effect sizes",
+        "cell": 51,
+        "bytes": 1384,
+        "group": "Statistics"
+      }
+    },
+    {
+      "id": "table:phase7_hazard_table",
+      "label": "phase7_hazard_table",
+      "type": "table",
+      "phase": "P6",
+      "route": "/artifacts?tab=tables&table=phase7_hazard_table",
+      "provenance": "verified",
+      "meta": {
+        "title": "Discrete-time hazard",
+        "cell": 55,
+        "bytes": 1751,
+        "group": "Survival"
+      }
+    },
+    {
+      "id": "table:phase7_high_risk_combo",
+      "label": "phase7_high_risk_combo",
+      "type": "table",
+      "phase": "P6",
+      "route": "/artifacts?tab=tables&table=phase7_high_risk_combo",
+      "provenance": "verified",
+      "meta": {
+        "title": "High-risk combinations",
+        "cell": 53,
+        "bytes": 385,
+        "group": "Behavioral"
+      }
+    },
+    {
+      "id": "table:phase7_hour_encoding_comparison",
+      "label": "phase7_hour_encoding_comparison",
+      "type": "table",
+      "phase": "P6",
+      "route": "/artifacts?tab=tables&table=phase7_hour_encoding_comparison",
+      "provenance": "verified",
+      "meta": {
+        "title": "Hour encoding comparison",
+        "cell": 53,
+        "bytes": 94,
+        "group": "Modeling"
+      }
+    },
+    {
+      "id": "table:phase7_merchant_eb_table",
+      "label": "phase7_merchant_eb_table",
+      "type": "table",
+      "phase": "P6",
+      "route": "/artifacts?tab=tables&table=phase7_merchant_eb_table",
+      "provenance": "verified",
+      "meta": {
+        "title": "Merchant hierarchical EB",
+        "cell": 55,
+        "bytes": 75970,
+        "group": "Behavioral"
+      }
+    },
+    {
+      "id": "table:phase7_speed_rate_table",
+      "label": "phase7_speed_rate_table",
+      "type": "table",
+      "phase": "P6",
+      "route": "/artifacts?tab=tables&table=phase7_speed_rate_table",
+      "provenance": "verified",
+      "meta": {
+        "title": "Implied-speed risk",
+        "cell": 53,
+        "bytes": 207,
+        "group": "Behavioral"
+      }
+    },
+    {
+      "id": "table:phase8_ablation_decomposed",
+      "label": "phase8_ablation_decomposed",
+      "type": "table",
+      "phase": "P7",
+      "route": "/artifacts?tab=tables&table=phase8_ablation_decomposed",
+      "provenance": "verified",
+      "meta": {
+        "title": "Feature-family ablation",
+        "cell": 62,
+        "bytes": 565,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "table:phase8_calibration_temp",
+      "label": "phase8_calibration_temp",
+      "type": "table",
+      "phase": "P7",
+      "route": "/artifacts?tab=tables&table=phase8_calibration_temp",
+      "provenance": "verified",
+      "meta": {
+        "title": "Temperature scaling",
+        "cell": 59,
+        "bytes": 223,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "table:phase8_capture_at_k",
+      "label": "phase8_capture_at_k",
+      "type": "table",
+      "phase": "P7",
+      "route": "/artifacts?tab=tables&table=phase8_capture_at_k",
+      "provenance": "verified",
+      "meta": {
+        "title": "Capture@k",
+        "cell": 62,
+        "bytes": 630,
+        "group": "Model economics"
+      }
+    },
+    {
+      "id": "table:phase8_cost_sensitivity",
+      "label": "phase8_cost_sensitivity",
+      "type": "table",
+      "phase": "P7",
+      "route": "/artifacts?tab=tables&table=phase8_cost_sensitivity",
+      "provenance": "verified",
+      "meta": {
+        "title": "Cost sensitivity",
+        "cell": 62,
+        "bytes": 491,
+        "group": "Model economics"
+      }
+    },
+    {
+      "id": "table:phase8_ensemble_comparison",
+      "label": "phase8_ensemble_comparison",
+      "type": "table",
+      "phase": "P7",
+      "route": "/artifacts?tab=tables&table=phase8_ensemble_comparison",
+      "provenance": "verified",
+      "meta": {
+        "title": "Ensemble comparison",
+        "cell": 59,
+        "bytes": 137,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "table:phase8_learning_curve",
+      "label": "phase8_learning_curve",
+      "type": "table",
+      "phase": "P7",
+      "route": "/artifacts?tab=tables&table=phase8_learning_curve",
+      "provenance": "verified",
+      "meta": {
+        "title": "Learning curve",
+        "cell": 62,
+        "bytes": 286,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "table:phase8_leave_card_out",
+      "label": "phase8_leave_card_out",
+      "type": "table",
+      "phase": "P7",
+      "route": "/artifacts?tab=tables&table=phase8_leave_card_out",
+      "provenance": "verified",
+      "meta": {
+        "title": "Leave-card-out CV",
+        "cell": 60,
+        "bytes": 270,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "table:phase8_monotonic_comparison",
+      "label": "phase8_monotonic_comparison",
+      "type": "table",
+      "phase": "P7",
+      "route": "/artifacts?tab=tables&table=phase8_monotonic_comparison",
+      "provenance": "verified",
+      "meta": {
+        "title": "Monotonic constraints",
+        "cell": 59,
+        "bytes": 144,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "table:phase8_psi",
+      "label": "phase8_psi",
+      "type": "table",
+      "phase": "P7",
+      "route": "/artifacts?tab=tables&table=phase8_psi",
+      "provenance": "verified",
+      "meta": {
+        "title": "Population Stability Index",
+        "cell": 57,
+        "bytes": 2182,
+        "group": "Drift"
+      }
+    },
+    {
+      "id": "table:phase8_segment_errors",
+      "label": "phase8_segment_errors",
+      "type": "table",
+      "phase": "P7",
+      "route": "/artifacts?tab=tables&table=phase8_segment_errors",
+      "provenance": "verified",
+      "meta": {
+        "title": "Segment errors",
+        "cell": 64,
+        "bytes": 3315,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "table:phase8_threshold_table",
+      "label": "phase8_threshold_table",
+      "type": "table",
+      "phase": "P7",
+      "route": "/artifacts?tab=tables&table=phase8_threshold_table",
+      "provenance": "verified",
+      "meta": {
+        "title": "Operating points",
+        "cell": 62,
+        "bytes": 474,
+        "group": "Model economics"
+      }
+    },
+    {
+      "id": "table:phase8_time_decay_comparison",
+      "label": "phase8_time_decay_comparison",
+      "type": "table",
+      "phase": "P7",
+      "route": "/artifacts?tab=tables&table=phase8_time_decay_comparison",
+      "provenance": "verified",
+      "meta": {
+        "title": "Time-decay weighting",
+        "cell": 59,
+        "bytes": 139,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "table:phase8_walkforward_cv",
+      "label": "phase8_walkforward_cv",
+      "type": "table",
+      "phase": "P7",
+      "route": "/artifacts?tab=tables&table=phase8_walkforward_cv",
+      "provenance": "verified",
+      "meta": {
+        "title": "Walk-forward CV",
+        "cell": 59,
+        "bytes": 640,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "table:phase8_wf_vs_test",
+      "label": "phase8_wf_vs_test",
+      "type": "table",
+      "phase": "P7",
+      "route": "/artifacts?tab=tables&table=phase8_wf_vs_test",
+      "provenance": "verified",
+      "meta": {
+        "title": "OOD gap summary",
+        "cell": 59,
+        "bytes": 207,
+        "group": "Model evaluation"
+      }
+    },
+    {
+      "id": "table:reproducibility_checklist",
+      "label": "reproducibility_checklist",
+      "type": "table",
+      "phase": "P8",
+      "route": "/artifacts?tab=tables&table=reproducibility_checklist",
+      "provenance": "verified",
+      "meta": {
+        "title": "Reproducibility checklist",
+        "cell": 66,
+        "bytes": 1303,
+        "group": "Report metadata"
+      }
+    }
+  ],
+  "links": [
+    {
+      "source": "src:fraudTrain.csv",
+      "target": "run",
+      "relation": "consumed by",
+      "verified": true
+    },
+    {
+      "source": "src:fraudTest.csv",
+      "target": "run",
+      "relation": "consumed by",
+      "verified": true
+    },
+    {
+      "source": "src:fraud_eda_colab.ipynb",
+      "target": "run",
+      "relation": "consumed by",
+      "verified": true
+    },
+    {
+      "source": "src:findings_ledger.json",
+      "target": "run",
+      "relation": "consumed by",
+      "verified": true
+    },
+    {
+      "source": "src:figures/",
+      "target": "run",
+      "relation": "consumed by",
+      "verified": true
+    },
+    {
+      "source": "src:tables/",
+      "target": "run",
+      "relation": "consumed by",
+      "verified": true
+    },
+    {
+      "source": "run",
+      "target": "notebook",
+      "relation": "executed",
+      "verified": true
+    },
+    {
+      "source": "notebook",
+      "target": "phase:P0",
+      "relation": "contains",
+      "verified": true
+    },
+    {
+      "source": "notebook",
+      "target": "phase:P1",
+      "relation": "contains",
+      "verified": true
+    },
+    {
+      "source": "notebook",
+      "target": "phase:P2",
+      "relation": "contains",
+      "verified": true
+    },
+    {
+      "source": "notebook",
+      "target": "phase:P3",
+      "relation": "contains",
+      "verified": true
+    },
+    {
+      "source": "notebook",
+      "target": "phase:P4",
+      "relation": "contains",
+      "verified": true
+    },
+    {
+      "source": "notebook",
+      "target": "phase:P5",
+      "relation": "contains",
+      "verified": true
+    },
+    {
+      "source": "notebook",
+      "target": "phase:P6",
+      "relation": "contains",
+      "verified": true
+    },
+    {
+      "source": "notebook",
+      "target": "phase:P7",
+      "relation": "contains",
+      "verified": true
+    },
+    {
+      "source": "notebook",
+      "target": "phase:P8",
+      "relation": "contains",
+      "verified": true
+    },
+    {
+      "source": "phase:P0",
+      "target": "rq:RQ1",
+      "relation": "answers",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "rq:RQ1",
+      "relation": "answers",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "rq:RQ2",
+      "relation": "answers",
+      "verified": true
+    },
+    {
+      "source": "phase:P5",
+      "target": "rq:RQ2",
+      "relation": "answers",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "rq:RQ3",
+      "relation": "answers",
+      "verified": true
+    },
+    {
+      "source": "phase:P3",
+      "target": "rq:RQ3",
+      "relation": "answers",
+      "verified": true
+    },
+    {
+      "source": "phase:P5",
+      "target": "rq:RQ3",
+      "relation": "answers",
+      "verified": true
+    },
+    {
+      "source": "phase:P0",
+      "target": "rq:RQ4",
+      "relation": "answers",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "rq:RQ4",
+      "relation": "answers",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "rq:RQ4",
+      "relation": "answers",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "rq:RQ4",
+      "relation": "answers",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "rq:RQ5",
+      "relation": "answers",
+      "verified": true
+    },
+    {
+      "source": "phase:P3",
+      "target": "rq:RQ5",
+      "relation": "answers",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "rq:RQ5",
+      "relation": "answers",
+      "verified": true
+    },
+    {
+      "source": "phase:P0",
+      "target": "rq:RQ6",
+      "relation": "answers",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "rq:RQ6",
+      "relation": "answers",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "rq:RQ6",
+      "relation": "answers",
+      "verified": true
+    },
+    {
+      "source": "phase:P5",
+      "target": "rq:RQ6",
+      "relation": "answers",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "rq:RQ6",
+      "relation": "answers",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "rq:RQ6",
+      "relation": "answers",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "rq:RQ7",
+      "relation": "answers",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "rq:RQ8",
+      "relation": "answers",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "rq:RQ8",
+      "relation": "answers",
+      "verified": true
+    },
+    {
+      "source": "phase:P0",
+      "target": "finding:F-001",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ1",
+      "target": "finding:F-001",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P0",
+      "target": "finding:F-002",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ1",
+      "target": "finding:F-002",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P0",
+      "target": "finding:F-003",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ1",
+      "target": "finding:F-003",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P0",
+      "target": "finding:F-004",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ1",
+      "target": "finding:F-004",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P0",
+      "target": "finding:F-005",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ1",
+      "target": "finding:F-005",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P0",
+      "target": "finding:F-006",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ6",
+      "target": "finding:F-006",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "note:AN-03",
+      "target": "finding:F-006",
+      "relation": "annotates",
+      "verified": true
+    },
+    {
+      "source": "phase:P0",
+      "target": "finding:F-007",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ4",
+      "target": "finding:F-007",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "finding:F-008",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ2",
+      "target": "finding:F-008",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "finding:F-009",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ3",
+      "target": "finding:F-009",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "finding:F-010",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ3",
+      "target": "finding:F-010",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "finding:F-011",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ4",
+      "target": "finding:F-011",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "finding:F-012",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ6",
+      "target": "finding:F-012",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "finding:F-013",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ6",
+      "target": "finding:F-013",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "finding:F-014",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ4",
+      "target": "finding:F-014",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "finding:F-015",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ4",
+      "target": "finding:F-015",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "finding:F-016",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ5",
+      "target": "finding:F-016",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "note:AN-02",
+      "target": "finding:F-016",
+      "relation": "annotates",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "finding:F-017",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ5",
+      "target": "finding:F-017",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "finding:F-018",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ1",
+      "target": "finding:F-018",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "finding:F-019",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ6",
+      "target": "finding:F-019",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "finding:F-020",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ5",
+      "target": "finding:F-020",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "finding:F-021",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ6",
+      "target": "finding:F-021",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P3",
+      "target": "finding:F-022",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ3",
+      "target": "finding:F-022",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P3",
+      "target": "finding:F-023",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ3",
+      "target": "finding:F-023",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P3",
+      "target": "finding:F-024",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ3",
+      "target": "finding:F-024",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P3",
+      "target": "finding:F-025",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ5",
+      "target": "finding:F-025",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "finding:F-026",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ7",
+      "target": "finding:F-026",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "finding:F-027",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ7",
+      "target": "finding:F-027",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "finding:F-028",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ7",
+      "target": "finding:F-028",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "finding:F-029",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ7",
+      "target": "finding:F-029",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P5",
+      "target": "finding:F-030",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ2",
+      "target": "finding:F-030",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P5",
+      "target": "finding:F-031",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ6",
+      "target": "finding:F-031",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "note:AN-04",
+      "target": "finding:F-031",
+      "relation": "annotates",
+      "verified": true
+    },
+    {
+      "source": "phase:P5",
+      "target": "finding:F-032",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ3",
+      "target": "finding:F-032",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P5",
+      "target": "finding:F-033",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ6",
+      "target": "finding:F-033",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P5",
+      "target": "finding:F-034",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ6",
+      "target": "finding:F-034",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "finding:F-035",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ5",
+      "target": "finding:F-035",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "finding:F-036",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ4",
+      "target": "finding:F-036",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "finding:F-037",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ5",
+      "target": "finding:F-037",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "finding:F-038",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ8",
+      "target": "finding:F-038",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "note:AN-01",
+      "target": "finding:F-038",
+      "relation": "annotates",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "finding:F-039",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ6",
+      "target": "finding:F-039",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "finding:F-040",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ5",
+      "target": "finding:F-040",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "finding:F-041",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ5",
+      "target": "finding:F-041",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "finding:F-042",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ5",
+      "target": "finding:F-042",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "finding:F-043",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ5",
+      "target": "finding:F-043",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "finding:F-044",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ6",
+      "target": "finding:F-044",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "finding:F-045",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ4",
+      "target": "finding:F-045",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "finding:F-046",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ8",
+      "target": "finding:F-046",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "finding:F-047",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ8",
+      "target": "finding:F-047",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "finding:F-048",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ8",
+      "target": "finding:F-048",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "finding:F-049",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ8",
+      "target": "finding:F-049",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "finding:F-050",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ8",
+      "target": "finding:F-050",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "finding:F-051",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ8",
+      "target": "finding:F-051",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "finding:F-052",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ8",
+      "target": "finding:F-052",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "finding:F-053",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ8",
+      "target": "finding:F-053",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "finding:F-054",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ8",
+      "target": "finding:F-054",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "finding:F-055",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ8",
+      "target": "finding:F-055",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "finding:F-056",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ8",
+      "target": "finding:F-056",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "finding:F-057",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ8",
+      "target": "finding:F-057",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "finding:F-058",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ8",
+      "target": "finding:F-058",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "finding:F-059",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ8",
+      "target": "finding:F-059",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "finding:F-060",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ8",
+      "target": "finding:F-060",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "finding:F-061",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ8",
+      "target": "finding:F-061",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "finding:F-062",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ8",
+      "target": "finding:F-062",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "finding:F-063",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ8",
+      "target": "finding:F-063",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "finding:F-064",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "rq:RQ6",
+      "target": "finding:F-064",
+      "relation": "supported by",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "note:AN-01",
+      "relation": "documents",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "note:AN-02",
+      "relation": "documents",
+      "verified": true
+    },
+    {
+      "source": "phase:P0",
+      "target": "note:AN-03",
+      "relation": "documents",
+      "verified": true
+    },
+    {
+      "source": "phase:P5",
+      "target": "note:AN-04",
+      "relation": "documents",
+      "verified": true
+    },
+    {
+      "source": "phase:P8",
+      "target": "note:AN-05",
+      "relation": "documents",
+      "verified": true
+    },
+    {
+      "source": "phase:P0",
+      "target": "issue:ISS-01",
+      "relation": "diagnosed in",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "issue:ISS-02",
+      "relation": "diagnosed in",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "issue:ISS-03",
+      "relation": "diagnosed in",
+      "verified": true
+    },
+    {
+      "source": "phase:P0",
+      "target": "issue:ISS-04",
+      "relation": "diagnosed in",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "issue:ISS-05",
+      "relation": "diagnosed in",
+      "verified": true
+    },
+    {
+      "source": "phase:P5",
+      "target": "issue:ISS-06",
+      "relation": "diagnosed in",
+      "verified": true
+    },
+    {
+      "source": "phase:P0",
+      "target": "issue:ISS-07",
+      "relation": "diagnosed in",
+      "verified": true
+    },
+    {
+      "source": "phase:P0",
+      "target": "issue:ISS-08",
+      "relation": "diagnosed in",
+      "verified": true
+    },
+    {
+      "source": "phase:P0",
+      "target": "issue:ISS-09",
+      "relation": "diagnosed in",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "issue:ISS-10",
+      "relation": "diagnosed in",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "issue:ISS-11",
+      "relation": "diagnosed in",
+      "verified": true
+    },
+    {
+      "source": "phase:P8",
+      "target": "issue:ISS-12",
+      "relation": "diagnosed in",
+      "verified": true
+    },
+    {
+      "source": "phase:P8",
+      "target": "issue:ISS-13",
+      "relation": "diagnosed in",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "issue:ISS-14",
+      "relation": "diagnosed in",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "issue:ISS-15",
+      "relation": "diagnosed in",
+      "verified": true
+    },
+    {
+      "source": "phase:P8",
+      "target": "issue:ISS-16",
+      "relation": "diagnosed in",
+      "verified": true
+    },
+    {
+      "source": "phase:P0",
+      "target": "artifact:phase0_missing_bar",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P0",
+      "target": "artifact:phase0_missing_matrix",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P0",
+      "target": "artifact:phase0_temporal_coverage",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P0",
+      "target": "artifact:phase0_txns_per_card",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "artifact:phase1_age",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "artifact:phase1_age_bins",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "artifact:phase1_amt_box_violin",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "artifact:phase1_amt_ecdf",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "artifact:phase1_amt_hist",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "artifact:phase1_amt_overlay",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "artifact:phase1_category",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "artifact:phase1_citypop",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "artifact:phase1_citypop_bins",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "artifact:phase1_covid_window",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "artifact:phase1_dow",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "artifact:phase1_gender",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "artifact:phase1_gender_x_category",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "artifact:phase1_geo_scatter",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "artifact:phase1_hour",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "artifact:phase1_hour_by_year",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "artifact:phase1_job",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "artifact:phase1_merchant_topN",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "artifact:phase1_month",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "artifact:phase1_night",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "artifact:phase1_qq_amt_age",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "artifact:phase1_state_forest",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "artifact:phase1_target_donut",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "artifact:phase1_weekend",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "artifact:phase2_age_x_category",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "artifact:phase2_amt_by_category",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "artifact:phase2_amt_cdf",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "artifact:phase2_amtbin_x_hour",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "artifact:phase2_card_rate_hist",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "artifact:phase2_card_scatter",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "artifact:phase2_category_x_hour",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "artifact:phase2_citypop_x_category",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "artifact:phase2_cramers_v",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "artifact:phase2_dist_overlay",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "artifact:phase2_dist_rate",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "artifact:phase2_dow_x_hour_rate",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "artifact:phase2_dow_x_hour_vol",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "artifact:phase2_gender_x_category",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "artifact:phase2_joint_amt_age",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "artifact:phase2_joint_amt_dist",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "artifact:phase2_lorenz_fraud",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "artifact:phase2_mi",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "artifact:phase2_money_category",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "artifact:phase2_money_month",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "artifact:phase2_pairplot",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "artifact:phase2_spearman",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "artifact:phase2_zip3_forest",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P3",
+      "target": "artifact:phase3_acf_pacf",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P3",
+      "target": "artifact:phase3_card_timelines",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P3",
+      "target": "artifact:phase3_changepoint",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P3",
+      "target": "artifact:phase3_daily_rolling",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P3",
+      "target": "artifact:phase3_hour_x_dow_rate",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P3",
+      "target": "artifact:phase3_hour_x_dow_vol",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P3",
+      "target": "artifact:phase3_hour_x_month",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P3",
+      "target": "artifact:phase3_interarrival",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P3",
+      "target": "artifact:phase3_month_x_dow",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P3",
+      "target": "artifact:phase3_stl",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P3",
+      "target": "artifact:phase3_weekly_rate",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P3",
+      "target": "artifact:phase3_year_x_month",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "artifact:phase4_ae_error",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "artifact:phase4_andrews",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "artifact:phase4_dbscan_kdist",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "artifact:phase4_dbscan_rate",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "artifact:phase4_dendrogram",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "artifact:phase4_hexbin_rate_contours",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "artifact:phase4_if_scores",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "artifact:phase4_if_vs_amt",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "artifact:phase4_kmeans_fraud_rate",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "artifact:phase4_kmeans_radar",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "artifact:phase4_kmeans_selection",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "artifact:phase4_kmeans_x_category",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "artifact:phase4_lof_scores",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "artifact:phase4_parallel_coords",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "artifact:phase4_pca_biplot",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "artifact:phase4_pca_contours",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "artifact:phase4_pca_scatter",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "artifact:phase4_pca_scree",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "artifact:phase4_raincloud_amt_category",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "artifact:phase4_separability",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "artifact:phase4_swarm_amt",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "artifact:phase4_tsne_p100",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "artifact:phase4_tsne_p30",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "artifact:phase4_tsne_p50",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "artifact:phase4_umap_nn15_md0.1",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "artifact:phase4_umap_nn15_md0.5",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "artifact:phase4_umap_nn50_md0.1",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P5",
+      "target": "artifact:phase5_effectsize_forest",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P5",
+      "target": "artifact:phase5_forest_category",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P5",
+      "target": "artifact:phase5_forest_hour",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P5",
+      "target": "artifact:phase5_forest_job",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "artifact:phase7_card_age_curve",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "artifact:phase7_cnt24h_rate",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "artifact:phase7_cohort_heatmap",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "artifact:phase7_combo_lift",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "artifact:phase7_discrete_hazard",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "artifact:phase7_dist_artifact",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "artifact:phase7_fraud_event_sizes",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "artifact:phase7_km_first_fraud",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "artifact:phase7_merchant_hier_eb",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "artifact:phase7_speed_rate",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "artifact:phase7_te_leak_demo",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "artifact:phase7_txns_before_fraud",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "artifact:phase8_ablation_decomposed",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "artifact:phase8_adversarial_importance",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "artifact:phase8_calibration",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "artifact:phase8_calibration_temp",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "artifact:phase8_capture_at_k",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "artifact:phase8_confusion_f1max",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "artifact:phase8_cost_curve",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "artifact:phase8_cost_sensitivity",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "artifact:phase8_ensemble_comparison",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "artifact:phase8_learning_curve",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "artifact:phase8_leave_card_out",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "artifact:phase8_pdp_ice",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "artifact:phase8_psi",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "artifact:phase8_roc_pr_curves",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "artifact:phase8_segment_recall",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "artifact:phase8_shap_beeswarm",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "artifact:phase8_shap_dep_card_prior_f",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "artifact:phase8_shap_dep_cat_code",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "artifact:phase8_shap_dep_log_amt",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "artifact:phase8_shap_dep_n_prior",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "artifact:phase8_shap_importance",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "artifact:phase8_walkforward_cv",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "artifact:phase8_wf_vs_test",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "artifact:phase1_state_n_choro",
+      "relation": "produces",
+      "verified": false
+    },
+    {
+      "source": "phase:P1",
+      "target": "artifact:phase1_state_rate_choro",
+      "relation": "produces",
+      "verified": false
+    },
+    {
+      "source": "phase:P2",
+      "target": "artifact:phase2_city_map",
+      "relation": "produces",
+      "verified": false
+    },
+    {
+      "source": "phase:P2",
+      "target": "artifact:phase2_map_scatter",
+      "relation": "produces",
+      "verified": false
+    },
+    {
+      "source": "phase:P2",
+      "target": "artifact:phase2_state_eb_choro",
+      "relation": "produces",
+      "verified": false
+    },
+    {
+      "source": "phase:P2",
+      "target": "artifact:phase2_state_n_choro",
+      "relation": "produces",
+      "verified": false
+    },
+    {
+      "source": "phase:P4",
+      "target": "artifact:phase4_pca_3d",
+      "relation": "produces",
+      "verified": false
+    },
+    {
+      "source": "phase:P8",
+      "target": "table:figure_index",
+      "relation": "produces",
+      "verified": false
+    },
+    {
+      "source": "phase:P8",
+      "target": "table:findings_ledger",
+      "relation": "produces",
+      "verified": false
+    },
+    {
+      "source": "phase:P0",
+      "target": "table:phase0_class_balance",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P0",
+      "target": "table:phase0_contracts",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P0",
+      "target": "table:phase0_generator_forensics",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P0",
+      "target": "table:phase0_schema",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "table:phase1_amt_quantiles",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "table:phase1_category_table",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "table:phase1_covid_window",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P1",
+      "target": "table:phase1_merchant_table",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "table:phase2_card_profiles",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "table:phase2_city_table",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "table:phase2_dist_rate_table",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "table:phase2_mi_table",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "table:phase2_money_category",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P2",
+      "target": "table:phase2_zip3_table",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P3",
+      "target": "table:phase3_weekly_rate_table",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "table:phase4_anomaly_summary",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "table:phase4_dbscan_clusters",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "table:phase4_kmeans_cluster_rate",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P4",
+      "target": "table:phase4_separability_table",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P5",
+      "target": "table:phase5_category_posthoc_pairs",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P5",
+      "target": "table:phase5_category_rates",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P5",
+      "target": "table:phase5_chi2_cramers",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P5",
+      "target": "table:phase5_cluster_robust_logit",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P5",
+      "target": "table:phase5_mw_effect_sizes",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "table:phase7_hazard_table",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "table:phase7_high_risk_combo",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "table:phase7_hour_encoding_comparison",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "table:phase7_merchant_eb_table",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P6",
+      "target": "table:phase7_speed_rate_table",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "table:phase8_ablation_decomposed",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "table:phase8_calibration_temp",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "table:phase8_capture_at_k",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "table:phase8_cost_sensitivity",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "table:phase8_ensemble_comparison",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "table:phase8_learning_curve",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "table:phase8_leave_card_out",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "table:phase8_monotonic_comparison",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "table:phase8_psi",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "table:phase8_segment_errors",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "table:phase8_threshold_table",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "table:phase8_time_decay_comparison",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "table:phase8_walkforward_cv",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P7",
+      "target": "table:phase8_wf_vs_test",
+      "relation": "produces",
+      "verified": true
+    },
+    {
+      "source": "phase:P8",
+      "target": "table:reproducibility_checklist",
+      "relation": "produces",
+      "verified": true
+    }
+  ],
+  "notes": [
+    "Verified edges are recorded in the ledger, notebook cell ranges, warning register or artifact write lines.",
+    "Inferred edges connect a phase to an artifact when no producing cell could be located; they are dashed in the interface.",
+    "No edge is drawn solely because two files share a directory."
+  ]
+}

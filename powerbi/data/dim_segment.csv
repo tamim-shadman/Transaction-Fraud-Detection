@@ -1,0 +1,4 @@
+﻿segment,segment_label,sort_order
+category,Merchant category,1
+hour_bin,Hour bin,2
+state,State,3

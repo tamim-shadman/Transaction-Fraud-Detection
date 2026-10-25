@@ -1,0 +1,67 @@
+cell,type,execution_count,phase,output_chars,images,source_first
+0,markdown,,SETUP,0,0,# Credit-Card Transaction Fraud — Research-Grade EDA (Sparkov / `kartik2112/fraud-detection`)
+1,markdown,,SETUP,0,0,## 🚀 How to run this on Google Colab
+2,code,1.0,SETUP,58,0,# ---- optional run knobs (uncomment + edit; must be set BEFORE the §0.1 config cell) ----
+3,markdown,,SETUP,0,0,"## 0.0 Colab setup — dependencies, environment bootstrap, optional Google-Drive output"
+4,code,2.0,SETUP,1378,0,# ============================================================
+5,markdown,,SETUP,0,0,"## 0.1 Imports, global config, reproducibility contract"
+6,code,3.0,SETUP,468,0,"import os, gc, json, time, math, hashlib, warnings, importlib.util, sys"
+7,markdown,,SETUP,0,0,## 0.2 Pre-registered research questions + findings ledgerFindings are graded (`strong` / `supports` / `weak` / `caveat`) and auto-compiled in the final report.
+8,code,4.0,SETUP,63,0,RQ_TEXT = {
+9,markdown,,SETUP,0,0,"## 0.3 Statistical toolkit — effect sizes, bootstrap CIs, FDR, EB shrinkage, survivalWith n ≈ 1.85M, p-values alone are meaningless; every claim below reports **effect size + uncer"
+10,code,5.0,SETUP,0,0,"def wilson_interval(k, n, z=1.96):"
+11,markdown,,SETUP,0,0,"## 0.4 Plotting helpers, GBM wrapper, sampling utilities (shared across all sections)"
+12,code,6.0,SETUP,0,0,"def save_fig(fig, name, caption=None, tight=False):"
+13,markdown,,P0,0,0,"## 01 — LOAD DATA, VERSION FINGERPRINT, DATA CONTRACTS (planned notebook `01_data_audit`)"
+14,code,7.0,P0,1584,0,"banner(""SECTION 01 — DATA LOAD, FINGERPRINT, CONTRACTS"")"
+15,markdown,,P0,0,0,"## 01b — DERIVED FEATURES (leak-aware). FIX #1, #2, #4 are applied HERE, once, andevery downstream section uses these columns — no ad-hoc re-derivations anywhere."
+16,code,8.0,P0,558,0,"banner(""SECTION 01b — DERIVED FEATURES (causal / leak-aware)"")"
+17,markdown,,P0,0,0,"## 01c — Phase 0: schema, completeness, identifiers, coverage, imbalance + **generator forensics**Before any EDA we establish what the Sparkov generator does and does not model — t"
+18,code,9.0,P0,10732,0,"banner(""SECTION 01c — AUDIT & GENERATOR FORENSICS"")"
+19,markdown,,P1,0,0,## 02 — PHASE 1: UNIVARIATE DISTRIBUTIONS (planned notebook `02_univariate`)
+20,code,10.0,P1,1277,0,"banner(""SECTION 02 — UNIVARIATE"")"
+21,markdown,,P1,0,0,"## 02b — temporal features: hour / weekday / month, 2019 vs 2020, COVID window"
+22,code,11.0,P1,806,0,"bar_volume_rate(df, ""hour"", ""volume & fraud rate by hour of day"","
+23,markdown,,P1,0,0,## 02c — categorical features: category / gender / state / job / merchant
+24,code,12.0,P1,1023,0,# category: volume + sorted fraud rate (plan §3.3)
+25,markdown,,P1,0,0,"## 02d — demographics & geography, target variable"
+26,code,13.0,P1,2162,0,# city_pop: raw + log histograms; impossible values check (plan §3.4)
+27,markdown,,P2,0,0,## 03 — PHASE 2: BIVARIATE & MULTIVARIATE INTERACTIONS (planned notebook `03_bivariate`)
+28,code,14.0,P2,745,0,"banner(""SECTION 03 — BIVARIATE"")"
+29,markdown,,P2,0,0,"## 03b — geography: distance, maps, city level, zip-prefix (plan §4.3)"
+30,code,15.0,P2,1550,1,# Haversine distance cardholder→merchant (already derived in §01b)
+31,markdown,,P2,0,0,## 03c — demographic interactions + ADDED pairplots / jointplots (plan §4.4)
+32,code,16.0,P2,405,0,"fraud_rate_heat(df, ""gender"", ""category"", ""fraud rate — gender × category"","
+33,markdown,,P2,0,0,"## 03d — cardholder behavioral profiles + money-denominated lens (plan §4.5, review 'keep')"
+34,code,17.0,P2,1174,0,"card = df.groupby(""cc_num"", observed=True).agg("
+35,markdown,,P2,0,0,"## 03e — correlation & association structure: Spearman, MI, Cramér's V (plan §4.6)"
+36,code,18.0,P2,803,0,"SPEAR_COLS = [""log_amt"", ""hour"", ""dow"", ""month"", ""age"", ""city_pop_log"", ""dist_km"","
+37,markdown,,P3,0,0,## 04 — PHASE 3: TEMPORAL & TIME-SERIES STRUCTURE (planned notebook `04_temporal`)
+38,code,19.0,P3,846,0,"banner(""SECTION 04 — TEMPORAL STRUCTURE"")"
+39,markdown,,P3,0,0,"## 04b — time-profile heatmaps, structural breaks (PELT penalty sensitivity — FIX #6), card timelines"
+40,code,20.0,P3,1479,0,"count_heat(df, ""dow"", ""hour"", ""volume — hour × weekday"", ""phase3_hour_x_dow_vol"","
+41,markdown,,P4,0,0,## 05 — PHASE 4: ADVANCED VISUALIZATION & DIMENSIONALITY REDUCTION (planned notebook `05_advanced_viz`)Unsupervised views use ONLY raw + behavioral features (no target encodings — 
+42,code,21.0,P4,1550,0,"banner(""SECTION 05 — DIMENSIONALITY REDUCTION & EMBEDDINGS"")"
+43,markdown,,P4,0,0,"## 05b — clustering suite: K-Means, DBSCAN, hierarchical + cluster profiling (plan §6.2)"
+44,code,22.0,P4,1185,0,"from sklearn.cluster import KMeans, DBSCAN, AgglomerativeClustering"
+45,markdown,,P4,0,0,"## 05c — anomaly detection: Isolation Forest, autoencoder, LOF (plan §6.3)"
+46,code,23.0,P4,834,0,from sklearn.ensemble import IsolationForest
+47,markdown,,P4,0,0,"## 05d — additional high-dimensional visuals (plan §6.4): parallel coordinates, Andrewscurves, hexbin + fraud-rate contours, raincloud, swarm — all flagged `ADDED` where thereview "
+48,code,24.0,P4,347,0,# ADDED (review): parallel coordinates for fraud vs non-fraud
+49,markdown,,P5,0,0,## 06 — PHASE 5: STATISTICAL TESTING & EFFECT SIZES (planned notebook `06_statistical_tests`)Review fixes here: **bootstrap CIs for Cliff's delta / KS** and **BH-FDR on theMann-Whi
+50,code,25.0,P5,5103,0,"banner(""SECTION 06 — STATISTICAL TESTS & EFFECT SIZES"")"
+51,markdown,,P6,0,0,"## 07 — PHASE 6: FEATURE-ENGINEERING READINESS + DEPTH (planned notebook `07_feature_engineering_eda`)Includes the review's missing depth items: cohorts, customer lifetime, repeate"
+52,code,26.0,P6,2473,0,"banner(""SECTION 07 — FEATURE ENGINEERING & DEPTH ANALYSES"")"
+53,markdown,,P6,0,0,"## 07b — cohort analysis, time-to-first-fraud (KM + discrete-time hazard — FIX #8),customer lifetime, repeated-fraud events, merchant hierarchical EB"
+54,code,27.0,P6,1909,0,"# ---- cohort analysis (ADDED, review): cards grouped by first-transaction month -----------"
+55,markdown,,P7,0,0,"## 08 — PHASE 7: MODEL-BASED EDA CLOSURE (adversarial validation, walk-forward CV,calibration, economics, ablation, SHAP, PDP+ICE, segment errors)All encodings here are the causal "
+56,code,28.0,P7,2327,0,"banner(""SECTION 08 — MODEL SUITE"")"
+57,markdown,,P7,0,0,"## 08b — walk-forward time-series CV (ADDED, review) + final model + curves + calibration"
+58,code,29.0,P7,4334,0,"from sklearn.metrics import (average_precision_score, roc_auc_score, roc_curve,"
+59,code,30.0,P7,861,0,"# v4 Task 8 (FIX #14, gated by RUN_ROBUSTNESS): leave-card-out CV — new-customer generalisation."
+60,markdown,,P7,0,0,"## 08c — review-budget economics: cost-sensitive loss, capture@k, learning curve, ablation"
+61,code,31.0,P7,4535,0,"# ---- cost-sensitive analysis (ADDED, review): FP friction $ vs FN = lost fraud $ ----------"
+62,markdown,,P7,0,0,"## 08d — explainability: SHAP (FIX #7: subsampled + interventional background + timer),PDP + ICE (ADDED), and residual / error analysis by segment (ADDED)"
+63,code,32.0,P7,1195,0,"# ---- SHAP with review fixes: 5k sample, 200-row background, max_evals, timing --------------"
+64,markdown,,P8,0,0,"## 09 — PHASE 8: REPORT, FINDINGS LEDGER, REPRODUCIBILITY CHECKLIST, OUTPUT BUNDLE"
+65,code,33.0,P8,7416,0,"banner(""SECTION 09 — REPORT & REPRODUCIBILITY"")"

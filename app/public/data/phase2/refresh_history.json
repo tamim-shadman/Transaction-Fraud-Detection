@@ -1,0 +1,100 @@
+[
+  {
+    "id": "ref_1792601352",
+    "timestamp": "2026-10-21T16:49:12.861142+00:00",
+    "status": "SUCCESS",
+    "duration_seconds": 1.61,
+    "source_changes": {
+      "new_files": 0,
+      "modified_files": 0,
+      "removed_files": 0,
+      "unchanged_files": 185
+    },
+    "validation_summary": {
+      "total_checks": 3,
+      "passed_checks": 3,
+      "failed_checks": 0
+    },
+    "pipeline_stages": [
+      {
+        "stage": "1. Source Discovery",
+        "status": "COMPLETED",
+        "duration_ms": 120
+      },
+      {
+        "stage": "2. Checksum Fingerprint",
+        "status": "COMPLETED",
+        "duration_ms": 85
+      },
+      {
+        "stage": "3. Contract & Schema Validation",
+        "status": "COMPLETED",
+        "duration_ms": 190
+      },
+      {
+        "stage": "4. Staged Rebuild & Metric Calc",
+        "status": "COMPLETED",
+        "duration_ms": 420
+      },
+      {
+        "stage": "5. Reproducibility Manifest Sync",
+        "status": "COMPLETED",
+        "duration_ms": 95
+      },
+      {
+        "stage": "6. Atomic Publication",
+        "status": "COMPLETED",
+        "duration_ms": 30
+      }
+    ]
+  },
+  {
+    "id": "ref_1792601274",
+    "timestamp": "2026-10-21T16:47:54.353305+00:00",
+    "status": "SUCCESS",
+    "duration_seconds": 3.07,
+    "source_changes": {
+      "new_files": 185,
+      "modified_files": 0,
+      "removed_files": 0,
+      "unchanged_files": 0
+    },
+    "validation_summary": {
+      "total_checks": 3,
+      "passed_checks": 3,
+      "failed_checks": 0
+    },
+    "pipeline_stages": [
+      {
+        "stage": "1. Source Discovery",
+        "status": "COMPLETED",
+        "duration_ms": 120
+      },
+      {
+        "stage": "2. Checksum Fingerprint",
+        "status": "COMPLETED",
+        "duration_ms": 85
+      },
+      {
+        "stage": "3. Contract & Schema Validation",
+        "status": "COMPLETED",
+        "duration_ms": 190
+      },
+      {
+        "stage": "4. Staged Rebuild & Metric Calc",
+        "status": "COMPLETED",
+        "duration_ms": 420
+      },
+      {
+        "stage": "5. Reproducibility Manifest Sync",
+        "status": "COMPLETED",
+        "duration_ms": 95
+      },
+      {
+        "stage": "6. Atomic Publication",
+        "status": "COMPLETED",
+        "duration_ms": 30
+      }
+    ]
+  }
+]

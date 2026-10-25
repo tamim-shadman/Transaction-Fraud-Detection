@@ -1,0 +1,163 @@
+
+## CELL 0
+# Credit-Card Transaction Fraud — Research-Grade EDA (Sparkov / `kartik2112/fraud-detection`)
+
+**Data:** `fraudTrain.csv` + `fraudTest.csv` (~1.85M transactions, 22 columns, target `is_fraud`, ~0.5–0.6% positives).
+
+This single notebook is organised as the modular notebook set of the research plan:
+
+| Section | Planned notebook | Content |
+|---|---|---|
+| 01 | `01_data_audit` | schema / completeness / identifiers / temporal coverage / imbalance + **generator forensics** |
+| 02 | `02_univariate` | amount, temporal, categorical, demographic distributions + QQ plots |
+| 03 | `03_bivariate` | interactions, geography (state / city / zip3), cardholder profiles, money lens, correlation / MI / Cramér's V |
+| 04 | `04_temporal` | rolling stats, STL, ACF / PACF, time-profile heatmaps, change-point (PELT penalty sensitivity), card timelines |
+| 05 | `05_advanced_viz` | PCA / t-SNE / UMAP (+3D, biplot, contours), clustering suite, anomaly suite, parallel-coords / Andrews / hexbin / raincloud / swarm |
+| 06 | `06_statistical_tests` | Mann-Whitney + effect sizes + bootstrap CIs + FDR, chi² / Cramér's V + post-hoc, Wilson forest plots, card-cluster-robust logit |
+| 07 | `07_feature_engineering_eda` | causal target encoding + leak demo, velocity, high-risk combos, cohorts, KM + discrete-time hazard, merchant hierarchical EB, repeated-fraud, hour-encoding comparison |
+| 08 | (model closure) | adversarial validation (held-out), walk-forward CV, ROC / PR / calibration / confusion, cost-sensitive + capture@k, learning curve, ablation, SHAP, PDP+ICE, segment errors |
+| 09 | report | findings ledger, figure index, reproducibility checklist, output bundle |
+
+**All 8 review bugs are fixed** (search `FIX #1` … `FIX #8`) and every "missing" item is included (search `ADDED:`).
+
+Run top-to-bottom. Free Colab: ~35–50 min. All randomness seeded (`SEED=42`). Everything is written to `outputs/`.
+
+**v4 upgrade (review round 3, FIX #9–#16):** per-feature PSI, walk-forward-vs-test OOD pairing,
+decomposed 6-way ablation, generator-artifact caveat, quantified burst mechanism, FP-cost
+sensitivity sweep, bootstrap PR-AUC CI, temperature scaling, plus (gated by `RUN_ROBUSTNESS`,
+default True — set env
+
+## CELL 1
+## 🚀 How to run this on Google Colab
+
+**1. Get the notebook onto Colab** — `File > Upload notebook` on
+[colab.research.google.com](https://colab.research.google.com) (or `Runtime > Run all`
+after opening a local copy through *Upload*).
+
+**2. Get the data** (pick **one**):
+
+| Option | What to do | What the notebook does |
+|---|---|---|
+| **A — Add data (easiest)** | Left sidebar → **Files** → **Add data** → **Kaggle** → search `kartik2112/fraud-detection` | finds it in `/kaggle/input/...` and copies it into `./data` |
+| **B — kagglehub** | Upload your `kaggle.json` (Kaggle → Settings → API → Create new token) to `~/.kaggle/kaggle.json`, or `export KAGGLE_USERNAME=… KAGGLE_KEY=…` | `kagglehub.dataset_download(...)`, then copies the CSVs |
+| **C — Kaggle API** | same credentials as B | downloads `fraud-detection.zip` through the Kaggle REST API |
+| **D — manual** | re-run the **§01** cell | opens a file picker for `fraudTrain.csv` + `fraudTest.csv` |
+| **E — no data at all** | set `FRAUD_EDA_SMOKE=1` | generates a small synthetic Sparkov-shaped dataset and runs the whole pipeline |
+
+**3. Runtime** → *Change runtime type* → **T4 GPU** (recommended: UMAP/t-SNE/SHAP are much
+faster; CPU works but takes ~1 h). Free tier is fine.
+
+**4. Run all** (`Runtime > Run all`). Outputs land in `/content/outputs/`
+(`figures/`, `tables/`, `logs/`, plus a single `fraud_eda_outputs_*.zip` bundle).
+
+### Knobs (all optional)
+
+```python
+import os
+os.environ["FRAUD_EDA_SMOKE"] = "1"           # 2-minute synthetic dry-run (no Kaggle needed)
+os.environ["FRAUD_EDA_RUN_ROBUSTNESS"] = "0"   # skip the 4 heaviest extra model fits
+os.environ["FRAUD_EDA_SAVE_TO_DRIVE"] = "1"    # mount Drive and copy outputs/ at the end
+os.environ["FRAUD_EDA_DOWNLOAD"] = "0"         # do not auto-download the output bundle
+```
+
+> The env vars must be set **before** the §0.1 config cell runs (i.e. in the cell above,
+> or by editing `IS_SMOKE` / `RUN_ROBUSTNESS` directly there).
+
+### Colab-specific fixes applied in this version
+
+* §01 data resolution rewritten: `/kaggle/input` → `./data` → `kagglehub` → Kaggle API →
+  interactive upload → synthetic. The copy uses `shutil.copy2`, **not** `Path.replace()`,
+  which f
+
+## CELL 3
+## 0.0 Colab setup — dependencies, environment bootstrap, optional Google-Drive output
+
+## CELL 5
+## 0.1 Imports, global config, reproducibility contract
+
+## CELL 7
+## 0.2 Pre-registered research questions + findings ledgerFindings are graded (`strong` / `supports` / `weak` / `caveat`) and auto-compiled in the final report.
+
+## CELL 9
+## 0.3 Statistical toolkit — effect sizes, bootstrap CIs, FDR, EB shrinkage, survivalWith n ≈ 1.85M, p-values alone are meaningless; every claim below reports **effect size + uncertainty + n**, and families of tests get Benjamini-Hochberg FDR correction.
+
+## CELL 11
+## 0.4 Plotting helpers, GBM wrapper, sampling utilities (shared across all sections)
+
+## CELL 13
+## 01 — LOAD DATA, VERSION FINGERPRINT, DATA CONTRACTS (planned notebook `01_data_audit`)
+
+## CELL 15
+## 01b — DERIVED FEATURES (leak-aware). FIX #1, #2, #4 are applied HERE, once, andevery downstream section uses these columns — no ad-hoc re-derivations anywhere.
+
+## CELL 17
+## 01c — Phase 0: schema, completeness, identifiers, coverage, imbalance + **generator forensics**Before any EDA we establish what the Sparkov generator does and does not model — this framesthe boundary of every later claim (review: "what the simulator does and does not model").
+
+## CELL 19
+## 02 — PHASE 1: UNIVARIATE DISTRIBUTIONS (planned notebook `02_univariate`)
+
+## CELL 21
+## 02b — temporal features: hour / weekday / month, 2019 vs 2020, COVID window
+
+## CELL 23
+## 02c — categorical features: category / gender / state / job / merchant
+
+## CELL 25
+## 02d — demographics & geography, target variable
+
+## CELL 27
+## 03 — PHASE 2: BIVARIATE & MULTIVARIATE INTERACTIONS (planned notebook `03_bivariate`)
+
+## CELL 29
+## 03b — geography: distance, maps, city level, zip-prefix (plan §4.3)
+
+## CELL 31
+## 03c — demographic interactions + ADDED pairplots / jointplots (plan §4.4)
+
+## CELL 33
+## 03d — cardholder behavioral profiles + money-denominated lens (plan §4.5, review 'keep')
+
+## CELL 35
+## 03e — correlation & association structure: Spearman, MI, Cramér's V (plan §4.6)
+
+## CELL 37
+## 04 — PHASE 3: TEMPORAL & TIME-SERIES STRUCTURE (planned notebook `04_temporal`)
+
+## CELL 39
+## 04b — time-profile heatmaps, structural breaks (PELT penalty sensitivity — FIX #6), card timelines
+
+## CELL 41
+## 05 — PHASE 4: ADVANCED VISUALIZATION & DIMENSIONALITY REDUCTION (planned notebook `05_advanced_viz`)Unsupervised views use ONLY raw + behavioral features (no target encodings — honest separability).
+
+## CELL 43
+## 05b — clustering suite: K-Means, DBSCAN, hierarchical + cluster profiling (plan §6.2)
+
+## CELL 45
+## 05c — anomaly detection: Isolation Forest, autoencoder, LOF (plan §6.3)
+
+## CELL 47
+## 05d — additional high-dimensional visuals (plan §6.4): parallel coordinates, Andrewscurves, hexbin + fraud-rate contours, raincloud, swarm — all flagged `ADDED` where thereview found them missing.
+
+## CELL 49
+## 06 — PHASE 5: STATISTICAL TESTING & EFFECT SIZES (planned notebook `06_statistical_tests`)Review fixes here: **bootstrap CIs for Cliff's delta / KS** and **BH-FDR on theMann-Whitney battery** (previously only volcano/OR tables were corrected).
+
+## CELL 51
+## 07 — PHASE 6: FEATURE-ENGINEERING READINESS + DEPTH (planned notebook `07_feature_engineering_eda`)Includes the review's missing depth items: cohorts, customer lifetime, repeated-fraudevents, merchant hierarchical EB, zip3 hierarchy, cyclical-vs-monotonic hour comparison,the causal-TE leak demo, and a proper discrete-time hazard (FIX #8).
+
+## CELL 53
+## 07b — cohort analysis, time-to-first-fraud (KM + discrete-time hazard — FIX #8),customer lifetime, repeated-fraud events, merchant hierarchical EB
+
+## CELL 55
+## 08 — PHASE 7: MODEL-BASED EDA CLOSURE (adversarial validation, walk-forward CV,calibration, economics, ablation, SHAP, PDP+ICE, segment errors)All encodings here are the causal ones from §01b — the model results are leak-free.
+
+## CELL 57
+## 08b — walk-forward time-series CV (ADDED, review) + final model + curves + calibration
+
+## CELL 60
+## 08c — review-budget economics: cost-sensitive loss, capture@k, learning curve, ablation
+
+## CELL 62
+## 08d — explainability: SHAP (FIX #7: subsampled + interventional background + timer),PDP + ICE (ADDED), and residual / error analysis by segment (ADDED)
+
+## CELL 64
+## 09 — PHASE 8: REPORT, FINDINGS LEDGER, REPRODUCIBILITY CHECKLIST, OUTPUT BUNDLE

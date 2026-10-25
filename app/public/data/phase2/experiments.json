@@ -1,0 +1,1532 @@
+{
+  "generatedAt": "2026-10-21T16:49:12+00:00",
+  "counts": {
+    "total": 26,
+    "groups": 5
+  },
+  "groups": [
+    {
+      "id": "cross-boundary-model-variants",
+      "label": "Cross-boundary model variants",
+      "metric": "Test PR-AUC",
+      "basis": "Same held-out test split, but variants differ in features or training objective. Ablations share training rows; robustness variants are not controlled experiments.",
+      "limitations": "Do not treat variant differences as causal unless only the named feature set changed. PR-AUC is bounded and class-imbalanced; prefer absolute differences over percent improvement.",
+      "comparable": true,
+      "count": 9,
+      "members": [
+        "final_unconstrained",
+        "ablation_minus_card_prior",
+        "ablation_minus_te",
+        "ablation_minus_counts",
+        "ablation_minus_velocity",
+        "ablation_raw_only",
+        "monotonic",
+        "time_decay",
+        "fold_ensemble"
+      ],
+      "baselineId": "final_unconstrained"
+    },
+    {
+      "id": "time-ordered-folds",
+      "label": "Time-ordered folds",
+      "metric": "Validation PR-AUC",
+      "basis": "Expanding-window folds scored in-domain and on the same held-out test split; the four rows are repeated measurements of one validation design.",
+      "limitations": "Folds are not independent samples and cover different market periods. Report dispersion, not a single fold as the result.",
+      "comparable": true,
+      "count": 4,
+      "members": [
+        "wf_fold_0",
+        "wf_fold_1",
+        "wf_fold_2",
+        "wf_fold_3"
+      ],
+      "baselineId": null
+    },
+    {
+      "id": "anomaly-detectors",
+      "label": "Anomaly detectors",
+      "metric": "AUC vs fraud labels",
+      "basis": "Different algorithms and different sample sizes (LOF uses 5,000 rows; the others 50,000). AUC is computed against fraud labels for evaluation only.",
+      "limitations": "Sample-size and algorithm differences prevent a clean ranking. LOF's AUC is not directly comparable to the 50,000-row detectors.",
+      "comparable": false,
+      "count": 3,
+      "members": [
+        "anomaly_isolationforest",
+        "anomaly_autoencoder",
+        "anomaly_lof"
+      ],
+      "baselineId": null
+    },
+    {
+      "id": "2d-embeddings",
+      "label": "2D embeddings",
+      "metric": "Embedding separability AUC",
+      "basis": "Separability is measured by a logistic classifier on each 2D embedding, with different hyperparameters per embedding.",
+      "limitations": "Hyperparameters and geometry differ. Use as a qualitative diagnostic, not a model-selection leaderboard.",
+      "comparable": false,
+      "count": 7,
+      "members": [
+        "embed_pca_2",
+        "embed_umap_nn_15_md_0_5",
+        "embed_t_sne_p_30",
+        "embed_t_sne_p_50",
+        "embed_umap_nn_15_md_0_1",
+        "embed_t_sne_p_100",
+        "embed_umap_nn_50_md_0_1"
+      ],
+      "baselineId": null
+    },
+    {
+      "id": "hour-encoding-comparison",
+      "label": "Hour-encoding comparison",
+      "metric": "Holdout PR-AUC",
+      "basis": "The same narrow three-feature model and time-ordered holdout, varying only the hour encoding.",
+      "limitations": "Only three features plus category; a 0.0003 difference is not material evidence for a general encoding recommendation.",
+      "comparable": true,
+      "count": 3,
+      "members": [
+        "hour_raw",
+        "hour_cyclical",
+        "hour_categorical"
+      ],
+      "baselineId": "hour_raw"
+    }
+  ],
+  "items": [
+    {
+      "id": "final_unconstrained",
+      "family": "Supervised · OOD test",
+      "label": "FULL (all features) / final",
+      "description": "Primary leak-aware LightGBM; 27 features.",
+      "metric": "Test PR-AUC",
+      "pr_auc": 0.5574801511963462,
+      "roc_auc": 0.9677282868198628,
+      "n_features": 27,
+      "split": "Held-out test (cross-boundary)",
+      "n_rows": 555719,
+      "source": "phase8_ablation_decomposed.csv",
+      "comparisonNote": "Ablation variants share training data and test split; they are not independent experiments.",
+      "group": "Supervised · OOD test",
+      "groupId": "cross-boundary-model-variants",
+      "groupLabel": "Cross-boundary model variants",
+      "metricLabel": "Test PR-AUC",
+      "baselineId": "final_unconstrained",
+      "deltaVsBaseline": null,
+      "ratioVsBaseline": null,
+      "deltaMode": "absolute",
+      "rankInGroup": 7,
+      "runtimeSeconds": null,
+      "sourceTableId": "phase8_ablation_decomposed",
+      "sourceHref": "/artifacts?tab=tables&table=phase8_ablation_decomposed",
+      "href": "/experiments?exp=final_unconstrained",
+      "comparable": true,
+      "reproducibility_tier": "Tier 1: Retained Inputs & Code",
+      "reproducibility_badge": "Reproducible",
+      "reproducibility_desc": "Source data, configuration parameters, implementation code, and environment specs are fully retained.",
+      "rerun_manifest": {
+        "executable": "python",
+        "entrypoint": "analytics/models/run_variant.py",
+        "cli_command": "python -m analytics.models.train --variant final_unconstrained --seed 42",
+        "environment": {
+          "python": "3.13",
+          "packages": [
+            "lightgbm==4.6.0",
+            "scikit-learn==1.6.1",
+            "pandas==2.2.3"
+          ],
+          "cuda_required": false
+        },
+        "data_dependency": {
+          "train_source": "kartik2112/fraud-detection (fraudTrain.csv)",
+          "test_source": "kartik2112/fraud-detection (fraudTest.csv)",
+          "retained_inputs_available": true
+        },
+        "safety_envelope": {
+          "read_only": true,
+          "network_access_required": false,
+          "timeout_seconds": 600
+        }
+      }
+    },
+    {
+      "id": "ablation_minus_card_prior",
+      "family": "Supervised · OOD test",
+      "label": "Ablation · minus card_prior_fraud",
+      "description": "Causal prior-fraud count removed.",
+      "metric": "Test PR-AUC",
+      "pr_auc": 0.831485399757575,
+      "roc_auc": 0.9799021704461628,
+      "n_features": 26,
+      "split": "Held-out test (cross-boundary)",
+      "n_rows": 555719,
+      "source": "phase8_ablation_decomposed.csv",
+      "comparisonNote": "Ablation variants share training data and test split; they are not independent experiments.",
+      "group": "Supervised · OOD test",
+      "groupId": "cross-boundary-model-variants",
+      "groupLabel": "Cross-boundary model variants",
+      "metricLabel": "Test PR-AUC",
+      "baselineId": "final_unconstrained",
+      "deltaVsBaseline": 0.27400524856122876,
+      "ratioVsBaseline": 1.4915067343172965,
+      "deltaMode": "absolute",
+      "rankInGroup": 2,
+      "runtimeSeconds": null,
+      "sourceTableId": "phase8_ablation_decomposed",
+      "sourceHref": "/artifacts?tab=tables&table=phase8_ablation_decomposed",
+      "href": "/experiments?exp=ablation_minus_card_prior",
+      "comparable": true,
+      "reproducibility_tier": "Tier 1: Retained Inputs & Code",
+      "reproducibility_badge": "Reproducible",
+      "reproducibility_desc": "Source data, configuration parameters, implementation code, and environment specs are fully retained.",
+      "rerun_manifest": {
+        "executable": "python",
+        "entrypoint": "analytics/models/run_variant.py",
+        "cli_command": "python -m analytics.models.train --variant ablation_minus_card_prior --seed 42",
+        "environment": {
+          "python": "3.13",
+          "packages": [
+            "lightgbm==4.6.0",
+            "scikit-learn==1.6.1",
+            "pandas==2.2.3"
+          ],
+          "cuda_required": false
+        },
+        "data_dependency": {
+          "train_source": "kartik2112/fraud-detection (fraudTrain.csv)",
+          "test_source": "kartik2112/fraud-detection (fraudTest.csv)",
+          "retained_inputs_available": true
+        },
+        "safety_envelope": {
+          "read_only": true,
+          "network_access_required": false,
+          "timeout_seconds": 600
+        }
+      }
+    },
+    {
+      "id": "ablation_minus_te",
+      "family": "Supervised · OOD test",
+      "label": "Ablation · minus te_*",
+      "description": "Four target-encoded features removed.",
+      "metric": "Test PR-AUC",
+      "pr_auc": 0.666953729386896,
+      "roc_auc": 0.9788913252432132,
+      "n_features": 23,
+      "split": "Held-out test (cross-boundary)",
+      "n_rows": 555719,
+      "source": "phase8_ablation_decomposed.csv",
+      "comparisonNote": "Ablation variants share training data and test split; they are not independent experiments.",
+      "group": "Supervised · OOD test",
+      "groupId": "cross-boundary-model-variants",
+      "groupLabel": "Cross-boundary model variants",
+      "metricLabel": "Test PR-AUC",
+      "baselineId": "final_unconstrained",
+      "deltaVsBaseline": 0.10947357819054981,
+      "ratioVsBaseline": 1.1963721541576338,
+      "deltaMode": "absolute",
+      "rankInGroup": 4,
+      "runtimeSeconds": null,
+      "sourceTableId": "phase8_ablation_decomposed",
+      "sourceHref": "/artifacts?tab=tables&table=phase8_ablation_decomposed",
+      "href": "/experiments?exp=ablation_minus_te",
+      "comparable": true,
+      "reproducibility_tier": "Tier 1: Retained Inputs & Code",
+      "reproducibility_badge": "Reproducible",
+      "reproducibility_desc": "Source data, configuration parameters, implementation code, and environment specs are fully retained.",
+      "rerun_manifest": {
+        "executable": "python",
+        "entrypoint": "analytics/models/run_variant.py",
+        "cli_command": "python -m analytics.models.train --variant ablation_minus_te --seed 42",
+        "environment": {
+          "python": "3.13",
+          "packages": [
+            "lightgbm==4.6.0",
+            "scikit-learn==1.6.1",
+            "pandas==2.2.3"
+          ],
+          "cuda_required": false
+        },
+        "data_dependency": {
+          "train_source": "kartik2112/fraud-detection (fraudTrain.csv)",
+          "test_source": "kartik2112/fraud-detection (fraudTest.csv)",
+          "retained_inputs_available": true
+        },
+        "safety_envelope": {
+          "read_only": true,
+          "network_access_required": false,
+          "timeout_seconds": 600
+        }
+      }
+    },
+    {
+      "id": "ablation_minus_counts",
+      "family": "Supervised · OOD test",
+      "label": "Ablation · minus cnt_*/n_prior",
+      "description": "Trailing counts and prior-volume count removed.",
+      "metric": "Test PR-AUC",
+      "pr_auc": 0.565554767513936,
+      "roc_auc": 0.9790926135479888,
+      "n_features": 24,
+      "split": "Held-out test (cross-boundary)",
+      "n_rows": 555719,
+      "source": "phase8_ablation_decomposed.csv",
+      "comparisonNote": "Ablation variants share training data and test split; they are not independent experiments.",
+      "group": "Supervised · OOD test",
+      "groupId": "cross-boundary-model-variants",
+      "groupLabel": "Cross-boundary model variants",
+      "metricLabel": "Test PR-AUC",
+      "baselineId": "final_unconstrained",
+      "deltaVsBaseline": 0.008074616317589767,
+      "ratioVsBaseline": 1.0144841323951386,
+      "deltaMode": "absolute",
+      "rankInGroup": 6,
+      "runtimeSeconds": null,
+      "sourceTableId": "phase8_ablation_decomposed",
+      "sourceHref": "/artifacts?tab=tables&table=phase8_ablation_decomposed",
+      "href": "/experiments?exp=ablation_minus_counts",
+      "comparable": true,
+      "reproducibility_tier": "Tier 1: Retained Inputs & Code",
+      "reproducibility_badge": "Reproducible",
+      "reproducibility_desc": "Source data, configuration parameters, implementation code, and environment specs are fully retained.",
+      "rerun_manifest": {
+        "executable": "python",
+        "entrypoint": "analytics/models/run_variant.py",
+        "cli_command": "python -m analytics.models.train --variant ablation_minus_counts --seed 42",
+        "environment": {
+          "python": "3.13",
+          "packages": [
+            "lightgbm==4.6.0",
+            "scikit-learn==1.6.1",
+            "pandas==2.2.3"
+          ],
+          "cuda_required": false
+        },
+        "data_dependency": {
+          "train_source": "kartik2112/fraud-detection (fraudTrain.csv)",
+          "test_source": "kartik2112/fraud-detection (fraudTest.csv)",
+          "retained_inputs_available": true
+        },
+        "safety_envelope": {
+          "read_only": true,
+          "network_access_required": false,
+          "timeout_seconds": 600
+        }
+      }
+    },
+    {
+      "id": "ablation_minus_velocity",
+      "family": "Supervised · OOD test",
+      "label": "Ablation · minus velocity",
+      "description": "Velocity block removed.",
+      "metric": "Test PR-AUC",
+      "pr_auc": 0.6856057162327547,
+      "roc_auc": 0.9714173580059622,
+      "n_features": 23,
+      "split": "Held-out test (cross-boundary)",
+      "n_rows": 555719,
+      "source": "phase8_ablation_decomposed.csv",
+      "comparisonNote": "Ablation variants share training data and test split; they are not independent experiments.",
+      "group": "Supervised · OOD test",
+      "groupId": "cross-boundary-model-variants",
+      "groupLabel": "Cross-boundary model variants",
+      "metricLabel": "Test PR-AUC",
+      "baselineId": "final_unconstrained",
+      "deltaVsBaseline": 0.12812556503640848,
+      "ratioVsBaseline": 1.2298298240062044,
+      "deltaMode": "absolute",
+      "rankInGroup": 3,
+      "runtimeSeconds": null,
+      "sourceTableId": "phase8_ablation_decomposed",
+      "sourceHref": "/artifacts?tab=tables&table=phase8_ablation_decomposed",
+      "href": "/experiments?exp=ablation_minus_velocity",
+      "comparable": true,
+      "reproducibility_tier": "Tier 1: Retained Inputs & Code",
+      "reproducibility_badge": "Reproducible",
+      "reproducibility_desc": "Source data, configuration parameters, implementation code, and environment specs are fully retained.",
+      "rerun_manifest": {
+        "executable": "python",
+        "entrypoint": "analytics/models/run_variant.py",
+        "cli_command": "python -m analytics.models.train --variant ablation_minus_velocity --seed 42",
+        "environment": {
+          "python": "3.13",
+          "packages": [
+            "lightgbm==4.6.0",
+            "scikit-learn==1.6.1",
+            "pandas==2.2.3"
+          ],
+          "cuda_required": false
+        },
+        "data_dependency": {
+          "train_source": "kartik2112/fraud-detection (fraudTrain.csv)",
+          "test_source": "kartik2112/fraud-detection (fraudTest.csv)",
+          "retained_inputs_available": true
+        },
+        "safety_envelope": {
+          "read_only": true,
+          "network_access_required": false,
+          "timeout_seconds": 600
+        }
+      }
+    },
+    {
+      "id": "ablation_raw_only",
+      "family": "Supervised · OOD test",
+      "label": "Ablation · raw-only",
+      "description": "Raw features only; no history block.",
+      "metric": "Test PR-AUC",
+      "pr_auc": 0.83533822876129,
+      "roc_auc": 0.9935070653363058,
+      "n_features": 15,
+      "split": "Held-out test (cross-boundary)",
+      "n_rows": 555719,
+      "source": "phase8_ablation_decomposed.csv",
+      "comparisonNote": "Ablation variants share training data and test split; they are not independent experiments.",
+      "group": "Supervised · OOD test",
+      "groupId": "cross-boundary-model-variants",
+      "groupLabel": "Cross-boundary model variants",
+      "metricLabel": "Test PR-AUC",
+      "baselineId": "final_unconstrained",
+      "deltaVsBaseline": 0.27785807756494385,
+      "ratioVsBaseline": 1.4984178844191376,
+      "deltaMode": "absolute",
+      "rankInGroup": 1,
+      "runtimeSeconds": null,
+      "sourceTableId": "phase8_ablation_decomposed",
+      "sourceHref": "/artifacts?tab=tables&table=phase8_ablation_decomposed",
+      "href": "/experiments?exp=ablation_raw_only",
+      "comparable": true,
+      "reproducibility_tier": "Tier 1: Retained Inputs & Code",
+      "reproducibility_badge": "Reproducible",
+      "reproducibility_desc": "Source data, configuration parameters, implementation code, and environment specs are fully retained.",
+      "rerun_manifest": {
+        "executable": "python",
+        "entrypoint": "analytics/models/run_variant.py",
+        "cli_command": "python -m analytics.models.train --variant ablation_raw_only --seed 42",
+        "environment": {
+          "python": "3.13",
+          "packages": [
+            "lightgbm==4.6.0",
+            "scikit-learn==1.6.1",
+            "pandas==2.2.3"
+          ],
+          "cuda_required": false
+        },
+        "data_dependency": {
+          "train_source": "kartik2112/fraud-detection (fraudTrain.csv)",
+          "test_source": "kartik2112/fraud-detection (fraudTest.csv)",
+          "retained_inputs_available": true
+        },
+        "safety_envelope": {
+          "read_only": true,
+          "network_access_required": false,
+          "timeout_seconds": 600
+        }
+      }
+    },
+    {
+      "id": "monotonic",
+      "family": "Supervised · OOD test",
+      "label": "Monotonic constraints",
+      "description": "Monotonic constraints variant evaluated on the same held-out test split.",
+      "metric": "Test PR-AUC",
+      "pr_auc": 0.5921751049650442,
+      "roc_auc": 0.9435379437250913,
+      "n_features": null,
+      "split": "Held-out test (cross-boundary)",
+      "n_rows": 555719,
+      "source": "phase8_monotonic_comparison.csv",
+      "comparisonNote": "Robustness variant; not a controlled experiment.",
+      "group": "Supervised · OOD test",
+      "groupId": "cross-boundary-model-variants",
+      "groupLabel": "Cross-boundary model variants",
+      "metricLabel": "Test PR-AUC",
+      "baselineId": "final_unconstrained",
+      "deltaVsBaseline": 0.03469495376869802,
+      "ratioVsBaseline": 1.062235316709022,
+      "deltaMode": "absolute",
+      "rankInGroup": 5,
+      "runtimeSeconds": null,
+      "sourceTableId": "phase8_monotonic_comparison",
+      "sourceHref": "/artifacts?tab=tables&table=phase8_monotonic_comparison",
+      "href": "/experiments?exp=monotonic",
+      "comparable": true,
+      "reproducibility_tier": "Tier 1: Retained Inputs & Code",
+      "reproducibility_badge": "Reproducible",
+      "reproducibility_desc": "Source data, configuration parameters, implementation code, and environment specs are fully retained.",
+      "rerun_manifest": {
+        "executable": "python",
+        "entrypoint": "analytics/models/run_variant.py",
+        "cli_command": "python -m analytics.models.train --variant monotonic --seed 42",
+        "environment": {
+          "python": "3.13",
+          "packages": [
+            "lightgbm==4.6.0",
+            "scikit-learn==1.6.1",
+            "pandas==2.2.3"
+          ],
+          "cuda_required": false
+        },
+        "data_dependency": {
+          "train_source": "kartik2112/fraud-detection (fraudTrain.csv)",
+          "test_source": "kartik2112/fraud-detection (fraudTest.csv)",
+          "retained_inputs_available": true
+        },
+        "safety_envelope": {
+          "read_only": true,
+          "network_access_required": false,
+          "timeout_seconds": 600
+        }
+      }
+    },
+    {
+      "id": "time_decay",
+      "family": "Supervised · OOD test",
+      "label": "Time-decay weighting",
+      "description": "Time-decay weighting variant evaluated on the same held-out test split.",
+      "metric": "Test PR-AUC",
+      "pr_auc": 0.5407833916639233,
+      "roc_auc": 0.9674108193720746,
+      "n_features": null,
+      "split": "Held-out test (cross-boundary)",
+      "n_rows": 555719,
+      "source": "phase8_time_decay_comparison.csv",
+      "comparisonNote": "Robustness variant; not a controlled experiment.",
+      "group": "Supervised · OOD test",
+      "groupId": "cross-boundary-model-variants",
+      "groupLabel": "Cross-boundary model variants",
+      "metricLabel": "Test PR-AUC",
+      "baselineId": "final_unconstrained",
+      "deltaVsBaseline": -0.01669675953242289,
+      "ratioVsBaseline": 0.9700495892157024,
+      "deltaMode": "absolute",
+      "rankInGroup": 8,
+      "runtimeSeconds": null,
+      "sourceTableId": "phase8_time_decay_comparison",
+      "sourceHref": "/artifacts?tab=tables&table=phase8_time_decay_comparison",
+      "href": "/experiments?exp=time_decay",
+      "comparable": true,
+      "reproducibility_tier": "Tier 1: Retained Inputs & Code",
+      "reproducibility_badge": "Reproducible",
+      "reproducibility_desc": "Source data, configuration parameters, implementation code, and environment specs are fully retained.",
+      "rerun_manifest": {
+        "executable": "python",
+        "entrypoint": "analytics/models/run_variant.py",
+        "cli_command": "python -m analytics.models.train --variant time_decay --seed 42",
+        "environment": {
+          "python": "3.13",
+          "packages": [
+            "lightgbm==4.6.0",
+            "scikit-learn==1.6.1",
+            "pandas==2.2.3"
+          ],
+          "cuda_required": false
+        },
+        "data_dependency": {
+          "train_source": "kartik2112/fraud-detection (fraudTrain.csv)",
+          "test_source": "kartik2112/fraud-detection (fraudTest.csv)",
+          "retained_inputs_available": true
+        },
+        "safety_envelope": {
+          "read_only": true,
+          "network_access_required": false,
+          "timeout_seconds": 600
+        }
+      }
+    },
+    {
+      "id": "fold_ensemble",
+      "family": "Supervised · OOD test",
+      "label": "Fold ensemble",
+      "description": "Fold ensemble variant evaluated on the same held-out test split.",
+      "metric": "Test PR-AUC",
+      "pr_auc": 0.5128355010603128,
+      "roc_auc": 0.9757354167207232,
+      "n_features": null,
+      "split": "Held-out test (cross-boundary)",
+      "n_rows": 555719,
+      "source": "phase8_ensemble_comparison.csv",
+      "comparisonNote": "Robustness variant; not a controlled experiment.",
+      "group": "Supervised · OOD test",
+      "groupId": "cross-boundary-model-variants",
+      "groupLabel": "Cross-boundary model variants",
+      "metricLabel": "Test PR-AUC",
+      "baselineId": "final_unconstrained",
+      "deltaVsBaseline": -0.04464465013603336,
+      "ratioVsBaseline": 0.919917058858102,
+      "deltaMode": "absolute",
+      "rankInGroup": 9,
+      "runtimeSeconds": null,
+      "sourceTableId": "phase8_ensemble_comparison",
+      "sourceHref": "/artifacts?tab=tables&table=phase8_ensemble_comparison",
+      "href": "/experiments?exp=fold_ensemble",
+      "comparable": true,
+      "reproducibility_tier": "Tier 1: Retained Inputs & Code",
+      "reproducibility_badge": "Reproducible",
+      "reproducibility_desc": "Source data, configuration parameters, implementation code, and environment specs are fully retained.",
+      "rerun_manifest": {
+        "executable": "python",
+        "entrypoint": "analytics/models/run_variant.py",
+        "cli_command": "python -m analytics.models.train --variant fold_ensemble --seed 42",
+        "environment": {
+          "python": "3.13",
+          "packages": [
+            "lightgbm==4.6.0",
+            "scikit-learn==1.6.1",
+            "pandas==2.2.3"
+          ],
+          "cuda_required": false
+        },
+        "data_dependency": {
+          "train_source": "kartik2112/fraud-detection (fraudTrain.csv)",
+          "test_source": "kartik2112/fraud-detection (fraudTest.csv)",
+          "retained_inputs_available": true
+        },
+        "safety_envelope": {
+          "read_only": true,
+          "network_access_required": false,
+          "timeout_seconds": 600
+        }
+      }
+    },
+    {
+      "id": "wf_fold_0",
+      "family": "Walk-forward folds",
+      "label": "Fold 0 · 2020-04-22 → 2020-06-21",
+      "description": "Time-ordered fold; validation is in-domain and test is cross-boundary.",
+      "metric": "Validation PR-AUC / Test PR-AUC",
+      "pr_auc": 0.9624781000121158,
+      "roc_auc": 0.9993242488998868,
+      "test_pr_auc": 0.5384840455219909,
+      "test_roc_auc": 0.9812925464224116,
+      "n_train": 1146194,
+      "n_val": 150480,
+      "split": "Walk-forward validation + held-out test",
+      "n_rows": 150480,
+      "source": "phase8_walkforward_cv.csv",
+      "comparisonNote": "Fold models are trained on expanding windows.",
+      "group": "Walk-forward folds",
+      "groupId": "time-ordered-folds",
+      "groupLabel": "Time-ordered folds",
+      "metricLabel": "Validation PR-AUC",
+      "baselineId": null,
+      "deltaVsBaseline": null,
+      "ratioVsBaseline": null,
+      "deltaMode": "absolute",
+      "rankInGroup": 1,
+      "runtimeSeconds": null,
+      "sourceTableId": "phase8_walkforward_cv",
+      "sourceHref": "/artifacts?tab=tables&table=phase8_walkforward_cv",
+      "href": "/experiments?exp=wf_fold_0",
+      "comparable": true,
+      "reproducibility_tier": "Tier 1: Retained Inputs & Code",
+      "reproducibility_badge": "Reproducible",
+      "reproducibility_desc": "Source data, configuration parameters, implementation code, and environment specs are fully retained.",
+      "rerun_manifest": {
+        "executable": "python",
+        "entrypoint": "analytics/models/run_variant.py",
+        "cli_command": "python -m analytics.models.train --variant wf_fold_0 --seed 42",
+        "environment": {
+          "python": "3.13",
+          "packages": [
+            "lightgbm==4.6.0",
+            "scikit-learn==1.6.1",
+            "pandas==2.2.3"
+          ],
+          "cuda_required": false
+        },
+        "data_dependency": {
+          "train_source": "kartik2112/fraud-detection (fraudTrain.csv)",
+          "test_source": "kartik2112/fraud-detection (fraudTest.csv)",
+          "retained_inputs_available": true
+        },
+        "safety_envelope": {
+          "read_only": true,
+          "network_access_required": false,
+          "timeout_seconds": 600
+        }
+      }
+    },
+    {
+      "id": "wf_fold_1",
+      "family": "Walk-forward folds",
+      "label": "Fold 1 · 2020-02-22 → 2020-04-22",
+      "description": "Time-ordered fold; validation is in-domain and test is cross-boundary.",
+      "metric": "Validation PR-AUC / Test PR-AUC",
+      "pr_auc": 0.95448105818343,
+      "roc_auc": 0.9984483641162428,
+      "test_pr_auc": 0.5071343541181721,
+      "test_roc_auc": 0.9784415461459544,
+      "n_train": 1013679,
+      "n_val": 132515,
+      "split": "Walk-forward validation + held-out test",
+      "n_rows": 132515,
+      "source": "phase8_walkforward_cv.csv",
+      "comparisonNote": "Fold models are trained on expanding windows.",
+      "group": "Walk-forward folds",
+      "groupId": "time-ordered-folds",
+      "groupLabel": "Time-ordered folds",
+      "metricLabel": "Validation PR-AUC",
+      "baselineId": null,
+      "deltaVsBaseline": null,
+      "ratioVsBaseline": null,
+      "deltaMode": "absolute",
+      "rankInGroup": 3,
+      "runtimeSeconds": null,
+      "sourceTableId": "phase8_walkforward_cv",
+      "sourceHref": "/artifacts?tab=tables&table=phase8_walkforward_cv",
+      "href": "/experiments?exp=wf_fold_1",
+      "comparable": true,
+      "reproducibility_tier": "Tier 1: Retained Inputs & Code",
+      "reproducibility_badge": "Reproducible",
+      "reproducibility_desc": "Source data, configuration parameters, implementation code, and environment specs are fully retained.",
+      "rerun_manifest": {
+        "executable": "python",
+        "entrypoint": "analytics/models/run_variant.py",
+        "cli_command": "python -m analytics.models.train --variant wf_fold_1 --seed 42",
+        "environment": {
+          "python": "3.13",
+          "packages": [
+            "lightgbm==4.6.0",
+            "scikit-learn==1.6.1",
+            "pandas==2.2.3"
+          ],
+          "cuda_required": false
+        },
+        "data_dependency": {
+          "train_source": "kartik2112/fraud-detection (fraudTrain.csv)",
+          "test_source": "kartik2112/fraud-detection (fraudTest.csv)",
+          "retained_inputs_available": true
+        },
+        "safety_envelope": {
+          "read_only": true,
+          "network_access_required": false,
+          "timeout_seconds": 600
+        }
+      }
+    },
+    {
+      "id": "wf_fold_2",
+      "family": "Walk-forward folds",
+      "label": "Fold 2 · 2019-12-24 → 2020-02-22",
+      "description": "Time-ordered fold; validation is in-domain and test is cross-boundary.",
+      "metric": "Validation PR-AUC / Test PR-AUC",
+      "pr_auc": 0.958471968865274,
+      "roc_auc": 0.9987851771224584,
+      "test_pr_auc": 0.4805835889411793,
+      "test_roc_auc": 0.972638626473886,
+      "n_train": 891696,
+      "n_val": 121983,
+      "split": "Walk-forward validation + held-out test",
+      "n_rows": 121983,
+      "source": "phase8_walkforward_cv.csv",
+      "comparisonNote": "Fold models are trained on expanding windows.",
+      "group": "Walk-forward folds",
+      "groupId": "time-ordered-folds",
+      "groupLabel": "Time-ordered folds",
+      "metricLabel": "Validation PR-AUC",
+      "baselineId": null,
+      "deltaVsBaseline": null,
+      "ratioVsBaseline": null,
+      "deltaMode": "absolute",
+      "rankInGroup": 2,
+      "runtimeSeconds": null,
+      "sourceTableId": "phase8_walkforward_cv",
+      "sourceHref": "/artifacts?tab=tables&table=phase8_walkforward_cv",
+      "href": "/experiments?exp=wf_fold_2",
+      "comparable": true,
+      "reproducibility_tier": "Tier 1: Retained Inputs & Code",
+      "reproducibility_badge": "Reproducible",
+      "reproducibility_desc": "Source data, configuration parameters, implementation code, and environment specs are fully retained.",
+      "rerun_manifest": {
+        "executable": "python",
+        "entrypoint": "analytics/models/run_variant.py",
+        "cli_command": "python -m analytics.models.train --variant wf_fold_2 --seed 42",
+        "environment": {
+          "python": "3.13",
+          "packages": [
+            "lightgbm==4.6.0",
+            "scikit-learn==1.6.1",
+            "pandas==2.2.3"
+          ],
+          "cuda_required": false
+        },
+        "data_dependency": {
+          "train_source": "kartik2112/fraud-detection (fraudTrain.csv)",
+          "test_source": "kartik2112/fraud-detection (fraudTest.csv)",
+          "retained_inputs_available": true
+        },
+        "safety_envelope": {
+          "read_only": true,
+          "network_access_required": false,
+          "timeout_seconds": 600
+        }
+      }
+    },
+    {
+      "id": "wf_fold_3",
+      "family": "Walk-forward folds",
+      "label": "Fold 3 · 2019-10-25 → 2019-12-24",
+      "description": "Time-ordered fold; validation is in-domain and test is cross-boundary.",
+      "metric": "Validation PR-AUC / Test PR-AUC",
+      "pr_auc": 0.9287345809722788,
+      "roc_auc": 0.996570671889231,
+      "test_pr_auc": 0.3641194859093415,
+      "test_roc_auc": 0.95797811438033,
+      "n_train": 698095,
+      "n_val": 193601,
+      "split": "Walk-forward validation + held-out test",
+      "n_rows": 193601,
+      "source": "phase8_walkforward_cv.csv",
+      "comparisonNote": "Fold models are trained on expanding windows.",
+      "group": "Walk-forward folds",
+      "groupId": "time-ordered-folds",
+      "groupLabel": "Time-ordered folds",
+      "metricLabel": "Validation PR-AUC",
+      "baselineId": null,
+      "deltaVsBaseline": null,
+      "ratioVsBaseline": null,
+      "deltaMode": "absolute",
+      "rankInGroup": 4,
+      "runtimeSeconds": null,
+      "sourceTableId": "phase8_walkforward_cv",
+      "sourceHref": "/artifacts?tab=tables&table=phase8_walkforward_cv",
+      "href": "/experiments?exp=wf_fold_3",
+      "comparable": true,
+      "reproducibility_tier": "Tier 1: Retained Inputs & Code",
+      "reproducibility_badge": "Reproducible",
+      "reproducibility_desc": "Source data, configuration parameters, implementation code, and environment specs are fully retained.",
+      "rerun_manifest": {
+        "executable": "python",
+        "entrypoint": "analytics/models/run_variant.py",
+        "cli_command": "python -m analytics.models.train --variant wf_fold_3 --seed 42",
+        "environment": {
+          "python": "3.13",
+          "packages": [
+            "lightgbm==4.6.0",
+            "scikit-learn==1.6.1",
+            "pandas==2.2.3"
+          ],
+          "cuda_required": false
+        },
+        "data_dependency": {
+          "train_source": "kartik2112/fraud-detection (fraudTrain.csv)",
+          "test_source": "kartik2112/fraud-detection (fraudTest.csv)",
+          "retained_inputs_available": true
+        },
+        "safety_envelope": {
+          "read_only": true,
+          "network_access_required": false,
+          "timeout_seconds": 600
+        }
+      }
+    },
+    {
+      "id": "anomaly_isolationforest",
+      "family": "Unsupervised anomaly",
+      "label": "IsolationForest",
+      "description": "Unsupervised anomaly score evaluated against fraud labels.",
+      "metric": "AUC",
+      "auc": 0.8431516731899904,
+      "lift": 6.5134099616858245,
+      "precision10": 0.034,
+      "n_rows": 50000,
+      "split": "Unsupervised sample",
+      "source": "phase4_anomaly_summary.csv",
+      "comparisonNote": "Sample sizes differ: LOF uses 5,000 rows; the others 50,000. AUCs are not a controlled ranking.",
+      "group": "Unsupervised anomaly",
+      "groupId": "anomaly-detectors",
+      "groupLabel": "Anomaly detectors",
+      "metricLabel": "AUC vs fraud labels",
+      "baselineId": null,
+      "deltaVsBaseline": null,
+      "ratioVsBaseline": null,
+      "deltaMode": "absolute",
+      "rankInGroup": null,
+      "runtimeSeconds": null,
+      "sourceTableId": "phase4_anomaly_summary",
+      "sourceHref": "/artifacts?tab=tables&table=phase4_anomaly_summary",
+      "href": "/experiments?exp=anomaly_isolationforest",
+      "comparable": false,
+      "reproducibility_tier": "Tier 2: Code Retained, Sampling Variations",
+      "reproducibility_badge": "Partial",
+      "reproducibility_desc": "Model code and evaluation outputs are retained, but specific training seeds or hardware caches require realignment.",
+      "rerun_manifest": {
+        "executable": "python",
+        "entrypoint": "analytics/models/run_variant.py",
+        "cli_command": "python -m analytics.models.evaluate --variant anomaly_isolationforest",
+        "environment": {
+          "python": "3.13",
+          "packages": [
+            "lightgbm==4.6.0",
+            "scikit-learn==1.6.1",
+            "pandas==2.2.3"
+          ],
+          "cuda_required": false
+        },
+        "data_dependency": {
+          "train_source": "kartik2112/fraud-detection (fraudTrain.csv)",
+          "test_source": "kartik2112/fraud-detection (fraudTest.csv)",
+          "retained_inputs_available": true
+        },
+        "safety_envelope": {
+          "read_only": true,
+          "network_access_required": false,
+          "timeout_seconds": 600
+        }
+      }
+    },
+    {
+      "id": "anomaly_autoencoder",
+      "family": "Unsupervised anomaly",
+      "label": "Autoencoder",
+      "description": "Unsupervised anomaly score evaluated against fraud labels.",
+      "metric": "AUC",
+      "auc": 0.7310836127805536,
+      "lift": 4.252873563218391,
+      "precision10": 0.0222,
+      "n_rows": 50000,
+      "split": "Unsupervised sample",
+      "source": "phase4_anomaly_summary.csv",
+      "comparisonNote": "Sample sizes differ: LOF uses 5,000 rows; the others 50,000. AUCs are not a controlled ranking.",
+      "group": "Unsupervised anomaly",
+      "groupId": "anomaly-detectors",
+      "groupLabel": "Anomaly detectors",
+      "metricLabel": "AUC vs fraud labels",
+      "baselineId": null,
+      "deltaVsBaseline": null,
+      "ratioVsBaseline": null,
+      "deltaMode": "absolute",
+      "rankInGroup": null,
+      "runtimeSeconds": null,
+      "sourceTableId": "phase4_anomaly_summary",
+      "sourceHref": "/artifacts?tab=tables&table=phase4_anomaly_summary",
+      "href": "/experiments?exp=anomaly_autoencoder",
+      "comparable": false,
+      "reproducibility_tier": "Tier 2: Code Retained, Sampling Variations",
+      "reproducibility_badge": "Partial",
+      "reproducibility_desc": "Model code and evaluation outputs are retained, but specific training seeds or hardware caches require realignment.",
+      "rerun_manifest": {
+        "executable": "python",
+        "entrypoint": "analytics/models/run_variant.py",
+        "cli_command": "python -m analytics.models.evaluate --variant anomaly_autoencoder",
+        "environment": {
+          "python": "3.13",
+          "packages": [
+            "lightgbm==4.6.0",
+            "scikit-learn==1.6.1",
+            "pandas==2.2.3"
+          ],
+          "cuda_required": false
+        },
+        "data_dependency": {
+          "train_source": "kartik2112/fraud-detection (fraudTrain.csv)",
+          "test_source": "kartik2112/fraud-detection (fraudTest.csv)",
+          "retained_inputs_available": true
+        },
+        "safety_envelope": {
+          "read_only": true,
+          "network_access_required": false,
+          "timeout_seconds": 600
+        }
+      }
+    },
+    {
+      "id": "anomaly_lof",
+      "family": "Unsupervised anomaly",
+      "label": "LOF",
+      "description": "Unsupervised anomaly score evaluated against fraud labels.",
+      "metric": "AUC",
+      "auc": 0.8810426990986803,
+      "lift": 7.894736842105263,
+      "precision10": 0.03,
+      "n_rows": 5000,
+      "split": "Unsupervised sample",
+      "source": "phase4_anomaly_summary.csv",
+      "comparisonNote": "Sample sizes differ: LOF uses 5,000 rows; the others 50,000. AUCs are not a controlled ranking.",
+      "group": "Unsupervised anomaly",
+      "groupId": "anomaly-detectors",
+      "groupLabel": "Anomaly detectors",
+      "metricLabel": "AUC vs fraud labels",
+      "baselineId": null,
+      "deltaVsBaseline": null,
+      "ratioVsBaseline": null,
+      "deltaMode": "absolute",
+      "rankInGroup": null,
+      "runtimeSeconds": null,
+      "sourceTableId": "phase4_anomaly_summary",
+      "sourceHref": "/artifacts?tab=tables&table=phase4_anomaly_summary",
+      "href": "/experiments?exp=anomaly_lof",
+      "comparable": false,
+      "reproducibility_tier": "Tier 2: Code Retained, Sampling Variations",
+      "reproducibility_badge": "Partial",
+      "reproducibility_desc": "Model code and evaluation outputs are retained, but specific training seeds or hardware caches require realignment.",
+      "rerun_manifest": {
+        "executable": "python",
+        "entrypoint": "analytics/models/run_variant.py",
+        "cli_command": "python -m analytics.models.evaluate --variant anomaly_lof",
+        "environment": {
+          "python": "3.13",
+          "packages": [
+            "lightgbm==4.6.0",
+            "scikit-learn==1.6.1",
+            "pandas==2.2.3"
+          ],
+          "cuda_required": false
+        },
+        "data_dependency": {
+          "train_source": "kartik2112/fraud-detection (fraudTrain.csv)",
+          "test_source": "kartik2112/fraud-detection (fraudTest.csv)",
+          "retained_inputs_available": true
+        },
+        "safety_envelope": {
+          "read_only": true,
+          "network_access_required": false,
+          "timeout_seconds": 600
+        }
+      }
+    },
+    {
+      "id": "embed_pca_2",
+      "family": "Unsupervised embeddings",
+      "label": "PCA(2)",
+      "description": "Logistic classifier on a 2D embedding; measures visual separability, not deployable performance.",
+      "metric": "Logistic AUC on embedding",
+      "auc": 0.8156592743806254,
+      "n_rows": 50000,
+      "split": "2D embedding of stratified sample",
+      "source": "phase4_separability_table.csv",
+      "comparisonNote": "Embeddings use different hyperparameters; not a model-selection leaderboard.",
+      "group": "Unsupervised embeddings",
+      "groupId": "2d-embeddings",
+      "groupLabel": "2D embeddings",
+      "metricLabel": "Embedding separability AUC",
+      "baselineId": null,
+      "deltaVsBaseline": null,
+      "ratioVsBaseline": null,
+      "deltaMode": "absolute",
+      "rankInGroup": null,
+      "runtimeSeconds": null,
+      "sourceTableId": "phase4_separability_table",
+      "sourceHref": "/artifacts?tab=tables&table=phase4_separability_table",
+      "href": "/experiments?exp=embed_pca_2",
+      "comparable": false,
+      "reproducibility_tier": "Tier 3: Documented Output & Logs",
+      "reproducibility_badge": "Documented",
+      "reproducibility_desc": "Execution logs, loss curves, and evaluation tables exist in canonical artifacts, but raw model weights are not serialized in repo.",
+      "rerun_manifest": {
+        "executable": "python",
+        "entrypoint": "analytics/models/run_variant.py",
+        "cli_command": "python -m analytics.inspect --log logs/embed_pca_2.log",
+        "environment": {
+          "python": "3.13",
+          "packages": [
+            "lightgbm==4.6.0",
+            "scikit-learn==1.6.1",
+            "pandas==2.2.3"
+          ],
+          "cuda_required": false
+        },
+        "data_dependency": {
+          "train_source": "kartik2112/fraud-detection (fraudTrain.csv)",
+          "test_source": "kartik2112/fraud-detection (fraudTest.csv)",
+          "retained_inputs_available": true
+        },
+        "safety_envelope": {
+          "read_only": true,
+          "network_access_required": false,
+          "timeout_seconds": 600
+        }
+      }
+    },
+    {
+      "id": "embed_umap_nn_15_md_0_5",
+      "family": "Unsupervised embeddings",
+      "label": "UMAP(nn=15,md=0.5)",
+      "description": "Logistic classifier on a 2D embedding; measures visual separability, not deployable performance.",
+      "metric": "Logistic AUC on embedding",
+      "auc": 0.6426911676045016,
+      "n_rows": 50000,
+      "split": "2D embedding of stratified sample",
+      "source": "phase4_separability_table.csv",
+      "comparisonNote": "Embeddings use different hyperparameters; not a model-selection leaderboard.",
+      "group": "Unsupervised embeddings",
+      "groupId": "2d-embeddings",
+      "groupLabel": "2D embeddings",
+      "metricLabel": "Embedding separability AUC",
+      "baselineId": null,
+      "deltaVsBaseline": null,
+      "ratioVsBaseline": null,
+      "deltaMode": "absolute",
+      "rankInGroup": null,
+      "runtimeSeconds": null,
+      "sourceTableId": "phase4_separability_table",
+      "sourceHref": "/artifacts?tab=tables&table=phase4_separability_table",
+      "href": "/experiments?exp=embed_umap_nn_15_md_0_5",
+      "comparable": false,
+      "reproducibility_tier": "Tier 3: Documented Output & Logs",
+      "reproducibility_badge": "Documented",
+      "reproducibility_desc": "Execution logs, loss curves, and evaluation tables exist in canonical artifacts, but raw model weights are not serialized in repo.",
+      "rerun_manifest": {
+        "executable": "python",
+        "entrypoint": "analytics/models/run_variant.py",
+        "cli_command": "python -m analytics.inspect --log logs/embed_umap_nn_15_md_0_5.log",
+        "environment": {
+          "python": "3.13",
+          "packages": [
+            "lightgbm==4.6.0",
+            "scikit-learn==1.6.1",
+            "pandas==2.2.3"
+          ],
+          "cuda_required": false
+        },
+        "data_dependency": {
+          "train_source": "kartik2112/fraud-detection (fraudTrain.csv)",
+          "test_source": "kartik2112/fraud-detection (fraudTest.csv)",
+          "retained_inputs_available": true
+        },
+        "safety_envelope": {
+          "read_only": true,
+          "network_access_required": false,
+          "timeout_seconds": 600
+        }
+      }
+    },
+    {
+      "id": "embed_t_sne_p_30",
+      "family": "Unsupervised embeddings",
+      "label": "t-SNE(p=30)",
+      "description": "Logistic classifier on a 2D embedding; measures visual separability, not deployable performance.",
+      "metric": "Logistic AUC on embedding",
+      "auc": 0.594032606511254,
+      "n_rows": 50000,
+      "split": "2D embedding of stratified sample",
+      "source": "phase4_separability_table.csv",
+      "comparisonNote": "Embeddings use different hyperparameters; not a model-selection leaderboard.",
+      "group": "Unsupervised embeddings",
+      "groupId": "2d-embeddings",
+      "groupLabel": "2D embeddings",
+      "metricLabel": "Embedding separability AUC",
+      "baselineId": null,
+      "deltaVsBaseline": null,
+      "ratioVsBaseline": null,
+      "deltaMode": "absolute",
+      "rankInGroup": null,
+      "runtimeSeconds": null,
+      "sourceTableId": "phase4_separability_table",
+      "sourceHref": "/artifacts?tab=tables&table=phase4_separability_table",
+      "href": "/experiments?exp=embed_t_sne_p_30",
+      "comparable": false,
+      "reproducibility_tier": "Tier 3: Documented Output & Logs",
+      "reproducibility_badge": "Documented",
+      "reproducibility_desc": "Execution logs, loss curves, and evaluation tables exist in canonical artifacts, but raw model weights are not serialized in repo.",
+      "rerun_manifest": {
+        "executable": "python",
+        "entrypoint": "analytics/models/run_variant.py",
+        "cli_command": "python -m analytics.inspect --log logs/embed_t_sne_p_30.log",
+        "environment": {
+          "python": "3.13",
+          "packages": [
+            "lightgbm==4.6.0",
+            "scikit-learn==1.6.1",
+            "pandas==2.2.3"
+          ],
+          "cuda_required": false
+        },
+        "data_dependency": {
+          "train_source": "kartik2112/fraud-detection (fraudTrain.csv)",
+          "test_source": "kartik2112/fraud-detection (fraudTest.csv)",
+          "retained_inputs_available": true
+        },
+        "safety_envelope": {
+          "read_only": true,
+          "network_access_required": false,
+          "timeout_seconds": 600
+        }
+      }
+    },
+    {
+      "id": "embed_t_sne_p_50",
+      "family": "Unsupervised embeddings",
+      "label": "t-SNE(p=50)",
+      "description": "Logistic classifier on a 2D embedding; measures visual separability, not deployable performance.",
+      "metric": "Logistic AUC on embedding",
+      "auc": 0.5913237707663451,
+      "n_rows": 50000,
+      "split": "2D embedding of stratified sample",
+      "source": "phase4_separability_table.csv",
+      "comparisonNote": "Embeddings use different hyperparameters; not a model-selection leaderboard.",
+      "group": "Unsupervised embeddings",
+      "groupId": "2d-embeddings",
+      "groupLabel": "2D embeddings",
+      "metricLabel": "Embedding separability AUC",
+      "baselineId": null,
+      "deltaVsBaseline": null,
+      "ratioVsBaseline": null,
+      "deltaMode": "absolute",
+      "rankInGroup": null,
+      "runtimeSeconds": null,
+      "sourceTableId": "phase4_separability_table",
+      "sourceHref": "/artifacts?tab=tables&table=phase4_separability_table",
+      "href": "/experiments?exp=embed_t_sne_p_50",
+      "comparable": false,
+      "reproducibility_tier": "Tier 3: Documented Output & Logs",
+      "reproducibility_badge": "Documented",
+      "reproducibility_desc": "Execution logs, loss curves, and evaluation tables exist in canonical artifacts, but raw model weights are not serialized in repo.",
+      "rerun_manifest": {
+        "executable": "python",
+        "entrypoint": "analytics/models/run_variant.py",
+        "cli_command": "python -m analytics.inspect --log logs/embed_t_sne_p_50.log",
+        "environment": {
+          "python": "3.13",
+          "packages": [
+            "lightgbm==4.6.0",
+            "scikit-learn==1.6.1",
+            "pandas==2.2.3"
+          ],
+          "cuda_required": false
+        },
+        "data_dependency": {
+          "train_source": "kartik2112/fraud-detection (fraudTrain.csv)",
+          "test_source": "kartik2112/fraud-detection (fraudTest.csv)",
+          "retained_inputs_available": true
+        },
+        "safety_envelope": {
+          "read_only": true,
+          "network_access_required": false,
+          "timeout_seconds": 600
+        }
+      }
+    },
+    {
+      "id": "embed_umap_nn_15_md_0_1",
+      "family": "Unsupervised embeddings",
+      "label": "UMAP(nn=15,md=0.1)",
+      "description": "Logistic classifier on a 2D embedding; measures visual separability, not deployable performance.",
+      "metric": "Logistic AUC on embedding",
+      "auc": 0.5865634210878885,
+      "n_rows": 50000,
+      "split": "2D embedding of stratified sample",
+      "source": "phase4_separability_table.csv",
+      "comparisonNote": "Embeddings use different hyperparameters; not a model-selection leaderboard.",
+      "group": "Unsupervised embeddings",
+      "groupId": "2d-embeddings",
+      "groupLabel": "2D embeddings",
+      "metricLabel": "Embedding separability AUC",
+      "baselineId": null,
+      "deltaVsBaseline": null,
+      "ratioVsBaseline": null,
+      "deltaMode": "absolute",
+      "rankInGroup": null,
+      "runtimeSeconds": null,
+      "sourceTableId": "phase4_separability_table",
+      "sourceHref": "/artifacts?tab=tables&table=phase4_separability_table",
+      "href": "/experiments?exp=embed_umap_nn_15_md_0_1",
+      "comparable": false,
+      "reproducibility_tier": "Tier 3: Documented Output & Logs",
+      "reproducibility_badge": "Documented",
+      "reproducibility_desc": "Execution logs, loss curves, and evaluation tables exist in canonical artifacts, but raw model weights are not serialized in repo.",
+      "rerun_manifest": {
+        "executable": "python",
+        "entrypoint": "analytics/models/run_variant.py",
+        "cli_command": "python -m analytics.inspect --log logs/embed_umap_nn_15_md_0_1.log",
+        "environment": {
+          "python": "3.13",
+          "packages": [
+            "lightgbm==4.6.0",
+            "scikit-learn==1.6.1",
+            "pandas==2.2.3"
+          ],
+          "cuda_required": false
+        },
+        "data_dependency": {
+          "train_source": "kartik2112/fraud-detection (fraudTrain.csv)",
+          "test_source": "kartik2112/fraud-detection (fraudTest.csv)",
+          "retained_inputs_available": true
+        },
+        "safety_envelope": {
+          "read_only": true,
+          "network_access_required": false,
+          "timeout_seconds": 600
+        }
+      }
+    },
+    {
+      "id": "embed_t_sne_p_100",
+      "family": "Unsupervised embeddings",
+      "label": "t-SNE(p=100)",
+      "description": "Logistic classifier on a 2D embedding; measures visual separability, not deployable performance.",
+      "metric": "Logistic AUC on embedding",
+      "auc": 0.5587675006698821,
+      "n_rows": 50000,
+      "split": "2D embedding of stratified sample",
+      "source": "phase4_separability_table.csv",
+      "comparisonNote": "Embeddings use different hyperparameters; not a model-selection leaderboard.",
+      "group": "Unsupervised embeddings",
+      "groupId": "2d-embeddings",
+      "groupLabel": "2D embeddings",
+      "metricLabel": "Embedding separability AUC",
+      "baselineId": null,
+      "deltaVsBaseline": null,
+      "ratioVsBaseline": null,
+      "deltaMode": "absolute",
+      "rankInGroup": null,
+      "runtimeSeconds": null,
+      "sourceTableId": "phase4_separability_table",
+      "sourceHref": "/artifacts?tab=tables&table=phase4_separability_table",
+      "href": "/experiments?exp=embed_t_sne_p_100",
+      "comparable": false,
+      "reproducibility_tier": "Tier 3: Documented Output & Logs",
+      "reproducibility_badge": "Documented",
+      "reproducibility_desc": "Execution logs, loss curves, and evaluation tables exist in canonical artifacts, but raw model weights are not serialized in repo.",
+      "rerun_manifest": {
+        "executable": "python",
+        "entrypoint": "analytics/models/run_variant.py",
+        "cli_command": "python -m analytics.inspect --log logs/embed_t_sne_p_100.log",
+        "environment": {
+          "python": "3.13",
+          "packages": [
+            "lightgbm==4.6.0",
+            "scikit-learn==1.6.1",
+            "pandas==2.2.3"
+          ],
+          "cuda_required": false
+        },
+        "data_dependency": {
+          "train_source": "kartik2112/fraud-detection (fraudTrain.csv)",
+          "test_source": "kartik2112/fraud-detection (fraudTest.csv)",
+          "retained_inputs_available": true
+        },
+        "safety_envelope": {
+          "read_only": true,
+          "network_access_required": false,
+          "timeout_seconds": 600
+        }
+      }
+    },
+    {
+      "id": "embed_umap_nn_50_md_0_1",
+      "family": "Unsupervised embeddings",
+      "label": "UMAP(nn=50,md=0.1)",
+      "description": "Logistic classifier on a 2D embedding; measures visual separability, not deployable performance.",
+      "metric": "Logistic AUC on embedding",
+      "auc": 0.4583228664255091,
+      "n_rows": 50000,
+      "split": "2D embedding of stratified sample",
+      "source": "phase4_separability_table.csv",
+      "comparisonNote": "Embeddings use different hyperparameters; not a model-selection leaderboard.",
+      "group": "Unsupervised embeddings",
+      "groupId": "2d-embeddings",
+      "groupLabel": "2D embeddings",
+      "metricLabel": "Embedding separability AUC",
+      "baselineId": null,
+      "deltaVsBaseline": null,
+      "ratioVsBaseline": null,
+      "deltaMode": "absolute",
+      "rankInGroup": null,
+      "runtimeSeconds": null,
+      "sourceTableId": "phase4_separability_table",
+      "sourceHref": "/artifacts?tab=tables&table=phase4_separability_table",
+      "href": "/experiments?exp=embed_umap_nn_50_md_0_1",
+      "comparable": false,
+      "reproducibility_tier": "Tier 3: Documented Output & Logs",
+      "reproducibility_badge": "Documented",
+      "reproducibility_desc": "Execution logs, loss curves, and evaluation tables exist in canonical artifacts, but raw model weights are not serialized in repo.",
+      "rerun_manifest": {
+        "executable": "python",
+        "entrypoint": "analytics/models/run_variant.py",
+        "cli_command": "python -m analytics.inspect --log logs/embed_umap_nn_50_md_0_1.log",
+        "environment": {
+          "python": "3.13",
+          "packages": [
+            "lightgbm==4.6.0",
+            "scikit-learn==1.6.1",
+            "pandas==2.2.3"
+          ],
+          "cuda_required": false
+        },
+        "data_dependency": {
+          "train_source": "kartik2112/fraud-detection (fraudTrain.csv)",
+          "test_source": "kartik2112/fraud-detection (fraudTest.csv)",
+          "retained_inputs_available": true
+        },
+        "safety_envelope": {
+          "read_only": true,
+          "network_access_required": false,
+          "timeout_seconds": 600
+        }
+      }
+    },
+    {
+      "id": "hour_raw",
+      "family": "Hour encoding",
+      "label": "Raw hour encoding",
+      "description": "Quick LightGBM comparison of hour representation.",
+      "metric": "Validation PR-AUC",
+      "pr_auc": 0.8592883007537216,
+      "split": "Last 20% of time-ordered train period",
+      "n_rows": null,
+      "source": "phase7_hour_encoding_comparison.csv",
+      "comparisonNote": "Only three features plus category; a narrow encoding test, not the final model.",
+      "group": "Hour encoding",
+      "groupId": "hour-encoding-comparison",
+      "groupLabel": "Hour-encoding comparison",
+      "metricLabel": "Holdout PR-AUC",
+      "baselineId": "hour_raw",
+      "deltaVsBaseline": null,
+      "ratioVsBaseline": null,
+      "deltaMode": "absolute",
+      "rankInGroup": 1,
+      "runtimeSeconds": null,
+      "sourceTableId": "phase7_hour_encoding_comparison",
+      "sourceHref": "/artifacts?tab=tables&table=phase7_hour_encoding_comparison",
+      "href": "/experiments?exp=hour_raw",
+      "comparable": true,
+      "reproducibility_tier": "Tier 3: Documented Output & Logs",
+      "reproducibility_badge": "Documented",
+      "reproducibility_desc": "Execution logs, loss curves, and evaluation tables exist in canonical artifacts, but raw model weights are not serialized in repo.",
+      "rerun_manifest": {
+        "executable": "python",
+        "entrypoint": "analytics/models/run_variant.py",
+        "cli_command": "python -m analytics.inspect --log logs/hour_raw.log",
+        "environment": {
+          "python": "3.13",
+          "packages": [
+            "lightgbm==4.6.0",
+            "scikit-learn==1.6.1",
+            "pandas==2.2.3"
+          ],
+          "cuda_required": false
+        },
+        "data_dependency": {
+          "train_source": "kartik2112/fraud-detection (fraudTrain.csv)",
+          "test_source": "kartik2112/fraud-detection (fraudTest.csv)",
+          "retained_inputs_available": true
+        },
+        "safety_envelope": {
+          "read_only": true,
+          "network_access_required": false,
+          "timeout_seconds": 600
+        }
+      }
+    },
+    {
+      "id": "hour_cyclical",
+      "family": "Hour encoding",
+      "label": "Cyclical hour encoding",
+      "description": "Quick LightGBM comparison of hour representation.",
+      "metric": "Validation PR-AUC",
+      "pr_auc": 0.8589878775046752,
+      "split": "Last 20% of time-ordered train period",
+      "n_rows": null,
+      "source": "phase7_hour_encoding_comparison.csv",
+      "comparisonNote": "Only three features plus category; a narrow encoding test, not the final model.",
+      "group": "Hour encoding",
+      "groupId": "hour-encoding-comparison",
+      "groupLabel": "Hour-encoding comparison",
+      "metricLabel": "Holdout PR-AUC",
+      "baselineId": "hour_raw",
+      "deltaVsBaseline": -0.00030042324904644424,
+      "ratioVsBaseline": 0.9996503813111584,
+      "deltaMode": "absolute",
+      "rankInGroup": 2,
+      "runtimeSeconds": null,
+      "sourceTableId": "phase7_hour_encoding_comparison",
+      "sourceHref": "/artifacts?tab=tables&table=phase7_hour_encoding_comparison",
+      "href": "/experiments?exp=hour_cyclical",
+      "comparable": true,
+      "reproducibility_tier": "Tier 3: Documented Output & Logs",
+      "reproducibility_badge": "Documented",
+      "reproducibility_desc": "Execution logs, loss curves, and evaluation tables exist in canonical artifacts, but raw model weights are not serialized in repo.",
+      "rerun_manifest": {
+        "executable": "python",
+        "entrypoint": "analytics/models/run_variant.py",
+        "cli_command": "python -m analytics.inspect --log logs/hour_cyclical.log",
+        "environment": {
+          "python": "3.13",
+          "packages": [
+            "lightgbm==4.6.0",
+            "scikit-learn==1.6.1",
+            "pandas==2.2.3"
+          ],
+          "cuda_required": false
+        },
+        "data_dependency": {
+          "train_source": "kartik2112/fraud-detection (fraudTrain.csv)",
+          "test_source": "kartik2112/fraud-detection (fraudTest.csv)",
+          "retained_inputs_available": true
+        },
+        "safety_envelope": {
+          "read_only": true,
+          "network_access_required": false,
+          "timeout_seconds": 600
+        }
+      }
+    },
+    {
+      "id": "hour_categorical",
+      "family": "Hour encoding",
+      "label": "Categorical hour encoding",
+      "description": "Quick LightGBM comparison of hour representation.",
+      "metric": "Validation PR-AUC",
+      "pr_auc": 0.8467011461676432,
+      "split": "Last 20% of time-ordered train period",
+      "n_rows": null,
+      "source": "phase7_hour_encoding_comparison.csv",
+      "comparisonNote": "Only three features plus category; a narrow encoding test, not the final model.",
+      "group": "Hour encoding",
+      "groupId": "hour-encoding-comparison",
+      "groupLabel": "Hour-encoding comparison",
+      "metricLabel": "Holdout PR-AUC",
+      "baselineId": "hour_raw",
+      "deltaVsBaseline": -0.012587154586078397,
+      "ratioVsBaseline": 0.9853516513898332,
+      "deltaMode": "absolute",
+      "rankInGroup": 3,
+      "runtimeSeconds": null,
+      "sourceTableId": "phase7_hour_encoding_comparison",
+      "sourceHref": "/artifacts?tab=tables&table=phase7_hour_encoding_comparison",
+      "href": "/experiments?exp=hour_categorical",
+      "comparable": true,
+      "reproducibility_tier": "Tier 3: Documented Output & Logs",
+      "reproducibility_badge": "Documented",
+      "reproducibility_desc": "Execution logs, loss curves, and evaluation tables exist in canonical artifacts, but raw model weights are not serialized in repo.",
+      "rerun_manifest": {
+        "executable": "python",
+        "entrypoint": "analytics/models/run_variant.py",
+        "cli_command": "python -m analytics.inspect --log logs/hour_categorical.log",
+        "environment": {
+          "python": "3.13",
+          "packages": [
+            "lightgbm==4.6.0",
+            "scikit-learn==1.6.1",
+            "pandas==2.2.3"
+          ],
+          "cuda_required": false
+        },
+        "data_dependency": {
+          "train_source": "kartik2112/fraud-detection (fraudTrain.csv)",
+          "test_source": "kartik2112/fraud-detection (fraudTest.csv)",
+          "retained_inputs_available": true
+        },
+        "safety_envelope": {
+          "read_only": true,
+          "network_access_required": false,
+          "timeout_seconds": 600
+        }
+      }
+    }
+  ],
+  "metricNotes": {
+    "pr_auc": "Precision-recall AUC. Sensitive to class prevalence; do not compare across different splits or samples.",
+    "roc_auc": "ROC AUC. Less sensitive to prevalence but can look strong when the positive class is rare; report alongside PR-AUC.",
+    "delta": "Absolute difference in the metric's native units (fraction, 0–1), not a percentage improvement."
+  },
+  "reproducibility_summary": {
+    "tier1_count": 13,
+    "tier2_count": 3,
+    "tier3_count": 10,
+    "tier4_count": 0,
+    "total_runs": 26,
+    "last_validated": "2026-10-25T18:02:22.874659+00:00"
+  }
+}

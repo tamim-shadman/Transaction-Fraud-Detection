@@ -1,0 +1,375 @@
+﻿edge_id,from_node,to_node,relation,is_verified,primary_page_id
+E0001,src:fraudTrain.csv,run,consumed by,True,PAGE-16
+E0002,src:fraudTest.csv,run,consumed by,True,PAGE-16
+E0003,src:fraud_eda_colab.ipynb,run,consumed by,True,PAGE-16
+E0004,src:findings_ledger.json,run,consumed by,True,PAGE-16
+E0005,src:figures/,run,consumed by,True,PAGE-16
+E0006,src:tables/,run,consumed by,True,PAGE-16
+E0007,run,notebook,executed,True,PAGE-16
+E0008,notebook,phase:P0,contains,True,PAGE-16
+E0009,notebook,phase:P1,contains,True,PAGE-16
+E0010,notebook,phase:P2,contains,True,PAGE-16
+E0011,notebook,phase:P3,contains,True,PAGE-16
+E0012,notebook,phase:P4,contains,True,PAGE-16
+E0013,notebook,phase:P5,contains,True,PAGE-16
+E0014,notebook,phase:P6,contains,True,PAGE-16
+E0015,notebook,phase:P7,contains,True,PAGE-16
+E0016,notebook,phase:P8,contains,True,PAGE-16
+E0017,phase:P0,rq:RQ1,answers,True,PAGE-16
+E0018,phase:P2,rq:RQ1,answers,True,PAGE-16
+E0019,phase:P1,rq:RQ2,answers,True,PAGE-16
+E0020,phase:P5,rq:RQ2,answers,True,PAGE-16
+E0021,phase:P1,rq:RQ3,answers,True,PAGE-16
+E0022,phase:P3,rq:RQ3,answers,True,PAGE-16
+E0023,phase:P5,rq:RQ3,answers,True,PAGE-16
+E0024,phase:P0,rq:RQ4,answers,True,PAGE-16
+E0025,phase:P1,rq:RQ4,answers,True,PAGE-16
+E0026,phase:P2,rq:RQ4,answers,True,PAGE-16
+E0027,phase:P6,rq:RQ4,answers,True,PAGE-16
+E0028,phase:P2,rq:RQ5,answers,True,PAGE-16
+E0029,phase:P3,rq:RQ5,answers,True,PAGE-16
+E0030,phase:P6,rq:RQ5,answers,True,PAGE-16
+E0031,phase:P0,rq:RQ6,answers,True,PAGE-16
+E0032,phase:P1,rq:RQ6,answers,True,PAGE-16
+E0033,phase:P2,rq:RQ6,answers,True,PAGE-16
+E0034,phase:P5,rq:RQ6,answers,True,PAGE-16
+E0035,phase:P6,rq:RQ6,answers,True,PAGE-16
+E0036,phase:P7,rq:RQ6,answers,True,PAGE-16
+E0037,phase:P4,rq:RQ7,answers,True,PAGE-16
+E0038,phase:P6,rq:RQ8,answers,True,PAGE-16
+E0039,phase:P7,rq:RQ8,answers,True,PAGE-16
+E0040,phase:P0,finding:F-001,produces,True,PAGE-16
+E0041,rq:RQ1,finding:F-001,supported by,True,PAGE-16
+E0042,phase:P0,finding:F-002,produces,True,PAGE-16
+E0043,rq:RQ1,finding:F-002,supported by,True,PAGE-16
+E0044,phase:P0,finding:F-003,produces,True,PAGE-16
+E0045,rq:RQ1,finding:F-003,supported by,True,PAGE-16
+E0046,phase:P0,finding:F-004,produces,True,PAGE-16
+E0047,rq:RQ1,finding:F-004,supported by,True,PAGE-16
+E0048,phase:P0,finding:F-005,produces,True,PAGE-16
+E0049,rq:RQ1,finding:F-005,supported by,True,PAGE-16
+E0050,phase:P0,finding:F-006,produces,True,PAGE-16
+E0051,rq:RQ6,finding:F-006,supported by,True,PAGE-16
+E0052,note:AN-03,finding:F-006,annotates,True,PAGE-16
+E0053,phase:P0,finding:F-007,produces,True,PAGE-16
+E0054,rq:RQ4,finding:F-007,supported by,True,PAGE-16
+E0055,phase:P1,finding:F-008,produces,True,PAGE-16
+E0056,rq:RQ2,finding:F-008,supported by,True,PAGE-16
+E0057,phase:P1,finding:F-009,produces,True,PAGE-16
+E0058,rq:RQ3,finding:F-009,supported by,True,PAGE-16
+E0059,phase:P1,finding:F-010,produces,True,PAGE-16
+E0060,rq:RQ3,finding:F-010,supported by,True,PAGE-16
+E0061,phase:P1,finding:F-011,produces,True,PAGE-16
+E0062,rq:RQ4,finding:F-011,supported by,True,PAGE-16
+E0063,phase:P1,finding:F-012,produces,True,PAGE-16
+E0064,rq:RQ6,finding:F-012,supported by,True,PAGE-16
+E0065,phase:P2,finding:F-013,produces,True,PAGE-16
+E0066,rq:RQ6,finding:F-013,supported by,True,PAGE-16
+E0067,phase:P2,finding:F-014,produces,True,PAGE-16
+E0068,rq:RQ4,finding:F-014,supported by,True,PAGE-16
+E0069,phase:P2,finding:F-015,produces,True,PAGE-16
+E0070,rq:RQ4,finding:F-015,supported by,True,PAGE-16
+E0071,phase:P2,finding:F-016,produces,True,PAGE-16
+E0072,rq:RQ5,finding:F-016,supported by,True,PAGE-16
+E0073,note:AN-02,finding:F-016,annotates,True,PAGE-16
+E0074,phase:P2,finding:F-017,produces,True,PAGE-16
+E0075,rq:RQ5,finding:F-017,supported by,True,PAGE-16
+E0076,phase:P2,finding:F-018,produces,True,PAGE-16
+E0077,rq:RQ1,finding:F-018,supported by,True,PAGE-16
+E0078,phase:P2,finding:F-019,produces,True,PAGE-16
+E0079,rq:RQ6,finding:F-019,supported by,True,PAGE-16
+E0080,phase:P2,finding:F-020,produces,True,PAGE-16
+E0081,rq:RQ5,finding:F-020,supported by,True,PAGE-16
+E0082,phase:P2,finding:F-021,produces,True,PAGE-16
+E0083,rq:RQ6,finding:F-021,supported by,True,PAGE-16
+E0084,phase:P3,finding:F-022,produces,True,PAGE-16
+E0085,rq:RQ3,finding:F-022,supported by,True,PAGE-16
+E0086,phase:P3,finding:F-023,produces,True,PAGE-16
+E0087,rq:RQ3,finding:F-023,supported by,True,PAGE-16
+E0088,phase:P3,finding:F-024,produces,True,PAGE-16
+E0089,rq:RQ3,finding:F-024,supported by,True,PAGE-16
+E0090,phase:P3,finding:F-025,produces,True,PAGE-16
+E0091,rq:RQ5,finding:F-025,supported by,True,PAGE-16
+E0092,phase:P4,finding:F-026,produces,True,PAGE-16
+E0093,rq:RQ7,finding:F-026,supported by,True,PAGE-16
+E0094,phase:P4,finding:F-027,produces,True,PAGE-16
+E0095,rq:RQ7,finding:F-027,supported by,True,PAGE-16
+E0096,phase:P4,finding:F-028,produces,True,PAGE-16
+E0097,rq:RQ7,finding:F-028,supported by,True,PAGE-16
+E0098,phase:P4,finding:F-029,produces,True,PAGE-16
+E0099,rq:RQ7,finding:F-029,supported by,True,PAGE-16
+E0100,phase:P5,finding:F-030,produces,True,PAGE-16
+E0101,rq:RQ2,finding:F-030,supported by,True,PAGE-16
+E0102,phase:P5,finding:F-031,produces,True,PAGE-16
+E0103,rq:RQ6,finding:F-031,supported by,True,PAGE-16
+E0104,note:AN-04,finding:F-031,annotates,True,PAGE-16
+E0105,phase:P5,finding:F-032,produces,True,PAGE-16
+E0106,rq:RQ3,finding:F-032,supported by,True,PAGE-16
+E0107,phase:P5,finding:F-033,produces,True,PAGE-16
+E0108,rq:RQ6,finding:F-033,supported by,True,PAGE-16
+E0109,phase:P5,finding:F-034,produces,True,PAGE-16
+E0110,rq:RQ6,finding:F-034,supported by,True,PAGE-16
+E0111,phase:P6,finding:F-035,produces,True,PAGE-16
+E0112,rq:RQ5,finding:F-035,supported by,True,PAGE-16
+E0113,phase:P6,finding:F-036,produces,True,PAGE-16
+E0114,rq:RQ4,finding:F-036,supported by,True,PAGE-16
+E0115,phase:P6,finding:F-037,produces,True,PAGE-16
+E0116,rq:RQ5,finding:F-037,supported by,True,PAGE-16
+E0117,phase:P6,finding:F-038,produces,True,PAGE-16
+E0118,rq:RQ8,finding:F-038,supported by,True,PAGE-16
+E0119,note:AN-01,finding:F-038,annotates,True,PAGE-16
+E0120,phase:P6,finding:F-039,produces,True,PAGE-16
+E0121,rq:RQ6,finding:F-039,supported by,True,PAGE-16
+E0122,phase:P6,finding:F-040,produces,True,PAGE-16
+E0123,rq:RQ5,finding:F-040,supported by,True,PAGE-16
+E0124,phase:P6,finding:F-041,produces,True,PAGE-16
+E0125,rq:RQ5,finding:F-041,supported by,True,PAGE-16
+E0126,phase:P6,finding:F-042,produces,True,PAGE-16
+E0127,rq:RQ5,finding:F-042,supported by,True,PAGE-16
+E0128,phase:P6,finding:F-043,produces,True,PAGE-16
+E0129,rq:RQ5,finding:F-043,supported by,True,PAGE-16
+E0130,phase:P6,finding:F-044,produces,True,PAGE-16
+E0131,rq:RQ6,finding:F-044,supported by,True,PAGE-16
+E0132,phase:P6,finding:F-045,produces,True,PAGE-16
+E0133,rq:RQ4,finding:F-045,supported by,True,PAGE-16
+E0134,phase:P7,finding:F-046,produces,True,PAGE-16
+E0135,rq:RQ8,finding:F-046,supported by,True,PAGE-16
+E0136,phase:P7,finding:F-047,produces,True,PAGE-16
+E0137,rq:RQ8,finding:F-047,supported by,True,PAGE-16
+E0138,phase:P7,finding:F-048,produces,True,PAGE-16
+E0139,rq:RQ8,finding:F-048,supported by,True,PAGE-16
+E0140,phase:P7,finding:F-049,produces,True,PAGE-16
+E0141,rq:RQ8,finding:F-049,supported by,True,PAGE-16
+E0142,phase:P7,finding:F-050,produces,True,PAGE-16
+E0143,rq:RQ8,finding:F-050,supported by,True,PAGE-16
+E0144,phase:P7,finding:F-051,produces,True,PAGE-16
+E0145,rq:RQ8,finding:F-051,supported by,True,PAGE-16
+E0146,phase:P7,finding:F-052,produces,True,PAGE-16
+E0147,rq:RQ8,finding:F-052,supported by,True,PAGE-16
+E0148,phase:P7,finding:F-053,produces,True,PAGE-16
+E0149,rq:RQ8,finding:F-053,supported by,True,PAGE-16
+E0150,phase:P7,finding:F-054,produces,True,PAGE-16
+E0151,rq:RQ8,finding:F-054,supported by,True,PAGE-16
+E0152,phase:P7,finding:F-055,produces,True,PAGE-16
+E0153,rq:RQ8,finding:F-055,supported by,True,PAGE-16
+E0154,phase:P7,finding:F-056,produces,True,PAGE-16
+E0155,rq:RQ8,finding:F-056,supported by,True,PAGE-16
+E0156,phase:P7,finding:F-057,produces,True,PAGE-16
+E0157,rq:RQ8,finding:F-057,supported by,True,PAGE-16
+E0158,phase:P7,finding:F-058,produces,True,PAGE-16
+E0159,rq:RQ8,finding:F-058,supported by,True,PAGE-16
+E0160,phase:P7,finding:F-059,produces,True,PAGE-16
+E0161,rq:RQ8,finding:F-059,supported by,True,PAGE-16
+E0162,phase:P7,finding:F-060,produces,True,PAGE-16
+E0163,rq:RQ8,finding:F-060,supported by,True,PAGE-16
+E0164,phase:P7,finding:F-061,produces,True,PAGE-16
+E0165,rq:RQ8,finding:F-061,supported by,True,PAGE-16
+E0166,phase:P7,finding:F-062,produces,True,PAGE-16
+E0167,rq:RQ8,finding:F-062,supported by,True,PAGE-16
+E0168,phase:P7,finding:F-063,produces,True,PAGE-16
+E0169,rq:RQ8,finding:F-063,supported by,True,PAGE-16
+E0170,phase:P7,finding:F-064,produces,True,PAGE-16
+E0171,rq:RQ6,finding:F-064,supported by,True,PAGE-16
+E0172,phase:P6,note:AN-01,documents,True,PAGE-16
+E0173,phase:P2,note:AN-02,documents,True,PAGE-16
+E0174,phase:P0,note:AN-03,documents,True,PAGE-16
+E0175,phase:P5,note:AN-04,documents,True,PAGE-16
+E0176,phase:P8,note:AN-05,documents,True,PAGE-16
+E0177,phase:P0,issue:ISS-01,diagnosed in,True,PAGE-16
+E0178,phase:P7,issue:ISS-02,diagnosed in,True,PAGE-16
+E0179,phase:P7,issue:ISS-03,diagnosed in,True,PAGE-16
+E0180,phase:P0,issue:ISS-04,diagnosed in,True,PAGE-16
+E0181,phase:P6,issue:ISS-05,diagnosed in,True,PAGE-16
+E0182,phase:P5,issue:ISS-06,diagnosed in,True,PAGE-16
+E0183,phase:P0,issue:ISS-07,diagnosed in,True,PAGE-16
+E0184,phase:P0,issue:ISS-08,diagnosed in,True,PAGE-16
+E0185,phase:P0,issue:ISS-09,diagnosed in,True,PAGE-16
+E0186,phase:P7,issue:ISS-10,diagnosed in,True,PAGE-16
+E0187,phase:P7,issue:ISS-11,diagnosed in,True,PAGE-16
+E0188,phase:P8,issue:ISS-12,diagnosed in,True,PAGE-16
+E0189,phase:P8,issue:ISS-13,diagnosed in,True,PAGE-16
+E0190,phase:P4,issue:ISS-14,diagnosed in,True,PAGE-16
+E0191,phase:P4,issue:ISS-15,diagnosed in,True,PAGE-16
+E0192,phase:P8,issue:ISS-16,diagnosed in,True,PAGE-16
+E0193,phase:P0,artifact:phase0_missing_bar,produces,True,PAGE-16
+E0194,phase:P0,artifact:phase0_missing_matrix,produces,True,PAGE-16
+E0195,phase:P0,artifact:phase0_temporal_coverage,produces,True,PAGE-16
+E0196,phase:P0,artifact:phase0_txns_per_card,produces,True,PAGE-16
+E0197,phase:P1,artifact:phase1_age,produces,True,PAGE-16
+E0198,phase:P1,artifact:phase1_age_bins,produces,True,PAGE-16
+E0199,phase:P1,artifact:phase1_amt_box_violin,produces,True,PAGE-16
+E0200,phase:P1,artifact:phase1_amt_ecdf,produces,True,PAGE-16
+E0201,phase:P1,artifact:phase1_amt_hist,produces,True,PAGE-16
+E0202,phase:P1,artifact:phase1_amt_overlay,produces,True,PAGE-16
+E0203,phase:P1,artifact:phase1_category,produces,True,PAGE-16
+E0204,phase:P1,artifact:phase1_citypop,produces,True,PAGE-16
+E0205,phase:P1,artifact:phase1_citypop_bins,produces,True,PAGE-16
+E0206,phase:P1,artifact:phase1_covid_window,produces,True,PAGE-16
+E0207,phase:P1,artifact:phase1_dow,produces,True,PAGE-16
+E0208,phase:P1,artifact:phase1_gender,produces,True,PAGE-16
+E0209,phase:P1,artifact:phase1_gender_x_category,produces,True,PAGE-16
+E0210,phase:P1,artifact:phase1_geo_scatter,produces,True,PAGE-16
+E0211,phase:P1,artifact:phase1_hour,produces,True,PAGE-16
+E0212,phase:P1,artifact:phase1_hour_by_year,produces,True,PAGE-16
+E0213,phase:P1,artifact:phase1_job,produces,True,PAGE-16
+E0214,phase:P1,artifact:phase1_merchant_topN,produces,True,PAGE-16
+E0215,phase:P1,artifact:phase1_month,produces,True,PAGE-16
+E0216,phase:P1,artifact:phase1_night,produces,True,PAGE-16
+E0217,phase:P1,artifact:phase1_qq_amt_age,produces,True,PAGE-16
+E0218,phase:P1,artifact:phase1_state_forest,produces,True,PAGE-16
+E0219,phase:P1,artifact:phase1_target_donut,produces,True,PAGE-16
+E0220,phase:P1,artifact:phase1_weekend,produces,True,PAGE-16
+E0221,phase:P2,artifact:phase2_age_x_category,produces,True,PAGE-16
+E0222,phase:P2,artifact:phase2_amt_by_category,produces,True,PAGE-16
+E0223,phase:P2,artifact:phase2_amt_cdf,produces,True,PAGE-16
+E0224,phase:P2,artifact:phase2_amtbin_x_hour,produces,True,PAGE-16
+E0225,phase:P2,artifact:phase2_card_rate_hist,produces,True,PAGE-16
+E0226,phase:P2,artifact:phase2_card_scatter,produces,True,PAGE-16
+E0227,phase:P2,artifact:phase2_category_x_hour,produces,True,PAGE-16
+E0228,phase:P2,artifact:phase2_citypop_x_category,produces,True,PAGE-16
+E0229,phase:P2,artifact:phase2_cramers_v,produces,True,PAGE-16
+E0230,phase:P2,artifact:phase2_dist_overlay,produces,True,PAGE-16
+E0231,phase:P2,artifact:phase2_dist_rate,produces,True,PAGE-16
+E0232,phase:P2,artifact:phase2_dow_x_hour_rate,produces,True,PAGE-16
+E0233,phase:P2,artifact:phase2_dow_x_hour_vol,produces,True,PAGE-16
+E0234,phase:P2,artifact:phase2_gender_x_category,produces,True,PAGE-16
+E0235,phase:P2,artifact:phase2_joint_amt_age,produces,True,PAGE-16
+E0236,phase:P2,artifact:phase2_joint_amt_dist,produces,True,PAGE-16
+E0237,phase:P2,artifact:phase2_lorenz_fraud,produces,True,PAGE-16
+E0238,phase:P2,artifact:phase2_mi,produces,True,PAGE-16
+E0239,phase:P2,artifact:phase2_money_category,produces,True,PAGE-16
+E0240,phase:P2,artifact:phase2_money_month,produces,True,PAGE-16
+E0241,phase:P2,artifact:phase2_pairplot,produces,True,PAGE-16
+E0242,phase:P2,artifact:phase2_spearman,produces,True,PAGE-16
+E0243,phase:P2,artifact:phase2_zip3_forest,produces,True,PAGE-16
+E0244,phase:P3,artifact:phase3_acf_pacf,produces,True,PAGE-16
+E0245,phase:P3,artifact:phase3_card_timelines,produces,True,PAGE-16
+E0246,phase:P3,artifact:phase3_changepoint,produces,True,PAGE-16
+E0247,phase:P3,artifact:phase3_daily_rolling,produces,True,PAGE-16
+E0248,phase:P3,artifact:phase3_hour_x_dow_rate,produces,True,PAGE-16
+E0249,phase:P3,artifact:phase3_hour_x_dow_vol,produces,True,PAGE-16
+E0250,phase:P3,artifact:phase3_hour_x_month,produces,True,PAGE-16
+E0251,phase:P3,artifact:phase3_interarrival,produces,True,PAGE-16
+E0252,phase:P3,artifact:phase3_month_x_dow,produces,True,PAGE-16
+E0253,phase:P3,artifact:phase3_stl,produces,True,PAGE-16
+E0254,phase:P3,artifact:phase3_weekly_rate,produces,True,PAGE-16
+E0255,phase:P3,artifact:phase3_year_x_month,produces,True,PAGE-16
+E0256,phase:P4,artifact:phase4_ae_error,produces,True,PAGE-16
+E0257,phase:P4,artifact:phase4_andrews,produces,True,PAGE-16
+E0258,phase:P4,artifact:phase4_dbscan_kdist,produces,True,PAGE-16
+E0259,phase:P4,artifact:phase4_dbscan_rate,produces,True,PAGE-16
+E0260,phase:P4,artifact:phase4_dendrogram,produces,True,PAGE-16
+E0261,phase:P4,artifact:phase4_hexbin_rate_contours,produces,True,PAGE-16
+E0262,phase:P4,artifact:phase4_if_scores,produces,True,PAGE-16
+E0263,phase:P4,artifact:phase4_if_vs_amt,produces,True,PAGE-16
+E0264,phase:P4,artifact:phase4_kmeans_fraud_rate,produces,True,PAGE-16
+E0265,phase:P4,artifact:phase4_kmeans_radar,produces,True,PAGE-16
+E0266,phase:P4,artifact:phase4_kmeans_selection,produces,True,PAGE-16
+E0267,phase:P4,artifact:phase4_kmeans_x_category,produces,True,PAGE-16
+E0268,phase:P4,artifact:phase4_lof_scores,produces,True,PAGE-16
+E0269,phase:P4,artifact:phase4_parallel_coords,produces,True,PAGE-16
+E0270,phase:P4,artifact:phase4_pca_biplot,produces,True,PAGE-16
+E0271,phase:P4,artifact:phase4_pca_contours,produces,True,PAGE-16
+E0272,phase:P4,artifact:phase4_pca_scatter,produces,True,PAGE-16
+E0273,phase:P4,artifact:phase4_pca_scree,produces,True,PAGE-16
+E0274,phase:P4,artifact:phase4_raincloud_amt_category,produces,True,PAGE-16
+E0275,phase:P4,artifact:phase4_separability,produces,True,PAGE-16
+E0276,phase:P4,artifact:phase4_swarm_amt,produces,True,PAGE-16
+E0277,phase:P4,artifact:phase4_tsne_p100,produces,True,PAGE-16
+E0278,phase:P4,artifact:phase4_tsne_p30,produces,True,PAGE-16
+E0279,phase:P4,artifact:phase4_tsne_p50,produces,True,PAGE-16
+E0280,phase:P4,artifact:phase4_umap_nn15_md0.1,produces,True,PAGE-16
+E0281,phase:P4,artifact:phase4_umap_nn15_md0.5,produces,True,PAGE-16
+E0282,phase:P4,artifact:phase4_umap_nn50_md0.1,produces,True,PAGE-16
+E0283,phase:P5,artifact:phase5_effectsize_forest,produces,True,PAGE-16
+E0284,phase:P5,artifact:phase5_forest_category,produces,True,PAGE-16
+E0285,phase:P5,artifact:phase5_forest_hour,produces,True,PAGE-16
+E0286,phase:P5,artifact:phase5_forest_job,produces,True,PAGE-16
+E0287,phase:P6,artifact:phase7_card_age_curve,produces,True,PAGE-16
+E0288,phase:P6,artifact:phase7_cnt24h_rate,produces,True,PAGE-16
+E0289,phase:P6,artifact:phase7_cohort_heatmap,produces,True,PAGE-16
+E0290,phase:P6,artifact:phase7_combo_lift,produces,True,PAGE-16
+E0291,phase:P6,artifact:phase7_discrete_hazard,produces,True,PAGE-16
+E0292,phase:P6,artifact:phase7_dist_artifact,produces,True,PAGE-16
+E0293,phase:P6,artifact:phase7_fraud_event_sizes,produces,True,PAGE-16
+E0294,phase:P6,artifact:phase7_km_first_fraud,produces,True,PAGE-16
+E0295,phase:P6,artifact:phase7_merchant_hier_eb,produces,True,PAGE-16
+E0296,phase:P6,artifact:phase7_speed_rate,produces,True,PAGE-16
+E0297,phase:P6,artifact:phase7_te_leak_demo,produces,True,PAGE-16
+E0298,phase:P6,artifact:phase7_txns_before_fraud,produces,True,PAGE-16
+E0299,phase:P7,artifact:phase8_ablation_decomposed,produces,True,PAGE-16
+E0300,phase:P7,artifact:phase8_adversarial_importance,produces,True,PAGE-16
+E0301,phase:P7,artifact:phase8_calibration,produces,True,PAGE-16
+E0302,phase:P7,artifact:phase8_calibration_temp,produces,True,PAGE-16
+E0303,phase:P7,artifact:phase8_capture_at_k,produces,True,PAGE-16
+E0304,phase:P7,artifact:phase8_confusion_f1max,produces,True,PAGE-16
+E0305,phase:P7,artifact:phase8_cost_curve,produces,True,PAGE-16
+E0306,phase:P7,artifact:phase8_cost_sensitivity,produces,True,PAGE-16
+E0307,phase:P7,artifact:phase8_ensemble_comparison,produces,True,PAGE-16
+E0308,phase:P7,artifact:phase8_learning_curve,produces,True,PAGE-16
+E0309,phase:P7,artifact:phase8_leave_card_out,produces,True,PAGE-16
+E0310,phase:P7,artifact:phase8_pdp_ice,produces,True,PAGE-16
+E0311,phase:P7,artifact:phase8_psi,produces,True,PAGE-16
+E0312,phase:P7,artifact:phase8_roc_pr_curves,produces,True,PAGE-16
+E0313,phase:P7,artifact:phase8_segment_recall,produces,True,PAGE-16
+E0314,phase:P7,artifact:phase8_shap_beeswarm,produces,True,PAGE-16
+E0315,phase:P7,artifact:phase8_shap_dep_card_prior_f,produces,True,PAGE-16
+E0316,phase:P7,artifact:phase8_shap_dep_cat_code,produces,True,PAGE-16
+E0317,phase:P7,artifact:phase8_shap_dep_log_amt,produces,True,PAGE-16
+E0318,phase:P7,artifact:phase8_shap_dep_n_prior,produces,True,PAGE-16
+E0319,phase:P7,artifact:phase8_shap_importance,produces,True,PAGE-16
+E0320,phase:P7,artifact:phase8_walkforward_cv,produces,True,PAGE-16
+E0321,phase:P7,artifact:phase8_wf_vs_test,produces,True,PAGE-16
+E0322,phase:P1,artifact:phase1_state_n_choro,produces,False,PAGE-16
+E0323,phase:P1,artifact:phase1_state_rate_choro,produces,False,PAGE-16
+E0324,phase:P2,artifact:phase2_city_map,produces,False,PAGE-16
+E0325,phase:P2,artifact:phase2_map_scatter,produces,False,PAGE-16
+E0326,phase:P2,artifact:phase2_state_eb_choro,produces,False,PAGE-16
+E0327,phase:P2,artifact:phase2_state_n_choro,produces,False,PAGE-16
+E0328,phase:P4,artifact:phase4_pca_3d,produces,False,PAGE-16
+E0329,phase:P8,table:figure_index,produces,False,PAGE-16
+E0330,phase:P8,table:findings_ledger,produces,False,PAGE-16
+E0331,phase:P0,table:phase0_class_balance,produces,True,PAGE-16
+E0332,phase:P0,table:phase0_contracts,produces,True,PAGE-16
+E0333,phase:P0,table:phase0_generator_forensics,produces,True,PAGE-16
+E0334,phase:P0,table:phase0_schema,produces,True,PAGE-16
+E0335,phase:P1,table:phase1_amt_quantiles,produces,True,PAGE-16
+E0336,phase:P1,table:phase1_category_table,produces,True,PAGE-16
+E0337,phase:P1,table:phase1_covid_window,produces,True,PAGE-16
+E0338,phase:P1,table:phase1_merchant_table,produces,True,PAGE-16
+E0339,phase:P2,table:phase2_card_profiles,produces,True,PAGE-16
+E0340,phase:P2,table:phase2_city_table,produces,True,PAGE-16
+E0341,phase:P2,table:phase2_dist_rate_table,produces,True,PAGE-16
+E0342,phase:P2,table:phase2_mi_table,produces,True,PAGE-16
+E0343,phase:P2,table:phase2_money_category,produces,True,PAGE-16
+E0344,phase:P2,table:phase2_zip3_table,produces,True,PAGE-16
+E0345,phase:P3,table:phase3_weekly_rate_table,produces,True,PAGE-16
+E0346,phase:P4,table:phase4_anomaly_summary,produces,True,PAGE-16
+E0347,phase:P4,table:phase4_dbscan_clusters,produces,True,PAGE-16
+E0348,phase:P4,table:phase4_kmeans_cluster_rate,produces,True,PAGE-16
+E0349,phase:P4,table:phase4_separability_table,produces,True,PAGE-16
+E0350,phase:P5,table:phase5_category_posthoc_pairs,produces,True,PAGE-16
+E0351,phase:P5,table:phase5_category_rates,produces,True,PAGE-16
+E0352,phase:P5,table:phase5_chi2_cramers,produces,True,PAGE-16
+E0353,phase:P5,table:phase5_cluster_robust_logit,produces,True,PAGE-16
+E0354,phase:P5,table:phase5_mw_effect_sizes,produces,True,PAGE-16
+E0355,phase:P6,table:phase7_hazard_table,produces,True,PAGE-16
+E0356,phase:P6,table:phase7_high_risk_combo,produces,True,PAGE-16
+E0357,phase:P6,table:phase7_hour_encoding_comparison,produces,True,PAGE-16
+E0358,phase:P6,table:phase7_merchant_eb_table,produces,True,PAGE-16
+E0359,phase:P6,table:phase7_speed_rate_table,produces,True,PAGE-16
+E0360,phase:P7,table:phase8_ablation_decomposed,produces,True,PAGE-16
+E0361,phase:P7,table:phase8_calibration_temp,produces,True,PAGE-16
+E0362,phase:P7,table:phase8_capture_at_k,produces,True,PAGE-16
+E0363,phase:P7,table:phase8_cost_sensitivity,produces,True,PAGE-16
+E0364,phase:P7,table:phase8_ensemble_comparison,produces,True,PAGE-16
+E0365,phase:P7,table:phase8_learning_curve,produces,True,PAGE-16
+E0366,phase:P7,table:phase8_leave_card_out,produces,True,PAGE-16
+E0367,phase:P7,table:phase8_monotonic_comparison,produces,True,PAGE-16
+E0368,phase:P7,table:phase8_psi,produces,True,PAGE-16
+E0369,phase:P7,table:phase8_segment_errors,produces,True,PAGE-16
+E0370,phase:P7,table:phase8_threshold_table,produces,True,PAGE-16
+E0371,phase:P7,table:phase8_time_decay_comparison,produces,True,PAGE-16
+E0372,phase:P7,table:phase8_walkforward_cv,produces,True,PAGE-16
+E0373,phase:P7,table:phase8_wf_vs_test,produces,True,PAGE-16
+E0374,phase:P8,table:reproducibility_checklist,produces,True,PAGE-16

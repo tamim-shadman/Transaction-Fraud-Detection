@@ -1,0 +1,185 @@
+{
+  "generatedAt": "2026-10-21T16:49:12+00:00",
+  "summary": {
+    "weeklyFlagged": 1,
+    "weeklyReference": 105,
+    "psiSevere": 7,
+    "psiModerate": 1,
+    "exportWarnings": 7,
+    "edgeCases": 1
+  },
+  "weekly": [
+    {
+      "id": "ANOM-W-01",
+      "series": "Weekly fraud rate",
+      "label": "2019-01-20",
+      "value": 0.0146419009370816,
+      "format": "percent3",
+      "reference": "105 complete ISO weeks; median 0.507%, MAD 0.156 pp",
+      "method": "Robust z-score using median and 1.4826 × MAD",
+      "threshold": "|z| ≥ 3.5",
+      "zScore": 4.14812966695903,
+      "denominator": 11952,
+      "events": 175,
+      "severity": "moderate",
+      "interpretation": "175 fraud events in 11,952 transactions. The week is unusual relative to the other 104 weeks, but this is a descriptive flag, not proof of a defect or a causal change.",
+      "notAProof": "A single weekly rate is sensitive to small event counts and campaign timing. No significance test or causal claim is attached.",
+      "source": "tables/phase3_weekly_rate_table.csv",
+      "link": "/temporal"
+    }
+  ],
+  "drift": [
+    {
+      "id": "ANOM-P-01",
+      "series": "Train→test feature drift",
+      "label": "month_sin",
+      "value": 6.514263998062767,
+      "format": "decimal3",
+      "reference": "PSI across 1,296,675 train and 555,719 test rows",
+      "method": "Population Stability Index on binned feature distributions",
+      "threshold": "severe ≥ 0.25; moderate ≥ 0.1",
+      "severity": "high",
+      "interpretation": "month_sin (bounded) has severe drift; the largest contributor is the bin (0.866, inf].",
+      "notAProof": "PSI measures distribution change, not performance loss. A drifted feature can remain useful and a stable feature can still fail.",
+      "source": "tables/phase8_psi.csv",
+      "link": "/model"
+    },
+    {
+      "id": "ANOM-P-02",
+      "series": "Train→test feature drift",
+      "label": "n_prior",
+      "value": 5.095471711875279,
+      "format": "decimal3",
+      "reference": "PSI across 1,296,675 train and 555,719 test rows",
+      "method": "Population Stability Index on binned feature distributions",
+      "threshold": "severe ≥ 0.25; moderate ≥ 0.1",
+      "severity": "high",
+      "interpretation": "n_prior (log_dist) has severe drift; the largest contributor is the bin (4.956, 5.652].",
+      "notAProof": "PSI measures distribution change, not performance loss. A drifted feature can remain useful and a stable feature can still fail.",
+      "source": "tables/phase8_psi.csv",
+      "link": "/model"
+    },
+    {
+      "id": "ANOM-P-03",
+      "series": "Train→test feature drift",
+      "label": "month_cos",
+      "value": 1.4543352507536735,
+      "format": "decimal3",
+      "reference": "PSI across 1,296,675 train and 555,719 test rows",
+      "method": "Population Stability Index on binned feature distributions",
+      "threshold": "severe ≥ 0.25; moderate ≥ 0.1",
+      "severity": "high",
+      "interpretation": "month_cos (bounded) has severe drift; the largest contributor is the bin (6.123e-17, 0.5].",
+      "notAProof": "PSI measures distribution change, not performance loss. A drifted feature can remain useful and a stable feature can still fail.",
+      "source": "tables/phase8_psi.csv",
+      "link": "/model"
+    },
+    {
+      "id": "ANOM-P-04",
+      "series": "Train→test feature drift",
+      "label": "te_category",
+      "value": 1.2461466658781166,
+      "format": "decimal3",
+      "reference": "PSI across 1,296,675 train and 555,719 test rows",
+      "method": "Population Stability Index on binned feature distributions",
+      "threshold": "severe ≥ 0.25; moderate ≥ 0.1",
+      "severity": "high",
+      "interpretation": "te_category (bounded) has severe drift; the largest contributor is the bin (0.004707, 0.007145].",
+      "notAProof": "PSI measures distribution change, not performance loss. A drifted feature can remain useful and a stable feature can still fail.",
+      "source": "tables/phase8_psi.csv",
+      "link": "/model"
+    },
+    {
+      "id": "ANOM-P-05",
+      "series": "Train→test feature drift",
+      "label": "te_state",
+      "value": 1.0967691365533878,
+      "format": "decimal3",
+      "reference": "PSI across 1,296,675 train and 555,719 test rows",
+      "method": "Population Stability Index on binned feature distributions",
+      "threshold": "severe ≥ 0.25; moderate ≥ 0.1",
+      "severity": "high",
+      "interpretation": "te_state (bounded) has severe drift; the largest contributor is the bin (0.009418, inf].",
+      "notAProof": "PSI measures distribution change, not performance loss. A drifted feature can remain useful and a stable feature can still fail.",
+      "source": "tables/phase8_psi.csv",
+      "link": "/model"
+    },
+    {
+      "id": "ANOM-P-06",
+      "series": "Train→test feature drift",
+      "label": "te_zip3",
+      "value": 0.7050812802414771,
+      "format": "decimal3",
+      "reference": "PSI across 1,296,675 train and 555,719 test rows",
+      "method": "Population Stability Index on binned feature distributions",
+      "threshold": "severe ≥ 0.25; moderate ≥ 0.1",
+      "severity": "high",
+      "interpretation": "te_zip3 (bounded) has severe drift; the largest contributor is the bin (9.307e-05, 0.000192].",
+      "notAProof": "PSI measures distribution change, not performance loss. A drifted feature can remain useful and a stable feature can still fail.",
+      "source": "tables/phase8_psi.csv",
+      "link": "/model"
+    },
+    {
+      "id": "ANOM-P-07",
+      "series": "Train→test feature drift",
+      "label": "card_prior_fraud",
+      "value": 0.3269877239928835,
+      "format": "decimal3",
+      "reference": "PSI across 1,296,675 train and 555,719 test rows",
+      "method": "Population Stability Index on binned feature distributions",
+      "threshold": "severe ≥ 0.25; moderate ≥ 0.1",
+      "severity": "high",
+      "interpretation": "card_prior_fraud (log_dist) has severe drift; the largest contributor is the bin (-inf, 2.197].",
+      "notAProof": "PSI measures distribution change, not performance loss. A drifted feature can remain useful and a stable feature can still fail.",
+      "source": "tables/phase8_psi.csv",
+      "link": "/model"
+    },
+    {
+      "id": "ANOM-P-08",
+      "series": "Train→test feature drift",
+      "label": "te_merchant",
+      "value": 0.1818033927767481,
+      "format": "decimal3",
+      "reference": "PSI across 1,296,675 train and 555,719 test rows",
+      "method": "Population Stability Index on binned feature distributions",
+      "threshold": "severe ≥ 0.25; moderate ≥ 0.1",
+      "severity": "moderate",
+      "interpretation": "te_merchant (bounded) has moderate drift; the largest contributor is the bin (-inf, 0.0005789].",
+      "notAProof": "PSI measures distribution change, not performance loss. A drifted feature can remain useful and a stable feature can still fail.",
+      "source": "tables/phase8_psi.csv",
+      "link": "/model"
+    }
+  ],
+  "edgeCases": [
+    {
+      "id": "EDGE-W-01",
+      "label": "2021-01-03",
+      "value": 0.0,
+      "zScore": -2.1982841747562754,
+      "reason": "Zero fraud events in a boundary week. Retained in the source table; not flagged as a statistical anomaly because the zero is an edge case with 18,921 transactions and the notes already document the partial-week boundary.",
+      "source": "tables/phase3_weekly_rate_table.csv"
+    }
+  ],
+  "exportExceptions": [
+    {
+      "id": "ANOM-X-01",
+      "series": "Static export pipeline",
+      "label": "Plotly → PNG exports",
+      "value": 7,
+      "format": "integer",
+      "reference": "7 skipped static exports recorded in the warning register",
+      "method": "Deterministic warning-register count",
+      "threshold": "Any recorded skip",
+      "severity": "moderate",
+      "interpretation": "Seven static PNG renders were skipped; the HTML artifacts remain available. This is an operational exception, not a modelling defect.",
+      "notAProof": "The notebook does not test whether a different Kaleido version would have rendered every artifact.",
+      "source": "data/manifest.json warnings",
+      "link": "/logs"
+    }
+  ],
+  "methodNotes": [
+    "Weekly anomaly detection uses a robust z-score (median/MAD) because the series has outliers and no stable parametric assumption.",
+    "Drift flags use the documented PSI convention already recorded by the notebook. They are not re-derived or re-thresholded.",
+    "No anomaly detector is applied to model metrics, runtimes or datasets where the sample is too small or the series is a designed experiment. The absence is intentional."
+  ]
+}

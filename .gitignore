@@ -1,0 +1,60 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build and Bundle Outputs
+app/dist/
+dist/
+dist-release/
+build/
+*.tsbuildinfo
+.vite/
+
+# Python Virtual Environments and Caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# Local Environment Overrides & Secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.cert
+
+# Staging, Temporary, and Scratch Files
+app/public/data/.staging/
+scratch/
+tmp/
+*.tmp
+*.temp
+
+# Backups and Local Dumps
+backups/*
+!backups/.gitkeep
+
+# Testing and Coverage
+.coverage
+htmlcov/
+.pytest_cache/
+test-results/
+playwright-report/
+
+# OS Artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & Editor Directories
+.vscode/
+.idea/
+*.swp
+*.swo

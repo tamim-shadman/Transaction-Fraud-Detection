@@ -1,0 +1,10 @@
+﻿warning_id,severity,category,message,detail,notebook_cell,phase_id
+WARN-01,warning,Dependency,Plotly 5.24.1 is incompatible with Kaleido 1.5.0,"Warning: You have Plotly version 5.24.1, which is not compatible with this version of Kaleido (1.5.0).",4,SETUP
+WARN-02,warning,Export,Static PNG skipped for phase1_state_rate_choro,(kaleido PNG skipped for phase1_state_rate_choro:,24,P1
+WARN-03,warning,Export,Static PNG skipped for phase1_state_n_choro,(kaleido PNG skipped for phase1_state_n_choro:,24,P1
+WARN-04,warning,Export,Static PNG skipped for phase2_map_scatter,(kaleido PNG skipped for phase2_map_scatter:,30,P2
+WARN-05,warning,Export,Static PNG skipped for phase2_state_eb_choro,(kaleido PNG skipped for phase2_state_eb_choro:,30,P2
+WARN-06,warning,Export,Static PNG skipped for phase2_state_n_choro,(kaleido PNG skipped for phase2_state_n_choro:,30,P2
+WARN-07,warning,Export,Static PNG skipped for phase2_city_map,(kaleido PNG skipped for phase2_city_map:,30,P2
+WARN-08,warning,Export,Static PNG skipped for phase4_pca_3d,(kaleido PNG skipped for phase4_pca_3d:,42,P4
+WARN-09,warning,Explainability,SHAP background subsampled from 200 to 100 rows,"WARNING:shap:Background dataset has 200 samples but max_samples=100. Subsampling to 100 samples for SHAP value computation. To use all samples, set max_samples=200 when initializing the masker.",63,P7

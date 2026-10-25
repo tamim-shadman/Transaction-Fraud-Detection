@@ -1,0 +1,1226 @@
+{
+  "generatedAt": "2026-10-21T18:12:48+00:00",
+  "checks": 144,
+  "passed": 144,
+  "failed": 0,
+  "results": [
+    {
+      "id": "P2-FILE-01",
+      "group": "Evidence layer",
+      "name": "program.json exists",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-JSON-01",
+      "group": "Evidence layer",
+      "name": "program.json is valid JSON with a generatedAt stamp",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-FILE-02",
+      "group": "Evidence layer",
+      "name": "projects.json exists",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-JSON-02",
+      "group": "Evidence layer",
+      "name": "projects.json is valid JSON with a generatedAt stamp",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-FILE-03",
+      "group": "Evidence layer",
+      "name": "experiments.json exists",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-JSON-03",
+      "group": "Evidence layer",
+      "name": "experiments.json is valid JSON with a generatedAt stamp",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-FILE-04",
+      "group": "Evidence layer",
+      "name": "lineage.json exists",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-JSON-04",
+      "group": "Evidence layer",
+      "name": "lineage.json is valid JSON with a generatedAt stamp",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-FILE-05",
+      "group": "Evidence layer",
+      "name": "logs.json exists",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-JSON-05",
+      "group": "Evidence layer",
+      "name": "logs.json is valid JSON with a generatedAt stamp",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-FILE-06",
+      "group": "Evidence layer",
+      "name": "metrics.json exists",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-JSON-06",
+      "group": "Evidence layer",
+      "name": "metrics.json is valid JSON with a generatedAt stamp",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-FILE-07",
+      "group": "Evidence layer",
+      "name": "insights.json exists",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-JSON-07",
+      "group": "Evidence layer",
+      "name": "insights.json is valid JSON with a generatedAt stamp",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-FILE-08",
+      "group": "Evidence layer",
+      "name": "anomalies.json exists",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-JSON-08",
+      "group": "Evidence layer",
+      "name": "anomalies.json is valid JSON with a generatedAt stamp",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-FILE-09",
+      "group": "Evidence layer",
+      "name": "artifacts.json exists",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-JSON-09",
+      "group": "Evidence layer",
+      "name": "artifacts.json is valid JSON with a generatedAt stamp",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PRG-01",
+      "group": "Program profile",
+      "name": "phase count matches the manifest",
+      "expected": 9,
+      "actual": 9,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PRG-02",
+      "group": "Program profile",
+      "name": "research question count matches the manifest",
+      "expected": 8,
+      "actual": 8,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PRG-03",
+      "group": "Program profile",
+      "name": "finding count matches the manifest",
+      "expected": 64,
+      "actual": 64,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PRG-04",
+      "group": "Program profile",
+      "name": "every phase keeps its manifest cell range",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PRG-05",
+      "group": "Program profile",
+      "name": "phase finding counts match the manifest",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PRG-06",
+      "group": "Program profile",
+      "name": "absent sources are carried from the manifest",
+      "expected": [
+        "fraudTrain.csv",
+        "fraudTest.csv"
+      ],
+      "actual": [
+        "fraudTrain.csv",
+        "fraudTest.csv"
+      ],
+      "status": "pass"
+    },
+    {
+      "id": "P2-PRG-07",
+      "group": "Program profile",
+      "name": "reproducibility checklist total matches the analysis",
+      "expected": 11,
+      "actual": 11,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PRG-08",
+      "group": "Program profile",
+      "name": "reproducibility checklist passes equal the analysis",
+      "expected": 11,
+      "actual": 11,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PRG-09",
+      "group": "Program profile",
+      "name": "audit notes are carried unchanged",
+      "expected": 5,
+      "actual": 5,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PRG-10",
+      "group": "Program profile",
+      "name": "workspace issues are carried unchanged",
+      "expected": 16,
+      "actual": 16,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PRG-11",
+      "group": "Program profile",
+      "name": "the manifest cell range omits the phase's final notebook cell (see caveat C8)",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PRG-12",
+      "group": "Program profile",
+      "name": "the notebook record is the authority for the cell-to-phase mapping",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PRJ-01",
+      "group": "Project portfolio",
+      "name": "project count matches the 7 defined tracks",
+      "expected": 7,
+      "actual": 7,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PRJ-02",
+      "group": "Project portfolio",
+      "name": "every project has unique ID",
+      "expected": 7,
+      "actual": 7,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PRJ-03",
+      "group": "Project portfolio",
+      "name": "all 9 research phases are covered across projects",
+      "expected": 9,
+      "actual": 9,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PRJ-04",
+      "group": "Project portfolio",
+      "name": "every project documents objectives, deliverables and limitations",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PRJ-05",
+      "group": "Project portfolio",
+      "name": "total findings in projects match manifest count",
+      "expected": 64,
+      "actual": 64,
+      "status": "pass"
+    },
+    {
+      "id": "P2-EXP-01",
+      "group": "Experiments",
+      "name": "experiment count matches the manifest",
+      "expected": 26,
+      "actual": 26,
+      "status": "pass"
+    },
+    {
+      "id": "P2-EXP-02",
+      "group": "Experiments",
+      "name": "every experiment belongs to exactly one group",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-EXP-03",
+      "group": "Experiments",
+      "name": "group member lists cover every experiment",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-EXP-04",
+      "group": "Experiments",
+      "name": "group counts match the member lists",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-EXP-05",
+      "group": "Experiments",
+      "name": "group ids are unique",
+      "expected": 5,
+      "actual": 5,
+      "status": "pass"
+    },
+    {
+      "id": "P2-EXP-06",
+      "group": "Experiments",
+      "name": "baselines belong to their own group",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-EXP-07",
+      "group": "Experiments",
+      "name": "recorded deltas equal baseline minus variant",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-EXP-08",
+      "group": "Experiments",
+      "name": "deltas are absolute differences, not percent improvements",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-EXP-09",
+      "group": "Experiments",
+      "name": "the full model is the cross-boundary baseline",
+      "expected": "final_unconstrained",
+      "actual": "final_unconstrained",
+      "status": "pass"
+    },
+    {
+      "id": "P2-EXP-10",
+      "group": "Experiments",
+      "name": "non-comparable groups are marked as such",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-EXP-11",
+      "group": "Experiments",
+      "name": "every group documents a basis and a limitation",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-EXP-12",
+      "group": "Experiments",
+      "name": "experiment metrics match the manifest values",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-ANO-01",
+      "group": "Anomalies",
+      "name": "weekly flags match an independent robust z recomputation",
+      "expected": [
+        [
+          "2019-01-20",
+          4.14813
+        ]
+      ],
+      "actual": [
+        [
+          "2019-01-20",
+          4.14813
+        ]
+      ],
+      "status": "pass"
+    },
+    {
+      "id": "P2-ANO-02",
+      "group": "Anomalies",
+      "name": "the reference population is all 105 weeks",
+      "expected": 105,
+      "actual": 105,
+      "status": "pass"
+    },
+    {
+      "id": "P2-ANO-03",
+      "group": "Anomalies",
+      "name": "the method is stated on every flag",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-ANO-04",
+      "group": "Anomalies",
+      "name": "every flag carries a not-a-proof boundary",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-ANO-05",
+      "group": "Anomalies",
+      "name": "drift flags match the analysis PSI verdicts",
+      "expected": 8,
+      "actual": 8,
+      "status": "pass"
+    },
+    {
+      "id": "P2-ANO-06",
+      "group": "Anomalies",
+      "name": "drift flag values match the analysis PSI values",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-ANO-07",
+      "group": "Anomalies",
+      "name": "export exceptions equal the warning register",
+      "expected": 7,
+      "actual": 7,
+      "status": "pass"
+    },
+    {
+      "id": "P2-ANO-08",
+      "group": "Anomalies",
+      "name": "the zero-fraud boundary week is recorded as an edge case, not an anomaly",
+      "expected": 1,
+      "actual": 1,
+      "status": "pass"
+    },
+    {
+      "id": "P2-ANO-09",
+      "group": "Anomalies",
+      "name": "no anomaly is raised for model metrics or runtimes",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-INS-01",
+      "group": "Insights",
+      "name": "every insight has a scope, title, statement and source refs",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-INS-02",
+      "group": "Insights",
+      "name": "every insight has a link and a confidence label",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-INS-03",
+      "group": "Insights",
+      "name": "every insight carries at least one numeric metric",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-INS-04",
+      "group": "Insights",
+      "name": "insight ids are unique",
+      "expected": 15,
+      "actual": 15,
+      "status": "pass"
+    },
+    {
+      "id": "P2-INS-05",
+      "group": "Insights",
+      "name": "the model insight quotes the manifest PR-AUC",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-INS-06",
+      "group": "Insights",
+      "name": "the economics insight quotes the capture table",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-INS-07",
+      "group": "Insights",
+      "name": "the evidence insight quotes the ledger grade counts",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-INS-08",
+      "group": "Insights",
+      "name": "insight scopes are a closed set",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-LIN-01",
+      "group": "Lineage",
+      "name": "node ids are unique",
+      "expected": 292,
+      "actual": 292,
+      "status": "pass"
+    },
+    {
+      "id": "P2-LIN-02",
+      "group": "Lineage",
+      "name": "every link references existing nodes",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-LIN-03",
+      "group": "Lineage",
+      "name": "link counts match the manifest",
+      "expected": 374,
+      "actual": 374,
+      "status": "pass"
+    },
+    {
+      "id": "P2-LIN-04",
+      "group": "Lineage",
+      "name": "verified and inferred links partition the edge set",
+      "expected": 374,
+      "actual": 374,
+      "status": "pass"
+    },
+    {
+      "id": "P2-LIN-05",
+      "group": "Lineage",
+      "name": "only artifact edges are inferred",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-LIN-06",
+      "group": "Lineage",
+      "name": "every finding is a node",
+      "expected": 64,
+      "actual": 64,
+      "status": "pass"
+    },
+    {
+      "id": "P2-LIN-07",
+      "group": "Lineage",
+      "name": "every phase is a node",
+      "expected": 9,
+      "actual": 9,
+      "status": "pass"
+    },
+    {
+      "id": "P2-LIN-08",
+      "group": "Lineage",
+      "name": "every artifact is a node",
+      "expected": 182,
+      "actual": 182,
+      "status": "pass"
+    },
+    {
+      "id": "P2-LIN-09",
+      "group": "Lineage",
+      "name": "every source file is a node",
+      "expected": 6,
+      "actual": 6,
+      "status": "pass"
+    },
+    {
+      "id": "P2-ART-01",
+      "group": "Artifacts",
+      "name": "artifact count matches figures + interactive + tables",
+      "expected": 182,
+      "actual": 182,
+      "status": "pass"
+    },
+    {
+      "id": "P2-ART-02",
+      "group": "Artifacts",
+      "name": "every artifact declares verified or inferred provenance",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-ART-03",
+      "group": "Artifacts",
+      "name": "verified artifacts carry a producing cell",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-ART-04",
+      "group": "Artifacts",
+      "name": "inferred artifacts do not claim a cell",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-ART-05",
+      "group": "Artifacts",
+      "name": "provenance counts match the record list",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-ART-06",
+      "group": "Artifacts",
+      "name": "the producing cell's notebook phase matches the artifact's phase",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-ART-07",
+      "group": "Artifacts",
+      "name": "no artifact is claimed for a phase it does not belong to",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-LOG-01",
+      "group": "Logs",
+      "name": "event count matches the summary",
+      "expected": 817,
+      "actual": 817,
+      "status": "pass"
+    },
+    {
+      "id": "P2-LOG-02",
+      "group": "Logs",
+      "name": "severity counts sum to the event count",
+      "expected": 817,
+      "actual": 817,
+      "status": "pass"
+    },
+    {
+      "id": "P2-LOG-03",
+      "group": "Logs",
+      "name": "the run reports zero tracebacks",
+      "expected": 0,
+      "actual": 0,
+      "status": "pass"
+    },
+    {
+      "id": "P2-LOG-04",
+      "group": "Logs",
+      "name": "no error events are recorded",
+      "expected": 0,
+      "actual": 0,
+      "status": "pass"
+    },
+    {
+      "id": "P2-LOG-05",
+      "group": "Logs",
+      "name": "warning family export count matches the register",
+      "expected": 7,
+      "actual": 7,
+      "status": "pass"
+    },
+    {
+      "id": "P2-LOG-06",
+      "group": "Logs",
+      "name": "no event carries an invented timestamp",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-LOG-07",
+      "group": "Logs",
+      "name": "notebook events keep a cell reference",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-LOG-08",
+      "group": "Logs",
+      "name": "pattern coverage accounts for every event",
+      "expected": 817,
+      "actual": 817,
+      "status": "pass"
+    },
+    {
+      "id": "P2-LOG-08b",
+      "group": "Logs",
+      "name": "pattern counts sum to the patterned event count",
+      "expected": 816,
+      "actual": 816,
+      "status": "pass"
+    },
+    {
+      "id": "P2-LOG-09",
+      "group": "Logs",
+      "name": "pattern counts match the pattern list length",
+      "expected": 629,
+      "actual": 629,
+      "status": "pass"
+    },
+    {
+      "id": "P2-LOG-10",
+      "group": "Logs",
+      "name": "every source contributes at least one event",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-MET-01",
+      "group": "Metrics",
+      "name": "metric count matches the catalogue",
+      "expected": 155,
+      "actual": 155,
+      "status": "pass"
+    },
+    {
+      "id": "P2-MET-02",
+      "group": "Metrics",
+      "name": "metric ids are unique",
+      "expected": 155,
+      "actual": 155,
+      "status": "pass"
+    },
+    {
+      "id": "P2-MET-03",
+      "group": "Metrics",
+      "name": "every metric has a definition and a source file",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-MET-04",
+      "group": "Metrics",
+      "name": "source table references resolve to manifest tables",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-MET-05",
+      "group": "Metrics",
+      "name": "every metric links to a source or the run record",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-MET-06",
+      "group": "Metrics",
+      "name": "validated count matches the metric list",
+      "expected": 118,
+      "actual": 118,
+      "status": "pass"
+    },
+    {
+      "id": "P2-MET-07",
+      "group": "Metrics",
+      "name": "confidence labels are from the documented set",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-APP-01",
+      "group": "Console",
+      "name": "route /insights is registered",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-APP-02",
+      "group": "Console",
+      "name": "route /program is registered",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-APP-03",
+      "group": "Console",
+      "name": "route /experiments is registered",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-APP-04",
+      "group": "Console",
+      "name": "route /lineage is registered",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-APP-05",
+      "group": "Console",
+      "name": "route /logs is registered",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-APP-06",
+      "group": "Console",
+      "name": "route /explore is registered",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-APP-07",
+      "group": "Console",
+      "name": "route /metrics is registered",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-APP-08",
+      "group": "Console",
+      "name": "every Phase 2 page module exists",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-APP-09",
+      "group": "Console",
+      "name": "the Phase 2 routes appear in the navigation",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-APP-10",
+      "group": "Console",
+      "name": "the design system defines dark-surface tokens",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-APP-11",
+      "group": "Console",
+      "name": "reduced motion is honoured",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-APP-12",
+      "group": "Console",
+      "name": "a skip link is present",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-APP-13",
+      "group": "Console",
+      "name": "charts remap the legacy light palette",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-APP-14",
+      "group": "Console",
+      "name": "CSV export neutralises formula injection",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-APP-15",
+      "group": "Console",
+      "name": "table ids are validated before loading",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-APP-16",
+      "group": "Console",
+      "name": "a route-level error boundary exists",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PBI-01",
+      "group": "Power BI pack",
+      "name": "pack version is 2.0.0",
+      "expected": "2.0.0",
+      "actual": "2.0.0",
+      "status": "pass"
+    },
+    {
+      "id": "P2-PBI-02",
+      "group": "Power BI pack",
+      "name": "the pack declares that no native PBIX exists",
+      "expected": false,
+      "actual": false,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PBI-03",
+      "group": "Power BI pack",
+      "name": "table count matches the manifest",
+      "expected": 71,
+      "actual": 71,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PBI-04",
+      "group": "Power BI pack",
+      "name": "measure count matches the DAX file",
+      "expected": 137,
+      "actual": 137,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PBI-05",
+      "group": "Power BI pack",
+      "name": "relationship count matches the manifest",
+      "expected": 34,
+      "actual": 34,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PBI-06",
+      "group": "Power BI pack",
+      "name": "page count matches the page definitions",
+      "expected": 20,
+      "actual": 20,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PBI-T-fact_project.csv",
+      "group": "Power BI pack",
+      "name": "fact_project.csv is in the pack",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PBI-T-fact_insight.csv",
+      "group": "Power BI pack",
+      "name": "fact_insight.csv is in the pack",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PBI-T-fact_anomaly_flag.csv",
+      "group": "Power BI pack",
+      "name": "fact_anomaly_flag.csv is in the pack",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PBI-T-fact_artifact_provenance.csv",
+      "group": "Power BI pack",
+      "name": "fact_artifact_provenance.csv is in the pack",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PBI-T-fact_metric_catalog.csv",
+      "group": "Power BI pack",
+      "name": "fact_metric_catalog.csv is in the pack",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PBI-T-fact_log_pattern.csv",
+      "group": "Power BI pack",
+      "name": "fact_log_pattern.csv is in the pack",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PBI-T-fact_lineage_node.csv",
+      "group": "Power BI pack",
+      "name": "fact_lineage_node.csv is in the pack",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PBI-T-fact_lineage_edge.csv",
+      "group": "Power BI pack",
+      "name": "fact_lineage_edge.csv is in the pack",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PBI-T-dim_insight_scope.csv",
+      "group": "Power BI pack",
+      "name": "dim_insight_scope.csv is in the pack",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PBI-T-dim_experiment_group.csv",
+      "group": "Power BI pack",
+      "name": "dim_experiment_group.csv is in the pack",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PBI-T-dim_provenance_status.csv",
+      "group": "Power BI pack",
+      "name": "dim_provenance_status.csv is in the pack",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PBI-T-dim_node_type.csv",
+      "group": "Power BI pack",
+      "name": "dim_node_type.csv is in the pack",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PBI-07",
+      "group": "Power BI pack",
+      "name": "the experiment fact carries a group key",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PBI-08",
+      "group": "Power BI pack",
+      "name": "every relationship references a table in the pack",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-PBI-09",
+      "group": "Power BI pack",
+      "name": "exactly one relationship is bidirectional",
+      "expected": 1,
+      "actual": 1,
+      "status": "pass"
+    },
+    {
+      "id": "P2-BRW-01",
+      "group": "Browser matrix",
+      "name": "19 routes were measured at 4 viewports",
+      "expected": 76,
+      "actual": 76,
+      "status": "pass"
+    },
+    {
+      "id": "P2-BRW-02",
+      "group": "Browser matrix",
+      "name": "no console errors on any route",
+      "expected": 0,
+      "actual": 0,
+      "status": "pass"
+    },
+    {
+      "id": "P2-BRW-03",
+      "group": "Browser matrix",
+      "name": "no horizontal overflow on any route",
+      "expected": 0,
+      "actual": 0,
+      "status": "pass"
+    },
+    {
+      "id": "P2-BRW-04",
+      "group": "Browser matrix",
+      "name": "no text element below 10px on any route",
+      "expected": 0,
+      "actual": 0,
+      "status": "pass"
+    },
+    {
+      "id": "P2-BRW-05",
+      "group": "Browser matrix",
+      "name": "no chart rendered an empty canvas",
+      "expected": 0,
+      "actual": 0,
+      "status": "pass"
+    },
+    {
+      "id": "P2-BRW-06",
+      "group": "Browser matrix",
+      "name": "every route rendered a heading and at least one panel",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-BLD-01",
+      "group": "Build",
+      "name": "the production bundle exists",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-BLD-02",
+      "group": "Build",
+      "name": "the largest JS chunk stays under 800 kB",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    },
+    {
+      "id": "P2-BLD-03",
+      "group": "Build",
+      "name": "the stylesheet stays under 150 kB",
+      "expected": true,
+      "actual": true,
+      "status": "pass"
+    }
+  ],
+  "knownCaveats": [
+    {
+      "id": "C1",
+      "title": "The raw datasets are absent",
+      "detail": "fraudTrain.csv and fraudTest.csv are referenced by hash and size but are not in the workspace, so the notebook cannot be re-run end to end. Every Phase 2 value is derived from the generated artifacts only.",
+      "sources": "logs/data_fingerprint.json, manifest sources"
+    },
+    {
+      "id": "C2",
+      "title": "No native Power BI authoring runtime",
+      "detail": "The pack is CSV + DAX + theme + page spec. It has not been opened in Power BI Desktop, so the model is verified by schema, count and arithmetic checks only.",
+      "sources": "powerbi/manifest.json"
+    },
+    {
+      "id": "C3",
+      "title": "Log events have no timestamps",
+      "detail": "The notebook outputs, warning register and build logs carry no reliable per-event times. Sequence is preserved by cell and line number, and no timestamp is invented.",
+      "sources": "data/notebook.json, logs/build.log"
+    },
+    {
+      "id": "C4",
+      "title": "A single research program",
+      "detail": "The workspace contains one program with nine phases. Comparisons are between model variants, folds and detectors - not between independent projects.",
+      "sources": "app/public/data/phase2/program.json"
+    },
+    {
+      "id": "C5",
+      "title": "Partial runtime telemetry",
+      "detail": "The run records total wall clock, six embedding durations and the SHAP duration. There is no per-phase or per-model runtime ledger, so no runtime anomaly detection is attempted.",
+      "sources": "manifest run.embeddingTimes"
+    },
+    {
+      "id": "C6",
+      "title": "The same warning can appear in two sources",
+      "detail": "A warning present in both the notebook output and the warning register is counted once in the warning families and twice in the raw event stream. The UI states which number it is showing.",
+      "sources": "data/phase2/logs.json"
+    },
+    {
+      "id": "C7",
+      "title": "Related findings are phase-level",
+      "detail": "An artifact is linked to the findings of its phase. The link is labelled as phase-level rather than a claim that the artifact is the source of that finding.",
+      "sources": "data/phase2/artifacts.json"
+    },
+    {
+      "id": "C8",
+      "title": "The manifest's phase cell range omits each phase's final cell",
+      "detail": "For every phase, the notebook records one more cell in that phase than the manifest's cell_start/cell_end span (for example P0 is 13-18 in the manifest while cell 19 also carries the P0 phase). Range-based provenance checks would therefore report false mismatches, so the console uses the notebook's own cell-to-phase mapping as the authority and records the producing cell against it.",
+      "sources": "data/notebook.json, manifest phases"
+    }
+  ]
+}

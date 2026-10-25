@@ -1,0 +1,28 @@
+﻿feature,family,n_train,n_test,psi,verdict,top_driver_bin
+month_sin,bounded,1296675,555719,6.514263998062767,severe,"(0.866, inf]"
+n_prior,log_dist,1296675,555719,5.095471711875279,severe,"(4.956, 5.652]"
+month_cos,bounded,1296675,555719,1.4543352507536735,severe,"(6.123e-17, 0.5]"
+te_category,bounded,1296675,555719,1.2461466658781166,severe,"(0.004707, 0.007145]"
+te_state,bounded,1296675,555719,1.0967691365533878,severe,"(0.009418, inf]"
+te_zip3,bounded,1296675,555719,0.7050812802414771,severe,"(9.307e-05, 0.000192]"
+card_prior_fraud,log_dist,1296675,555719,0.3269877239928835,severe,"(-inf, 2.197]"
+te_merchant,bounded,1296675,555719,0.1818033927767481,moderate,"(-inf, 0.0005789]"
+cnt_24h,log_dist,1296675,555719,0.0477875475180769,stable,"(2.197, inf]"
+dow_sin,bounded,1296675,555719,0.037037337958859,stable,"(0.7818, inf]"
+hours_since_prev_log,log_dist,1295692,555703,0.018815798445073,stable,"(1.416, inf]"
+dow_cos,bounded,1296675,555719,0.0175363748899438,stable,"(-0.2225, 0.6235]"
+speed_kmh_log,log_dist,1296675,555719,0.0129461252274363,stable,"(-inf, 0.902]"
+amt_z_prior,log_dist,1294709,555687,0.0096026995716871,stable,
+age,bounded,1296675,555719,0.0076776269151284,stable,"(47.74, 53.38]"
+cnt_1h,log_dist,1296675,555719,0.0046579876104819,stable,"(0.6931, inf]"
+dist_prev_km_log,log_dist,1295692,555703,0.0023984187833497,stable,
+state_code,categorical,1296675,555719,0.0001803594280594,stable,code=14
+log_amt,log_dist,1296675,555719,6.247677112826609e-05,stable,"(1.779, inf]"
+city_pop_log,bounded,1296675,555719,4.6302277440789606e-05,stable,"(7.398, 7.807]"
+cat_code,categorical,1296675,555719,4.262498582532425e-05,stable,code=9
+hour_cos,bounded,1296675,555719,2.2651029909754476e-05,stable,"(0.866, 0.9659]"
+hour_sin,bounded,1296675,555719,1.847689880481402e-05,stable,"(-0.866, -0.7071]"
+dist_km,bounded,1296675,555719,1.3682023750866188e-05,stable,"(78.23, 85.98]"
+gender_code,categorical,1296675,555719,5.666611455124782e-06,stable,code=1
+is_night,bounded,1296675,555719,0.0,stable,"(-inf, inf]"
+is_weekend,bounded,1296675,555719,0.0,stable,"(-inf, inf]"

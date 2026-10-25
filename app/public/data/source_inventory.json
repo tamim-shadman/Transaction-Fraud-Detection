@@ -1,0 +1,1680 @@
+{
+  "timestamp": "2026-10-21T16:49:11.283274+00:00",
+  "total_sources": 185,
+  "total_bytes": 25534324,
+  "category_counts": {
+    "tables": 46,
+    "figures": 129,
+    "interactive": 7,
+    "logs": 2,
+    "notebooks": 1
+  },
+  "master_fingerprint": "6ff3ee965b566f0a4e452e554a989942590351da4ec09483c5ddcdd9e1e776c1",
+  "sources": [
+    {
+      "path": "tables/figure_index.csv",
+      "name": "figure_index.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 11386,
+      "modified": "2026-10-20T18:03:37.945590+00:00",
+      "sha256": "3253ab34748d1c1d58a8470212328a68e80a12c72b0a2b8c11bf9576657f92ff"
+    },
+    {
+      "path": "tables/findings_ledger.csv",
+      "name": "findings_ledger.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 24141,
+      "modified": "2026-10-20T18:03:37.997626+00:00",
+      "sha256": "4e2474ad106e50ce7c60436a504df1912ae5f6dd08ce085ead9907dae9bd8de3"
+    },
+    {
+      "path": "tables/phase0_class_balance.csv",
+      "name": "phase0_class_balance.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 153,
+      "modified": "2026-10-20T18:03:38.039614+00:00",
+      "sha256": "215d645854fbaee06761d1f788c1cfb6e16c2e4b6302c87559e4d229e879df39"
+    },
+    {
+      "path": "tables/phase0_contracts.csv",
+      "name": "phase0_contracts.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 464,
+      "modified": "2026-10-20T18:03:37.761206+00:00",
+      "sha256": "8686e06a36cc6ff4eefeb7839aab2702c1942984fb9cf834bb85157130f32077"
+    },
+    {
+      "path": "tables/phase0_generator_forensics.csv",
+      "name": "phase0_generator_forensics.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 249,
+      "modified": "2026-10-20T18:03:37.858901+00:00",
+      "sha256": "4c27318aee563e16bb3c160798b0f006a5fb5f4fd02232bcc19eaf3eb5571f14"
+    },
+    {
+      "path": "tables/phase0_schema.csv",
+      "name": "phase0_schema.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 4260,
+      "modified": "2026-10-20T18:03:38.004396+00:00",
+      "sha256": "7adc10a962ef3bcb01d1c819c318c29c367aaf1ec4773f35ba10f812356c1b84"
+    },
+    {
+      "path": "tables/phase1_amt_quantiles.csv",
+      "name": "phase1_amt_quantiles.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 277,
+      "modified": "2026-10-20T18:03:37.768034+00:00",
+      "sha256": "fc943c866eb02e05e0e102997a7b791bfd317218e4ec5a78cfbc8bbb74939187"
+    },
+    {
+      "path": "tables/phase1_category_table.csv",
+      "name": "phase1_category_table.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 634,
+      "modified": "2026-10-20T18:03:37.839695+00:00",
+      "sha256": "c7cc2f53e4bf20a5d1bb03f258271c03b4af51895047dbf51cfc8ccbacf097f5"
+    },
+    {
+      "path": "tables/phase1_covid_window.csv",
+      "name": "phase1_covid_window.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 158,
+      "modified": "2026-10-20T18:03:37.787200+00:00",
+      "sha256": "227852d70f2f3d774d4d63a3426b694e5e9f1ba27ac2d52902b7d860a041c288"
+    },
+    {
+      "path": "tables/phase1_merchant_table.csv",
+      "name": "phase1_merchant_table.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 32643,
+      "modified": "2026-10-20T18:03:38.058031+00:00",
+      "sha256": "273f06c04815d281cc59c752b6816f9fde5de1c4ecc821493f0e3dc9aaad2af6"
+    },
+    {
+      "path": "tables/phase2_card_profiles.csv",
+      "name": "phase2_card_profiles.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 93112,
+      "modified": "2026-10-20T18:03:37.922992+00:00",
+      "sha256": "f89b6f799e366a017aaf7f0ec435922e31ac743fc00192e86b924145eb587adb"
+    },
+    {
+      "path": "tables/phase2_city_table.csv",
+      "name": "phase2_city_table.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 49718,
+      "modified": "2026-10-20T18:03:37.821548+00:00",
+      "sha256": "969c464179e3ce9d4d08e17cc06ade2c5ae1f96a4a3bda682b079ebb2e5e0cd4"
+    },
+    {
+      "path": "tables/phase2_dist_rate_table.csv",
+      "name": "phase2_dist_rate_table.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 245,
+      "modified": "2026-10-20T18:03:37.799239+00:00",
+      "sha256": "0acb4197e793a59ef81fb3e466001334d80e573d4ed73717cad3157f9106ff7d"
+    },
+    {
+      "path": "tables/phase2_mi_table.csv",
+      "name": "phase2_mi_table.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 442,
+      "modified": "2026-10-20T18:03:37.975045+00:00",
+      "sha256": "18ea09efb2911d2c392188ef37ee7f94a71cd99d7035d583d3758d39599d1c46"
+    },
+    {
+      "path": "tables/phase2_money_category.csv",
+      "name": "phase2_money_category.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 744,
+      "modified": "2026-10-20T18:03:37.871317+00:00",
+      "sha256": "8f0a7996a2ec0c4d80317e6a9f4836479f0280d6e18b56b5f381ba1a4ab42795"
+    },
+    {
+      "path": "tables/phase2_zip3_table.csv",
+      "name": "phase2_zip3_table.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 90266,
+      "modified": "2026-10-20T18:03:37.878838+00:00",
+      "sha256": "19f1378741097c20357ca2026bcc99a6953db1fa4a3c56672deebd1984f2a554"
+    },
+    {
+      "path": "tables/phase3_weekly_rate_table.csv",
+      "name": "phase3_weekly_rate_table.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 4344,
+      "modified": "2026-10-20T18:03:37.735821+00:00",
+      "sha256": "52c2cd033de1793aa35d452748916101adfea294d49467945a58dc68b78aac29"
+    },
+    {
+      "path": "tables/phase4_anomaly_summary.csv",
+      "name": "phase4_anomaly_summary.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 231,
+      "modified": "2026-10-20T18:03:37.780772+00:00",
+      "sha256": "42d5cf8f3dafa09ae713191407dee7060b1593843dafbf48f731ca5f96014162"
+    },
+    {
+      "path": "tables/phase4_dbscan_clusters.csv",
+      "name": "phase4_dbscan_clusters.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 86,
+      "modified": "2026-10-20T18:03:37.828067+00:00",
+      "sha256": "c3a6913fbf535226efb7751886bca441902ace6ba91df2d59a3e5f95e11b49b8"
+    },
+    {
+      "path": "tables/phase4_kmeans_cluster_rate.csv",
+      "name": "phase4_kmeans_cluster_rate.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 127,
+      "modified": "2026-10-20T18:03:37.982413+00:00",
+      "sha256": "23b1f8d98b128df93bf5c84c91ef43340a87c37568c6decd32ce8fe5613fba1d"
+    },
+    {
+      "path": "tables/phase4_separability_table.csv",
+      "name": "phase4_separability_table.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 242,
+      "modified": "2026-10-20T18:03:37.793880+00:00",
+      "sha256": "ba22633dcc8e09b5171dbacec6ead84106fb04841879e8df154d1f7eec807427"
+    },
+    {
+      "path": "tables/phase5_category_posthoc_pairs.csv",
+      "name": "phase5_category_posthoc_pairs.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 7696,
+      "modified": "2026-10-20T18:03:37.968554+00:00",
+      "sha256": "c27a4850e17507f026909c79f797967f5ac8079a8c782d5276ee23bcdfeae6c2"
+    },
+    {
+      "path": "tables/phase5_category_rates.csv",
+      "name": "phase5_category_rates.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 2316,
+      "modified": "2026-10-20T18:03:37.930898+00:00",
+      "sha256": "6a33d19399d3dafd636f41054fd5d377389a0d4b11f1aa0d34b49c3accc4ebba"
+    },
+    {
+      "path": "tables/phase5_chi2_cramers.csv",
+      "name": "phase5_chi2_cramers.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 275,
+      "modified": "2026-10-20T18:03:38.049730+00:00",
+      "sha256": "5d56b846f8a01d0f00de2f30438adaa5e22f597b2ef885a92dde30c9a903f5c5"
+    },
+    {
+      "path": "tables/phase5_cluster_robust_logit.csv",
+      "name": "phase5_cluster_robust_logit.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 788,
+      "modified": "2026-10-20T18:03:38.070924+00:00",
+      "sha256": "ad567ecaf428a8fbd4ea5d9f5f7eed5c7a2b02544bd57929794e68abbf05610f"
+    },
+    {
+      "path": "tables/phase5_mw_effect_sizes.csv",
+      "name": "phase5_mw_effect_sizes.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 1384,
+      "modified": "2026-10-20T18:03:37.852457+00:00",
+      "sha256": "2ad0f7c2b81447189d98a8c691f3a9fbacd96a04f912676486fddaeccc921376"
+    },
+    {
+      "path": "tables/phase7_hazard_table.csv",
+      "name": "phase7_hazard_table.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 1751,
+      "modified": "2026-10-20T18:03:37.937942+00:00",
+      "sha256": "3ad2a30685f11603e8766c1fb4c90139f17957b9b8db7b88a60f7555aec9942d"
+    },
+    {
+      "path": "tables/phase7_high_risk_combo.csv",
+      "name": "phase7_high_risk_combo.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 385,
+      "modified": "2026-10-20T18:03:37.913371+00:00",
+      "sha256": "7dbc3b2b44422985591eaad8b535f35eefd4fe1a74638bcb632b676b09408ed6"
+    },
+    {
+      "path": "tables/phase7_hour_encoding_comparison.csv",
+      "name": "phase7_hour_encoding_comparison.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 94,
+      "modified": "2026-10-20T18:03:37.833817+00:00",
+      "sha256": "bea3936729e8764222e26ad780ffc4d443ee102a4b4b36d616d2e7b2b42d0f70"
+    },
+    {
+      "path": "tables/phase7_merchant_eb_table.csv",
+      "name": "phase7_merchant_eb_table.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 75970,
+      "modified": "2026-10-20T18:03:37.846334+00:00",
+      "sha256": "9edb7647b5ad49164fa8bdd1cc42738158112f35fb0225d42081ca564cf8fc00"
+    },
+    {
+      "path": "tables/phase7_speed_rate_table.csv",
+      "name": "phase7_speed_rate_table.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 207,
+      "modified": "2026-10-20T18:03:37.864360+00:00",
+      "sha256": "740d0078ae8f70809601294d20cf6a19c15dbe7cf390acb5f83df1a89f948658"
+    },
+    {
+      "path": "tables/phase8_ablation_decomposed.csv",
+      "name": "phase8_ablation_decomposed.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 565,
+      "modified": "2026-10-20T18:03:37.990418+00:00",
+      "sha256": "c80b8ae5a476598164e0f15ed2a269d94d9bcdf2e360e3b29df9b95df0abe3eb"
+    },
+    {
+      "path": "tables/phase8_calibration_temp.csv",
+      "name": "phase8_calibration_temp.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 223,
+      "modified": "2026-10-20T18:03:38.065377+00:00",
+      "sha256": "9d61c251390e70a829c1add5a974aa109ba4bc3669173c31dc19963ed0cf4f8e"
+    },
+    {
+      "path": "tables/phase8_capture_at_k.csv",
+      "name": "phase8_capture_at_k.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 630,
+      "modified": "2026-10-20T18:03:37.755031+00:00",
+      "sha256": "a60cbfde0726c457d6a9ed6f9b91a22297c94b61f87b7e1d9f51534ebd36998a"
+    },
+    {
+      "path": "tables/phase8_cost_sensitivity.csv",
+      "name": "phase8_cost_sensitivity.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 491,
+      "modified": "2026-10-20T18:03:37.774840+00:00",
+      "sha256": "49a89a072518e864b626692121fb0b0135f2e475e39f7e354552a498239ec649"
+    },
+    {
+      "path": "tables/phase8_ensemble_comparison.csv",
+      "name": "phase8_ensemble_comparison.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 137,
+      "modified": "2026-10-20T18:03:37.906291+00:00",
+      "sha256": "0253d25b61f7442949cb3046bef9b367bec52134f43f50bd2f8d51eaaf9bc45b"
+    },
+    {
+      "path": "tables/phase8_learning_curve.csv",
+      "name": "phase8_learning_curve.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 286,
+      "modified": "2026-10-20T18:03:37.804532+00:00",
+      "sha256": "6b72f787cf893912d657941a99df9c09794cdf69ecc47a5d79881abe9f8cbc24"
+    },
+    {
+      "path": "tables/phase8_leave_card_out.csv",
+      "name": "phase8_leave_card_out.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 270,
+      "modified": "2026-10-20T18:03:37.961323+00:00",
+      "sha256": "243aab4b860387e7934a2c910bd73c4f7a0c887219e9ef633c04f93182773c33"
+    },
+    {
+      "path": "tables/phase8_monotonic_comparison.csv",
+      "name": "phase8_monotonic_comparison.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 144,
+      "modified": "2026-10-20T18:03:38.012156+00:00",
+      "sha256": "81246d871bdd9f96a95f4235d0818198d46f9f4043b1ee8a6d1bc0b5b71f2678"
+    },
+    {
+      "path": "tables/phase8_psi.csv",
+      "name": "phase8_psi.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 2182,
+      "modified": "2026-10-20T18:03:38.029311+00:00",
+      "sha256": "7de51799e97511392915b1e315c309550e3e5a2e0033ffac0d6fe76c683082e8"
+    },
+    {
+      "path": "tables/phase8_segment_errors.csv",
+      "name": "phase8_segment_errors.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 3315,
+      "modified": "2026-10-20T18:03:38.018462+00:00",
+      "sha256": "2314762a3340e3adca5793ebf99c550d3732ba1778a63a8df045ad972d9cbc3b"
+    },
+    {
+      "path": "tables/phase8_threshold_table.csv",
+      "name": "phase8_threshold_table.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 474,
+      "modified": "2026-10-20T18:03:37.747692+00:00",
+      "sha256": "49cc434e8da32c32573e0032f76bf96b53e83328745c3362b5b106d869eaaf27"
+    },
+    {
+      "path": "tables/phase8_time_decay_comparison.csv",
+      "name": "phase8_time_decay_comparison.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 139,
+      "modified": "2026-10-20T18:03:37.810170+00:00",
+      "sha256": "1f362e6c6a04c65b2968940958fa90f58758d80bb9e7c8565700d38c89623ffa"
+    },
+    {
+      "path": "tables/phase8_walkforward_cv.csv",
+      "name": "phase8_walkforward_cv.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 640,
+      "modified": "2026-10-20T18:03:37.816160+00:00",
+      "sha256": "739bc933efcaac4d6921c807c8c5c0e383f0f6dc309537489708bd3e60477d98"
+    },
+    {
+      "path": "tables/phase8_wf_vs_test.csv",
+      "name": "phase8_wf_vs_test.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 207,
+      "modified": "2026-10-20T18:03:37.954672+00:00",
+      "sha256": "85ca6e4c2dff8f966601eecbf208628d94b8c5de13022968d5a51d422b4b74a6"
+    },
+    {
+      "path": "tables/reproducibility_checklist.csv",
+      "name": "reproducibility_checklist.csv",
+      "category": "table",
+      "format": "csv",
+      "size_bytes": 1303,
+      "modified": "2026-10-20T18:03:37.894603+00:00",
+      "sha256": "409fd82831b03b82ee797788446e68265da17519c1cd8631a4995d2156cf5d72"
+    },
+    {
+      "path": "figures/phase0_missing_bar.png",
+      "name": "phase0_missing_bar.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 329588,
+      "modified": "2026-10-20T18:03:37.553342+00:00",
+      "sha256": "62d898d2a192342b1ea094fe75cf5b3b7d53cd0cad739d0c9206791430a07eb8"
+    },
+    {
+      "path": "figures/phase0_missing_matrix.png",
+      "name": "phase0_missing_matrix.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 28745,
+      "modified": "2026-10-20T18:03:37.638376+00:00",
+      "sha256": "4ba779ca2b7d1e447ee1ce4c7dd54dc29f23750d0683081891c3d2dacc5c3b83"
+    },
+    {
+      "path": "figures/phase0_temporal_coverage.png",
+      "name": "phase0_temporal_coverage.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 185183,
+      "modified": "2026-10-20T18:03:37.650989+00:00",
+      "sha256": "b21e95879c990e9af9d8669048f5b8b95ab5e11860f9c3e3a3ca12d8cb8451f7"
+    },
+    {
+      "path": "figures/phase0_txns_per_card.png",
+      "name": "phase0_txns_per_card.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 34873,
+      "modified": "2026-10-20T18:03:37.098590+00:00",
+      "sha256": "c8c9133886f2331671c589a07dd3dc4552d68c1bcc31c5e35d392e562c927916"
+    },
+    {
+      "path": "figures/phase1_age.png",
+      "name": "phase1_age.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 83582,
+      "modified": "2026-10-20T18:03:37.088796+00:00",
+      "sha256": "01b213eeb651e912d27afe728cae43df264cb3813b7c7a2851cff8f9307b3a5b"
+    },
+    {
+      "path": "figures/phase1_age_bins.png",
+      "name": "phase1_age_bins.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 84481,
+      "modified": "2026-10-20T18:03:37.238784+00:00",
+      "sha256": "b8ed87d63e0840bf059f191d3b96f502b3e987e1db0a00499d3d2984684c574b"
+    },
+    {
+      "path": "figures/phase1_amt_box_violin.png",
+      "name": "phase1_amt_box_violin.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 47984,
+      "modified": "2026-10-20T18:03:37.566617+00:00",
+      "sha256": "6428fad3e356171ea283532d89aef03bd9618dd6510e29b20e3e5f1d8ec952ed"
+    },
+    {
+      "path": "figures/phase1_amt_ecdf.png",
+      "name": "phase1_amt_ecdf.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 45235,
+      "modified": "2026-10-20T18:03:37.290936+00:00",
+      "sha256": "cfc2bc5c46f64d9a567cf95f01411d811b1a4d1d3a879f2b207a1cdd48f37a08"
+    },
+    {
+      "path": "figures/phase1_amt_hist.png",
+      "name": "phase1_amt_hist.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 51261,
+      "modified": "2026-10-20T18:03:37.320974+00:00",
+      "sha256": "9bfb2c4b66034a104400abaa618625d49099822d24d88ab2e9e3095ae6e8d831"
+    },
+    {
+      "path": "figures/phase1_amt_overlay.png",
+      "name": "phase1_amt_overlay.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 72233,
+      "modified": "2026-10-20T18:03:37.272651+00:00",
+      "sha256": "6b9e1060c1e7a807dfb4b78fbef6826f962e1528db0a3a3dbc9ef67d4352ef2d"
+    },
+    {
+      "path": "figures/phase1_category.png",
+      "name": "phase1_category.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 160003,
+      "modified": "2026-10-20T18:03:37.409695+00:00",
+      "sha256": "ca872b46462d4268fd7a13d587db29f69c17fb74d22f6df424bfc2dc0dff02a8"
+    },
+    {
+      "path": "figures/phase1_citypop.png",
+      "name": "phase1_citypop.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 46159,
+      "modified": "2026-10-20T18:03:37.300750+00:00",
+      "sha256": "20e7bdce275607e049631b5398e443f1e052223f91df53b8c8540f96fb5850ac"
+    },
+    {
+      "path": "figures/phase1_citypop_bins.png",
+      "name": "phase1_citypop_bins.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 89118,
+      "modified": "2026-10-20T18:03:37.017986+00:00",
+      "sha256": "aee2784fc61352dcd79d109793acf3f5aa5a1ec6326f0bc142e1e9c1c8f398af"
+    },
+    {
+      "path": "figures/phase1_covid_window.png",
+      "name": "phase1_covid_window.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 108784,
+      "modified": "2026-10-20T18:03:36.971927+00:00",
+      "sha256": "640a0348ac49d6f93d4a31c7428932fdc31a4eb29bfb067ca68afe4fed1122ee"
+    },
+    {
+      "path": "figures/phase1_dow.png",
+      "name": "phase1_dow.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 86080,
+      "modified": "2026-10-20T18:03:37.563177+00:00",
+      "sha256": "28bc8b9d37782e549548e503a70d578147902eec5ddddb9629078a339b7f4678"
+    },
+    {
+      "path": "figures/phase1_gender.png",
+      "name": "phase1_gender.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 65769,
+      "modified": "2026-10-20T18:03:37.114824+00:00",
+      "sha256": "d9b6a75dcdce1097a2ece299499cf75821cc51ca782e43968eea68c0276e4b3d"
+    },
+    {
+      "path": "figures/phase1_gender_x_category.png",
+      "name": "phase1_gender_x_category.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 62949,
+      "modified": "2026-10-20T18:03:37.110782+00:00",
+      "sha256": "f29af314bcfe249eb407899d24a0e4e7a08b5686b67e02717d34ca518c908254"
+    },
+    {
+      "path": "figures/phase1_geo_scatter.png",
+      "name": "phase1_geo_scatter.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 153567,
+      "modified": "2026-10-20T18:03:37.326547+00:00",
+      "sha256": "cb4baa09b10f7838d9cfe9bda01f429f3f01250664d735b37c4d362440b3b831"
+    },
+    {
+      "path": "figures/phase1_hour.png",
+      "name": "phase1_hour.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 80835,
+      "modified": "2026-10-20T18:03:37.420518+00:00",
+      "sha256": "1f83d750c5a0757d12a2bc59a10af22c1d330eb0d10ce70ccbf46bf7f11b6be4"
+    },
+    {
+      "path": "figures/phase1_hour_by_year.png",
+      "name": "phase1_hour_by_year.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 59880,
+      "modified": "2026-10-20T18:03:37.621881+00:00",
+      "sha256": "2f5782c64e1f3814ea24aceebc0880bf72aabd50edf1c690a568d7247cc38c29"
+    },
+    {
+      "path": "figures/phase1_job.png",
+      "name": "phase1_job.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 266684,
+      "modified": "2026-10-20T18:03:37.285734+00:00",
+      "sha256": "c629b023e01ff9c370168a4b59c8d8bc1d1aefb8318170810bb5b6cd154f8069"
+    },
+    {
+      "path": "figures/phase1_merchant_topN.png",
+      "name": "phase1_merchant_topN.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 185386,
+      "modified": "2026-10-20T18:03:37.023731+00:00",
+      "sha256": "ed092db0a21d6db7d44a2d447fd5f2e6f7873ecce3d3c6e60d66f18690ec1b38"
+    },
+    {
+      "path": "figures/phase1_month.png",
+      "name": "phase1_month.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 120314,
+      "modified": "2026-10-20T18:03:37.374530+00:00",
+      "sha256": "b9b6558f1278ad69aa106a00c08748d1b7a577cfbdc0dfa76f2e0659019d69f6"
+    },
+    {
+      "path": "figures/phase1_night.png",
+      "name": "phase1_night.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 78340,
+      "modified": "2026-10-20T18:03:37.464926+00:00",
+      "sha256": "27a528f6c7ffe5a0f57a51444697120436deb130bcd262382eac5e0a344446bb"
+    },
+    {
+      "path": "figures/phase1_qq_amt_age.png",
+      "name": "phase1_qq_amt_age.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 86162,
+      "modified": "2026-10-20T18:03:37.257410+00:00",
+      "sha256": "800f51d651566bec2faea5503b673edf1f53638fb8661e3adcc6fdc6eb76175c"
+    },
+    {
+      "path": "figures/phase1_state_forest.png",
+      "name": "phase1_state_forest.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 140501,
+      "modified": "2026-10-20T18:03:37.459881+00:00",
+      "sha256": "66f99483430aca928fe2f10d7c1a277aabe688892a33174226666b28dca79858"
+    },
+    {
+      "path": "figures/phase1_state_n_choro.html",
+      "name": "phase1_state_n_choro.html",
+      "category": "interactive",
+      "format": "html",
+      "size_bytes": 9154,
+      "modified": "2026-10-20T18:03:37.700287+00:00",
+      "sha256": "d194b7905684f4e5c6673a4efb744cf92d6abde3ce1753cb3d3dd2d814693150"
+    },
+    {
+      "path": "figures/phase1_state_rate_choro.html",
+      "name": "phase1_state_rate_choro.html",
+      "category": "interactive",
+      "format": "html",
+      "size_bytes": 9905,
+      "modified": "2026-10-20T18:03:37.660862+00:00",
+      "sha256": "98122e64f0bc236057cd8414ee6d786d17c736305b41a544a1c63844593648ab"
+    },
+    {
+      "path": "figures/phase1_target_donut.png",
+      "name": "phase1_target_donut.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 43842,
+      "modified": "2026-10-20T18:03:37.001545+00:00",
+      "sha256": "e7e6f20cdf4144a00d3108c798e31dc90039acbb32a490def4617d76c7b98aff"
+    },
+    {
+      "path": "figures/phase1_weekend.png",
+      "name": "phase1_weekend.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 81496,
+      "modified": "2026-10-20T18:03:37.495446+00:00",
+      "sha256": "31c170a3050ec96ed79a2dfb535fcf1348a32921c90a88571d06084944b92950"
+    },
+    {
+      "path": "figures/phase2_age_x_category.png",
+      "name": "phase2_age_x_category.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 80280,
+      "modified": "2026-10-20T18:03:37.491340+00:00",
+      "sha256": "dae1aa4515ae840005e7e0f8d49fe32697ddc1760452827f6031eff0874630ac"
+    },
+    {
+      "path": "figures/phase2_amt_by_category.png",
+      "name": "phase2_amt_by_category.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 210026,
+      "modified": "2026-10-20T18:03:37.440226+00:00",
+      "sha256": "9d1f4e33aefb0a45747d65256c7d722990f3b0669bae1420c315f3b2e56c8e5e"
+    },
+    {
+      "path": "figures/phase2_amt_cdf.png",
+      "name": "phase2_amt_cdf.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 45001,
+      "modified": "2026-10-20T18:03:37.295115+00:00",
+      "sha256": "cdc70a36914ec9b2d23972e001ce4e4686212f97bc1a996a2823de99dbf3da64"
+    },
+    {
+      "path": "figures/phase2_amtbin_x_hour.png",
+      "name": "phase2_amtbin_x_hour.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 55899,
+      "modified": "2026-10-20T18:03:37.169263+00:00",
+      "sha256": "c0e8b20b9d7ac1e2abd1aa09fd280339ff6cca410f5b0bdc90a0823e8efd1578"
+    },
+    {
+      "path": "figures/phase2_card_rate_hist.png",
+      "name": "phase2_card_rate_hist.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 40593,
+      "modified": "2026-10-20T18:03:36.982573+00:00",
+      "sha256": "8076223673fbb74909e182b27e5f22412eaca210e355cb95b470be764a482f05"
+    },
+    {
+      "path": "figures/phase2_card_scatter.png",
+      "name": "phase2_card_scatter.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 99140,
+      "modified": "2026-10-20T18:03:36.956197+00:00",
+      "sha256": "44bfcda2d5dc25548d0069bc78045657a5c87575c702f697b2bb139e1d9afa94"
+    },
+    {
+      "path": "figures/phase2_category_x_hour.png",
+      "name": "phase2_category_x_hour.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 94911,
+      "modified": "2026-10-20T18:03:37.058464+00:00",
+      "sha256": "ffb0022195d1abbd428246e7ecca540b83971ac72c50b931b978bdf53f30f07d"
+    },
+    {
+      "path": "figures/phase2_city_map.html",
+      "name": "phase2_city_map.html",
+      "category": "interactive",
+      "format": "html",
+      "size_bytes": 65985,
+      "modified": "2026-10-20T18:03:37.668790+00:00",
+      "sha256": "00270f49c9da9b80466e810590aab2f79b216a4fa965250b25e8df0aebec85a1"
+    },
+    {
+      "path": "figures/phase2_citypop_x_category.png",
+      "name": "phase2_citypop_x_category.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 80137,
+      "modified": "2026-10-20T18:03:36.944903+00:00",
+      "sha256": "03b45fb6e06022051e3f2918b033a2a02bf222144a6fde0fa6a05dec93476371"
+    },
+    {
+      "path": "figures/phase2_cramers_v.png",
+      "name": "phase2_cramers_v.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 94548,
+      "modified": "2026-10-20T18:03:37.234317+00:00",
+      "sha256": "15ec244a3a994b015ce7240a2bb772eb49cae7d9e234567e77c9e79d213e6c8b"
+    },
+    {
+      "path": "figures/phase2_dist_overlay.png",
+      "name": "phase2_dist_overlay.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 70187,
+      "modified": "2026-10-20T18:03:37.454696+00:00",
+      "sha256": "69df771a5ac2be6de688c94eae14578a5a325a4ccd1b80a416e556dcc9f80761"
+    },
+    {
+      "path": "figures/phase2_dist_rate.png",
+      "name": "phase2_dist_rate.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 33327,
+      "modified": "2026-10-20T18:03:37.154170+00:00",
+      "sha256": "e4bd071e40c368bc0b87db8e3379a3c835e1cddabf65d5796335d12c0922c23f"
+    },
+    {
+      "path": "figures/phase2_dow_x_hour_rate.png",
+      "name": "phase2_dow_x_hour_rate.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 48760,
+      "modified": "2026-10-20T18:03:37.516776+00:00",
+      "sha256": "9d14f0efe6b90efd54247bd04da544939bbf1088a8166cad9163c18ff1222afb"
+    },
+    {
+      "path": "figures/phase2_dow_x_hour_vol.png",
+      "name": "phase2_dow_x_hour_vol.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 37157,
+      "modified": "2026-10-20T18:03:37.612471+00:00",
+      "sha256": "24c422cdb5cef0b2308e80de3e8e760891bd1145b64e4dc65cc249241ce468b3"
+    },
+    {
+      "path": "figures/phase2_gender_x_category.png",
+      "name": "phase2_gender_x_category.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 68671,
+      "modified": "2026-10-20T18:03:37.194766+00:00",
+      "sha256": "dbf9a05aa92a82f784e4716b834312d4ae3dd28d2e3f0541ebfa1aae0c615413"
+    },
+    {
+      "path": "figures/phase2_joint_amt_age.png",
+      "name": "phase2_joint_amt_age.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 266495,
+      "modified": "2026-10-20T18:03:37.333040+00:00",
+      "sha256": "51f363b7c28c5efca345132714cd975f0397b07ab774467856f3d308198144ea"
+    },
+    {
+      "path": "figures/phase2_joint_amt_dist.png",
+      "name": "phase2_joint_amt_dist.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 271057,
+      "modified": "2026-10-20T18:03:37.538031+00:00",
+      "sha256": "b2ed7c53498fe97e530fba33434dd782070e00e09276ed23d91367a87a39a23f"
+    },
+    {
+      "path": "figures/phase2_lorenz_fraud.png",
+      "name": "phase2_lorenz_fraud.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 66639,
+      "modified": "2026-10-20T18:03:37.386917+00:00",
+      "sha256": "1a4edfb201080232bbe4b6cea60a22601bb8bc5f94ecdd68404090fab78f341e"
+    },
+    {
+      "path": "figures/phase2_map_scatter.html",
+      "name": "phase2_map_scatter.html",
+      "category": "interactive",
+      "format": "html",
+      "size_bytes": 568108,
+      "modified": "2026-10-20T18:03:37.724062+00:00",
+      "sha256": "5d151febf48659303ababdb2fda03fdf31d4f52b1767f9eaeb1a39cd7d3debfb"
+    },
+    {
+      "path": "figures/phase2_mi.png",
+      "name": "phase2_mi.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 52292,
+      "modified": "2026-10-20T18:03:36.997117+00:00",
+      "sha256": "212d87dec4f332647816dfaebef468d59b2c42dc323b134d07101fe7dfbdc665"
+    },
+    {
+      "path": "figures/phase2_money_category.png",
+      "name": "phase2_money_category.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 90704,
+      "modified": "2026-10-20T18:03:37.531523+00:00",
+      "sha256": "a9198cf53af642fb3eb70a191885811c9d72929988ffb5c11570dcb4d854fc3b"
+    },
+    {
+      "path": "figures/phase2_money_month.png",
+      "name": "phase2_money_month.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 84114,
+      "modified": "2026-10-20T18:03:37.043271+00:00",
+      "sha256": "45b85ffdfec8c0aa34b5b177b33312b74bf3dcdf861f0abdb0d2a63f8fd5253a"
+    },
+    {
+      "path": "figures/phase2_pairplot.png",
+      "name": "phase2_pairplot.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 545806,
+      "modified": "2026-10-20T18:03:37.144570+00:00",
+      "sha256": "008090cc9007681e1814630a66f45aba556c2206e0ec199b3ea7220ba68770b2"
+    },
+    {
+      "path": "figures/phase2_spearman.png",
+      "name": "phase2_spearman.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 218820,
+      "modified": "2026-10-20T18:03:37.223876+00:00",
+      "sha256": "9b2134ef09aa6fcfbfefde764e95c03f7024204d15cc91403d50e3313dac2e32"
+    },
+    {
+      "path": "figures/phase2_state_eb_choro.html",
+      "name": "phase2_state_eb_choro.html",
+      "category": "interactive",
+      "format": "html",
+      "size_bytes": 9937,
+      "modified": "2026-10-20T18:03:37.655341+00:00",
+      "sha256": "aa7adbd8b6b3b810c04071173bcfe30434eb6ebf097452c789845925a411beed"
+    },
+    {
+      "path": "figures/phase2_state_n_choro.html",
+      "name": "phase2_state_n_choro.html",
+      "category": "interactive",
+      "format": "html",
+      "size_bytes": 9232,
+      "modified": "2026-10-20T18:03:37.709389+00:00",
+      "sha256": "7567d060911281f3aad779b7c83719b0c0993abd90a421b638b25e531668af7d"
+    },
+    {
+      "path": "figures/phase2_zip3_forest.png",
+      "name": "phase2_zip3_forest.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 107863,
+      "modified": "2026-10-20T18:03:37.470009+00:00",
+      "sha256": "6fec5e11b1e5a2da7a1efc388450dc627e2fd5fd351c851ce4e2fc546dc9cb37"
+    },
+    {
+      "path": "figures/phase3_acf_pacf.png",
+      "name": "phase3_acf_pacf.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 85960,
+      "modified": "2026-10-20T18:03:37.125090+00:00",
+      "sha256": "3949795c093db2820754282d2178eda014768e831610b899dc0028a4804a67ea"
+    },
+    {
+      "path": "figures/phase3_card_timelines.png",
+      "name": "phase3_card_timelines.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 131366,
+      "modified": "2026-10-20T18:03:37.199802+00:00",
+      "sha256": "864ce2381612b2e97654d95dd659c1092767cbccf23ae560da97eb0d84fed755"
+    },
+    {
+      "path": "figures/phase3_changepoint.png",
+      "name": "phase3_changepoint.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 231510,
+      "modified": "2026-10-20T18:03:37.629122+00:00",
+      "sha256": "1c382947cb0940d97d9eb96029d7c331b4e8b9cb9037337860c5651d6176275a"
+    },
+    {
+      "path": "figures/phase3_daily_rolling.png",
+      "name": "phase3_daily_rolling.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 589849,
+      "modified": "2026-10-20T18:03:37.546960+00:00",
+      "sha256": "a2da627e64459c40c648cc86ee15bc5f10b14da13151d95e5b6494ef9a3adbd3"
+    },
+    {
+      "path": "figures/phase3_hour_x_dow_rate.png",
+      "name": "phase3_hour_x_dow_rate.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 48297,
+      "modified": "2026-10-20T18:03:37.571744+00:00",
+      "sha256": "709ee160d8fcf5d49a5877cb4d17fbc960639b006416a20c582a640840c75299"
+    },
+    {
+      "path": "figures/phase3_hour_x_dow_vol.png",
+      "name": "phase3_hour_x_dow_vol.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 37093,
+      "modified": "2026-10-20T18:03:37.520893+00:00",
+      "sha256": "4a5dbaaa3a4c8adc710f6d17dc754312ae260deb3c75e128f03652db8d02d930"
+    },
+    {
+      "path": "figures/phase3_hour_x_month.png",
+      "name": "phase3_hour_x_month.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 63112,
+      "modified": "2026-10-20T18:03:37.164251+00:00",
+      "sha256": "2dfdbdfc6b143fe10c2a3c20e862a2a58f5d86cc4f84d0dd88df4d033e03f238"
+    },
+    {
+      "path": "figures/phase3_interarrival.png",
+      "name": "phase3_interarrival.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 36535,
+      "modified": "2026-10-20T18:03:37.430300+00:00",
+      "sha256": "7165c9db3119b93ff989be832daa7ea28b6652ea473857154c7e8390d6fb08b5"
+    },
+    {
+      "path": "figures/phase3_month_x_dow.png",
+      "name": "phase3_month_x_dow.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 47864,
+      "modified": "2026-10-20T18:03:37.348156+00:00",
+      "sha256": "02eca6b70b8cec27c1f2688af64abb42b31386688cc7c1ae4672044a7bc91282"
+    },
+    {
+      "path": "figures/phase3_stl.png",
+      "name": "phase3_stl.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 437320,
+      "modified": "2026-10-20T18:03:37.404679+00:00",
+      "sha256": "dba319d7b06c750a29de6874e37a47e447e9178938578fb612d29153b21e8699"
+    },
+    {
+      "path": "figures/phase3_weekly_rate.png",
+      "name": "phase3_weekly_rate.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 102849,
+      "modified": "2026-10-20T18:03:36.966695+00:00",
+      "sha256": "148335bd20ed779c32419e67a5f43759e18477f0ace0e347df095b0fcb8727cc"
+    },
+    {
+      "path": "figures/phase3_year_x_month.png",
+      "name": "phase3_year_x_month.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 41930,
+      "modified": "2026-10-20T18:03:37.012608+00:00",
+      "sha256": "82f55f7c3e2d31e2249c3c7ad0b06140e261d1d3d150ce0d04d4b034b35bb44a"
+    },
+    {
+      "path": "figures/phase4_ae_error.png",
+      "name": "phase4_ae_error.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 49863,
+      "modified": "2026-10-20T18:03:37.587641+00:00",
+      "sha256": "594e74413141684d930f02e41456d492c375985f503e39d8254b5f7fa4bf5793"
+    },
+    {
+      "path": "figures/phase4_andrews.png",
+      "name": "phase4_andrews.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 627375,
+      "modified": "2026-10-20T18:03:37.607462+00:00",
+      "sha256": "00445c3074a709a7a94dd8c00e26fa9d13eccc4ccf677ed104d949cc7a1135a5"
+    },
+    {
+      "path": "figures/phase4_dbscan_kdist.png",
+      "name": "phase4_dbscan_kdist.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 45939,
+      "modified": "2026-10-20T18:03:36.986831+00:00",
+      "sha256": "5576f12460a8ad8ba2325f9a524e8be47b3cafad008278232e886737ff8791a6"
+    },
+    {
+      "path": "figures/phase4_dbscan_rate.png",
+      "name": "phase4_dbscan_rate.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 28612,
+      "modified": "2026-10-20T18:03:37.358706+00:00",
+      "sha256": "f53c2587d87594a4dceecd35f50589bcf6906a12f04c310d12c7f979fb6e5400"
+    },
+    {
+      "path": "figures/phase4_dendrogram.png",
+      "name": "phase4_dendrogram.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 38920,
+      "modified": "2026-10-20T18:03:37.120014+00:00",
+      "sha256": "bfc5528aac3bc55b0f126b7c257faf700694fd2cdb014e95a06cb03e73532d09"
+    },
+    {
+      "path": "figures/phase4_hexbin_rate_contours.png",
+      "name": "phase4_hexbin_rate_contours.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 323161,
+      "modified": "2026-10-20T18:03:37.645481+00:00",
+      "sha256": "7b1ed4955ddc20323b15e8cfc90060d31285582224072e4b53da210b7acbf084"
+    },
+    {
+      "path": "figures/phase4_if_scores.png",
+      "name": "phase4_if_scores.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 74798,
+      "modified": "2026-10-20T18:03:37.396966+00:00",
+      "sha256": "8b87eea26e1be6e746efcbcf2efc77bc22de70be7a8f0ebb37f48ae77a248611"
+    },
+    {
+      "path": "figures/phase4_if_vs_amt.png",
+      "name": "phase4_if_vs_amt.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 381158,
+      "modified": "2026-10-20T18:03:37.211959+00:00",
+      "sha256": "7a4d54e2d1f9c50053bddf569ed9b0652a71480c7e4f1cd6c43b12abe032c5b6"
+    },
+    {
+      "path": "figures/phase4_kmeans_fraud_rate.png",
+      "name": "phase4_kmeans_fraud_rate.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 37779,
+      "modified": "2026-10-20T18:03:36.961461+00:00",
+      "sha256": "f363cdfeb86440ffd2a92616c4d66955643582a601e0e26ce5f4acdbaeeef25e"
+    },
+    {
+      "path": "figures/phase4_kmeans_radar.png",
+      "name": "phase4_kmeans_radar.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 154790,
+      "modified": "2026-10-20T18:03:37.029452+00:00",
+      "sha256": "cf9a6c3015ae72e223bb556cf3c697ba85f04e15435f82193def0a7fc32a501a"
+    },
+    {
+      "path": "figures/phase4_kmeans_selection.png",
+      "name": "phase4_kmeans_selection.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 78075,
+      "modified": "2026-10-20T18:03:37.578054+00:00",
+      "sha256": "2a45c9863b0ff31a1b6d4fc09af6ea4db35a1c0a12cac1ff1ff35e63a6e54167"
+    },
+    {
+      "path": "figures/phase4_kmeans_x_category.png",
+      "name": "phase4_kmeans_x_category.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 71111,
+      "modified": "2026-10-20T18:03:36.977339+00:00",
+      "sha256": "ecc25f14bedaa584212dcb0979f4ed56103a56bf805f5566e7f4c2fcd2692a79"
+    },
+    {
+      "path": "figures/phase4_lof_scores.png",
+      "name": "phase4_lof_scores.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 48489,
+      "modified": "2026-10-20T18:03:37.391419+00:00",
+      "sha256": "b3ac31dc5cb21bd68cfecc821771ac30367b7602f94fe667615c5096c23ce8bf"
+    },
+    {
+      "path": "figures/phase4_parallel_coords.png",
+      "name": "phase4_parallel_coords.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 1101732,
+      "modified": "2026-10-20T18:03:37.315522+00:00",
+      "sha256": "16b64e80b13de8b691291ebb2e923d9da92f12281d148175560f2b20e348de73"
+    },
+    {
+      "path": "figures/phase4_pca_3d.html",
+      "name": "phase4_pca_3d.html",
+      "category": "interactive",
+      "format": "html",
+      "size_bytes": 2930518,
+      "modified": "2026-10-20T18:03:37.696075+00:00",
+      "sha256": "db4351062ab50b11386e28ce7ad12549088f2b637fbe8d393545097a610d69b7"
+    },
+    {
+      "path": "figures/phase4_pca_biplot.png",
+      "name": "phase4_pca_biplot.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 118470,
+      "modified": "2026-10-20T18:03:37.007237+00:00",
+      "sha256": "29b5510d2f956f8b78589c88ac3693b6fba078b2a37b119a611a10c60bc4607d"
+    },
+    {
+      "path": "figures/phase4_pca_contours.png",
+      "name": "phase4_pca_contours.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 122290,
+      "modified": "2026-10-20T18:03:37.557841+00:00",
+      "sha256": "2919de761c855f4ef1c6af5ad1d9448ac72929ad4087c1cefcb61065e901fad4"
+    },
+    {
+      "path": "figures/phase4_pca_scatter.png",
+      "name": "phase4_pca_scatter.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 296897,
+      "modified": "2026-10-20T18:03:37.512599+00:00",
+      "sha256": "d1f75fb9eb737aa62c2c9b76d52672e9c3cbb88d228cc57e9be4faa718969ce0"
+    },
+    {
+      "path": "figures/phase4_pca_scree.png",
+      "name": "phase4_pca_scree.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 60312,
+      "modified": "2026-10-20T18:03:37.305326+00:00",
+      "sha256": "adadd219ccad5023a9cd6f03132bc613301b260fea190ca15f30fddbdfa00287"
+    },
+    {
+      "path": "figures/phase4_raincloud_amt_category.png",
+      "name": "phase4_raincloud_amt_category.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 314268,
+      "modified": "2026-10-20T18:03:37.180890+00:00",
+      "sha256": "7c54d40c44ea0679aabafeb2a4082932f403b81c6845c1a5d080a182d3e2fe4a"
+    },
+    {
+      "path": "figures/phase4_separability.png",
+      "name": "phase4_separability.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 51974,
+      "modified": "2026-10-20T18:03:37.083577+00:00",
+      "sha256": "cd82664008409c602d3291358269887f50fcfcdc6bfe8e2c0e3ed710c856074a"
+    },
+    {
+      "path": "figures/phase4_swarm_amt.png",
+      "name": "phase4_swarm_amt.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 118659,
+      "modified": "2026-10-20T18:03:37.354577+00:00",
+      "sha256": "897304eeaff297c7377c91a78feab487ea1c58e2c56df12438f3fbc89b574ea4"
+    },
+    {
+      "path": "figures/phase4_tsne_p100.png",
+      "name": "phase4_tsne_p100.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 512628,
+      "modified": "2026-10-20T18:03:37.188482+00:00",
+      "sha256": "e31b04b06b3a5ee7d21a2fee6e1ee67b011d899796171170a71eeb6c5225481b"
+    },
+    {
+      "path": "figures/phase4_tsne_p30.png",
+      "name": "phase4_tsne_p30.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 651284,
+      "modified": "2026-10-20T18:03:37.037891+00:00",
+      "sha256": "158c4f3da7f9e266c215853faff0acdfdbca88f0c61a8b67805a172e7e17ccaa"
+    },
+    {
+      "path": "figures/phase4_tsne_p50.png",
+      "name": "phase4_tsne_p50.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 572456,
+      "modified": "2026-10-20T18:03:37.247530+00:00",
+      "sha256": "a6c7e004b8be7cc3e7bbdc98bafbccceb56b939a54773a9c25541c222e95d2fb"
+    },
+    {
+      "path": "figures/phase4_umap_nn15_md0.1.png",
+      "name": "phase4_umap_nn15_md0.1.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 234827,
+      "modified": "2026-10-20T18:03:37.339298+00:00",
+      "sha256": "2470e17da585b0e391123f10d116fa64f393a6b40dc64a97297f20d94f9ecf0c"
+    },
+    {
+      "path": "figures/phase4_umap_nn15_md0.5.png",
+      "name": "phase4_umap_nn15_md0.5.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 523633,
+      "modified": "2026-10-20T18:03:37.382863+00:00",
+      "sha256": "c2004cf54427f642386a78b5f39f33090ab9086e352c0fb806d8e512acc641da"
+    },
+    {
+      "path": "figures/phase4_umap_nn50_md0.1.png",
+      "name": "phase4_umap_nn50_md0.1.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 196769,
+      "modified": "2026-10-20T18:03:37.476012+00:00",
+      "sha256": "1a220c1bf3742cb5292518ce535f8e580183aeafc38393cfb5df74f28ce299a5"
+    },
+    {
+      "path": "figures/phase5_effectsize_forest.png",
+      "name": "phase5_effectsize_forest.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 64628,
+      "modified": "2026-10-20T18:03:37.415249+00:00",
+      "sha256": "1134038f23639a297a1e6beb4560f4c96886e67bb8f700b21592529b5c2d8531"
+    },
+    {
+      "path": "figures/phase5_forest_category.png",
+      "name": "phase5_forest_category.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 102839,
+      "modified": "2026-10-20T18:03:37.063643+00:00",
+      "sha256": "c5cc3aa97ed0476b6efaafb319d397387c997532d301bd7cfe5e0ea3206040bd"
+    },
+    {
+      "path": "figures/phase5_forest_hour.png",
+      "name": "phase5_forest_hour.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 117935,
+      "modified": "2026-10-20T18:03:37.593265+00:00",
+      "sha256": "434cea8a4178d8bd6f1b94d8bc7c1b89136aa1285822c85636fc11997969657a"
+    },
+    {
+      "path": "figures/phase5_forest_job.png",
+      "name": "phase5_forest_job.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 146636,
+      "modified": "2026-10-20T18:03:37.174527+00:00",
+      "sha256": "2e68647cffbf88181e57d255643cbda4ad0db0ee49d3bb845ba54801eba4e44b"
+    },
+    {
+      "path": "figures/phase7_card_age_curve.png",
+      "name": "phase7_card_age_curve.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 53030,
+      "modified": "2026-10-20T18:03:37.583208+00:00",
+      "sha256": "ce04510d69d04f445cda52e88d3e0a1fde58819745c54013d358894f41a1eba4"
+    },
+    {
+      "path": "figures/phase7_cnt24h_rate.png",
+      "name": "phase7_cnt24h_rate.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 30204,
+      "modified": "2026-10-20T18:03:37.073415+00:00",
+      "sha256": "328f9dd00856ab405f761cd074c332f069dcdd60bd151386cec71c2536e71d5f"
+    },
+    {
+      "path": "figures/phase7_cohort_heatmap.png",
+      "name": "phase7_cohort_heatmap.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 110081,
+      "modified": "2026-10-20T18:03:37.229471+00:00",
+      "sha256": "d51633a1007448dceebb7b86a1e7cb464f4a094f1025ed438b9f25b7b301937d"
+    },
+    {
+      "path": "figures/phase7_combo_lift.png",
+      "name": "phase7_combo_lift.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 52822,
+      "modified": "2026-10-20T18:03:37.135893+00:00",
+      "sha256": "7c35d8f530d646a3457cbbc1941d7f39112c18ba35d63626550ebe8a450bb036"
+    },
+    {
+      "path": "figures/phase7_discrete_hazard.png",
+      "name": "phase7_discrete_hazard.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 70966,
+      "modified": "2026-10-20T18:03:37.094072+00:00",
+      "sha256": "6329e1069e3767dd5e5375b713954e3f5c44e8946c6f8c080c4d8077a4bea067"
+    },
+    {
+      "path": "figures/phase7_dist_artifact.png",
+      "name": "phase7_dist_artifact.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 56815,
+      "modified": "2026-10-20T18:03:37.506166+00:00",
+      "sha256": "eb22fb4d93241dfbd6e9553f7714a9861f9963e3a00b4eeb69a4d397cd71df55"
+    },
+    {
+      "path": "figures/phase7_fraud_event_sizes.png",
+      "name": "phase7_fraud_event_sizes.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 38225,
+      "modified": "2026-10-20T18:03:37.364318+00:00",
+      "sha256": "19475933634831d4621c1c30062d1f6e10738eb8809328c24a0fb5a866603a57"
+    },
+    {
+      "path": "figures/phase7_km_first_fraud.png",
+      "name": "phase7_km_first_fraud.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 66166,
+      "modified": "2026-10-20T18:03:37.425312+00:00",
+      "sha256": "88b7ca05f1d196069eb2a8539b40e66fe480dbbd0241ff2f21a672420912859b"
+    },
+    {
+      "path": "figures/phase7_merchant_hier_eb.png",
+      "name": "phase7_merchant_hier_eb.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 179414,
+      "modified": "2026-10-20T18:03:37.278178+00:00",
+      "sha256": "40b3251ea08aadc020c977792914c37447119ce311a84fbaf2e8168a8052ffd9"
+    },
+    {
+      "path": "figures/phase7_speed_rate.png",
+      "name": "phase7_speed_rate.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 30960,
+      "modified": "2026-10-20T18:03:37.130963+00:00",
+      "sha256": "c6f5234e6bb1bc2f89786dd61f7ad377d2881a3ce35933574b09f56f8dfd8b75"
+    },
+    {
+      "path": "figures/phase7_te_leak_demo.png",
+      "name": "phase7_te_leak_demo.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 49805,
+      "modified": "2026-10-20T18:03:37.449589+00:00",
+      "sha256": "20ef5765b66dfbb6788850d0d0b7179363818c869ee3b4f917dbf47b1719ee49"
+    },
+    {
+      "path": "figures/phase7_txns_before_fraud.png",
+      "name": "phase7_txns_before_fraud.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 47949,
+      "modified": "2026-10-20T18:03:37.052995+00:00",
+      "sha256": "34f01e62812eff32c2a9fb5d67e1907046d5e2e86b469a52993ba092e5e92503"
+    },
+    {
+      "path": "figures/phase8_ablation_decomposed.png",
+      "name": "phase8_ablation_decomposed.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 83829,
+      "modified": "2026-10-20T18:03:37.343839+00:00",
+      "sha256": "38e678b2fe573894415bbf76aca2232de8639554edcc4b9c9bd7f0f5f4b979ef"
+    },
+    {
+      "path": "figures/phase8_adversarial_importance.png",
+      "name": "phase8_adversarial_importance.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 51666,
+      "modified": "2026-10-20T18:03:37.445164+00:00",
+      "sha256": "6b0460f3276d2f02a834e8d44db7aba939b6d66dd74f515ca4f4004b09ba9ede"
+    },
+    {
+      "path": "figures/phase8_calibration.png",
+      "name": "phase8_calibration.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 59879,
+      "modified": "2026-10-20T18:03:37.069221+00:00",
+      "sha256": "58e877cd0a99819e4a14f8a2a586376e1037039bc39420e9cf5627d2088621bc"
+    },
+    {
+      "path": "figures/phase8_calibration_temp.png",
+      "name": "phase8_calibration_temp.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 68696,
+      "modified": "2026-10-20T18:03:37.149721+00:00",
+      "sha256": "d433d722935fe30a7cba7efcd7dfb076899c81ef55fafcb1f9fd546036548990"
+    },
+    {
+      "path": "figures/phase8_capture_at_k.png",
+      "name": "phase8_capture_at_k.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 73657,
+      "modified": "2026-10-20T18:03:37.267733+00:00",
+      "sha256": "2eb1eb4da61c8e05deca96e23a84f37549537e7595c7b6728dcdc76229c1c9c8"
+    },
+    {
+      "path": "figures/phase8_confusion_f1max.png",
+      "name": "phase8_confusion_f1max.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 26138,
+      "modified": "2026-10-20T18:03:37.158310+00:00",
+      "sha256": "56d153be9cee71f047cf6cfa894c293afa2d7d7b0743ab79727bfe262a95b088"
+    },
+    {
+      "path": "figures/phase8_cost_curve.png",
+      "name": "phase8_cost_curve.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 59969,
+      "modified": "2026-10-20T18:03:37.500895+00:00",
+      "sha256": "827fbb2eb46306941a1fbd78e6f68b34b41413315d8c78feb94fb79f07329dc1"
+    },
+    {
+      "path": "figures/phase8_cost_sensitivity.png",
+      "name": "phase8_cost_sensitivity.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 89261,
+      "modified": "2026-10-20T18:03:37.368877+00:00",
+      "sha256": "522d1be2084efc313b83f25876ca41825de8ed58458d616a0dca254e289d6f98"
+    },
+    {
+      "path": "figures/phase8_ensemble_comparison.png",
+      "name": "phase8_ensemble_comparison.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 76735,
+      "modified": "2026-10-20T18:03:37.526418+00:00",
+      "sha256": "624af25bf5328004baf18ad7472944792887c49ae71febc0e23626ce77158bef"
+    },
+    {
+      "path": "figures/phase8_learning_curve.png",
+      "name": "phase8_learning_curve.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 53208,
+      "modified": "2026-10-20T18:03:37.481184+00:00",
+      "sha256": "ae7be2658a02f56b46e66b19d23ebdb691a4f9f4c81bf51417d6c38f62c1c26b"
+    },
+    {
+      "path": "figures/phase8_leave_card_out.png",
+      "name": "phase8_leave_card_out.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 58194,
+      "modified": "2026-10-20T18:03:37.078999+00:00",
+      "sha256": "a0b682dd5eb92255a3387a08400e3ffaaec0928d0efa203b0cfc5aba7cba27ad"
+    },
+    {
+      "path": "figures/phase8_pdp_ice.png",
+      "name": "phase8_pdp_ice.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 89185,
+      "modified": "2026-10-20T18:03:36.992665+00:00",
+      "sha256": "7710a79deac31ef2061ff4d03c4a73986e611eaf3e89edc5099357dea91ea0b2"
+    },
+    {
+      "path": "figures/phase8_psi.png",
+      "name": "phase8_psi.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 118819,
+      "modified": "2026-10-20T18:03:37.048292+00:00",
+      "sha256": "058fd44af467095921c7b98f11b4a9a1fd6c7b6d4a532225d9e25c211741b4b5"
+    },
+    {
+      "path": "figures/phase8_roc_pr_curves.png",
+      "name": "phase8_roc_pr_curves.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 75412,
+      "modified": "2026-10-20T18:03:37.252539+00:00",
+      "sha256": "ff467c496a9a5f07bc56ce2672ca9554dfddb2116ab55f90e07003950532f3e4"
+    },
+    {
+      "path": "figures/phase8_segment_recall.png",
+      "name": "phase8_segment_recall.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 104391,
+      "modified": "2026-10-20T18:03:37.633766+00:00",
+      "sha256": "ab6b6bf5203bb0a67194982f7201dbefa40020c774bdb71ac684b9fc3d37be72"
+    },
+    {
+      "path": "figures/phase8_shap_beeswarm.png",
+      "name": "phase8_shap_beeswarm.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 191855,
+      "modified": "2026-10-20T18:03:37.105078+00:00",
+      "sha256": "ad1a6aee3b971cfff23299ef44e4af2c3773fefe714f82706ca2e773b7fc0dc1"
+    },
+    {
+      "path": "figures/phase8_shap_dep_card_prior_f.png",
+      "name": "phase8_shap_dep_card_prior_f.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 93046,
+      "modified": "2026-10-20T18:03:37.598755+00:00",
+      "sha256": "3ad65b30a0cb43900d2fd4493c5e6b4ba401df5749f1510a92f570f24616036e"
+    },
+    {
+      "path": "figures/phase8_shap_dep_cat_code.png",
+      "name": "phase8_shap_dep_cat_code.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 60190,
+      "modified": "2026-10-20T18:03:37.262575+00:00",
+      "sha256": "19f9913c894c4190458dab2d70e70c38940c52e93eb8a729ced62149acd36ca0"
+    },
+    {
+      "path": "figures/phase8_shap_dep_log_amt.png",
+      "name": "phase8_shap_dep_log_amt.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 142962,
+      "modified": "2026-10-20T18:03:37.486214+00:00",
+      "sha256": "814336db4a87a95eecb9c76966b6ae9b1a39bcc59efbae6e4e6c7508a46f34fb"
+    },
+    {
+      "path": "figures/phase8_shap_dep_n_prior.png",
+      "name": "phase8_shap_dep_n_prior.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 174223,
+      "modified": "2026-10-20T18:03:37.205135+00:00",
+      "sha256": "3bfa233da2e1427732e70e4c5af089310c10bffb92e40dbeecbdf2ebfb613772"
+    },
+    {
+      "path": "figures/phase8_shap_importance.png",
+      "name": "phase8_shap_importance.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 63413,
+      "modified": "2026-10-20T18:03:37.217377+00:00",
+      "sha256": "fcf101cc1abe7d5f2bb5cd9529b6c35137b7640780a6709e1759b4284ae589fd"
+    },
+    {
+      "path": "figures/phase8_walkforward_cv.png",
+      "name": "phase8_walkforward_cv.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 43949,
+      "modified": "2026-10-20T18:03:37.617581+00:00",
+      "sha256": "09337bff516b7c466e406aee7b814e45a4ff3f632e336b5cdb746850feb85e40"
+    },
+    {
+      "path": "figures/phase8_wf_vs_test.png",
+      "name": "phase8_wf_vs_test.png",
+      "category": "figures",
+      "format": "png",
+      "size_bytes": 44453,
+      "modified": "2026-10-20T18:03:37.434565+00:00",
+      "sha256": "b446f7cf92e2eb55104fe9c7a53b97fa6b7236677525b9550d9440a5194f48fe"
+    },
+    {
+      "path": "logs/build.log",
+      "name": "build.log",
+      "category": "log",
+      "format": "log",
+      "size_bytes": 3092,
+      "modified": "2026-10-20T20:10:01.733108+00:00",
+      "sha256": "d63a72d13f67f95c2a87dc3819f62df7fe98519dcc8389589e974b87a14dc9ea"
+    },
+    {
+      "path": "logs/ui_smoke.log",
+      "name": "ui_smoke.log",
+      "category": "log",
+      "format": "log",
+      "size_bytes": 6770,
+      "modified": "2026-10-20T20:05:50.519373+00:00",
+      "sha256": "cb9cc276d88d9a5f997e0165015b1b25f87a819b6f016b30cea545b72fa3ce0b"
+    },
+    {
+      "path": "fraud_eda_colab(1).ipynb",
+      "name": "fraud_eda_colab(1).ipynb",
+      "category": "notebook",
+      "format": "ipynb",
+      "size_bytes": 4052809,
+      "modified": "2026-10-20T18:02:25.931979+00:00",
+      "sha256": "294ecd208bac66bebf2c97ea792e0a0588b7006cb0332b691ace9e329715fa74"
+    }
+  ]
+}

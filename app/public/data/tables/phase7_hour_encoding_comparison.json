@@ -1,0 +1,1 @@
+{"id":"phase7_hour_encoding_comparison","columns":["encoding","pr_auc"],"types":{"encoding":"text","pr_auc":"number"},"rows":[{"encoding":"raw","pr_auc":0.8592883007537216},{"encoding":"cyclical","pr_auc":0.8589878775046752},{"encoding":"categorical","pr_auc":0.8467011461676432}]}

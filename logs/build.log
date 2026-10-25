@@ -1,0 +1,43 @@
+
+> fraud-evidence-console@1.0.0 build
+> tsc --noEmit && vite build
+
+[36mvite v8.3.4 [32mbuilding client environment for production...[36m[39m
+transforming...
+✓ 2516 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                                 0.68 kB │ gzip:   0.40 kB
+dist/assets/manrope-vietnamese-wght-normal-usUDDRr7.woff2       8.52 kB
+dist/assets/manrope-greek-wght-normal-DL7QRZyv.woff2            9.44 kB
+dist/assets/newsreader-vietnamese-wght-normal-Czsa-EzN.woff2   11.93 kB
+dist/assets/manrope-cyrillic-wght-normal-Dvxsihut.woff2        14.50 kB
+dist/assets/manrope-latin-ext-wght-normal-Ch3YOpNY.woff2       15.12 kB
+dist/assets/manrope-latin-wght-normal-DHIcAJRg.woff2           24.83 kB
+dist/assets/newsreader-latin-ext-wght-normal-C-3rgBeH.woff2    36.24 kB
+dist/assets/newsreader-latin-wght-normal-CCVVNp6i.woff2        58.08 kB
+dist/assets/index-DMUWIEdk.css                                 45.65 kB │ gzip:  12.43 kB
+dist/assets/chevron-left-BOU5yt6M.js                            0.15 kB │ gzip:   0.16 kB
+dist/assets/gauge-BUTNydsB.js                                   0.20 kB │ gzip:   0.18 kB
+dist/assets/circle-dollar-sign-Cszk3Mhy.js                      0.27 kB │ gzip:   0.22 kB
+dist/assets/scale-Bqf9vqv6.js                                   0.36 kB │ gzip:   0.24 kB
+dist/assets/shield-alert-CGaI4Okz.js                            0.38 kB │ gzip:   0.27 kB
+dist/assets/csv-CWBgnTAH.js                                     1.06 kB │ gzip:   0.65 kB
+dist/assets/Figures-ciU58aN-.js                                 3.09 kB │ gzip:   1.24 kB
+dist/assets/DataTable-BYwTC2St.js                               4.80 kB │ gzip:   2.07 kB
+dist/assets/Temporal-D5QYFNV-.js                               10.97 kB │ gzip:   4.00 kB
+dist/assets/Advanced-AHPncH34.js                               11.55 kB │ gzip:   3.84 kB
+dist/assets/Statistics-OVdVy9lI.js                             13.00 kB │ gzip:   4.08 kB
+dist/assets/Features-CMq1FWxr.js                               13.70 kB │ gzip:   4.48 kB
+dist/assets/Interactions-qd00UfFv.js                           13.82 kB │ gzip:   4.62 kB
+dist/assets/Distributions-SLj8OpuZ.js                          14.26 kB │ gzip:   4.75 kB
+dist/assets/DataAudit-Bwe_HIPj.js                              15.68 kB │ gzip:   5.54 kB
+dist/assets/Findings-BmHCUf8-.js                               17.78 kB │ gzip:   5.81 kB
+dist/assets/Overview-CHFWqYne.js                               18.94 kB │ gzip:   6.55 kB
+dist/assets/Economics-DmQP4hPI.js                              22.81 kB │ gzip:   6.90 kB
+dist/assets/Model-Cg7CiOnl.js                                  24.70 kB │ gzip:   7.05 kB
+dist/assets/Artifacts-Cac0FdY6.js                              31.73 kB │ gzip:   8.19 kB
+dist/assets/index-Ds2vtAds.js                                 197.43 kB │ gzip:  65.21 kB
+dist/assets/Chart-DEhunxTI.js                                 701.64 kB │ gzip: 231.66 kB
+
+[32m✓ built in 1.30s[39m

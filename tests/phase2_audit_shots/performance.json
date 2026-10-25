@@ -1,0 +1,77 @@
+[
+  {
+    "route": "/",
+    "domContentLoaded": 188,
+    "load": 189,
+    "paints": {
+      "first-paint": 372,
+      "first-contentful-paint": 372
+    },
+    "jsBytes": 0,
+    "jsonBytes": 936034,
+    "requests": 48,
+    "nodes": 599,
+    "charts": 3,
+    "heap": 47
+  },
+  {
+    "route": "/model",
+    "domContentLoaded": 88,
+    "load": 88,
+    "paints": {
+      "first-paint": 100,
+      "first-contentful-paint": 140
+    },
+    "jsBytes": 0,
+    "jsonBytes": 936034,
+    "requests": 47,
+    "nodes": 670,
+    "charts": 5,
+    "heap": 61
+  },
+  {
+    "route": "/findings",
+    "domContentLoaded": 96,
+    "load": 98,
+    "paints": {
+      "first-paint": 112,
+      "first-contentful-paint": 152
+    },
+    "jsBytes": 0,
+    "jsonBytes": 936034,
+    "requests": 45,
+    "nodes": 1570,
+    "charts": 1,
+    "heap": 71
+  },
+  {
+    "route": "/artifacts",
+    "domContentLoaded": 124,
+    "load": 126,
+    "paints": {
+      "first-paint": 152,
+      "first-contentful-paint": 176
+    },
+    "jsBytes": 0,
+    "jsonBytes": 936034,
+    "requests": 59,
+    "nodes": 580,
+    "charts": 0,
+    "heap": 71
+  },
+  {
+    "route": "/model",
+    "domContentLoaded": 104,
+    "load": 106,
+    "paints": {
+      "first-paint": 124,
+      "first-contentful-paint": 136
+    },
+    "jsBytes": 0,
+    "jsonBytes": 936034,
+    "requests": 47,
+    "nodes": 670,
+    "charts": 5,
+    "heap": 74
+  }
+]

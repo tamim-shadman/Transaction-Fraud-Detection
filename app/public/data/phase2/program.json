@@ -1,0 +1,1838 @@
+{
+  "generatedAt": "2026-10-21T16:49:12+00:00",
+  "project": {
+    "id": "sparkov-fraud-eda",
+    "title": "Sparkov Card-Fraud Research Program",
+    "short_title": "Card-fraud evidence console",
+    "subtitle": "Research-grade EDA, causal feature engineering and leak-aware model evaluation",
+    "description": "A single research notebook analyzing 1.85M simulated card transactions across 8 pre-registered research questions. The program combines generator forensics, effect-size-first statistics, temporal validation, causal feature engineering and a full evaluation/economics suite.",
+    "source_dataset": "kartik2112/fraud-detection (Sparkov simulator)",
+    "domain": "Financial crime / transaction fraud",
+    "project_type": "Research-grade exploratory analytics and model evaluation",
+    "primary_users": [
+      "Fraud analytics leads",
+      "Data scientists and ML engineers",
+      "Model risk and validation reviewers",
+      "BI and analytics engineering teams"
+    ],
+    "technologies": [
+      "Python 3.13",
+      "pandas 2.2.3",
+      "NumPy 2.1.3",
+      "scikit-learn 1.6.1",
+      "LightGBM 4.6.0",
+      "SHAP 0.54.1",
+      "statsmodels 0.15.0",
+      "UMAP 0.5.12",
+      "ruptures 1.1.10",
+      "Plotly 5.24.1",
+      "matplotlib 3.10.0",
+      "seaborn 0.13.2",
+      "missingno 0.5.2"
+    ],
+    "created_for": "Power BI-style analytical simulation built from the workspace artifacts"
+  },
+  "run": {
+    "id": "RUN-20261020-1630",
+    "label": "Full research run",
+    "start": "2026-10-20T16:30:06",
+    "end": "2026-10-20T18:01:59",
+    "durationSeconds": 5513,
+    "reportedMinutes": 91.9,
+    "seed": 42,
+    "smoke": false,
+    "robustness": true,
+    "python": "3.13.16",
+    "platform": "Google Colab",
+    "codeCells": 33,
+    "executedCells": 33,
+    "cellsWithOutput": 31,
+    "errorOutputs": 0,
+    "outputChars": 61180,
+    "timezoneNote": "Timezone not stated in the source.",
+    "source": "logs/findings.md; notebook execution counts",
+    "embeddingTimes": [
+      {
+        "model": "t-SNE perp=30",
+        "auc": 0.594,
+        "seconds": 321
+      },
+      {
+        "model": "t-SNE perp=50",
+        "auc": 0.591,
+        "seconds": 352
+      },
+      {
+        "model": "t-SNE perp=100",
+        "auc": 0.559,
+        "seconds": 410
+      },
+      {
+        "model": "UMAP nn=15 md=0.1",
+        "auc": 0.587,
+        "seconds": 51
+      },
+      {
+        "model": "UMAP nn=50 md=0.1",
+        "auc": 0.458,
+        "seconds": 36
+      },
+      {
+        "model": "UMAP nn=15 md=0.5",
+        "auc": 0.643,
+        "seconds": 20
+      }
+    ],
+    "shapSeconds": 163.1
+  },
+  "counts": {
+    "transactions": 1852394,
+    "fraud": 9651,
+    "fraudRate": 0.0052100147160917,
+    "cards": 999,
+    "categories": 14,
+    "states": 51,
+    "merchants": 693,
+    "cities": 836,
+    "zip3": 532,
+    "features": 27,
+    "figures": 129,
+    "interactive": 7,
+    "tables": 46,
+    "findings": 64,
+    "strong": 30,
+    "supports": 27,
+    "caveats": 6,
+    "weak": 1
+  },
+  "grades": {
+    "strong": 30,
+    "supports": 27,
+    "weak": 1,
+    "caveat": 6
+  },
+  "phaseStatus": {
+    "complete": 9,
+    "total": 9
+  },
+  "phases": [
+    {
+      "id": "P0",
+      "num": "00",
+      "name": "Data Audit & Generator Forensics",
+      "shortName": "Data audit",
+      "section": "§01",
+      "route": "/data-audit",
+      "purpose": "Establish what the simulator actually produces before interpreting any downstream signal: schema, missingness, identifiers, split boundaries, class balance and known generator artifacts.",
+      "description": "The audit resolves 1,852,394 transactions and audits 71 analytical columns. It fingerprints the two source CSVs, checks ten data contracts, establishes the temporal train/test boundary, and records the simulator behaviors that bound every later claim.",
+      "methods": [
+        "Schema & completeness profiling",
+        "Data contracts",
+        "SHA-256 fingerprint",
+        "Identifier audit",
+        "Class balance",
+        "Temporal coverage",
+        "Generator forensics",
+        "Split integrity"
+      ],
+      "keyMetric": {
+        "label": "Transactions audited",
+        "value": 1852394,
+        "format": "integer"
+      },
+      "keyFindings": [
+        "Train and test are separated by a 48-second boundary, not a random split.",
+        "Eleven columns contain structural missingness from first-transaction history.",
+        "One data contract is flagged: minimum age is 13.9 years versus an expected ~18."
+      ],
+      "limitations": [
+        "Raw CSVs are not present in the workspace; only hashes and derived outputs are available.",
+        "The SHA-256 values were recorded as 16-character prefixes, not full digests."
+      ],
+      "accent": "#E4572E",
+      "cellStart": 13,
+      "cellEnd": 18,
+      "cellRange": "13–18",
+      "notebookCells": 6,
+      "outputChars": 2142,
+      "figureCount": 4,
+      "tableCount": 4,
+      "interactiveCount": 0,
+      "artifactCount": 8,
+      "findingCount": 7,
+      "strongCount": 2,
+      "caveatCount": 3,
+      "rqs": [
+        "RQ1",
+        "RQ4",
+        "RQ6"
+      ],
+      "topFindings": [
+        {
+          "id": "F-003",
+          "title": "Class imbalance: train 7506/1296675 = 0.5789%, test 2145/555719 = 0.3860% — extreme imbalance, drift between splits detected",
+          "grade": "strong",
+          "rq": "RQ1"
+        },
+        {
+          "id": "F-004",
+          "title": "Temporal split: train ends 2020-06-21 12:13:37, test starts 2020-06-21 12:14:25 — time-series CV is REQUIRED for any modeling (walk-forward implemented in §08)",
+          "grade": "strong",
+          "rq": "RQ1"
+        },
+        {
+          "id": "F-002",
+          "title": "Schema audited; identifiers (cc_num/zip/trans_num) excluded from numeric analyses",
+          "grade": "supports",
+          "rq": "RQ1"
+        },
+        {
+          "id": "F-005",
+          "title": "999 cards × ~1,471 median txns — repeated-measures structure ⇒ card-clustered inference (§06) is mandatory",
+          "grade": "supports",
+          "rq": "RQ1"
+        }
+      ],
+      "issues": [
+        {
+          "id": "ISS-01",
+          "title": "Raw source datasets are absent from the workspace",
+          "severity": "High",
+          "status": "Open"
+        },
+        {
+          "id": "ISS-04",
+          "title": "Simulator artifacts limit external validity",
+          "severity": "High",
+          "status": "Open"
+        },
+        {
+          "id": "ISS-07",
+          "title": "Age contract violation is unresolved",
+          "severity": "Low",
+          "status": "Open"
+        },
+        {
+          "id": "ISS-08",
+          "title": "ZIP codes lose leading zeros",
+          "severity": "Medium",
+          "status": "Open"
+        },
+        {
+          "id": "ISS-09",
+          "title": "Structural missingness reaches 10.79%",
+          "severity": "Medium",
+          "status": "Open"
+        }
+      ],
+      "representativeFigure": "phase0_missing_bar",
+      "representativeThumb": "artifacts/thumbs/phase0_missing_bar.webp",
+      "status": "Complete",
+      "statusNote": "Cell execution and generated artifacts are present. Not independently re-run in this workspace."
+    },
+    {
+      "id": "P1",
+      "num": "01",
+      "name": "Univariate Distributions",
+      "shortName": "Univariate",
+      "section": "§02",
+      "route": "/distributions",
+      "purpose": "Characterize the marginal distributions of amount, time, category, demographics and geography, and quantify how far fraud separates from genuine activity on each axis.",
+      "description": "Twenty-four figures cover amount histograms, ECDFs, QQ plots, categorical rates, time profiles and demographic/geographic distributions. The phase establishes the first effect-size estimates rather than relying on p-values.",
+      "methods": [
+        "Histograms & ECDFs",
+        "Box/violin & QQ plots",
+        "Quantile comparison",
+        "Category fraud rates",
+        "Temporal profiles",
+        "Demographic rates"
+      ],
+      "keyMetric": {
+        "label": "Amount separation (KS D)",
+        "value": 0.7238,
+        "format": "decimal3"
+      },
+      "keyFindings": [
+        "Fraud amounts are shifted far to the right: median $390 versus $47.24 for genuine transactions.",
+        "The amount distribution is the strongest univariate separator in the program (KS D = 0.724).",
+        "Night hours carry a higher fraud rate than daytime volume would suggest."
+      ],
+      "limitations": [
+        "Univariate separation does not establish incremental predictive value.",
+        "Amount outliers are retained in the analysis; the maximum is 28,948.90."
+      ],
+      "accent": "#3B6FD4",
+      "cellStart": 19,
+      "cellEnd": 26,
+      "cellRange": "19–26",
+      "notebookCells": 8,
+      "outputChars": 13838,
+      "figureCount": 24,
+      "tableCount": 4,
+      "interactiveCount": 2,
+      "artifactCount": 30,
+      "findingCount": 5,
+      "strongCount": 2,
+      "caveatCount": 0,
+      "rqs": [
+        "RQ2",
+        "RQ3",
+        "RQ4",
+        "RQ6"
+      ],
+      "topFindings": [
+        {
+          "id": "F-008",
+          "title": "Fraud amounts are strongly shifted right vs non-fraud (see §06 effect sizes: Cliff's delta with bootstrap CI)",
+          "grade": "strong",
+          "rq": "RQ2"
+        },
+        {
+          "id": "F-010",
+          "title": "Night hours (00–06) show markedly elevated fraud rate vs volume share (see phase1_hour figure + §06 forest plot with CIs)",
+          "grade": "strong",
+          "rq": "RQ3"
+        },
+        {
+          "id": "F-009",
+          "title": "COVID window (Mar–Jun 2020) fraud-rate shift quantified vs adjacent windows",
+          "grade": "supports",
+          "rq": "RQ3"
+        },
+        {
+          "id": "F-011",
+          "title": "State-level fraud-rate gradient exists but small-n states shrink toward baseline under EB — geographic claims restricted to well-populated states",
+          "grade": "supports",
+          "rq": "RQ4"
+        }
+      ],
+      "issues": [],
+      "representativeFigure": "phase1_age",
+      "representativeThumb": "artifacts/thumbs/phase1_age.webp",
+      "status": "Complete",
+      "statusNote": "Cell execution and generated artifacts are present. Not independently re-run in this workspace."
+    },
+    {
+      "id": "P2",
+      "num": "02",
+      "name": "Bivariate & Interaction Analysis",
+      "shortName": "Bivariate",
+      "section": "§03",
+      "route": "/interactions",
+      "purpose": "Test whether risk concentrates in combinations of category, time, geography and cardholder behavior, and measure the money exposure behind transaction counts.",
+      "description": "The interaction phase links category × hour, card profiles, city and ZIP3 structure, the fraud-dollar lens, mutual information and association structure. It distinguishes real structure from generator-driven artifacts.",
+      "methods": [
+        "Interaction heatmaps",
+        "Cardholder profiles",
+        "Money-denominated rates",
+        "Mutual information",
+        "Spearman structure",
+        "Cramér's V",
+        "ZIP3 EB shrinkage"
+      ],
+      "keyMetric": {
+        "label": "shopping_net fraud rate",
+        "value": 0.015927,
+        "format": "percent2"
+      },
+      "keyFindings": [
+        "shopping_net is the highest-volume high-risk category at 1.59% fraud versus a 0.52% baseline.",
+        "Merchant coordinates are jittered per transaction; distance is a simulator artifact, not physical travel.",
+        "97.7% of cards experience at least one fraud event—an important simulator boundary, not a production prior."
+      ],
+      "limitations": [
+        "Merchant and category are almost redundant; merchant-level effects should not be over-interpreted.",
+        "Geographic claims are restricted by the simulator's coordinate model."
+      ],
+      "accent": "#7A5AF8",
+      "cellStart": 27,
+      "cellEnd": 36,
+      "cellRange": "27–36",
+      "notebookCells": 10,
+      "outputChars": 6036,
+      "figureCount": 23,
+      "tableCount": 6,
+      "interactiveCount": 4,
+      "artifactCount": 33,
+      "findingCount": 9,
+      "strongCount": 3,
+      "caveatCount": 2,
+      "rqs": [
+        "RQ1",
+        "RQ4",
+        "RQ5",
+        "RQ6"
+      ],
+      "topFindings": [
+        {
+          "id": "F-013",
+          "title": "Category × hour interaction: online-shopping-type categories concentrate fraud in the 22:00–06:00 window (see heatmap)",
+          "grade": "strong",
+          "rq": "RQ6"
+        },
+        {
+          "id": "F-016",
+          "title": "Per-card fraud rate is bimodal: 2.3% of cards never defrauded, 97.7% defrauded at least once — fraud is card-clustered, not exchangeable across transactions",
+          "grade": "strong",
+          "rq": "RQ5"
+        },
+        {
+          "id": "F-019",
+          "title": "Fraud-dollar ranking by category (not just count) — review-budget tables in §08 use $ capture, not only recall",
+          "grade": "strong",
+          "rq": "RQ6"
+        },
+        {
+          "id": "F-015",
+          "title": "zip3 regional structure: 1 states max per zip3 (purity=100.0%); zip3 EB rates add granularity beyond state for high-volume prefixes",
+          "grade": "supports",
+          "rq": "RQ4"
+        }
+      ],
+      "issues": [],
+      "representativeFigure": "phase2_age_x_category",
+      "representativeThumb": "artifacts/thumbs/phase2_age_x_category.webp",
+      "status": "Complete",
+      "statusNote": "Cell execution and generated artifacts are present. Not independently re-run in this workspace."
+    },
+    {
+      "id": "P3",
+      "num": "03",
+      "name": "Temporal Structure",
+      "shortName": "Temporal",
+      "section": "§04",
+      "route": "/temporal",
+      "purpose": "Determine whether fraud is temporally clustered and how volume, seasonality and structural breaks evolve across the 2019–2020 observation window.",
+      "description": "Rolling statistics, weekly fraud-rate series, STL decomposition, ACF/PACF, time-profile heatmaps, PELT change-point sensitivity and card timelines are used to separate campaign-like clustering from calendar effects.",
+      "methods": [
+        "7-day rolling statistics",
+        "STL decomposition",
+        "ACF / PACF",
+        "PELT change-point analysis",
+        "Time-profile heatmaps",
+        "Card timelines"
+      ],
+      "keyMetric": {
+        "label": "Lag-1 fraud-rate autocorrelation",
+        "value": 0.503,
+        "format": "decimal3"
+      },
+      "keyFindings": [
+        "Daily fraud rate has lag-1 autocorrelation of 0.503, evidence of temporal clustering.",
+        "Volume has strong weekly periodicity (lag-7 = 0.869); STL seasonality strength is 0.21.",
+        "Two consensus structural breaks are stable across PELT penalties; no holiday proximity was found."
+      ],
+      "limitations": [
+        "Two breaks are a small number of events; causal attribution to campaigns is not established.",
+        "The observations are simulated; calendar effects are properties of the generator."
+      ],
+      "accent": "#11A6A1",
+      "cellStart": 37,
+      "cellEnd": 40,
+      "cellRange": "37–40",
+      "notebookCells": 4,
+      "outputChars": 1649,
+      "figureCount": 12,
+      "tableCount": 1,
+      "interactiveCount": 0,
+      "artifactCount": 13,
+      "findingCount": 4,
+      "strongCount": 1,
+      "caveatCount": 0,
+      "rqs": [
+        "RQ3",
+        "RQ5"
+      ],
+      "topFindings": [
+        {
+          "id": "F-025",
+          "title": "Fraud is LESS likely than genuine txns to follow >72h card silence (0.2% vs 0.6%; ratio 0.32) — among fraud txns that have a prior txn on the same card, 90.7% follow another FRAUD txn — the mechanism is rapid clustering, not dormancy: it is genuine spending that resumes after dormancy. The visual 'bursts after dormancy' impression from card timelines is quantitatively wrong (direction auto-graded from the data)",
+          "grade": "strong",
+          "rq": "RQ5"
+        },
+        {
+          "id": "F-022",
+          "title": "STL: weekly seasonality strength = 0.21 in daily fraud rate (trend + seasonality + residual plotted separately)",
+          "grade": "supports",
+          "rq": "RQ3"
+        },
+        {
+          "id": "F-023",
+          "title": "Autocorrelation: daily volume lag-7 = 0.87 (weekly periodicity); fraud-rate lag-1 = 0.50 — evidence of temporal clustering of fraud",
+          "grade": "supports",
+          "rq": "RQ3"
+        },
+        {
+          "id": "F-024",
+          "title": "Structural breaks in daily fraud-rate stable across PELT penalties (2 consensus breaks); holiday proximity: 0 coincidences — breaks are generator-campaign driven, not calendar-driven",
+          "grade": "weak",
+          "rq": "RQ3"
+        }
+      ],
+      "issues": [],
+      "representativeFigure": "phase3_acf_pacf",
+      "representativeThumb": "artifacts/thumbs/phase3_acf_pacf.webp",
+      "status": "Complete",
+      "statusNote": "Cell execution and generated artifacts are present. Not independently re-run in this workspace."
+    },
+    {
+      "id": "P4",
+      "num": "04",
+      "name": "Advanced Visualization & Dimensionality Reduction",
+      "shortName": "Unsupervised",
+      "section": "§05",
+      "route": "/advanced",
+      "purpose": "Test whether fraud separates without labels using embeddings, clustering and anomaly detection, and document the limits of visual separability.",
+      "description": "PCA, t-SNE and UMAP embeddings are scored with logistic AUC. K-Means, DBSCAN and hierarchical clustering are profiled, alongside Isolation Forest, an autoencoder and LOF. High-dimensional visual encodings are evaluated for honesty.",
+      "methods": [
+        "PCA (2D/3D, biplot)",
+        "t-SNE",
+        "UMAP",
+        "K-Means",
+        "DBSCAN",
+        "Hierarchical clustering",
+        "Isolation Forest",
+        "Autoencoder",
+        "LOF",
+        "Parallel coordinates",
+        "Andrews curves",
+        "Hexbin"
+      ],
+      "keyMetric": {
+        "label": "Best embedding separability (AUC)",
+        "value": 0.8157,
+        "format": "decimal3"
+      },
+      "keyFindings": [
+        "PCA(2) reaches logistic AUC 0.816; nonlinear embeddings do not improve separability.",
+        "Anomaly detectors isolate fraud only weakly (AUC 0.731–0.881).",
+        "DBSCAN labels 4% of points as noise, with a 6.08% fraud rate in that noise."
+      ],
+      "limitations": [
+        "Embedding AUC is a property of a 2D representation, not a deployable classifier.",
+        "LOF was evaluated on 5,000 rows versus 50,000 for the other anomaly models; AUCs are not directly comparable."
+      ],
+      "accent": "#D97A18",
+      "cellStart": 41,
+      "cellEnd": 48,
+      "cellRange": "41–48",
+      "notebookCells": 8,
+      "outputChars": 5048,
+      "figureCount": 27,
+      "tableCount": 4,
+      "interactiveCount": 1,
+      "artifactCount": 32,
+      "findingCount": 4,
+      "strongCount": 1,
+      "caveatCount": 0,
+      "rqs": [
+        "RQ7"
+      ],
+      "topFindings": [
+        {
+          "id": "F-029",
+          "title": "Unsupervised anomaly detection isolates fraud only weakly (AUCs 0.731–0.881): fraud is contextual relative to card history, not pointwise-outlying — motivates per-card features (§07)",
+          "grade": "strong",
+          "rq": "RQ7"
+        },
+        {
+          "id": "F-026",
+          "title": "Embedding separability: best = PCA(2) (logistic AUC 0.816); embeddings show partial fraud structure but no clean separation — consistent with noisy-overlap fraud signatures",
+          "grade": "supports",
+          "rq": "RQ7"
+        },
+        {
+          "id": "F-027",
+          "title": "K-Means (k=3): densest cluster reaches 1.9× baseline fraud rate — clusters capture some risk structure but no pure-fraud cluster",
+          "grade": "supports",
+          "rq": "RQ7"
+        },
+        {
+          "id": "F-028",
+          "title": "Clustering stability: hierarchical vs K-Means ARI = 0.74; DBSCAN finds 1 clusters + 4% noise — structure is dominated by volume, not by fraud",
+          "grade": "supports",
+          "rq": "RQ7"
+        }
+      ],
+      "issues": [
+        {
+          "id": "ISS-14",
+          "title": "Runtime and resource telemetry is largely absent",
+          "severity": "Medium",
+          "status": "Open"
+        },
+        {
+          "id": "ISS-15",
+          "title": "Seven interactive maps have no static preview",
+          "severity": "Low",
+          "status": "Accepted"
+        }
+      ],
+      "representativeFigure": "phase4_ae_error",
+      "representativeThumb": "artifacts/thumbs/phase4_ae_error.webp",
+      "status": "Complete",
+      "statusNote": "Cell execution and generated artifacts are present. Not independently re-run in this workspace."
+    },
+    {
+      "id": "P5",
+      "num": "05",
+      "name": "Statistical Testing & Effect Sizes",
+      "shortName": "Statistics",
+      "section": "§06",
+      "route": "/statistics",
+      "purpose": "Replace significance-only claims with effect sizes, bootstrap intervals, multiple-testing correction and inference that respects the card-level repeated measures.",
+      "description": "Mann–Whitney tests are paired with Cliff's delta, KS statistics, bootstrap CIs and BH-FDR. Categorical associations use Cramér's V with post-hoc correction, and a card-clustered logistic model shows how naive standard errors mislead.",
+      "methods": [
+        "Mann–Whitney U",
+        "Cliff's delta + bootstrap CI",
+        "KS D + bootstrap CI",
+        "Benjamini–Hochberg FDR",
+        "Chi-square / Cramér's V",
+        "Wilson intervals",
+        "Card-cluster-robust logistic regression"
+      ],
+      "keyMetric": {
+        "label": "Amount effect (Cliff's delta)",
+        "value": 0.6686,
+        "format": "decimal3"
+      },
+      "keyFindings": [
+        "Fraud amounts show Cliff's delta 0.669 [0.656, 0.680] and KS D 0.724 [0.715, 0.732].",
+        "Five of eight logit effects survive card-clustered standard errors.",
+        "72 of 91 category-pair post-hoc tests remain significant after Bonferroni correction."
+      ],
+      "limitations": [
+        "Cramér's V is not comparable across variables with very different cardinality (e.g., ZIP3 with 532 levels).",
+        "The logistic model uses a 200,000-row sample and 961 card clusters, not the full 1.85M rows."
+      ],
+      "accent": "#5B5BD6",
+      "cellStart": 49,
+      "cellEnd": 50,
+      "cellRange": "49–50",
+      "notebookCells": 2,
+      "outputChars": 347,
+      "figureCount": 4,
+      "tableCount": 5,
+      "interactiveCount": 0,
+      "artifactCount": 9,
+      "findingCount": 5,
+      "strongCount": 5,
+      "caveatCount": 0,
+      "rqs": [
+        "RQ2",
+        "RQ3",
+        "RQ6"
+      ],
+      "topFindings": [
+        {
+          "id": "F-030",
+          "title": "Amount shift quantified: Cliff's delta = 0.669 [bootstrap CI 0.656, 0.680], KS D = 0.724 [0.715, 0.732], BH-q = 0",
+          "grade": "strong",
+          "rq": "RQ2"
+        },
+        {
+          "id": "F-031",
+          "title": "Categorical associations with target: category V=0.067 > state > gender — effect sizes (not just p) reported per plan §7.2",
+          "grade": "strong",
+          "rq": "RQ6"
+        },
+        {
+          "id": "F-032",
+          "title": "Hour forest: night hours carry statistically robust rate elevations (Wilson CIs exclude baseline after BH correction)",
+          "grade": "strong",
+          "rq": "RQ3"
+        },
+        {
+          "id": "F-033",
+          "title": "Category forest identifies the high-risk merchant categories with CIs — the forest plot is the primary evidence table for categorical risk",
+          "grade": "strong",
+          "rq": "RQ6"
+        }
+      ],
+      "issues": [
+        {
+          "id": "ISS-06",
+          "title": "Cramér's V comparisons ignore cardinality bias",
+          "severity": "Medium",
+          "status": "Open"
+        }
+      ],
+      "representativeFigure": "phase5_effectsize_forest",
+      "representativeThumb": "artifacts/thumbs/phase5_effectsize_forest.webp",
+      "status": "Complete",
+      "statusNote": "Cell execution and generated artifacts are present. Not independently re-run in this workspace."
+    },
+    {
+      "id": "P6",
+      "num": "06",
+      "name": "Feature Engineering & Depth Analyses",
+      "shortName": "Feature engineering",
+      "section": "§07",
+      "route": "/features",
+      "purpose": "Build leak-aware behavioral features and test whether velocity, cohorts, hazards, hierarchical shrinkage and encoding choices add interpretable signal.",
+      "description": "This phase constructs expanding, train-only target encodings, prior-transaction statistics and velocity features. It adds cohorts, discrete-time hazard, merchant hierarchical empirical Bayes, repeated-fraud events and an hour-encoding comparison.",
+      "methods": [
+        "Expanding causal target encoding",
+        "Prior-transaction statistics",
+        "Velocity features",
+        "High-risk combinations",
+        "Cohort analysis",
+        "Kaplan–Meier + discrete hazard",
+        "Hierarchical empirical Bayes",
+        "Hour encoding comparison"
+      ],
+      "keyMetric": {
+        "label": "High-risk combination lift",
+        "value": 42.37,
+        "format": "multiplier2"
+      },
+      "keyFindings": [
+        "Night + risky category + amount ≥ $500 reaches a 22.08% fraud rate, 42.4× baseline.",
+        "38,005 transactions (2.05%) imply speeds above 1,000 km/h—physically impossible transitions.",
+        "No affected card has two distinct fraud events more than 7 days apart; compromises are bursty.",
+        "Fraud rate rises monotonically with implied speed and trailing-window counts."
+      ],
+      "limitations": [
+        "The high-risk combination is descriptive, not a causal effect.",
+        "The simulator gives fraud to nearly every card; cohorts and hazards are not production priors."
+      ],
+      "accent": "#E4572E",
+      "cellStart": 51,
+      "cellEnd": 54,
+      "cellRange": "51–54",
+      "notebookCells": 4,
+      "outputChars": 7576,
+      "figureCount": 12,
+      "tableCount": 5,
+      "interactiveCount": 0,
+      "artifactCount": 17,
+      "findingCount": 11,
+      "strongCount": 5,
+      "caveatCount": 1,
+      "rqs": [
+        "RQ4",
+        "RQ5",
+        "RQ6",
+        "RQ8"
+      ],
+      "topFindings": [
+        {
+          "id": "F-035",
+          "title": "Velocity features are the strongest behavioral signals: fraud rate rises monotonically with implied speed and with trailing-window counts (see next figure)",
+          "grade": "strong",
+          "rq": "RQ5"
+        },
+        {
+          "id": "F-038",
+          "title": "Leakage demo: naive group-mean TE correlates with the test target at ρ=0.048 vs causal ρ=0.048 — every published pipeline using full-data target encodings on this dataset overstates its signal",
+          "grade": "strong",
+          "rq": "RQ8"
+        },
+        {
+          "id": "F-039",
+          "title": "Interaction check: night + risky categories + amt≥500 multiplies risk 42× vs baseline — interactions materially beat main effects (SHAP interactions in §08 for the model view)",
+          "grade": "strong",
+          "rq": "RQ6"
+        },
+        {
+          "id": "F-043",
+          "title": "Repeated-fraud: 0.0% of affected cards experience ≥2 distinct fraud events; event-size distribution shows bursty multi-txn compromises rather than persistent re-fraud",
+          "grade": "strong",
+          "rq": "RQ5"
+        }
+      ],
+      "issues": [
+        {
+          "id": "ISS-05",
+          "title": "One strong finding is contradicted by its own evidence",
+          "severity": "Medium",
+          "status": "Open"
+        }
+      ],
+      "representativeFigure": "phase7_card_age_curve",
+      "representativeThumb": "artifacts/thumbs/phase7_card_age_curve.webp",
+      "status": "Complete",
+      "statusNote": "Cell execution and generated artifacts are present. Not independently re-run in this workspace."
+    },
+    {
+      "id": "P7",
+      "num": "07",
+      "name": "Model Closure & Evaluation",
+      "shortName": "Model lab",
+      "section": "§08",
+      "route": "/model",
+      "purpose": "Measure leak-free predictive performance, diagnose train→test transfer, calibrate probabilities and translate scores into review-budget economics.",
+      "description": "A 27-feature LightGBM is evaluated with adversarial validation, per-feature PSI, walk-forward CV and leave-card-out CV. Calibration, cost-sensitive thresholds, capture@k, learning curves, ablation, SHAP, PDP/ICE and segment errors complete the loop.",
+      "methods": [
+        "Adversarial validation",
+        "Population Stability Index",
+        "Walk-forward CV",
+        "LightGBM",
+        "Bootstrap PR-AUC CI",
+        "Calibration & temperature scaling",
+        "Cost-sensitive thresholds",
+        "Capture@k",
+        "Learning curve",
+        "Ablation",
+        "SHAP",
+        "PDP / ICE",
+        "Segment error analysis",
+        "Leave-card-out CV",
+        "Time-decay weighting",
+        "Monotonic constraints"
+      ],
+      "keyMetric": {
+        "label": "Test PR-AUC (OOD)",
+        "value": 0.55748,
+        "format": "decimal4"
+      },
+      "keyFindings": [
+        "Final model: test PR-AUC 0.5575 [0.5365, 0.5784], ROC-AUC 0.9677.",
+        "Walk-forward in-domain PR-AUC is 0.9510 ± 0.0152, but the same folds transfer at 0.4726 ± 0.0761.",
+        "Adversarial validation separates train and test at AUC 0.99999994; 7 of 27 features have severe PSI.",
+        "Top 1% of test by score captures 65.5% of fraud events and 68.7% of fraud dollars.",
+        "Removing card_prior_fraud raises test PR-AUC from 0.5575 to 0.8315, localizing the transfer failure."
+      ],
+      "limitations": [
+        "Test metrics measure out-of-distribution transfer, not typical generalization.",
+        "No epoch-level training history or hardware telemetry was logged.",
+        "The final model's probability calibration is not directly comparable to the temperature-scaling split."
+      ],
+      "accent": "#7A5AF8",
+      "cellStart": 55,
+      "cellEnd": 63,
+      "cellRange": "55–63",
+      "notebookCells": 9,
+      "outputChars": 13966,
+      "figureCount": 23,
+      "tableCount": 14,
+      "interactiveCount": 0,
+      "artifactCount": 37,
+      "findingCount": 19,
+      "strongCount": 11,
+      "caveatCount": 0,
+      "rqs": [
+        "RQ6",
+        "RQ8"
+      ],
+      "topFindings": [
+        {
+          "id": "F-046",
+          "title": "Adversarial validation achieves held-out AUC = 1.000 (FIX #3) — train and test are (near-)perfectly separable by cumulative-history features (top: te_category, te_state, n_prior). Every train→test metric in this notebook (final PR-AUC, ablation delta, learning curve) measures out-of-distribution transfer under temporal drift, NOT typical generalization; walk-forward CV within the train period is the honest generalization estimate, and the ablation / learning-curve deltas must be read through this OOD lens",
+          "grade": "strong",
+          "rq": "RQ8"
+        },
+        {
+          "id": "F-047",
+          "title": "PSI per feature confirms which features drive the AUC=1.000 adversarial split: 7 of 27 features are SEVERE (PSI≥0.25) — top: month_sin=6.51, n_prior=5.10, month_cos=1.45. This corroborates the ablation: expanding target encodings and cumulative-history counts carry the train/test drift, so their within-model weight is a drift signal rather than a fraud signal",
+          "grade": "strong",
+          "rq": "RQ8"
+        },
+        {
+          "id": "F-048",
+          "title": "Walk-forward CV (time-ordered, 4 folds): PR-AUC 0.9510 ± 0.0152 — single-carve-out estimates would understate variance (review rigor item)",
+          "grade": "strong",
+          "rq": "RQ8"
+        },
+        {
+          "id": "F-049",
+          "title": "OOD transfer quantified (FIX #10): the SAME fold models score PR-AUC 0.951±0.015 in-domain but 0.473±0.076 on the held-out test split — mean OOD gap = +0.478 per fold. This is the cleanest single number for 'within-train generalisation minus cross-boundary transfer' and should be cited whenever anyone quotes a single train→test metric on this dataset",
+          "grade": "strong",
+          "rq": "RQ8"
+        }
+      ],
+      "issues": [
+        {
+          "id": "ISS-02",
+          "title": "Train→test shift makes every test metric an OOD estimate",
+          "severity": "High",
+          "status": "Open"
+        },
+        {
+          "id": "ISS-03",
+          "title": "card_prior_fraud dominates the transfer failure",
+          "severity": "High",
+          "status": "Open"
+        },
+        {
+          "id": "ISS-10",
+          "title": "The cost-minimizing operating point is precision-costly",
+          "severity": "Medium",
+          "status": "Open"
+        },
+        {
+          "id": "ISS-11",
+          "title": "Optimal threshold is fragile to the false-positive cost",
+          "severity": "Medium",
+          "status": "Open"
+        }
+      ],
+      "representativeFigure": "phase8_ablation_decomposed",
+      "representativeThumb": "artifacts/thumbs/phase8_ablation_decomposed.webp",
+      "status": "Complete",
+      "statusNote": "Cell execution and generated artifacts are present. Not independently re-run in this workspace."
+    },
+    {
+      "id": "P8",
+      "num": "08",
+      "name": "Report & Reproducibility",
+      "shortName": "Report",
+      "section": "§09",
+      "route": "/artifacts",
+      "purpose": "Compile the graded findings ledger, figure/table index, reproducibility checklist and output bundle, and verify the expected phase-8 artifacts exist.",
+      "description": "The closing phase writes 64 findings, 129 figure captions and an 11-item reproducibility checklist. It verifies 9/9 expected phase-8 tables and creates a 17.9 MB output bundle (not included in this workspace).",
+      "methods": [
+        "Findings compilation",
+        "Figure index",
+        "Reproducibility checklist",
+        "Artifact verification",
+        "Output bundling"
+      ],
+      "keyMetric": {
+        "label": "Reproducibility checks passed",
+        "value": 11,
+        "format": "integer"
+      },
+      "keyFindings": [
+        "64 findings compiled: 30 strong, 27 supports, 6 caveats and 1 weak.",
+        "All 11 reproducibility checklist items are marked true.",
+        "The notebook reports 9/9 expected phase-8 tables present."
+      ],
+      "limitations": [
+        "The 17.9 MB bundle referenced by the run is not present in the workspace.",
+        "The report summary says 45 tables, while 46 CSV tables are present."
+      ],
+      "accent": "#626878",
+      "cellStart": 64,
+      "cellEnd": 65,
+      "cellRange": "64–65",
+      "notebookCells": 2,
+      "outputChars": 1195,
+      "figureCount": 0,
+      "tableCount": 3,
+      "interactiveCount": 0,
+      "artifactCount": 3,
+      "findingCount": 0,
+      "strongCount": 0,
+      "caveatCount": 0,
+      "rqs": [],
+      "topFindings": [],
+      "issues": [
+        {
+          "id": "ISS-12",
+          "title": "Evidence excerpts are capped at 400 characters",
+          "severity": "Medium",
+          "status": "Open"
+        },
+        {
+          "id": "ISS-13",
+          "title": "Phase numbering is inconsistent across artifacts",
+          "severity": "Medium",
+          "status": "Mitigated"
+        },
+        {
+          "id": "ISS-16",
+          "title": "Output bundle and full provenance digests are missing",
+          "severity": "Medium",
+          "status": "Open"
+        }
+      ],
+      "representativeFigure": null,
+      "representativeThumb": null,
+      "status": "Complete",
+      "statusNote": "Cell execution and generated artifacts are present. Not independently re-run in this workspace."
+    }
+  ],
+  "researchQuestions": [
+    {
+      "id": "RQ1",
+      "question": "Class imbalance & drift — how extreme and how stable is the fraud rate across time and splits?",
+      "findings": 6,
+      "strong": 2,
+      "supports": 3,
+      "caveat": 1,
+      "weak": 0,
+      "phases": [
+        "P0",
+        "P2"
+      ],
+      "phaseNames": [
+        "Data Audit & Generator Forensics",
+        "Bivariate & Interaction Analysis"
+      ],
+      "topFinding": {
+        "id": "F-003",
+        "title": "Class imbalance: train 7506/1296675 = 0.5789%, test 2145/555719 = 0.3860% — extreme imbalance, drift between splits detected",
+        "grade": "strong"
+      }
+    },
+    {
+      "id": "RQ2",
+      "question": "Amount structure — do fraud and non-fraud amount distributions differ, and by how much?",
+      "findings": 2,
+      "strong": 2,
+      "supports": 0,
+      "caveat": 0,
+      "weak": 0,
+      "phases": [
+        "P1",
+        "P5"
+      ],
+      "phaseNames": [
+        "Univariate Distributions",
+        "Statistical Testing & Effect Sizes"
+      ],
+      "topFinding": {
+        "id": "F-008",
+        "title": "Fraud amounts are strongly shifted right vs non-fraud (see §06 effect sizes: Cliff's delta with bootstrap CI)",
+        "grade": "strong"
+      }
+    },
+    {
+      "id": "RQ3",
+      "question": "Temporal concentration — when (hour / weekday / month / era) does fraud concentrate?",
+      "findings": 6,
+      "strong": 2,
+      "supports": 3,
+      "caveat": 0,
+      "weak": 1,
+      "phases": [
+        "P1",
+        "P3",
+        "P5"
+      ],
+      "phaseNames": [
+        "Univariate Distributions",
+        "Temporal Structure",
+        "Statistical Testing & Effect Sizes"
+      ],
+      "topFinding": {
+        "id": "F-010",
+        "title": "Night hours (00–06) show markedly elevated fraud rate vs volume share (see phase1_hour figure + §06 forest plot with CIs)",
+        "grade": "strong"
+      }
+    },
+    {
+      "id": "RQ4",
+      "question": "Geography — is risk spatially structured (state, city, ZIP3, card→merchant distance)?",
+      "findings": 6,
+      "strong": 0,
+      "supports": 3,
+      "caveat": 3,
+      "weak": 0,
+      "phases": [
+        "P0",
+        "P1",
+        "P2",
+        "P6"
+      ],
+      "phaseNames": [
+        "Data Audit & Generator Forensics",
+        "Univariate Distributions",
+        "Bivariate & Interaction Analysis",
+        "Feature Engineering & Depth Analyses"
+      ],
+      "topFinding": {
+        "id": "F-011",
+        "title": "State-level fraud-rate gradient exists but small-n states shrink toward baseline under EB — geographic claims restricted to well-populated states",
+        "grade": "supports"
+      }
+    },
+    {
+      "id": "RQ5",
+      "question": "Cardholder behavior — do velocity / history signatures separate fraud from genuine activity?",
+      "findings": 10,
+      "strong": 4,
+      "supports": 5,
+      "caveat": 1,
+      "weak": 0,
+      "phases": [
+        "P2",
+        "P3",
+        "P6"
+      ],
+      "phaseNames": [
+        "Bivariate & Interaction Analysis",
+        "Temporal Structure",
+        "Feature Engineering & Depth Analyses"
+      ],
+      "topFinding": {
+        "id": "F-016",
+        "title": "Per-card fraud rate is bimodal: 2.3% of cards never defrauded, 97.7% defrauded at least once — fraud is card-clustered, not exchangeable across transactions",
+        "grade": "strong"
+      }
+    },
+    {
+      "id": "RQ6",
+      "question": "Categorical risk structure — which categories, states, jobs and merchants carry elevated risk?",
+      "findings": 11,
+      "strong": 7,
+      "supports": 3,
+      "caveat": 1,
+      "weak": 0,
+      "phases": [
+        "P0",
+        "P1",
+        "P2",
+        "P5",
+        "P6",
+        "P7"
+      ],
+      "phaseNames": [
+        "Data Audit & Generator Forensics",
+        "Univariate Distributions",
+        "Bivariate & Interaction Analysis",
+        "Statistical Testing & Effect Sizes",
+        "Feature Engineering & Depth Analyses",
+        "Model Closure & Evaluation"
+      ],
+      "topFinding": {
+        "id": "F-013",
+        "title": "Category × hour interaction: online-shopping-type categories concentrate fraud in the 22:00–06:00 window (see heatmap)",
+        "grade": "strong"
+      }
+    },
+    {
+      "id": "RQ7",
+      "question": "Unsupervised separability — do embeddings, clusters and anomaly scores isolate fraud without labels?",
+      "findings": 4,
+      "strong": 1,
+      "supports": 3,
+      "caveat": 0,
+      "weak": 0,
+      "phases": [
+        "P4"
+      ],
+      "phaseNames": [
+        "Advanced Visualization & Dimensionality Reduction"
+      ],
+      "topFinding": {
+        "id": "F-029",
+        "title": "Unsupervised anomaly detection isolates fraud only weakly (AUCs 0.731–0.881): fraud is contextual relative to card history, not pointwise-outlying — motivates per-card features (§07)",
+        "grade": "strong"
+      }
+    },
+    {
+      "id": "RQ8",
+      "question": "Causal predictive ceiling — what leak-free performance is achievable and which feature families drive it?",
+      "findings": 19,
+      "strong": 12,
+      "supports": 7,
+      "caveat": 0,
+      "weak": 0,
+      "phases": [
+        "P6",
+        "P7"
+      ],
+      "phaseNames": [
+        "Feature Engineering & Depth Analyses",
+        "Model Closure & Evaluation"
+      ],
+      "topFinding": {
+        "id": "F-038",
+        "title": "Leakage demo: naive group-mean TE correlates with the test target at ρ=0.048 vs causal ρ=0.048 — every published pipeline using full-data target encodings on this dataset overstates its signal",
+        "grade": "strong"
+      }
+    }
+  ],
+  "technologies": [
+    "Python 3.13",
+    "pandas 2.2.3",
+    "NumPy 2.1.3",
+    "scikit-learn 1.6.1",
+    "LightGBM 4.6.0",
+    "SHAP 0.54.1",
+    "statsmodels 0.15.0",
+    "UMAP 0.5.12",
+    "ruptures 1.1.10",
+    "Plotly 5.24.1",
+    "matplotlib 3.10.0",
+    "seaborn 0.13.2",
+    "missingno 0.5.2"
+  ],
+  "environment": {
+    "pandas": "2.2.3",
+    "numpy": "2.1.3",
+    "scipy": "1.16.3",
+    "scikit-learn": "1.6.1",
+    "statsmodels": "0.15.0",
+    "seaborn": "0.13.2",
+    "matplotlib": "3.10.0",
+    "lightgbm": "4.6.0",
+    "shap": "0.54.1",
+    "umap-learn": "0.5.12",
+    "ruptures": "1.1.10",
+    "missingno": "0.5.2",
+    "plotly": "5.24.1",
+    "kaleido": "1.5.0",
+    "kagglehub": "1.0.2",
+    "torch": "2.11.0+cpu",
+    "python": "3.13.16",
+    "platform": "Google Colab"
+  },
+  "sources": [
+    {
+      "name": "fraudTrain.csv",
+      "role": "Raw training data",
+      "present": false,
+      "bytes": 368259891.2,
+      "hash": "fd7139200dbfcbed",
+      "note": "Referenced; not included."
+    },
+    {
+      "name": "fraudTest.csv",
+      "role": "Raw test data",
+      "present": false,
+      "bytes": 157705830.4,
+      "hash": "12d553ab19440c75",
+      "note": "Referenced; not included."
+    },
+    {
+      "name": "fraud_eda_colab.ipynb",
+      "role": "Research notebook",
+      "present": true,
+      "bytes": 4052809,
+      "hash": null,
+      "note": "66 cells, 33 code cells, outputs embedded."
+    },
+    {
+      "name": "findings_ledger.json",
+      "role": "Evidence ledger",
+      "present": true,
+      "bytes": 29737,
+      "hash": null,
+      "note": "64 records; evidence capped at 400 chars."
+    },
+    {
+      "name": "figures/",
+      "role": "Generated figures",
+      "present": true,
+      "bytes": 21055859,
+      "hash": null,
+      "note": "129 PNG + 7 HTML."
+    },
+    {
+      "name": "tables/",
+      "role": "Generated tables",
+      "present": true,
+      "bytes": 415794,
+      "hash": null,
+      "note": "46 CSV tables."
+    }
+  ],
+  "reproducibility": {
+    "checklistPassed": 11,
+    "checklistTotal": 11,
+    "checklist": [
+      {
+        "item": "global random seed fixed",
+        "evidence": "SEED=42",
+        "ok": true
+      },
+      {
+        "item": "all sampling fractions recorded",
+        "evidence": "{'map_scatter': {'fraud_kept': 9651, 'nonfraud_kept': 18427, 'nonfraud_frac': 0.01, 'n_points': 28078}, 'dr_embed': {'n': 50000, 'strategy': 'proportional stratified, seed=42'}}",
+        "ok": true
+      },
+      {
+        "item": "train/test time boundaries stated",
+        "evidence": "{'train_start': '2019-01-01 00:00:18', 'train_end': '2020-06-21 12:13:37', 'test_start': '2020-06-21 12:14:25', 'test_end': '2020-12-31 23:59:34', 'gap_days': 0.0005555555555555556}",
+        "ok": true
+      },
+      {
+        "item": "data-version hash recorded",
+        "evidence": "{'fraudTrain.csv': {'sha256_16': 'fd7139200dbfcbed', 'mb': 351.2}, 'fraudTest.csv': {'sha256_16': '12d553ab19440c75', 'mb': 150.4}}",
+        "ok": true
+      },
+      {
+        "item": "environment pinned per-run",
+        "evidence": "/content/outputs/logs/env_snapshot.json",
+        "ok": true
+      },
+      {
+        "item": "effect sizes + CIs + n with every test",
+        "evidence": "see §06 tables",
+        "ok": true
+      },
+      {
+        "item": "consistent colors (fraud=red/orange, non-fraud=blue)",
+        "evidence": "config §0.1",
+        "ok": true
+      },
+      {
+        "item": "consistent category labels across plots",
+        "evidence": "CATEGORY_ORDER",
+        "ok": true
+      },
+      {
+        "item": "DR hyperparameters reported",
+        "evidence": "perplexity / n_neighbors / min_dist in figure titles + §05",
+        "ok": true
+      },
+      {
+        "item": "walk-forward CV instead of single carve-out",
+        "evidence": "4 folds, mean±sd reported",
+        "ok": true
+      },
+      {
+        "item": "LightGBM determinism caveat",
+        "evidence": "deterministic=True + force_row_wise=True set; n_jobs=-1 can still yield marginal nondeterminism on some builds — rerun-twice advised for exactness",
+        "ok": true
+      }
+    ],
+    "absentSources": [
+      {
+        "name": "fraudTrain.csv",
+        "role": "Raw training data",
+        "present": false,
+        "bytes": 368259891.2,
+        "hash": "fd7139200dbfcbed",
+        "note": "Referenced; not included."
+      },
+      {
+        "name": "fraudTest.csv",
+        "role": "Raw test data",
+        "present": false,
+        "bytes": 157705830.4,
+        "hash": "12d553ab19440c75",
+        "note": "Referenced; not included."
+      }
+    ],
+    "warnings": 9,
+    "errorOutputs": 0,
+    "cellsWithOutput": 31,
+    "codeCells": 33
+  },
+  "issues": [
+    {
+      "id": "ISS-01",
+      "title": "Raw source datasets are absent from the workspace",
+      "severity": "High",
+      "category": "Reproducibility",
+      "scope": "Workspace",
+      "status": "Open",
+      "confidence": "Confirmed",
+      "summary": "Only the notebook, derived tables, figures and logs are present. fraudTrain.csv and fraudTest.csv are referenced by hash and size but are not in the folder.",
+      "evidence": [
+        "logs/data_fingerprint.json records 351.2 MB and 150.4 MB source files.",
+        "No CSV or ZIP larger than 1 MB exists under the project root."
+      ],
+      "impact": "The analytical outputs can be inspected but the notebook cannot be rerun end-to-end from this folder alone.",
+      "action": "Add the Kaggle source files (or an authorized copy) and run the rebuild pipeline with FRAUD_PROJECT_ROOT set.",
+      "sources": [
+        "logs/data_fingerprint.json",
+        "fraud_eda_colab(1).ipynb"
+      ],
+      "phase": "P0"
+    },
+    {
+      "id": "ISS-02",
+      "title": "Train→test shift makes every test metric an OOD estimate",
+      "severity": "High",
+      "category": "Model risk",
+      "scope": "Project",
+      "status": "Open",
+      "confidence": "Confirmed",
+      "summary": "Train and test are almost perfectly separable by cumulative-history features. The final model's test PR-AUC is a cross-boundary transfer estimate, not a typical generalization estimate.",
+      "evidence": [
+        "Adversarial validation held-out AUC = 1.000 (0.99999994).",
+        "7 of 27 model features have severe PSI (≥0.25).",
+        "Walk-forward PR-AUC 0.9510 ± 0.0152 versus test transfer 0.4726 ± 0.0761 for the same folds."
+      ],
+      "impact": "Quoting 0.5575 as “model accuracy” without the OOD context would overstate production readiness.",
+      "action": "Report in-domain and cross-boundary metrics side by side; validate on a genuinely external, later cohort before deployment.",
+      "sources": [
+        "phase8_psi.csv",
+        "phase8_walkforward_cv.csv",
+        "phase8_wf_vs_test.csv",
+        "findings_ledger.csv · RQ8"
+      ],
+      "phase": "P7"
+    },
+    {
+      "id": "ISS-03",
+      "title": "card_prior_fraud dominates the transfer failure",
+      "severity": "High",
+      "category": "Model risk",
+      "scope": "Project",
+      "status": "Open",
+      "confidence": "Confirmed",
+      "summary": "Removing the causal prior-fraud count raises test PR-AUC from 0.5575 to 0.8315. The feature is causally constructed but its distribution shifts sharply across the split.",
+      "evidence": [
+        "phase8_ablation_decomposed.csv: FULL 0.5575 vs MINUS card_prior_fraud 0.8315.",
+        "PSI for card_prior_fraud = 0.327 (severe).",
+        "97.7% of cards already have at least one train-period fraud event in the simulator."
+      ],
+      "impact": "The feature may encode campaign timing / generator mechanics rather than transferable fraud behavior.",
+      "action": "Retrain without card_prior_fraud and compare on external data; model fraud-label latency explicitly before using prior fraud in real time.",
+      "sources": [
+        "phase8_ablation_decomposed.csv",
+        "phase8_psi.csv",
+        "phase2_card_profiles.csv"
+      ],
+      "phase": "P7"
+    },
+    {
+      "id": "ISS-04",
+      "title": "Simulator artifacts limit external validity",
+      "severity": "High",
+      "category": "External validity",
+      "scope": "Project",
+      "status": "Open",
+      "confidence": "Confirmed",
+      "summary": "Several apparently predictive structures are properties of the Sparkov generator: near-universal card fraud, per-transaction merchant coordinate jitter, deterministic-ish merchant categories and impossible travel speeds.",
+      "evidence": [
+        "97.7% of cards have at least one fraud event.",
+        "Median per-merchant latitude standard deviation = 5.10° (~566 km); coordinates are not fixed stores.",
+        "38,005 transactions (2.05%) imply speeds above 1,000 km/h.",
+        "Merchant_single_category = False; max categories per merchant = 2."
+      ],
+      "impact": "Distance, merchant and card-history priors should not be transferred to production without revalidation.",
+      "action": "Re-run the feature and cohort analyses on real transaction data with stable merchant identifiers and label latency.",
+      "sources": [
+        "phase0_generator_forensics.csv",
+        "phase7_speed_rate_table.csv",
+        "findings.md · generator boundary"
+      ],
+      "phase": "P0"
+    },
+    {
+      "id": "ISS-05",
+      "title": "One strong finding is contradicted by its own evidence",
+      "severity": "Medium",
+      "category": "Evidence quality",
+      "scope": "Evidence",
+      "status": "Open",
+      "confidence": "Confirmed",
+      "summary": "The target-encoding leakage demo reports naive ρ=0.048 and causal ρ=0.048, yet its finding says full-data encoding overstates the signal.",
+      "evidence": [
+        "notebook cell 52 output: naive TE corr 0.048, causal TE corr 0.048.",
+        "findings_ledger.csv marks the claim “strong”."
+      ],
+      "impact": "A reader could cite an inflation effect that the recorded numbers do not show.",
+      "action": "Revise the claim to a null result or supply a stronger leakage metric; keep the causal encoding as a methodological safeguard.",
+      "sources": [
+        "findings_ledger.csv · RQ8",
+        "notebook cell 52 output"
+      ],
+      "phase": "P6"
+    },
+    {
+      "id": "ISS-06",
+      "title": "Cramér's V comparisons ignore cardinality bias",
+      "severity": "Medium",
+      "category": "Statistics",
+      "scope": "Project",
+      "status": "Open",
+      "confidence": "Confirmed",
+      "summary": "ZIP3 has 532 levels and V=0.148; category has 14 levels and V=0.067. Raw V is not comparable across these cardinalities.",
+      "evidence": [
+        "phase5_chi2_cramers.csv"
+      ],
+      "impact": "“Category is the strongest categorical association” is not established by the table.",
+      "action": "Use bias-corrected Cramér's V or a permutation baseline; rank only within comparable cardinalities.",
+      "sources": [
+        "phase5_chi2_cramers.csv"
+      ],
+      "phase": "P5"
+    },
+    {
+      "id": "ISS-07",
+      "title": "Age contract violation is unresolved",
+      "severity": "Low",
+      "category": "Data quality",
+      "scope": "Project",
+      "status": "Open",
+      "confidence": "Confirmed",
+      "summary": "The minimum age is 13.9 years, below the ~18 expected for a cardholder. The record is flagged but not corrected.",
+      "evidence": [
+        "phase0_contracts.csv · age min/max FLAG"
+      ],
+      "impact": "Minor for aggregate EDA; potentially material for age-segment analysis or any production-like use.",
+      "action": "Inspect the source rows and decide whether to exclude, cap or retain with a documented rule.",
+      "sources": [
+        "phase0_contracts.csv"
+      ],
+      "phase": "P0"
+    },
+    {
+      "id": "ISS-08",
+      "title": "ZIP codes lose leading zeros",
+      "severity": "Medium",
+      "category": "Data quality",
+      "scope": "Project",
+      "status": "Open",
+      "confidence": "Confirmed",
+      "summary": "116,389 transactions have ZIP values below 10,000, consistent with leading-zero loss after numeric parsing.",
+      "evidence": [
+        "phase0_contracts.csv · zip < 10000 (leading-zero loss artifact)"
+      ],
+      "impact": "ZIP-level joins and geography analyses may misclassify Northeast ZIPs.",
+      "action": "Read ZIP as string with zero-padding; re-run ZIP3 aggregation if exact geography matters.",
+      "sources": [
+        "phase0_contracts.csv"
+      ],
+      "phase": "P0"
+    },
+    {
+      "id": "ISS-09",
+      "title": "Structural missingness reaches 10.79%",
+      "severity": "Medium",
+      "category": "Data quality",
+      "scope": "Project",
+      "status": "Open",
+      "confidence": "Confirmed",
+      "summary": "Prior-transaction and z-score features are missing for the first transaction on a card; amt_z_prior is missing in 10.79% of rows.",
+      "evidence": [
+        "phase0_schema.csv · 11 columns with missingness"
+      ],
+      "impact": "Models and PDP routines must handle NaN explicitly; dropping rows would bias first-transaction behavior.",
+      "action": "Retain explicit missing indicators and document LightGBM's native NaN handling.",
+      "sources": [
+        "phase0_schema.csv"
+      ],
+      "phase": "P0"
+    },
+    {
+      "id": "ISS-10",
+      "title": "The cost-minimizing operating point is precision-costly",
+      "severity": "Medium",
+      "category": "Operations",
+      "scope": "Project",
+      "status": "Open",
+      "confidence": "Confirmed",
+      "summary": "At the cost-min threshold (≈0.00001), recall is 84.2% but 20,322 genuine transactions are flagged (precision 8.2%). At a 1% review budget, precision is 25.3% and 4,153 genuine transactions are flagged.",
+      "evidence": [
+        "phase8_threshold_table.csv",
+        "phase8_capture_at_k.csv"
+      ],
+      "impact": "The economically optimal threshold may be operationally infeasible without review capacity.",
+      "action": "Choose an operating point against measured analyst capacity; report expected false-positive workload alongside recall.",
+      "sources": [
+        "phase8_threshold_table.csv",
+        "phase8_capture_at_k.csv"
+      ],
+      "phase": "P7"
+    },
+    {
+      "id": "ISS-11",
+      "title": "Optimal threshold is fragile to the false-positive cost",
+      "severity": "Medium",
+      "category": "Decision risk",
+      "scope": "Project",
+      "status": "Open",
+      "confidence": "Confirmed",
+      "summary": "Across $1–$50 false-positive friction, the optimal threshold moves from 0.0000 to 0.0004 and recall ranges from 91.6% to 70.2%.",
+      "evidence": [
+        "phase8_cost_sensitivity.csv"
+      ],
+      "impact": "A single cost assumption should not be treated as a stable policy.",
+      "action": "Present a cost-sensitivity range and tie the final threshold to a governance decision.",
+      "sources": [
+        "phase8_cost_sensitivity.csv"
+      ],
+      "phase": "P7"
+    },
+    {
+      "id": "ISS-12",
+      "title": "Evidence excerpts are capped at 400 characters",
+      "severity": "Medium",
+      "category": "Evidence quality",
+      "scope": "Evidence",
+      "status": "Open",
+      "confidence": "Confirmed",
+      "summary": "The notebook's log_finding function stores str(evidence)[:400]. The ledger therefore contains excerpts, not full supporting objects.",
+      "evidence": [
+        "notebook cell 8 · log_finding",
+        "maximum evidence length in findings_ledger.json = 400"
+      ],
+      "impact": "Some findings cannot be independently reproduced from the ledger alone.",
+      "action": "Store full structured evidence and stable cell/line references; keep the short excerpt for display.",
+      "sources": [
+        "logs/findings_ledger.json",
+        "notebook cell 8"
+      ],
+      "phase": "P8"
+    },
+    {
+      "id": "ISS-13",
+      "title": "Phase numbering is inconsistent across artifacts",
+      "severity": "Medium",
+      "category": "Metadata",
+      "scope": "Workspace",
+      "status": "Mitigated",
+      "confidence": "Confirmed",
+      "summary": "Figure/table prefixes use phase0..phase5, phase7, phase8; the findings ledger uses section-phase 1..8. Phase 6 is absent from artifact names.",
+      "evidence": [
+        "tables/ has no phase6_* files.",
+        "findings_ledger.csv uses phase 1 for the §01 audit."
+      ],
+      "impact": "Naive joins on phase number mis-associate findings and artifacts.",
+      "action": "This dashboard uses canonical P0–P8 IDs with explicit source-prefix and ledger mappings. The source artifacts remain unchanged.",
+      "sources": [
+        "tables/ directory",
+        "logs/findings_ledger.json"
+      ],
+      "phase": "P8"
+    },
+    {
+      "id": "ISS-14",
+      "title": "Runtime and resource telemetry is largely absent",
+      "severity": "Medium",
+      "category": "Observability",
+      "scope": "Project",
+      "status": "Open",
+      "confidence": "Confirmed",
+      "summary": "Only the end-to-end run window, six embedding timings and one SHAP timing are recorded. There is no per-phase duration, CPU/GPU utilization, VRAM or inference-latency series.",
+      "evidence": [
+        "findings.md: run 16:30:06 → 18:01:59 (91.9 min).",
+        "notebook cell 42: t-SNE 321/352/410 s; UMAP 51/36/20 s.",
+        "notebook cell 63: SHAP 163.1 s."
+      ],
+      "impact": "The performance page cannot attribute cost to phases or hardware.",
+      "action": "Instrument phase timers, device telemetry and inference latency in the next run.",
+      "sources": [
+        "logs/findings.md",
+        "notebook cells 42 and 63"
+      ],
+      "phase": "P4"
+    },
+    {
+      "id": "ISS-15",
+      "title": "Seven interactive maps have no static preview",
+      "severity": "Low",
+      "category": "Artifact quality",
+      "scope": "Project",
+      "status": "Accepted",
+      "confidence": "Confirmed",
+      "summary": "Plotly 5.24.1 is incompatible with Kaleido 1.5.0, so static map exports were skipped. The HTML artifacts were retained and are included in this gallery.",
+      "evidence": [
+        "notebook cell 4: UserWarning about Plotly/Kaleido versions.",
+        "‘kaleido PNG skipped’ appears for 7 map/3D artifacts."
+      ],
+      "impact": "Gallery thumbnails cannot be generated for those artifacts; interactive HTML remains available.",
+      "action": "Pin Plotly ≥6.1.1 or Kaleido 0.2.1 if static previews are required.",
+      "sources": [
+        "notebook cell 4 output",
+        "figures/*.html"
+      ],
+      "phase": "P4"
+    },
+    {
+      "id": "ISS-16",
+      "title": "Output bundle and full provenance digests are missing",
+      "severity": "Medium",
+      "category": "Reproducibility",
+      "scope": "Workspace",
+      "status": "Open",
+      "confidence": "Confirmed",
+      "summary": "The notebook reports a 17.9 MB zip bundle, but no bundle exists. Data fingerprints are 16 hex characters rather than full SHA-256 values.",
+      "evidence": [
+        "notebook cell 65 output",
+        "logs/data_fingerprint.json · sha256_16"
+      ],
+      "impact": "Artifact-level integrity and one-click restoration are weaker than claimed.",
+      "action": "Include the bundle or regenerate it; store full digests and a manifest.",
+      "sources": [
+        "notebook cell 65",
+        "logs/data_fingerprint.json"
+      ],
+      "phase": "P8"
+    }
+  ],
+  "auditNotes": [
+    {
+      "id": "AN-01",
+      "title": "The leakage-demo claim is not supported by its own numbers",
+      "status": "contradicted",
+      "claim": "The ledger says every pipeline using full-data target encoding overstates its signal.",
+      "observation": "The recorded Spearman correlations are 0.048 for the naive encoding and 0.048 for the causal encoding—equal at the displayed precision. The notebook output does not demonstrate inflation.",
+      "implication": "Keep the causal encoding as good practice, but do not use this finding as evidence that naive encoding inflated this dataset's signal.",
+      "sources": [
+        "findings_ledger.csv · RQ8 leakage demo",
+        "notebook cell 52 output"
+      ],
+      "phase": "P6"
+    },
+    {
+      "id": "AN-02",
+      "title": "“Bimodal” card fraud is really zero-inflation plus a broad rate distribution",
+      "status": "wording",
+      "claim": "Per-card fraud rate is described as bimodal because 2.3% of cards never see fraud and 97.7% see it at least once.",
+      "observation": "The 999 card profiles show 23 cards with zero fraud and 976 with one or more events. The positive cards have fraud rates spread from near zero to 100%; that is not a two-peak distribution.",
+      "implication": "The substantive point—fraud is card-clustered—stands. The word “bimodal” should be replaced with “zero-inflated / near-universal exposure.”",
+      "sources": [
+        "phase2_card_profiles.csv",
+        "findings_ledger.csv · RQ5"
+      ],
+      "phase": "P2"
+    },
+    {
+      "id": "AN-03",
+      "title": "Merchant→category is near-deterministic, not strictly deterministic",
+      "status": "discrepancy",
+      "claim": "The ledger calls merchant→category deterministic collinearity.",
+      "observation": "The generator forensics record merchant_single_category = False and max categories per merchant = 2.",
+      "implication": "Treat merchant and category as near-redundant representations with a small number of exceptions, not as an exact functional dependency.",
+      "sources": [
+        "phase0_generator_forensics.csv",
+        "findings_ledger.csv · RQ6"
+      ],
+      "phase": "P0"
+    },
+    {
+      "id": "AN-04",
+      "title": "Cramér's V is compared across very different cardinalities",
+      "status": "method",
+      "claim": "Category is described as having the strongest categorical association with fraud.",
+      "observation": "Category V = 0.067 over 14 levels, but ZIP3 V = 0.148 over 532 levels. Uncorrected Cramér's V rises mechanically with cardinality and the table does not apply a bias correction.",
+      "implication": "Do not rank categorical variables by raw V. Use a bias-corrected statistic or permutation null before declaring a strongest categorical association.",
+      "sources": [
+        "phase5_chi2_cramers.csv",
+        "findings_ledger.csv · RQ6"
+      ],
+      "phase": "P5"
+    },
+    {
+      "id": "AN-05",
+      "title": "Artifact count differs from the notebook's closing summary",
+      "status": "discrepancy",
+      "claim": "The report cell prints “tables: 45”.",
+      "observation": "The workspace contains 46 CSV tables, including figure_index.csv, findings_ledger.csv and reproducibility_checklist.csv.",
+      "implication": "Counts should be taken after all closing artifacts are written. The dashboard uses the observed 46.",
+      "sources": [
+        "notebook cell 65 output",
+        "tables/ directory"
+      ],
+      "phase": "P8"
+    }
+  ],
+  "limits": [
+    {
+      "title": "Raw source files absent",
+      "detail": "fraudTrain.csv and fraudTest.csv are referenced by hash and size but not present. The notebook cannot be re-run end-to-end from this folder."
+    },
+    {
+      "title": "Single research program",
+      "detail": "The workspace contains one research program with nine phases. Comparisons are between model variants and folds, not independent projects."
+    },
+    {
+      "title": "No native Power BI authoring runtime",
+      "detail": "powerbi/ contains import-ready CSVs, DAX and a theme; no PBIX or PBIP exists or was generated."
+    },
+    {
+      "title": "Partial runtime telemetry",
+      "detail": "The run records total wall clock, six embedding durations and SHAP duration. It does not record a per-phase or per-model runtime ledger."
+    }
+  ],
+  "milestones": [
+    {
+      "phase": "P0",
+      "title": "Data Audit & Generator Forensics",
+      "cells": "13–18",
+      "metric": {
+        "label": "Transactions audited",
+        "value": 1852394,
+        "format": "integer"
+      },
+      "findings": 7,
+      "artifacts": 8
+    },
+    {
+      "phase": "P1",
+      "title": "Univariate Distributions",
+      "cells": "19–26",
+      "metric": {
+        "label": "Amount separation (KS D)",
+        "value": 0.7238,
+        "format": "decimal3"
+      },
+      "findings": 5,
+      "artifacts": 30
+    },
+    {
+      "phase": "P2",
+      "title": "Bivariate & Interaction Analysis",
+      "cells": "27–36",
+      "metric": {
+        "label": "shopping_net fraud rate",
+        "value": 0.015927,
+        "format": "percent2"
+      },
+      "findings": 9,
+      "artifacts": 33
+    },
+    {
+      "phase": "P3",
+      "title": "Temporal Structure",
+      "cells": "37–40",
+      "metric": {
+        "label": "Lag-1 fraud-rate autocorrelation",
+        "value": 0.503,
+        "format": "decimal3"
+      },
+      "findings": 4,
+      "artifacts": 13
+    },
+    {
+      "phase": "P4",
+      "title": "Advanced Visualization & Dimensionality Reduction",
+      "cells": "41–48",
+      "metric": {
+        "label": "Best embedding separability (AUC)",
+        "value": 0.8157,
+        "format": "decimal3"
+      },
+      "findings": 4,
+      "artifacts": 32
+    },
+    {
+      "phase": "P5",
+      "title": "Statistical Testing & Effect Sizes",
+      "cells": "49–50",
+      "metric": {
+        "label": "Amount effect (Cliff's delta)",
+        "value": 0.6686,
+        "format": "decimal3"
+      },
+      "findings": 5,
+      "artifacts": 9
+    },
+    {
+      "phase": "P6",
+      "title": "Feature Engineering & Depth Analyses",
+      "cells": "51–54",
+      "metric": {
+        "label": "High-risk combination lift",
+        "value": 42.37,
+        "format": "multiplier2"
+      },
+      "findings": 11,
+      "artifacts": 17
+    },
+    {
+      "phase": "P7",
+      "title": "Model Closure & Evaluation",
+      "cells": "55–63",
+      "metric": {
+        "label": "Test PR-AUC (OOD)",
+        "value": 0.55748,
+        "format": "decimal4"
+      },
+      "findings": 19,
+      "artifacts": 37
+    },
+    {
+      "phase": "P8",
+      "title": "Report & Reproducibility",
+      "cells": "64–65",
+      "metric": {
+        "label": "Reproducibility checks passed",
+        "value": 11,
+        "format": "integer"
+      },
+      "findings": 0,
+      "artifacts": 3
+    }
+  ]
+}

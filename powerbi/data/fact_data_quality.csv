@@ -1,0 +1,11 @@
+﻿metric,value,unit,note
+transactions,1852394.0,rows,All train + test transactions.
+analytical_columns,71.0,columns,Raw plus derived columns after audit.
+raw_columns,22.0,columns,Original Sparkov columns before feature engineering.
+missing_columns,11.0,columns,Columns with at least one missing value.
+max_missing_pct,0.1079,percent,Maximum column-level missing share (amt_z_prior).
+duplicate_trans_num,0.0,rows,Duplicate transaction identifiers.
+flagged_contracts,1.0,checks,Age minimum is 13.9 years.
+contracts,10.0,checks,Explicit data-quality checks recorded.
+zip_under_10000,116389.0,rows,Consistent with lost ZIP leading zeros.
+processed_memory_mb,636.4,MB,In-memory processed DataFrame.

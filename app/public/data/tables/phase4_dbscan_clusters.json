@@ -1,0 +1,1 @@
+{"id":"phase4_dbscan_clusters","columns":["cluster","n","fraud_rate"],"types":{"cluster":"text","n":"integer","fraud_rate":"number"},"rows":[{"cluster":"noise","n":395,"fraud_rate":0.060759493670886},{"cluster":"0","n":9605,"fraud_rate":0.0015616866215512}]}

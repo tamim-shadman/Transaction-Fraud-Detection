@@ -1,0 +1,9 @@
+﻿scope,scope_label,sort_order
+data,Data & splits,1
+drift,Drift,2
+economics,Economics,3
+evidence,Evidence quality,4
+features,Features,5
+logs,Run & logs,6
+model,Model,7
+temporal,Temporal,8

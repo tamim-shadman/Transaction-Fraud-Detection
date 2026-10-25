@@ -1,0 +1,11 @@
+﻿contract,observed_value,status
+age min / max (Sparkov expects ~18–100),13.9 / 96.2,FLAG
+amt min / max,1.00 / 28948.90,PASS
+"lat in [-90, 90]",20.0 / 66.7,PASS
+"long in [-180, 180]",-165.7 / -68.0,PASS
+merch coords in bounds,"(19.0,67.5) / (-166.7,-67.0)",PASS
+city_pop <= 0 count,0,INFO
+zip < 10000 (leading-zero loss artifact),"116,389",INFO
+is_fraud domain,"[0, 1]",PASS
+fully duplicated rows (excl. split),0,PASS
+duplicate trans_num,0,PASS

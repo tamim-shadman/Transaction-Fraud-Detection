@@ -1,0 +1,436 @@
+[
+  {
+    "viewport": "desktop",
+    "route": "/",
+    "bodyBg": "rgb(245, 241, 234)",
+    "bodyColor": "rgb(28, 35, 48)",
+    "bodyFont": "\"Manrope Variable\", \"Segoe UI\", sans-serif",
+    "mainWidth": 1172,
+    "bodyHeight": 2733,
+    "overflow": 0,
+    "chartHeights": [
+      230,
+      230,
+      230
+    ],
+    "emptyPanels": 0,
+    "smallText": 44,
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/data-audit",
+    "bodyBg": "rgb(245, 241, 234)",
+    "bodyColor": "rgb(28, 35, 48)",
+    "bodyFont": "\"Manrope Variable\", \"Segoe UI\", sans-serif",
+    "mainWidth": 1172,
+    "bodyHeight": 3091,
+    "overflow": 0,
+    "chartHeights": [
+      310,
+      252
+    ],
+    "emptyPanels": 0,
+    "smallText": 40,
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/distributions",
+    "bodyBg": "rgb(245, 241, 234)",
+    "bodyColor": "rgb(28, 35, 48)",
+    "bodyFont": "\"Manrope Variable\", \"Segoe UI\", sans-serif",
+    "mainWidth": 1172,
+    "bodyHeight": 2871,
+    "overflow": 0,
+    "chartHeights": [
+      320,
+      365,
+      260,
+      205
+    ],
+    "emptyPanels": 0,
+    "smallText": 16,
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/interactions",
+    "bodyBg": "rgb(245, 241, 234)",
+    "bodyColor": "rgb(28, 35, 48)",
+    "bodyFont": "\"Manrope Variable\", \"Segoe UI\", sans-serif",
+    "mainWidth": 1172,
+    "bodyHeight": 2979,
+    "overflow": 0,
+    "chartHeights": [
+      375,
+      230,
+      330,
+      330,
+      290,
+      220
+    ],
+    "emptyPanels": 0,
+    "smallText": 14,
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/temporal",
+    "bodyBg": "rgb(245, 241, 234)",
+    "bodyColor": "rgb(28, 35, 48)",
+    "bodyFont": "\"Manrope Variable\", \"Segoe UI\", sans-serif",
+    "mainWidth": 1172,
+    "bodyHeight": 2023,
+    "overflow": 0,
+    "chartHeights": [
+      355,
+      330
+    ],
+    "emptyPanels": 0,
+    "smallText": 16,
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/advanced",
+    "bodyBg": "rgb(245, 241, 234)",
+    "bodyColor": "rgb(28, 35, 48)",
+    "bodyFont": "\"Manrope Variable\", \"Segoe UI\", sans-serif",
+    "mainWidth": 1172,
+    "bodyHeight": 2053,
+    "overflow": 0,
+    "chartHeights": [
+      230,
+      300,
+      260,
+      260
+    ],
+    "emptyPanels": 0,
+    "smallText": 12,
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/statistics",
+    "bodyBg": "rgb(245, 241, 234)",
+    "bodyColor": "rgb(28, 35, 48)",
+    "bodyFont": "\"Manrope Variable\", \"Segoe UI\", sans-serif",
+    "mainWidth": 1172,
+    "bodyHeight": 2670,
+    "overflow": 0,
+    "chartHeights": [
+      330,
+      270,
+      310,
+      330
+    ],
+    "emptyPanels": 0,
+    "smallText": 16,
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/features",
+    "bodyBg": "rgb(245, 241, 234)",
+    "bodyColor": "rgb(28, 35, 48)",
+    "bodyFont": "\"Manrope Variable\", \"Segoe UI\", sans-serif",
+    "mainWidth": 1172,
+    "bodyHeight": 2822,
+    "overflow": 0,
+    "chartHeights": [
+      270,
+      300,
+      335,
+      205
+    ],
+    "emptyPanels": 0,
+    "smallText": 17,
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/model",
+    "bodyBg": "rgb(245, 241, 234)",
+    "bodyColor": "rgb(28, 35, 48)",
+    "bodyFont": "\"Manrope Variable\", \"Segoe UI\", sans-serif",
+    "mainWidth": 1172,
+    "bodyHeight": 3873,
+    "overflow": 0,
+    "chartHeights": [
+      300,
+      300,
+      430,
+      245,
+      240
+    ],
+    "emptyPanels": 0,
+    "smallText": 53,
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/economics",
+    "bodyBg": "rgb(245, 241, 234)",
+    "bodyColor": "rgb(28, 35, 48)",
+    "bodyFont": "\"Manrope Variable\", \"Segoe UI\", sans-serif",
+    "mainWidth": 1172,
+    "bodyHeight": 3478,
+    "overflow": 0,
+    "chartHeights": [
+      300,
+      270,
+      310
+    ],
+    "emptyPanels": 0,
+    "smallText": 42,
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/findings",
+    "bodyBg": "rgb(245, 241, 234)",
+    "bodyColor": "rgb(28, 35, 48)",
+    "bodyFont": "\"Manrope Variable\", \"Segoe UI\", sans-serif",
+    "mainWidth": 1172,
+    "bodyHeight": 8812,
+    "overflow": 0,
+    "chartHeights": [
+      300
+    ],
+    "emptyPanels": 0,
+    "smallText": 481,
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/artifacts",
+    "bodyBg": "rgb(245, 241, 234)",
+    "bodyColor": "rgb(28, 35, 48)",
+    "bodyFont": "\"Manrope Variable\", \"Segoe UI\", sans-serif",
+    "mainWidth": 1172,
+    "bodyHeight": 3022,
+    "overflow": 0,
+    "chartHeights": [],
+    "emptyPanels": 0,
+    "smallText": 80,
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/",
+    "bodyBg": "rgb(245, 241, 234)",
+    "bodyColor": "rgb(28, 35, 48)",
+    "bodyFont": "\"Manrope Variable\", \"Segoe UI\", sans-serif",
+    "mainWidth": 390,
+    "bodyHeight": 7007,
+    "overflow": 0,
+    "chartHeights": [
+      230,
+      230,
+      230
+    ],
+    "emptyPanels": 0,
+    "smallText": 44,
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/data-audit",
+    "bodyBg": "rgb(245, 241, 234)",
+    "bodyColor": "rgb(28, 35, 48)",
+    "bodyFont": "\"Manrope Variable\", \"Segoe UI\", sans-serif",
+    "mainWidth": 390,
+    "bodyHeight": 6395,
+    "overflow": 0,
+    "chartHeights": [
+      310,
+      252
+    ],
+    "emptyPanels": 0,
+    "smallText": 40,
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/distributions",
+    "bodyBg": "rgb(245, 241, 234)",
+    "bodyColor": "rgb(28, 35, 48)",
+    "bodyFont": "\"Manrope Variable\", \"Segoe UI\", sans-serif",
+    "mainWidth": 390,
+    "bodyHeight": 5416,
+    "overflow": 0,
+    "chartHeights": [
+      320,
+      365,
+      260,
+      205
+    ],
+    "emptyPanels": 0,
+    "smallText": 16,
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/interactions",
+    "bodyBg": "rgb(245, 241, 234)",
+    "bodyColor": "rgb(28, 35, 48)",
+    "bodyFont": "\"Manrope Variable\", \"Segoe UI\", sans-serif",
+    "mainWidth": 390,
+    "bodyHeight": 5850,
+    "overflow": 0,
+    "chartHeights": [
+      375,
+      230,
+      330,
+      330,
+      290,
+      220
+    ],
+    "emptyPanels": 0,
+    "smallText": 14,
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/temporal",
+    "bodyBg": "rgb(245, 241, 234)",
+    "bodyColor": "rgb(28, 35, 48)",
+    "bodyFont": "\"Manrope Variable\", \"Segoe UI\", sans-serif",
+    "mainWidth": 390,
+    "bodyHeight": 4485,
+    "overflow": 0,
+    "chartHeights": [
+      355,
+      330
+    ],
+    "emptyPanels": 0,
+    "smallText": 16,
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/advanced",
+    "bodyBg": "rgb(245, 241, 234)",
+    "bodyColor": "rgb(28, 35, 48)",
+    "bodyFont": "\"Manrope Variable\", \"Segoe UI\", sans-serif",
+    "mainWidth": 390,
+    "bodyHeight": 4676,
+    "overflow": 0,
+    "chartHeights": [
+      230,
+      300,
+      260,
+      260
+    ],
+    "emptyPanels": 0,
+    "smallText": 12,
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/statistics",
+    "bodyBg": "rgb(245, 241, 234)",
+    "bodyColor": "rgb(28, 35, 48)",
+    "bodyFont": "\"Manrope Variable\", \"Segoe UI\", sans-serif",
+    "mainWidth": 390,
+    "bodyHeight": 5691,
+    "overflow": 0,
+    "chartHeights": [
+      330,
+      270,
+      310,
+      330
+    ],
+    "emptyPanels": 0,
+    "smallText": 16,
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/features",
+    "bodyBg": "rgb(245, 241, 234)",
+    "bodyColor": "rgb(28, 35, 48)",
+    "bodyFont": "\"Manrope Variable\", \"Segoe UI\", sans-serif",
+    "mainWidth": 390,
+    "bodyHeight": 5711,
+    "overflow": 0,
+    "chartHeights": [
+      270,
+      300,
+      335,
+      205
+    ],
+    "emptyPanels": 0,
+    "smallText": 17,
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/model",
+    "bodyBg": "rgb(245, 241, 234)",
+    "bodyColor": "rgb(28, 35, 48)",
+    "bodyFont": "\"Manrope Variable\", \"Segoe UI\", sans-serif",
+    "mainWidth": 390,
+    "bodyHeight": 9116,
+    "overflow": 0,
+    "chartHeights": [
+      300,
+      300,
+      430,
+      245,
+      240
+    ],
+    "emptyPanels": 0,
+    "smallText": 53,
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/economics",
+    "bodyBg": "rgb(245, 241, 234)",
+    "bodyColor": "rgb(28, 35, 48)",
+    "bodyFont": "\"Manrope Variable\", \"Segoe UI\", sans-serif",
+    "mainWidth": 390,
+    "bodyHeight": 6902,
+    "overflow": 0,
+    "chartHeights": [
+      300,
+      270,
+      310
+    ],
+    "emptyPanels": 0,
+    "smallText": 42,
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/findings",
+    "bodyBg": "rgb(245, 241, 234)",
+    "bodyColor": "rgb(28, 35, 48)",
+    "bodyFont": "\"Manrope Variable\", \"Segoe UI\", sans-serif",
+    "mainWidth": 390,
+    "bodyHeight": 14751,
+    "overflow": 0,
+    "chartHeights": [
+      300
+    ],
+    "emptyPanels": 0,
+    "smallText": 481,
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/artifacts",
+    "bodyBg": "rgb(245, 241, 234)",
+    "bodyColor": "rgb(28, 35, 48)",
+    "bodyFont": "\"Manrope Variable\", \"Segoe UI\", sans-serif",
+    "mainWidth": 390,
+    "bodyHeight": 4561,
+    "overflow": 0,
+    "chartHeights": [],
+    "emptyPanels": 0,
+    "smallText": 80,
+    "errors": []
+  }
+]

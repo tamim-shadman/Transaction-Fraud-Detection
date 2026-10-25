@@ -1,0 +1,156 @@
+﻿metric_id,layer,metric_name,value_text,numeric_value,unit,confidence,validation_checks,source_file,source_locator,source_table_id,caveat,primary_page_id
+KPI-TRANSACTIONS,KPI,Transactions analysed,1852394,1852394.0,integer,verified,KPI-01,phase0_class_balance.csv,headline KPI,phase0_class_balance,,PAGE-18
+KPI-FRAUD_RATE,KPI,Observed fraud rate,0.0052100147160917,0.0052100147160917,percent3,verified,KPI-02,phase0_class_balance.csv,headline KPI,phase0_class_balance,,PAGE-18
+KPI-FINDINGS,KPI,Graded findings,64,64.0,integer,verified,KPI-03,logs/findings_ledger.json,headline KPI,findings_ledger,,PAGE-18
+KPI-ARTIFACTS,KPI,Generated artifacts,182,182.0,integer,verified,KPI-04,figures/ & tables/,headline KPI,,,PAGE-18
+KPI-RUN_TIME,KPI,End-to-end run,5513,5513.0,minutes,verified,KPI-10,logs/findings.md,headline KPI,,,PAGE-18
+KPI-STRONG_FINDINGS,KPI,Strong findings,30,30.0,integer,verified,KPI-05,logs/findings_ledger.json,headline KPI,findings_ledger,,PAGE-18
+KPI-TEST_PR_AUC,KPI,Test PR-AUC,0.5574801511963462,0.5574801511963462,decimal4,verified,KPI-06,phase8_ablation_decomposed.csv · FULL row,headline KPI,phase8_ablation_decomposed,,PAGE-18
+KPI-WF_PR_AUC,KPI,Walk-forward PR-AUC,0.9510414270082748,0.9510414270082748,decimal4,verified,KPI-07,phase8_wf_vs_test.csv,headline KPI,phase8_wf_vs_test,,PAGE-18
+KPI-OOD_GAP,KPI,OOD transfer gap,0.4784610583856036,0.4784610583856036,decimal4,verified,KPI-08,phase8_wf_vs_test.csv,headline KPI,phase8_wf_vs_test,,PAGE-18
+KPI-CAPTURE_1PCT,KPI,Capture at 1% budget,0.6545454545454545,0.6545454545454545,percent2,verified,KPI-09,phase8_capture_at_k.csv,headline KPI,phase8_capture_at_k,,PAGE-18
+DQ-01,DQ,Transactions analysed,1852394,1852394.0,count,verified,DATA-01,phase0_class_balance.csv,overall row,phase0_class_balance,,PAGE-18
+DQ-02,DQ,Train transactions,1296675,1296675.0,count,verified,DATA-02,phase0_class_balance.csv,train row,phase0_class_balance,,PAGE-18
+DQ-03,DQ,Test transactions,555719,555719.0,count,verified,DATA-03,phase0_class_balance.csv,test row,phase0_class_balance,,PAGE-18
+DQ-04,DQ,Fraud events,9651,9651.0,count,verified,DATA-04,phase0_class_balance.csv,overall row,phase0_class_balance,,PAGE-18
+DQ-05,DQ,Train fraud events,7506,7506.0,count,verified,DATA-05,phase0_class_balance.csv,train row,phase0_class_balance,,PAGE-18
+DQ-06,DQ,Test fraud events,2145,2145.0,count,verified,DATA-06,phase0_class_balance.csv,test row,phase0_class_balance,,PAGE-18
+DQ-07,DQ,Observed fraud rate,0.0052100147160917,0.0052100147160917,percent3,verified,DATA-07,phase0_class_balance.csv,overall row,phase0_class_balance,,PAGE-18
+DQ-08,DQ,Train fraud rate,0.0057886517438833,0.0057886517438833,percent3,verified,DATA-08,phase0_class_balance.csv,train row,phase0_class_balance,,PAGE-18
+DQ-09,DQ,Test fraud rate,0.0038598644278853,0.0038598644278853,percent3,verified,DATA-09,phase0_class_balance.csv,test row,phase0_class_balance,,PAGE-18
+DQ-10,DQ,Cards,999,999.0,count,verified,DATA-11,phase2_card_profiles.csv,999 rows,phase2_card_profiles,,PAGE-18
+DQ-11,DQ,Merchant categories,14,14.0,count,verified,DATA-12,phase1_category_table.csv,14 rows,phase1_category_table,,PAGE-18
+DQ-12,DQ,States,51,51.0,count,verified,DATA-13,phase5_chi2_cramers.csv,state row,phase5_chi2_cramers,,PAGE-18
+DQ-13,DQ,Merchants,693,693.0,count,verified,DATA-14,phase1_merchant_table.csv,693 rows,phase1_merchant_table,,PAGE-18
+DQ-14,DQ,Cities,836,836.0,count,verified,DATA-15,phase2_city_table.csv,836 rows,phase2_city_table,,PAGE-18
+DQ-15,DQ,ZIP3 prefixes,532,532.0,count,verified,DATA-16,phase2_zip3_table.csv,532 rows,phase2_zip3_table,,PAGE-18
+DQ-16,DQ,Analytical columns,71,71.0,count,verified,DATA-20,phase0_schema.csv,non-index rows,phase0_schema,,PAGE-18
+DQ-17,DQ,Raw columns,22,22.0,count,verified,DATA-71,manifest.json,dataQuality.summary.rawColumns,,,PAGE-18
+DQ-18,DQ,Columns with missing values,11,11.0,count,verified,DATA-18,phase0_schema.csv,missing_pct > 0,phase0_schema,,PAGE-18
+DQ-19,DQ,Maximum missing share,0.1079,0.1079,rate,verified,DATA-19,phase0_schema.csv,amt_z_prior,phase0_schema,,PAGE-18
+DQ-20,DQ,Duplicate transaction keys,0,0.0,count,verified,DATA-24,phase0_contracts.csv,duplicate contract,phase0_contracts,,PAGE-18
+DQ-21,DQ,Data contracts evaluated,10,10.0,count,verified,DATA-21,phase0_contracts.csv,10 rows,phase0_contracts,,PAGE-18
+DQ-22,DQ,Flagged contracts,1,1.0,count,verified,DATA-22,phase0_contracts.csv,age contract,phase0_contracts,,PAGE-18
+DQ-23,DQ,"ZIP values below 10,000",116389,116389.0,count,verified,DATA-25,phase0_contracts.csv,zip contract,phase0_contracts,,PAGE-18
+DQ-24,DQ,Model feature count,27,27.0,count,verified,DATA-17,phase8_ablation_decomposed.csv,FULL row,phase8_ablation_decomposed,,PAGE-18
+DQ-25,DQ,Source data size,501.6,501.6,MB,verified,INV-21 / INV-22,logs/data_fingerprint.json,two source records,,Files absent; size from fingerprint log,PAGE-18
+DQ-26,DQ,Analytical memory,636.4,636.4,MB,computed,,manifest.json,dataQuality.summary.memoryMB,,,PAGE-18
+AMT-01,AMT,Median fraud amount,390.0,390.0,USD,verified,DATA-38,phase1_amt_quantiles.csv,P50 row,phase1_amt_quantiles,,PAGE-18
+AMT-02,AMT,Median genuine amount,47.24,47.24,USD,verified,DATA-39,phase1_amt_quantiles.csv,P50 row,phase1_amt_quantiles,,PAGE-18
+AMT-03,AMT,Amount KS D,0.723803,0.723803,statistic,verified,DATA-40,phase5_mw_effect_sizes.csv,amt row,phase5_mw_effect_sizes,,PAGE-18
+AMT-04,AMT,Amount Cliff's delta,0.668566,0.668566,statistic,verified,DATA-41,phase5_mw_effect_sizes.csv,amt row,phase5_mw_effect_sizes,,PAGE-18
+AMT-05,AMT,Cliff's delta 95% CI low,0.655884,0.655884,statistic,verified,DATA-42,phase5_mw_effect_sizes.csv,amt row,phase5_mw_effect_sizes,,PAGE-18
+AMT-06,AMT,Cliff's delta 95% CI high,0.680089,0.680089,statistic,verified,DATA-43,phase5_mw_effect_sizes.csv,amt row,phase5_mw_effect_sizes,,PAGE-18
+AMT-07,AMT,Total fraud exposure,5121413.361572266,5121413.361572266,USD,verified,DATA-44,phase2_money_category.csv,14 rows,phase2_money_category,,PAGE-18
+CARD-01,CARD,Cards never defrauded,23,23.0,count,verified,DATA-26,phase2_card_profiles.csv,999 rows,phase2_card_profiles,,PAGE-18
+CARD-02,CARD,Cards ever defrauded,976,976.0,count,verified,DATA-27,phase2_card_profiles.csv,999 rows,phase2_card_profiles,,PAGE-18
+CARD-03,CARD,Cards at 100% fraud,91,91.0,count,verified,DATA-28,phase2_card_profiles.csv,999 rows,phase2_card_profiles,,PAGE-18
+CARD-04,CARD,Cards with partial fraud,885,885.0,count,verified,DATA-29,phase2_card_profiles.csv,999 rows,phase2_card_profiles,,PAGE-18
+CARD-05,CARD,Median transactions before first fraud,556.5,556.5,count,source claim,,logs/findings.md,RQ5 ledger,,Ledger claim; no standalone table,PAGE-18
+CARD-06,CARD,Cards hit on first transaction,0.09324,0.09324,rate,source claim,,logs/findings.md,RQ5 ledger,,Ledger claim; no standalone table,PAGE-18
+TMP-01,TMP,Weekly observations,105,105.0,count,verified,DATA-47,phase3_weekly_rate_table.csv,105 rows,phase3_weekly_rate_table,,PAGE-18
+TMP-02,TMP,Full train weeks,76,76.0,count,verified,DATA-56,phase3_weekly_rate_table.csv,filtered rows,phase3_weekly_rate_table,,PAGE-18
+TMP-03,TMP,Full test weeks,27,27.0,count,verified,DATA-56,phase3_weekly_rate_table.csv,filtered rows,phase3_weekly_rate_table,,PAGE-18
+TMP-04,TMP,Train full-week mean rate,0.006025998102514612,0.006025998102514612,percent3,verified,DATA-53,phase3_weekly_rate_table.csv,76 weeks,phase3_weekly_rate_table,,PAGE-18
+TMP-05,TMP,Test full-week mean rate,0.0042481780449662885,0.0042481780449662885,percent3,verified,DATA-54,phase3_weekly_rate_table.csv,27 weeks,phase3_weekly_rate_table,,PAGE-18
+TMP-06,TMP,Final week transactions,18921,18921.0,count,verified,DATA-51,phase3_weekly_rate_table.csv,last row,phase3_weekly_rate_table,,PAGE-18
+TMP-07,TMP,Final week frauds,0,0.0,count,verified,DATA-52,phase3_weekly_rate_table.csv,last row,phase3_weekly_rate_table,,PAGE-18
+TMP-08,TMP,Night fraud rate,0.0081121030880685,0.0081121030880685,percent3,verified,DATA-58,phase7_high_risk_combo.csv,night alone row,phase7_high_risk_combo,,PAGE-18
+TMP-09,TMP,Day fraud rate,0.004348090936015846,0.004348090936015846,percent3,verified,DATA-59,phase7_high_risk_combo.csv,derived row,phase7_high_risk_combo,,PAGE-18
+TMP-10,TMP,Hazard peak month,23,23.0,month,verified,DATA-57,phase7_hazard_table.csv,month 23,phase7_hazard_table,,PAGE-18
+TMP-11,TMP,Hazard peak value,0.4888888888888889,0.4888888888888889,rate,verified,DATA-57,phase7_hazard_table.csv,month 23,phase7_hazard_table,,PAGE-18
+INT-01,INT,High-risk combination rate,0.2207563764291996,0.2207563764291996,rate,verified,DATA-61,phase7_high_risk_combo.csv,COMBO row,phase7_high_risk_combo,,PAGE-18
+INT-02,INT,High-risk combination lift,42.37154565943331,42.37154565943331,multiplier,verified,DATA-62,phase7_high_risk_combo.csv,COMBO row,phase7_high_risk_combo,,PAGE-18
+INT-03,INT,Night lift,1.5570211467951125,1.5570211467951125,multiplier,verified,DATA-60,phase7_high_risk_combo.csv,night row,phase7_high_risk_combo,,PAGE-18
+INT-04,INT,"Transactions above 1,000 km/h",38005,38005.0,count,verified,DATA-64,phase7_speed_rate_table.csv,speed bins,phase7_speed_rate_table,,PAGE-18
+INT-05,INT,"Share above 1,000 km/h",0.0205167,0.0205167,rate,verified,DATA-65,phase7_speed_rate_table.csv,speed bins,phase7_speed_rate_table,,PAGE-18
+INT-06,INT,Speed-table missing rows,1043,1043.0,count,verified,DATA-67,phase7_speed_rate_table.csv,5 bins,phase7_speed_rate_table,,PAGE-18
+INT-07,INT,Shopping_net fraud rate,0.015927,0.015927,rate,computed,,phase1_category_table.csv,shopping_net row,phase1_category_table,,PAGE-18
+INT-08,INT,Grocery_pos fraud rate,0.012645,0.012645,rate,computed,,phase1_category_table.csv,grocery_pos row,phase1_category_table,,PAGE-18
+INT-09,INT,Misc_net fraud rate,0.013039,0.013039,rate,computed,,phase1_category_table.csv,misc_net row,phase1_category_table,,PAGE-18
+INT-10,INT,Category Cramér's V,0.067003,0.067003,statistic,computed,,phase5_chi2_cramers.csv,category row,phase5_chi2_cramers,,PAGE-18
+INT-11,INT,ZIP3 Cramér's V,0.148271,0.148271,statistic,computed,,phase5_chi2_cramers.csv,zip3 row,phase5_chi2_cramers,Not comparable with 14-level category V (CAV-06),PAGE-18
+INT-12,INT,Merchant max categories,2,2.0,count,computed,,phase0_generator_forensics.csv,merchant_single_category,phase0_generator_forensics,"Near-deterministic, not strict",PAGE-18
+INT-13,INT,Distance KS (fraud vs genuine),0.0070855,0.0070855,statistic,computed,,phase0_generator_forensics.csv,dist_km_ks_D_fraud_vs_non,phase0_generator_forensics,Generator jitter artifact,PAGE-18
+INT-14,INT,ZIP3→state purity,1.0,1.0,rate,computed,,phase0_generator_forensics.csv,zip3_state_purity,phase0_generator_forensics,,PAGE-18
+UNS-01,UNS,PCA(2) logistic AUC,0.8156592743806254,0.8156592743806254,AUC,computed,,phase4_separability_table.csv,PCA(2) row,phase4_separability_table,,PAGE-18
+UNS-02,UNS,Best embedding AUC,0.8156592743806254,0.8156592743806254,AUC,computed,,phase4_separability_table.csv,PCA(2) row,phase4_separability_table,,PAGE-18
+UNS-03,UNS,Worst embedding AUC,0.4583228664255091,0.4583228664255091,AUC,computed,,phase4_separability_table.csv,UMAP(nn=50) row,phase4_separability_table,,PAGE-18
+UNS-04,UNS,Anomaly AUC range low,0.7310836127805536,0.7310836127805536,AUC,computed,,phase4_anomaly_summary.csv,Autoencoder row,phase4_anomaly_summary,"LOF uses 5,000 rows; others 50,000",PAGE-18
+UNS-05,UNS,Anomaly AUC range high,0.8810426990986803,0.8810426990986803,AUC,computed,,phase4_anomaly_summary.csv,LOF row,phase4_anomaly_summary,"LOF uses 5,000 rows; others 50,000",PAGE-18
+UNS-06,UNS,DBSCAN noise share,0.0395,0.0395,rate,computed,,phase4_dbscan_clusters.csv,noise row,phase4_dbscan_clusters,,PAGE-18
+UNS-07,UNS,DBSCAN noise fraud rate,0.060759493670886,0.060759493670886,rate,computed,,phase4_dbscan_clusters.csv,noise row,phase4_dbscan_clusters,,PAGE-18
+MOD-01,MOD,Final test PR-AUC,0.5574801511963462,0.5574801511963462,PR-AUC,verified,MODEL-01 / KPI-06,phase8_ablation_decomposed.csv,FULL row,phase8_ablation_decomposed,OOD transfer estimate,PAGE-18
+MOD-02,MOD,Final test ROC-AUC,0.9677282868198628,0.9677282868198628,ROC-AUC,verified,MODEL-02,phase8_ablation_decomposed.csv,FULL row,phase8_ablation_decomposed,,PAGE-18
+MOD-03,MOD,PR-AUC bootstrap CI low,0.5365040149742729,0.5365040149742729,PR-AUC,source claim,,logs/findings.md,RQ8 ledger,,,PAGE-18
+MOD-04,MOD,PR-AUC bootstrap CI high,0.5783880943611619,0.5783880943611619,PR-AUC,source claim,,logs/findings.md,RQ8 ledger,,,PAGE-18
+MOD-05,MOD,Walk-forward mean validation PR-AUC,0.9510414270082748,0.9510414270082748,PR-AUC,verified,MODEL-09 / KPI-07,phase8_wf_vs_test.csv,summary row,phase8_wf_vs_test,,PAGE-18
+MOD-06,MOD,Walk-forward validation SD,0.0152253832396225,0.0152253832396225,PR-AUC,verified,MODEL-10,phase8_wf_vs_test.csv,summary row,phase8_wf_vs_test,,PAGE-18
+MOD-07,MOD,Same-fold test PR-AUC,0.4725803686226709,0.4725803686226709,PR-AUC,verified,MODEL-11,phase8_wf_vs_test.csv,summary row,phase8_wf_vs_test,,PAGE-18
+MOD-08,MOD,Same-fold test SD,0.0760812880124376,0.0760812880124376,PR-AUC,verified,MODEL-12,phase8_wf_vs_test.csv,summary row,phase8_wf_vs_test,,PAGE-18
+MOD-09,MOD,OOD transfer gap,0.4784610583856036,0.4784610583856036,PR-AUC,verified,MODEL-13 / KPI-08,phase8_wf_vs_test.csv,summary row,phase8_wf_vs_test,,PAGE-18
+MOD-10,MOD,Severe PSI features,7,7.0,count,verified,MODEL-18,phase8_psi.csv,27 rows,phase8_psi,,PAGE-18
+MOD-11,MOD,Moderate PSI features,1,1.0,count,verified,MODEL-19,phase8_psi.csv,27 rows,phase8_psi,,PAGE-18
+MOD-12,MOD,Stable PSI features,19,19.0,count,verified,MODEL-20,phase8_psi.csv,27 rows,phase8_psi,,PAGE-18
+MOD-13,MOD,Severe + moderate share,0.2962962962962963,0.2962962962962963,rate,verified,MODEL-23,phase8_psi.csv,27 rows,phase8_psi,,PAGE-18
+MOD-14,MOD,Top PSI feature value,6.514263998062767,6.514263998062767,PSI,verified,MODEL-21,phase8_psi.csv,first row,phase8_psi,Calendar coverage artifact,PAGE-18
+MOD-15,MOD,Capture@1% recall,0.6545454545454545,0.6545454545454545,rate,verified,MODEL-25 / KPI-09,phase8_capture_at_k.csv,1.0 row,phase8_capture_at_k,,PAGE-18
+MOD-16,MOD,Capture@1% precision,0.2526543098794313,0.2526543098794313,rate,verified,MODEL-26,phase8_capture_at_k.csv,1.0 row,phase8_capture_at_k,,PAGE-18
+MOD-17,MOD,Capture@1% USD share,0.6870062339692452,0.6870062339692452,rate,verified,MODEL-27,phase8_capture_at_k.csv,1.0 row,phase8_capture_at_k,,PAGE-18
+MOD-18,MOD,Capture@1% reviews,5557,5557.0,count,verified,MODEL-28,phase8_capture_at_k.csv,1.0 row,phase8_capture_at_k,,PAGE-18
+MOD-19,MOD,Capture@1% frauds caught,1404,1404.0,count,verified,MODEL-29,phase8_capture_at_k.csv,1.0 row,phase8_capture_at_k,,PAGE-18
+MOD-20,MOD,Capture@5% recall,0.862004662004662,0.862004662004662,rate,verified,MODEL-30,phase8_capture_at_k.csv,5.0 row,phase8_capture_at_k,,PAGE-18
+MOD-21,MOD,Capture@5% USD share,0.9342090122811502,0.9342090122811502,rate,verified,MODEL-31,phase8_capture_at_k.csv,5.0 row,phase8_capture_at_k,,PAGE-18
+MOD-22,MOD,Cost-min threshold,1e-05,1e-05,probability,computed,,phase8_threshold_table.csv,cost-min row,phase8_threshold_table,,PAGE-18
+MOD-23,MOD,Cost-min TP,1807,1807.0,count,verified,MODEL-35,phase8_threshold_table.csv,cost-min row,phase8_threshold_table,,PAGE-18
+MOD-24,MOD,Cost-min FP,20322,20322.0,count,verified,MODEL-36,phase8_threshold_table.csv,cost-min row,phase8_threshold_table,,PAGE-18
+MOD-25,MOD,Cost-min FN,338,338.0,count,verified,MODEL-37,phase8_threshold_table.csv,cost-min row,phase8_threshold_table,,PAGE-18
+MOD-26,MOD,Cost-min recall,0.8424242424242424,0.8424242424242424,rate,verified,MODEL-39,phase8_threshold_table.csv,cost-min row,phase8_threshold_table,,PAGE-18
+MOD-27,MOD,Cost-min precision,0.0816575534366668,0.0816575534366668,rate,verified,MODEL-40,phase8_threshold_table.csv,cost-min row,phase8_threshold_table,,PAGE-18
+MOD-28,MOD,Cost-min missed USD,92043.87009429932,92043.87009429932,USD,verified,MODEL-41,phase8_threshold_table.csv,cost-min row,phase8_threshold_table,,PAGE-18
+MOD-29,MOD,Cost-min total loss,193653.8700942993,193653.8700942993,USD,verified,MODEL-42,phase8_threshold_table.csv,cost-min row,phase8_threshold_table,,PAGE-18
+MOD-30,MOD,F1-max threshold,0.11267,0.11267,probability,verified,MODEL-47,phase8_threshold_table.csv,F1 row,phase8_threshold_table,,PAGE-18
+MOD-31,MOD,F1 max,0.5503617139677239,0.5503617139677239,F1,verified,MODEL-47,phase8_threshold_table.csv,F1 row,phase8_threshold_table,,PAGE-18
+MOD-32,MOD,Cost-sensitivity recall range low,0.7020979020979021,0.7020979020979021,rate,computed,,phase8_cost_sensitivity.csv,5 rows,phase8_cost_sensitivity,,PAGE-18
+MOD-33,MOD,Cost-sensitivity recall range high,0.9156177156177157,0.9156177156177157,rate,computed,,phase8_cost_sensitivity.csv,5 rows,phase8_cost_sensitivity,,PAGE-18
+MOD-34,MOD,Ablation minus card_prior_fraud,0.831485399757575,0.831485399757575,PR-AUC,verified,MODEL-04,phase8_ablation_decomposed.csv,MINUS card_prior_fraud,phase8_ablation_decomposed,,PAGE-18
+MOD-35,MOD,Ablation recovery from removing card_prior_fraud,0.27400524856122876,0.27400524856122876,PR-AUC,verified,MODEL-04,phase8_ablation_decomposed.csv,recomputed,phase8_ablation_decomposed,,PAGE-18
+MOD-36,MOD,Raw-only PR-AUC,0.83533822876129,0.83533822876129,PR-AUC,verified,MODEL-03,phase8_ablation_decomposed.csv,raw-only row,phase8_ablation_decomposed,,PAGE-18
+MOD-37,MOD,FULL minus raw-only,-0.27785807756494385,-0.27785807756494385,PR-AUC,verified,MODEL-05,phase8_ablation_decomposed.csv,recomputed,phase8_ablation_decomposed,,PAGE-18
+MOD-38,MOD,Learning-curve peak PR-AUC,0.6265621319574277,0.6265621319574277,PR-AUC,verified,MODEL-58,phase8_learning_curve.csv,25% row,phase8_learning_curve,,PAGE-18
+MOD-39,MOD,Learning-curve full-data PR-AUC,0.5253585399509898,0.5253585399509898,PR-AUC,verified,MODEL-60,phase8_learning_curve.csv,100% row,phase8_learning_curve,,PAGE-18
+MOD-40,MOD,Monotonic-constraint PR-AUC,0.5921751049650442,0.5921751049650442,PR-AUC,verified,MODEL-65,phase8_monotonic_comparison.csv,monotonic row,phase8_monotonic_comparison,,PAGE-18
+MOD-41,MOD,Time-decay PR-AUC,0.5407833916639233,0.5407833916639233,PR-AUC,verified,MODEL-66,phase8_time_decay_comparison.csv,time-decay row,phase8_time_decay_comparison,,PAGE-18
+MOD-42,MOD,Fold-ensemble PR-AUC,0.5128355010603128,0.5128355010603128,PR-AUC,verified,MODEL-64,phase8_ensemble_comparison.csv,ensemble row,phase8_ensemble_comparison,,PAGE-18
+MOD-43,MOD,Leave-card-out seen-card PR-AUC,0.9947611727137646,0.9947611727137646,PR-AUC,computed,,phase8_leave_card_out.csv,seen cards,phase8_leave_card_out,Partially in-sample,PAGE-18
+MOD-44,MOD,Leave-card-out held-card PR-AUC,0.9639288688633888,0.9639288688633888,PR-AUC,computed,,phase8_leave_card_out.csv,held-out train,phase8_leave_card_out,,PAGE-18
+MOD-45,MOD,Leave-card-out held-card test PR-AUC,0.5540768597457347,0.5540768597457347,PR-AUC,verified,MODEL-62,phase8_leave_card_out.csv,held-out test,phase8_leave_card_out,,PAGE-18
+MOD-46,MOD,Calibration temperature,1.4177918881006806,1.4177918881006806,temperature,verified,MODEL-53,phase8_calibration_temp.csv,single row,phase8_calibration_temp,"Fit on early-stopping split, not test (CAV-08)",PAGE-18
+MOD-47,MOD,ECE before temperature scaling,0.0001593957680143,0.0001593957680143,ECE,verified,MODEL-54,phase8_calibration_temp.csv,single row,phase8_calibration_temp,Early-stopping split,PAGE-18
+MOD-48,MOD,ECE after temperature scaling,0.0001183945305157,0.0001183945305157,ECE,verified,MODEL-55,phase8_calibration_temp.csv,single row,phase8_calibration_temp,Early-stopping split,PAGE-18
+MOD-49,MOD,Reported Brier score,0.0024144223205205574,0.0024144223205205574,Brier,source claim,,logs/findings.md,RQ8 ledger,,Different split from temperature table,PAGE-18
+MOD-50,MOD,Reported ECE,0.0019491278615084995,0.0019491278615084995,ECE,source claim,,logs/findings.md,RQ8 ledger,,Different split from temperature table,PAGE-18
+INV-01,INV,Graded findings,64,64.0,count,verified,FIND-01,logs/findings_ledger.json,64 records,findings_ledger,,PAGE-18
+INV-02,INV,Strong findings,30,30.0,count,verified,FIND-02 / KPI-05,logs/findings_ledger.json,ledger,findings_ledger,,PAGE-18
+INV-03,INV,Supporting findings,27,27.0,count,verified,FIND-03,logs/findings_ledger.json,ledger,findings_ledger,,PAGE-18
+INV-04,INV,Caveat findings,6,6.0,count,verified,FIND-04,logs/findings_ledger.json,ledger,findings_ledger,,PAGE-18
+INV-05,INV,Weak findings,1,1.0,count,verified,FIND-05,logs/findings_ledger.json,ledger,findings_ledger,,PAGE-18
+INV-06,INV,Independent audit notes,5,5.0,count,verified,NARR-02,app/public/data/manifest.json,auditNotes,,,PAGE-18
+INV-07,INV,Recorded issues,16,16.0,count,verified,NARR-03,app/public/data/manifest.json,issues,,,PAGE-18
+INV-08,INV,High-severity issues,4,4.0,count,computed,,app/public/data/manifest.json,issues,,,PAGE-18
+INV-09,INV,Medium-severity issues,10,10.0,count,computed,,app/public/data/manifest.json,issues,,,PAGE-18
+INV-10,INV,Low-severity issues,2,2.0,count,computed,,app/public/data/manifest.json,issues,,,PAGE-18
+INV-11,INV,Notebook warnings,9,9.0,count,computed,,app/public/data/manifest.json,warnings,,,PAGE-18
+INV-12,INV,Source figures,129,129.0,count,verified,INV-06,figures/,directory,,,PAGE-18
+INV-13,INV,Interactive artifacts,7,7.0,count,verified,INV-07,figures/,directory,,,PAGE-18
+INV-14,INV,Source tables,46,46.0,count,verified,INV-05,tables/,directory,,,PAGE-18
+INV-15,INV,Notebook cells,66,66.0,count,verified,INV-01,fraud_eda_colab(1).ipynb,notebook,,,PAGE-18
+INV-16,INV,Notebook code cells,33,33.0,count,verified,INV-02,fraud_eda_colab(1).ipynb,notebook,,,PAGE-18
+INV-17,INV,Notebook error outputs,0,0.0,count,verified,INV-04,fraud_eda_colab(1).ipynb,notebook,,,PAGE-18
+INV-18,INV,Generated artifacts,182,182.0,count,verified,KPI-04,figures/; tables/,directories,,,PAGE-18
+INV-19,INV,Validation checks,196,196.0,count,computed,,tests/validation_results.json,summary,,,PAGE-18
+INV-20,INV,Validation pass rate,1.0,1.0,rate,computed,,tests/validation_results.json,summary,,,PAGE-18
+PBI-01,PBI,Power BI tables,59,59.0,count,computed,,powerbi/manifest.json,counts.tables,,,PAGE-18
+PBI-02,PBI,Power BI measures,112,112.0,count,computed,,powerbi/dax/measures.dax,file,,,PAGE-18
+PBI-03,PBI,Power BI relationships,17,17.0,count,computed,,powerbi/manifest.json,relationships,,,PAGE-18
+PBI-04,PBI,Date dimension rows,734,734.0,count,computed,,powerbi/data/dim_date.csv,734 rows,,,PAGE-18

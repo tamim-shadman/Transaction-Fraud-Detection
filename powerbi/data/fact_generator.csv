@@ -1,0 +1,8 @@
+﻿metric,value
+unix_time_offset_days,-2557.0
+unix_time_offset_std_sec,43199.910436545055
+merchant_single_category,False
+merchant_lat_std_med,5.103738784790039
+unique_coord_pairs_ratio,1.0
+zip3_state_purity,1.0
+dist_km_ks_D_fraud_vs_non,0.007085503172107321

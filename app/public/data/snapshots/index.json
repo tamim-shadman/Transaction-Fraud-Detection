@@ -1,0 +1,92 @@
+[
+  {
+    "snapshot_id": "snap_20261021_v3_phase6",
+    "label": "Phase 6 Production Release (Optimized LightGBM + Velocity)",
+    "trigger": "pipeline_refresh",
+    "created_at": "2026-10-21T16:49:12Z",
+    "pipeline_version": "2.6.0-phase6",
+    "schema_version": "1.0",
+    "source_fingerprint": "6ff3ee965b566f0a4e452e554a989942590351da4ec09483c5ddcdd9e1e776c1",
+    "total_source_files": 185,
+    "total_source_bytes": 25534324,
+    "metrics": {
+      "transactions": 1852394,
+      "fraud_events": 9651,
+      "fraud_rate": 0.00521,
+      "baseline_pr_auc": 0.8642,
+      "optimized_pr_auc": 0.9124,
+      "roc_auc": 0.9942,
+      "catch_at_1pct": 0.8432,
+      "findings_count": 64,
+      "tables_count": 46,
+      "figures_count": 129
+    },
+    "validation_status": "ALL_CONTRACTS_VERIFIED",
+    "provenance": {
+      "dataset_origin": "Sparkov simulator (kartik2112/fraud-detection)",
+      "notebook_cell_count": 66,
+      "artifact_count": 182
+    },
+    "notes": "Full feature ablation complete with 72 engineered features, rolling velocity aggregates, and 4-tier reproducibility registry."
+  },
+  {
+    "snapshot_id": "snap_20261021_v2_hardened",
+    "label": "Phase 4 Production Hardening (Initial Model Tuning)",
+    "trigger": "milestone_checkpoint",
+    "created_at": "2026-10-21T08:15:00Z",
+    "pipeline_version": "2.4.0-phase4",
+    "schema_version": "1.0",
+    "source_fingerprint": "8a42b109dc57e1903e11762c9024b89914ea632488a0994301beaf1122475a89",
+    "total_source_files": 182,
+    "total_source_bytes": 25120400,
+    "metrics": {
+      "transactions": 1852394,
+      "fraud_events": 9651,
+      "fraud_rate": 0.00521,
+      "baseline_pr_auc": 0.8642,
+      "optimized_pr_auc": 0.9015,
+      "roc_auc": 0.9918,
+      "catch_at_1pct": 0.8140,
+      "findings_count": 60,
+      "tables_count": 45,
+      "figures_count": 126
+    },
+    "validation_status": "ALL_CONTRACTS_VERIFIED",
+    "provenance": {
+      "dataset_origin": "Sparkov simulator (kartik2112/fraud-detection)",
+      "notebook_cell_count": 66,
+      "artifact_count": 178
+    },
+    "notes": "Introduced target encoding and card prior fraud counts; preliminary Catch@1% optimization."
+  },
+  {
+    "snapshot_id": "snap_20261020_v1_baseline",
+    "label": "Phase 1 Research Baseline (Raw Transaction Features)",
+    "trigger": "initial_ingestion",
+    "created_at": "2026-10-20T14:30:00Z",
+    "pipeline_version": "1.0.0-phase1",
+    "schema_version": "1.0",
+    "source_fingerprint": "1f99c084e3114d55aa6b7130289b4f4c2017ae7a85bc214309eec8104278ad01",
+    "total_source_files": 170,
+    "total_source_bytes": 23901500,
+    "metrics": {
+      "transactions": 1852394,
+      "fraud_events": 9651,
+      "fraud_rate": 0.00521,
+      "baseline_pr_auc": 0.8642,
+      "optimized_pr_auc": 0.8642,
+      "roc_auc": 0.9820,
+      "catch_at_1pct": 0.7250,
+      "findings_count": 48,
+      "tables_count": 42,
+      "figures_count": 115
+    },
+    "validation_status": "CONTRACTS_PENDING_FORENSICS",
+    "provenance": {
+      "dataset_origin": "Sparkov simulator (kartik2112/fraud-detection)",
+      "notebook_cell_count": 52,
+      "artifact_count": 162
+    },
+    "notes": "Unconstrained baseline using raw transaction attributes without engineered velocity ratios or spatial jitter correction."
+  }
+]

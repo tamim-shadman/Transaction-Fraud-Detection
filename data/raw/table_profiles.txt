@@ -1,0 +1,405 @@
+﻿
+=== figure_index.csv rows=129 cols=2 ===
+columns: ['figure', 'caption']
+                                               figure                             caption
+   /content/outputs/figures/phase0_missing_matrix.png                    missingno matrix
+      /content/outputs/figures/phase0_missing_bar.png                       missingno bar
+/content/outputs/figures/phase0_temporal_coverage.png    daily volume by split + boundary
+    /content/outputs/figures/phase0_txns_per_card.png identifier audit: activity per card
+         /content/outputs/figures/phase1_amt_hist.png       amount distribution raw + log
+   /content/outputs/figures/phase1_amt_box_violin.png                 amount box + violin
+
+=== findings_ledger.csv rows=64 cols=5 ===
+columns: ['rq', 'phase', 'grade', 'finding', 'evidence']
+ rq  phase    grade                                                                                                                                                         finding                                                                                                                                                                                                                                                                                                                                                                                                         evidence
+RQ1      1   caveat                                                                                                   Data contracts evaluated with actual min/max printed (FIX #5) [{'contract': 'age min / max (Sparkov expects ~18ΓÇô100)', 'actual value': '13.9 / 96.2', 'status': 'FLAG'}, {'contract': 'amt min / max', 'actual value': '1.00 / 28948.90', 'status': 'PASS'}, {'contract': 'lat in [-90, 90]', 'actual value': '20.0 / 66.7', 'status': 'PASS'}, {'contract': 'long in [-180, 180]', 'actual value': '-165.7 / -68.0', 'status': 'PASS'}, {'contract': 'merch coords in bounds'
+RQ1      1 supports                                                                               Schema audited; identifiers (cc_num/zip/trans_num) excluded from numeric analyses                                                                                                                                                                                                                                                                                                                                                                                      1,852,394 rows, 9,651 fraud
+RQ1      1   strong                                    Class imbalance: train 7506/1296675 = 0.5789%, test 2145/555719 = 0.3860% ΓÇö extreme imbalance, drift between splits detected                                                                                                                                                 [{'split': 'train', 'n': 1296675, 'fraud': 7506, 'fraud_rate': 0.005788651743883394}, {'split': 'test', 'n': 555719, 'fraud': 2145, 'fraud_rate': 0.0038598644278853163}, {'split': 'overall', 'n': 1852394, 'fraud': 9651, 'fraud_rate': 0.005210014716091717}]
+RQ1      1   strong Temporal split: train ends 2020-06-21 12:13:37, test starts 2020-06-21 12:14:25 ΓÇö time-series CV is REQUIRED for any modeling (walk-forward implemented in ┬º08)                                                                                                                                                                                                                            {'train_start': '2019-01-01 00:00:18', 'train_end': '2020-06-21 12:13:37', 'test_start': '2020-06-21 12:14:25', 'test_end': '2020-12-31 23:59:34', 'gap_days': 0.0005555555555555556}
+RQ1      1 supports                                                      999 cards ├ù ~1,471 median txns ΓÇö repeated-measures structure ΓçÆ card-clustered inference (┬º06) is mandatory                                                                                                                                                                                                                                                                                                                                                                            {'cards': 999, 'median_txns': 1471.0}
+RQ6      1   caveat                               merchant ΓåÆ category is deterministic (collinearity): merchant-level effects are category-level effects + noise from finite counts                                                                                                                                                                                                                                                                                                                                                                                              max cats/merchant=2
+
+=== phase0_class_balance.csv rows=3 cols=5 ===
+columns: ['Unnamed: 0', 'split', 'n', 'fraud', 'fraud_rate']
+ Unnamed: 0   split       n  fraud  fraud_rate
+          0   train 1296675   7506    0.005789
+          1    test  555719   2145    0.003860
+          2 overall 1852394   9651    0.005210
+
+=== phase0_contracts.csv rows=10 cols=4 ===
+columns: ['Unnamed: 0', 'contract', 'actual value', 'status']
+ Unnamed: 0                                contract                 actual value status
+          0 age min / max (Sparkov expects ~18ΓÇô100)                  13.9 / 96.2   FLAG
+          1                           amt min / max              1.00 / 28948.90   PASS
+          2                        lat in [-90, 90]                  20.0 / 66.7   PASS
+          3                     long in [-180, 180]               -165.7 / -68.0   PASS
+          4                  merch coords in bounds (19.0,67.5) / (-166.7,-67.0)   PASS
+          5                     city_pop <= 0 count                            0   INFO
+
+=== phase0_generator_forensics.csv rows=7 cols=2 ===
+columns: ['Unnamed: 0', 'value']
+              Unnamed: 0              value
+   unix_time_offset_days            -2557.0
+unix_time_offset_std_sec 43199.910436545055
+merchant_single_category              False
+    merchant_lat_std_med  5.103738784790039
+unique_coord_pairs_ratio                1.0
+       zip3_state_purity                1.0
+
+=== phase0_schema.csv rows=72 cols=7 ===
+columns: ['Unnamed: 0', 'dtype', 'non_null', 'missing_pct', 'n_unique', 'memory_MB', 'role']
+    Unnamed: 0    dtype  non_null  missing_pct  n_unique  memory_MB            role
+         Index      NaN       NaN          NaN       NaN       0.00 feature/derived
+           age  float32 1852394.0       0.0000   29792.0       7.41 feature/derived
+       age_bin category 1852394.0       0.0000       5.0       1.85 feature/derived
+           amt  float32 1852394.0       0.0000   60616.0       7.41 feature/derived
+       amt_bin category 1852394.0       0.0000       5.0       1.85 feature/derived
+amt_prior_mean  float32 1851395.0       0.0539 1656974.0       7.41 feature/derived
+
+=== phase1_amt_quantiles.csv rows=9 cols=5 ===
+columns: ['Unnamed: 0', 'quantile', 'amt', 'amt_fraud', 'amt_nonfraud']
+ Unnamed: 0 quantile    amt  amt_fraud  amt_nonfraud
+          0       P1   1.26      6.840          1.26
+          1       P5   2.44      9.100          2.43
+          2      P25   9.64    240.075          9.61
+          3      P50  47.45    390.000         47.24
+          4      P75  83.10    902.365         82.56
+          5      P95 195.34   1084.090        189.59
+
+=== phase1_category_table.csv rows=14 cols=4 ===
+columns: ['category', 'n', 'k', 'rate']
+      category      n    k     rate
+ entertainment 134118  292 0.002177
+   food_dining 130729  205 0.001568
+ gas_transport 188029  772 0.004106
+   grocery_net  64878  175 0.002697
+   grocery_pos 176191 2228 0.012645
+health_fitness 122553  185 0.001510
+
+=== phase1_covid_window.csv rows=3 cols=4 ===
+columns: ['Unnamed: 0', 'window', 'n', 'fraud_rate']
+ Unnamed: 0               window      n  fraud_rate
+          0         Jan-Feb 2020  99993    0.006790
+          1 Mar-Jun 2020 (COVID) 301890    0.005764
+          2         Jul-Dec 2020 525661    0.003828
+
+=== phase1_merchant_table.csv rows=693 cols=4 ===
+columns: ['merchant_clean', 'n', 'k', 'rate']
+            merchant_clean    n  k     rate
+             Abbott-Rogahn 2647  4 0.001511
+            Abbott-Steuber 2529  8 0.003163
+        Abernathy and Sons 2513  4 0.001592
+               Abshire PLC 2733  9 0.003293
+Adams, Kovacek and Kuhlman 1354  5 0.003693
+             Adams-Barrows 2535  4 0.001578
+
+=== phase2_card_profiles.csv rows=999 cols=9 ===
+columns: ['cc_num', 'n', 'k', 'amt_mean', 'amt_std', 'fraud_rate', 'hour_entropy', 'geo_entropy', 'fraud_rate_bin']
+     cc_num    n  k   amt_mean    amt_std  fraud_rate  hour_entropy  geo_entropy fraud_rate_bin
+60416207185 2196  9  59.257793  142.86975    0.004098      4.455455         -0.0         (0,5%]
+60422928733 2200 12  65.483160   92.04285    0.005455      4.553453         -0.0         (0,5%]
+60423098130  738 10  96.376080 1000.69385    0.013550      4.564220         -0.0         (0,5%]
+60427851591  743 14 107.487550  131.01454    0.018843      4.558974         -0.0         (0,5%]
+60487002085  735  8  64.096924  153.20766    0.010884      4.451125         -0.0         (0,5%]
+60490596305 1465 10  69.972820  121.92243    0.006826      4.572480         -0.0         (0,5%]
+
+=== phase2_city_table.csv rows=836 cols=7 ===
+columns: ['Unnamed: 0', 'city', 'lat', 'lon', 'n', 'k', 'eb_rate']
+ Unnamed: 0       city       lat        lon   n  k  eb_rate
+        153 Clearwater 27.900333  -82.71477 753 24 0.031445
+         40     Aurora 39.667656 -104.83312 750 23 0.030257
+         67     Benton 42.436398  -90.25966 750 20 0.026321
+        137    Chatham 42.349600  -73.58730 743 16 0.021269
+        388        Jay 30.898500  -87.13320 743 16 0.021269
+        539     Moscow 41.564600  -91.08590 745 16 0.021213
+
+=== phase2_dist_rate_table.csv rows=6 cols=4 ===
+columns: ['dist_bin', 'n', 'k', 'rate']
+dist_bin      n    k     rate
+     <10  14982   68 0.004539
+   10-25  79475  395 0.004970
+   25-50 284464 1455 0.005115
+   50-75 473052 2536 0.005361
+  75-100 567745 2955 0.005205
+    100+ 432676 2242 0.005182
+
+=== phase2_mi_table.csv rows=14 cols=2 ===
+columns: ['Unnamed: 0', '0']
+ Unnamed: 0        0
+    log_amt 0.016141
+amt_z_prior 0.010268
+       hour 0.004002
+        age 0.001495
+    n_prior 0.001463
+     cnt_1h 0.001444
+
+=== phase2_money_category.csv rows=14 cols=4 ===
+columns: ['category', 'n_fraud', 'fraud_usd', 'usd_per_fraud']
+     category  n_fraud    fraud_usd  usd_per_fraud
+ shopping_net   2219.0 2.214848e+06     998.128784
+     misc_net   1182.0 9.440097e+05     798.654541
+ shopping_pos   1056.0 9.281323e+05     878.913147
+  grocery_pos   2228.0 6.956646e+05     312.237274
+entertainment    292.0 1.474000e+05     504.794403
+     misc_pos    322.0 6.849484e+04     212.716888
+
+=== phase2_zip3_table.csv rows=532 cols=13 ===
+columns: ['Unnamed: 0', 'zip3', 'n', 'k', 'rate', 'lo', 'hi', 'p_vs_base', 'q_vs_base', 'sparse', 'sig', 'baseline', 'eb_rate']
+ Unnamed: 0  zip3     n  k     rate       lo       hi  p_vs_base  q_vs_base  sparse   sig  baseline  eb_rate
+         80   170 13896 59 0.004246 0.003293 0.005472   0.114386   0.233532   False False   0.00521 0.004249
+         68   154 13894 66 0.004750 0.003736 0.006038   0.451588   0.623362   False False   0.00521 0.004752
+         51   124 13175 62 0.004706 0.003673 0.006028   0.421527   0.590137   False False   0.00521 0.004708
+        396   720 13144 41 0.003119 0.002300 0.004229   0.000870   0.004772   False  True   0.00521 0.003126
+        176   338 12435 57 0.004584 0.003540 0.005934   0.332086   0.515072   False False   0.00521 0.004586
+        275   496 12433 51 0.004102 0.003121 0.005389   0.086136   0.196671   False False   0.00521 0.004106
+
+=== phase3_weekly_rate_table.csv rows=105 cols=4 ===
+columns: ['ts', 'size', 'sum', 'rate']
+        ts  size  sum     rate
+2019-01-06  9680   47 0.004855
+2019-01-13 12021  125 0.010398
+2019-01-20 11952  175 0.014642
+2019-01-27 11812   69 0.005842
+2019-02-03 12040  151 0.012542
+2019-02-10 12043  108 0.008968
+
+=== phase4_anomaly_summary.csv rows=3 cols=6 ===
+columns: ['Unnamed: 0', 'model', 'auc', 'top10pct_precision', 'top10pct_lift', 'n']
+ Unnamed: 0           model      auc  top10pct_precision  top10pct_lift     n
+          0 IsolationForest 0.843152              0.0340       6.513410 50000
+          1     Autoencoder 0.731084              0.0222       4.252874 50000
+          2             LOF 0.881043              0.0300       7.894737  5000
+
+=== phase4_dbscan_clusters.csv rows=2 cols=4 ===
+columns: ['Unnamed: 0', 'cluster', 'n', 'fraud_rate']
+ Unnamed: 0 cluster    n  fraud_rate
+          0   noise  395    0.060759
+          1       0 9605    0.001562
+
+=== phase4_kmeans_cluster_rate.csv rows=3 cols=5 ===
+columns: ['Unnamed: 0', 'k_fraud', 'n', 'rate', 'cluster']
+ Unnamed: 0  k_fraud     n     rate  cluster
+          0       76 10622 0.007155        0
+          1       83 28952 0.002867        1
+          2      102 10426 0.009783        2
+
+=== phase4_separability_table.csv rows=7 cols=2 ===
+columns: ['Unnamed: 0', '0']
+        Unnamed: 0        0
+            PCA(2) 0.815659
+UMAP(nn=15,md=0.5) 0.642691
+       t-SNE(p=30) 0.594033
+       t-SNE(p=50) 0.591324
+UMAP(nn=15,md=0.1) 0.586563
+      t-SNE(p=100) 0.558768
+
+=== phase5_category_posthoc_pairs.csv rows=72 cols=7 ===
+columns: ['Unnamed: 0', 'a', 'b', 'chi2', 'p', 'cramers_v', 'p_bonf']
+ Unnamed: 0              a            b        chi2             p  cramers_v        p_bonf
+         67           home shopping_net 2059.860003  0.000000e+00   0.080910  0.000000e+00
+         73      kids_pets shopping_net 1775.497627  0.000000e+00   0.076812  0.000000e+00
+         22    food_dining shopping_net 1561.618391  0.000000e+00   0.076059  0.000000e+00
+         60 health_fitness shopping_net 1488.459859  0.000000e+00   0.075406  0.000000e+00
+         64           home     misc_net 1466.771016  0.000000e+00   0.074270  0.000000e+00
+         10  entertainment shopping_net 1418.424531 2.083330e-310   0.072036 1.895830e-308
+
+=== phase5_category_rates.csv rows=14 cols=12 ===
+columns: ['Unnamed: 0', 'category', 'n', 'k', 'rate', 'lo', 'hi', 'p_vs_base', 'q_vs_base', 'sparse', 'sig', 'baseline']
+ Unnamed: 0       category      n    k     rate       lo       hi    p_vs_base    q_vs_base  sparse  sig  baseline
+          0  entertainment 134118  292 0.002177 0.001942 0.002441 1.063163e-53 1.860536e-53   False True   0.00521
+          1    food_dining 130729  205 0.001568 0.001368 0.001798 9.839562e-75 2.295898e-74   False True   0.00521
+          2  gas_transport 188029  772 0.004106 0.003827 0.004405 2.906957e-11 3.130569e-11   False True   0.00521
+          3    grocery_net  64878  175 0.002697 0.002327 0.003127 6.119007e-19 7.787827e-19   False True   0.00521
+          4    grocery_pos 176191 2228 0.012645 0.012134 0.013178 0.000000e+00 0.000000e+00   False True   0.00521
+          5 health_fitness 122553  185 0.001510 0.001307 0.001743 2.162576e-72 4.325151e-72   False True   0.00521
+
+=== phase5_chi2_cramers.csv rows=5 cols=8 ===
+columns: ['Unnamed: 0', 'variable', 'levels', 'chi2', 'dof', 'p', 'cramers_v', 'n']
+ Unnamed: 0 variable  levels         chi2  dof        p  cramers_v       n
+          0 category      14  8329.139946   13 0.000000   0.067003 1852394
+          1   gender       2    63.091041    1 0.000000   0.005797 1852394
+          2    state      51  2022.122832   50 0.000000   0.032629 1852394
+          3      job      30    70.445877   29 0.000026   0.011660  304830
+          4     zip3     532 41254.426854  531 0.000000   0.148271 1852394
+
+=== phase5_cluster_robust_logit.csv rows=9 cols=11 ===
+columns: ['Unnamed: 0', 'feature', 'coef', 'OR', 'se_naive', 'se_cluster', 'z_cluster', 'p_cluster', 'OR_lo_robust', 'OR_hi_robust', 'n_clusters']
+ Unnamed: 0      feature     coef      OR  se_naive  se_cluster  z_cluster  p_cluster  OR_lo_robust  OR_hi_robust  n_clusters
+          0    intercept -7.85213 0.00039   0.09054     0.12131  -64.73004    0.00000       0.00031       0.00049         961
+          1      log_amt  2.00631 7.43582   0.03930     0.06163   32.55204    0.00000       6.58969       8.39060         961
+          2     is_night -0.46136 0.63043   0.04695     0.04794   -9.62268    0.00000       0.57388       0.69254         961
+          3   is_weekend  0.04488 1.04591   0.03315     0.04107    1.09289    0.27444       0.96501       1.13358         961
+          4          age  0.20108 1.22273   0.03338     0.03937    5.10697    0.00000       1.13191       1.32082         961
+          5 city_pop_log -0.01475 0.98536   0.03436     0.04021   -0.36674    0.71381       0.91069       1.06616         961
+
+=== phase5_mw_effect_sizes.csv rows=11 cols=15 ===
+columns: ['Unnamed: 0', 'feature', 'n_fraud', 'n_nonfraud', 'med_fraud', 'med_nonfraud', 'U', 'p_mw', 'ks_D', 'p_ks', 'cohens_d', 'cliffs_delta', 'cliffs_lo', 'cliffs_hi', 'q_fdr']
+ Unnamed: 0          feature  n_fraud  n_nonfraud  med_fraud  med_nonfraud            U  p_mw     ks_D  p_ks  cohens_d  cliffs_delta  cliffs_lo  cliffs_hi  q_fdr
+          0              amt     9651     1842743 390.000000     47.240002 1.483715e+10   0.0 0.723803   0.0  2.973226      0.668566   0.655884   0.680089    0.0
+          9      amt_z_prior     9468     1840928   2.487087     -0.187929 1.391861e+10   0.0 0.638004   0.0  1.540237      0.597096   0.582419   0.611996    0.0
+         10          n_prior     9651     1842743 566.000000   1112.000000 6.047114e+09   0.0 0.244216   0.0 -0.489072     -0.319950  -0.334187  -0.303521    0.0
+          4 hours_since_prev     9560     1841835   1.365278      4.373055 6.308009e+09   0.0 0.280638   0.0 -0.217633     -0.283504  -0.299741  -0.267689    0.0
+          7           cnt_1h     9651     1842743   0.000000      0.000000 1.140931e+10   0.0 0.264099   0.0  1.010530      0.283076   0.272287   0.296213    0.0
+          6        speed_kmh     9560     1841791  64.283463     21.046471 1.123127e+10   0.0 0.259689   0.0  0.156454      0.275735   0.262199   0.293327    0.0
+
+=== phase7_hazard_table.csv rows=24 cols=7 ===
+columns: ['Unnamed: 0', 'month', 'n_risk', 'events', 'hazard', 'lo', 'hi']
+ Unnamed: 0  month  n_risk  events   hazard       lo       hi
+          0      0     999     137 0.137137 0.117191 0.159863
+          1      1     862      43 0.049884 0.037243 0.066519
+          2      2     819      41 0.050061 0.037114 0.067209
+          3      3     778      36 0.046272 0.033609 0.063395
+          4      4     742      39 0.052561 0.038685 0.071046
+          5      5     703      33 0.046942 0.033618 0.065190
+
+=== phase7_high_risk_combo.csv rows=5 cols=5 ===
+columns: ['Unnamed: 0', 'segment', 'n', 'fraud_rate', 'lift_vs_base']
+ Unnamed: 0                                         segment       n  fraud_rate  lift_vs_base
+          0 night + shopping_net/misc_net + amtΓëÑ500 (COMBO)    2274    0.220756     42.371546
+          1                                     night alone  424181    0.008112      1.557021
+          2                     shopping_net/misc_net alone  229976    0.014788      2.838476
+          3                                   amtΓëÑ500 alone   21709    0.215763     41.413136
+          4                             baseline (all txns) 1852394    0.005210      1.000000
+
+=== phase7_hour_encoding_comparison.csv rows=3 cols=2 ===
+columns: ['Unnamed: 0', 'val PR-AUC']
+ Unnamed: 0  val PR-AUC
+        raw    0.859288
+   cyclical    0.858988
+categorical    0.846701
+
+=== phase7_merchant_eb_table.csv rows=700 cols=8 ===
+columns: ['Unnamed: 0', 'category', 'merchant', 'n', 'k', 'cat_eb', 'eb_rate', 'merchant_clean']
+ Unnamed: 0     category                            merchant    n  k  cat_eb  eb_rate             merchant_clean
+        572 shopping_net                   fraud_Kozey-Boehm 2758 60 0.01591 0.021550                Kozey-Boehm
+        415     misc_net   fraud_Herman, Treutel and Dickens 1870 38 0.01302 0.019950 Herman, Treutel and Dicken
+        596 shopping_net                    fraud_Terry-Huel 2864 56 0.01591 0.019430                 Terry-Huel
+        570 shopping_net               fraud_Kerluke-Abshire 2635 50 0.01591 0.018863            Kerluke-Abshire
+        581 shopping_net fraud_Mosciski, Ziemann and Farrell 2821 53 0.01591 0.018689 Mosciski, Ziemann and Farr
+        555 shopping_net                     fraud_Boyer PLC 2717 51 0.01591 0.018669                  Boyer PLC
+
+=== phase7_speed_rate_table.csv rows=5 cols=4 ===
+columns: ['speed_kmh', 'n', 'k', 'rate']
+speed_kmh       n    k     rate
+     <100 1533728 5567 0.003630
+  100-500  243458 2624 0.010778
+   500-1k   36160  617 0.017063
+    1k-5k   30327  579 0.019092
+      >5k    7678  173 0.022532
+
+=== phase8_ablation_decomposed.csv rows=6 cols=6 ===
+columns: ['Unnamed: 0', 'model', 'n_features', 'pr_auc', 'roc_auc', 'delta_pr_auc']
+ Unnamed: 0                            model  n_features   pr_auc  roc_auc  delta_pr_auc
+          0              FULL (all features)          27 0.557480 0.967728     -0.277858
+          1           MINUS card_prior_fraud          26 0.831485 0.979902     -0.003853
+          2          MINUS te_* (4 features)          23 0.666954 0.978891     -0.168384
+          3 MINUS cnt_*/n_prior (3 features)          24 0.565555 0.979093     -0.269783
+          4      MINUS velocity (4 features)          23 0.685606 0.971417     -0.149733
+          5     MINUS all history (raw-only)          15 0.835338 0.993507      0.000000
+
+=== phase8_calibration_temp.csv rows=1 cols=8 ===
+columns: ['Unnamed: 0', 'T', 'ece_before', 'ece_after', 'brier_before', 'brier_after', 'nll_before', 'nll_after']
+ Unnamed: 0        T  ece_before  ece_after  brier_before  brier_after  nll_before  nll_after
+          0 1.417792    0.000159   0.000118      0.000719     0.000709    0.003544   0.003095
+
+=== phase8_capture_at_k.csv rows=5 cols=9 ===
+columns: ['Unnamed: 0', 'top_pct', 'k', 'fraud_caught', 'precision', 'recall', 'usd_captured', 'usd_share', 'usd_per_review']
+ Unnamed: 0  top_pct     k  fraud_caught  precision   recall  usd_captured  usd_share  usd_per_review
+          0      0.1   556           550   0.989209 0.256410  2.063855e+05   0.182106      371.196941
+          1      0.5  2779          1180   0.424613 0.550117  6.028205e+05   0.531904      216.919917
+          2      1.0  5557          1404   0.252654 0.654545  7.786011e+05   0.687006      140.111773
+          3      2.0 11114          1657   0.149091 0.772494  9.659634e+05   0.852327       86.914107
+          4      5.0 27786          1849   0.066544 0.862005  1.058762e+06   0.934209       38.104158
+
+=== phase8_cost_sensitivity.csv rows=5 cols=6 ===
+columns: ['Unnamed: 0', 'fp_cost', 'optimal_threshold', 'expected_loss', 'recall', 'precision']
+ Unnamed: 0  fp_cost  optimal_threshold  expected_loss   recall  precision
+          0      1.0       9.703897e-07   91313.500102 0.915618   0.035772
+          1      5.0       1.204966e-05  193653.870094 0.842424   0.081658
+          2     10.0       1.236802e-04  261637.349975 0.766434   0.159426
+          3     20.0       1.236802e-04  348317.349975 0.766434   0.159426
+          4     50.0       4.305018e-04  545443.399663 0.702098   0.216131
+
+=== phase8_ensemble_comparison.csv rows=2 cols=4 ===
+columns: ['Unnamed: 0', 'model', 'pr_auc', 'roc_auc']
+ Unnamed: 0                 model   pr_auc  roc_auc
+          0          single_final 0.557480 0.967728
+          1 walk_forward_ensemble 0.512836 0.975735
+
+=== phase8_learning_curve.csv rows=5 cols=5 ===
+columns: ['Unnamed: 0', 'frac', 'n_train', 'pr_auc', 'roc_auc']
+ Unnamed: 0  frac  n_train   pr_auc  roc_auc
+          0  0.05    64833 0.322844 0.962595
+          1  0.10   129667 0.479716 0.969151
+          2  0.25   324168 0.626562 0.979422
+          3  0.50   648337 0.516968 0.972378
+          4  1.00  1296675 0.525359 0.980932
+
+=== phase8_leave_card_out.csv rows=3 cols=6 ===
+columns: ['Unnamed: 0', 'slice', 'n', 'n_fraud', 'pr_auc', 'roc_auc']
+ Unnamed: 0                        slice       n  n_fraud   pr_auc  roc_auc
+          0     train rows of SEEN cards 1031265     5952 0.994761 0.999798
+          1 train rows of HELD-OUT cards  265410     1554 0.963929 0.998976
+          2  test rows of HELD-OUT cards  113684      383 0.554077 0.976508
+
+=== phase8_monotonic_comparison.csv rows=2 cols=4 ===
+columns: ['Unnamed: 0', 'model', 'pr_auc', 'roc_auc']
+ Unnamed: 0                 model   pr_auc  roc_auc
+          0 monotonic_constrained 0.592175 0.943538
+          1   unconstrained_final 0.557480 0.967728
+
+=== phase8_psi.csv rows=27 cols=8 ===
+columns: ['Unnamed: 0', 'feature', 'family', 'n_train', 'n_test', 'psi', 'verdict', 'top_driver_bin']
+ Unnamed: 0     feature   family  n_train  n_test      psi verdict        top_driver_bin
+          0   month_sin  bounded  1296675  555719 6.514264  severe          (0.866, inf]
+          1     n_prior log_dist  1296675  555719 5.095472  severe        (4.956, 5.652]
+          2   month_cos  bounded  1296675  555719 1.454335  severe      (6.123e-17, 0.5]
+          3 te_category  bounded  1296675  555719 1.246147  severe  (0.004707, 0.007145]
+          4    te_state  bounded  1296675  555719 1.096769  severe       (0.009418, inf]
+          5     te_zip3  bounded  1296675  555719 0.705081  severe (9.307e-05, 0.000192]
+
+=== phase8_segment_errors.csv rows=63 cols=9 ===
+columns: ['Unnamed: 0', 'category', 'n', 'n_fraud', 'recall', 'fp', 'segment', 'hour_bin', 'state']
+ Unnamed: 0       category       n  n_fraud   recall     fp  segment hour_bin state
+          0  entertainment 40104.0     59.0 0.966102  688.0 category      NaN   NaN
+          1    food_dining 39268.0     54.0 0.407407 2265.0 category      NaN   NaN
+          2  gas_transport 56370.0    154.0 1.000000  597.0 category      NaN   NaN
+          3    grocery_net 19426.0     41.0 1.000000  535.0 category      NaN   NaN
+          4    grocery_pos 52553.0    485.0 0.997938 1060.0 category      NaN   NaN
+          5 health_fitness 36674.0     52.0 0.211538 1582.0 category      NaN   NaN
+
+=== phase8_threshold_table.csv rows=3 cols=12 ===
+columns: ['Unnamed: 0', 'threshold', 'TP', 'FP', 'FN', 'TN', 'precision', 'recall', 'fp_cost', 'missed_usd', 'total_loss', 'usd_captured']
+ Unnamed: 0  threshold   TP    FP   FN     TN  precision   recall  fp_cost    missed_usd    total_loss  usd_captured
+          0    0.50000  822   133 1323 553441   0.860733 0.383217    665.0 763845.810203 764510.810203      0.326013
+          1    0.11267  989   460 1156 553114   0.682540 0.461072   2300.0 658414.339817 660714.339817      0.419042
+          2    0.00001 1807 20322  338 533252   0.081658 0.842424 101610.0  92043.870094 193653.870094      0.918784
+
+=== phase8_time_decay_comparison.csv rows=2 cols=4 ===
+columns: ['Unnamed: 0', 'model', 'pr_auc', 'roc_auc']
+ Unnamed: 0               model   pr_auc  roc_auc
+          0 time_decay_weighted 0.540783 0.967411
+          1    unweighted_final 0.557480 0.967728
+
+=== phase8_walkforward_cv.csv rows=4 cols=10 ===
+columns: ['Unnamed: 0', 'fold', 'val_window', 'n_train', 'n_val', 'pr_auc', 'roc_auc', 'test_pr_auc', 'test_roc_auc', 'ood_gap_pr']
+ Unnamed: 0  fold              val_window  n_train  n_val   pr_auc  roc_auc  test_pr_auc  test_roc_auc  ood_gap_pr
+          0     0 2020-04-22 ΓåÆ 2020-06-21  1146194 150480 0.962478 0.999324     0.538484      0.981293    0.423994
+          1     1 2020-02-22 ΓåÆ 2020-04-22  1013679 132515 0.954481 0.998448     0.507134      0.978442    0.447347
+          2     2 2019-12-24 ΓåÆ 2020-02-22   891696 121983 0.958472 0.998785     0.480584      0.972639    0.477888
+          3     3 2019-10-25 ΓåÆ 2019-12-24   698095 193601 0.928735 0.996571     0.364119      0.957978    0.564615
+
+=== phase8_wf_vs_test.csv rows=1 cols=7 ===
+columns: ['Unnamed: 0', 'mean_val_pr_auc', 'sd_val_pr_auc', 'mean_test_pr_auc_from_folds', 'sd_test_pr_auc_from_folds', 'mean_ood_gap', 'n_folds']
+ Unnamed: 0  mean_val_pr_auc  sd_val_pr_auc  mean_test_pr_auc_from_folds  sd_test_pr_auc_from_folds  mean_ood_gap  n_folds
+          0         0.951041       0.015225                      0.47258                   0.076081      0.478461        4
+
+=== reproducibility_checklist.csv rows=11 cols=4 ===
+columns: ['Unnamed: 0', 'item', 'evidence', 'ok']
+ Unnamed: 0                                   item                                                                                                                                                                              evidence   ok
+          0               global random seed fixed                                                                                                                                                                               SEED=42 True
+          1        all sampling fractions recorded     {'map_scatter': {'fraud_kept': 9651, 'nonfraud_kept': 18427, 'nonfraud_frac': 0.01, 'n_points': 28078}, 'dr_embed': {'n': 50000, 'strategy': 'proportional stratified, seed=42'}} True
+          2      train/test time boundaries stated {'train_start': '2019-01-01 00:00:18', 'train_end': '2020-06-21 12:13:37', 'test_start': '2020-06-21 12:14:25', 'test_end': '2020-12-31 23:59:34', 'gap_days': 0.0005555555555555556} True
+          3             data-version hash recorded                                                   {'fraudTrain.csv': {'sha256_16': 'fd7139200dbfcbed', 'mb': 351.2}, 'fraudTest.csv': {'sha256_16': '12d553ab19440c75', 'mb': 150.4}} True
+          4             environment pinned per-run                                                                                                                                               /content/outputs/logs/env_snapshot.json True
+          5 effect sizes + CIs + n with every test                                                                                                                                                                        see ┬º06 tables True

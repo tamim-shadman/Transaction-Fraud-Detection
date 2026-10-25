@@ -1,0 +1,32 @@
+[
+  {
+    "flow": "guided_walkthrough",
+    "status": "PASS",
+    "errors": 0
+  },
+  {
+    "flow": "presentation_mode",
+    "status": "PASS",
+    "errors": 0
+  },
+  {
+    "flow": "report_composer",
+    "status": "PASS",
+    "errors": 0
+  },
+  {
+    "flow": "saved_workspaces",
+    "status": "PASS",
+    "errors": 0
+  },
+  {
+    "flow": "command_palette_nav",
+    "status": "PASS",
+    "errors": 0
+  },
+  {
+    "flow": "mobile_responsive_phase5",
+    "status": "PASS",
+    "errors": 0
+  }
+]

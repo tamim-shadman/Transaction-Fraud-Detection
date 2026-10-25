@@ -1,0 +1,15 @@
+﻿category,sort_order,is_online
+entertainment,1,False
+food_dining,2,False
+gas_transport,3,False
+grocery_net,4,True
+grocery_pos,5,False
+health_fitness,6,False
+home,7,False
+kids_pets,8,False
+misc_net,9,True
+misc_pos,10,False
+personal_care,11,False
+shopping_net,12,True
+shopping_pos,13,False
+travel,14,False

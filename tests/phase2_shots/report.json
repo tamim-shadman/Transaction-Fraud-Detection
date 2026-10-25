@@ -1,0 +1,1302 @@
+[
+  {
+    "viewport": "desktop",
+    "route": "/",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 2848,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 665,
+    "charts": 3,
+    "emptyCanvas": 0,
+    "panels": 12,
+    "headings": [
+      "A fraud signal that is real, concentrated, and hard to trans"
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/insights",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 4574,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 973,
+    "charts": 0,
+    "emptyCanvas": 0,
+    "panels": 5,
+    "headings": [
+      "What the evidence actually says."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/program",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 3693,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 898,
+    "charts": 0,
+    "emptyCanvas": 0,
+    "panels": 10,
+    "headings": [
+      "One research program. Nine auditable phases.",
+      "Sparkov Card-Fraud Research Program"
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/data-audit",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 3261,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 791,
+    "charts": 2,
+    "emptyCanvas": 0,
+    "panels": 9,
+    "headings": [
+      "Before the model, audit the simulator."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/distributions",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 3035,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 652,
+    "charts": 4,
+    "emptyCanvas": 0,
+    "panels": 9,
+    "headings": [
+      "Fraud amounts are larger \u2014 and capped."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/interactions",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 3170,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 611,
+    "charts": 6,
+    "emptyCanvas": 0,
+    "panels": 9,
+    "headings": [
+      "Fraud is a card story, not a transaction story."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/temporal",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 2167,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 531,
+    "charts": 2,
+    "emptyCanvas": 0,
+    "panels": 7,
+    "headings": [
+      "Drift is real. The boundary is the experiment."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/advanced",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 2143,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 510,
+    "charts": 4,
+    "emptyCanvas": 0,
+    "panels": 8,
+    "headings": [
+      "Unsupervised views separate fraud \u2014 with caveats."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/statistics",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 2849,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 670,
+    "charts": 4,
+    "emptyCanvas": 0,
+    "panels": 9,
+    "headings": [
+      "At n = 1.85M, significance is cheap. Effect size is not."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/features",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 3034,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 605,
+    "charts": 4,
+    "emptyCanvas": 0,
+    "panels": 11,
+    "headings": [
+      "The best descriptive features are not the most transferable."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/model",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 4116,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 736,
+    "charts": 5,
+    "emptyCanvas": 0,
+    "panels": 16,
+    "headings": [
+      "The model ranks well. The boundary is the story."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/economics",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 3756,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 890,
+    "charts": 3,
+    "emptyCanvas": 0,
+    "panels": 13,
+    "headings": [
+      "The score is cheap. Review capacity is not."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/experiments",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 2599,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 614,
+    "charts": 1,
+    "emptyCanvas": 0,
+    "panels": 5,
+    "headings": [
+      "Compare variants. Respect the split."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/lineage",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 1680,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 447,
+    "charts": 1,
+    "emptyCanvas": 0,
+    "panels": 4,
+    "headings": [
+      "Follow the evidence back to its source."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/logs",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 2556,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 1213,
+    "charts": 0,
+    "emptyCanvas": 0,
+    "panels": 4,
+    "headings": [
+      "What the run actually logged."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/explore",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 1278,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 564,
+    "charts": 0,
+    "emptyCanvas": 0,
+    "panels": 1,
+    "headings": [
+      "Profile the evidence before you quote it."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/metrics",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 3023,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 895,
+    "charts": 0,
+    "emptyCanvas": 0,
+    "panels": 4,
+    "headings": [
+      "One definition per metric."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/findings",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 9232,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 1636,
+    "charts": 1,
+    "emptyCanvas": 0,
+    "panels": 8,
+    "headings": [
+      "Sixty-four claims. Four grades. Five audit notes.",
+      "Five notes where the evidence needs a second look"
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/artifacts",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 3048,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 651,
+    "charts": 0,
+    "emptyCanvas": 0,
+    "panels": 1,
+    "headings": [
+      "Every figure, table and cell \u2014 with its receipt."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "laptop",
+    "route": "/",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 3041,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 665,
+    "charts": 3,
+    "emptyCanvas": 0,
+    "panels": 12,
+    "headings": [
+      "A fraud signal that is real, concentrated, and hard to trans"
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "laptop",
+    "route": "/insights",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 5245,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 973,
+    "charts": 0,
+    "emptyCanvas": 0,
+    "panels": 5,
+    "headings": [
+      "What the evidence actually says."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "laptop",
+    "route": "/program",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 4195,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 898,
+    "charts": 0,
+    "emptyCanvas": 0,
+    "panels": 10,
+    "headings": [
+      "One research program. Nine auditable phases.",
+      "Sparkov Card-Fraud Research Program"
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "laptop",
+    "route": "/data-audit",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 3389,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 791,
+    "charts": 2,
+    "emptyCanvas": 0,
+    "panels": 9,
+    "headings": [
+      "Before the model, audit the simulator."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "laptop",
+    "route": "/distributions",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 3086,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 652,
+    "charts": 4,
+    "emptyCanvas": 0,
+    "panels": 9,
+    "headings": [
+      "Fraud amounts are larger \u2014 and capped."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "laptop",
+    "route": "/interactions",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 3188,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 611,
+    "charts": 6,
+    "emptyCanvas": 0,
+    "panels": 9,
+    "headings": [
+      "Fraud is a card story, not a transaction story."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "laptop",
+    "route": "/temporal",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 2321,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 531,
+    "charts": 2,
+    "emptyCanvas": 0,
+    "panels": 7,
+    "headings": [
+      "Drift is real. The boundary is the experiment."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "laptop",
+    "route": "/advanced",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 2317,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 510,
+    "charts": 4,
+    "emptyCanvas": 0,
+    "panels": 8,
+    "headings": [
+      "Unsupervised views separate fraud \u2014 with caveats."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "laptop",
+    "route": "/statistics",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 2925,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 670,
+    "charts": 4,
+    "emptyCanvas": 0,
+    "panels": 9,
+    "headings": [
+      "At n = 1.85M, significance is cheap. Effect size is not."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "laptop",
+    "route": "/features",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 3127,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 605,
+    "charts": 4,
+    "emptyCanvas": 0,
+    "panels": 11,
+    "headings": [
+      "The best descriptive features are not the most transferable."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "laptop",
+    "route": "/model",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 4506,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 736,
+    "charts": 5,
+    "emptyCanvas": 0,
+    "panels": 16,
+    "headings": [
+      "The model ranks well. The boundary is the story."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "laptop",
+    "route": "/economics",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 4009,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 890,
+    "charts": 3,
+    "emptyCanvas": 0,
+    "panels": 13,
+    "headings": [
+      "The score is cheap. Review capacity is not."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "laptop",
+    "route": "/experiments",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 2968,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 614,
+    "charts": 1,
+    "emptyCanvas": 0,
+    "panels": 5,
+    "headings": [
+      "Compare variants. Respect the split."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "laptop",
+    "route": "/lineage",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 1714,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 447,
+    "charts": 1,
+    "emptyCanvas": 0,
+    "panels": 4,
+    "headings": [
+      "Follow the evidence back to its source."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "laptop",
+    "route": "/logs",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 2638,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 1213,
+    "charts": 0,
+    "emptyCanvas": 0,
+    "panels": 4,
+    "headings": [
+      "What the run actually logged."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "laptop",
+    "route": "/explore",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 1197,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 564,
+    "charts": 0,
+    "emptyCanvas": 0,
+    "panels": 1,
+    "headings": [
+      "Profile the evidence before you quote it."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "laptop",
+    "route": "/metrics",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 3921,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 895,
+    "charts": 0,
+    "emptyCanvas": 0,
+    "panels": 4,
+    "headings": [
+      "One definition per metric."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "laptop",
+    "route": "/findings",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 9686,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 1636,
+    "charts": 1,
+    "emptyCanvas": 0,
+    "panels": 8,
+    "headings": [
+      "Sixty-four claims. Four grades. Five audit notes.",
+      "Five notes where the evidence needs a second look"
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "laptop",
+    "route": "/artifacts",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 2811,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 651,
+    "charts": 0,
+    "emptyCanvas": 0,
+    "panels": 1,
+    "headings": [
+      "Every figure, table and cell \u2014 with its receipt."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "tablet",
+    "route": "/",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 5237,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 665,
+    "charts": 3,
+    "emptyCanvas": 0,
+    "panels": 12,
+    "headings": [
+      "A fraud signal that is real, concentrated, and hard to trans"
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "tablet",
+    "route": "/insights",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 6880,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 973,
+    "charts": 0,
+    "emptyCanvas": 0,
+    "panels": 5,
+    "headings": [
+      "What the evidence actually says."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "tablet",
+    "route": "/program",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 6348,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 898,
+    "charts": 0,
+    "emptyCanvas": 0,
+    "panels": 10,
+    "headings": [
+      "One research program. Nine auditable phases.",
+      "Sparkov Card-Fraud Research Program"
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "tablet",
+    "route": "/data-audit",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 5140,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 791,
+    "charts": 2,
+    "emptyCanvas": 0,
+    "panels": 9,
+    "headings": [
+      "Before the model, audit the simulator."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "tablet",
+    "route": "/distributions",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 4675,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 652,
+    "charts": 4,
+    "emptyCanvas": 0,
+    "panels": 9,
+    "headings": [
+      "Fraud amounts are larger \u2014 and capped."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "tablet",
+    "route": "/interactions",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 4960,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 611,
+    "charts": 6,
+    "emptyCanvas": 0,
+    "panels": 9,
+    "headings": [
+      "Fraud is a card story, not a transaction story."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "tablet",
+    "route": "/temporal",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 3653,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 531,
+    "charts": 2,
+    "emptyCanvas": 0,
+    "panels": 7,
+    "headings": [
+      "Drift is real. The boundary is the experiment."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "tablet",
+    "route": "/advanced",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 3831,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 510,
+    "charts": 4,
+    "emptyCanvas": 0,
+    "panels": 8,
+    "headings": [
+      "Unsupervised views separate fraud \u2014 with caveats."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "tablet",
+    "route": "/statistics",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 4731,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 670,
+    "charts": 4,
+    "emptyCanvas": 0,
+    "panels": 9,
+    "headings": [
+      "At n = 1.85M, significance is cheap. Effect size is not."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "tablet",
+    "route": "/features",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 4595,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 605,
+    "charts": 4,
+    "emptyCanvas": 0,
+    "panels": 11,
+    "headings": [
+      "The best descriptive features are not the most transferable."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "tablet",
+    "route": "/model",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 7239,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 736,
+    "charts": 5,
+    "emptyCanvas": 0,
+    "panels": 16,
+    "headings": [
+      "The model ranks well. The boundary is the story."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "tablet",
+    "route": "/economics",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 5981,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 890,
+    "charts": 3,
+    "emptyCanvas": 0,
+    "panels": 13,
+    "headings": [
+      "The score is cheap. Review capacity is not."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "tablet",
+    "route": "/experiments",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 3504,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 614,
+    "charts": 1,
+    "emptyCanvas": 0,
+    "panels": 5,
+    "headings": [
+      "Compare variants. Respect the split."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "tablet",
+    "route": "/lineage",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 2336,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 447,
+    "charts": 1,
+    "emptyCanvas": 0,
+    "panels": 4,
+    "headings": [
+      "Follow the evidence back to its source."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "tablet",
+    "route": "/logs",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 3342,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 1213,
+    "charts": 0,
+    "emptyCanvas": 0,
+    "panels": 4,
+    "headings": [
+      "What the run actually logged."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "tablet",
+    "route": "/explore",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 1373,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 564,
+    "charts": 0,
+    "emptyCanvas": 0,
+    "panels": 1,
+    "headings": [
+      "Profile the evidence before you quote it."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "tablet",
+    "route": "/metrics",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 4285,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 895,
+    "charts": 0,
+    "emptyCanvas": 0,
+    "panels": 4,
+    "headings": [
+      "One definition per metric."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "tablet",
+    "route": "/findings",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 11116,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 1636,
+    "charts": 1,
+    "emptyCanvas": 0,
+    "panels": 8,
+    "headings": [
+      "Sixty-four claims. Four grades. Five audit notes.",
+      "Five notes where the evidence needs a second look"
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "tablet",
+    "route": "/artifacts",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 3689,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 651,
+    "charts": 0,
+    "emptyCanvas": 0,
+    "panels": 1,
+    "headings": [
+      "Every figure, table and cell \u2014 with its receipt."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 7381,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 665,
+    "charts": 3,
+    "emptyCanvas": 0,
+    "panels": 12,
+    "headings": [
+      "A fraud signal that is real, concentrated, and hard to trans"
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/insights",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 11388,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 973,
+    "charts": 0,
+    "emptyCanvas": 0,
+    "panels": 5,
+    "headings": [
+      "What the evidence actually says."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/program",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 9102,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 898,
+    "charts": 0,
+    "emptyCanvas": 0,
+    "panels": 10,
+    "headings": [
+      "One research program. Nine auditable phases.",
+      "Sparkov Card-Fraud Research Program"
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/data-audit",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 6956,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 791,
+    "charts": 2,
+    "emptyCanvas": 0,
+    "panels": 9,
+    "headings": [
+      "Before the model, audit the simulator."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/distributions",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 5810,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 652,
+    "charts": 4,
+    "emptyCanvas": 0,
+    "panels": 9,
+    "headings": [
+      "Fraud amounts are larger \u2014 and capped."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/interactions",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 6288,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 611,
+    "charts": 6,
+    "emptyCanvas": 0,
+    "panels": 9,
+    "headings": [
+      "Fraud is a card story, not a transaction story."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/temporal",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 4890,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 531,
+    "charts": 2,
+    "emptyCanvas": 0,
+    "panels": 7,
+    "headings": [
+      "Drift is real. The boundary is the experiment."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/advanced",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 5031,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 510,
+    "charts": 4,
+    "emptyCanvas": 0,
+    "panels": 8,
+    "headings": [
+      "Unsupervised views separate fraud \u2014 with caveats."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/statistics",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 6078,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 670,
+    "charts": 4,
+    "emptyCanvas": 0,
+    "panels": 9,
+    "headings": [
+      "At n = 1.85M, significance is cheap. Effect size is not."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/features",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 6224,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 605,
+    "charts": 4,
+    "emptyCanvas": 0,
+    "panels": 11,
+    "headings": [
+      "The best descriptive features are not the most transferable."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/model",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 9756,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 736,
+    "charts": 5,
+    "emptyCanvas": 0,
+    "panels": 16,
+    "headings": [
+      "The model ranks well. The boundary is the story."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/economics",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 7621,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 890,
+    "charts": 3,
+    "emptyCanvas": 0,
+    "panels": 13,
+    "headings": [
+      "The score is cheap. Review capacity is not."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/experiments",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 4290,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 614,
+    "charts": 1,
+    "emptyCanvas": 0,
+    "panels": 5,
+    "headings": [
+      "Compare variants. Respect the split."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/lineage",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 2692,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 447,
+    "charts": 1,
+    "emptyCanvas": 0,
+    "panels": 4,
+    "headings": [
+      "Follow the evidence back to its source."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/logs",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 4234,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 1213,
+    "charts": 0,
+    "emptyCanvas": 0,
+    "panels": 4,
+    "headings": [
+      "What the run actually logged."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/explore",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 1753,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 564,
+    "charts": 0,
+    "emptyCanvas": 0,
+    "panels": 1,
+    "headings": [
+      "Profile the evidence before you quote it."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/metrics",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 4621,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 895,
+    "charts": 0,
+    "emptyCanvas": 0,
+    "panels": 4,
+    "headings": [
+      "One definition per metric."
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/findings",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 16148,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 1636,
+    "charts": 1,
+    "emptyCanvas": 0,
+    "panels": 8,
+    "headings": [
+      "Sixty-four claims. Four grades. Five audit notes.",
+      "Five notes where the evidence needs a second look"
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/artifacts",
+    "bodyBg": "rgb(7, 11, 19)",
+    "bodyColor": "rgb(232, 238, 248)",
+    "height": 4776,
+    "overflow": 0,
+    "smallText": 0,
+    "nodes": 651,
+    "charts": 0,
+    "emptyCanvas": 0,
+    "panels": 1,
+    "headings": [
+      "Every figure, table and cell \u2014 with its receipt."
+    ],
+    "errors": []
+  }
+]

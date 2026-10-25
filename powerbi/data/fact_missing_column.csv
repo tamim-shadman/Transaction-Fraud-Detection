@@ -1,0 +1,12 @@
+﻿column,dtype,missing_pct,non_null,unique_values,role
+amt_z_prior,float32,0.1079,1850396.0,1819631.0,feature/derived
+amt_z_prior_log,float32,0.1079,1850396.0,598583.0,feature/derived
+speed_kmh,float32,0.0563,1851351.0,1824638.0,feature/derived
+amt_prior_mean,float32,0.0539,1851395.0,1656974.0,feature/derived
+amt_prior_mean_log,float32,0.0539,1851395.0,1066768.0,feature/derived
+dist_prev_km,float32,0.0539,1851395.0,1775076.0,feature/derived
+dist_prev_km_log,float32,0.0539,1851395.0,1492276.0,feature/derived
+hours_since_prev,float32,0.0539,1851395.0,174062.0,feature/derived
+hours_since_prev_log,float32,0.0539,1851395.0,174062.0,feature/derived
+merch_lat_prev,float32,0.0539,1851395.0,1523355.0,feature/derived
+merch_long_prev,float32,0.0539,1851395.0,1559135.0,feature/derived

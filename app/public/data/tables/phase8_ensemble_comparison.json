@@ -1,0 +1,1 @@
+{"id":"phase8_ensemble_comparison","columns":["model","pr_auc","roc_auc"],"types":{"model":"text","pr_auc":"number","roc_auc":"number"},"rows":[{"model":"single_final","pr_auc":0.5574801511963462,"roc_auc":0.9677282868198628},{"model":"walk_forward_ensemble","pr_auc":0.5128355010603128,"roc_auc":0.9757354167207232}]}

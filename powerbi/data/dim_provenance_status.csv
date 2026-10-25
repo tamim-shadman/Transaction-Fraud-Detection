@@ -1,0 +1,3 @@
+﻿provenance,label,rule,sort_order
+verified,Verified,A write line for the artifact exists in a recorded notebook output.,1
+inferred,Inferred,"The artifact belongs to the phase, but no producing cell was located.",2

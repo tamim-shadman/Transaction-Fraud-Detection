@@ -1,0 +1,120 @@
+name: CI & Delivery Quality Assurance
+
+on:
+  push:
+    branches: [main, master, release/**]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lint-and-typecheck:
+    name: Code Quality & Type Integrity
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "npm"
+          cache-dependency-path: app/package-lock.json
+
+      - name: Install Frontend Dependencies
+        working-directory: app
+        run: npm ci
+
+      - name: Strict TypeScript Compilation Check
+        working-directory: app
+        run: npm run typecheck
+
+  frontend-build:
+    name: Production Bundle Build
+    needs: lint-and-typecheck
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "npm"
+          cache-dependency-path: app/package-lock.json
+
+      - name: Install Frontend Dependencies
+        working-directory: app
+        run: npm ci
+
+      - name: Build Vite Production Bundle
+        working-directory: app
+        run: npm run build
+
+      - name: Verify Bundle Integrity
+        run: |
+          test -f app/dist/index.html || (echo "Missing index.html in dist" && exit 1)
+          test -d app/dist/assets || (echo "Missing assets in dist" && exit 1)
+
+  data-and-metrics-validation:
+    name: Mathematical & Contract Verification
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install Python Validation Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-prod.txt
+
+      - name: Validate Metric Integrity (196 Checks)
+        run: python tests/validate_metrics.py
+
+      - name: Validate Phase 2 Contracts & Schemas (144 Checks)
+        run: python tests/validate_phase2.py
+
+      - name: Validate Phase 6 Data Engine & Formulas (7 Checks)
+        run: python tests/validate_phase6_engine.py
+
+  deployment-and-release-audit:
+    name: Deployment, Backup & Security Audit
+    needs: [frontend-build, data-and-metrics-validation]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js & Python
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Dependencies & Build Frontend
+        run: |
+          cd app && npm ci && npm run build && cd ..
+          pip install -r requirements-prod.txt
+
+      - name: Validate Pre-Flight Configuration
+        run: python scripts/config_loader.py --validate
+
+      - name: Execute Phase 7 Deployment Verification Suite
+        run: python tests/test_phase7_deployment.py
+
+      - name: Verify Secret Isolation & Clean Package
+        run: |
+          python scripts/build_release.py --validate-only

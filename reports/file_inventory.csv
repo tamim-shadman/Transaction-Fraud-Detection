@@ -1,0 +1,852 @@
+﻿path,category,kind,role,bytes,sha256,duplicate_of,duplicate_group
+analytics/build_dataset.py,Data pipeline,Python source,tooling,59754,7083905ef03dec61e2938becd4324d80900023c76df54bf6c35ce63fb0782c24,,7083905ef03d
+analytics/build_phase2_data.py,Data pipeline,Python source,tooling,63942,e7babac6b57d7bec724e4a1a907dfd749a555478b98bd9a6c3a6cfab84270c58,,e7babac6b57d
+analytics/config.py,Data pipeline,Python source,tooling,39294,3b16707f05f7043850cfb67d7819bf05b2bb865a3b6364bc2d2e37e8ad022cf5,,3b16707f05f7
+app/index.html,Root,Interactive HTML,project file,591,1112db6de8911372de1dad1a2b897d8bc327b75dab8d170398a441604c11ea95,,1112db6de891
+app/package-lock.json,Root,JSON data,project file,45771,9529e9fd0a4c2778b3f92aaccc8835cf080aa0059b0027106a780a4ce8445129,,9529e9fd0a4c
+app/package.json,Root,JSON data,project file,761,2b6ad2bcee1f50d297e6af5c69f323afcc563bead3f0107de13fe776abae806a,,2b6ad2bcee1f
+app/public/artifacts/figures/phase0_missing_bar.png,App figure mirror,PNG figure,app mirror (byte-identical copy),329588,62d898d2a192342b1ea094fe75cf5b3b7d53cd0cad739d0c9206791430a07eb8,figures/phase0_missing_bar.png,62d898d2a192
+app/public/artifacts/figures/phase0_missing_matrix.png,App figure mirror,PNG figure,app mirror (byte-identical copy),28745,4ba779ca2b7d1e447ee1ce4c7dd54dc29f23750d0683081891c3d2dacc5c3b83,figures/phase0_missing_matrix.png,4ba779ca2b7d
+app/public/artifacts/figures/phase0_temporal_coverage.png,App figure mirror,PNG figure,app mirror (byte-identical copy),185183,b21e95879c990e9af9d8669048f5b8b95ab5e11860f9c3e3a3ca12d8cb8451f7,figures/phase0_temporal_coverage.png,b21e95879c99
+app/public/artifacts/figures/phase0_txns_per_card.png,App figure mirror,PNG figure,app mirror (byte-identical copy),34873,c8c9133886f2331671c589a07dd3dc4552d68c1bcc31c5e35d392e562c927916,figures/phase0_txns_per_card.png,c8c9133886f2
+app/public/artifacts/figures/phase1_age.png,App figure mirror,PNG figure,app mirror (byte-identical copy),83582,01b213eeb651e912d27afe728cae43df264cb3813b7c7a2851cff8f9307b3a5b,figures/phase1_age.png,01b213eeb651
+app/public/artifacts/figures/phase1_age_bins.png,App figure mirror,PNG figure,app mirror (byte-identical copy),84481,b8ed87d63e0840bf059f191d3b96f502b3e987e1db0a00499d3d2984684c574b,figures/phase1_age_bins.png,b8ed87d63e08
+app/public/artifacts/figures/phase1_amt_box_violin.png,App figure mirror,PNG figure,app mirror (byte-identical copy),47984,6428fad3e356171ea283532d89aef03bd9618dd6510e29b20e3e5f1d8ec952ed,figures/phase1_amt_box_violin.png,6428fad3e356
+app/public/artifacts/figures/phase1_amt_ecdf.png,App figure mirror,PNG figure,app mirror (byte-identical copy),45235,cfc2bc5c46f64d9a567cf95f01411d811b1a4d1d3a879f2b207a1cdd48f37a08,figures/phase1_amt_ecdf.png,cfc2bc5c46f6
+app/public/artifacts/figures/phase1_amt_hist.png,App figure mirror,PNG figure,app mirror (byte-identical copy),51261,9bfb2c4b66034a104400abaa618625d49099822d24d88ab2e9e3095ae6e8d831,figures/phase1_amt_hist.png,9bfb2c4b6603
+app/public/artifacts/figures/phase1_amt_overlay.png,App figure mirror,PNG figure,app mirror (byte-identical copy),72233,6b9e1060c1e7a807dfb4b78fbef6826f962e1528db0a3a3dbc9ef67d4352ef2d,figures/phase1_amt_overlay.png,6b9e1060c1e7
+app/public/artifacts/figures/phase1_category.png,App figure mirror,PNG figure,app mirror (byte-identical copy),160003,ca872b46462d4268fd7a13d587db29f69c17fb74d22f6df424bfc2dc0dff02a8,figures/phase1_category.png,ca872b46462d
+app/public/artifacts/figures/phase1_citypop.png,App figure mirror,PNG figure,app mirror (byte-identical copy),46159,20e7bdce275607e049631b5398e443f1e052223f91df53b8c8540f96fb5850ac,figures/phase1_citypop.png,20e7bdce2756
+app/public/artifacts/figures/phase1_citypop_bins.png,App figure mirror,PNG figure,app mirror (byte-identical copy),89118,aee2784fc61352dcd79d109793acf3f5aa5a1ec6326f0bc142e1e9c1c8f398af,figures/phase1_citypop_bins.png,aee2784fc613
+app/public/artifacts/figures/phase1_covid_window.png,App figure mirror,PNG figure,app mirror (byte-identical copy),108784,640a0348ac49d6f93d4a31c7428932fdc31a4eb29bfb067ca68afe4fed1122ee,figures/phase1_covid_window.png,640a0348ac49
+app/public/artifacts/figures/phase1_dow.png,App figure mirror,PNG figure,app mirror (byte-identical copy),86080,28bc8b9d37782e549548e503a70d578147902eec5ddddb9629078a339b7f4678,figures/phase1_dow.png,28bc8b9d3778
+app/public/artifacts/figures/phase1_gender.png,App figure mirror,PNG figure,app mirror (byte-identical copy),65769,d9b6a75dcdce1097a2ece299499cf75821cc51ca782e43968eea68c0276e4b3d,figures/phase1_gender.png,d9b6a75dcdce
+app/public/artifacts/figures/phase1_gender_x_category.png,App figure mirror,PNG figure,app mirror (byte-identical copy),62949,f29af314bcfe249eb407899d24a0e4e7a08b5686b67e02717d34ca518c908254,figures/phase1_gender_x_category.png,f29af314bcfe
+app/public/artifacts/figures/phase1_geo_scatter.png,App figure mirror,PNG figure,app mirror (byte-identical copy),153567,cb4baa09b10f7838d9cfe9bda01f429f3f01250664d735b37c4d362440b3b831,figures/phase1_geo_scatter.png,cb4baa09b10f
+app/public/artifacts/figures/phase1_hour.png,App figure mirror,PNG figure,app mirror (byte-identical copy),80835,1f83d750c5a0757d12a2bc59a10af22c1d330eb0d10ce70ccbf46bf7f11b6be4,figures/phase1_hour.png,1f83d750c5a0
+app/public/artifacts/figures/phase1_hour_by_year.png,App figure mirror,PNG figure,app mirror (byte-identical copy),59880,2f5782c64e1f3814ea24aceebc0880bf72aabd50edf1c690a568d7247cc38c29,figures/phase1_hour_by_year.png,2f5782c64e1f
+app/public/artifacts/figures/phase1_job.png,App figure mirror,PNG figure,app mirror (byte-identical copy),266684,c629b023e01ff9c370168a4b59c8d8bc1d1aefb8318170810bb5b6cd154f8069,figures/phase1_job.png,c629b023e01f
+app/public/artifacts/figures/phase1_merchant_topN.png,App figure mirror,PNG figure,app mirror (byte-identical copy),185386,ed092db0a21d6db7d44a2d447fd5f2e6f7873ecce3d3c6e60d66f18690ec1b38,figures/phase1_merchant_topN.png,ed092db0a21d
+app/public/artifacts/figures/phase1_month.png,App figure mirror,PNG figure,app mirror (byte-identical copy),120314,b9b6558f1278ad69aa106a00c08748d1b7a577cfbdc0dfa76f2e0659019d69f6,figures/phase1_month.png,b9b6558f1278
+app/public/artifacts/figures/phase1_night.png,App figure mirror,PNG figure,app mirror (byte-identical copy),78340,27a528f6c7ffe5a0f57a51444697120436deb130bcd262382eac5e0a344446bb,figures/phase1_night.png,27a528f6c7ff
+app/public/artifacts/figures/phase1_qq_amt_age.png,App figure mirror,PNG figure,app mirror (byte-identical copy),86162,800f51d651566bec2faea5503b673edf1f53638fb8661e3adcc6fdc6eb76175c,figures/phase1_qq_amt_age.png,800f51d65156
+app/public/artifacts/figures/phase1_state_forest.png,App figure mirror,PNG figure,app mirror (byte-identical copy),140501,66f99483430aca928fe2f10d7c1a277aabe688892a33174226666b28dca79858,figures/phase1_state_forest.png,66f99483430a
+app/public/artifacts/figures/phase1_target_donut.png,App figure mirror,PNG figure,app mirror (byte-identical copy),43842,e7e6f20cdf4144a00d3108c798e31dc90039acbb32a490def4617d76c7b98aff,figures/phase1_target_donut.png,e7e6f20cdf41
+app/public/artifacts/figures/phase1_weekend.png,App figure mirror,PNG figure,app mirror (byte-identical copy),81496,31c170a3050ec96ed79a2dfb535fcf1348a32921c90a88571d06084944b92950,figures/phase1_weekend.png,31c170a3050e
+app/public/artifacts/figures/phase2_age_x_category.png,App figure mirror,PNG figure,app mirror (byte-identical copy),80280,dae1aa4515ae840005e7e0f8d49fe32697ddc1760452827f6031eff0874630ac,figures/phase2_age_x_category.png,dae1aa4515ae
+app/public/artifacts/figures/phase2_amt_by_category.png,App figure mirror,PNG figure,app mirror (byte-identical copy),210026,9d1f4e33aefb0a45747d65256c7d722990f3b0669bae1420c315f3b2e56c8e5e,figures/phase2_amt_by_category.png,9d1f4e33aefb
+app/public/artifacts/figures/phase2_amt_cdf.png,App figure mirror,PNG figure,app mirror (byte-identical copy),45001,cdc70a36914ec9b2d23972e001ce4e4686212f97bc1a996a2823de99dbf3da64,figures/phase2_amt_cdf.png,cdc70a36914e
+app/public/artifacts/figures/phase2_amtbin_x_hour.png,App figure mirror,PNG figure,app mirror (byte-identical copy),55899,c0e8b20b9d7ac1e2abd1aa09fd280339ff6cca410f5b0bdc90a0823e8efd1578,figures/phase2_amtbin_x_hour.png,c0e8b20b9d7a
+app/public/artifacts/figures/phase2_card_rate_hist.png,App figure mirror,PNG figure,app mirror (byte-identical copy),40593,8076223673fbb74909e182b27e5f22412eaca210e355cb95b470be764a482f05,figures/phase2_card_rate_hist.png,8076223673fb
+app/public/artifacts/figures/phase2_card_scatter.png,App figure mirror,PNG figure,app mirror (byte-identical copy),99140,44bfcda2d5dc25548d0069bc78045657a5c87575c702f697b2bb139e1d9afa94,figures/phase2_card_scatter.png,44bfcda2d5dc
+app/public/artifacts/figures/phase2_category_x_hour.png,App figure mirror,PNG figure,app mirror (byte-identical copy),94911,ffb0022195d1abbd428246e7ecca540b83971ac72c50b931b978bdf53f30f07d,figures/phase2_category_x_hour.png,ffb0022195d1
+app/public/artifacts/figures/phase2_citypop_x_category.png,App figure mirror,PNG figure,app mirror (byte-identical copy),80137,03b45fb6e06022051e3f2918b033a2a02bf222144a6fde0fa6a05dec93476371,figures/phase2_citypop_x_category.png,03b45fb6e060
+app/public/artifacts/figures/phase2_cramers_v.png,App figure mirror,PNG figure,app mirror (byte-identical copy),94548,15ec244a3a994b015ce7240a2bb772eb49cae7d9e234567e77c9e79d213e6c8b,figures/phase2_cramers_v.png,15ec244a3a99
+app/public/artifacts/figures/phase2_dist_overlay.png,App figure mirror,PNG figure,app mirror (byte-identical copy),70187,69df771a5ac2be6de688c94eae14578a5a325a4ccd1b80a416e556dcc9f80761,figures/phase2_dist_overlay.png,69df771a5ac2
+app/public/artifacts/figures/phase2_dist_rate.png,App figure mirror,PNG figure,app mirror (byte-identical copy),33327,e4bd071e40c368bc0b87db8e3379a3c835e1cddabf65d5796335d12c0922c23f,figures/phase2_dist_rate.png,e4bd071e40c3
+app/public/artifacts/figures/phase2_dow_x_hour_rate.png,App figure mirror,PNG figure,app mirror (byte-identical copy),48760,9d14f0efe6b90efd54247bd04da544939bbf1088a8166cad9163c18ff1222afb,figures/phase2_dow_x_hour_rate.png,9d14f0efe6b9
+app/public/artifacts/figures/phase2_dow_x_hour_vol.png,App figure mirror,PNG figure,app mirror (byte-identical copy),37157,24c422cdb5cef0b2308e80de3e8e760891bd1145b64e4dc65cc249241ce468b3,figures/phase2_dow_x_hour_vol.png,24c422cdb5ce
+app/public/artifacts/figures/phase2_gender_x_category.png,App figure mirror,PNG figure,app mirror (byte-identical copy),68671,dbf9a05aa92a82f784e4716b834312d4ae3dd28d2e3f0541ebfa1aae0c615413,figures/phase2_gender_x_category.png,dbf9a05aa92a
+app/public/artifacts/figures/phase2_joint_amt_age.png,App figure mirror,PNG figure,app mirror (byte-identical copy),266495,51f363b7c28c5efca345132714cd975f0397b07ab774467856f3d308198144ea,figures/phase2_joint_amt_age.png,51f363b7c28c
+app/public/artifacts/figures/phase2_joint_amt_dist.png,App figure mirror,PNG figure,app mirror (byte-identical copy),271057,b2ed7c53498fe97e530fba33434dd782070e00e09276ed23d91367a87a39a23f,figures/phase2_joint_amt_dist.png,b2ed7c53498f
+app/public/artifacts/figures/phase2_lorenz_fraud.png,App figure mirror,PNG figure,app mirror (byte-identical copy),66639,1a4edfb201080232bbe4b6cea60a22601bb8bc5f94ecdd68404090fab78f341e,figures/phase2_lorenz_fraud.png,1a4edfb20108
+app/public/artifacts/figures/phase2_mi.png,App figure mirror,PNG figure,app mirror (byte-identical copy),52292,212d87dec4f332647816dfaebef468d59b2c42dc323b134d07101fe7dfbdc665,figures/phase2_mi.png,212d87dec4f3
+app/public/artifacts/figures/phase2_money_category.png,App figure mirror,PNG figure,app mirror (byte-identical copy),90704,a9198cf53af642fb3eb70a191885811c9d72929988ffb5c11570dcb4d854fc3b,figures/phase2_money_category.png,a9198cf53af6
+app/public/artifacts/figures/phase2_money_month.png,App figure mirror,PNG figure,app mirror (byte-identical copy),84114,45b85ffdfec8c0aa34b5b177b33312b74bf3dcdf861f0abdb0d2a63f8fd5253a,figures/phase2_money_month.png,45b85ffdfec8
+app/public/artifacts/figures/phase2_pairplot.png,App figure mirror,PNG figure,app mirror (byte-identical copy),545806,008090cc9007681e1814630a66f45aba556c2206e0ec199b3ea7220ba68770b2,figures/phase2_pairplot.png,008090cc9007
+app/public/artifacts/figures/phase2_spearman.png,App figure mirror,PNG figure,app mirror (byte-identical copy),218820,9b2134ef09aa6fcfbfefde764e95c03f7024204d15cc91403d50e3313dac2e32,figures/phase2_spearman.png,9b2134ef09aa
+app/public/artifacts/figures/phase2_zip3_forest.png,App figure mirror,PNG figure,app mirror (byte-identical copy),107863,6fec5e11b1e5a2da7a1efc388450dc627e2fd5fd351c851ce4e2fc546dc9cb37,figures/phase2_zip3_forest.png,6fec5e11b1e5
+app/public/artifacts/figures/phase3_acf_pacf.png,App figure mirror,PNG figure,app mirror (byte-identical copy),85960,3949795c093db2820754282d2178eda014768e831610b899dc0028a4804a67ea,figures/phase3_acf_pacf.png,3949795c093d
+app/public/artifacts/figures/phase3_card_timelines.png,App figure mirror,PNG figure,app mirror (byte-identical copy),131366,864ce2381612b2e97654d95dd659c1092767cbccf23ae560da97eb0d84fed755,figures/phase3_card_timelines.png,864ce2381612
+app/public/artifacts/figures/phase3_changepoint.png,App figure mirror,PNG figure,app mirror (byte-identical copy),231510,1c382947cb0940d97d9eb96029d7c331b4e8b9cb9037337860c5651d6176275a,figures/phase3_changepoint.png,1c382947cb09
+app/public/artifacts/figures/phase3_daily_rolling.png,App figure mirror,PNG figure,app mirror (byte-identical copy),589849,a2da627e64459c40c648cc86ee15bc5f10b14da13151d95e5b6494ef9a3adbd3,figures/phase3_daily_rolling.png,a2da627e6445
+app/public/artifacts/figures/phase3_hour_x_dow_rate.png,App figure mirror,PNG figure,app mirror (byte-identical copy),48297,709ee160d8fcf5d49a5877cb4d17fbc960639b006416a20c582a640840c75299,figures/phase3_hour_x_dow_rate.png,709ee160d8fc
+app/public/artifacts/figures/phase3_hour_x_dow_vol.png,App figure mirror,PNG figure,app mirror (byte-identical copy),37093,4a5dbaaa3a4c8adc710f6d17dc754312ae260deb3c75e128f03652db8d02d930,figures/phase3_hour_x_dow_vol.png,4a5dbaaa3a4c
+app/public/artifacts/figures/phase3_hour_x_month.png,App figure mirror,PNG figure,app mirror (byte-identical copy),63112,2dfdbdfc6b143fe10c2a3c20e862a2a58f5d86cc4f84d0dd88df4d033e03f238,figures/phase3_hour_x_month.png,2dfdbdfc6b14
+app/public/artifacts/figures/phase3_interarrival.png,App figure mirror,PNG figure,app mirror (byte-identical copy),36535,7165c9db3119b93ff989be832daa7ea28b6652ea473857154c7e8390d6fb08b5,figures/phase3_interarrival.png,7165c9db3119
+app/public/artifacts/figures/phase3_month_x_dow.png,App figure mirror,PNG figure,app mirror (byte-identical copy),47864,02eca6b70b8cec27c1f2688af64abb42b31386688cc7c1ae4672044a7bc91282,figures/phase3_month_x_dow.png,02eca6b70b8c
+app/public/artifacts/figures/phase3_stl.png,App figure mirror,PNG figure,app mirror (byte-identical copy),437320,dba319d7b06c750a29de6874e37a47e447e9178938578fb612d29153b21e8699,figures/phase3_stl.png,dba319d7b06c
+app/public/artifacts/figures/phase3_weekly_rate.png,App figure mirror,PNG figure,app mirror (byte-identical copy),102849,148335bd20ed779c32419e67a5f43759e18477f0ace0e347df095b0fcb8727cc,figures/phase3_weekly_rate.png,148335bd20ed
+app/public/artifacts/figures/phase3_year_x_month.png,App figure mirror,PNG figure,app mirror (byte-identical copy),41930,82f55f7c3e2d31e2249c3c7ad0b06140e261d1d3d150ce0d04d4b034b35bb44a,figures/phase3_year_x_month.png,82f55f7c3e2d
+app/public/artifacts/figures/phase4_ae_error.png,App figure mirror,PNG figure,app mirror (byte-identical copy),49863,594e74413141684d930f02e41456d492c375985f503e39d8254b5f7fa4bf5793,figures/phase4_ae_error.png,594e74413141
+app/public/artifacts/figures/phase4_andrews.png,App figure mirror,PNG figure,app mirror (byte-identical copy),627375,00445c3074a709a7a94dd8c00e26fa9d13eccc4ccf677ed104d949cc7a1135a5,figures/phase4_andrews.png,00445c3074a7
+app/public/artifacts/figures/phase4_dbscan_kdist.png,App figure mirror,PNG figure,app mirror (byte-identical copy),45939,5576f12460a8ad8ba2325f9a524e8be47b3cafad008278232e886737ff8791a6,figures/phase4_dbscan_kdist.png,5576f12460a8
+app/public/artifacts/figures/phase4_dbscan_rate.png,App figure mirror,PNG figure,app mirror (byte-identical copy),28612,f53c2587d87594a4dceecd35f50589bcf6906a12f04c310d12c7f979fb6e5400,figures/phase4_dbscan_rate.png,f53c2587d875
+app/public/artifacts/figures/phase4_dendrogram.png,App figure mirror,PNG figure,app mirror (byte-identical copy),38920,bfc5528aac3bc55b0f126b7c257faf700694fd2cdb014e95a06cb03e73532d09,figures/phase4_dendrogram.png,bfc5528aac3b
+app/public/artifacts/figures/phase4_hexbin_rate_contours.png,App figure mirror,PNG figure,app mirror (byte-identical copy),323161,7b1ed4955ddc20323b15e8cfc90060d31285582224072e4b53da210b7acbf084,figures/phase4_hexbin_rate_contours.png,7b1ed4955ddc
+app/public/artifacts/figures/phase4_if_scores.png,App figure mirror,PNG figure,app mirror (byte-identical copy),74798,8b87eea26e1be6e746efcbcf2efc77bc22de70be7a8f0ebb37f48ae77a248611,figures/phase4_if_scores.png,8b87eea26e1b
+app/public/artifacts/figures/phase4_if_vs_amt.png,App figure mirror,PNG figure,app mirror (byte-identical copy),381158,7a4d54e2d1f9c50053bddf569ed9b0652a71480c7e4f1cd6c43b12abe032c5b6,figures/phase4_if_vs_amt.png,7a4d54e2d1f9
+app/public/artifacts/figures/phase4_kmeans_fraud_rate.png,App figure mirror,PNG figure,app mirror (byte-identical copy),37779,f363cdfeb86440ffd2a92616c4d66955643582a601e0e26ce5f4acdbaeeef25e,figures/phase4_kmeans_fraud_rate.png,f363cdfeb864
+app/public/artifacts/figures/phase4_kmeans_radar.png,App figure mirror,PNG figure,app mirror (byte-identical copy),154790,cf9a6c3015ae72e223bb556cf3c697ba85f04e15435f82193def0a7fc32a501a,figures/phase4_kmeans_radar.png,cf9a6c3015ae
+app/public/artifacts/figures/phase4_kmeans_selection.png,App figure mirror,PNG figure,app mirror (byte-identical copy),78075,2a45c9863b0ff31a1b6d4fc09af6ea4db35a1c0a12cac1ff1ff35e63a6e54167,figures/phase4_kmeans_selection.png,2a45c9863b0f
+app/public/artifacts/figures/phase4_kmeans_x_category.png,App figure mirror,PNG figure,app mirror (byte-identical copy),71111,ecc25f14bedaa584212dcb0979f4ed56103a56bf805f5566e7f4c2fcd2692a79,figures/phase4_kmeans_x_category.png,ecc25f14beda
+app/public/artifacts/figures/phase4_lof_scores.png,App figure mirror,PNG figure,app mirror (byte-identical copy),48489,b3ac31dc5cb21bd68cfecc821771ac30367b7602f94fe667615c5096c23ce8bf,figures/phase4_lof_scores.png,b3ac31dc5cb2
+app/public/artifacts/figures/phase4_parallel_coords.png,App figure mirror,PNG figure,app mirror (byte-identical copy),1101732,16b64e80b13de8b691291ebb2e923d9da92f12281d148175560f2b20e348de73,figures/phase4_parallel_coords.png,16b64e80b13d
+app/public/artifacts/figures/phase4_pca_biplot.png,App figure mirror,PNG figure,app mirror (byte-identical copy),118470,29b5510d2f956f8b78589c88ac3693b6fba078b2a37b119a611a10c60bc4607d,figures/phase4_pca_biplot.png,29b5510d2f95
+app/public/artifacts/figures/phase4_pca_contours.png,App figure mirror,PNG figure,app mirror (byte-identical copy),122290,2919de761c855f4ef1c6af5ad1d9448ac72929ad4087c1cefcb61065e901fad4,figures/phase4_pca_contours.png,2919de761c85
+app/public/artifacts/figures/phase4_pca_scatter.png,App figure mirror,PNG figure,app mirror (byte-identical copy),296897,d1f75fb9eb737aa62c2c9b76d52672e9c3cbb88d228cc57e9be4faa718969ce0,figures/phase4_pca_scatter.png,d1f75fb9eb73
+app/public/artifacts/figures/phase4_pca_scree.png,App figure mirror,PNG figure,app mirror (byte-identical copy),60312,adadd219ccad5023a9cd6f03132bc613301b260fea190ca15f30fddbdfa00287,figures/phase4_pca_scree.png,adadd219ccad
+app/public/artifacts/figures/phase4_raincloud_amt_category.png,App figure mirror,PNG figure,app mirror (byte-identical copy),314268,7c54d40c44ea0679aabafeb2a4082932f403b81c6845c1a5d080a182d3e2fe4a,figures/phase4_raincloud_amt_category.png,7c54d40c44ea
+app/public/artifacts/figures/phase4_separability.png,App figure mirror,PNG figure,app mirror (byte-identical copy),51974,cd82664008409c602d3291358269887f50fcfcdc6bfe8e2c0e3ed710c856074a,figures/phase4_separability.png,cd8266400840
+app/public/artifacts/figures/phase4_swarm_amt.png,App figure mirror,PNG figure,app mirror (byte-identical copy),118659,897304eeaff297c7377c91a78feab487ea1c58e2c56df12438f3fbc89b574ea4,figures/phase4_swarm_amt.png,897304eeaff2
+app/public/artifacts/figures/phase4_tsne_p100.png,App figure mirror,PNG figure,app mirror (byte-identical copy),512628,e31b04b06b3a5ee7d21a2fee6e1ee67b011d899796171170a71eeb6c5225481b,figures/phase4_tsne_p100.png,e31b04b06b3a
+app/public/artifacts/figures/phase4_tsne_p30.png,App figure mirror,PNG figure,app mirror (byte-identical copy),651284,158c4f3da7f9e266c215853faff0acdfdbca88f0c61a8b67805a172e7e17ccaa,figures/phase4_tsne_p30.png,158c4f3da7f9
+app/public/artifacts/figures/phase4_tsne_p50.png,App figure mirror,PNG figure,app mirror (byte-identical copy),572456,a6c7e004b8be7cc3e7bbdc98bafbccceb56b939a54773a9c25541c222e95d2fb,figures/phase4_tsne_p50.png,a6c7e004b8be
+app/public/artifacts/figures/phase4_umap_nn15_md0.1.png,App figure mirror,PNG figure,app mirror (byte-identical copy),234827,2470e17da585b0e391123f10d116fa64f393a6b40dc64a97297f20d94f9ecf0c,figures/phase4_umap_nn15_md0.1.png,2470e17da585
+app/public/artifacts/figures/phase4_umap_nn15_md0.5.png,App figure mirror,PNG figure,app mirror (byte-identical copy),523633,c2004cf54427f642386a78b5f39f33090ab9086e352c0fb806d8e512acc641da,figures/phase4_umap_nn15_md0.5.png,c2004cf54427
+app/public/artifacts/figures/phase4_umap_nn50_md0.1.png,App figure mirror,PNG figure,app mirror (byte-identical copy),196769,1a220c1bf3742cb5292518ce535f8e580183aeafc38393cfb5df74f28ce299a5,figures/phase4_umap_nn50_md0.1.png,1a220c1bf374
+app/public/artifacts/figures/phase5_effectsize_forest.png,App figure mirror,PNG figure,app mirror (byte-identical copy),64628,1134038f23639a297a1e6beb4560f4c96886e67bb8f700b21592529b5c2d8531,figures/phase5_effectsize_forest.png,1134038f2363
+app/public/artifacts/figures/phase5_forest_category.png,App figure mirror,PNG figure,app mirror (byte-identical copy),102839,c5cc3aa97ed0476b6efaafb319d397387c997532d301bd7cfe5e0ea3206040bd,figures/phase5_forest_category.png,c5cc3aa97ed0
+app/public/artifacts/figures/phase5_forest_hour.png,App figure mirror,PNG figure,app mirror (byte-identical copy),117935,434cea8a4178d8bd6f1b94d8bc7c1b89136aa1285822c85636fc11997969657a,figures/phase5_forest_hour.png,434cea8a4178
+app/public/artifacts/figures/phase5_forest_job.png,App figure mirror,PNG figure,app mirror (byte-identical copy),146636,2e68647cffbf88181e57d255643cbda4ad0db0ee49d3bb845ba54801eba4e44b,figures/phase5_forest_job.png,2e68647cffbf
+app/public/artifacts/figures/phase7_card_age_curve.png,App figure mirror,PNG figure,app mirror (byte-identical copy),53030,ce04510d69d04f445cda52e88d3e0a1fde58819745c54013d358894f41a1eba4,figures/phase7_card_age_curve.png,ce04510d69d0
+app/public/artifacts/figures/phase7_cnt24h_rate.png,App figure mirror,PNG figure,app mirror (byte-identical copy),30204,328f9dd00856ab405f761cd074c332f069dcdd60bd151386cec71c2536e71d5f,figures/phase7_cnt24h_rate.png,328f9dd00856
+app/public/artifacts/figures/phase7_cohort_heatmap.png,App figure mirror,PNG figure,app mirror (byte-identical copy),110081,d51633a1007448dceebb7b86a1e7cb464f4a094f1025ed438b9f25b7b301937d,figures/phase7_cohort_heatmap.png,d51633a10074
+app/public/artifacts/figures/phase7_combo_lift.png,App figure mirror,PNG figure,app mirror (byte-identical copy),52822,7c35d8f530d646a3457cbbc1941d7f39112c18ba35d63626550ebe8a450bb036,figures/phase7_combo_lift.png,7c35d8f530d6
+app/public/artifacts/figures/phase7_discrete_hazard.png,App figure mirror,PNG figure,app mirror (byte-identical copy),70966,6329e1069e3767dd5e5375b713954e3f5c44e8946c6f8c080c4d8077a4bea067,figures/phase7_discrete_hazard.png,6329e1069e37
+app/public/artifacts/figures/phase7_dist_artifact.png,App figure mirror,PNG figure,app mirror (byte-identical copy),56815,eb22fb4d93241dfbd6e9553f7714a9861f9963e3a00b4eeb69a4d397cd71df55,figures/phase7_dist_artifact.png,eb22fb4d9324
+app/public/artifacts/figures/phase7_fraud_event_sizes.png,App figure mirror,PNG figure,app mirror (byte-identical copy),38225,19475933634831d4621c1c30062d1f6e10738eb8809328c24a0fb5a866603a57,figures/phase7_fraud_event_sizes.png,194759336348
+app/public/artifacts/figures/phase7_km_first_fraud.png,App figure mirror,PNG figure,app mirror (byte-identical copy),66166,88b7ca05f1d196069eb2a8539b40e66fe480dbbd0241ff2f21a672420912859b,figures/phase7_km_first_fraud.png,88b7ca05f1d1
+app/public/artifacts/figures/phase7_merchant_hier_eb.png,App figure mirror,PNG figure,app mirror (byte-identical copy),179414,40b3251ea08aadc020c977792914c37447119ce311a84fbaf2e8168a8052ffd9,figures/phase7_merchant_hier_eb.png,40b3251ea08a
+app/public/artifacts/figures/phase7_speed_rate.png,App figure mirror,PNG figure,app mirror (byte-identical copy),30960,c6f5234e6bb1bc2f89786dd61f7ad377d2881a3ce35933574b09f56f8dfd8b75,figures/phase7_speed_rate.png,c6f5234e6bb1
+app/public/artifacts/figures/phase7_te_leak_demo.png,App figure mirror,PNG figure,app mirror (byte-identical copy),49805,20ef5765b66dfbb6788850d0d0b7179363818c869ee3b4f917dbf47b1719ee49,figures/phase7_te_leak_demo.png,20ef5765b66d
+app/public/artifacts/figures/phase7_txns_before_fraud.png,App figure mirror,PNG figure,app mirror (byte-identical copy),47949,34f01e62812eff32c2a9fb5d67e1907046d5e2e86b469a52993ba092e5e92503,figures/phase7_txns_before_fraud.png,34f01e62812e
+app/public/artifacts/figures/phase8_ablation_decomposed.png,App figure mirror,PNG figure,app mirror (byte-identical copy),83829,38e678b2fe573894415bbf76aca2232de8639554edcc4b9c9bd7f0f5f4b979ef,figures/phase8_ablation_decomposed.png,38e678b2fe57
+app/public/artifacts/figures/phase8_adversarial_importance.png,App figure mirror,PNG figure,app mirror (byte-identical copy),51666,6b0460f3276d2f02a834e8d44db7aba939b6d66dd74f515ca4f4004b09ba9ede,figures/phase8_adversarial_importance.png,6b0460f3276d
+app/public/artifacts/figures/phase8_calibration.png,App figure mirror,PNG figure,app mirror (byte-identical copy),59879,58e877cd0a99819e4a14f8a2a586376e1037039bc39420e9cf5627d2088621bc,figures/phase8_calibration.png,58e877cd0a99
+app/public/artifacts/figures/phase8_calibration_temp.png,App figure mirror,PNG figure,app mirror (byte-identical copy),68696,d433d722935fe30a7cba7efcd7dfb076899c81ef55fafcb1f9fd546036548990,figures/phase8_calibration_temp.png,d433d722935f
+app/public/artifacts/figures/phase8_capture_at_k.png,App figure mirror,PNG figure,app mirror (byte-identical copy),73657,2eb1eb4da61c8e05deca96e23a84f37549537e7595c7b6728dcdc76229c1c9c8,figures/phase8_capture_at_k.png,2eb1eb4da61c
+app/public/artifacts/figures/phase8_confusion_f1max.png,App figure mirror,PNG figure,app mirror (byte-identical copy),26138,56d153be9cee71f047cf6cfa894c293afa2d7d7b0743ab79727bfe262a95b088,figures/phase8_confusion_f1max.png,56d153be9cee
+app/public/artifacts/figures/phase8_cost_curve.png,App figure mirror,PNG figure,app mirror (byte-identical copy),59969,827fbb2eb46306941a1fbd78e6f68b34b41413315d8c78feb94fb79f07329dc1,figures/phase8_cost_curve.png,827fbb2eb463
+app/public/artifacts/figures/phase8_cost_sensitivity.png,App figure mirror,PNG figure,app mirror (byte-identical copy),89261,522d1be2084efc313b83f25876ca41825de8ed58458d616a0dca254e289d6f98,figures/phase8_cost_sensitivity.png,522d1be2084e
+app/public/artifacts/figures/phase8_ensemble_comparison.png,App figure mirror,PNG figure,app mirror (byte-identical copy),76735,624af25bf5328004baf18ad7472944792887c49ae71febc0e23626ce77158bef,figures/phase8_ensemble_comparison.png,624af25bf532
+app/public/artifacts/figures/phase8_learning_curve.png,App figure mirror,PNG figure,app mirror (byte-identical copy),53208,ae7be2658a02f56b46e66b19d23ebdb691a4f9f4c81bf51417d6c38f62c1c26b,figures/phase8_learning_curve.png,ae7be2658a02
+app/public/artifacts/figures/phase8_leave_card_out.png,App figure mirror,PNG figure,app mirror (byte-identical copy),58194,a0b682dd5eb92255a3387a08400e3ffaaec0928d0efa203b0cfc5aba7cba27ad,figures/phase8_leave_card_out.png,a0b682dd5eb9
+app/public/artifacts/figures/phase8_pdp_ice.png,App figure mirror,PNG figure,app mirror (byte-identical copy),89185,7710a79deac31ef2061ff4d03c4a73986e611eaf3e89edc5099357dea91ea0b2,figures/phase8_pdp_ice.png,7710a79deac3
+app/public/artifacts/figures/phase8_psi.png,App figure mirror,PNG figure,app mirror (byte-identical copy),118819,058fd44af467095921c7b98f11b4a9a1fd6c7b6d4a532225d9e25c211741b4b5,figures/phase8_psi.png,058fd44af467
+app/public/artifacts/figures/phase8_roc_pr_curves.png,App figure mirror,PNG figure,app mirror (byte-identical copy),75412,ff467c496a9a5f07bc56ce2672ca9554dfddb2116ab55f90e07003950532f3e4,figures/phase8_roc_pr_curves.png,ff467c496a9a
+app/public/artifacts/figures/phase8_segment_recall.png,App figure mirror,PNG figure,app mirror (byte-identical copy),104391,ab6b6bf5203bb0a67194982f7201dbefa40020c774bdb71ac684b9fc3d37be72,figures/phase8_segment_recall.png,ab6b6bf5203b
+app/public/artifacts/figures/phase8_shap_beeswarm.png,App figure mirror,PNG figure,app mirror (byte-identical copy),191855,ad1a6aee3b971cfff23299ef44e4af2c3773fefe714f82706ca2e773b7fc0dc1,figures/phase8_shap_beeswarm.png,ad1a6aee3b97
+app/public/artifacts/figures/phase8_shap_dep_card_prior_f.png,App figure mirror,PNG figure,app mirror (byte-identical copy),93046,3ad65b30a0cb43900d2fd4493c5e6b4ba401df5749f1510a92f570f24616036e,figures/phase8_shap_dep_card_prior_f.png,3ad65b30a0cb
+app/public/artifacts/figures/phase8_shap_dep_cat_code.png,App figure mirror,PNG figure,app mirror (byte-identical copy),60190,19f9913c894c4190458dab2d70e70c38940c52e93eb8a729ced62149acd36ca0,figures/phase8_shap_dep_cat_code.png,19f9913c894c
+app/public/artifacts/figures/phase8_shap_dep_log_amt.png,App figure mirror,PNG figure,app mirror (byte-identical copy),142962,814336db4a87a95eecb9c76966b6ae9b1a39bcc59efbae6e4e6c7508a46f34fb,figures/phase8_shap_dep_log_amt.png,814336db4a87
+app/public/artifacts/figures/phase8_shap_dep_n_prior.png,App figure mirror,PNG figure,app mirror (byte-identical copy),174223,3bfa233da2e1427732e70e4c5af089310c10bffb92e40dbeecbdf2ebfb613772,figures/phase8_shap_dep_n_prior.png,3bfa233da2e1
+app/public/artifacts/figures/phase8_shap_importance.png,App figure mirror,PNG figure,app mirror (byte-identical copy),63413,fcf101cc1abe7d5f2bb5cd9529b6c35137b7640780a6709e1759b4284ae589fd,figures/phase8_shap_importance.png,fcf101cc1abe
+app/public/artifacts/figures/phase8_walkforward_cv.png,App figure mirror,PNG figure,app mirror (byte-identical copy),43949,09337bff516b7c466e406aee7b814e45a4ff3f632e336b5cdb746850feb85e40,figures/phase8_walkforward_cv.png,09337bff516b
+app/public/artifacts/figures/phase8_wf_vs_test.png,App figure mirror,PNG figure,app mirror (byte-identical copy),44453,b446f7cf92e2eb55104fe9c7a53b97fa6b7236677525b9550d9440a5194f48fe,figures/phase8_wf_vs_test.png,b446f7cf92e2
+app/public/artifacts/html/phase1_state_n_choro.html,App HTML mirror,Interactive HTML,app mirror (byte-identical copy),9154,d194b7905684f4e5c6673a4efb744cf92d6abde3ce1753cb3d3dd2d814693150,figures/phase1_state_n_choro.html,d194b7905684
+app/public/artifacts/html/phase1_state_rate_choro.html,App HTML mirror,Interactive HTML,app mirror (byte-identical copy),9905,98122e64f0bc236057cd8414ee6d786d17c736305b41a544a1c63844593648ab,figures/phase1_state_rate_choro.html,98122e64f0bc
+app/public/artifacts/html/phase2_city_map.html,App HTML mirror,Interactive HTML,app mirror (byte-identical copy),65985,00270f49c9da9b80466e810590aab2f79b216a4fa965250b25e8df0aebec85a1,figures/phase2_city_map.html,00270f49c9da
+app/public/artifacts/html/phase2_map_scatter.html,App HTML mirror,Interactive HTML,app mirror (byte-identical copy),568108,5d151febf48659303ababdb2fda03fdf31d4f52b1767f9eaeb1a39cd7d3debfb,figures/phase2_map_scatter.html,5d151febf486
+app/public/artifacts/html/phase2_state_eb_choro.html,App HTML mirror,Interactive HTML,app mirror (byte-identical copy),9937,aa7adbd8b6b3b810c04071173bcfe30434eb6ebf097452c789845925a411beed,figures/phase2_state_eb_choro.html,aa7adbd8b6b3
+app/public/artifacts/html/phase2_state_n_choro.html,App HTML mirror,Interactive HTML,app mirror (byte-identical copy),9232,7567d060911281f3aad779b7c83719b0c0993abd90a421b638b25e531668af7d,figures/phase2_state_n_choro.html,7567d0609112
+app/public/artifacts/html/phase4_pca_3d.html,App HTML mirror,Interactive HTML,app mirror (byte-identical copy),2930518,db4351062ab50b11386e28ce7ad12549088f2b637fbe8d393545097a610d69b7,figures/phase4_pca_3d.html,db4351062ab5
+app/public/artifacts/logs/data_fingerprint.json,Application static,JSON data,app mirror (byte-identical copy),161,835dc7d6dd7e7f6b390676040c7e0bb24d256dee331518a7d48394e1f33fffe5,logs/data_fingerprint.json,835dc7d6dd7e
+app/public/artifacts/logs/env_snapshot.json,Application static,JSON data,app mirror (byte-identical copy),377,a9d66c729b82949fa3b0764412cbf607d25727fc57c34fc45a1a8e8adf440657,logs/env_snapshot.json,a9d66c729b82
+app/public/artifacts/logs/findings.md,Application static,Markdown document,app mirror (byte-identical copy),22036,5d505561724cc5c14b1071ea7702aecf88fc1ad4bf5c12d46a0af4f7cbe21de3,logs/findings.md,5d505561724c
+app/public/artifacts/logs/findings_ledger.json,Application static,JSON data,app mirror (byte-identical copy),29737,4fee4a0ae0f52586ecac3f8a1dc4db4009a41c9cee111088077f213e1de0780f,logs/findings_ledger.json,4fee4a0ae0f5
+app/public/artifacts/notebook/fraud_eda_colab.ipynb,Notebook mirror,Jupyter notebook,app mirror (byte-identical copy),4052809,294ecd208bac66bebf2c97ea792e0a0588b7006cb0332b691ace9e329715fa74,fraud_eda_colab(1).ipynb,294ecd208bac
+app/public/artifacts/tables/figure_index.csv,Application static,CSV table,app mirror (byte-identical copy),11386,3253ab34748d1c1d58a8470212328a68e80a12c72b0a2b8c11bf9576657f92ff,tables/figure_index.csv,3253ab34748d
+app/public/artifacts/tables/findings_ledger.csv,Application static,CSV table,app mirror (byte-identical copy),24141,4e2474ad106e50ce7c60436a504df1912ae5f6dd08ce085ead9907dae9bd8de3,tables/findings_ledger.csv,4e2474ad106e
+app/public/artifacts/tables/phase0_class_balance.csv,Application static,CSV table,app mirror (byte-identical copy),153,215d645854fbaee06761d1f788c1cfb6e16c2e4b6302c87559e4d229e879df39,tables/phase0_class_balance.csv,215d645854fb
+app/public/artifacts/tables/phase0_contracts.csv,Application static,CSV table,app mirror (byte-identical copy),464,8686e06a36cc6ff4eefeb7839aab2702c1942984fb9cf834bb85157130f32077,tables/phase0_contracts.csv,8686e06a36cc
+app/public/artifacts/tables/phase0_generator_forensics.csv,Application static,CSV table,app mirror (byte-identical copy),249,4c27318aee563e16bb3c160798b0f006a5fb5f4fd02232bcc19eaf3eb5571f14,tables/phase0_generator_forensics.csv,4c27318aee56
+app/public/artifacts/tables/phase0_schema.csv,Application static,CSV table,app mirror (byte-identical copy),4260,7adc10a962ef3bcb01d1c819c318c29c367aaf1ec4773f35ba10f812356c1b84,tables/phase0_schema.csv,7adc10a962ef
+app/public/artifacts/tables/phase1_amt_quantiles.csv,Application static,CSV table,app mirror (byte-identical copy),277,fc943c866eb02e05e0e102997a7b791bfd317218e4ec5a78cfbc8bbb74939187,tables/phase1_amt_quantiles.csv,fc943c866eb0
+app/public/artifacts/tables/phase1_category_table.csv,Application static,CSV table,app mirror (byte-identical copy),634,c7cc2f53e4bf20a5d1bb03f258271c03b4af51895047dbf51cfc8ccbacf097f5,tables/phase1_category_table.csv,c7cc2f53e4bf
+app/public/artifacts/tables/phase1_covid_window.csv,Application static,CSV table,app mirror (byte-identical copy),158,227852d70f2f3d774d4d63a3426b694e5e9f1ba27ac2d52902b7d860a041c288,tables/phase1_covid_window.csv,227852d70f2f
+app/public/artifacts/tables/phase1_merchant_table.csv,Application static,CSV table,app mirror (byte-identical copy),32643,273f06c04815d281cc59c752b6816f9fde5de1c4ecc821493f0e3dc9aaad2af6,tables/phase1_merchant_table.csv,273f06c04815
+app/public/artifacts/tables/phase2_card_profiles.csv,Application static,CSV table,app mirror (byte-identical copy),93112,f89b6f799e366a017aaf7f0ec435922e31ac743fc00192e86b924145eb587adb,tables/phase2_card_profiles.csv,f89b6f799e36
+app/public/artifacts/tables/phase2_city_table.csv,Application static,CSV table,app mirror (byte-identical copy),49718,969c464179e3ce9d4d08e17cc06ade2c5ae1f96a4a3bda682b079ebb2e5e0cd4,tables/phase2_city_table.csv,969c464179e3
+app/public/artifacts/tables/phase2_dist_rate_table.csv,Application static,CSV table,app mirror (byte-identical copy),245,0acb4197e793a59ef81fb3e466001334d80e573d4ed73717cad3157f9106ff7d,tables/phase2_dist_rate_table.csv,0acb4197e793
+app/public/artifacts/tables/phase2_mi_table.csv,Application static,CSV table,app mirror (byte-identical copy),442,18ea09efb2911d2c392188ef37ee7f94a71cd99d7035d583d3758d39599d1c46,tables/phase2_mi_table.csv,18ea09efb291
+app/public/artifacts/tables/phase2_money_category.csv,Application static,CSV table,app mirror (byte-identical copy),744,8f0a7996a2ec0c4d80317e6a9f4836479f0280d6e18b56b5f381ba1a4ab42795,tables/phase2_money_category.csv,8f0a7996a2ec
+app/public/artifacts/tables/phase2_zip3_table.csv,Application static,CSV table,app mirror (byte-identical copy),90266,19f1378741097c20357ca2026bcc99a6953db1fa4a3c56672deebd1984f2a554,tables/phase2_zip3_table.csv,19f137874109
+app/public/artifacts/tables/phase3_weekly_rate_table.csv,Application static,CSV table,app mirror (byte-identical copy),4344,52c2cd033de1793aa35d452748916101adfea294d49467945a58dc68b78aac29,tables/phase3_weekly_rate_table.csv,52c2cd033de1
+app/public/artifacts/tables/phase4_anomaly_summary.csv,Application static,CSV table,app mirror (byte-identical copy),231,42d5cf8f3dafa09ae713191407dee7060b1593843dafbf48f731ca5f96014162,tables/phase4_anomaly_summary.csv,42d5cf8f3daf
+app/public/artifacts/tables/phase4_dbscan_clusters.csv,Application static,CSV table,app mirror (byte-identical copy),86,c3a6913fbf535226efb7751886bca441902ace6ba91df2d59a3e5f95e11b49b8,tables/phase4_dbscan_clusters.csv,c3a6913fbf53
+app/public/artifacts/tables/phase4_kmeans_cluster_rate.csv,Application static,CSV table,app mirror (byte-identical copy),127,23b1f8d98b128df93bf5c84c91ef43340a87c37568c6decd32ce8fe5613fba1d,tables/phase4_kmeans_cluster_rate.csv,23b1f8d98b12
+app/public/artifacts/tables/phase4_separability_table.csv,Application static,CSV table,app mirror (byte-identical copy),242,ba22633dcc8e09b5171dbacec6ead84106fb04841879e8df154d1f7eec807427,tables/phase4_separability_table.csv,ba22633dcc8e
+app/public/artifacts/tables/phase5_category_posthoc_pairs.csv,Application static,CSV table,app mirror (byte-identical copy),7696,c27a4850e17507f026909c79f797967f5ac8079a8c782d5276ee23bcdfeae6c2,tables/phase5_category_posthoc_pairs.csv,c27a4850e175
+app/public/artifacts/tables/phase5_category_rates.csv,Application static,CSV table,app mirror (byte-identical copy),2316,6a33d19399d3dafd636f41054fd5d377389a0d4b11f1aa0d34b49c3accc4ebba,tables/phase5_category_rates.csv,6a33d19399d3
+app/public/artifacts/tables/phase5_chi2_cramers.csv,Application static,CSV table,app mirror (byte-identical copy),275,5d56b846f8a01d0f00de2f30438adaa5e22f597b2ef885a92dde30c9a903f5c5,tables/phase5_chi2_cramers.csv,5d56b846f8a0
+app/public/artifacts/tables/phase5_cluster_robust_logit.csv,Application static,CSV table,app mirror (byte-identical copy),788,ad567ecaf428a8fbd4ea5d9f5f7eed5c7a2b02544bd57929794e68abbf05610f,tables/phase5_cluster_robust_logit.csv,ad567ecaf428
+app/public/artifacts/tables/phase5_mw_effect_sizes.csv,Application static,CSV table,app mirror (byte-identical copy),1384,2ad0f7c2b81447189d98a8c691f3a9fbacd96a04f912676486fddaeccc921376,tables/phase5_mw_effect_sizes.csv,2ad0f7c2b814
+app/public/artifacts/tables/phase7_hazard_table.csv,Application static,CSV table,app mirror (byte-identical copy),1751,3ad2a30685f11603e8766c1fb4c90139f17957b9b8db7b88a60f7555aec9942d,tables/phase7_hazard_table.csv,3ad2a30685f1
+app/public/artifacts/tables/phase7_high_risk_combo.csv,Application static,CSV table,app mirror (byte-identical copy),385,7dbc3b2b44422985591eaad8b535f35eefd4fe1a74638bcb632b676b09408ed6,tables/phase7_high_risk_combo.csv,7dbc3b2b4442
+app/public/artifacts/tables/phase7_hour_encoding_comparison.csv,Application static,CSV table,app mirror (byte-identical copy),94,bea3936729e8764222e26ad780ffc4d443ee102a4b4b36d616d2e7b2b42d0f70,tables/phase7_hour_encoding_comparison.csv,bea3936729e8
+app/public/artifacts/tables/phase7_merchant_eb_table.csv,Application static,CSV table,app mirror (byte-identical copy),75970,9edb7647b5ad49164fa8bdd1cc42738158112f35fb0225d42081ca564cf8fc00,tables/phase7_merchant_eb_table.csv,9edb7647b5ad
+app/public/artifacts/tables/phase7_speed_rate_table.csv,Application static,CSV table,app mirror (byte-identical copy),207,740d0078ae8f70809601294d20cf6a19c15dbe7cf390acb5f83df1a89f948658,tables/phase7_speed_rate_table.csv,740d0078ae8f
+app/public/artifacts/tables/phase8_ablation_decomposed.csv,Application static,CSV table,app mirror (byte-identical copy),565,c80b8ae5a476598164e0f15ed2a269d94d9bcdf2e360e3b29df9b95df0abe3eb,tables/phase8_ablation_decomposed.csv,c80b8ae5a476
+app/public/artifacts/tables/phase8_calibration_temp.csv,Application static,CSV table,app mirror (byte-identical copy),223,9d61c251390e70a829c1add5a974aa109ba4bc3669173c31dc19963ed0cf4f8e,tables/phase8_calibration_temp.csv,9d61c251390e
+app/public/artifacts/tables/phase8_capture_at_k.csv,Application static,CSV table,app mirror (byte-identical copy),630,a60cbfde0726c457d6a9ed6f9b91a22297c94b61f87b7e1d9f51534ebd36998a,tables/phase8_capture_at_k.csv,a60cbfde0726
+app/public/artifacts/tables/phase8_cost_sensitivity.csv,Application static,CSV table,app mirror (byte-identical copy),491,49a89a072518e864b626692121fb0b0135f2e475e39f7e354552a498239ec649,tables/phase8_cost_sensitivity.csv,49a89a072518
+app/public/artifacts/tables/phase8_ensemble_comparison.csv,Application static,CSV table,app mirror (byte-identical copy),137,0253d25b61f7442949cb3046bef9b367bec52134f43f50bd2f8d51eaaf9bc45b,tables/phase8_ensemble_comparison.csv,0253d25b61f7
+app/public/artifacts/tables/phase8_learning_curve.csv,Application static,CSV table,app mirror (byte-identical copy),286,6b72f787cf893912d657941a99df9c09794cdf69ecc47a5d79881abe9f8cbc24,tables/phase8_learning_curve.csv,6b72f787cf89
+app/public/artifacts/tables/phase8_leave_card_out.csv,Application static,CSV table,app mirror (byte-identical copy),270,243aab4b860387e7934a2c910bd73c4f7a0c887219e9ef633c04f93182773c33,tables/phase8_leave_card_out.csv,243aab4b8603
+app/public/artifacts/tables/phase8_monotonic_comparison.csv,Application static,CSV table,app mirror (byte-identical copy),144,81246d871bdd9f96a95f4235d0818198d46f9f4043b1ee8a6d1bc0b5b71f2678,tables/phase8_monotonic_comparison.csv,81246d871bdd
+app/public/artifacts/tables/phase8_psi.csv,Application static,CSV table,app mirror (byte-identical copy),2182,7de51799e97511392915b1e315c309550e3e5a2e0033ffac0d6fe76c683082e8,tables/phase8_psi.csv,7de51799e975
+app/public/artifacts/tables/phase8_segment_errors.csv,Application static,CSV table,app mirror (byte-identical copy),3315,2314762a3340e3adca5793ebf99c550d3732ba1778a63a8df045ad972d9cbc3b,tables/phase8_segment_errors.csv,2314762a3340
+app/public/artifacts/tables/phase8_threshold_table.csv,Application static,CSV table,app mirror (byte-identical copy),474,49cc434e8da32c32573e0032f76bf96b53e83328745c3362b5b106d869eaaf27,tables/phase8_threshold_table.csv,49cc434e8da3
+app/public/artifacts/tables/phase8_time_decay_comparison.csv,Application static,CSV table,app mirror (byte-identical copy),139,1f362e6c6a04c65b2968940958fa90f58758d80bb9e7c8565700d38c89623ffa,tables/phase8_time_decay_comparison.csv,1f362e6c6a04
+app/public/artifacts/tables/phase8_walkforward_cv.csv,Application static,CSV table,app mirror (byte-identical copy),640,739bc933efcaac4d6921c807c8c5c0e383f0f6dc309537489708bd3e60477d98,tables/phase8_walkforward_cv.csv,739bc933efca
+app/public/artifacts/tables/phase8_wf_vs_test.csv,Application static,CSV table,app mirror (byte-identical copy),207,85ca6e4c2dff8f966601eecbf208628d94b8c5de13022968d5a51d422b4b74a6,tables/phase8_wf_vs_test.csv,85ca6e4c2dff
+app/public/artifacts/tables/reproducibility_checklist.csv,Application static,CSV table,app mirror (byte-identical copy),1303,409fd82831b03b82ee797788446e68265da17519c1cd8631a4995d2156cf5d72,tables/reproducibility_checklist.csv,409fd82831b0
+app/public/artifacts/thumbs/phase0_missing_bar.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),8762,346fe5011b01b8ad4105c40571a2f3099e07c099cd5cad618a6e36a6c0d4ef27,,346fe5011b01
+app/public/artifacts/thumbs/phase0_missing_matrix.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),2782,aa676378305417aabad14a9d5e0aadb551125bae0ea255ff42b2639f5ffea050,,aa6763783054
+app/public/artifacts/thumbs/phase0_temporal_coverage.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),12828,d3539e3b4fb6eea7530c90a56c346f653278c902dd27c30e13f7e107e5a20f6b,,d3539e3b4fb6
+app/public/artifacts/thumbs/phase0_txns_per_card.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),6938,8167253077a0679e9baf3b49c0fd5614f3bb2d68e65e2d3710e039b3571a56fd,,8167253077a0
+app/public/artifacts/thumbs/phase1_age.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),9788,01a0b874910ec78538f45b7ecab92356e5ff466a5ea4945b695b3ab6b9cac08d,,01a0b874910e
+app/public/artifacts/thumbs/phase1_age_bins.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),10922,44a2ab0c0e9479132528e55c3211ff9bcefb2f47f0e089ffb3a7991dae0e4a7b,,44a2ab0c0e94
+app/public/artifacts/thumbs/phase1_amt_box_violin.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),4490,5feaf081b8d53bc333082af116a6649ae16722d888aed521e7ee5f3d0d8b0b03,,5feaf081b8d5
+app/public/artifacts/thumbs/phase1_amt_ecdf.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),8710,120461b1c4b42b7b710e1dd7b607a7ea8fe270cc5945e6e14fd408afd65db7e7,,120461b1c4b4
+app/public/artifacts/thumbs/phase1_amt_hist.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),8400,0667acf1fcb71d5b407a5df32ba031f73c71c112a72467bbe4e2693b3ddce6bf,,0667acf1fcb7
+app/public/artifacts/thumbs/phase1_amt_overlay.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),10324,8adae131956c521947b037fa76268ed3fd1e923459edc23b62857dc8f9bd7834,,8adae131956c
+app/public/artifacts/thumbs/phase1_category.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),13024,7d8d03459684d9c1a6d459167c9081c204a0eb4f103e884d4a4f3ad0d1e8e123,,7d8d03459684
+app/public/artifacts/thumbs/phase1_citypop.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),7852,8cb4643fd2a2c5f680d34229138407a26311f4254adf8e090f99abb959435a2a,,8cb4643fd2a2
+app/public/artifacts/thumbs/phase1_citypop_bins.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),10822,57448a3e2fd2e9e587dc4aafeb2453478aef90a95a02841609b6c4816327d924,,57448a3e2fd2
+app/public/artifacts/thumbs/phase1_covid_window.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),8686,5f3c2aac2b46eba5eb9a019118a81b265241019022f89ceae15e6f70132aa801,,5f3c2aac2b46
+app/public/artifacts/thumbs/phase1_dow.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),11860,8a45a762d794b76e9635a946398a0742889d79cee01c3867cf9927ecd31a01e9,,8a45a762d794
+app/public/artifacts/thumbs/phase1_gender.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),7674,f85c94c6ce60876d615ce161e4dcb92a8a8dd36795754144393067bf02c6fa1e,,f85c94c6ce60
+app/public/artifacts/thumbs/phase1_gender_x_category.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),7532,5fe0fffdc63bf86429d26acf9053a6ba792ae2ad712de69e8f27bd70cb02a1fe,,5fe0fffdc63b
+app/public/artifacts/thumbs/phase1_geo_scatter.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),11494,d5ad2a9b53728b761ded6bedb998a9ac29bcbafe7fdfca4eadcd2582d82b612a,,d5ad2a9b5372
+app/public/artifacts/thumbs/phase1_hour.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),15060,60efb3e28fc3917daca142c82f40369896a83d018df14d90644539982542232d,,60efb3e28fc3
+app/public/artifacts/thumbs/phase1_hour_by_year.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),7086,431a406a17102bad755b7a2abbe0ae53209d20e95f0081de01d3ccd44783444e,,431a406a1710
+app/public/artifacts/thumbs/phase1_job.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),13470,e801316dfbf35ab08e7e50cc0f097ca6783febaabcbab22d2c77fce32e4e5fa4,,e801316dfbf3
+app/public/artifacts/thumbs/phase1_merchant_topN.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),16786,2e5728ec8160c1350b3cbeaef8524a93c7acb4fd10167941cc9427fa50f9564a,,2e5728ec8160
+app/public/artifacts/thumbs/phase1_month.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),15392,244687587938d68a862513880b0902c4f1f4e9e848046c120f40fd11747e5ef8,,244687587938
+app/public/artifacts/thumbs/phase1_night.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),9056,75cd9e72be4a97c59453a8265b77a759bd2aa9590b63fe4a42f45f1e41d7457b,,75cd9e72be4a
+app/public/artifacts/thumbs/phase1_qq_amt_age.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),9696,58389f27222228f2667dd41e158e1f1518c4746ee98bc8e2d77f282725705234,,58389f272222
+app/public/artifacts/thumbs/phase1_state_forest.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),19138,79c507c2515ff235937f257bd064667f6e2a235179e2cb8e34cbf338bd9e78c1,,79c507c2515f
+app/public/artifacts/thumbs/phase1_target_donut.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),9892,e68ad7d387a46bbae9e382a920f24acf5739d95d2e3dba6217973bff93ae7923,,e68ad7d387a4
+app/public/artifacts/thumbs/phase1_weekend.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),10022,5cfbdf7d525756fa6367e6fc4dac718cc0b8f6b51e96c8ffa53086e36f223157,,5cfbdf7d5257
+app/public/artifacts/thumbs/phase2_age_x_category.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),8902,39d0aa138a7f3c5c17b05c5c2de1e81c07a5cb5b7c919c2fd871741bcd5dad33,,39d0aa138a7f
+app/public/artifacts/thumbs/phase2_amt_by_category.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),14324,5bc3c47078305c9dfe7f9154e161c492d4ee9a12e5b04878da465f0fa3dcdbae,,5bc3c4707830
+app/public/artifacts/thumbs/phase2_amt_cdf.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),8568,495e4f3a4e7d215328bca820e4511b514a194029bed8b10a6caec858150f2756,,495e4f3a4e7d
+app/public/artifacts/thumbs/phase2_amtbin_x_hour.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),6954,9aed35e5abf8080997a720903531557cee966bebff45a2634157263de13caa4c,,9aed35e5abf8
+app/public/artifacts/thumbs/phase2_card_rate_hist.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),6224,09be4f851d8fd7d3678aef69f97b7c9b6d1c3160640fad6f92d78c33930ea2f3,,09be4f851d8f
+app/public/artifacts/thumbs/phase2_card_scatter.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),10966,0fd703bd96fc58981c0d7df4e6e24771346bbf7b6dff3f8f09a3567296211cf7,,0fd703bd96fc
+app/public/artifacts/thumbs/phase2_category_x_hour.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),10636,e4c7d2dcecb0e7ab6311547355911c42d031ec43038558b27d355485962c48fd,,e4c7d2dcecb0
+app/public/artifacts/thumbs/phase2_citypop_x_category.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),8840,7b027c9802df0fb6316e7e2524b60259dbdb3d685656e9282195d54f39665f88,,7b027c9802df
+app/public/artifacts/thumbs/phase2_cramers_v.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),14014,42c1a757cfd070fb06fe04cff8bcbc8f618f0784efc39ba16f11ce0b38247371,,42c1a757cfd0
+app/public/artifacts/thumbs/phase2_dist_overlay.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),9134,db50e5676a790fb593530f3e75c5884f1a4d53149b4905010e6e75526ce60ffa,,db50e5676a79
+app/public/artifacts/thumbs/phase2_dist_rate.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),7062,37d17abc91482299c1b06a6344ff242ceef0d43fdfbc18fe5269b1140b43c2da,,37d17abc9148
+app/public/artifacts/thumbs/phase2_dow_x_hour_rate.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),7322,97072946ba41f0f99e59d7766f5ebc34f8f12f1dda3329271c6cf91ddddd128f,,97072946ba41
+app/public/artifacts/thumbs/phase2_dow_x_hour_vol.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),7028,4114031b2b4d14c16a25f2d0f893cd8de57cf093bd2feb876bc224fd67622748,,4114031b2b4d
+app/public/artifacts/thumbs/phase2_gender_x_category.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),7148,55ca1b6dfe175c7426c09a8ef54a683418253cd53cb26354af1c8838f342b2a2,,55ca1b6dfe17
+app/public/artifacts/thumbs/phase2_joint_amt_age.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),28832,0e2438bf1bdb3522b8a2c67fdbcf19b73f80930deaa9d2891302e81e25da75ba,,0e2438bf1bdb
+app/public/artifacts/thumbs/phase2_joint_amt_dist.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),30412,3c7be17c404eac9dc6bb30b0d735ac3b1f1bdc399e9ccba97b74f517aa78f7e4,,3c7be17c404e
+app/public/artifacts/thumbs/phase2_lorenz_fraud.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),12816,32a5f1026cedd6c4dc17378da017566b0d9de7661dee3a53c428e015ff74326a,,32a5f1026ced
+app/public/artifacts/thumbs/phase2_mi.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),10424,bd48fbfbabcf5be52e3cc36acdba636379671ed6d5f5a543b28fa5b8608e1529,,bd48fbfbabcf
+app/public/artifacts/thumbs/phase2_money_category.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),8318,7e061fbb70499fe69f0f6db1977a01fb3d43aa6fc5199a849d50598492357e8f,,7e061fbb7049
+app/public/artifacts/thumbs/phase2_money_month.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),7404,300524d97f93502d6cc9e147740870b7c81a692c7642833e2ba9d9963b03ddb1,,300524d97f93
+app/public/artifacts/thumbs/phase2_pairplot.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),28606,250006e23623cc054305030b6475588352c8f8484d3d400bb4c7042254992e9a,,250006e23623
+app/public/artifacts/thumbs/phase2_spearman.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),27144,b554f02c43cb0c6f14580c453144b0edd43cc259fcfddd1ff8797b07962a89d2,,b554f02c43cb
+app/public/artifacts/thumbs/phase2_zip3_forest.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),14282,ed236a688a8fc69ba9a2637b24f548f9857df3b0745c08e6aafb16f7a23e0e43,,ed236a688a8f
+app/public/artifacts/thumbs/phase3_acf_pacf.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),14566,f6953140f4f1e6b759fa14b4aaf5c6a02a83b5015251670407bc8a1c002f6e2d,,f6953140f4f1
+app/public/artifacts/thumbs/phase3_card_timelines.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),14736,8cdbb1e3762edc5a54331e700e8c16515dbe89b2a1caea733485db4175a035f1,,8cdbb1e3762e
+app/public/artifacts/thumbs/phase3_changepoint.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),11406,c5d84d8df6c9b70e401d68911cd0c5dbd00dc6df55a4b5f34d118fddad14d4e4,,c5d84d8df6c9
+app/public/artifacts/thumbs/phase3_daily_rolling.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),30738,ae79fa691b55dbda4e1571f7a4b4ece980578fb34b441f13d21ffd8a4747e1cf,,ae79fa691b55
+app/public/artifacts/thumbs/phase3_hour_x_dow_rate.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),7110,9452fcc914221d1c2f553e3982c3d0917324bcaa9e557382eb606c13050d3cb4,,9452fcc91422
+app/public/artifacts/thumbs/phase3_hour_x_dow_vol.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),6890,b7b19316da234497bea548321990bd122a68e63e749d02fd399ecb6d2249cbbe,,b7b19316da23
+app/public/artifacts/thumbs/phase3_hour_x_month.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),12398,8afbcebb63650ef615a6c95e2b3c2b861047c9902ddf60ad7b2018d55f5525cc,,8afbcebb6365
+app/public/artifacts/thumbs/phase3_interarrival.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),8894,37c94b586b736765fcd645c9704fb8749bcd40274ef2443b34685e958ee883d5,,37c94b586b73
+app/public/artifacts/thumbs/phase3_month_x_dow.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),9482,0f0ac0388968587ba8d76e3962e1161e98f3abde5872070e121c7ddefd398fbd,,0f0ac0388968
+app/public/artifacts/thumbs/phase3_stl.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),24056,a066ce23215f9cb7284c84c0bf49e4652f75dcc83bc8a1cb1c979654dd16868d,,a066ce23215f
+app/public/artifacts/thumbs/phase3_weekly_rate.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),9162,d01341e0b2fdc32f653ecf8e200f62831d003f4b84fd5cf302b1d388b6c2c86e,,d01341e0b2fd
+app/public/artifacts/thumbs/phase3_year_x_month.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),4926,095d4e0ccb57f403a29c5f6a77c2f5ac98e3435d3c1e4c9b4739694752e2fd5f,,095d4e0ccb57
+app/public/artifacts/thumbs/phase4_ae_error.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),7682,a70b1ab39a786393f4225cd9185753b50e6060032ef54a70b2d7b024a4cb3391,,a70b1ab39a78
+app/public/artifacts/thumbs/phase4_andrews.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),15220,894d94dad839075b1f2e9c82686ae0170f8539c6ae8940264ed8885080d39318,,894d94dad839
+app/public/artifacts/thumbs/phase4_dbscan_kdist.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),8260,290e0ca15298d6684b65e2123c52ce9922c66f22f40ab8c15a3f823e2c73c9a8,,290e0ca15298
+app/public/artifacts/thumbs/phase4_dbscan_rate.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),4452,673bb6436ee2d9ac85617c99c87fc55e213a142683c67abb90266d7bcc723ea9,,673bb6436ee2
+app/public/artifacts/thumbs/phase4_dendrogram.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),5210,c8cdab721c73eb521a0e104c444cb46b2338d148df6b7082deb606cd34b50e88,,c8cdab721c73
+app/public/artifacts/thumbs/phase4_hexbin_rate_contours.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),15096,85bc4705916fffaab0dd09cf45615e68e08a41b006d6e9fa5b5d42f3da577735,,85bc4705916f
+app/public/artifacts/thumbs/phase4_if_scores.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),10608,c30f16b42ac575d0621af61440a22368a1a00c71ef02e7ddab22ccc810a77793,,c30f16b42ac5
+app/public/artifacts/thumbs/phase4_if_vs_amt.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),19652,50cbfe0a7fee4a9ffb6989bf3946dd79c985fc31286b6e0d958d5300cd33fc89,,50cbfe0a7fee
+app/public/artifacts/thumbs/phase4_kmeans_fraud_rate.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),6434,5b97006421f269ab35d25b5f68ad2898222b1c7399caeafb8110755aea4ab4f1,,5b97006421f2
+app/public/artifacts/thumbs/phase4_kmeans_radar.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),14958,2e25902084d9383c1e4ca0b745f80523ddcf33e172d5eaddfda03dc11586121a,,2e25902084d9
+app/public/artifacts/thumbs/phase4_kmeans_selection.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),7498,6df43d7495f3804b1f013a87f6a912d86ca6ac5d953b68e44238d82c22fe35ea,,6df43d7495f3
+app/public/artifacts/thumbs/phase4_kmeans_x_category.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),6592,6b6d365567fb21b586ab5b37f0a17f5579c3839be7702d5d1faa9dfc802973b2,,6b6d365567fb
+app/public/artifacts/thumbs/phase4_lof_scores.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),6888,b9de952920049967cdeef72dc711b16c3c32640f11ba375419eb751538f5ba0d,,b9de95292004
+app/public/artifacts/thumbs/phase4_parallel_coords.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),28552,792589132ada1c3cd831061f221d44037f36375068276afcb81e97c0888877c4,,792589132ada
+app/public/artifacts/thumbs/phase4_pca_biplot.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),7882,09a54fb75b063f977fa7d3ccc379f6d584789646f08a9c15ceb54dc821080fdc,,09a54fb75b06
+app/public/artifacts/thumbs/phase4_pca_contours.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),13256,9c806fcb36ee7b53a48baa6d5ea3e7b41f1a12ea5634e1b8c7ab8ed791a2c45b,,9c806fcb36ee
+app/public/artifacts/thumbs/phase4_pca_scatter.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),23452,eb2271c9f07c72d46ee75694231c9fcb19158de4079429b829393783bd644d5d,,eb2271c9f07c
+app/public/artifacts/thumbs/phase4_pca_scree.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),10774,317b957101857c4e11215501ff19677cc6da83e1a395e13edec0f15b346caf4f,,317b95710185
+app/public/artifacts/thumbs/phase4_raincloud_amt_category.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),10382,c275218bc912aadcdf1e8c2743da3103897bce0278e94412ea7a9adaf61fb51e,,c275218bc912
+app/public/artifacts/thumbs/phase4_separability.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),8142,e8f109c0487cf2de5f787774454e23bc988b95582011c1835fe1e77167769cac,,e8f109c0487c
+app/public/artifacts/thumbs/phase4_swarm_amt.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),12920,b348dd88ae8c0cdde9028121a1902c3852df434fcd15eb3da34ee7d14c224de3,,b348dd88ae8c
+app/public/artifacts/thumbs/phase4_tsne_p100.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),34772,64f0f1fea84da74b52b83bb16010b3898b5eb58b2839bfac3a90e2ec8eca5829,,64f0f1fea84d
+app/public/artifacts/thumbs/phase4_tsne_p30.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),53004,7d621c7744833be7d84b2d2e0ef34c09d4f7bd47334e748c7a8a17814b392fee,,7d621c774483
+app/public/artifacts/thumbs/phase4_tsne_p50.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),41956,9b771e645e5991f249fdb44c4487af0b486907febdd415e2d60f319bfba74595,,9b771e645e59
+app/public/artifacts/thumbs/phase4_umap_nn15_md0.1.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),16610,777689bb07b0b17264f51aeff4fac372cf94c04ee4df885c5e7b763253e3bbfc,,777689bb07b0
+app/public/artifacts/thumbs/phase4_umap_nn15_md0.5.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),35204,4f3d1f931cd21d03779ada0d20fe3179b396290a7c06dd183f4a6c96494e3820,,4f3d1f931cd2
+app/public/artifacts/thumbs/phase4_umap_nn50_md0.1.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),14908,758a6d42668a3cad2879bbdf5fec2dbe90a7059c5362b8f474544ae5e1ba3477,,758a6d42668a
+app/public/artifacts/thumbs/phase5_effectsize_forest.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),9016,4d0b217995da8e3a34329ab3ebc1d12c5f3ce157f7c44ecc19075bfab824c626,,4d0b217995da
+app/public/artifacts/thumbs/phase5_forest_category.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),12984,b780cfb680eef40c25708a15ff6dbbf05e05c75ba07b6fb4c4d6a64efa4c09f6,,b780cfb680ee
+app/public/artifacts/thumbs/phase5_forest_hour.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),15066,22a9761b4bc0cfabd1182d3f18c9b672139e512aff02835f49cb4d3e2804e54b,,22a9761b4bc0
+app/public/artifacts/thumbs/phase5_forest_job.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),18718,0b378c9716a4a00f5ef45da0063909f110c03b28423c80e0d5061acd633a8177,,0b378c9716a4
+app/public/artifacts/thumbs/phase7_card_age_curve.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),8810,bc2046751116440a82bab7413e230bcc3ecba4792eef0a2da2bce9d0a06962ab,,bc2046751116
+app/public/artifacts/thumbs/phase7_cnt24h_rate.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),7494,3ba6f2934f76c98004e063b53948ae4e3b51cc879ed782e2336357688d7e96d5,,3ba6f2934f76
+app/public/artifacts/thumbs/phase7_cohort_heatmap.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),13176,cdb432918775ba3ac5ca51cb228291f1c62587489fdfd129ddaa21f535ab61d1,,cdb432918775
+app/public/artifacts/thumbs/phase7_combo_lift.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),6444,3574a9ae3c316baab4aef813d6f2117ae16f0b432102f5549b3f3acad3465187,,3574a9ae3c31
+app/public/artifacts/thumbs/phase7_discrete_hazard.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),12158,ce9619737d04fc53856cba497fdef31fba8f7092e7b078bb50aa05834c01f5bd,,ce9619737d04
+app/public/artifacts/thumbs/phase7_dist_artifact.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),11644,60617971551521fc45a23c32b93eb1581c09e4136152993f521a2a0858f6a66f,,606179715515
+app/public/artifacts/thumbs/phase7_fraud_event_sizes.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),8350,382d9f8e22bef546f20a2065de77b47ff33a809baee5a4131d721f4b712742e6,,382d9f8e22be
+app/public/artifacts/thumbs/phase7_km_first_fraud.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),7874,63186da2d47b73402d14d4e354c469e2d7d17ee382108fa2619d2ee30bd5667b,,63186da2d47b
+app/public/artifacts/thumbs/phase7_merchant_hier_eb.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),21462,1005bf4c5aab64bd6de8109ee33142d689ff99a3e6701b6d0c4bf0a507b1b6d6,,1005bf4c5aab
+app/public/artifacts/thumbs/phase7_speed_rate.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),6298,7f60c87205060acddc46c2469b0fa95d077403b42a2ae711f66154a6d955eea3,,7f60c8720506
+app/public/artifacts/thumbs/phase7_te_leak_demo.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),11072,0dfc7ccb639cff344b8c53925c7d4a25a299d4c2dd312786512bd9f192583b66,,0dfc7ccb639c
+app/public/artifacts/thumbs/phase7_txns_before_fraud.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),10760,13ff1ce90f674af765fbd75c266c692cfd267663e10440449d71e5e9074cd172,,13ff1ce90f67
+app/public/artifacts/thumbs/phase8_ablation_decomposed.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),11056,0162822f87b81eacd2e43be1c16118075e636edb77e054804feb927f9be4dc14,,0162822f87b8
+app/public/artifacts/thumbs/phase8_adversarial_importance.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),10116,51076c361b9e84884878c9b384527e20ff2bae36fc047dfbd8ba289a0b7c90bc,,51076c361b9e
+app/public/artifacts/thumbs/phase8_calibration.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),11780,e5c8c40be3def6eb16729b9c28342dc30fd0efba0733a8ef828c5db7ce65ccab,,e5c8c40be3de
+app/public/artifacts/thumbs/phase8_calibration_temp.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),13858,5b832b481e356b33a2a0487f8e7f526dea1845fdbc61a5be2f12af1e17ed15a8,,5b832b481e35
+app/public/artifacts/thumbs/phase8_capture_at_k.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),10858,b45bef038b60834ef7b9d6ec75426982f0d1f15c51f1e63296a510ee0f05134b,,b45bef038b60
+app/public/artifacts/thumbs/phase8_confusion_f1max.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),6946,0af2f7f9be2dbbe3a4b0cce4166f4024a9935563b61a6ba1a68b6d6454ad3f1a,,0af2f7f9be2d
+app/public/artifacts/thumbs/phase8_cost_curve.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),8270,cdf6f9ee0e31ed78ba63f1aca9cabbef473d4c854361e0ef0b1e835cbb1c785c,,cdf6f9ee0e31
+app/public/artifacts/thumbs/phase8_cost_sensitivity.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),12302,9610fcb875b2dac949b34940e7ab890a5b9a3be9cff0342125f3a9060cba74f3,,9610fcb875b2
+app/public/artifacts/thumbs/phase8_ensemble_comparison.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),14198,d5320ea51d0e4b355dd0418074498f1cfd00b4142f371c9330a4b3309e1bd65a,,d5320ea51d0e
+app/public/artifacts/thumbs/phase8_learning_curve.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),9262,e5ba30ed529eba428aaea5ebecce32c34bd9011b5c94dfc3bb4db8ad937d6d7c,,e5ba30ed529e
+app/public/artifacts/thumbs/phase8_leave_card_out.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),8044,9bc6b6c5359a24b00fdfeab68b5b1460bd1a504f316d7d519af8fe78c057b2b1,,9bc6b6c5359a
+app/public/artifacts/thumbs/phase8_pdp_ice.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),17918,5ce941c963738d29edaa0bf722e6eb4df7d220caf5ff2238d8d3710774530021,,5ce941c96373
+app/public/artifacts/thumbs/phase8_psi.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),17084,da0aebd8a191b058892477daeaeec2b012d52696c0244a2f7dc263d7e2869f54,,da0aebd8a191
+app/public/artifacts/thumbs/phase8_roc_pr_curves.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),8912,febf589fee5cc695e23278d904000715ad7d633cc526bc3af616c21c14c50785,,febf589fee5c
+app/public/artifacts/thumbs/phase8_segment_recall.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),9488,dd3d25ac20f7e1050647f41cc0dadc72588c15e4b638a8db7aa45cf5cdc98fa4,,dd3d25ac20f7
+app/public/artifacts/thumbs/phase8_shap_beeswarm.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),19252,ce8749490e1d35f745c5ad4119b6f9c6a163332342e916027f488a79fca66543,,ce8749490e1d
+app/public/artifacts/thumbs/phase8_shap_dep_card_prior_f.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),13408,230c8b94c20582a9be0295fd7f62f8b8a02fb12e5f7b89ccd282d7560af85c80,,230c8b94c205
+app/public/artifacts/thumbs/phase8_shap_dep_cat_code.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),8972,e2c7753f9bffbab1d217ae6961bf1807c03ce3ca2f5a52c0bbedd04a48738acf,,e2c7753f9bff
+app/public/artifacts/thumbs/phase8_shap_dep_log_amt.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),16358,e5a0636ac753441dd690fed135155dcadcf7f68d1acc4ce9ac4bd442bf319e3e,,e5a0636ac753
+app/public/artifacts/thumbs/phase8_shap_dep_n_prior.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),19066,60d0e2856bb58a5f7fa9401ab76567cac989373683ddba8b71cb1ba2b33504c8,,60d0e2856bb5
+app/public/artifacts/thumbs/phase8_shap_importance.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),11644,50db60442e3570791e61a7e1b3ef09a032049c5c17730b425e507e30960178ab,,50db60442e35
+app/public/artifacts/thumbs/phase8_walkforward_cv.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),8398,30f287be784786dd91dfd6fa71e866543ed6220c684be45b13a4fdd7f76e9f46,,30f287be7847
+app/public/artifacts/thumbs/phase8_wf_vs_test.webp,App thumbnail mirror,WebP thumbnail,app mirror (byte-identical copy),8294,20dd178e77ac3a682457dff9832becac943aa0cab3ac440d76b66cd4183e989c,,20dd178e77ac
+app/public/data/analysis.json,Application data layer,JSON data,application asset,736067,849334d52a39de4a342cdfb8e4ac01800b7d1274aef071902d40020922c13a45,,849334d52a39
+app/public/data/manifest.json,Application data layer,JSON data,application asset,199967,a812493b8abd3c371cfb2f97858b28dbe3678756a7485e4fa004baba006cc2bf,,a812493b8abd
+app/public/data/notebook.json,Application data layer,JSON data,application asset,323248,499eb24236eeeab7276fcd29b684277bb10432c6e4f756cd9131091a7d781a27,,499eb24236ee
+app/public/data/phase2/anomalies.json,Application data layer,JSON data,application asset,8887,84fd3fee76d23660de3644bcaa0c8f729e312129f60828afb4f8a7ee1fc551bd,,84fd3fee76d2
+app/public/data/phase2/artifacts.json,Application data layer,JSON data,application asset,472312,3c9fdf9e6747f74e23c80b78b2063175b2833a4cb387abf58726ec110c45ea33,,3c9fdf9e6747
+app/public/data/phase2/experiments.json,Application data layer,JSON data,application asset,34196,572140e7dde05efc603a9be1b6a210706acdf9253d29f7d8c71b913abd7e1e66,,572140e7dde0
+app/public/data/phase2/insights.json,Application data layer,JSON data,application asset,20884,3da3d5f13bee9fc4039523b32673f14ff85cf02836617ebb3e473a37ebb5e629,,3da3d5f13bee
+app/public/data/phase2/lineage.json,Application data layer,JSON data,application asset,177089,98612e0ec49bbcc7f88a622e0aa1a0a7e59654c750454b3003a617c8f256ad6c,,98612e0ec49b
+app/public/data/phase2/logs.json,Application data layer,JSON data,application asset,704212,906414ef510ee8e924b0a3eb7c0cf57dacbc5f047fd13a4fa8e39fa1d52bea04,,906414ef510e
+app/public/data/phase2/metrics.json,Application data layer,JSON data,application asset,96003,3a268be2f7bff14d1c3b05a590328825e95d987c15e5f7538328732c620869be,,3a268be2f7bf
+app/public/data/phase2/program.json,Application data layer,JSON data,application asset,70097,02767424c2608b9d37dfd2994014211a00e5886ee5872eec55e6f2292eb44372,,02767424c260
+app/public/data/tables/figure_index.json,Application data layer,JSON data,application asset,14690,873deb73961a140ab1504b97684bb76af10aa8583de85f652b883b76c34bf3b6,,873deb73961a
+app/public/data/tables/findings_ledger.json,Application data layer,JSON data,application asset,27384,f36b73a353e53c891a28590d26503e593de6c90f78ac34f74e65792701b78c1d,,f36b73a353e5
+app/public/data/tables/phase0_class_balance.json,Application data layer,JSON data,application asset,387,dbe2b614d5cbc9cbd72afd81e15feddefa1708a585a099cb6facbdf4da0f04cc,,dbe2b614d5cb
+app/public/data/tables/phase0_contracts.json,Application data layer,JSON data,application asset,1179,8f5d1f43352c6701b1964c4118f01c0131f1e977d7d1598f9b7a995218e6f662,,8f5d1f43352c
+app/public/data/tables/phase0_generator_forensics.json,Application data layer,JSON data,application asset,517,f98164483698b745bb16c9c9cd85422116c99e385c36b4358e57f822c9afcfcd,,f98164483698
+app/public/data/tables/phase0_schema.json,Application data layer,JSON data,application asset,10236,b18dfd2bc6166a77905e58b7c570bb143223624a4cf5806d9c364a88e02ed637,,b18dfd2bc616
+app/public/data/tables/phase1_amt_quantiles.json,Application data layer,JSON data,application asset,836,9e35a6f83e71459bc5ee7a3ca88418a83f10e88f8729e2688272e1b90138311c,,9e35a6f83e71
+app/public/data/tables/phase1_category_table.json,Application data layer,JSON data,application asset,1147,d90fb64d208cf49302fd3524ccbec3e297e1b5dce2909dbd0e5bf10032e7e7ca,,d90fb64d208c
+app/public/data/tables/phase1_covid_window.json,Application data layer,JSON data,application asset,351,e4a987d31a1cbc0e3e371886eaf7024cedf022505c23dd3aa31be4ef6c612ca7,,e4a987d31a1c
+app/public/data/tables/phase1_merchant_table.json,Application data layer,JSON data,application asset,55620,aa8247ddd8d9fb55518b89fef4599b25353f813dbaea6ff8b945922f19969833,,aa8247ddd8d9
+app/public/data/tables/phase2_card_profiles.json,Application data layer,JSON data,application asset,190482,2ace3d3f95644f2d5c81b1b84f9de8257044b8cd995483f0bba6f1a410ff9278,,2ace3d3f9564
+app/public/data/tables/phase2_city_table.json,Application data layer,JSON data,application asset,79075,072b090f5b91fee19c686d14d0d557ce2605f9d4def829bfe57e0028245c2edf,,072b090f5b91
+app/public/data/tables/phase2_dist_rate_table.json,Application data layer,JSON data,application asset,544,b4c1ad29e49d5017c4f3489c1cee23bb624116a30f89cbfad3be776b621bae54,,b4c1ad29e49d
+app/public/data/tables/phase2_mi_table.json,Application data layer,JSON data,application asset,1022,0c2c2765258c1ea0ab7d8198ac4fd3c5bf23f051391eb8a9a1d65f462cdcdd7e,,0c2c2765258c
+app/public/data/tables/phase2_money_category.json,Application data layer,JSON data,application asset,1637,239ef9ab92d773dfd6b867835886232bb3e2af2ccf5b8684029847a6005d3c0d,,239ef9ab92d7
+app/public/data/tables/phase2_zip3_table.json,Application data layer,JSON data,application asset,132161,698570394447360288bd0ebdc51d808c28ec04e66ec8674ca5e3bd839f28a16f,,698570394447
+app/public/data/tables/phase3_weekly_rate_table.json,Application data layer,JSON data,application asset,7288,6ddfeb150e0a2b9475c3ff44dcc1aae657d9b0e21be824d82c96292eb6b8db87,,6ddfeb150e0a
+app/public/data/tables/phase4_anomaly_summary.json,Application data layer,JSON data,application asset,572,6b58e894ffb8a0619d2b0360c2eb879e2193812e42bfe45e09c11cbb10065031,,6b58e894ffb8
+app/public/data/tables/phase4_dbscan_clusters.json,Application data layer,JSON data,application asset,258,9e318de682a546f3617ef5df87f0ffa82bc136482941d21cc1983684056c7d5f,,9e318de682a5
+app/public/data/tables/phase4_kmeans_cluster_rate.json,Application data layer,JSON data,application asset,357,3f98b4aed2934bf44f80b75e569c7a1b23dec0e085295c32696ac84c3c2a743b,,3f98b4aed293
+app/public/data/tables/phase4_separability_table.json,Application data layer,JSON data,application asset,504,3a6fc023497223506f0a716c6f26fe4066b0d0d95126d3cccc01caada48c04e2,,3a6fc0234972
+app/public/data/tables/phase5_category_posthoc_pairs.json,Application data layer,JSON data,application asset,10815,636080e364fa847bcef20c5281ceb031c14912917d5a416749b1a60bfd1046b3,,636080e364fa
+app/public/data/tables/phase5_category_rates.json,Application data layer,JSON data,application asset,3679,c06b01b68d7980ea65dbd13572eb7a24ac051bd603fe12fd965687cc3c56f7d6,,c06b01b68d79
+app/public/data/tables/phase5_chi2_cramers.json,Application data layer,JSON data,application asset,739,bffc092d1b7b3e103857a9893075aa427c99a5b30e1c517a010c232d0899d695,,bffc092d1b7b
+app/public/data/tables/phase5_cluster_robust_logit.json,Application data layer,JSON data,application asset,2111,44faa6a70293c49cd92908dfb98f170f2c41166df5d37357b6f4cd89f91b9dfd,,44faa6a70293
+app/public/data/tables/phase5_mw_effect_sizes.json,Application data layer,JSON data,application asset,3336,172d47dea41281b1e145244cc94b0571a810b99b94e053cc9aaa163af7536aba,,172d47dea412
+app/public/data/tables/phase7_hazard_table.json,Application data layer,JSON data,application asset,2927,8c2ed24ffb14a98e2d5665379947fa1a3afd59b965549cdb32a08ec73a9e7241,,8c2ed24ffb14
+app/public/data/tables/phase7_high_risk_combo.json,Application data layer,JSON data,application asset,743,849e0fb5d46fd8e9be1dabe9181d210a938f1c243588302313ccc0aaa8cda3bb,,849e0fb5d46f
+app/public/data/tables/phase7_hour_encoding_comparison.json,Application data layer,JSON data,application asset,281,0347c306b62d7c4d8ae39184028e9b77f26230e6841cbfb6f7e62e959ca83d4b,,0347c306b62d
+app/public/data/tables/phase7_merchant_eb_table.json,Application data layer,JSON data,application asset,120742,d3543e40cc80c807a694f7d42e9285b1e1b5d2dd6d9216b60067e92283fb6adb,,d3543e40cc80
+app/public/data/tables/phase7_speed_rate_table.json,Application data layer,JSON data,application asset,486,1837ac9d6e42f859bef9db66860450e6511ebc15a91a8c9ca189268139b0dc4b,,1837ac9d6e42
+app/public/data/tables/phase8_ablation_decomposed.json,Application data layer,JSON data,application asset,1074,7399c547d22ab9b886120d3ff51971ee34a4e6ab11dfe773cc8cb23507cdf409,,7399c547d22a
+app/public/data/tables/phase8_calibration_temp.json,Application data layer,JSON data,application asset,510,76e228ff990ad31d0002967a5c6534a7fc3969bbe7080e3bbc1fc48f691865b5,,76e228ff990a
+app/public/data/tables/phase8_capture_at_k.json,Application data layer,JSON data,application asset,1338,eae53fe438735aabf1257b715e4c8e25bda23efc51b447f0cea443b747e4a5e1,,eae53fe43873
+app/public/data/tables/phase8_cost_sensitivity.json,Application data layer,JSON data,application asset,994,be94a165e9340549fbe09dc574fe0e27c1093c4a16a15623832eda66bfcc0dac,,be94a165e934
+app/public/data/tables/phase8_ensemble_comparison.json,Application data layer,JSON data,application asset,318,553972a37f80330367803c688d16726258670cd2f142a1e395cdae50d7103ea1,,553972a37f80
+app/public/data/tables/phase8_learning_curve.json,Application data layer,JSON data,application asset,606,a4e9b581286299023b863cd64af50fa6e32dbdaecae80ee3dc34c7bce0926393,,a4e9b5812862
+app/public/data/tables/phase8_leave_card_out.json,Application data layer,JSON data,application asset,555,03a05aa39b430007431e418bf565fe9294604d7f41849728f31390545df687d9,,03a05aa39b43
+app/public/data/tables/phase8_monotonic_comparison.json,Application data layer,JSON data,application asset,326,0d63f13810689cc4a8d47f9bf303cf7489e49b8e18e667635dcbcd5bab5555d5,,0d63f1381068
+app/public/data/tables/phase8_psi.json,Application data layer,JSON data,application asset,4422,70de3e9279ad21febcb0f0b8e0751c21e4bf05eab02afb0be5c1ad2a8a159b06,,70de3e9279ad
+app/public/data/tables/phase8_segment_errors.json,Application data layer,JSON data,application asset,8507,9139fe791ed6bfd6fb91f03c5112d08fb513f3d582ea6e2ef6c3760736c54414,,9139fe791ed6
+app/public/data/tables/phase8_threshold_table.json,Application data layer,JSON data,application asset,1071,ab7efba02e8ccf9e3d130164aa140f63dec265e0f54705d63076ba86b1116806,,ab7efba02e8c
+app/public/data/tables/phase8_time_decay_comparison.json,Application data layer,JSON data,application asset,322,91aabd378464d7ad31982f4a60b5e4011b9858173275c65814f90c4a653d859b,,91aabd378464
+app/public/data/tables/phase8_walkforward_cv.json,Application data layer,JSON data,application asset,1296,9d76f7f7da827eeb155c34eefd10bd9d7901e43c9740a000db7a45e97a3547c9,,9d76f7f7da82
+app/public/data/tables/phase8_wf_vs_test.json,Application data layer,JSON data,application asset,562,620ff8fa1a1486f565b36d876c3cbb5bf4caf36b2484d1c0283a99c67bf1114d,,620ff8fa1a14
+app/public/data/tables/reproducibility_checklist.json,Application data layer,JSON data,application asset,1706,16cc0e9dc07d1ecff0e767a55790458cd3c220450a276cf03a645c1233436f4f,,16cc0e9dc07d
+app/public/favicon.svg,Application static,SVG asset,application asset,234,fe1bfc00f6b2a1493d914c318eaf63db9caa7e893a2fb516d8f943a24c22a9ef,,fe1bfc00f6b2
+app/src/App.tsx,Application source,React/TypeScript source,application asset,5761,6bbf561c98c1fb1acce2ec870208c80d717973e3329fed948fae78a5ffacc954,,6bbf561c98c1
+app/src/components/Chart.tsx,Application source,React/TypeScript source,application asset,3566,e3e29aadb46b28b1764b54b142881af1bb0be3bf806b2bf44f959c0994a01f98,,e3e29aadb46b
+app/src/components/DataTable.tsx,Application source,React/TypeScript source,application asset,8177,eb21c2c30cc4df85faf0b7bada0d7d060214600893e5172264c3bf72b94bbc7b,,eb21c2c30cc4
+app/src/components/Figures.tsx,Application source,React/TypeScript source,application asset,3974,351f74cf15760197a12011db6722d1fc11f4fdfecbdfed17e8b436e5ee91fb5e,,351f74cf1576
+app/src/components/Layout.tsx,Application source,React/TypeScript source,application asset,9841,c6aaae19bdc992f6068830dfaf8b80a35f0cee1cc9a6f65e754ea0d1fcb9f05e,,c6aaae19bdc9
+app/src/components/phase2.tsx,Application source,React/TypeScript source,application asset,8049,cbf06f9a3b5b9ab5cc8c5e176c15d00bd88bd1b2f3fc11311186bd7f52bbf58b,,cbf06f9a3b5b
+app/src/components/SearchModal.tsx,Application source,React/TypeScript source,application asset,9111,9d0b10db75cf6340c6c0b6ea5bd0a8f35eaf5a69abb1c46b69d222d176d7d9d1,,9d0b10db75cf
+app/src/components/ui.tsx,Application source,React/TypeScript source,application asset,7396,d8d32a51ff804ef0ab277bf0270063a0be969ec29d0cf1103c67d029ea309f6f,,d8d32a51ff80
+app/src/context/AppContext.tsx,Application source,React/TypeScript source,application asset,2101,ad6f09fd506c0adb72e9350135a611bd5d0c5c9c2e62e3c42a33e3fc3699271a,,ad6f09fd506c
+app/src/lib/chartTheme.ts,Application source,TypeScript source,application asset,6296,7349defd0b8c2e8d662ecc0d128b74c7c400eb07b3caebfd2f1974cc3ef4a5fb,,7349defd0b8c
+app/src/lib/csv.ts,Application source,TypeScript source,application asset,1495,733d8b85e9da65670628f48fe2ff63870896ebc59670b49a124204ad524a63fd,,733d8b85e9da
+app/src/lib/data.ts,Application source,TypeScript source,application asset,1883,be380628805855639d0b452c782dd2f7af7e2b461c29a5ae8de689478106e8d2,,be3806288058
+app/src/lib/format.ts,Application source,TypeScript source,application asset,4190,2b590ae16ebbcd67695762e11960e85532d7fdbbdc58baa735f7e5f144723e04,,2b590ae16ebb
+app/src/lib/useAsync.ts,Application source,TypeScript source,application asset,810,3b257c8462eb037f003b4346db32ea3953081af68c2dd9230c58c66c22d31992,,3b257c8462eb
+app/src/main.tsx,Application source,React/TypeScript source,application asset,319,69c26d50027b8a5dde7d25a9840b3bf6676190ce6b6aaf8ad1e2169e82d5beff,,69c26d50027b
+app/src/pages/Advanced.tsx,Application source,React/TypeScript source,application asset,14478,f6a8f0e9270bf19cc0329dc6f7fe1135996936b632357bc31577707446777ee2,,f6a8f0e9270b
+app/src/pages/Artifacts.tsx,Application source,React/TypeScript source,application asset,57215,4ae32f9aea48bc1c43faab2b0ffc4d8dfefea68d41129ec5668778aa98c68129,,4ae32f9aea48
+app/src/pages/DataAudit.tsx,Application source,React/TypeScript source,application asset,18209,5cc57c1006879b983cc64a3d2c7fa54a5e9b426b0277db23b290b5aad5c736ca,,5cc57c100687
+app/src/pages/Distributions.tsx,Application source,React/TypeScript source,application asset,17776,3fe1049a34e1e0e26b178ea5cc4c8cf07952a5563b8bd1d984b5b6e85ef2ab74,,3fe1049a34e1
+app/src/pages/Economics.tsx,Application source,React/TypeScript source,application asset,32469,d5b7bbbfd89d621756b02b121fe508474d1533293d686ff71cf25a7347445807,,d5b7bbbfd89d
+app/src/pages/Experiments.tsx,Application source,React/TypeScript source,application asset,21915,cb665e9884396f3283ea05f4ca25369108e315f4801e97e5e78e4b62117650c0,,cb665e988439
+app/src/pages/Explore.tsx,Application source,React/TypeScript source,application asset,20665,52cf6f05f9fca5f9c4212fbc81c233c90faaba90d1fe9acc394a6c4ca6da4a6f,,52cf6f05f9fc
+app/src/pages/Features.tsx,Application source,React/TypeScript source,application asset,16811,e20ee7a748ea1d727e242f52b340e4c09543b1a8d23de67a9b6db5d4ce8abc3c,,e20ee7a748ea
+app/src/pages/Findings.tsx,Application source,React/TypeScript source,application asset,27160,45e4bc002118b4e1d67288263f7f63e6e8953939293514f4d8b5c7ce990f0a95,,45e4bc002118
+app/src/pages/Insights.tsx,Application source,React/TypeScript source,application asset,11585,ef81f96be6676e043c13ab3ef3edcba73ba06e83d6ea4c0e5d6caedc5053a167,,ef81f96be667
+app/src/pages/Interactions.tsx,Application source,React/TypeScript source,application asset,17593,ebd7b869a12553e712fa83a15d8b7ccbcc63fb4b44b03fa9cc61577648811062,,ebd7b869a125
+app/src/pages/Lineage.tsx,Application source,React/TypeScript source,application asset,16527,eb5a1d6fb359cc832a05ef770aed63bba24330041152d30efcfa8fe11a0b0570,,eb5a1d6fb359
+app/src/pages/Logs.tsx,Application source,React/TypeScript source,application asset,15159,3777a1f935512e29335fb0ebbaab4c194ca220e2e8f9bda0883ced43376042fb,,3777a1f93551
+app/src/pages/Metrics.tsx,Application source,React/TypeScript source,application asset,11672,97d3940ffedd9715947679c1b8f38888a70564ec098eb6f8e121d705b6657ee3,,97d3940ffedd
+app/src/pages/Model.tsx,Application source,React/TypeScript source,application asset,33061,495c723b7dff96f25a54a89313767a8c598dbf9099ebc786eec5d2b755d830be,,495c723b7dff
+app/src/pages/Overview.tsx,Application source,React/TypeScript source,application asset,23360,db224b032ca2baeb740c63e273f96c05c8b31f80b84750869812ce0856cea241,,db224b032ca2
+app/src/pages/Program.tsx,Application source,React/TypeScript source,application asset,17960,cfb891498af61f65538604f6cb686adbf419b5b5cc1b2a41f35ccf013b019933,,cfb891498af6
+app/src/pages/Statistics.tsx,Application source,React/TypeScript source,application asset,16927,3037de486e92edda4b1d39cba80bdae8ddd98e1ea33debb1a93c0be9556b9cc1,,3037de486e92
+app/src/pages/Temporal.tsx,Application source,React/TypeScript source,application asset,13778,8d1058c837382c161727daa461bbaa62955075f7fc72e7d3500fdcbdff6adb10,,8d1058c83738
+app/src/styles.css,Application source,Stylesheet,application asset,123832,4949a7dc2062b00b79e66caeccf11cd87ec6ad22ca6b8c2915e20ecc06f78ead,,4949a7dc2062
+app/src/types.ts,Application source,TypeScript source,application asset,13689,7046e96fd904ec5893986f4ca312212e431c0b34c0b8bcac2f54371365f374c5,,7046e96fd904
+app/src/vite-env.d.ts,Application source,TypeScript source,application asset,38,65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5,,65996936fbb0
+app/tsconfig.json,Root,JSON data,project file,559,bac73309ad9801a5b31fc1a84976cc42dba499b6e48565b62ba9a9df72bb9c9b,,bac73309ad98
+app/vite.config.ts,Root,TypeScript source,project file,240,5afe049aa2c99064a7b40c2ba6f4081d2181e64e0fa89842d84636033d2175d1,,5afe049aa2c9
+data/metadata/analytics_manifest.json,Processed data,JSON data,derived working data,279526,489447e99c3127be75cfc58e24b79869b6a158bb402ec235689996a24b908ec7,,489447e99c31
+data/processed/evaluation_results.csv,Processed data,CSV table,derived working data,7011,06802a2750b8c9ec91e85e0e978e17ca6bb5847db5a8b1f7d0ced669196579a1,,06802a2750b8
+data/processed/figures.csv,Processed data,CSV table,derived working data,35160,f441e78371f48f0ca171771e37676ce7592dad1af67c58878247bb06cf539f01,,f441e78371f4
+data/processed/findings.csv,Processed data,CSV table,derived working data,35787,50ce72acef615440e1b92a0f0ef4e4b33f9ca4d99e9354c940f73dac2d03a5d0,,50ce72acef61
+data/processed/issues_and_events.csv,Processed data,CSV table,derived working data,6566,02c40145379e5dd88addd13b3d8447e6c24516f2bbdd78a18cd7f2f6956edac0,,02c40145379e
+data/processed/kpi_catalog.csv,Processed data,CSV table,derived working data,2267,32e4fcfd605fcea8525b5f12bb6be003c38bac03d29ea83ecda4a64bd16de4c7,,32e4fcfd605f
+data/processed/kpis.csv,Processed data,CSV table,derived working data,2356,d43dff1194b9b3422869788c0b6c97706a1271e159d7e7942b5cf0ddae4e500c,,d43dff1194b9
+data/processed/normalized_runs.csv,Processed data,CSV table,derived working data,393,9c0ee52d8f5b1207553483fd54d5dec875fac7cc7997f45ed2f80a3b8584ffc6,,9c0ee52d8f5b
+data/processed/notebook_cells.csv,Processed data,CSV table,derived working data,7518,5917a994d003811d9b467c70416a99ed41a023d35a3c316f08d12de95317fd0c,,5917a994d003
+data/processed/performance_metrics.csv,Processed data,CSV table,derived working data,699,f9f1f7c8854cea3ae2a27e8b3be52ed02cd84bda22799993024fbdef5274836f,,f9f1f7c8854c
+data/processed/phases.csv,Processed data,CSV table,derived working data,11808,2e0e7eaa1973c40d1df69e698171b2ec4d7370221f67136180a2f8b9d0c04fd6,,2e0e7eaa1973
+data/processed/tables.csv,Processed data,CSV table,derived working data,41935,2c05347394a90a62491807e107d1442abe0dc9fdab1509f5a181a726efe3cfd3,,2c05347394a9
+data/processed/training_history.csv,Processed data,CSV table,derived working data,99,ee856f888a36232b59244b7240d84bc500e054e29fcc51822b7764339b9f2444,,ee856f888a36
+data/raw/csv_profile.csv,Processed data,CSV table,derived working data,4329,2b6c31c0f9272ab81550ba1f5c2d3f0d4602bd9839c34489f46a29a5e87da960,,2b6c31c0f927
+data/raw/markdown_headers.txt,Processed data,Text log,derived working data,9111,4d35c730a77ccd90726ec1650d7a9478bdfa2c1a541b1e9c2fe9f322165e6994,,4d35c730a77c
+data/raw/notebook_cells.json,Processed data,JSON data,derived working data,327140,f093ad6a59c65d9adf91f7204e8abb3cb8c5f7d9658bd5136ad2da51b2bb7e46,,f093ad6a59c6
+data/raw/notebook_dump.txt,Processed data,Text log,derived working data,210466,323f1d31360a66df6df8aad5aa68720346a3d8e4969315feb52683959027b79d,,323f1d31360a
+data/raw/table_profiles.txt,Processed data,Text log,derived working data,30538,345c62254b552360eb4c2e20f3c8e3568abe47a980194926136b80664e973dc7,,345c62254b55
+docs/glossary.md,Documentation,Markdown document,documentation,13045,e51a8c33523e14056999728a765e7189e8c8d23a250d7d72366e1502afe1c146,,e51a8c33523e
+docs/QUICKSTART.md,Documentation,Markdown document,documentation,9169,920ea5424e05b75d6cff33756bfb65e3e4d75c02dd653ab8f6b63f1aa1c72633,,920ea5424e05
+figures/phase0_missing_bar.png,Source figures,PNG figure,primary source artifact,329588,62d898d2a192342b1ea094fe75cf5b3b7d53cd0cad739d0c9206791430a07eb8,,62d898d2a192
+figures/phase0_missing_matrix.png,Source figures,PNG figure,primary source artifact,28745,4ba779ca2b7d1e447ee1ce4c7dd54dc29f23750d0683081891c3d2dacc5c3b83,,4ba779ca2b7d
+figures/phase0_temporal_coverage.png,Source figures,PNG figure,primary source artifact,185183,b21e95879c990e9af9d8669048f5b8b95ab5e11860f9c3e3a3ca12d8cb8451f7,,b21e95879c99
+figures/phase0_txns_per_card.png,Source figures,PNG figure,primary source artifact,34873,c8c9133886f2331671c589a07dd3dc4552d68c1bcc31c5e35d392e562c927916,,c8c9133886f2
+figures/phase1_age.png,Source figures,PNG figure,primary source artifact,83582,01b213eeb651e912d27afe728cae43df264cb3813b7c7a2851cff8f9307b3a5b,,01b213eeb651
+figures/phase1_age_bins.png,Source figures,PNG figure,primary source artifact,84481,b8ed87d63e0840bf059f191d3b96f502b3e987e1db0a00499d3d2984684c574b,,b8ed87d63e08
+figures/phase1_amt_box_violin.png,Source figures,PNG figure,primary source artifact,47984,6428fad3e356171ea283532d89aef03bd9618dd6510e29b20e3e5f1d8ec952ed,,6428fad3e356
+figures/phase1_amt_ecdf.png,Source figures,PNG figure,primary source artifact,45235,cfc2bc5c46f64d9a567cf95f01411d811b1a4d1d3a879f2b207a1cdd48f37a08,,cfc2bc5c46f6
+figures/phase1_amt_hist.png,Source figures,PNG figure,primary source artifact,51261,9bfb2c4b66034a104400abaa618625d49099822d24d88ab2e9e3095ae6e8d831,,9bfb2c4b6603
+figures/phase1_amt_overlay.png,Source figures,PNG figure,primary source artifact,72233,6b9e1060c1e7a807dfb4b78fbef6826f962e1528db0a3a3dbc9ef67d4352ef2d,,6b9e1060c1e7
+figures/phase1_category.png,Source figures,PNG figure,primary source artifact,160003,ca872b46462d4268fd7a13d587db29f69c17fb74d22f6df424bfc2dc0dff02a8,,ca872b46462d
+figures/phase1_citypop.png,Source figures,PNG figure,primary source artifact,46159,20e7bdce275607e049631b5398e443f1e052223f91df53b8c8540f96fb5850ac,,20e7bdce2756
+figures/phase1_citypop_bins.png,Source figures,PNG figure,primary source artifact,89118,aee2784fc61352dcd79d109793acf3f5aa5a1ec6326f0bc142e1e9c1c8f398af,,aee2784fc613
+figures/phase1_covid_window.png,Source figures,PNG figure,primary source artifact,108784,640a0348ac49d6f93d4a31c7428932fdc31a4eb29bfb067ca68afe4fed1122ee,,640a0348ac49
+figures/phase1_dow.png,Source figures,PNG figure,primary source artifact,86080,28bc8b9d37782e549548e503a70d578147902eec5ddddb9629078a339b7f4678,,28bc8b9d3778
+figures/phase1_gender.png,Source figures,PNG figure,primary source artifact,65769,d9b6a75dcdce1097a2ece299499cf75821cc51ca782e43968eea68c0276e4b3d,,d9b6a75dcdce
+figures/phase1_gender_x_category.png,Source figures,PNG figure,primary source artifact,62949,f29af314bcfe249eb407899d24a0e4e7a08b5686b67e02717d34ca518c908254,,f29af314bcfe
+figures/phase1_geo_scatter.png,Source figures,PNG figure,primary source artifact,153567,cb4baa09b10f7838d9cfe9bda01f429f3f01250664d735b37c4d362440b3b831,,cb4baa09b10f
+figures/phase1_hour.png,Source figures,PNG figure,primary source artifact,80835,1f83d750c5a0757d12a2bc59a10af22c1d330eb0d10ce70ccbf46bf7f11b6be4,,1f83d750c5a0
+figures/phase1_hour_by_year.png,Source figures,PNG figure,primary source artifact,59880,2f5782c64e1f3814ea24aceebc0880bf72aabd50edf1c690a568d7247cc38c29,,2f5782c64e1f
+figures/phase1_job.png,Source figures,PNG figure,primary source artifact,266684,c629b023e01ff9c370168a4b59c8d8bc1d1aefb8318170810bb5b6cd154f8069,,c629b023e01f
+figures/phase1_merchant_topN.png,Source figures,PNG figure,primary source artifact,185386,ed092db0a21d6db7d44a2d447fd5f2e6f7873ecce3d3c6e60d66f18690ec1b38,,ed092db0a21d
+figures/phase1_month.png,Source figures,PNG figure,primary source artifact,120314,b9b6558f1278ad69aa106a00c08748d1b7a577cfbdc0dfa76f2e0659019d69f6,,b9b6558f1278
+figures/phase1_night.png,Source figures,PNG figure,primary source artifact,78340,27a528f6c7ffe5a0f57a51444697120436deb130bcd262382eac5e0a344446bb,,27a528f6c7ff
+figures/phase1_qq_amt_age.png,Source figures,PNG figure,primary source artifact,86162,800f51d651566bec2faea5503b673edf1f53638fb8661e3adcc6fdc6eb76175c,,800f51d65156
+figures/phase1_state_forest.png,Source figures,PNG figure,primary source artifact,140501,66f99483430aca928fe2f10d7c1a277aabe688892a33174226666b28dca79858,,66f99483430a
+figures/phase1_state_n_choro.html,Source figures,Interactive HTML,primary source artifact,9154,d194b7905684f4e5c6673a4efb744cf92d6abde3ce1753cb3d3dd2d814693150,,d194b7905684
+figures/phase1_state_rate_choro.html,Source figures,Interactive HTML,primary source artifact,9905,98122e64f0bc236057cd8414ee6d786d17c736305b41a544a1c63844593648ab,,98122e64f0bc
+figures/phase1_target_donut.png,Source figures,PNG figure,primary source artifact,43842,e7e6f20cdf4144a00d3108c798e31dc90039acbb32a490def4617d76c7b98aff,,e7e6f20cdf41
+figures/phase1_weekend.png,Source figures,PNG figure,primary source artifact,81496,31c170a3050ec96ed79a2dfb535fcf1348a32921c90a88571d06084944b92950,,31c170a3050e
+figures/phase2_age_x_category.png,Source figures,PNG figure,primary source artifact,80280,dae1aa4515ae840005e7e0f8d49fe32697ddc1760452827f6031eff0874630ac,,dae1aa4515ae
+figures/phase2_amt_by_category.png,Source figures,PNG figure,primary source artifact,210026,9d1f4e33aefb0a45747d65256c7d722990f3b0669bae1420c315f3b2e56c8e5e,,9d1f4e33aefb
+figures/phase2_amt_cdf.png,Source figures,PNG figure,primary source artifact,45001,cdc70a36914ec9b2d23972e001ce4e4686212f97bc1a996a2823de99dbf3da64,,cdc70a36914e
+figures/phase2_amtbin_x_hour.png,Source figures,PNG figure,primary source artifact,55899,c0e8b20b9d7ac1e2abd1aa09fd280339ff6cca410f5b0bdc90a0823e8efd1578,,c0e8b20b9d7a
+figures/phase2_card_rate_hist.png,Source figures,PNG figure,primary source artifact,40593,8076223673fbb74909e182b27e5f22412eaca210e355cb95b470be764a482f05,,8076223673fb
+figures/phase2_card_scatter.png,Source figures,PNG figure,primary source artifact,99140,44bfcda2d5dc25548d0069bc78045657a5c87575c702f697b2bb139e1d9afa94,,44bfcda2d5dc
+figures/phase2_category_x_hour.png,Source figures,PNG figure,primary source artifact,94911,ffb0022195d1abbd428246e7ecca540b83971ac72c50b931b978bdf53f30f07d,,ffb0022195d1
+figures/phase2_city_map.html,Source figures,Interactive HTML,primary source artifact,65985,00270f49c9da9b80466e810590aab2f79b216a4fa965250b25e8df0aebec85a1,,00270f49c9da
+figures/phase2_citypop_x_category.png,Source figures,PNG figure,primary source artifact,80137,03b45fb6e06022051e3f2918b033a2a02bf222144a6fde0fa6a05dec93476371,,03b45fb6e060
+figures/phase2_cramers_v.png,Source figures,PNG figure,primary source artifact,94548,15ec244a3a994b015ce7240a2bb772eb49cae7d9e234567e77c9e79d213e6c8b,,15ec244a3a99
+figures/phase2_dist_overlay.png,Source figures,PNG figure,primary source artifact,70187,69df771a5ac2be6de688c94eae14578a5a325a4ccd1b80a416e556dcc9f80761,,69df771a5ac2
+figures/phase2_dist_rate.png,Source figures,PNG figure,primary source artifact,33327,e4bd071e40c368bc0b87db8e3379a3c835e1cddabf65d5796335d12c0922c23f,,e4bd071e40c3
+figures/phase2_dow_x_hour_rate.png,Source figures,PNG figure,primary source artifact,48760,9d14f0efe6b90efd54247bd04da544939bbf1088a8166cad9163c18ff1222afb,,9d14f0efe6b9
+figures/phase2_dow_x_hour_vol.png,Source figures,PNG figure,primary source artifact,37157,24c422cdb5cef0b2308e80de3e8e760891bd1145b64e4dc65cc249241ce468b3,,24c422cdb5ce
+figures/phase2_gender_x_category.png,Source figures,PNG figure,primary source artifact,68671,dbf9a05aa92a82f784e4716b834312d4ae3dd28d2e3f0541ebfa1aae0c615413,,dbf9a05aa92a
+figures/phase2_joint_amt_age.png,Source figures,PNG figure,primary source artifact,266495,51f363b7c28c5efca345132714cd975f0397b07ab774467856f3d308198144ea,,51f363b7c28c
+figures/phase2_joint_amt_dist.png,Source figures,PNG figure,primary source artifact,271057,b2ed7c53498fe97e530fba33434dd782070e00e09276ed23d91367a87a39a23f,,b2ed7c53498f
+figures/phase2_lorenz_fraud.png,Source figures,PNG figure,primary source artifact,66639,1a4edfb201080232bbe4b6cea60a22601bb8bc5f94ecdd68404090fab78f341e,,1a4edfb20108
+figures/phase2_map_scatter.html,Source figures,Interactive HTML,primary source artifact,568108,5d151febf48659303ababdb2fda03fdf31d4f52b1767f9eaeb1a39cd7d3debfb,,5d151febf486
+figures/phase2_mi.png,Source figures,PNG figure,primary source artifact,52292,212d87dec4f332647816dfaebef468d59b2c42dc323b134d07101fe7dfbdc665,,212d87dec4f3
+figures/phase2_money_category.png,Source figures,PNG figure,primary source artifact,90704,a9198cf53af642fb3eb70a191885811c9d72929988ffb5c11570dcb4d854fc3b,,a9198cf53af6
+figures/phase2_money_month.png,Source figures,PNG figure,primary source artifact,84114,45b85ffdfec8c0aa34b5b177b33312b74bf3dcdf861f0abdb0d2a63f8fd5253a,,45b85ffdfec8
+figures/phase2_pairplot.png,Source figures,PNG figure,primary source artifact,545806,008090cc9007681e1814630a66f45aba556c2206e0ec199b3ea7220ba68770b2,,008090cc9007
+figures/phase2_spearman.png,Source figures,PNG figure,primary source artifact,218820,9b2134ef09aa6fcfbfefde764e95c03f7024204d15cc91403d50e3313dac2e32,,9b2134ef09aa
+figures/phase2_state_eb_choro.html,Source figures,Interactive HTML,primary source artifact,9937,aa7adbd8b6b3b810c04071173bcfe30434eb6ebf097452c789845925a411beed,,aa7adbd8b6b3
+figures/phase2_state_n_choro.html,Source figures,Interactive HTML,primary source artifact,9232,7567d060911281f3aad779b7c83719b0c0993abd90a421b638b25e531668af7d,,7567d0609112
+figures/phase2_zip3_forest.png,Source figures,PNG figure,primary source artifact,107863,6fec5e11b1e5a2da7a1efc388450dc627e2fd5fd351c851ce4e2fc546dc9cb37,,6fec5e11b1e5
+figures/phase3_acf_pacf.png,Source figures,PNG figure,primary source artifact,85960,3949795c093db2820754282d2178eda014768e831610b899dc0028a4804a67ea,,3949795c093d
+figures/phase3_card_timelines.png,Source figures,PNG figure,primary source artifact,131366,864ce2381612b2e97654d95dd659c1092767cbccf23ae560da97eb0d84fed755,,864ce2381612
+figures/phase3_changepoint.png,Source figures,PNG figure,primary source artifact,231510,1c382947cb0940d97d9eb96029d7c331b4e8b9cb9037337860c5651d6176275a,,1c382947cb09
+figures/phase3_daily_rolling.png,Source figures,PNG figure,primary source artifact,589849,a2da627e64459c40c648cc86ee15bc5f10b14da13151d95e5b6494ef9a3adbd3,,a2da627e6445
+figures/phase3_hour_x_dow_rate.png,Source figures,PNG figure,primary source artifact,48297,709ee160d8fcf5d49a5877cb4d17fbc960639b006416a20c582a640840c75299,,709ee160d8fc
+figures/phase3_hour_x_dow_vol.png,Source figures,PNG figure,primary source artifact,37093,4a5dbaaa3a4c8adc710f6d17dc754312ae260deb3c75e128f03652db8d02d930,,4a5dbaaa3a4c
+figures/phase3_hour_x_month.png,Source figures,PNG figure,primary source artifact,63112,2dfdbdfc6b143fe10c2a3c20e862a2a58f5d86cc4f84d0dd88df4d033e03f238,,2dfdbdfc6b14
+figures/phase3_interarrival.png,Source figures,PNG figure,primary source artifact,36535,7165c9db3119b93ff989be832daa7ea28b6652ea473857154c7e8390d6fb08b5,,7165c9db3119
+figures/phase3_month_x_dow.png,Source figures,PNG figure,primary source artifact,47864,02eca6b70b8cec27c1f2688af64abb42b31386688cc7c1ae4672044a7bc91282,,02eca6b70b8c
+figures/phase3_stl.png,Source figures,PNG figure,primary source artifact,437320,dba319d7b06c750a29de6874e37a47e447e9178938578fb612d29153b21e8699,,dba319d7b06c
+figures/phase3_weekly_rate.png,Source figures,PNG figure,primary source artifact,102849,148335bd20ed779c32419e67a5f43759e18477f0ace0e347df095b0fcb8727cc,,148335bd20ed
+figures/phase3_year_x_month.png,Source figures,PNG figure,primary source artifact,41930,82f55f7c3e2d31e2249c3c7ad0b06140e261d1d3d150ce0d04d4b034b35bb44a,,82f55f7c3e2d
+figures/phase4_ae_error.png,Source figures,PNG figure,primary source artifact,49863,594e74413141684d930f02e41456d492c375985f503e39d8254b5f7fa4bf5793,,594e74413141
+figures/phase4_andrews.png,Source figures,PNG figure,primary source artifact,627375,00445c3074a709a7a94dd8c00e26fa9d13eccc4ccf677ed104d949cc7a1135a5,,00445c3074a7
+figures/phase4_dbscan_kdist.png,Source figures,PNG figure,primary source artifact,45939,5576f12460a8ad8ba2325f9a524e8be47b3cafad008278232e886737ff8791a6,,5576f12460a8
+figures/phase4_dbscan_rate.png,Source figures,PNG figure,primary source artifact,28612,f53c2587d87594a4dceecd35f50589bcf6906a12f04c310d12c7f979fb6e5400,,f53c2587d875
+figures/phase4_dendrogram.png,Source figures,PNG figure,primary source artifact,38920,bfc5528aac3bc55b0f126b7c257faf700694fd2cdb014e95a06cb03e73532d09,,bfc5528aac3b
+figures/phase4_hexbin_rate_contours.png,Source figures,PNG figure,primary source artifact,323161,7b1ed4955ddc20323b15e8cfc90060d31285582224072e4b53da210b7acbf084,,7b1ed4955ddc
+figures/phase4_if_scores.png,Source figures,PNG figure,primary source artifact,74798,8b87eea26e1be6e746efcbcf2efc77bc22de70be7a8f0ebb37f48ae77a248611,,8b87eea26e1b
+figures/phase4_if_vs_amt.png,Source figures,PNG figure,primary source artifact,381158,7a4d54e2d1f9c50053bddf569ed9b0652a71480c7e4f1cd6c43b12abe032c5b6,,7a4d54e2d1f9
+figures/phase4_kmeans_fraud_rate.png,Source figures,PNG figure,primary source artifact,37779,f363cdfeb86440ffd2a92616c4d66955643582a601e0e26ce5f4acdbaeeef25e,,f363cdfeb864
+figures/phase4_kmeans_radar.png,Source figures,PNG figure,primary source artifact,154790,cf9a6c3015ae72e223bb556cf3c697ba85f04e15435f82193def0a7fc32a501a,,cf9a6c3015ae
+figures/phase4_kmeans_selection.png,Source figures,PNG figure,primary source artifact,78075,2a45c9863b0ff31a1b6d4fc09af6ea4db35a1c0a12cac1ff1ff35e63a6e54167,,2a45c9863b0f
+figures/phase4_kmeans_x_category.png,Source figures,PNG figure,primary source artifact,71111,ecc25f14bedaa584212dcb0979f4ed56103a56bf805f5566e7f4c2fcd2692a79,,ecc25f14beda
+figures/phase4_lof_scores.png,Source figures,PNG figure,primary source artifact,48489,b3ac31dc5cb21bd68cfecc821771ac30367b7602f94fe667615c5096c23ce8bf,,b3ac31dc5cb2
+figures/phase4_parallel_coords.png,Source figures,PNG figure,primary source artifact,1101732,16b64e80b13de8b691291ebb2e923d9da92f12281d148175560f2b20e348de73,,16b64e80b13d
+figures/phase4_pca_3d.html,Source figures,Interactive HTML,primary source artifact,2930518,db4351062ab50b11386e28ce7ad12549088f2b637fbe8d393545097a610d69b7,,db4351062ab5
+figures/phase4_pca_biplot.png,Source figures,PNG figure,primary source artifact,118470,29b5510d2f956f8b78589c88ac3693b6fba078b2a37b119a611a10c60bc4607d,,29b5510d2f95
+figures/phase4_pca_contours.png,Source figures,PNG figure,primary source artifact,122290,2919de761c855f4ef1c6af5ad1d9448ac72929ad4087c1cefcb61065e901fad4,,2919de761c85
+figures/phase4_pca_scatter.png,Source figures,PNG figure,primary source artifact,296897,d1f75fb9eb737aa62c2c9b76d52672e9c3cbb88d228cc57e9be4faa718969ce0,,d1f75fb9eb73
+figures/phase4_pca_scree.png,Source figures,PNG figure,primary source artifact,60312,adadd219ccad5023a9cd6f03132bc613301b260fea190ca15f30fddbdfa00287,,adadd219ccad
+figures/phase4_raincloud_amt_category.png,Source figures,PNG figure,primary source artifact,314268,7c54d40c44ea0679aabafeb2a4082932f403b81c6845c1a5d080a182d3e2fe4a,,7c54d40c44ea
+figures/phase4_separability.png,Source figures,PNG figure,primary source artifact,51974,cd82664008409c602d3291358269887f50fcfcdc6bfe8e2c0e3ed710c856074a,,cd8266400840
+figures/phase4_swarm_amt.png,Source figures,PNG figure,primary source artifact,118659,897304eeaff297c7377c91a78feab487ea1c58e2c56df12438f3fbc89b574ea4,,897304eeaff2
+figures/phase4_tsne_p100.png,Source figures,PNG figure,primary source artifact,512628,e31b04b06b3a5ee7d21a2fee6e1ee67b011d899796171170a71eeb6c5225481b,,e31b04b06b3a
+figures/phase4_tsne_p30.png,Source figures,PNG figure,primary source artifact,651284,158c4f3da7f9e266c215853faff0acdfdbca88f0c61a8b67805a172e7e17ccaa,,158c4f3da7f9
+figures/phase4_tsne_p50.png,Source figures,PNG figure,primary source artifact,572456,a6c7e004b8be7cc3e7bbdc98bafbccceb56b939a54773a9c25541c222e95d2fb,,a6c7e004b8be
+figures/phase4_umap_nn15_md0.1.png,Source figures,PNG figure,primary source artifact,234827,2470e17da585b0e391123f10d116fa64f393a6b40dc64a97297f20d94f9ecf0c,,2470e17da585
+figures/phase4_umap_nn15_md0.5.png,Source figures,PNG figure,primary source artifact,523633,c2004cf54427f642386a78b5f39f33090ab9086e352c0fb806d8e512acc641da,,c2004cf54427
+figures/phase4_umap_nn50_md0.1.png,Source figures,PNG figure,primary source artifact,196769,1a220c1bf3742cb5292518ce535f8e580183aeafc38393cfb5df74f28ce299a5,,1a220c1bf374
+figures/phase5_effectsize_forest.png,Source figures,PNG figure,primary source artifact,64628,1134038f23639a297a1e6beb4560f4c96886e67bb8f700b21592529b5c2d8531,,1134038f2363
+figures/phase5_forest_category.png,Source figures,PNG figure,primary source artifact,102839,c5cc3aa97ed0476b6efaafb319d397387c997532d301bd7cfe5e0ea3206040bd,,c5cc3aa97ed0
+figures/phase5_forest_hour.png,Source figures,PNG figure,primary source artifact,117935,434cea8a4178d8bd6f1b94d8bc7c1b89136aa1285822c85636fc11997969657a,,434cea8a4178
+figures/phase5_forest_job.png,Source figures,PNG figure,primary source artifact,146636,2e68647cffbf88181e57d255643cbda4ad0db0ee49d3bb845ba54801eba4e44b,,2e68647cffbf
+figures/phase7_card_age_curve.png,Source figures,PNG figure,primary source artifact,53030,ce04510d69d04f445cda52e88d3e0a1fde58819745c54013d358894f41a1eba4,,ce04510d69d0
+figures/phase7_cnt24h_rate.png,Source figures,PNG figure,primary source artifact,30204,328f9dd00856ab405f761cd074c332f069dcdd60bd151386cec71c2536e71d5f,,328f9dd00856
+figures/phase7_cohort_heatmap.png,Source figures,PNG figure,primary source artifact,110081,d51633a1007448dceebb7b86a1e7cb464f4a094f1025ed438b9f25b7b301937d,,d51633a10074
+figures/phase7_combo_lift.png,Source figures,PNG figure,primary source artifact,52822,7c35d8f530d646a3457cbbc1941d7f39112c18ba35d63626550ebe8a450bb036,,7c35d8f530d6
+figures/phase7_discrete_hazard.png,Source figures,PNG figure,primary source artifact,70966,6329e1069e3767dd5e5375b713954e3f5c44e8946c6f8c080c4d8077a4bea067,,6329e1069e37
+figures/phase7_dist_artifact.png,Source figures,PNG figure,primary source artifact,56815,eb22fb4d93241dfbd6e9553f7714a9861f9963e3a00b4eeb69a4d397cd71df55,,eb22fb4d9324
+figures/phase7_fraud_event_sizes.png,Source figures,PNG figure,primary source artifact,38225,19475933634831d4621c1c30062d1f6e10738eb8809328c24a0fb5a866603a57,,194759336348
+figures/phase7_km_first_fraud.png,Source figures,PNG figure,primary source artifact,66166,88b7ca05f1d196069eb2a8539b40e66fe480dbbd0241ff2f21a672420912859b,,88b7ca05f1d1
+figures/phase7_merchant_hier_eb.png,Source figures,PNG figure,primary source artifact,179414,40b3251ea08aadc020c977792914c37447119ce311a84fbaf2e8168a8052ffd9,,40b3251ea08a
+figures/phase7_speed_rate.png,Source figures,PNG figure,primary source artifact,30960,c6f5234e6bb1bc2f89786dd61f7ad377d2881a3ce35933574b09f56f8dfd8b75,,c6f5234e6bb1
+figures/phase7_te_leak_demo.png,Source figures,PNG figure,primary source artifact,49805,20ef5765b66dfbb6788850d0d0b7179363818c869ee3b4f917dbf47b1719ee49,,20ef5765b66d
+figures/phase7_txns_before_fraud.png,Source figures,PNG figure,primary source artifact,47949,34f01e62812eff32c2a9fb5d67e1907046d5e2e86b469a52993ba092e5e92503,,34f01e62812e
+figures/phase8_ablation_decomposed.png,Source figures,PNG figure,primary source artifact,83829,38e678b2fe573894415bbf76aca2232de8639554edcc4b9c9bd7f0f5f4b979ef,,38e678b2fe57
+figures/phase8_adversarial_importance.png,Source figures,PNG figure,primary source artifact,51666,6b0460f3276d2f02a834e8d44db7aba939b6d66dd74f515ca4f4004b09ba9ede,,6b0460f3276d
+figures/phase8_calibration.png,Source figures,PNG figure,primary source artifact,59879,58e877cd0a99819e4a14f8a2a586376e1037039bc39420e9cf5627d2088621bc,,58e877cd0a99
+figures/phase8_calibration_temp.png,Source figures,PNG figure,primary source artifact,68696,d433d722935fe30a7cba7efcd7dfb076899c81ef55fafcb1f9fd546036548990,,d433d722935f
+figures/phase8_capture_at_k.png,Source figures,PNG figure,primary source artifact,73657,2eb1eb4da61c8e05deca96e23a84f37549537e7595c7b6728dcdc76229c1c9c8,,2eb1eb4da61c
+figures/phase8_confusion_f1max.png,Source figures,PNG figure,primary source artifact,26138,56d153be9cee71f047cf6cfa894c293afa2d7d7b0743ab79727bfe262a95b088,,56d153be9cee
+figures/phase8_cost_curve.png,Source figures,PNG figure,primary source artifact,59969,827fbb2eb46306941a1fbd78e6f68b34b41413315d8c78feb94fb79f07329dc1,,827fbb2eb463
+figures/phase8_cost_sensitivity.png,Source figures,PNG figure,primary source artifact,89261,522d1be2084efc313b83f25876ca41825de8ed58458d616a0dca254e289d6f98,,522d1be2084e
+figures/phase8_ensemble_comparison.png,Source figures,PNG figure,primary source artifact,76735,624af25bf5328004baf18ad7472944792887c49ae71febc0e23626ce77158bef,,624af25bf532
+figures/phase8_learning_curve.png,Source figures,PNG figure,primary source artifact,53208,ae7be2658a02f56b46e66b19d23ebdb691a4f9f4c81bf51417d6c38f62c1c26b,,ae7be2658a02
+figures/phase8_leave_card_out.png,Source figures,PNG figure,primary source artifact,58194,a0b682dd5eb92255a3387a08400e3ffaaec0928d0efa203b0cfc5aba7cba27ad,,a0b682dd5eb9
+figures/phase8_pdp_ice.png,Source figures,PNG figure,primary source artifact,89185,7710a79deac31ef2061ff4d03c4a73986e611eaf3e89edc5099357dea91ea0b2,,7710a79deac3
+figures/phase8_psi.png,Source figures,PNG figure,primary source artifact,118819,058fd44af467095921c7b98f11b4a9a1fd6c7b6d4a532225d9e25c211741b4b5,,058fd44af467
+figures/phase8_roc_pr_curves.png,Source figures,PNG figure,primary source artifact,75412,ff467c496a9a5f07bc56ce2672ca9554dfddb2116ab55f90e07003950532f3e4,,ff467c496a9a
+figures/phase8_segment_recall.png,Source figures,PNG figure,primary source artifact,104391,ab6b6bf5203bb0a67194982f7201dbefa40020c774bdb71ac684b9fc3d37be72,,ab6b6bf5203b
+figures/phase8_shap_beeswarm.png,Source figures,PNG figure,primary source artifact,191855,ad1a6aee3b971cfff23299ef44e4af2c3773fefe714f82706ca2e773b7fc0dc1,,ad1a6aee3b97
+figures/phase8_shap_dep_card_prior_f.png,Source figures,PNG figure,primary source artifact,93046,3ad65b30a0cb43900d2fd4493c5e6b4ba401df5749f1510a92f570f24616036e,,3ad65b30a0cb
+figures/phase8_shap_dep_cat_code.png,Source figures,PNG figure,primary source artifact,60190,19f9913c894c4190458dab2d70e70c38940c52e93eb8a729ced62149acd36ca0,,19f9913c894c
+figures/phase8_shap_dep_log_amt.png,Source figures,PNG figure,primary source artifact,142962,814336db4a87a95eecb9c76966b6ae9b1a39bcc59efbae6e4e6c7508a46f34fb,,814336db4a87
+figures/phase8_shap_dep_n_prior.png,Source figures,PNG figure,primary source artifact,174223,3bfa233da2e1427732e70e4c5af089310c10bffb92e40dbeecbdf2ebfb613772,,3bfa233da2e1
+figures/phase8_shap_importance.png,Source figures,PNG figure,primary source artifact,63413,fcf101cc1abe7d5f2bb5cd9529b6c35137b7640780a6709e1759b4284ae589fd,,fcf101cc1abe
+figures/phase8_walkforward_cv.png,Source figures,PNG figure,primary source artifact,43949,09337bff516b7c466e406aee7b814e45a4ff3f632e336b5cdb746850feb85e40,,09337bff516b
+figures/phase8_wf_vs_test.png,Source figures,PNG figure,primary source artifact,44453,b446f7cf92e2eb55104fe9c7a53b97fa6b7236677525b9550d9440a5194f48fe,,b446f7cf92e2
+fraud_eda_colab(1).ipynb,Source notebook,Jupyter notebook,primary source artifact,4052809,294ecd208bac66bebf2c97ea792e0a0588b7006cb0332b691ace9e329715fa74,,294ecd208bac
+logs/build.log,Run logs,.log,primary source artifact,3092,d63a72d13f67f95c2a87dc3819f62df7fe98519dcc8389589e974b87a14dc9ea,,d63a72d13f67
+logs/data_fingerprint.json,Run logs,JSON data,primary source artifact,161,835dc7d6dd7e7f6b390676040c7e0bb24d256dee331518a7d48394e1f33fffe5,,835dc7d6dd7e
+logs/env_snapshot.json,Run logs,JSON data,primary source artifact,377,a9d66c729b82949fa3b0764412cbf607d25727fc57c34fc45a1a8e8adf440657,,a9d66c729b82
+logs/findings.md,Run logs,Markdown document,primary source artifact,22036,5d505561724cc5c14b1071ea7702aecf88fc1ad4bf5c12d46a0af4f7cbe21de3,,5d505561724c
+logs/findings_ledger.json,Run logs,JSON data,primary source artifact,29737,4fee4a0ae0f52586ecac3f8a1dc4db4009a41c9cee111088077f213e1de0780f,,4fee4a0ae0f5
+logs/ui_smoke.log,Run logs,.log,primary source artifact,6770,cb9cc276d88d9a5f997e0165015b1b25f87a819b6f016b30cea545b72fa3ce0b,,cb9cc276d88d
+powerbi/build_powerbi_pack.py,Power BI pack,Python source,import pack,58340,6d228f166b248362e77f8c1ab2d77d2d2457cab2f1de97ce124aecb36a90c8b9,,6d228f166b24
+powerbi/data/dim_category.csv,Power BI pack,CSV table,import pack,321,5ffb115fd90becd6e0eb6687c1dbe71ad5ea67bdd215673266097eb5a1ba15bb,,5ffb115fd90b
+powerbi/data/dim_date.csv,Power BI pack,CSV table,import pack,70366,3936da0ecc09347ee35e302e3c2820e675178e71f61459c39e18195c2e599771,,3936da0ecc09
+powerbi/data/dim_experiment_group.csv,Power BI pack,CSV table,import pack,1785,c45a1f853cd18fab34b7531151937ec881f976d707ce076af4f683069c2042d4,,c45a1f853cd1
+powerbi/data/dim_grade.csv,Power BI pack,CSV table,import pack,952,62c20f3e1a07aac4b488db1036c2b93e1b7371c64085a22a8a14893736d0882a,,62c20f3e1a07
+powerbi/data/dim_insight_scope.csv,Power BI pack,CSV table,import pack,198,03aa6395af428435e19712a157f69ddb671d579225eb85d720dce7246c690671,,03aa6395af42
+powerbi/data/dim_node_type.csv,Power BI pack,CSV table,import pack,291,f9bfa3089504b580b42e006cbd759dbde52904886cb3ee730d8b16d532e2c6df,,f9bfa3089504
+powerbi/data/dim_page.csv,Power BI pack,CSV table,import pack,4680,5883b04751a13a3bad2f664a0cdf1a50c95eb6dddac5f7229ce13f756436025e,,5883b04751a1
+powerbi/data/dim_phase.csv,Power BI pack,CSV table,import pack,2436,c034443c458c16ecc5b2f3228711dfd731419600f7599cee90105195e51a8d42,,c034443c458c
+powerbi/data/dim_provenance_status.csv,Power BI pack,CSV table,import pack,219,a8c8f68d3d39d4eb2f301b96811684d796dc6d97b1f58ef2d13790fe2feb20d8,,a8c8f68d3d39
+powerbi/data/dim_psi_verdict.csv,Power BI pack,CSV table,import pack,142,92c631c824a48f25adf55bdf04d12f17406b50f01ec2d4ede6c232ed366da221,,92c631c824a4
+powerbi/data/dim_rq.csv,Power BI pack,CSV table,import pack,1119,c307dd59caf177f6ccda27b3d3c62e763d7bd2de35e8e7af985e6e95d33fbe43,,c307dd59caf1
+powerbi/data/dim_segment.csv,Power BI pack,CSV table,import pack,103,f8f2a56d529abc190c03c3ba920ccbf884953ef842e52df9ae05d75327fd977e,,f8f2a56d529a
+powerbi/data/dim_split.csv,Power BI pack,CSV table,import pack,146,841e16354eb0076ff424fe52f968f8702d2693fff3fcf8eea51509bda14afe95,,841e16354eb0
+powerbi/data/dim_week.csv,Power BI pack,CSV table,import pack,5213,c225e8fd94604197b5ddc14f868c198ddad5ac71e26987cb8a5f4d1b3087fdd6,,c225e8fd9460
+powerbi/data/fact_ablation.csv,Power BI pack,CSV table,import pack,732,c1904d6cfd9d0f33ccc1f041c7b9bfa78ba605bb51653adab4da098e67b2c43d,,c1904d6cfd9d
+powerbi/data/fact_anomaly.csv,Power BI pack,CSV table,import pack,240,0f390fda2ca9c466ae15c8788e48f45601020095a71aa2d888b2debcf9937d7d,,0f390fda2ca9
+powerbi/data/fact_anomaly_flag.csv,Power BI pack,CSV table,import pack,5126,1684c5c9a7aa466eba0e00659a71c57033eb99982ea0fef68dacc324ec867825,,1684c5c9a7aa
+powerbi/data/fact_artifact.csv,Power BI pack,CSV table,import pack,35213,8e48e998917c9a45e4d1cc7bf68daadfac52d6ebc9e872cad0ffdaf2e58dce31,,8e48e998917c
+powerbi/data/fact_artifact_provenance.csv,Power BI pack,CSV table,import pack,28214,aa78754b730d731c6172c9966fdee80a6035b625310da7f8e1c53eed5fd05116,,aa78754b730d
+powerbi/data/fact_audit_note.csv,Power BI pack,CSV table,import pack,2636,f4bb4c7e7fd635ae4b062abdf143357624ab99c41915b321ca38a9194dba2892,,f4bb4c7e7fd6
+powerbi/data/fact_calibration.csv,Power BI pack,CSV table,import pack,217,b7f6177d12c4ca436f7b3106dc1791b1df369ffa658abf5bcb04b9eba07cbc53,,b7f6177d12c4
+powerbi/data/fact_capture.csv,Power BI pack,CSV table,import pack,638,596de50b3ad2c3a30c01b018840c4eef1916799f2fdd07e868e40d300a58cec5,,596de50b3ad2
+powerbi/data/fact_card_profile.csv,Power BI pack,CSV table,import pack,92099,710f287d0a7a8cde44a24647a7a53140a04c8454b11c1e776b62fe0f039c7184,,710f287d0a7a
+powerbi/data/fact_category.csv,Power BI pack,CSV table,import pack,1937,4868896c55479b7e3ed3a55b7e982385b3d5e26dca99c03c58def208a7974582,,4868896c5547
+powerbi/data/fact_checklist.csv,Power BI pack,CSV table,import pack,1298,59c8c0d533b667c450948780373073215fbb768d248e7ee5384a2ca60c777a1f,,59c8c0d533b6
+powerbi/data/fact_chi2.csv,Power BI pack,CSV table,import pack,299,43f797a69ed61ce460a448b19f35cd5630d42101927b863ccf5fcfe60cdf181d,,43f797a69ed6
+powerbi/data/fact_city.csv,Power BI pack,CSV table,import pack,45522,051c8fb88e3d515dea68458983224c025a0a8c9d8877f9df527faec03fd06f10,,051c8fb88e3d
+powerbi/data/fact_class_balance.csv,Power BI pack,CSV table,import pack,185,6a6ffdc5ea3028d96177fadc1293551630a31c8e8e33c0b74063ef2a85a78395,,6a6ffdc5ea30
+powerbi/data/fact_cluster.csv,Power BI pack,CSV table,import pack,292,90b22aff31340abf234c4bd455e285f1a71ceb02782c5427e60a9eeda584e151,,90b22aff3134
+powerbi/data/fact_contract.csv,Power BI pack,CSV table,import pack,459,2a10f9e33aabbcea2120e9b2b101cd94adb8388c276d67fdc4dff75186dde2fc,,2a10f9e33aab
+powerbi/data/fact_cost_sensitivity.csv,Power BI pack,CSV table,import pack,473,4fc59b5df4eca811f770f17afabb9b233b5b9effacb4405cae958832c1ff641a,,4fc59b5df4ec
+powerbi/data/fact_data_quality.csv,Power BI pack,CSV table,import pack,706,0d66c83f35a89bb81438a31ebd9a0d06dfdccbe33c1c7cf52d64724be4b65cd5,,0d66c83f35a8
+powerbi/data/fact_effect_size.csv,Power BI pack,CSV table,import pack,1344,279c3e0f81a4df892f8c1a9813ed0afb8fc2a9e83e708d74f35c810e6dca0e8a,,279c3e0f81a4
+powerbi/data/fact_embedding.csv,Power BI pack,CSV table,import pack,264,80dffc6681ed00cd361dd31cf19e304fb33d38dcf75c87052f9138ee98a54b9f,,80dffc6681ed
+powerbi/data/fact_ensemble.csv,Power BI pack,CSV table,import pack,138,b97c19a8c79992b1571e012a508951b9a626e029cbe3e120bdbb30ad78f6725d,,b97c19a8c799
+powerbi/data/fact_experiment.csv,Power BI pack,CSV table,import pack,9526,b968fa021a81a5d0977149fb960f13e63517da1959eca49b348db5dca6d03051,,b968fa021a81
+powerbi/data/fact_finding.csv,Power BI pack,CSV table,import pack,27814,c44ceb6d030ff1eb6a39973e6acacf80230b01d9340de0aba9cd012817d7779d,,c44ceb6d030f
+powerbi/data/fact_generator.csv,Power BI pack,CSV table,import pack,266,1da70c6bd78b4956046ac3b54f81c7de107600b784ed6368f4c3d02a46b4f437,,1da70c6bd78b
+powerbi/data/fact_hazard.csv,Power BI pack,CSV table,import pack,1676,7ded9c0a6e3fb481449f8eb991ac30eb9d9dbc396de82c0ee099cac66c597c9d,,7ded9c0a6e3f
+powerbi/data/fact_high_risk_combo.csv,Power BI pack,CSV table,import pack,395,cdd14cf5770b6b93001db064baddb53c5011b6ec2ae5778472304c0b6a065102,,cdd14cf5770b
+powerbi/data/fact_hour_encoding.csv,Power BI pack,CSV table,import pack,116,342047cd9227519d807aaf1799e7be6bd1fea04188d64eaf71b6a13a045ccdc6,,342047cd9227
+powerbi/data/fact_insight.csv,Power BI pack,CSV table,import pack,8200,fb1008d0440ed600cd1eacd2973eb6acf61d164406c11c218c6cb221aa3299c2,,fb1008d0440e
+powerbi/data/fact_issue.csv,Power BI pack,CSV table,import pack,9719,809d76e94b2347e8f06d79bb403b66faa509a5791405ddeea56418d14135f57f,,809d76e94b23
+powerbi/data/fact_kpi.csv,Power BI pack,CSV table,import pack,2525,b705e1f9c61aa0dee45af724e83ad2c50a53a8bc82248ec66323d9ae1b9076d7,,b705e1f9c61a
+powerbi/data/fact_learning_curve.csv,Power BI pack,CSV table,import pack,293,00c046cd52d750b8d8bd31056421f2c99d4433b6f2ccf9bfc513e1598552f4d8,,00c046cd52d7
+powerbi/data/fact_leave_card_out.csv,Power BI pack,CSV table,import pack,274,35f85eb2e771c67324a72ba675db13b1c321f7d1956a96920cfa344578cefd3a,,35f85eb2e771
+powerbi/data/fact_lineage_edge.csv,Power BI pack,CSV table,import pack,22178,eacf1901d984f733c762ce7533793f2d8ed41879c08256d138d818dc705189ac,,eacf1901d984
+powerbi/data/fact_lineage_node.csv,Power BI pack,CSV table,import pack,32807,1c408cbbb7a0a1d983bb4828b241cacdef26f94171c069d9b5bb5385f5a622a2,,1c408cbbb7a0
+powerbi/data/fact_log_pattern.csv,Power BI pack,CSV table,import pack,103903,e069933d8c67f93f454585c5cfbdbeac6cdbb211dd212cc204a8ef7232802224,,e069933d8c67
+powerbi/data/fact_logit.csv,Power BI pack,CSV table,import pack,800,0005d1810bbba116982cac7d9b191c882b4628dcb1c32b6857b4cd777bfa9f2a,,0005d1810bbb
+powerbi/data/fact_merchant.csv,Power BI pack,CSV table,import pack,31688,22cb76e1d19ebe11ee38fa6a60c344ce2045685ed26a54bd3eca2224d8124420,,22cb76e1d19e
+powerbi/data/fact_metric_catalog.csv,Power BI pack,CSV table,import pack,22370,b863f5ee44b7b6d0a558959e81cc45763eaa74c2ea49a46256c549ee3b6a645c,,b863f5ee44b7
+powerbi/data/fact_missing_column.csv,Power BI pack,CSV table,import pack,797,403fe2ed2e045c09f7599ae961d8938cd0f08fb87d3695031affd0879a730727,,403fe2ed2e04
+powerbi/data/fact_money_category.csv,Power BI pack,CSV table,import pack,737,7afbcf8f2facc31e884a9878f1471866fc424f1685f6f588baa8ef6abf7b5a51,,7afbcf8f2fac
+powerbi/data/fact_monotonic.csv,Power BI pack,CSV table,import pack,145,9e09201deede75ac5378984056afe4aa376e605ded6880cb1de2d974fb70077f,,9e09201deede
+powerbi/data/fact_notebook_cell.csv,Power BI pack,CSV table,import pack,39655,1e32ccde264202e3e7ab4101926f8e9731fdd2246efcfb975d49c3ba4b4ee86f,,1e32ccde2642
+powerbi/data/fact_posthoc.csv,Power BI pack,CSV table,import pack,7438,43521253008744b3f78ae4bbb76b03bdc44fb63e9f32e4a2e1e7f634ea697839,,435212530087
+powerbi/data/fact_psi.csv,Power BI pack,CSV table,import pack,2114,6f578518c420df51ddf804fc02078415f90292e7cf1adceeeacbab1cfdb3a2a1,,6f578518c420
+powerbi/data/fact_quantile.csv,Power BI pack,CSV table,import pack,284,e0ad6d98590ed83e475d464dafb13824d38d32db0193c7dee7d8b6d0447f96e2,,e0ad6d98590e
+powerbi/data/fact_schema.csv,Power BI pack,CSV table,import pack,4796,9b8bb89a7b961a118accbb3d3e6f5b16a9fc78712aa85455f6126b8cd87e0ec8,,9b8bb89a7b96
+powerbi/data/fact_segment_error.csv,Power BI pack,CSV table,import pack,3096,280a8af35d80b6eb4a3518599c6ce980eb9c059f05e168b3fdf89cf2057a2684,,280a8af35d80
+powerbi/data/fact_source.csv,Power BI pack,CSV table,import pack,552,cd58b0328df0c7e0d0b126891296ab205cbee26b0f3f9cf02a860975175fd499,,cd58b0328df0
+powerbi/data/fact_speed.csv,Power BI pack,CSV table,import pack,243,af47fc7903c7ff25dded5de0e1ea7b773fbddd92ec2ca232355b45e4281f02f7,,af47fc7903c7
+powerbi/data/fact_table.csv,Power BI pack,CSV table,import pack,8262,cbcaeeeacbe487e981cfcf5ce25101f166c09ddb532d69b73ba57f3e13dd9ab3,,cbcaeeeacbe4
+powerbi/data/fact_threshold.csv,Power BI pack,CSV table,import pack,597,f3e7dbbc266bdefe2c1bbe6f7d6bba5098f8f301e9e389e3463a15663ab9f2e4,,f3e7dbbc266b
+powerbi/data/fact_time_decay.csv,Power BI pack,CSV table,import pack,140,de3d1a068ac9f89b5523e7f16c8462d83892850949849dd153efacb73dce43a4,,de3d1a068ac9
+powerbi/data/fact_walkforward.csv,Power BI pack,CSV table,import pack,661,ef36b08c569eee922a87ede67d026a0d1b9195b5b53f9a4e5bca2eec8cec2946,,ef36b08c569e
+powerbi/data/fact_warning.csv,Power BI pack,CSV table,import pack,1370,de8d44b91e5f2756a1ddb8d04cdbb56cf9dd85cfd9e4c090e7a888771f8127f4,,de8d44b91e5f
+powerbi/data/fact_weekly_rate.csv,Power BI pack,CSV table,import pack,4575,7e619d141ee317d1ee6b7d6ff1fdfbc6ee98355cd08891c344d743050ef93592,,7e619d141ee3
+powerbi/data/fact_zip3.csv,Power BI pack,CSV table,import pack,62334,06b6495dc6d643994ffd9e0fc9b479571c77ceacd25ab4ea83c7ea7a3cb5ae6e,,06b6495dc6d6
+powerbi/dax/measures.dax,Power BI pack,DAX library,import pack,22815,64da2465ff7dafd5b292556f3d6ae514ca7235ffb429f18b4288ba6c7f870f58,,64da2465ff7d
+powerbi/manifest.json,Power BI pack,JSON data,import pack,36409,082b62c1c0d28a72a476533709a3bd0e9538a538f15782f6defb80f6922c3e4f,,082b62c1c0d2
+powerbi/pages/page_spec.md,Power BI pack,Markdown document,import pack,36176,9a3091b1230b0a6ec3c520f00c47446a1cfa1658362a15158d004d2de9822911,,9a3091b1230b
+powerbi/README.md,Power BI pack,Markdown document,import pack,9934,146988268a806630fc07502fa6ce10e4c18953b9c7bb613067059ad0a95bcb37,,146988268a80
+powerbi/relationships.md,Power BI pack,Markdown document,import pack,19664,663b3d7a060ad5734e2bbf51ef5695afd126b7ab355ac2e4ad4b40cacd0756df,,663b3d7a060a
+powerbi/theme/fraud_evidence_theme.json,Power BI pack,JSON data,import pack,6788,f4ef38a58320311897f6714fbd24521d4cac00b496b1aee91a7b966222052847,,f4ef38a58320
+README.md,Root,Markdown document,project file,10327,f219fe819af1bd3250c26ff8dfdfa2cee27af9320b5c8a7cc0cdfb1e1d7be3e5,,f219fe819af1
+reports/build_reports.py,Reports,Python source,generated report,128390,931019de1b97bbb40b67a92340a1665535c0ca93afc9f8bc1b4ef59f49566209,,931019de1b97
+reports/data_dictionary.csv,Reports,CSV table,generated report,14828,dd2e676cc18a34447197ca2efbb0487100ef7c8f6c3f23d691ed8044f72c857e,,dd2e676cc18a
+reports/data_dictionary.md,Reports,Markdown document,generated report,36729,593341dd125fa1577b1652323dcb69342d08319383c47566669f10e0276b4608,,593341dd125f
+reports/data_quality_report.md,Reports,Markdown document,generated report,9533,b9b2732d7fda80ff1d7543bf9ab87b2df1ad29c2e8589560192440e51a057770,,b9b2732d7fda
+reports/folder_audit.md,Reports,Markdown document,generated report,4980,db598d25bae85273527a2c870a9ff3fb6a552ef6838379fae42aa4f1d4b7e98b,,db598d25bae8
+reports/handoff.md,Reports,Markdown document,generated report,7613,35c1487b974df0214da5d88db35366cea533a92529be6057b5c04996fed84c88,,35c1487b974d
+reports/implementation_report.md,Reports,Markdown document,generated report,8262,8904df7256bc866398c4c1dc18839538c8b0e7cbf9932d186a9a5709a9c3188b,,8904df7256bc
+reports/log_analysis.md,Reports,Markdown document,generated report,9832,6f8b6988bcc74cbc85cc45607f4d3396269b7d5fb0235ee2f2057bf9107916a5,,6f8b6988bcc7
+reports/metric_catalog.csv,Reports,CSV table,generated report,26519,faeb2015087c1ca7dc4256b565568608414f647f33ec85b3565b436aaa3af10a,,faeb2015087c
+reports/metric_catalog.md,Reports,Markdown document,generated report,43012,7da842525bb5691db245671236f4ee746bc84bb7465ab1a16541efe5b5cd9615,,7da842525bb5
+reports/phase2_feature_implementation.md,Reports,Markdown document,generated report,17652,7d40cf0eb5cbb2b209597658e10a06533fe95b6c34684c34a6851bf1c45e08ca,,7d40cf0eb5cb
+reports/phase2_handoff.md,Reports,Markdown document,generated report,12415,7f6d16212b6e3c591d50c1adb379b39d6efecd037b309b59cfcfdabf06ea6f9c,,7f6d16212b6e
+reports/phase2_implementation_audit.md,Reports,Markdown document,generated report,14995,473ed74ef0a910175af56e36fe66dd27c97b6857788e7b990afe816fa8cb4463,,473ed74ef0a9
+reports/phase2_research_and_design_decisions.md,Reports,Markdown document,generated report,19133,ecaa4cca42ee8b43b2e3d11dabf248ad870bad14c007ea26dd653cd03531253f,,ecaa4cca42ee
+reports/phase2_validation_report.md,Reports,Markdown document,generated report,6284,b549faa68c39b247a073a5f9db1f864bb8e5f9112897a504de2036bbc23b05a5,,b549faa68c39
+reports/phase2_visual_review.md,Reports,Markdown document,generated report,11715,9b0e18550e97fc83a56aa653c3085a5e6808dc26177ad5afe10b3c0306b3d837,,9b0e18550e97
+reports/project_catalog.md,Reports,Markdown document,generated report,29070,9c50fec8651450849038a66e1f3f35437ed3ee9c22109a9cdcceff492784059a,,9c50fec86514
+reports/relationships.md,Reports,Markdown document,generated report,10250,f3e95fa239ce11d171b4998650549c542f2cacd25ce50a9c41e36b800e310cf1,,f3e95fa239ce
+reports/validation_report.md,Reports,Markdown document,generated report,19160,1aea0ea2a729a31ec2bd082b21521c1e56c62e281ef43fe46105db197f26e3f6,,1aea0ea2a729
+scripts/dump_markdown.py,Utility scripts,Python source,tooling,462,d8ab46fca9a220d213e12bd0227e5a0c8eb363c7fc304f3bac4739f7c51b7681,,d8ab46fca9a2
+scripts/dump_notebook.py,Utility scripts,Python source,tooling,869,11bc23570fd841ff5d1408017985d36be58e797ba13775072c7664a4b5a7eceb,,11bc23570fd8
+scripts/inspect_notebook.py,Utility scripts,Python source,tooling,2025,f2cda33c1e76a90461b4e236a4c884f41838c55e70414b9982800282a3333cfb,,f2cda33c1e76
+scripts/profile_tables.py,Utility scripts,Python source,tooling,997,6a078d22aecbfb223110e42945c98e0ef484a9c2e63b6409ceeb2e9acfca7101,,6a078d22aecb
+tables/figure_index.csv,Source tables,CSV table,primary source artifact,11386,3253ab34748d1c1d58a8470212328a68e80a12c72b0a2b8c11bf9576657f92ff,,3253ab34748d
+tables/findings_ledger.csv,Source tables,CSV table,primary source artifact,24141,4e2474ad106e50ce7c60436a504df1912ae5f6dd08ce085ead9907dae9bd8de3,,4e2474ad106e
+tables/phase0_class_balance.csv,Source tables,CSV table,primary source artifact,153,215d645854fbaee06761d1f788c1cfb6e16c2e4b6302c87559e4d229e879df39,,215d645854fb
+tables/phase0_contracts.csv,Source tables,CSV table,primary source artifact,464,8686e06a36cc6ff4eefeb7839aab2702c1942984fb9cf834bb85157130f32077,,8686e06a36cc
+tables/phase0_generator_forensics.csv,Source tables,CSV table,primary source artifact,249,4c27318aee563e16bb3c160798b0f006a5fb5f4fd02232bcc19eaf3eb5571f14,,4c27318aee56
+tables/phase0_schema.csv,Source tables,CSV table,primary source artifact,4260,7adc10a962ef3bcb01d1c819c318c29c367aaf1ec4773f35ba10f812356c1b84,,7adc10a962ef
+tables/phase1_amt_quantiles.csv,Source tables,CSV table,primary source artifact,277,fc943c866eb02e05e0e102997a7b791bfd317218e4ec5a78cfbc8bbb74939187,,fc943c866eb0
+tables/phase1_category_table.csv,Source tables,CSV table,primary source artifact,634,c7cc2f53e4bf20a5d1bb03f258271c03b4af51895047dbf51cfc8ccbacf097f5,,c7cc2f53e4bf
+tables/phase1_covid_window.csv,Source tables,CSV table,primary source artifact,158,227852d70f2f3d774d4d63a3426b694e5e9f1ba27ac2d52902b7d860a041c288,,227852d70f2f
+tables/phase1_merchant_table.csv,Source tables,CSV table,primary source artifact,32643,273f06c04815d281cc59c752b6816f9fde5de1c4ecc821493f0e3dc9aaad2af6,,273f06c04815
+tables/phase2_card_profiles.csv,Source tables,CSV table,primary source artifact,93112,f89b6f799e366a017aaf7f0ec435922e31ac743fc00192e86b924145eb587adb,,f89b6f799e36
+tables/phase2_city_table.csv,Source tables,CSV table,primary source artifact,49718,969c464179e3ce9d4d08e17cc06ade2c5ae1f96a4a3bda682b079ebb2e5e0cd4,,969c464179e3
+tables/phase2_dist_rate_table.csv,Source tables,CSV table,primary source artifact,245,0acb4197e793a59ef81fb3e466001334d80e573d4ed73717cad3157f9106ff7d,,0acb4197e793
+tables/phase2_mi_table.csv,Source tables,CSV table,primary source artifact,442,18ea09efb2911d2c392188ef37ee7f94a71cd99d7035d583d3758d39599d1c46,,18ea09efb291
+tables/phase2_money_category.csv,Source tables,CSV table,primary source artifact,744,8f0a7996a2ec0c4d80317e6a9f4836479f0280d6e18b56b5f381ba1a4ab42795,,8f0a7996a2ec
+tables/phase2_zip3_table.csv,Source tables,CSV table,primary source artifact,90266,19f1378741097c20357ca2026bcc99a6953db1fa4a3c56672deebd1984f2a554,,19f137874109
+tables/phase3_weekly_rate_table.csv,Source tables,CSV table,primary source artifact,4344,52c2cd033de1793aa35d452748916101adfea294d49467945a58dc68b78aac29,,52c2cd033de1
+tables/phase4_anomaly_summary.csv,Source tables,CSV table,primary source artifact,231,42d5cf8f3dafa09ae713191407dee7060b1593843dafbf48f731ca5f96014162,,42d5cf8f3daf
+tables/phase4_dbscan_clusters.csv,Source tables,CSV table,primary source artifact,86,c3a6913fbf535226efb7751886bca441902ace6ba91df2d59a3e5f95e11b49b8,,c3a6913fbf53
+tables/phase4_kmeans_cluster_rate.csv,Source tables,CSV table,primary source artifact,127,23b1f8d98b128df93bf5c84c91ef43340a87c37568c6decd32ce8fe5613fba1d,,23b1f8d98b12
+tables/phase4_separability_table.csv,Source tables,CSV table,primary source artifact,242,ba22633dcc8e09b5171dbacec6ead84106fb04841879e8df154d1f7eec807427,,ba22633dcc8e
+tables/phase5_category_posthoc_pairs.csv,Source tables,CSV table,primary source artifact,7696,c27a4850e17507f026909c79f797967f5ac8079a8c782d5276ee23bcdfeae6c2,,c27a4850e175
+tables/phase5_category_rates.csv,Source tables,CSV table,primary source artifact,2316,6a33d19399d3dafd636f41054fd5d377389a0d4b11f1aa0d34b49c3accc4ebba,,6a33d19399d3
+tables/phase5_chi2_cramers.csv,Source tables,CSV table,primary source artifact,275,5d56b846f8a01d0f00de2f30438adaa5e22f597b2ef885a92dde30c9a903f5c5,,5d56b846f8a0
+tables/phase5_cluster_robust_logit.csv,Source tables,CSV table,primary source artifact,788,ad567ecaf428a8fbd4ea5d9f5f7eed5c7a2b02544bd57929794e68abbf05610f,,ad567ecaf428
+tables/phase5_mw_effect_sizes.csv,Source tables,CSV table,primary source artifact,1384,2ad0f7c2b81447189d98a8c691f3a9fbacd96a04f912676486fddaeccc921376,,2ad0f7c2b814
+tables/phase7_hazard_table.csv,Source tables,CSV table,primary source artifact,1751,3ad2a30685f11603e8766c1fb4c90139f17957b9b8db7b88a60f7555aec9942d,,3ad2a30685f1
+tables/phase7_high_risk_combo.csv,Source tables,CSV table,primary source artifact,385,7dbc3b2b44422985591eaad8b535f35eefd4fe1a74638bcb632b676b09408ed6,,7dbc3b2b4442
+tables/phase7_hour_encoding_comparison.csv,Source tables,CSV table,primary source artifact,94,bea3936729e8764222e26ad780ffc4d443ee102a4b4b36d616d2e7b2b42d0f70,,bea3936729e8
+tables/phase7_merchant_eb_table.csv,Source tables,CSV table,primary source artifact,75970,9edb7647b5ad49164fa8bdd1cc42738158112f35fb0225d42081ca564cf8fc00,,9edb7647b5ad
+tables/phase7_speed_rate_table.csv,Source tables,CSV table,primary source artifact,207,740d0078ae8f70809601294d20cf6a19c15dbe7cf390acb5f83df1a89f948658,,740d0078ae8f
+tables/phase8_ablation_decomposed.csv,Source tables,CSV table,primary source artifact,565,c80b8ae5a476598164e0f15ed2a269d94d9bcdf2e360e3b29df9b95df0abe3eb,,c80b8ae5a476
+tables/phase8_calibration_temp.csv,Source tables,CSV table,primary source artifact,223,9d61c251390e70a829c1add5a974aa109ba4bc3669173c31dc19963ed0cf4f8e,,9d61c251390e
+tables/phase8_capture_at_k.csv,Source tables,CSV table,primary source artifact,630,a60cbfde0726c457d6a9ed6f9b91a22297c94b61f87b7e1d9f51534ebd36998a,,a60cbfde0726
+tables/phase8_cost_sensitivity.csv,Source tables,CSV table,primary source artifact,491,49a89a072518e864b626692121fb0b0135f2e475e39f7e354552a498239ec649,,49a89a072518
+tables/phase8_ensemble_comparison.csv,Source tables,CSV table,primary source artifact,137,0253d25b61f7442949cb3046bef9b367bec52134f43f50bd2f8d51eaaf9bc45b,,0253d25b61f7
+tables/phase8_learning_curve.csv,Source tables,CSV table,primary source artifact,286,6b72f787cf893912d657941a99df9c09794cdf69ecc47a5d79881abe9f8cbc24,,6b72f787cf89
+tables/phase8_leave_card_out.csv,Source tables,CSV table,primary source artifact,270,243aab4b860387e7934a2c910bd73c4f7a0c887219e9ef633c04f93182773c33,,243aab4b8603
+tables/phase8_monotonic_comparison.csv,Source tables,CSV table,primary source artifact,144,81246d871bdd9f96a95f4235d0818198d46f9f4043b1ee8a6d1bc0b5b71f2678,,81246d871bdd
+tables/phase8_psi.csv,Source tables,CSV table,primary source artifact,2182,7de51799e97511392915b1e315c309550e3e5a2e0033ffac0d6fe76c683082e8,,7de51799e975
+tables/phase8_segment_errors.csv,Source tables,CSV table,primary source artifact,3315,2314762a3340e3adca5793ebf99c550d3732ba1778a63a8df045ad972d9cbc3b,,2314762a3340
+tables/phase8_threshold_table.csv,Source tables,CSV table,primary source artifact,474,49cc434e8da32c32573e0032f76bf96b53e83328745c3362b5b106d869eaaf27,,49cc434e8da3
+tables/phase8_time_decay_comparison.csv,Source tables,CSV table,primary source artifact,139,1f362e6c6a04c65b2968940958fa90f58758d80bb9e7c8565700d38c89623ffa,,1f362e6c6a04
+tables/phase8_walkforward_cv.csv,Source tables,CSV table,primary source artifact,640,739bc933efcaac4d6921c807c8c5c0e383f0f6dc309537489708bd3e60477d98,,739bc933efca
+tables/phase8_wf_vs_test.csv,Source tables,CSV table,primary source artifact,207,85ca6e4c2dff8f966601eecbf208628d94b8c5de13022968d5a51d422b4b74a6,,85ca6e4c2dff
+tables/reproducibility_checklist.csv,Source tables,CSV table,primary source artifact,1303,409fd82831b03b82ee797788446e68265da17519c1cd8631a4995d2156cf5d72,,409fd82831b0
+tests/capture_phase2_audit.py,Tests & evidence,Python source,test or test evidence,3476,0898304f9e29e27105d0724e1ebd9e2a0cf38ed7830b8145b299523488ac257a,,0898304f9e29
+tests/capture_phase2_shots.py,Tests & evidence,Python source,test or test evidence,4258,93ffb25f4cca10d7de368ea4481f3917129a92ceeb1bcfc78a6130be9bd16045,,93ffb25f4cca
+tests/measure_phase2_audit.py,Tests & evidence,Python source,test or test evidence,1890,06efdac2c9aa66c56411968cc00e4de38901459c1061099aacd9461368d588c2,,06efdac2c9aa
+tests/phase2_audit_shots/audit.json,Tests & evidence,JSON data,test or test evidence,9748,fbaa5bec8ec1ecfebb6ba1561ab11ab16a746ccf94afbfaeda356a2b6d4596fe,,fbaa5bec8ec1
+tests/phase2_audit_shots/desktop-advanced.png,Tests & evidence,PNG figure,test or test evidence,592644,c038aff1a0cb249ab176252bdb26996cb00a43483416c6b71bc8050fbe7efa56,,c038aff1a0cb
+tests/phase2_audit_shots/desktop-artifacts.png,Tests & evidence,PNG figure,test or test evidence,1164011,a49799a0e2365f50c27e3e8b6e5e8ae64ba4bed80a6d96c42218edfefd89cc16,,a49799a0e236
+tests/phase2_audit_shots/desktop-data-audit.png,Tests & evidence,PNG figure,test or test evidence,698527,16e35d46109f090d6b180a1afb5088d81f3f320737e51a5424242696ff4a6d03,,16e35d46109f
+tests/phase2_audit_shots/desktop-distributions.png,Tests & evidence,PNG figure,test or test evidence,685723,726b3c5729055aecc623af932a0c1c2bbb7d211f2d98fbb047cc1835e737a76e,,726b3c572905
+tests/phase2_audit_shots/desktop-economics.png,Tests & evidence,PNG figure,test or test evidence,785983,dcf4d9c3b0d49591d6d20675786119a396c0428dea1f3c116488d3f761be534d,,dcf4d9c3b0d4
+tests/phase2_audit_shots/desktop-features.png,Tests & evidence,PNG figure,test or test evidence,649800,80a28400dc7c7f4a8aa394ba3c4ed5a4976ee4e8453b5781a45d0861be0355a3,,80a28400dc7c
+tests/phase2_audit_shots/desktop-findings.png,Tests & evidence,PNG figure,test or test evidence,1761036,ffb50f2abf3048905fd4d5c63ec02753cd00ce211c0c9b0180fa87d15b9a8615,,ffb50f2abf30
+tests/phase2_audit_shots/desktop-interactions.png,Tests & evidence,PNG figure,test or test evidence,631831,bb450d7a95fe907d42b7b82d07dcf1f6d537e40cdd48779fe2aa560b6202042c,,bb450d7a95fe
+tests/phase2_audit_shots/desktop-model.png,Tests & evidence,PNG figure,test or test evidence,861787,d615d2b12b267bd81b2057ee674870603796322af95d8196bc77aefde63933fa,,d615d2b12b26
+tests/phase2_audit_shots/desktop-overview.png,Tests & evidence,PNG figure,test or test evidence,900026,57ed39d6aa78f24da8b4fd140813897e2d39566d68c877d0c11f007632b875b5,,57ed39d6aa78
+tests/phase2_audit_shots/desktop-statistics.png,Tests & evidence,PNG figure,test or test evidence,630933,31260dfb84caa808b14e8b90a3aeb360e688f5c96a174cb396fdc33749d55500,,31260dfb84ca
+tests/phase2_audit_shots/desktop-temporal.png,Tests & evidence,PNG figure,test or test evidence,611878,d1085eec4c176c3abadca2f6b5e3801da33f1d5b7568b51b1165c00269ce7904,,d1085eec4c17
+tests/phase2_audit_shots/mobile-advanced.png,Tests & evidence,PNG figure,test or test evidence,326671,b31e81f3e54d72aa839f17c17028fb5926a1b4a5b69802c58aa0372bf3c6612a,,b31e81f3e54d
+tests/phase2_audit_shots/mobile-artifacts.png,Tests & evidence,PNG figure,test or test evidence,440875,a0809cb58a0c90f9cda791638620fa331b48268bf5f518e48405ae60de7dee95,,a0809cb58a0c
+tests/phase2_audit_shots/mobile-data-audit.png,Tests & evidence,PNG figure,test or test evidence,471639,bb68631223fed7a93b4c289567f5d4e96923a0b4c450bfee383ec23fa82db6f1,,bb68631223fe
+tests/phase2_audit_shots/mobile-distributions.png,Tests & evidence,PNG figure,test or test evidence,373164,6e99eaa5ea6fc1ab448a7f665fd1fc13e79e6ceec805ea13fb3f230b90e6a0ac,,6e99eaa5ea6f
+tests/phase2_audit_shots/mobile-economics.png,Tests & evidence,PNG figure,test or test evidence,596017,82a711a5bdb526b065e8a82c8c46868c8ada78d6a5d9c3043400f691da1fc90f,,82a711a5bdb5
+tests/phase2_audit_shots/mobile-features.png,Tests & evidence,PNG figure,test or test evidence,401679,6261df749d889d7b24fe54f117ee0d6bfbd9aff767e317aee4c67e22d898f3d0,,6261df749d88
+tests/phase2_audit_shots/mobile-findings.png,Tests & evidence,PNG figure,test or test evidence,1578716,1f94ed373f175b8210fb9758eedac283725ee8021f350333a3732817229101dc,,1f94ed373f17
+tests/phase2_audit_shots/mobile-interactions.png,Tests & evidence,PNG figure,test or test evidence,361242,ca3a21a97312447f19452039893cb46f1a162149f8b1ff3c97a58025a66f7099,,ca3a21a97312
+tests/phase2_audit_shots/mobile-model.png,Tests & evidence,PNG figure,test or test evidence,677853,c52fdf947e470a93ccac291e24f6b74530f6e81357c80324999f25a339782ecb,,c52fdf947e47
+tests/phase2_audit_shots/mobile-overview.png,Tests & evidence,PNG figure,test or test evidence,622762,855683faf81a63bda7bba2f7c30fd292a45e2af08d47931d900e038e80f4dbfa,,855683faf81a
+tests/phase2_audit_shots/mobile-statistics.png,Tests & evidence,PNG figure,test or test evidence,403740,874c2b544824730f4b123eeb4d8bfb38c26bdaf1e2c98e45c1fbe58c8649a26b,,874c2b544824
+tests/phase2_audit_shots/mobile-temporal.png,Tests & evidence,PNG figure,test or test evidence,340478,7ef00eaf72db0b9dbc30743eae1b393d1a9a4d23ef6b5016f5f862c8dcc9d688,,7ef00eaf72db
+tests/phase2_audit_shots/performance.json,Tests & evidence,JSON data,test or test evidence,1457,e8bc5dbdbee8643f3833275ce6b10b2b8a72171289de677e3cf7baa029228624,,e8bc5dbdbee8
+tests/phase2_shots/desktop-advanced.png,Tests & evidence,PNG figure,test or test evidence,773857,1a38d0a67fa234921d9ead319380dc6798b32a34b6f7cabe90caca32f3d54600,,1a38d0a67fa2
+tests/phase2_shots/desktop-artifacts.png,Tests & evidence,PNG figure,test or test evidence,1440121,e9f5484ffcba36829d4e1d5accd3f3cd5ec0961eca9573285882569ce66d7ffc,,e9f5484ffcba
+tests/phase2_shots/desktop-data-audit.png,Tests & evidence,PNG figure,test or test evidence,869734,c7123d678eefdcf196f1d1c4dd200278fffc99146d86d5b228aec4baa118c9de,,c7123d678eef
+tests/phase2_shots/desktop-distributions.png,Tests & evidence,PNG figure,test or test evidence,860684,83f47de53b8f45332ccad0611d1590b988997300e614c5d9e83ff0a044fbe79b,,83f47de53b8f
+tests/phase2_shots/desktop-economics.png,Tests & evidence,PNG figure,test or test evidence,1007207,66a06da1d736f16b474fe32d2074ff85d3a55cee6dc170d47b389223075ebaa9,,66a06da1d736
+tests/phase2_shots/desktop-experiments.png,Tests & evidence,PNG figure,test or test evidence,692049,b9632d58dd85b358a8893d06796aa82cd70727b327368c7ea5f3153a659b35ea,,b9632d58dd85
+tests/phase2_shots/desktop-explore.png,Tests & evidence,PNG figure,test or test evidence,453453,3a78ab87ce9f84d02d65dd0f16d83a2c8e96d9e4b076a9bc1161baa25fab71b2,,3a78ab87ce9f
+tests/phase2_shots/desktop-features.png,Tests & evidence,PNG figure,test or test evidence,839024,359800ac879107dfd3478cc8e1964cad80a2df780d63a8dbd3bb479d67c0adef,,359800ac8791
+tests/phase2_shots/desktop-findings.png,Tests & evidence,PNG figure,test or test evidence,1865871,0c46dad1dcee2b05d3ee98d7fde2038e62f2cafa932e519e37c019e613840857,,0c46dad1dcee
+tests/phase2_shots/desktop-insights.png,Tests & evidence,PNG figure,test or test evidence,1329217,69bd42fc7385e420d1dad886ace6da62c02e7243321cd4d083f9e03c9960ed37,,69bd42fc7385
+tests/phase2_shots/desktop-interactions.png,Tests & evidence,PNG figure,test or test evidence,831488,fe42058da6b2c62708e90f517d3196b7fd7fba18d99a6c20965e592882281467,,fe42058da6b2
+tests/phase2_shots/desktop-lineage.png,Tests & evidence,PNG figure,test or test evidence,531219,60d56cd864807fcf56cc207581598c8d2220e0f53f214983e8b9c9e46b034dfc,,60d56cd86480
+tests/phase2_shots/desktop-logs.png,Tests & evidence,PNG figure,test or test evidence,711172,5a0f01ffc9c89c613e08ab30a0c988226569465864ee9883d0c3084f930f440e,,5a0f01ffc9c8
+tests/phase2_shots/desktop-metrics.png,Tests & evidence,PNG figure,test or test evidence,842842,8fe250718ba7800385fdab0afa10f32d3181366eb7d7dcf0664975f2b08cdc83,,8fe250718ba7
+tests/phase2_shots/desktop-model.png,Tests & evidence,PNG figure,test or test evidence,1126364,27cab8502554f77f7fe3f79c4f4c1d1a73417590dd47b948447d1b88af0515fc,,27cab8502554
+tests/phase2_shots/desktop-overview.png,Tests & evidence,PNG figure,test or test evidence,1031874,f7003e94c8a73bf936f410d0bb6e9c29ded51faa6ab7d326039f3c6ca1bd714b,,f7003e94c8a7
+tests/phase2_shots/desktop-program.png,Tests & evidence,PNG figure,test or test evidence,1187547,abfead6482611b81e5805554b0d7a9fbfa98bfda46d9ad4f87dc4db76abfb9b8,,abfead648261
+tests/phase2_shots/desktop-statistics.png,Tests & evidence,PNG figure,test or test evidence,822752,7ac93f27b6ca466f38ba61559ed8241ab070fc191211bf685752dfc79d136c6f,,7ac93f27b6ca
+tests/phase2_shots/desktop-temporal.png,Tests & evidence,PNG figure,test or test evidence,782325,f9b1c51392ceb3789e87e3a7f476573933ef914a51f1a09e555ce443cd2be7cf,,f9b1c51392ce
+tests/phase2_shots/laptop-advanced.png,Tests & evidence,PNG figure,test or test evidence,722197,b3f78408e62fae5ea30522d7eacdeb9b8ddf1843e9ee9ca18b204072ccadabf1,,b3f78408e62f
+tests/phase2_shots/laptop-artifacts.png,Tests & evidence,PNG figure,test or test evidence,1198996,d9f74eddb5d03d171f8bad161215bbad256454c62e774f244c0b8513a57de625,,d9f74eddb5d0
+tests/phase2_shots/laptop-data-audit.png,Tests & evidence,PNG figure,test or test evidence,844770,061214797cf88ac3064f06bf3fed7fd962afe8b64c83a45f51145836daf7d79a,,061214797cf8
+tests/phase2_shots/laptop-distributions.png,Tests & evidence,PNG figure,test or test evidence,809873,849c991e8bcabe218659dcf4e6d1ca81a5f9be095ac47b00fb4f9be91c71bda2,,849c991e8bca
+tests/phase2_shots/laptop-economics.png,Tests & evidence,PNG figure,test or test evidence,995519,5882a0199f2cf05666bc6ba5beae9d5ec141524dc0a6582684abed6fe98338b2,,5882a0199f2c
+tests/phase2_shots/laptop-experiments.png,Tests & evidence,PNG figure,test or test evidence,676808,3e0369fe7787018520ed8fdd177174e71e1b9487e9c772060c14a8704fddeabd,,3e0369fe7787
+tests/phase2_shots/laptop-explore.png,Tests & evidence,PNG figure,test or test evidence,418647,13aed85320e65b45c144baaa303937cb76ba64f1c830fe464dcb3556da8b5e27,,13aed85320e6
+tests/phase2_shots/laptop-features.png,Tests & evidence,PNG figure,test or test evidence,797225,75f552c881cc82456c62bef1f6e75b551ac9c8287f4eab5b92e0aa5c84ae5bbc,,75f552c881cc
+tests/phase2_shots/laptop-findings.png,Tests & evidence,PNG figure,test or test evidence,1869951,23a36dc794085e36b6f740e14db7a140716bb121cdde1fbe64fc9b66b5d22ee6,,23a36dc79408
+tests/phase2_shots/laptop-insights.png,Tests & evidence,PNG figure,test or test evidence,1250570,6805a74377633ec96a15054c8b9e3da95ee4ebe89436bb119f11baf3fbe5ec7e,,6805a7437763
+tests/phase2_shots/laptop-interactions.png,Tests & evidence,PNG figure,test or test evidence,780776,b3e1644ce08266fa3d4896319e5a7ac9ebe1eac0495f1e5f2323d23234d5ebdf,,b3e1644ce082
+tests/phase2_shots/laptop-lineage.png,Tests & evidence,PNG figure,test or test evidence,502326,8a012ff13aa8018f3215888edf0632cba5ee332773ea8bd7b21022f4a1feb802,,8a012ff13aa8
+tests/phase2_shots/laptop-logs.png,Tests & evidence,PNG figure,test or test evidence,679858,f130a00b6477a5c87b68025700071f108f6995d5080bab48fddb9835cfe969a1,,f130a00b6477
+tests/phase2_shots/laptop-metrics.png,Tests & evidence,PNG figure,test or test evidence,841657,4bd12dd835339eb544dc1057590b018c6d391093851256ff7f69cd12da262e9d,,4bd12dd83533
+tests/phase2_shots/laptop-model.png,Tests & evidence,PNG figure,test or test evidence,1106921,8ea5a7601b5b4eee076a3d5b818012a1897b579445a576c81b842de7d3a2a555,,8ea5a7601b5b
+tests/phase2_shots/laptop-overview.png,Tests & evidence,PNG figure,test or test evidence,991109,bde0455fedb1cc253bcce7d7bfca60fe20a37299c725ed59af135c56a6024877,,bde0455fedb1
+tests/phase2_shots/laptop-program.png,Tests & evidence,PNG figure,test or test evidence,1196716,c75fe199d5d4a0a3e163be413e5fe3e8175cc30397732268196db83bc3ea4ae2,,c75fe199d5d4
+tests/phase2_shots/laptop-statistics.png,Tests & evidence,PNG figure,test or test evidence,788203,44bd8af60425c1452900915ce3f355f019a44c62670818e02529bc7064a31c92,,44bd8af60425
+tests/phase2_shots/laptop-temporal.png,Tests & evidence,PNG figure,test or test evidence,724992,c069d27c967e4582971bed5cad9e5f639f2f568332872820aae5298a0cd798fc,,c069d27c967e
+tests/phase2_shots/mobile-advanced.png,Tests & evidence,PNG figure,test or test evidence,658605,a90fb08cf898bfc9e051b05c5649281ab6d943a1f5f2a7b72b1d99522cc1c577,,a90fb08cf898
+tests/phase2_shots/mobile-artifacts.png,Tests & evidence,PNG figure,test or test evidence,729359,05718baf55b02e4298b0a0f04aadbc6599ea44661324f05fd7900101193e2aca,,05718baf55b0
+tests/phase2_shots/mobile-data-audit.png,Tests & evidence,PNG figure,test or test evidence,652607,1db8dc6eb1ccb62fedd70699c0716e21b81b9407637b9ff8fe598274932f0404,,1db8dc6eb1cc
+tests/phase2_shots/mobile-distributions.png,Tests & evidence,PNG figure,test or test evidence,576617,0c68bae58a14438a5820dec00296eb6206a27aa2fc3fb8fc3860a701d025de98,,0c68bae58a14
+tests/phase2_shots/mobile-economics.png,Tests & evidence,PNG figure,test or test evidence,749926,2c7931ea781101338016d70deefb1cee18177de5dd60f6a1e538b1313fa2ae6d,,2c7931ea7811
+tests/phase2_shots/mobile-experiments.png,Tests & evidence,PNG figure,test or test evidence,383113,bfb88c1c77cb02b834f236a1c63079d3f233cdd3094b5aa25c53c8cfead5bef4,,bfb88c1c77cb
+tests/phase2_shots/mobile-explore.png,Tests & evidence,PNG figure,test or test evidence,176775,253737ac11d7b6a3e546833821013e9e592aad627b7f3edbdfc1a602ad54322e,,253737ac11d7
+tests/phase2_shots/mobile-features.png,Tests & evidence,PNG figure,test or test evidence,613637,bf69a2588ea289f40c256ca6752337b19b2d0d246b7ea441d1c3687e0bc2f0c2,,bf69a2588ea2
+tests/phase2_shots/mobile-findings.png,Tests & evidence,PNG figure,test or test evidence,1659546,efddcc4966bb1f4eeec5fbdeff8cfd07d6f3cc5a1d9dfa2a77df30de87005835,,efddcc4966bb
+tests/phase2_shots/mobile-insights.png,Tests & evidence,PNG figure,test or test evidence,1152794,e5e730b4881726b7f70e1ca14b9637e39758436b5f48097ba46f796d6f22216e,,e5e730b48817
+tests/phase2_shots/mobile-interactions.png,Tests & evidence,PNG figure,test or test evidence,568271,1632b9953eefcc0c0255cece08d46ddd5a112fcef7f8c6aaaed5715fbdf95b8d,,1632b9953eef
+tests/phase2_shots/mobile-lineage.png,Tests & evidence,PNG figure,test or test evidence,268703,3944bf811b2abaa6aedf65d0208b8393602265bced1170c180a14972786cc980,,3944bf811b2a
+tests/phase2_shots/mobile-logs.png,Tests & evidence,PNG figure,test or test evidence,416509,ecef663f1fd86363cf7c92334fc6121a699d5c7e5d92521bb8ac3b421403b196,,ecef663f1fd8
+tests/phase2_shots/mobile-metrics.png,Tests & evidence,PNG figure,test or test evidence,357691,798cd7d7066aceb84a94c0622957658a86550aab4bfb74b6e5e6a6bb30e369e1,,798cd7d7066a
+tests/phase2_shots/mobile-model.png,Tests & evidence,PNG figure,test or test evidence,940488,3595fd4e6f6e940d20b28bc60a7693376396a226972603cd7d22c5cbba55730d,,3595fd4e6f6e
+tests/phase2_shots/mobile-overview.png,Tests & evidence,PNG figure,test or test evidence,801383,a68af7be925cbeeeabcf0523355c2cfb438c591edbb0cc937dde39a568c3e81d,,a68af7be925c
+tests/phase2_shots/mobile-program.png,Tests & evidence,PNG figure,test or test evidence,984112,c32b5067e158b2040ca8f39018ca36abb5c2070e7ee7d62ebdba8013003e9bf0,,c32b5067e158
+tests/phase2_shots/mobile-statistics.png,Tests & evidence,PNG figure,test or test evidence,590893,8963e581d670d8f2d26492c499e34f3c5ee255717fd8bd7dbd9e0baa55d55258,,8963e581d670
+tests/phase2_shots/mobile-temporal.png,Tests & evidence,PNG figure,test or test evidence,580020,b8c6dda6911bf132767ac04a769514fcfdc6c07bd420b1e6c86b8a62bb94e8c1,,b8c6dda6911b
+tests/phase2_shots/report.json,Tests & evidence,JSON data,test or test evidence,29157,7d32816bfcf7227f77844e6389b00f525eab098837605c33c8f8c83f9a61cec9,,7d32816bfcf7
+tests/phase2_shots/tablet-advanced.png,Tests & evidence,PNG figure,test or test evidence,583770,c9aed89b22a2d2e7ccae05520a58d3016c2dadaa8c96599d84b3eafa30f1bd71,,c9aed89b22a2
+tests/phase2_shots/tablet-artifacts.png,Tests & evidence,PNG figure,test or test evidence,1085495,521f820a00f125a738c09ed2cb828a39578b879e28a946bfc88e40cf95363b81,,521f820a00f1
+tests/phase2_shots/tablet-data-audit.png,Tests & evidence,PNG figure,test or test evidence,669420,55c422cfdfcdb1bd3164f8e67a63803ae9245f05a25ac1afa043fb83f72a7d85,,55c422cfdfcd
+tests/phase2_shots/tablet-distributions.png,Tests & evidence,PNG figure,test or test evidence,591345,896dd9e9b4177d9aa01457016e2fe74e9df8e2f981585700beceae94b77784a4,,896dd9e9b417
+tests/phase2_shots/tablet-economics.png,Tests & evidence,PNG figure,test or test evidence,791891,658c85e0c553dbf8fdfadfbc00d1b51dd2048f17d9f38439708a3f44266c8e78,,658c85e0c553
+tests/phase2_shots/tablet-experiments.png,Tests & evidence,PNG figure,test or test evidence,458911,92d5a7be8adb0669add98ec1afa4b875931fb5d39facfeaa41f1a9b8532593ce,,92d5a7be8adb
+tests/phase2_shots/tablet-explore.png,Tests & evidence,PNG figure,test or test evidence,191361,e3f25cdc9189b297eb22431e56a68a2a5744d1fcf24ac47ad0cac0d4ec06590c,,e3f25cdc9189
+tests/phase2_shots/tablet-features.png,Tests & evidence,PNG figure,test or test evidence,614565,1c03aa37e6d7371ee0d0398f62ec783a804fe94f6e7101660a5dfc05d6d7be18,,1c03aa37e6d7
+tests/phase2_shots/tablet-findings.png,Tests & evidence,PNG figure,test or test evidence,1691154,cca7e8a702f5604d618e7ca80ae77a33b56a28d0e38f1623d5834f4edf0b0cf0,,cca7e8a702f5
+tests/phase2_shots/tablet-insights.png,Tests & evidence,PNG figure,test or test evidence,1095539,611f5c43c6ed18e791fcec9dba977b7ddc556146df65ec925fdb020be90aeeca,,611f5c43c6ed
+tests/phase2_shots/tablet-interactions.png,Tests & evidence,PNG figure,test or test evidence,580025,a12ff59538f9c1325c894e1044056123958acee2f31db2eb264a0cd7aeb6bf26,,a12ff59538f9
+tests/phase2_shots/tablet-lineage.png,Tests & evidence,PNG figure,test or test evidence,286553,e6178eb1bcc066ab3a5a16c24c6bc0e34a2772817632fd17de8a2cc3c19bf9bb,,e6178eb1bcc0
+tests/phase2_shots/tablet-logs.png,Tests & evidence,PNG figure,test or test evidence,458586,1a657d99d1b0ab30cc2bff819a7c91f2d629be8f4f2d24fed213289a99578507,,1a657d99d1b0
+tests/phase2_shots/tablet-metrics.png,Tests & evidence,PNG figure,test or test evidence,582036,14381d7d1eeb309b5e1832c0be5ff25df81a64c3b25a09734b00eda9106589c0,,14381d7d1eeb
+tests/phase2_shots/tablet-model.png,Tests & evidence,PNG figure,test or test evidence,927346,379d53ea98b78aa008879360905d6b624e6f708686b9c14917f8c845e5e7a506,,379d53ea98b7
+tests/phase2_shots/tablet-overview.png,Tests & evidence,PNG figure,test or test evidence,895906,64ac84156403f9e09cd16ffe181948c883ed8c780c93e79f2fff1096a94fcb5f,,64ac84156403
+tests/phase2_shots/tablet-program.png,Tests & evidence,PNG figure,test or test evidence,1001344,420c1845551ede9269720a275ce3c92b646e23e620371cd175ea6aff4b8a9af1,,420c1845551e
+tests/phase2_shots/tablet-statistics.png,Tests & evidence,PNG figure,test or test evidence,600694,351309c16ddaa7c5274c9c836353f50740983ab13bc74e311aadc400dc0386f0,,351309c16dda
+tests/phase2_shots/tablet-temporal.png,Tests & evidence,PNG figure,test or test evidence,568523,b715d29f3dda0269ecbeaa581bd4adac6f36c84c888d09d1b277c6ffcceed05e,,b715d29f3dda
+tests/phase2_validation_results.json,Tests & evidence,JSON data,test or test evidence,30730,e01866adc9908cd1593c2f87d918fac598cf6c2956e1eee34f302e786a89f9ad,,e01866adc990
+tests/ui_check/desktop-artifacts.png,Tests & evidence,PNG figure,test or test evidence,1164016,7b90661f4c5cb5728ecf193c34cd43c6b48f8cb34ea4d10c979947e2b0c1759f,,7b90661f4c5c
+tests/ui_check/desktop-distributions.png,Tests & evidence,PNG figure,test or test evidence,685645,458cb656481088ebdc059ae0636cd9fc888aca4330322e5153938ff53e140ad2,,458cb6564810
+tests/ui_check/desktop-findings.png,Tests & evidence,PNG figure,test or test evidence,1761039,af7bb77fd21c3d210715584ccffab003aeb4f5c46404dcc75218dde9bda5d477,,af7bb77fd21c
+tests/ui_check/desktop-model.png,Tests & evidence,PNG figure,test or test evidence,861975,db3c752e55ae9c871a12baa2d76a9ce8b90e22cc9b10ae2a4ea7716cfe764331,,db3c752e55ae
+tests/ui_check/desktop-overview.png,Tests & evidence,PNG figure,test or test evidence,899884,c3cb171b7762ee16e32709e1dfe690274dc7a68197cb39106ef7e599ee5ecc00,,c3cb171b7762
+tests/ui_check/mobile-artifacts.png,Tests & evidence,PNG figure,test or test evidence,440257,65dfb162e30721e4a8bb54ad7072480a99aefce626f00dca851eaeb55b930adb,,65dfb162e307
+tests/ui_check/mobile-distributions.png,Tests & evidence,PNG figure,test or test evidence,372993,b113e6b1472aa807e3d4e63e1595e5bff9bbad7d9933b771a89d61ad2b4dc2f6,,b113e6b1472a
+tests/ui_check/mobile-findings.png,Tests & evidence,PNG figure,test or test evidence,1578716,1f94ed373f175b8210fb9758eedac283725ee8021f350333a3732817229101dc,tests/phase2_audit_shots/mobile-findings.png,1f94ed373f17
+tests/ui_check/mobile-model.png,Tests & evidence,PNG figure,test or test evidence,677833,91fad3ed14d205d166851cb70a3e951155f532e1f9ba450d0171ecf650f2855b,,91fad3ed14d2
+tests/ui_check/mobile-overview.png,Tests & evidence,PNG figure,test or test evidence,622619,bb30da58fbfa400d7b5de2bacc1218bb17abfe3616550afe6c7fd4442fa6ee4e,,bb30da58fbfa
+tests/ui_check/results.json,Tests & evidence,JSON data,test or test evidence,22108,51aabdf5d30a828d0172437578c3e18edfe8d2204c58ab845a3b15955d40e57c,,51aabdf5d30a
+tests/ui_smoke.py,Tests & evidence,Python source,test or test evidence,4967,07aaf0d5e8ef4dd1666020e7e51ba8aa59666addf9d7e97080cdac1a99153bb0,,07aaf0d5e8ef
+tests/validate_metrics.py,Tests & evidence,Python source,test or test evidence,50175,e53fb1bb68f54205b5386c02a9b7ce30b85ec1a1c0a129cfc465c8d3fd06f0c6,,e53fb1bb68f5
+tests/validate_phase2.py,Tests & evidence,Python source,test or test evidence,36619,e3e4dda79c48a4e1746b6e90bd8a0775cf9d81f7b19219d5d3902f2723af4316,,e3e4dda79c48
+tests/validation_results.json,Tests & evidence,JSON data,test or test evidence,60857,40ca1fcdbc88ab29ad663e85f40a3d64379e3d771321d2113b3a22db236bad18,,40ca1fcdbc88

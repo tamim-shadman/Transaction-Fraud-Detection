@@ -1,0 +1,29 @@
+{
+  "snapshot_id": "snap_20261021_164912_refresh",
+  "label": "Phase 6 Verified Build (Oct 21, 2026)",
+  "trigger": "refresh",
+  "created_at": "2026-10-21T16:49:12.897038+00:00",
+  "pipeline_version": "2.6.0-phase6",
+  "schema_version": "1.0",
+  "source_fingerprint": "6ff3ee965b566f0a4e452e554a989942590351da4ec09483c5ddcdd9e1e776c1",
+  "total_source_files": 185,
+  "total_source_bytes": 25534324,
+  "metrics": {
+    "transactions": 1852394,
+    "fraud_events": 9651,
+    "fraud_rate": 0.00521,
+    "baseline_pr_auc": 0.8642,
+    "optimized_pr_auc": 0.9124,
+    "roc_auc": 0.9942,
+    "catch_at_1pct": 0.8432,
+    "findings_count": 64,
+    "tables_count": 46,
+    "figures_count": 129
+  },
+  "validation_status": "ALL_CONTRACTS_VERIFIED",
+  "provenance": {
+    "dataset_origin": "Sparkov simulator (kartik2112/fraud-detection)",
+    "notebook_cell_count": 66,
+    "artifact_count": 182
+  }
+}

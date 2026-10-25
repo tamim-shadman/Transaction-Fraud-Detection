@@ -1,0 +1,10 @@
+{
+  "fraudTrain.csv": {
+    "sha256_16": "fd7139200dbfcbed",
+    "mb": 351.2
+  },
+  "fraudTest.csv": {
+    "sha256_16": "12d553ab19440c75",
+    "mb": 150.4
+  }
+}

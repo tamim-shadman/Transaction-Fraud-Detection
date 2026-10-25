@@ -1,0 +1,575 @@
+{
+  "generatedAt": "2026-10-21T16:49:12+00:00",
+  "count": 15,
+  "items": [
+    {
+      "id": "INS-001",
+      "scope": "evidence",
+      "phase": null,
+      "rq": null,
+      "priority": 1,
+      "kind": "finding",
+      "title": "The evidence base is graded, and the strong tier carries the argument",
+      "statement": "30 of 64 findings are graded strong; 27 support, 6 are caveats and 1 is weak.",
+      "detail": "There are also 5 independent audit notes and 4 high-severity workspace issues. The ledger is the primary index; grades are researcher-assigned, not externally audited.",
+      "metrics": [
+        {
+          "label": "Strong findings",
+          "value": 30,
+          "format": "integer",
+          "source": "logs/findings_ledger.json"
+        },
+        {
+          "label": "Findings with caveat",
+          "value": 6,
+          "format": "integer",
+          "source": "logs/findings_ledger.json"
+        },
+        {
+          "label": "High-severity issues",
+          "value": 4,
+          "format": "integer",
+          "source": "manifest issues"
+        }
+      ],
+      "link": "/findings?grade=strong",
+      "sourceRefs": [
+        "logs/findings_ledger.json",
+        "reports/validation_report.md"
+      ],
+      "confidence": "verified",
+      "caveat": "Grade definitions are operational and documented on the findings page."
+    },
+    {
+      "id": "INS-002",
+      "scope": "model",
+      "phase": "P7",
+      "rq": "RQ8",
+      "priority": 1,
+      "kind": "risk",
+      "title": "Cross-boundary transfer is the binding model risk",
+      "statement": "The final 27-feature model reaches PR-AUC 0.5575 on the held-out test split, while the same walk-forward design averages 0.9510 in-domain.",
+      "detail": "Across four time-ordered folds, in-domain PR-AUC is 0.9510 ± 0.0152; the same models score 0.4726 ± 0.0761 across the boundary. Mean gap: 0.4785.",
+      "metrics": [
+        {
+          "label": "Test PR-AUC",
+          "value": 0.5574801511963462,
+          "format": "decimal4",
+          "source": "phase8_ablation_decomposed.csv"
+        },
+        {
+          "label": "Walk-forward PR-AUC",
+          "value": 0.9510414270082748,
+          "format": "decimal4",
+          "source": "phase8_wf_vs_test.csv"
+        },
+        {
+          "label": "OOD gap",
+          "value": 0.4784610583856036,
+          "format": "decimal4",
+          "source": "phase8_wf_vs_test.csv"
+        }
+      ],
+      "link": "/model",
+      "sourceRefs": [
+        "tables/phase8_ablation_decomposed.csv",
+        "tables/phase8_wf_vs_test.csv"
+      ],
+      "confidence": "verified",
+      "caveat": "The test split is a temporal holdout, not a random sample from the same distribution."
+    },
+    {
+      "id": "INS-003",
+      "scope": "model",
+      "phase": "P7",
+      "rq": "RQ8",
+      "priority": 1,
+      "kind": "finding",
+      "title": "Card history both drives ranking and explains the transfer failure",
+      "statement": "Removing card_prior_fraud raises test PR-AUC from 0.5575 to 0.8315; the raw-only model reaches 0.8353.",
+      "detail": "The ablation localises the largest change to cumulative card history. The direction is counter-intuitive but internally consistent: the full model's strongest in-domain signal is also the least portable across the time boundary.",
+      "metrics": [
+        {
+          "label": "Full model",
+          "value": 0.5574801511963462,
+          "format": "decimal4",
+          "source": "phase8_ablation_decomposed.csv"
+        },
+        {
+          "label": "Minus card prior",
+          "value": 0.831485399757575,
+          "format": "decimal4",
+          "source": "phase8_ablation_decomposed.csv"
+        },
+        {
+          "label": "Raw only",
+          "value": 0.83533822876129,
+          "format": "decimal4",
+          "source": "phase8_ablation_decomposed.csv"
+        }
+      ],
+      "link": "/model",
+      "sourceRefs": [
+        "tables/phase8_ablation_decomposed.csv"
+      ],
+      "confidence": "verified",
+      "caveat": "Ablation variants are not independent experiments; they share training rows and the same test split."
+    },
+    {
+      "id": "INS-004",
+      "scope": "economics",
+      "phase": "P7",
+      "rq": "RQ8",
+      "priority": 1,
+      "kind": "finding",
+      "title": "A 1% review budget captures about two-thirds of fraud events and dollars",
+      "statement": "Reviewing the top 1.0% of test transactions (5,557 reviews) captures 65.45% of fraud events and 68.70% of fraud dollars.",
+      "detail": "Precision at that operating point is 25.27%; dollar yield is $140.11 per review. A 5% budget raises recall to 86.20% and dollar capture to 93.42% but requires 27,786 reviews.",
+      "metrics": [
+        {
+          "label": "Reviews at 1%",
+          "value": 5557,
+          "format": "integer",
+          "source": "phase8_capture_at_k.csv"
+        },
+        {
+          "label": "Recall at 1%",
+          "value": 0.6545454545454545,
+          "format": "percent2",
+          "source": "phase8_capture_at_k.csv"
+        },
+        {
+          "label": "USD capture at 1%",
+          "value": 0.6870062339692452,
+          "format": "percent2",
+          "source": "phase8_capture_at_k.csv"
+        }
+      ],
+      "link": "/economics",
+      "sourceRefs": [
+        "tables/phase8_capture_at_k.csv"
+      ],
+      "confidence": "verified",
+      "caveat": "Capture is measured on the held-out test split and depends on the stored score ranking."
+    },
+    {
+      "id": "INS-005",
+      "scope": "drift",
+      "phase": "P7",
+      "rq": "RQ8",
+      "priority": 2,
+      "kind": "risk",
+      "title": "Calendar encodings drift hardest across the time boundary",
+      "statement": "7 of 27 features have severe PSI (≥ 0.25); 1 is moderate and 19 are stable.",
+      "detail": "The largest PSI is month_sin at 6.514, followed by n_prior at 5.095. Month and cyclical encodings dominate because the test window covers months unseen in training.",
+      "metrics": [
+        {
+          "label": "Severe PSI",
+          "value": 7,
+          "format": "integer",
+          "source": "phase8_psi.csv"
+        },
+        {
+          "label": "Top PSI",
+          "value": 6.514263998062767,
+          "format": "decimal3",
+          "source": "phase8_psi.csv"
+        },
+        {
+          "label": "Moderate PSI",
+          "value": 1,
+          "format": "integer",
+          "source": "phase8_psi.csv"
+        }
+      ],
+      "link": "/model",
+      "sourceRefs": [
+        "tables/phase8_psi.csv"
+      ],
+      "confidence": "verified",
+      "caveat": "PSI thresholds are conventions, not statistical tests; high PSI identifies distribution shift, not a broken feature."
+    },
+    {
+      "id": "INS-006",
+      "scope": "features",
+      "phase": "P2",
+      "rq": "RQ2",
+      "priority": 2,
+      "kind": "finding",
+      "title": "Amount separates fraud strongly, but the distributions still overlap",
+      "statement": "Fraud amounts have a median of $390.00 versus $47.24 for genuine transactions (Cliff's delta 0.669).",
+      "detail": "KS D is 0.724 with a bootstrap interval of 0.656–0.680 for Cliff's delta. The effect is large, but the overlap means amount alone cannot be a decision rule.",
+      "metrics": [
+        {
+          "label": "Median fraud",
+          "value": 390.0,
+          "format": "money",
+          "source": "phase5_mw_effect_sizes.csv"
+        },
+        {
+          "label": "Cliff's delta",
+          "value": 0.668566,
+          "format": "decimal3",
+          "source": "phase5_mw_effect_sizes.csv"
+        },
+        {
+          "label": "KS D",
+          "value": 0.723803,
+          "format": "decimal3",
+          "source": "phase5_mw_effect_sizes.csv"
+        }
+      ],
+      "link": "/statistics",
+      "sourceRefs": [
+        "tables/phase5_mw_effect_sizes.csv"
+      ],
+      "confidence": "verified",
+      "caveat": "Cliff's delta is a rank effect size; it does not establish a causal amount effect."
+    },
+    {
+      "id": "INS-007",
+      "scope": "data",
+      "phase": "P0",
+      "rq": "RQ1",
+      "priority": 2,
+      "kind": "risk",
+      "title": "The split is temporal, and the fraud rate drops at the boundary",
+      "statement": "Train fraud rate is 0.579%; test is 0.386% — a drop of 0.193 percentage points.",
+      "detail": "Train and test are separated by 48 seconds on 21 June 2020. Any random-split metric would answer a different question and should not be compared to these results.",
+      "metrics": [
+        {
+          "label": "Train rate",
+          "value": 0.0057886517438833,
+          "format": "percent3",
+          "source": "phase0_class_balance.csv"
+        },
+        {
+          "label": "Test rate",
+          "value": 0.0038598644278853,
+          "format": "percent3",
+          "source": "phase0_class_balance.csv"
+        },
+        {
+          "label": "Train rows",
+          "value": 1296675,
+          "format": "integer",
+          "source": "phase0_class_balance.csv"
+        }
+      ],
+      "link": "/data-audit",
+      "sourceRefs": [
+        "tables/phase0_class_balance.csv"
+      ],
+      "confidence": "verified",
+      "caveat": "The boundary is documented; the 48-second gap is not a causal treatment."
+    },
+    {
+      "id": "INS-008",
+      "scope": "data",
+      "phase": "P0",
+      "rq": "RQ1",
+      "priority": 2,
+      "kind": "risk",
+      "title": "Structural missingness is concentrated in history features",
+      "statement": "11 columns are incomplete; the maximum is 10.79% for amt_z_prior and amt_z_prior_log.",
+      "detail": "The missing values are first-transaction history fields. They are not random missingness and were not imputed in the dashboard; any feature using them inherits the boundary.",
+      "metrics": [
+        {
+          "label": "Incomplete columns",
+          "value": 11,
+          "format": "integer",
+          "source": "phase0_schema.csv"
+        },
+        {
+          "label": "Max missing",
+          "value": 0.1079,
+          "format": "percent2",
+          "source": "phase0_schema.csv"
+        },
+        {
+          "label": "Analytical columns",
+          "value": 71,
+          "format": "integer",
+          "source": "phase0_schema.csv"
+        }
+      ],
+      "link": "/data-audit",
+      "sourceRefs": [
+        "tables/phase0_schema.csv"
+      ],
+      "confidence": "verified",
+      "caveat": "A zero in the dashboard means no recorded value, not a measured zero."
+    },
+    {
+      "id": "INS-009",
+      "scope": "evidence",
+      "phase": "P7",
+      "rq": "RQ8",
+      "priority": 2,
+      "kind": "finding",
+      "title": "The learning curve is non-monotonic, so more training rows did not help",
+      "statement": "Test PR-AUC peaks at 0.6266 with 324,168 training rows (fraction 0.25) and falls to 0.5254 on the full training set.",
+      "detail": "The drop is consistent with a distribution shift: additional training-period rows do not make the test-period distribution more similar. It is not evidence that the model is unstable in the usual sense.",
+      "metrics": [
+        {
+          "label": "Peak PR-AUC",
+          "value": 0.6265621319574277,
+          "format": "decimal4",
+          "source": "phase8_learning_curve.csv"
+        },
+        {
+          "label": "Full-data PR-AUC",
+          "value": 0.5253585399509898,
+          "format": "decimal4",
+          "source": "phase8_learning_curve.csv"
+        },
+        {
+          "label": "Peak fraction",
+          "value": 0.25,
+          "format": "decimal2",
+          "source": "phase8_learning_curve.csv"
+        }
+      ],
+      "link": "/model",
+      "sourceRefs": [
+        "tables/phase8_learning_curve.csv"
+      ],
+      "confidence": "verified",
+      "caveat": "The learning curve is single-seed and uses one test split; it is not a learning-theory estimate."
+    },
+    {
+      "id": "INS-010",
+      "scope": "economics",
+      "phase": "P7",
+      "rq": "RQ8",
+      "priority": 2,
+      "kind": "risk",
+      "title": "The cost-minimising threshold is fragile to the false-positive charge",
+      "statement": "Across false-positive costs from $1 to $50, the optimal threshold moves from 9.70e-07 to 4.31e-04 and recall falls from 91.6% to 70.2%.",
+      "detail": "The threshold is not a stable operating constant. It should be re-derived for the review team's actual cost and capacity; the dashboard exposes the input.",
+      "metrics": [
+        {
+          "label": "Recall at $1 FP",
+          "value": 0.9156177156177157,
+          "format": "percent1",
+          "source": "phase8_cost_sensitivity.csv"
+        },
+        {
+          "label": "Recall at $50 FP",
+          "value": 0.7020979020979021,
+          "format": "percent1",
+          "source": "phase8_cost_sensitivity.csv"
+        },
+        {
+          "label": "Threshold ratio",
+          "value": 443.63802505045044,
+          "format": "decimal1",
+          "source": "phase8_cost_sensitivity.csv"
+        }
+      ],
+      "link": "/economics",
+      "sourceRefs": [
+        "tables/phase8_cost_sensitivity.csv"
+      ],
+      "confidence": "verified",
+      "caveat": "Cost-minimisation assumes the stated FP charge and full fraud loss; neither is a production estimate."
+    },
+    {
+      "id": "INS-011",
+      "scope": "model",
+      "phase": "P7",
+      "rq": "RQ8",
+      "priority": 3,
+      "kind": "risk",
+      "title": "Probability calibration is already accurate at this prevalence",
+      "statement": "Temperature scaling fits T = 1.418; expected calibration error changes from 0.000159 to 0.000118.",
+      "detail": "The absolute errors are tiny because the simulator is smooth and the test prevalence is low. Calibration is not the binding problem; ranking and transfer are.",
+      "metrics": [
+        {
+          "label": "Temperature",
+          "value": 1.4177918881006806,
+          "format": "decimal3",
+          "source": "phase8_calibration_temp.csv"
+        },
+        {
+          "label": "ECE before",
+          "value": 0.0001593957680143,
+          "format": "decimal6",
+          "source": "phase8_calibration_temp.csv"
+        },
+        {
+          "label": "ECE after",
+          "value": 0.0001183945305157,
+          "format": "decimal6",
+          "source": "phase8_calibration_temp.csv"
+        }
+      ],
+      "link": "/model",
+      "sourceRefs": [
+        "tables/phase8_calibration_temp.csv"
+      ],
+      "confidence": "verified",
+      "caveat": "ECE is computed on a calibration split; it does not guarantee calibration under a different prevalence."
+    },
+    {
+      "id": "INS-012",
+      "scope": "logs",
+      "phase": null,
+      "rq": null,
+      "priority": 3,
+      "kind": "observation",
+      "title": "The run completed without tracebacks but with seven skipped static exports",
+      "statement": "The notebook reports 0 error events and 0 tracebacks; 7 static PNG exports were skipped.",
+      "detail": "The skipped exports are an operational limitation, not an analytical failure. The interactive HTML artifacts survive and are linked from the gallery. No timestamps are available for these events.",
+      "metrics": [
+        {
+          "label": "Tracebacks",
+          "value": 0,
+          "format": "integer",
+          "source": "notebook execution counts"
+        },
+        {
+          "label": "Skipped exports",
+          "value": 7,
+          "format": "integer",
+          "source": "notebook warnings"
+        },
+        {
+          "label": "Cells with output",
+          "value": 31,
+          "format": "integer",
+          "source": "data/notebook.json"
+        }
+      ],
+      "link": "/logs",
+      "sourceRefs": [
+        "logs/findings.md",
+        "data/notebook.json"
+      ],
+      "confidence": "verified",
+      "caveat": "Warnings are not failures; the run still reports zero tracebacks."
+    },
+    {
+      "id": "INS-013",
+      "scope": "evidence",
+      "phase": "P6",
+      "rq": "RQ8",
+      "priority": 3,
+      "kind": "risk",
+      "title": "One leakage claim is contradicted by its own recorded numbers",
+      "statement": "Audit note AN-01 reports that the naive and causal target-encoding correlations are both 0.048 at the displayed precision, so the notebook does not demonstrate the claimed inflation.",
+      "detail": "The causal encoding remains good practice, but the specific leakage-demo claim should not be cited as evidence that the naive encoding inflated this dataset's signal.",
+      "metrics": [
+        {
+          "label": "Naive correlation",
+          "value": 0.048,
+          "format": "decimal3",
+          "source": "notebook cell 52 output"
+        },
+        {
+          "label": "Causal correlation",
+          "value": 0.048,
+          "format": "decimal3",
+          "source": "notebook cell 52 output"
+        },
+        {
+          "label": "Audit status",
+          "value": "contradicted",
+          "format": "text",
+          "source": "manifest audit note AN-01"
+        }
+      ],
+      "link": "/findings?note=AN-01",
+      "sourceRefs": [
+        "logs/findings_ledger.json",
+        "notebook cell 52"
+      ],
+      "confidence": "verified",
+      "caveat": "Equality at three decimals does not prove the encodings are identical; it only shows the displayed evidence does not support inflation."
+    },
+    {
+      "id": "INS-014",
+      "scope": "evidence",
+      "phase": "P3",
+      "rq": "RQ3",
+      "priority": 3,
+      "kind": "observation",
+      "title": "One finding remains in the weak tier and should not anchor a decision",
+      "statement": "The ledger contains 1 weak finding: F-024 · Structural breaks in daily fraud-rate stable across PELT penalties (2 consensus breaks); holiday proximity: 0 coincidences — breaks are generator-campaign driven, not calendar-driven.",
+      "detail": "The weak grade is not a contradiction; it marks a claim whose evidence is insufficient for confident reuse. The structural-break finding is the only member of this tier.",
+      "metrics": [
+        {
+          "label": "Weak findings",
+          "value": 1,
+          "format": "integer",
+          "source": "logs/findings_ledger.json"
+        },
+        {
+          "label": "Caveat findings",
+          "value": 6,
+          "format": "integer",
+          "source": "logs/findings_ledger.json"
+        },
+        {
+          "label": "Audit notes",
+          "value": 5,
+          "format": "integer",
+          "source": "manifest audit notes"
+        }
+      ],
+      "link": "/findings?grade=weak",
+      "sourceRefs": [
+        "logs/findings_ledger.json"
+      ],
+      "confidence": "bounded",
+      "caveat": "Grade assignment is researcher-assigned; the dashboard does not re-grade the evidence."
+    },
+    {
+      "id": "INS-015",
+      "scope": "temporal",
+      "phase": "P3",
+      "rq": "RQ3",
+      "priority": 3,
+      "kind": "observation",
+      "title": "The final weekly bin is an edge case, not a fraud collapse",
+      "statement": "The final recorded week (2021-01-03) shows 0 fraud events across 18,921 transactions, while the weekly median is around 0.507%.",
+      "detail": "The last bin covers a partial boundary and is retained only because the notebook records it. It should be excluded from trend interpretation rather than read as a real decline.",
+      "metrics": [
+        {
+          "label": "Final week rate",
+          "value": 0.0,
+          "format": "percent2",
+          "source": "phase3_weekly_rate_table.csv"
+        },
+        {
+          "label": "Final week rows",
+          "value": 18921,
+          "format": "integer",
+          "source": "phase3_weekly_rate_table.csv"
+        },
+        {
+          "label": "Median weekly rate",
+          "value": 0.0050716924425521,
+          "format": "percent3",
+          "source": "phase3_weekly_rate_table.csv"
+        }
+      ],
+      "link": "/temporal",
+      "sourceRefs": [
+        "tables/phase3_weekly_rate_table.csv"
+      ],
+      "confidence": "verified",
+      "caveat": "The zero is a recorded count for the final bin; it is not evidence of zero fraud risk going forward."
+    }
+  ],
+  "scopes": [
+    "data",
+    "drift",
+    "economics",
+    "evidence",
+    "features",
+    "logs",
+    "model",
+    "temporal"
+  ]
+}

@@ -1,0 +1,7 @@
+# ==============================================================================
+# Transaction Fraud Detection Analytics Platform — Production Server Dependencies
+# Minimal runtime dependencies for hosting, health checks, and operations
+# ==============================================================================
+python-dotenv>=1.0.0
+pydantic>=2.7.0
+requests>=2.31.0

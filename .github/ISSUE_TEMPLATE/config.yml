@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security Vulnerability Reporting
+    url: https://github.com/your-username/fraud-evidence-console/security/advisories/new
+    about: Please report security vulnerabilities privately through GitHub Advisories.
+  - name: Documentation & Research Guide
+    url: https://github.com/your-username/fraud-evidence-console/tree/main/docs
+    about: Browse user guides, mathematical methodology, and deployment runbooks.

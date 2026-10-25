@@ -1,0 +1,1 @@
+{"id":"phase1_covid_window","columns":["window","n","fraud_rate"],"types":{"window":"text","n":"integer","fraud_rate":"number"},"rows":[{"window":"Jan-Feb 2020","n":99993,"fraud_rate":0.0067904753332733},{"window":"Mar-Jun 2020 (COVID)","n":301890,"fraud_rate":0.0057636887608069},{"window":"Jul-Dec 2020","n":525661,"fraud_rate":0.0038275618697221}]}

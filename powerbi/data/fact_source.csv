@@ -1,0 +1,7 @@
+﻿source_name,role,present,bytes,hash_prefix,note
+fraudTrain.csv,Raw training data,False,368259891.2,fd7139200dbfcbed,Referenced; not included.
+fraudTest.csv,Raw test data,False,157705830.4,12d553ab19440c75,Referenced; not included.
+fraud_eda_colab.ipynb,Research notebook,True,4052809.0,,"66 cells, 33 code cells, outputs embedded."
+findings_ledger.json,Evidence ledger,True,29737.0,,64 records; evidence capped at 400 chars.
+figures/,Generated figures,True,21055859.0,,129 PNG + 7 HTML.
+tables/,Generated tables,True,415794.0,,46 CSV tables.

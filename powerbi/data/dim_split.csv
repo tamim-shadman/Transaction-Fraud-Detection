@@ -1,0 +1,5 @@
+﻿split,split_label,sort_order,is_overall
+train,Train,1,False
+test,Test (OOD),2,False
+overall,Overall,3,True
+boundary,Boundary week,4,False

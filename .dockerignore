@@ -1,0 +1,48 @@
+# Git
+.git
+.gitignore
+
+# Dependencies
+node_modules/
+app/node_modules/
+
+# Python caches and virtualenvs
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# Build artifacts
+dist/
+app/dist/
+dist-release/
+build/
+
+# Staging, scratch, and temporary files
+app/public/data/.staging/
+scratch/
+tmp/
+*.tmp
+*.temp
+
+# Backups
+backups/
+
+# Test reports and coverage
+.coverage
+htmlcov/
+.pytest_cache/
+playwright-report/
+test-results/
+
+# Environment files and credentials
+.env
+.env.local
+*.pem
+*.key
+
+# Documentation & large ipynb if not required at runtime
+# Note: fraud_eda_colab(1).ipynb is verified in tests but can be included or mounted

@@ -1,0 +1,714 @@
+-- ============================================================================
+-- Fraud Evidence Console — Power BI measure library
+-- ============================================================================
+-- Import the CSVs in ..\data, create the relationships in ..\relationships.md,
+-- then paste these measures into Power BI Desktop (Tabular Editor recommended).
+-- Measures are grouped by page. Table prefixes choose a home table; they do not
+-- change the measure's filter behaviour.
+--
+-- Conventions
+--   * A fact table is a pre-aggregated snapshot, not a transaction table.
+--     Never add transaction counts from two facts in the same visual.
+--   * "Selected" measures require exactly one row in the visual/slicer.
+--   * Test metrics are cross-boundary OOD estimates (the test split begins
+--     48 seconds after the train split ends), not production generalization.
+--   * fact_threshold[fp_cost_total] is total cost at $5/FP. It is NOT a
+--     per-false-positive parameter. Use [Selected FP Cost] for re-pricing.
+-- ============================================================================
+
+
+-- ----------------------------------------------------------------------------
+-- 01 · Headline
+-- ----------------------------------------------------------------------------
+
+MEASURE 'fact_class_balance'[Transactions (Overall)] =
+CALCULATE (
+    SUM ( fact_class_balance[transaction_count] ),
+    REMOVEFILTERS ( dim_split ),
+    fact_class_balance[split] = "overall"
+)
+
+MEASURE 'fact_class_balance'[Fraud Events (Overall)] =
+CALCULATE (
+    SUM ( fact_class_balance[fraud_count] ),
+    REMOVEFILTERS ( dim_split ),
+    fact_class_balance[split] = "overall"
+)
+
+MEASURE 'fact_class_balance'[Observed Fraud Rate] =
+DIVIDE ( [Fraud Events (Overall)], [Transactions (Overall)] )
+
+MEASURE 'fact_kpi'[Transactions Analysed] =
+LOOKUPVALUE ( fact_kpi[value], fact_kpi[kpi_id], "transactions" )
+
+MEASURE 'fact_kpi'[Run Duration (min)] =
+DIVIDE ( LOOKUPVALUE ( fact_kpi[value], fact_kpi[kpi_id], "run_time"), 60 )
+
+MEASURE 'fact_finding'[Graded Findings] =
+COUNTROWS ( fact_finding )
+
+MEASURE 'fact_capture'[Capture at 1% Budget] =
+CALCULATE (
+    MAX ( fact_capture[recall] ),
+    REMOVEFILTERS ( fact_capture ),
+    fact_capture[budget_pct] = 1
+)
+
+
+-- ----------------------------------------------------------------------------
+-- 02 · Data audit
+-- ----------------------------------------------------------------------------
+
+MEASURE 'fact_schema'[Analytical Columns] =
+CALCULATE (
+    COUNTROWS ( fact_schema ),
+    fact_schema[is_index_artifact] = FALSE ()
+)
+
+MEASURE 'fact_data_quality'[Raw Columns] =
+CALCULATE (
+    MAX ( fact_data_quality[value] ),
+    fact_data_quality[metric] = "raw_columns"
+)
+
+MEASURE 'fact_missing_column'[Missing Columns] =
+COUNTROWS ( fact_missing_column )
+
+MEASURE 'fact_missing_column'[Max Missing %] =
+MAX ( fact_missing_column[missing_pct] )
+
+MEASURE 'fact_data_quality'[Duplicate Transaction IDs] =
+CALCULATE (
+    MAX ( fact_data_quality[value] ),
+    fact_data_quality[metric] = "duplicate_trans_num"
+)
+
+MEASURE 'fact_data_quality'[Flagged Contracts] =
+CALCULATE (
+    MAX ( fact_data_quality[value] ),
+    fact_data_quality[metric] = "flagged_contracts"
+)
+
+MEASURE 'fact_data_quality'[ZIP Values Below 10,000] =
+CALCULATE (
+    MAX ( fact_data_quality[value] ),
+    fact_data_quality[metric] = "zip_under_10000"
+)
+
+MEASURE 'fact_data_quality'[Processed Memory (MB)] =
+CALCULATE (
+    MAX ( fact_data_quality[value] ),
+    fact_data_quality[metric] = "processed_memory_mb"
+)
+
+MEASURE 'fact_contract'[Contracts Passed] =
+CALCULATE ( COUNTROWS ( fact_contract ), fact_contract[status] = "PASS" )
+
+MEASURE 'fact_contract'[Contracts Flagged] =
+CALCULATE ( COUNTROWS ( fact_contract ), fact_contract[status] = "FLAG" )
+
+
+-- ----------------------------------------------------------------------------
+-- 03 · Split and weekly trend
+-- ----------------------------------------------------------------------------
+
+MEASURE 'fact_class_balance'[Transactions (Selected Split)] =
+SUM ( fact_class_balance[transaction_count] )
+
+MEASURE 'fact_class_balance'[Fraud Events (Selected Split)] =
+SUM ( fact_class_balance[fraud_count] )
+
+MEASURE 'fact_class_balance'[Fraud Rate (Selected Split)] =
+DIVIDE ( [Fraud Events (Selected Split)], [Transactions (Selected Split)] )
+
+MEASURE 'fact_weekly_rate'[Weekly Fraud Rate] =
+AVERAGE ( fact_weekly_rate[fraud_rate] )
+
+MEASURE 'fact_weekly_rate'[Weekly Transactions] =
+SUM ( fact_weekly_rate[transaction_count] )
+
+MEASURE 'fact_weekly_rate'[Weekly Fraud Events] =
+SUM ( fact_weekly_rate[fraud_count] )
+
+MEASURE 'dim_week'[Weeks in Scope] =
+COUNTROWS ( dim_week )
+
+MEASURE 'fact_weekly_rate'[Train Full-Week Mean Rate] =
+CALCULATE (
+    AVERAGE ( fact_weekly_rate[fraud_rate] ),
+    REMOVEFILTERS ( dim_week ),
+    dim_week[split] = "train"
+)
+
+MEASURE 'fact_weekly_rate'[Test Full-Week Mean Rate] =
+CALCULATE (
+    AVERAGE ( fact_weekly_rate[fraud_rate] ),
+    REMOVEFILTERS ( dim_week ),
+    dim_week[split] = "test"
+)
+
+MEASURE 'fact_weekly_rate'[Rate Change (pp)] =
+( [Test Full-Week Mean Rate] - [Train Full-Week Mean Rate] ) * 100
+
+MEASURE 'fact_weekly_rate'[7-Week Moving Avg Fraud Rate] =
+VAR maxWeek = MAX ( dim_week[week_end] )
+VAR startWeek = maxWeek - 42
+RETURN
+    CALCULATE (
+        AVERAGE ( fact_weekly_rate[fraud_rate] ),
+        dim_week[week_end] > startWeek,
+        dim_week[week_end] <= maxWeek
+    )
+
+MEASURE 'fact_weekly_rate'[Edge Week Fraud Events] =
+CALCULATE (
+    SUM ( fact_weekly_rate[fraud_count] ),
+    REMOVEFILTERS ( dim_week ),
+    dim_week[is_partial] = TRUE ()
+)
+
+MEASURE 'fact_hazard'[Month-0 First-Fraud Hazard] =
+CALCULATE ( MAX ( fact_hazard[hazard] ), fact_hazard[month] = 0 )
+
+MEASURE 'fact_hazard'[Month-23 First-Fraud Hazard] =
+CALCULATE ( MAX ( fact_hazard[hazard] ), fact_hazard[month] = 23 )
+
+
+-- ----------------------------------------------------------------------------
+-- 04 · Model evaluation and drift
+-- ----------------------------------------------------------------------------
+
+MEASURE 'fact_ablation'[Selected Model PR-AUC] =
+IF (
+    HASONEVALUE ( fact_ablation[model] ),
+    SELECTEDVALUE ( fact_ablation[pr_auc] )
+)
+
+MEASURE 'fact_ablation'[Selected Model ROC-AUC] =
+IF (
+    HASONEVALUE ( fact_ablation[model] ),
+    SELECTEDVALUE ( fact_ablation[roc_auc] )
+)
+
+MEASURE 'fact_ablation'[Full Model PR-AUC] =
+CALCULATE (
+    MAX ( fact_ablation[pr_auc] ),
+    REMOVEFILTERS ( fact_ablation ),
+    fact_ablation[is_full] = TRUE ()
+)
+
+MEASURE 'fact_ablation'[Full Model ROC-AUC] =
+CALCULATE (
+    MAX ( fact_ablation[roc_auc] ),
+    REMOVEFILTERS ( fact_ablation ),
+    fact_ablation[is_full] = TRUE ()
+)
+
+MEASURE 'fact_ablation'[PR-AUC Delta vs Full] =
+[Selected Model PR-AUC] - [Full Model PR-AUC]
+
+MEASURE 'fact_ablation'[Selected Model Feature Count] =
+IF (
+    HASONEVALUE ( fact_ablation[model] ),
+    SELECTEDVALUE ( fact_ablation[n_features] )
+)
+
+MEASURE 'fact_walkforward'[Walk-Forward Mean Validation PR-AUC] =
+CALCULATE (
+    AVERAGE ( fact_walkforward[validation_pr_auc] ),
+    REMOVEFILTERS ( fact_walkforward )
+)
+
+MEASURE 'fact_walkforward'[Walk-Forward Mean Test PR-AUC] =
+CALCULATE (
+    AVERAGE ( fact_walkforward[test_pr_auc] ),
+    REMOVEFILTERS ( fact_walkforward )
+)
+
+MEASURE 'fact_walkforward'[Walk-Forward OOD Gap] =
+[Walk-Forward Mean Validation PR-AUC] - [Walk-Forward Mean Test PR-AUC]
+
+MEASURE 'fact_walkforward'[Walk-Forward Folds] =
+COUNTROWS ( fact_walkforward )
+
+MEASURE 'fact_psi'[PSI Feature Count] =
+COUNTROWS ( fact_psi )
+
+MEASURE 'fact_psi'[Severe PSI Features] =
+CALCULATE ( COUNTROWS ( fact_psi ), fact_psi[verdict] = "severe" )
+
+MEASURE 'fact_psi'[Moderate PSI Features] =
+CALCULATE ( COUNTROWS ( fact_psi ), fact_psi[verdict] = "moderate" )
+
+MEASURE 'fact_psi'[Stable PSI Features] =
+CALCULATE ( COUNTROWS ( fact_psi ), fact_psi[verdict] = "stable" )
+
+MEASURE 'fact_psi'[PSI Severe Share] =
+DIVIDE ( [Severe PSI Features], [PSI Feature Count] )
+
+MEASURE 'fact_psi'[PSI Severe or Moderate Share] =
+DIVIDE (
+    CALCULATE (
+        COUNTROWS ( fact_psi ),
+        fact_psi[verdict] IN { "severe", "moderate" }
+    ),
+    [PSI Feature Count]
+)
+
+MEASURE 'fact_psi'[Maximum PSI] =
+MAXX ( ALL ( fact_psi ), fact_psi[psi] )
+
+MEASURE 'fact_psi'[Top PSI Feature] =
+VAR ranked =
+    ADDCOLUMNS (
+        ALL ( fact_psi[feature] ),
+        "@psi", CALCULATE ( MAX ( fact_psi[psi] ) )
+    )
+VAR top = TOPN ( 1, ranked, [@psi], DESC )
+RETURN
+    CONCATENATEX ( top, fact_psi[feature], ", " )
+
+MEASURE 'fact_calibration'[Calibration Temperature] =
+MAX ( fact_calibration[temperature] )
+
+MEASURE 'fact_calibration'[ECE After Scaling] =
+MAX ( fact_calibration[ece_after] )
+
+MEASURE 'fact_calibration'[Brier After Scaling] =
+MAX ( fact_calibration[brier_after] )
+
+MEASURE 'fact_learning_curve'[Learning Curve Endpoint PR-AUC] =
+CALCULATE (
+    MAX ( fact_learning_curve[pr_auc] ),
+    fact_learning_curve[train_fraction] = 1
+)
+
+MEASURE 'fact_leave_card_out'[Held-Out-Card Test PR-AUC] =
+CALCULATE (
+    MAX ( fact_leave_card_out[pr_auc] ),
+    fact_leave_card_out[slice] = "test rows of HELD-OUT cards"
+)
+
+
+-- ----------------------------------------------------------------------------
+-- 05 · Review economics
+-- ----------------------------------------------------------------------------
+
+MEASURE 'fact_capture'[Selected Budget (%)] =
+SELECTEDVALUE ( fact_capture[budget_pct] )
+
+MEASURE 'fact_capture'[Reviews at Selected Budget] =
+IF (
+    HASONEVALUE ( fact_capture[budget_pct] ),
+    SELECTEDVALUE ( fact_capture[review_count] )
+)
+
+MEASURE 'fact_capture'[Fraud Caught at Selected Budget] =
+IF (
+    HASONEVALUE ( fact_capture[budget_pct] ),
+    SELECTEDVALUE ( fact_capture[fraud_caught] )
+)
+
+MEASURE 'fact_capture'[Recall at Selected Budget] =
+IF (
+    HASONEVALUE ( fact_capture[budget_pct] ),
+    SELECTEDVALUE ( fact_capture[recall] )
+)
+
+MEASURE 'fact_capture'[Precision at Selected Budget] =
+IF (
+    HASONEVALUE ( fact_capture[budget_pct] ),
+    SELECTEDVALUE ( fact_capture[precision] )
+)
+
+MEASURE 'fact_capture'[Fraud USD Share at Selected Budget] =
+IF (
+    HASONEVALUE ( fact_capture[budget_pct] ),
+    SELECTEDVALUE ( fact_capture[usd_share] )
+)
+
+MEASURE 'fact_capture'[USD per Review at Selected Budget] =
+IF (
+    HASONEVALUE ( fact_capture[budget_pct] ),
+    SELECTEDVALUE ( fact_capture[usd_per_review] )
+)
+
+MEASURE 'fact_capture'[Reviews at 1% Budget] =
+CALCULATE ( MAX ( fact_capture[review_count] ), fact_capture[budget_pct] = 1 )
+
+MEASURE 'fact_capture'[Recall at 1% Budget] =
+CALCULATE ( MAX ( fact_capture[recall] ), fact_capture[budget_pct] = 1 )
+
+MEASURE 'fact_capture'[Precision at 1% Budget] =
+CALCULATE ( MAX ( fact_capture[precision] ), fact_capture[budget_pct] = 1 )
+
+MEASURE 'fact_capture'[Fraud USD Share at 1% Budget] =
+CALCULATE ( MAX ( fact_capture[usd_share] ), fact_capture[budget_pct] = 1 )
+
+MEASURE 'fact_threshold'[Cost-Min Threshold] =
+CALCULATE (
+    MAX ( fact_threshold[threshold] ),
+    REMOVEFILTERS ( fact_threshold ),
+    fact_threshold[is_cost_min] = TRUE ()
+)
+
+MEASURE 'fact_threshold'[Cost-Min Recall] =
+CALCULATE (
+    MAX ( fact_threshold[recall] ),
+    REMOVEFILTERS ( fact_threshold ),
+    fact_threshold[is_cost_min] = TRUE ()
+)
+
+MEASURE 'fact_threshold'[Cost-Min Precision] =
+CALCULATE (
+    MAX ( fact_threshold[precision] ),
+    REMOVEFILTERS ( fact_threshold ),
+    fact_threshold[is_cost_min] = TRUE ()
+)
+
+MEASURE 'fact_threshold'[Cost-Min False Positives] =
+CALCULATE (
+    MAX ( fact_threshold[fp] ),
+    REMOVEFILTERS ( fact_threshold ),
+    fact_threshold[is_cost_min] = TRUE ()
+)
+
+MEASURE 'fact_threshold'[Cost-Min Missed USD] =
+CALCULATE (
+    MAX ( fact_threshold[missed_usd] ),
+    REMOVEFILTERS ( fact_threshold ),
+    fact_threshold[is_cost_min] = TRUE ()
+)
+
+MEASURE 'fact_threshold'[Cost-Min Total Loss ($5/FP)] =
+CALCULATE (
+    MAX ( fact_threshold[total_loss] ),
+    REMOVEFILTERS ( fact_threshold ),
+    fact_threshold[is_cost_min] = TRUE ()
+)
+
+MEASURE 'fact_threshold'[F1-Max Threshold] =
+CALCULATE (
+    MAX ( fact_threshold[threshold] ),
+    REMOVEFILTERS ( fact_threshold ),
+    fact_threshold[is_f1_max] = TRUE ()
+)
+
+MEASURE 'fact_threshold'[F1-Max F1] =
+CALCULATE (
+    MAX ( fact_threshold[f1] ),
+    REMOVEFILTERS ( fact_threshold ),
+    fact_threshold[is_f1_max] = TRUE ()
+)
+
+MEASURE 'fact_cost_sensitivity'[Selected FP Cost] =
+VAR selectedCost = SELECTEDVALUE ( fact_cost_sensitivity[fp_cost] )
+RETURN IF ( ISBLANK ( selectedCost ), 5, selectedCost )
+
+MEASURE 'fact_cost_sensitivity'[Expected Loss at Selected FP Cost] =
+VAR selectedCost = SELECTEDVALUE ( fact_cost_sensitivity[fp_cost] )
+VAR targetCost = IF ( ISBLANK ( selectedCost ), 5, selectedCost )
+RETURN
+    CALCULATE (
+        MAX ( fact_cost_sensitivity[expected_loss] ),
+        fact_cost_sensitivity[fp_cost] = targetCost
+    )
+
+MEASURE 'fact_cost_sensitivity'[Optimal Threshold at Selected FP Cost] =
+VAR selectedCost = SELECTEDVALUE ( fact_cost_sensitivity[fp_cost] )
+VAR targetCost = IF ( ISBLANK ( selectedCost ), 5, selectedCost )
+RETURN
+    CALCULATE (
+        MAX ( fact_cost_sensitivity[optimal_threshold] ),
+        fact_cost_sensitivity[fp_cost] = targetCost
+    )
+
+MEASURE 'fact_threshold'[Modeled Loss at Stored Operating Point] =
+[Cost-Min Missed USD] + [Selected FP Cost] * [Cost-Min False Positives]
+
+MEASURE 'fact_segment_error'[Weighted Segment Recall] =
+DIVIDE (
+    SUMX ( fact_segment_error, fact_segment_error[recall] * fact_segment_error[fraud_count] ),
+    SUM ( fact_segment_error[fraud_count] )
+)
+
+MEASURE 'fact_segment_error'[Segment False Positives] =
+SUM ( fact_segment_error[false_positives] )
+
+
+-- ----------------------------------------------------------------------------
+-- 06 · Findings, audit and artifacts
+-- ----------------------------------------------------------------------------
+
+MEASURE 'fact_finding'[Strong Findings] =
+CALCULATE ( COUNTROWS ( fact_finding ), fact_finding[grade] = "strong" )
+
+MEASURE 'fact_finding'[Supports Findings] =
+CALCULATE ( COUNTROWS ( fact_finding ), fact_finding[grade] = "supports" )
+
+MEASURE 'fact_finding'[Caveat Findings] =
+CALCULATE ( COUNTROWS ( fact_finding ), fact_finding[grade] = "caveat" )
+
+MEASURE 'fact_finding'[Weak Findings] =
+CALCULATE ( COUNTROWS ( fact_finding ), fact_finding[grade] = "weak" )
+
+MEASURE 'fact_finding'[Findings with Audit Note] =
+CALCULATE ( COUNTROWS ( fact_finding ), fact_finding[has_audit_note] = TRUE () )
+
+MEASURE 'fact_audit_note'[Audit Notes] =
+COUNTROWS ( fact_audit_note )
+
+MEASURE 'fact_issue'[Curated Issues] =
+COUNTROWS ( fact_issue )
+
+MEASURE 'fact_issue'[High-Severity Issues] =
+CALCULATE ( COUNTROWS ( fact_issue ), fact_issue[severity] = "High" )
+
+MEASURE 'fact_issue'[Open Issues] =
+CALCULATE ( COUNTROWS ( fact_issue ), fact_issue[status] = "Open" )
+
+MEASURE 'fact_artifact'[Figures] =
+CALCULATE (
+    COUNTROWS ( fact_artifact ),
+    fact_artifact[artifact_type] = "static"
+)
+
+MEASURE 'fact_artifact'[Interactive Artifacts] =
+CALCULATE (
+    COUNTROWS ( fact_artifact ),
+    fact_artifact[artifact_type] = "interactive"
+)
+
+MEASURE 'fact_table'[Catalog Tables] =
+COUNTROWS ( fact_table )
+
+MEASURE 'fact_notebook_cell'[Notebook Cells] =
+COUNTROWS ( fact_notebook_cell )
+
+MEASURE 'fact_notebook_cell'[Code Cells] =
+CALCULATE ( COUNTROWS ( fact_notebook_cell ), fact_notebook_cell[is_code] = TRUE () )
+
+MEASURE 'fact_notebook_cell'[Code Cells with Output] =
+CALCULATE (
+    COUNTROWS ( fact_notebook_cell ),
+    fact_notebook_cell[is_code] = TRUE (),
+    fact_notebook_cell[has_output] = TRUE ()
+)
+
+MEASURE 'fact_warning'[Run Warnings] =
+COUNTROWS ( fact_warning )
+
+
+-- ----------------------------------------------------------------------------
+-- 07 · Cards, segments and risk signals
+-- ----------------------------------------------------------------------------
+
+MEASURE 'fact_card_profile'[Cards Profiled] =
+COUNTROWS ( fact_card_profile )
+
+MEASURE 'fact_card_profile'[Cards Ever Fraud] =
+CALCULATE ( COUNTROWS ( fact_card_profile ), fact_card_profile[fraud_count] > 0 )
+
+MEASURE 'fact_card_profile'[Cards Never Fraud] =
+CALCULATE ( COUNTROWS ( fact_card_profile ), fact_card_profile[fraud_count] = 0 )
+
+MEASURE 'fact_card_profile'[Cards 100% Fraud] =
+CALCULATE ( COUNTROWS ( fact_card_profile ), fact_card_profile[fraud_rate] = 1 )
+
+MEASURE 'fact_card_profile'[Median Transactions per Card] =
+MEDIAN ( fact_card_profile[transaction_count] )
+
+MEASURE 'fact_high_risk_combo'[High-Risk Combo Lift] =
+CALCULATE (
+    MAX ( fact_high_risk_combo[lift_vs_baseline] ),
+    CONTAINSSTRING ( fact_high_risk_combo[segment], "COMBO" )
+)
+
+MEASURE 'fact_high_risk_combo'[Night Fraud Rate] =
+CALCULATE (
+    MAX ( fact_high_risk_combo[fraud_rate] ),
+    fact_high_risk_combo[segment] = "night alone"
+)
+
+MEASURE 'fact_quantile'[Median Fraud Amount] =
+CALCULATE ( MAX ( fact_quantile[amount_fraud] ), fact_quantile[quantile] = "P50" )
+
+MEASURE 'fact_quantile'[Median Non-Fraud Amount] =
+CALCULATE ( MAX ( fact_quantile[amount_nonfraud] ), fact_quantile[quantile] = "P50" )
+
+MEASURE 'fact_effect_size'[Amount Cliff's Delta] =
+CALCULATE ( MAX ( fact_effect_size[cliffs_delta] ), fact_effect_size[feature] = "amt" )
+
+MEASURE 'fact_effect_size'[Amount KS D] =
+CALCULATE ( MAX ( fact_effect_size[ks_d] ), fact_effect_size[feature] = "amt" )
+
+MEASURE 'fact_effect_size'[Distance KS D] =
+CALCULATE ( MAX ( fact_effect_size[ks_d] ), fact_effect_size[feature] = "dist_km" )
+
+MEASURE 'fact_speed'[Transactions Above 1,000 km/h] =
+CALCULATE (
+    SUM ( fact_speed[transaction_count] ),
+    fact_speed[speed_band_kmh] IN { "1k-5k", ">5k" }
+)
+
+
+-- ----------------------------------------------------------------------------
+-- 08 · Display helpers
+-- ----------------------------------------------------------------------------
+
+MEASURE 'fact_kpi'[Fraud Rate Label] =
+FORMAT ( [Observed Fraud Rate], "0.000%" )
+
+MEASURE 'fact_kpi'[Run Duration Label] =
+VAR minutes = [Run Duration (min)]
+RETURN
+    FORMAT ( INT ( minutes / 60 ), "0" ) & "h "
+        & FORMAT ( MOD ( INT ( minutes ), 60 ), "00" ) & "m"
+
+MEASURE 'fact_capture'[Budget Label] =
+VAR budget = SELECTEDVALUE ( fact_capture[budget_pct] )
+RETURN IF ( ISBLANK ( budget ), "Select a budget", "Top " & FORMAT ( budget, "0.0" ) & "%" )
+
+MEASURE 'fact_psi'[Drift Verdict Label] =
+VAR severe = [Severe PSI Features]
+VAR moderate = [Moderate PSI Features]
+RETURN
+    SWITCH (
+        TRUE (),
+        severe > 0, "Severe drift",
+        moderate > 0, "Moderate drift",
+        "Stable"
+    )
+-- ----------------------------------------------------------------------------
+-- 09 - Phase 2 evidence layer (insights, anomalies, provenance, metrics, logs)
+-- ----------------------------------------------------------------------------
+
+MEASURE 'fact_insight'[Insights in View] =
+COUNTROWS ( fact_insight )
+
+MEASURE 'fact_insight'[Priority 1 Insights] =
+CALCULATE (
+    COUNTROWS ( fact_insight ),
+    fact_insight[priority] = 1
+)
+
+MEASURE 'fact_insight'[Insights with Caveat] =
+CALCULATE (
+    COUNTROWS ( fact_insight ),
+    NOT ISBLANK ( fact_insight[caveat] )
+)
+
+MEASURE 'fact_insight'[Insights by Scope] =
+CALCULATE (
+    COUNTROWS ( fact_insight ),
+    ALLEXCEPT ( fact_insight, fact_insight[scope] )
+)
+
+MEASURE 'fact_anomaly_flag'[Flagged Anomalies] =
+COUNTROWS ( fact_anomaly_flag )
+
+MEASURE 'fact_anomaly_flag'[Severe Anomalies] =
+CALCULATE (
+    COUNTROWS ( fact_anomaly_flag ),
+    fact_anomaly_flag[severity] = "high"
+)
+
+MEASURE 'fact_anomaly_flag'[Weekly Rate Anomalies] =
+CALCULATE (
+    COUNTROWS ( fact_anomaly_flag ),
+    fact_anomaly_flag[anomaly_series] = "Weekly fraud rate"
+)
+
+MEASURE 'fact_anomaly_flag'[Max Robust Z] =
+MAXX ( fact_anomaly_flag[z_score] )
+
+MEASURE 'fact_artifact_provenance'[Artifacts Traced] =
+COUNTROWS ( fact_artifact_provenance )
+
+MEASURE 'fact_artifact_provenance'[Verified Artifacts] =
+CALCULATE (
+    COUNTROWS ( fact_artifact_provenance ),
+    fact_artifact_provenance[provenance] = "verified"
+)
+
+MEASURE 'fact_artifact_provenance'[Inferred Artifacts] =
+CALCULATE (
+    COUNTROWS ( fact_artifact_provenance ),
+    fact_artifact_provenance[provenance] = "inferred"
+)
+
+MEASURE 'fact_artifact_provenance'[Verified Provenance %] =
+DIVIDE ( [Verified Artifacts], [Artifacts Traced] )
+
+MEASURE 'fact_metric_catalog'[Metrics Catalogued] =
+COUNTROWS ( fact_metric_catalog )
+
+MEASURE 'fact_metric_catalog'[Validated Metrics] =
+CALCULATE (
+    COUNTROWS ( fact_metric_catalog ),
+    NOT ISBLANK ( fact_metric_catalog[validation_checks] )
+)
+
+MEASURE 'fact_metric_catalog'[Metrics with Caveat] =
+CALCULATE (
+    COUNTROWS ( fact_metric_catalog ),
+    NOT ISBLANK ( fact_metric_catalog[caveat] )
+)
+
+MEASURE 'fact_log_pattern'[Repeated Patterns] =
+CALCULATE (
+    COUNTROWS ( fact_log_pattern ),
+    fact_log_pattern[occurrence_count] > 1
+)
+
+MEASURE 'fact_log_pattern'[Warning Patterns] =
+CALCULATE (
+    COUNTROWS ( fact_log_pattern ),
+    fact_log_pattern[severity] IN { "warning", "error" }
+)
+
+MEASURE 'fact_lineage_node'[Lineage Nodes] =
+COUNTROWS ( fact_lineage_node )
+
+MEASURE 'fact_lineage_edge'[Lineage Edges] =
+COUNTROWS ( fact_lineage_edge )
+
+MEASURE 'fact_lineage_edge'[Verified Edges] =
+CALCULATE (
+    COUNTROWS ( fact_lineage_edge ),
+    fact_lineage_edge[is_verified] = TRUE ()
+)
+
+MEASURE 'fact_lineage_edge'[Inferred Edges] =
+CALCULATE (
+    COUNTROWS ( fact_lineage_edge ),
+    fact_lineage_edge[is_verified] = FALSE ()
+)
+
+MEASURE 'fact_experiment'[Experiments in Group] =
+CALCULATE (
+    COUNTROWS ( fact_experiment ),
+    ALLEXCEPT ( fact_experiment, fact_experiment[group_id] )
+)
+
+MEASURE 'fact_experiment'[Best PR-AUC in Group] =
+MAXX (
+    CALCULATETABLE (
+        VALUES ( fact_experiment[pr_auc] ),
+        ALLEXCEPT ( fact_experiment, fact_experiment[group_id] )
+    )
+)
+
+MEASURE 'fact_artifact_provenance'[Provenance Label] =
+VAR verified = [Verified Artifacts]
+VAR total = [Artifacts Traced]
+RETURN
+    IF (
+        total = 0,
+        "No artifacts",
+        FORMAT ( verified, "0" ) & " of " & FORMAT ( total, "0" ) & " verified"
+    )
+
+MEASURE 'fact_insight'[Insight Confidence Label] =
+VAR confidence = SELECTEDVALUE ( fact_insight[confidence] )
+RETURN SWITCH ( confidence, "verified", "Verified", "bounded", "Bounded", "observed", "Observed", confidence )

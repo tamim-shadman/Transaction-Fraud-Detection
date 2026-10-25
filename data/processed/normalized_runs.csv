@@ -1,0 +1,2 @@
+id,label,start,end,durationSeconds,reportedMinutes,seed,smoke,robustness,python,platform,codeCells,executedCells,cellsWithOutput,errorOutputs,outputChars,timezoneNote,source
+RUN-20261020-1630,Full research run,2026-10-20T16:30:06,2026-10-20T18:01:59,5513,91.9,42,False,True,3.13.16,Google Colab,33,33,31,0,61180,Timezone not stated in the source.,logs/findings.md; notebook execution counts

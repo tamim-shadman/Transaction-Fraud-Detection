@@ -1,0 +1,12 @@
+{"timestamp": "2026-10-21T18:09:51.829664+00:00", "level": "INFO", "logger": "fraud-analytics", "category": "health_probe", "message": "Liveness probe answered", "outcome": "success", "duration_ms": 1.15}
+{"timestamp": "2026-10-21T18:09:51.843487+00:00", "level": "INFO", "logger": "fraud-analytics", "category": "health_probe", "message": "Readiness probe answered", "outcome": "success"}
+{"timestamp": "2026-10-21T18:09:51.854755+00:00", "level": "INFO", "logger": "fraud-analytics", "category": "health_probe", "message": "Data readiness probe answered", "outcome": "success"}
+{"timestamp": "2026-10-21T18:09:51.967505+00:00", "level": "INFO", "logger": "fraud-analytics", "category": "api", "message": "Operational status queried", "outcome": "success", "duration_ms": 107.1}
+{"timestamp": "2026-10-21T18:12:44.497928+00:00", "level": "INFO", "logger": "fraud-analytics", "category": "health_probe", "message": "Liveness probe answered", "outcome": "success", "duration_ms": 0.1}
+{"timestamp": "2026-10-21T18:12:44.499893+00:00", "level": "INFO", "logger": "fraud-analytics", "category": "health_probe", "message": "Readiness probe answered", "outcome": "success"}
+{"timestamp": "2026-10-21T18:12:44.502267+00:00", "level": "INFO", "logger": "fraud-analytics", "category": "health_probe", "message": "Data readiness probe answered", "outcome": "success"}
+{"timestamp": "2026-10-21T18:12:44.552241+00:00", "level": "INFO", "logger": "fraud-analytics", "category": "api", "message": "Operational status queried", "outcome": "success", "duration_ms": 26.12}
+{"timestamp": "2026-10-25T17:44:11.024102+00:00", "level": "INFO", "logger": "fraud-analytics", "category": "health_probe", "message": "Liveness probe answered", "outcome": "success", "duration_ms": 0.15}
+{"timestamp": "2026-10-25T17:44:11.026963+00:00", "level": "INFO", "logger": "fraud-analytics", "category": "health_probe", "message": "Readiness probe answered", "outcome": "success"}
+{"timestamp": "2026-10-25T17:44:11.029605+00:00", "level": "INFO", "logger": "fraud-analytics", "category": "health_probe", "message": "Data readiness probe answered", "outcome": "success"}
+{"timestamp": "2026-10-25T17:44:11.083808+00:00", "level": "INFO", "logger": "fraud-analytics", "category": "api", "message": "Operational status queried", "outcome": "success", "duration_ms": 52.57}

@@ -1,0 +1,47 @@
+file,rows,cols,columns,nulls
+figure_index.csv,129,2,figure | caption,0
+findings_ledger.csv,64,5,rq | phase | grade | finding | evidence,0
+phase0_class_balance.csv,3,5,Unnamed: 0 | split | n | fraud | fraud_rate,0
+phase0_contracts.csv,10,4,Unnamed: 0 | contract | actual value | status,0
+phase0_generator_forensics.csv,7,2,Unnamed: 0 | value,0
+phase0_schema.csv,72,7,Unnamed: 0 | dtype | non_null | missing_pct | n_unique | memory_MB | role,4
+phase1_amt_quantiles.csv,9,5,Unnamed: 0 | quantile | amt | amt_fraud | amt_nonfraud,0
+phase1_category_table.csv,14,4,category | n | k | rate,0
+phase1_covid_window.csv,3,4,Unnamed: 0 | window | n | fraud_rate,0
+phase1_merchant_table.csv,693,4,merchant_clean | n | k | rate,0
+phase2_card_profiles.csv,999,9,cc_num | n | k | amt_mean | amt_std | fraud_rate | hour_entropy | geo_entropy | fraud_rate_bin,0
+phase2_city_table.csv,836,7,Unnamed: 0 | city | lat | lon | n | k | eb_rate,0
+phase2_dist_rate_table.csv,6,4,dist_bin | n | k | rate,0
+phase2_mi_table.csv,14,2,Unnamed: 0 | 0,0
+phase2_money_category.csv,14,4,category | n_fraud | fraud_usd | usd_per_fraud,0
+phase2_zip3_table.csv,532,13,Unnamed: 0 | zip3 | n | k | rate | lo | hi | p_vs_base | q_vs_base | sparse | sig | baseline | eb_rate,0
+phase3_weekly_rate_table.csv,105,4,ts | size | sum | rate,0
+phase4_anomaly_summary.csv,3,6,Unnamed: 0 | model | auc | top10pct_precision | top10pct_lift | n,0
+phase4_dbscan_clusters.csv,2,4,Unnamed: 0 | cluster | n | fraud_rate,0
+phase4_kmeans_cluster_rate.csv,3,5,Unnamed: 0 | k_fraud | n | rate | cluster,0
+phase4_separability_table.csv,7,2,Unnamed: 0 | 0,0
+phase5_category_posthoc_pairs.csv,72,7,Unnamed: 0 | a | b | chi2 | p | cramers_v | p_bonf,0
+phase5_category_rates.csv,14,12,Unnamed: 0 | category | n | k | rate | lo | hi | p_vs_base | q_vs_base | sparse | sig | baseline,0
+phase5_chi2_cramers.csv,5,8,Unnamed: 0 | variable | levels | chi2 | dof | p | cramers_v | n,0
+phase5_cluster_robust_logit.csv,9,11,Unnamed: 0 | feature | coef | OR | se_naive | se_cluster | z_cluster | p_cluster | OR_lo_robust | OR_hi_robust | n_clusters,0
+phase5_mw_effect_sizes.csv,11,15,Unnamed: 0 | feature | n_fraud | n_nonfraud | med_fraud | med_nonfraud | U | p_mw | ks_D | p_ks | cohens_d | cliffs_delta | cliffs_lo | cliffs_hi | q_fdr,0
+phase7_hazard_table.csv,24,7,Unnamed: 0 | month | n_risk | events | hazard | lo | hi,0
+phase7_high_risk_combo.csv,5,5,Unnamed: 0 | segment | n | fraud_rate | lift_vs_base,0
+phase7_hour_encoding_comparison.csv,3,2,Unnamed: 0 | val PR-AUC,0
+phase7_merchant_eb_table.csv,700,8,Unnamed: 0 | category | merchant | n | k | cat_eb | eb_rate | merchant_clean,0
+phase7_speed_rate_table.csv,5,4,speed_kmh | n | k | rate,0
+phase8_ablation_decomposed.csv,6,6,Unnamed: 0 | model | n_features | pr_auc | roc_auc | delta_pr_auc,0
+phase8_calibration_temp.csv,1,8,Unnamed: 0 | T | ece_before | ece_after | brier_before | brier_after | nll_before | nll_after,0
+phase8_capture_at_k.csv,5,9,Unnamed: 0 | top_pct | k | fraud_caught | precision | recall | usd_captured | usd_share | usd_per_review,0
+phase8_cost_sensitivity.csv,5,6,Unnamed: 0 | fp_cost | optimal_threshold | expected_loss | recall | precision,0
+phase8_ensemble_comparison.csv,2,4,Unnamed: 0 | model | pr_auc | roc_auc,0
+phase8_learning_curve.csv,5,5,Unnamed: 0 | frac | n_train | pr_auc | roc_auc,0
+phase8_leave_card_out.csv,3,6,Unnamed: 0 | slice | n | n_fraud | pr_auc | roc_auc,0
+phase8_monotonic_comparison.csv,2,4,Unnamed: 0 | model | pr_auc | roc_auc,0
+phase8_psi.csv,27,8,Unnamed: 0 | feature | family | n_train | n_test | psi | verdict | top_driver_bin,2
+phase8_segment_errors.csv,63,9,Unnamed: 0 | category | n | n_fraud | recall | fp | segment | hour_bin | state,126
+phase8_threshold_table.csv,3,12,Unnamed: 0 | threshold | TP | FP | FN | TN | precision | recall | fp_cost | missed_usd | total_loss | usd_captured,0
+phase8_time_decay_comparison.csv,2,4,Unnamed: 0 | model | pr_auc | roc_auc,0
+phase8_walkforward_cv.csv,4,10,Unnamed: 0 | fold | val_window | n_train | n_val | pr_auc | roc_auc | test_pr_auc | test_roc_auc | ood_gap_pr,0
+phase8_wf_vs_test.csv,1,7,Unnamed: 0 | mean_val_pr_auc | sd_val_pr_auc | mean_test_pr_auc_from_folds | sd_test_pr_auc_from_folds | mean_ood_gap | n_folds,0
+reproducibility_checklist.csv,11,4,Unnamed: 0 | item | evidence | ok,0

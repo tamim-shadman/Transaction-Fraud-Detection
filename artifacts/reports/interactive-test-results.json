@@ -1,0 +1,59 @@
+[
+  {
+    "flow": "theme_toggle",
+    "status": "PASS",
+    "errors": 0
+  },
+  {
+    "flow": "search_modal",
+    "status": "PASS",
+    "results": 24,
+    "errors": 0
+  },
+  {
+    "flow": "portfolio_drawer",
+    "status": "PASS",
+    "errors": 0
+  },
+  {
+    "flow": "experiments_benchmark",
+    "status": "PASS",
+    "errors": 0
+  },
+  {
+    "flow": "artifacts_provenance",
+    "status": "PASS",
+    "rows": 182,
+    "errors": 0
+  },
+  {
+    "flow": "explorer_col_deep_link",
+    "status": "PASS",
+    "errors": 0
+  },
+  {
+    "flow": "experiments_cross_nav",
+    "status": "PASS",
+    "errors": 0
+  },
+  {
+    "flow": "search_project_nav",
+    "status": "PASS",
+    "errors": 0
+  },
+  {
+    "flow": "wcag_table_keyboard",
+    "status": "PASS",
+    "errors": 0
+  },
+  {
+    "flow": "csv_sanitization",
+    "status": "PASS",
+    "errors": 0
+  },
+  {
+    "flow": "mobile_drawer_nav",
+    "status": "PASS",
+    "errors": 0
+  }
+]

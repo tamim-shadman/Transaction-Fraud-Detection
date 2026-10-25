@@ -1,0 +1,701 @@
+,category,merchant,n,k,cat_eb,eb_rate,merchant_clean
+572,shopping_net,fraud_Kozey-Boehm,2758,60,0.015910129077376992,0.021550389400887927,Kozey-Boehm
+415,misc_net,"fraud_Herman, Treutel and Dickens",1870,38,0.013019513570917261,0.019950229115274987,"Herman, Treutel and Dicken"
+596,shopping_net,fraud_Terry-Huel,2864,56,0.015910129077376992,0.01943016629815712,Terry-Huel
+570,shopping_net,fraud_Kerluke-Abshire,2635,50,0.015910129077376992,0.01886325883281086,Kerluke-Abshire
+581,shopping_net,"fraud_Mosciski, Ziemann and Farrell",2821,53,0.015910129077376992,0.018689151971152927,"Mosciski, Ziemann and Farr"
+555,shopping_net,fraud_Boyer PLC,2717,51,0.015910129077376992,0.01866915616178122,Boyer PLC
+590,shopping_net,"fraud_Schmeler, Bashirian and Price",2788,52,0.015910129077376992,0.018556444912651557,"Schmeler, Bashirian and Pr"
+573,shopping_net,fraud_Kuhic LLC,2842,53,0.015910129077376992,0.018555748778972706,Kuhic LLC
+568,shopping_net,fraud_Jast Ltd,2757,51,0.015910129077376992,0.018407774906453518,Jast Ltd
+576,shopping_net,"fraud_Langworth, Boehm and Gulgowski",2817,52,0.015910129077376992,0.01837196191557686,"Langworth, Boehm and Gulgo"
+588,shopping_net,"fraud_Romaguera, Cruickshank and Greenholt",2767,51,0.015910129077376992,0.01834356920395455,"Romaguera, Cruickshank and"
+556,shopping_net,fraud_Boyer-Reichert,2779,51,0.015910129077376992,0.01826711111765811,Boyer-Reichert
+566,shopping_net,"fraud_Heathcote, Yost and Kertzmann",2786,51,0.015910129077376992,0.01822280419533531,"Heathcote, Yost and Kertzm"
+563,shopping_net,fraud_Goyette Inc,2773,50,0.015910129077376992,0.017957192101544624,Goyette Inc
+577,shopping_net,fraud_Lemke-Gutmann,2790,50,0.015910129077376992,0.01785156155977083,Lemke-Gutmann
+557,shopping_net,fraud_Cormier LLC,2817,50,0.015910129077376992,0.01768632598825427,Cormier LLC
+579,shopping_net,fraud_Medhurst PLC,2746,48,0.015910129077376992,0.01742481128170685,Medhurst PLC
+565,shopping_net,fraud_Heathcote LLC,2778,47,0.015910129077376992,0.016883604206997117,Heathcote LLC
+239,grocery_pos,fraud_Rau and Sons,3546,60,0.012636036374160572,0.016802963147947353,Rau and Sons
+564,shopping_net,"fraud_Greenholt, O'Hara and Balistreri",2743,46,0.015910129077376992,0.016739716112464897,"Greenholt, O'Hara and Bali"
+583,shopping_net,fraud_Price Inc,2825,47,0.015910129077376992,0.01661231210520947,Price Inc
+574,shopping_net,"fraud_Kuhic, Bins and Pfeffer",2825,47,0.015910129077376992,0.01661231210520947,"Kuhic, Bins and Pfeffer"
+409,misc_net,fraud_Durgan-Auer,1846,31,0.013019513570917261,0.016599152804260907,Durgan-Auer
+437,misc_net,"fraud_Moore, Dibbert and Koepp",1850,31,0.013019513570917261,0.016565103260047037,"Moore, Dibbert and Koepp"
+561,shopping_net,fraud_Gleason-Macejkovic,2894,48,0.015910129077376992,0.01656346456504265,Gleason-Macejkovic
+400,misc_net,fraud_Bednar Group,1860,31,0.013019513570917261,0.016480587427087613,Bednar Group
+594,shopping_net,"fraud_Stanton, Jakubowski and Baumbach",2859,47,0.015910129077376992,0.01642143051968155,"Stanton, Jakubowski and Ba"
+424,misc_net,"fraud_Kerluke, Kertzmann and Wiza",1759,29,0.013019513570917261,0.0163001352109154,"Kerluke, Kertzmann and Wiz"
+210,grocery_pos,fraud_Doyle Ltd,3502,57,0.012636036374160572,0.016175348039260427,Doyle Ltd
+404,misc_net,fraud_Brown PLC,1737,28,0.013019513570917261,0.015950980597219232,Brown PLC
+575,shopping_net,"fraud_Labadie, Treutel and Bode",2767,44,0.015910129077376992,0.015901992643089537,"Labadie, Treutel and Bode"
+591,shopping_net,fraud_Schmidt and Sons,2833,45,0.015910129077376992,0.015885104980476544,Schmidt and Sons
+436,misc_net,fraud_Miller-Harris,1811,29,0.013019513570917261,0.01585659411674083,Miller-Harris
+593,shopping_net,fraud_Stamm-Witting,2714,43,0.015910129077376992,0.015846131097277078,Stamm-Witting
+553,shopping_net,fraud_Bashirian Group,2720,43,0.015910129077376992,0.01581241592472968,Bashirian Group
+587,shopping_net,fraud_Rempel Inc,2721,43,0.015910129077376992,0.01580681067271808,Rempel Inc
+427,misc_net,fraud_Kris-Weimann,1756,28,0.013019513570917261,0.015787689308777872,Kris-Weimann
+562,shopping_net,"fraud_Gottlieb, Considine and Schultz",2794,44,0.015910129077376992,0.015753632656440118,"Gottlieb, Considine and Sc"
+232,grocery_pos,"fraud_Moen, Reinger and Murphy",3393,53,0.012636036374160572,0.015534956666881206,"Moen, Reinger and Murphy"
+559,shopping_net,fraud_Fisher-Schowalter,2839,44,0.015910129077376992,0.015512423582081557,Fisher-Schowalter
+597,shopping_net,"fraud_Towne, Greenholt and Koepp",2783,43,0.015910129077376992,0.01546687926040156,"Towne, Greenholt and Koepp"
+428,misc_net,fraud_Kuhn LLC,1736,27,0.013019513570917261,0.015415006185779808,Kuhn LLC
+435,misc_net,fraud_McGlynn-Heathcote,1815,28,0.013019513570917261,0.015301280082032234,McGlynn-Heathcote
+244,grocery_pos,"fraud_Schultz, Simonis and Little",3388,52,0.012636036374160572,0.015270528565772951,"Schultz, Simonis and Littl"
+434,misc_net,fraud_Mante Group,1758,27,0.013019513570917261,0.015232481892944955,Mante Group
+554,shopping_net,"fraud_Baumbach, Feeney and Morar",2766,42,0.015910129077376992,0.01520970443396291,"Baumbach, Feeney and Morar"
+595,shopping_net,"fraud_Streich, Dietrich and Barton",2769,42,0.015910129077376992,0.015193800246684454,"Streich, Dietrich and Bart"
+558,shopping_net,fraud_Fisher Inc,2849,43,0.015910129077376992,0.015120723264746592,Fisher Inc
+238,grocery_pos,fraud_Padberg-Welch,3443,52,0.012636036374160572,0.015033475483323752,Padberg-Welch
+447,misc_net,fraud_Volkman Ltd,1783,27,0.013019513570917261,0.015030245011732198,Volkman Ltd
+446,misc_net,"fraud_Tillman, Fritsch and Schmitt",1852,28,0.013019513570917261,0.015011245572280597,"Tillman, Fritsch and Schmi"
+571,shopping_net,"fraud_Kihn, Abernathy and Douglas",2745,41,0.015910129077376992,0.014970479053686361,"Kihn, Abernathy and Dougla"
+438,misc_net,fraud_Nader-Heller,1744,26,0.013019513570917261,0.014805830453954298,Nader-Heller
+439,misc_net,"fraud_Parisian, Schiller and Altenwerth",1815,27,0.013019513570917261,0.014779086870543983,"Parisian, Schiller and Alt"
+220,grocery_pos,fraud_Kiehn-Emmerich,3574,53,0.012636036374160572,0.014769625377630935,Kiehn-Emmerich
+552,shopping_net,fraud_Auer-West,2793,41,0.015910129077376992,0.014722092259847113,Auer-West
+403,misc_net,fraud_Bogisich-Homenick,1826,27,0.013019513570917261,0.014694678793920939,Bogisich-Homenick
+426,misc_net,fraud_Koelpin and Sons,1837,27,0.013019513570917261,0.014611229404796968,Koelpin and Sons
+221,grocery_pos,fraud_Kilback LLC,3616,53,0.012636036374160572,0.014602692044514547,Kilback LLC
+550,shopping_net,"fraud_Altenwerth, Cartwright and Koss",2755,40,0.015910129077376992,0.014567780352972924,"Altenwerth, Cartwright and"
+430,misc_net,fraud_Kuphal-Bartoletti,1843,27,0.013019513570917261,0.01456610980807603,Kuphal-Bartoletti
+569,shopping_net,fraud_Kassulke PLC,2766,40,0.015910129077376992,0.014511867727752164,Kassulke PLC
+230,grocery_pos,fraud_McDermott-Weimann,3513,51,0.012636036374160572,0.014465431397015237,McDermott-Weimann
+248,grocery_pos,fraud_Vandervort-Funk,3519,51,0.012636036374160572,0.014441448918877053,Vandervort-Funk
+442,misc_net,"fraud_Rohan, White and Aufderhar",1801,26,0.013019513570917261,0.014361889193630578,"Rohan, White and Aufderhar"
+223,grocery_pos,fraud_Koepp-Witting,3405,49,0.012636036374160572,0.014340543120518133,Koepp-Witting
+441,misc_net,"fraud_Rodriguez, Yost and Jenkins",1805,26,0.013019513570917261,0.014331732995848676,"Rodriguez, Yost and Jenkin"
+580,shopping_net,fraud_Mohr-Bayer,2807,40,0.015910129077376992,0.014307193982709908,Mohr-Bayer
+418,misc_net,fraud_Jaskolski-Vandervort,1751,25,0.013019513570917261,0.01420959014429591,Jaskolski-Vandervort
+584,shopping_net,"fraud_Reichert, Huels and Hoppe",2758,39,0.015910129077376992,0.014202593739586319,"Reichert, Huels and Hoppe"
+592,shopping_net,fraud_Schumm PLC,2770,39,0.015910129077376992,0.014143210072382473,Schumm PLC
+585,shopping_net,"fraud_Reichert, Rowe and Mraz",2703,38,0.015910129077376992,0.014124514059128684,"Reichert, Rowe and Mraz"
+234,grocery_pos,fraud_Murray-Smitham,3603,51,0.012636036374160572,0.014113854614479086,Murray-Smitham
+407,misc_net,fraud_Donnelly PLC,1843,26,0.013019513570917261,0.014051441768961259,Donnelly PLC
+560,shopping_net,fraud_Gerlach Inc,2740,38,0.015910129077376992,0.013940497502724542,Gerlach Inc
+246,grocery_pos,fraud_Stracke-Lemke,3514,49,0.012636036374160572,0.01390802535623023,Stracke-Lemke
+219,grocery_pos,fraud_Kiehn Inc,3465,48,0.012636036374160572,0.01381868264724153,Kiehn Inc
+423,misc_net,"fraud_Kerluke, Considine and Macejkovic",1753,24,0.013019513570917261,0.013654587888338763,"Kerluke, Considine and Mac"
+411,misc_net,fraud_Flatley-Durgan,1763,24,0.013019513570917261,0.01358129434089733,Flatley-Durgan
+247,grocery_pos,fraud_Strosin-Cruickshank,3457,47,0.012636036374160572,0.013568626268601646,Strosin-Cruickshank
+226,grocery_pos,fraud_Kunze Inc,3535,48,0.012636036374160572,0.013552573215245133,Kunze Inc
+440,misc_net,"fraud_Rippin, Kub and Mann",1768,24,0.013019513570917261,0.013544941839984864,"Rippin, Kub and Mann"
+448,misc_net,fraud_Welch Inc,1844,25,0.013019513570917261,0.013529810368874346,Welch Inc
+217,grocery_pos,fraud_Hudson-Ratke,3555,48,0.012636036374160572,0.01347841412788401,Hudson-Ratke
+201,grocery_pos,fraud_Bailey-Morar,3488,47,0.012636036374160572,0.01345139454777482,Bailey-Morar
+229,grocery_pos,"fraud_Lockman, West and Runte",3607,48,0.012636036374160572,0.013289345464638806,"Lockman, West and Runte"
+231,grocery_pos,fraud_Miller-Hauck,3533,47,0.012636036374160572,0.013284779421254075,Miller-Hauck
+599,shopping_net,"fraud_Zboncak, Rowe and Murazik",2886,38,0.015910129077376992,0.01325887907157994,"Zboncak, Rowe and Murazik"
+578,shopping_net,"fraud_Little, Gutmann and Lynch",2818,37,0.015910129077376992,0.013225158638703804,"Little, Gutmann and Lynch"
+218,grocery_pos,"fraud_Huel, Hammes and Witting",3553,47,0.012636036374160572,0.013212045890341105,"Huel, Hammes and Witting"
+444,misc_net,fraud_Schmitt Ltd,1822,24,0.013019513570917261,0.013164386762274572,Schmitt Ltd
+421,misc_net,fraud_Kerluke Inc,1827,24,0.013019513570917261,0.013130229038449261,Kerluke Inc
+228,grocery_pos,fraud_Lockman Ltd,3580,47,0.012636036374160572,0.01311510968408045,Lockman Ltd
+567,shopping_net,fraud_Hills-Witting,2866,37,0.015910129077376992,0.01301113044765263,Hills-Witting
+236,grocery_pos,"fraud_Osinski, Ledner and Leuschke",3559,46,0.012636036374160572,0.012917082163819638,"Osinski, Ledner and Leusch"
+249,grocery_pos,fraud_Wolf Inc,3499,45,0.012636036374160572,0.012854571724761338,Wolf Inc
+598,shopping_net,fraud_Volkman-Predovic,2771,35,0.015910129077376992,0.012745041068525845,Volkman-Predovic
+235,grocery_pos,fraud_O'Keefe-Hudson,3531,45,0.012636036374160572,0.012741284394771703,O'Keefe-Hudson
+449,misc_net,fraud_Zemlak Group,1888,24,0.013019513570917261,0.012727339716846945,Zemlak Group
+551,shopping_net,fraud_Ankunding LLC,2782,35,0.015910129077376992,0.012696395873607807,Ankunding LLC
+245,grocery_pos,"fraud_Schumm, Bauch and Ondricka",3559,45,0.012636036374160572,0.012643783448323601,"Schumm, Bauch and Ondricka"
+233,grocery_pos,"fraud_Mosciski, Gislason and Mertz",3482,44,0.012636036374160572,0.01263640525891012,"Mosciski, Gislason and Mer"
+401,misc_net,"fraud_Bernier, Volkman and Hoeger",1763,22,0.013019513570917261,0.012507757035475967,"Bernier, Volkman and Hoege"
+425,misc_net,fraud_Klocko LLC,1848,23,0.013019513570917261,0.01247533437222368,Klocko LLC
+205,grocery_pos,fraud_Bradtke PLC,3551,44,0.012636036374160572,0.012397590697731047,Bradtke PLC
+222,grocery_pos,fraud_Koepp-Parker,3481,43,0.012636036374160572,0.012360682389672174,Koepp-Parker
+208,grocery_pos,fraud_Cole PLC,3562,44,0.012636036374160572,0.012360350529059545,Cole PLC
+586,shopping_net,"fraud_Reichert, Shanahan and Hayes",2861,35,0.015910129077376992,0.012357653802005302,"Reichert, Shanahan and Hay"
+432,misc_net,fraud_Lebsack and Sons,1872,23,0.013019513570917261,0.012323504744975521,Lebsack and Sons
+212,grocery_pos,"fraud_Goldner, Kovacek and Abbott",3580,44,0.012636036374160572,0.012299892292776102,"Goldner, Kovacek and Abbot"
+237,grocery_pos,fraud_Pacocha-O'Reilly,3650,44,0.012636036374160572,0.012070294303310948,Pacocha-O'Reilly
+200,grocery_pos,fraud_Auer-Mosciski,3487,42,0.012636036374160572,0.012061222090163384,Auer-Mosciski
+402,misc_net,fraud_Block-Parisian,1867,22,0.013019513570917261,0.011846441971068494,Block-Parisian
+213,grocery_pos,fraud_Goodwin-Nitzsche,3598,42,0.012636036374160572,0.011699189734293146,Goodwin-Nitzsche
+414,misc_net,"fraud_Hayes, Marquardt and Dibbert",1812,21,0.013019513570917261,0.011664200500570987,"Hayes, Marquardt and Dibbe"
+410,misc_net,"fraud_Ferry, Lynch and Kautzer",1836,21,0.013019513570917261,0.011519602973704406,"Ferry, Lynch and Kautzer"
+211,grocery_pos,fraud_DuBuque LLC,3497,40,0.012636036374160572,0.011471671848044497,DuBuque LLC
+202,grocery_pos,fraud_Barton Inc,3497,40,0.012636036374160572,0.011471671848044497,Barton Inc
+582,shopping_net,fraud_Predovic Inc,2833,32,0.015910129077376992,0.01145278312572032,Predovic Inc
+203,grocery_pos,fraud_Bauch-Raynor,3597,41,0.012636036374160572,0.011431864657131743,Bauch-Raynor
+206,grocery_pos,fraud_Cartwright-Harris,3445,39,0.012636036374160572,0.011357857161471384,Cartwright-Harris
+443,misc_net,fraud_Ruecker Group,1784,20,0.013019513570917261,0.011306768236248262,Ruecker Group
+209,grocery_pos,fraud_Deckow-O'Conner,3558,40,0.012636036374160572,0.011280372782235116,Deckow-O'Conner
+225,grocery_pos,fraud_Kuhic Inc,3475,39,0.012636036374160572,0.011262546472004491,Kuhic Inc
+417,misc_net,fraud_Huel-Langworth,1887,21,0.013019513570917261,0.011223931231550945,Huel-Langworth
+243,grocery_pos,"fraud_Schoen, Kuphal and Nitzsche",3581,40,0.012636036374160572,0.011209889605383334,"Schoen, Kuphal and Nitzsch"
+429,misc_net,fraud_Kunde-Sanford,1813,20,0.013019513570917261,0.011135364013116428,Kunde-Sanford
+431,misc_net,fraud_Kuphal-Predovic,1814,20,0.013019513570917261,0.011129546163579794,Kuphal-Predovic
+242,grocery_pos,fraud_Schamberger-O'Keefe,3535,39,0.012636036374160572,0.01107664474206769,Schamberger-O'Keefe
+405,misc_net,fraud_Corwin-Gorczany,1864,20,0.013019513570917261,0.010846207411961165,Corwin-Gorczany
+445,misc_net,"fraud_Stehr, Jewess and Schimmel",1788,19,0.013019513570917261,0.010753152201849431,"Stehr, Jewess and Schimmel"
+207,grocery_pos,"fraud_Casper, Hand and Zulauf",3553,38,0.012636036374160572,0.010748317447964974,"Casper, Hand and Zulauf"
+215,grocery_pos,fraud_Heidenreich PLC,3408,36,0.012636036374160572,0.010622463978738898,Heidenreich PLC
+214,grocery_pos,fraud_Hackett-Lueilwitz,3626,38,0.012636036374160572,0.010537735812511018,Hackett-Lueilwitz
+240,grocery_pos,"fraud_Rowe, Batz and Goodwin",3483,36,0.012636036374160572,0.010400112653479222,"Rowe, Batz and Goodwin"
+241,grocery_pos,fraud_Rutherford-Mertz,3508,36,0.012636036374160572,0.010328049788640813,Rutherford-Mertz
+433,misc_net,"fraud_Lehner, Mosciski and King",1866,19,0.013019513570917261,0.010326526631277583,"Lehner, Mosciski and King"
+422,misc_net,fraud_Kerluke PLC,1774,18,0.013019513570917261,0.010299867319686087,Kerluke PLC
+227,grocery_pos,fraud_Kutch and Sons,3547,36,0.012636036374160572,0.01021760450710613,Kutch and Sons
+589,shopping_net,"fraud_Ruecker, Beer and Collier",2732,27,0.015910129077376992,0.010095696648212464,"Ruecker, Beer and Collier"
+204,grocery_pos,fraud_Bogisich Inc,3494,35,0.012636036374160572,0.010090039965892058,Bogisich Inc
+216,grocery_pos,"fraud_Heller, Gutmann and Zieme",3528,35,0.012636036374160572,0.009995480605682484,"Heller, Gutmann and Zieme"
+408,misc_net,fraud_Dooley-Thompson,1776,17,0.013019513570917261,0.009755837610390047,Dooley-Thompson
+224,grocery_pos,"fraud_Kovacek, Dibbert and Ondricka",3531,34,0.012636036374160572,0.009711815928784371,"Kovacek, Dibbert and Ondri"
+674,travel,fraud_Kovacek Ltd,1170,12,0.0027012808278285283,0.009661518175419569,Kovacek Ltd
+416,misc_net,fraud_Huel Ltd,1919,18,0.013019513570917261,0.009560154213517448,Huel Ltd
+643,shopping_pos,fraud_Stoltenberg-Beatty,3421,32,0.006342246174040053,0.009268453455667142,Stoltenberg-Beatty
+639,shopping_pos,"fraud_Quitzon, Green and Bashirian",3359,31,0.006342246174040053,0.00914548268788783,"Quitzon, Green and Bashiri"
+419,misc_net,"fraud_Johnson, Runolfsdottir and Mayer",1813,16,0.013019513570917261,0.00904440740046614,"Johnson, Runolfsdottir and"
+604,shopping_pos,fraud_Beier-Hyatt,3426,31,0.006342246174040053,0.008971702954453773,Beier-Hyatt
+624,shopping_pos,fraud_Kuhn LLC,3295,28,0.006342246174040053,0.008434234055200001,Kuhn LLC
+413,misc_net,fraud_Hamill-Daugherty,1783,14,0.013019513570917261,0.008126368219379568,Hamill-Daugherty
+420,misc_net,"fraud_Jones, Sawayn and Romaguera",1799,14,0.013019513570917261,0.008057899608789745,"Jones, Sawayn and Romaguer"
+641,shopping_pos,fraud_Sawayn PLC,3377,27,0.006342246174040053,0.00794772062623066,Sawayn PLC
+627,shopping_pos,fraud_Macejkovic-Lesch,3286,26,0.006342246174040053,0.007865984824986415,Macejkovic-Lesch
+602,shopping_pos,"fraud_Baumbach, Hodkiewicz and Walsh",3381,26,0.006342246174040053,0.007651314167596669,"Baumbach, Hodkiewicz and W"
+611,shopping_pos,fraud_Dooley Inc,3268,25,0.006342246174040053,0.007611111822269597,Dooley Inc
+601,shopping_pos,fraud_Barrows PLC,3271,25,0.006342246174040053,0.007604338361733611,Barrows PLC
+406,misc_net,fraud_Dach-Nader,1782,13,0.013019513570917261,0.007599336534055114,Dach-Nader
+608,shopping_pos,fraud_Conroy Ltd,3301,25,0.006342246174040053,0.007537260987181419,Conroy Ltd
+646,shopping_pos,fraud_Turner and Sons,3330,25,0.006342246174040053,0.007473534873878719,Turner and Sons
+193,grocery_net,"fraud_Swift, Bradtke and Marquardt",1278,10,0.0027059158031664363,0.007453259492247202,"Swift, Bradtke and Marquar"
+412,misc_net,"fraud_Greenfelder, Bartoletti and Davis",1831,13,0.013019513570917261,0.007406499925992608,"Greenfelder, Bartoletti an"
+632,shopping_pos,"fraud_Nitzsche, Kessler and Wolff",3299,24,0.006342246174040053,0.007247491796823773,"Nitzsche, Kessler and Wolf"
+638,shopping_pos,fraud_Pouros-Haag,3357,24,0.006342246174040053,0.007125896620597051,Pouros-Haag
+612,shopping_pos,"fraud_Douglas, Schneider and Turner",3263,23,0.006342246174040053,0.0070277206712471025,"Douglas, Schneider and Tur"
+615,shopping_pos,"fraud_Haley, Jewess and Bechtelar",3321,23,0.006342246174040053,0.0069085719431172185,"Haley, Jewess and Bechtela"
+647,shopping_pos,"fraud_Watsica, Haag and Considine",3337,23,0.006342246174040053,0.00687641100302706,"Watsica, Haag and Considin"
+634,shopping_pos,fraud_Pacocha-Bauch,3346,23,0.006342246174040053,0.0068584517171805005,Pacocha-Bauch
+619,shopping_pos,fraud_Jacobi and Sons,3349,23,0.006342246174040053,0.006852486116962599,Jacobi and Sons
+628,shopping_pos,fraud_Mayert Group,3362,23,0.006342246174040053,0.006826754655518199,Mayert Group
+616,shopping_pos,fraud_Hermann and Sons,3363,23,0.006342246174040053,0.006824783314295121,Hermann and Sons
+134,gas_transport,fraud_Parisian and Sons,3839,26,0.004107048358822868,0.006704926335588292,Parisian and Sons
+614,shopping_pos,"fraud_Goyette, Howell and Collier",3280,22,0.006342246174040053,0.006696516158995268,"Goyette, Howell and Collie"
+645,shopping_pos,fraud_Torphy-Goyette,3285,22,0.006342246174040053,0.006686624702335009,Torphy-Goyette
+626,shopping_pos,fraud_Lynch Ltd,3296,22,0.006342246174040053,0.006664966023970555,Lynch Ltd
+610,shopping_pos,fraud_Denesik and Sons,3296,22,0.006342246174040053,0.006664966023970555,Denesik and Sons
+636,shopping_pos,fraud_Pfeffer and Sons,3300,22,0.006342246174040053,0.006657124887471767,Pfeffer and Sons
+600,shopping_pos,"fraud_Bahringer, Schoen and Corkery",3313,22,0.006342246174040053,0.00663176812698623,"Bahringer, Schoen and Cork"
+607,shopping_pos,fraud_Botsford Ltd,3329,22,0.006342246174040053,0.006600823743774863,Botsford Ltd
+630,shopping_pos,fraud_Mohr Inc,3343,22,0.006342246174040053,0.006573983333547489,Mohr Inc
+621,shopping_pos,fraud_Jewess LLC,3360,22,0.006342246174040053,0.006541683415434684,Jewess LLC
+135,gas_transport,fraud_Prohaska-Murray,3809,25,0.004107048358822868,0.006500564040901071,Prohaska-Murray
+642,shopping_pos,"fraud_Schuppe, Nolan and Hoeger",3401,22,0.006342246174040053,0.00646507415521394,"Schuppe, Nolan and Hoeger"
+107,gas_transport,fraud_Conroy-Cruickshank,3722,23,0.004107048358822868,0.00612524982623817,Conroy-Cruickshank
+644,shopping_pos,"fraud_Swaniawski, Lowe and Robel",3383,20,0.006342246174040053,0.005924267762677004,"Swaniawski, Lowe and Robel"
+697,travel,fraud_Tromp Group,1128,7,0.0027012808278285283,0.005920299741679848,Tromp Group
+124,gas_transport,fraud_Koss and Sons,3758,22,0.004107048358822868,0.005808891870368658,Koss and Sons
+635,shopping_pos,fraud_Pagac LLC,3313,19,0.006342246174040053,0.0057527760379150325,Pagac LLC
+648,shopping_pos,"fraud_Weimann, Kuhic and Beahan",3340,19,0.006342246174040053,0.005707623435291862,"Weimann, Kuhic and Beahan"
+617,shopping_pos,fraud_Hickle Group,3366,19,0.006342246174040053,0.005664808025794577,Hickle Group
+637,shopping_pos,fraud_Pouros-Conroy,3375,19,0.006342246174040053,0.005650136580547915,Pouros-Conroy
+603,shopping_pos,"fraud_Baumbach, Strosin and Nicolas",3281,18,0.006342246174040053,0.005511453598758948,"Baumbach, Strosin and Nico"
+625,shopping_pos,fraud_Lesch Ltd,3314,18,0.006342246174040053,0.005458179442707676,Lesch Ltd
+623,shopping_pos,fraud_Kris-Padberg,3327,18,0.006342246174040053,0.005437474355822587,Kris-Padberg
+622,shopping_pos,fraud_Kihn Inc,3373,18,0.006342246174040053,0.005365454827930897,Kihn Inc
+620,shopping_pos,fraud_Jast-McDermott,3222,17,0.006342246174040053,0.0053083156584599655,Jast-McDermott
+143,gas_transport,fraud_Schmitt Inc,3747,20,0.004107048358822868,0.005305616021804597,Schmitt Inc
+633,shopping_pos,"fraud_Okuneva, Schneider and Rau",3300,17,0.006342246174040053,0.005186536652177648,"Okuneva, Schneider and Rau"
+116,gas_transport,"fraud_Greenholt, Jacobi and Gleason",3794,19,0.004107048358822868,0.004984772685126421,"Greenholt, Jacobi and Glea"
+111,gas_transport,"fraud_Eichmann, Bogan and Rodriguez",3798,19,0.004107048358822868,0.004979657474572161,"Eichmann, Bogan and Rodrig"
+122,gas_transport,"fraud_Jenkins, Hauck and Friesen",3817,19,0.004107048358822868,0.004955502894021518,"Jenkins, Hauck and Friesen"
+119,gas_transport,fraud_Heller-Langosh,3648,18,0.004107048358822868,0.004912141098154292,Heller-Langosh
+109,gas_transport,fraud_Cummerata-Jones,3860,19,0.004107048358822868,0.004901693140374314,Cummerata-Jones
+138,gas_transport,"fraud_Reilly, Heaney and Cole",3698,18,0.004107048358822868,0.004847473627141202,"Reilly, Heaney and Cole"
+127,gas_transport,fraud_Kuvalis Ltd,3700,18,0.004107048358822868,0.00484492232523218,Kuvalis Ltd
+640,shopping_pos,"fraud_Roob, Conn and Tremblay",3335,16,0.006342246174040053,0.004842569029811937,"Roob, Conn and Tremblay"
+102,gas_transport,fraud_Bernhard Inc,3741,18,0.004107048358822868,0.004793206153575185,Bernhard Inc
+649,shopping_pos,"fraud_Willms, Kris and Bergnaum",3408,16,0.006342246174040053,0.004741797211346638,"Willms, Kris and Bergnaum"
+103,gas_transport,fraud_Bins-Rice,3784,18,0.004107048358822868,0.004740140277003678,Bins-Rice
+125,gas_transport,fraud_Kutch LLC,3828,18,0.004107048358822868,0.004687042982658423,Kutch LLC
+609,shopping_pos,"fraud_Daugherty, Pouros and Beahan",3337,15,0.006342246174040053,0.004548799714112308,"Daugherty, Pouros and Beah"
+197,grocery_net,fraud_VonRueden Group,1282,6,0.0027059158031664363,0.004537331100084402,VonRueden Group
+147,gas_transport,"fraud_Tillman, Dickinson and Labadie",3746,17,0.004107048358822868,0.00452696433590283,"Tillman, Dickinson and Lab"
+167,grocery_net,"fraud_Johnston, Nikolaus and Maggio",1299,6,0.0027059158031664363,0.0044821955541934555,"Johnston, Nikolaus and Mag"
+105,gas_transport,"fraud_Christiansen, Goyette and Schamberger",3794,17,0.004107048358822868,0.004471162002024213,"Christiansen, Goyette and "
+190,grocery_net,fraud_Spinka-Welch,1305,6,0.0027059158031664363,0.004463054505563448,Spinka-Welch
+453,misc_pos,"fraud_Boehm, Predovic and Reinger",2219,10,0.0028235243855119357,0.0044339596543989624,"Boehm, Predovic and Reinge"
+665,travel,"fraud_Hahn, Douglas and Schowalter",1091,5,0.0027012808278285283,0.004424960606870573,"Hahn, Douglas and Schowalt"
+117,gas_transport,fraud_Harber Inc,3640,16,0.004107048358822868,0.004387888993551413,Harber Inc
+181,grocery_net,fraud_Roob LLC,1336,6,0.0027059158031664363,0.00436670722863276,Roob LLC
+172,grocery_net,fraud_Kutch-Hegmann,1340,6,0.0027059158031664363,0.0043545774863310025,Kutch-Hegmann
+141,gas_transport,"fraud_Schaefer, Maggio and Daugherty",3671,16,0.004107048358822868,0.0043518177766858354,"Schaefer, Maggio and Daugh"
+450,misc_pos,fraud_Balistreri-Nader,2270,10,0.0028235243855119357,0.004338545332722023,Balistreri-Nader
+613,shopping_pos,fraud_Friesen Inc,3281,14,0.006342246174040053,0.004328371670335405,Friesen Inc
+605,shopping_pos,"fraud_Bernhard, Grant and Langworth",3285,14,0.006342246174040053,0.004323256903221271,"Bernhard, Grant and Langwo"
+139,gas_transport,"fraud_Robel, Cummerata and Prosacco",3701,16,0.004107048358822868,0.004317470359348141,"Robel, Cummerata and Prosa"
+152,grocery_net,"fraud_Bernier, Streich and Jewess",1353,6,0.0027059158031664363,0.004315617054588192,"Bernier, Streich and Jewes"
+159,grocery_net,"fraud_Ferry, Reichel and DuBuque",1354,6,0.0027059158031664363,0.004312648954825753,"Ferry, Reichel and DuBuque"
+485,misc_pos,fraud_Spencer-Runolfsson,2285,10,0.0028235243855119357,0.004311258884088551,Spencer-Runolfsson
+130,gas_transport,fraud_Luettgen PLC,3719,16,0.004107048358822868,0.004297120931102981,Luettgen PLC
+655,travel,"fraud_Champlin, Rolfson and Connelly",1143,5,0.0027012808278285283,0.004239845601595215,"Champlin, Rolfson and Conn"
+115,gas_transport,fraud_Friesen-Stamm,3774,16,0.004107048358822868,0.004236113793464709,Friesen-Stamm
+680,travel,fraud_Lemke and Sons,1146,5,0.0027012808278285283,0.004229637305604216,Lemke and Sons
+100,gas_transport,fraud_Bartoletti-Wunsch,3793,16,0.004107048358822868,0.00421543920777865,Bartoletti-Wunsch
+465,misc_pos,fraud_Haley Group,2340,10,0.0028235243855119357,0.004214078868258686,Haley Group
+675,travel,fraud_Kozey-McDermott,1152,5,0.0027012808278285283,0.004209367478261065,Kozey-McDermott
+650,travel,fraud_Ankunding-Carroll,1155,5,0.0027012808278285283,0.004199305245245301,Ankunding-Carroll
+113,gas_transport,fraud_Erdman-Kertzmann,3839,16,0.004107048358822868,0.004166210925585754,Erdman-Kertzmann
+686,travel,fraud_Mosciski Group,1167,5,0.0027012808278285283,0.00415953281987597,Mosciski Group
+463,misc_pos,fraud_Gislason Group,2392,10,0.0028235243855119357,0.004126144638262918,Gislason Group
+690,travel,"fraud_Ritchie, Oberbrunner and Cremin",1178,5,0.0027012808278285283,0.0041237308941962855,"Ritchie, Oberbrunner and C"
+659,travel,"fraud_Eichmann, Hayes and Treutel",1180,5,0.0027012808278285283,0.004117287564674104,"Eichmann, Hayes and Treute"
+618,shopping_pos,fraud_Hudson-Grady,3273,13,0.006342246174040053,0.004042165614409726,Hudson-Grady
+110,gas_transport,fraud_Cummings LLC,3721,15,0.004107048358822868,0.004033160124543912,Cummings LLC
+458,misc_pos,"fraud_Cremin, Hamill and Reichel",2203,9,0.0028235243855119357,0.004030548171320535,"Cremin, Hamill and Reichel"
+44,entertainment,fraud_Stark-Batz,2702,11,0.0021821855301859335,0.004003646878307849,Stark-Batz
+299,health_fitness,fraud_Ziemann-Waters,2438,10,0.0015162240196347767,0.003999851222207832,Ziemann-Waters
+128,gas_transport,fraud_Ledner-Pfannerstill,3764,15,0.004107048358822868,0.003988277649037859,Ledner-Pfannerstill
+629,shopping_pos,fraud_Metz-Boehm,3323,13,0.006342246174040053,0.003983121419048789,Metz-Boehm
+487,misc_pos,fraud_Stiedemann Inc,2265,9,0.0028235243855119357,0.003924884752030103,Stiedemann Inc
+146,gas_transport,"fraud_Stroman, Hudson and Erdman",3829,15,0.004107048358822868,0.003922296980372178,"Stroman, Hudson and Erdman"
+140,gas_transport,fraud_Rodriguez Group,3843,15,0.004107048358822868,0.0039083704884307095,Rodriguez Group
+496,misc_pos,fraud_Wisozk and Sons,2275,9,0.0028235243855119357,0.003908358921495239,Wisozk and Sons
+108,gas_transport,fraud_Corwin-Collins,3853,15,0.004107048358822868,0.0038984833887888404,Corwin-Collins
+131,gas_transport,fraud_Marks Inc,3643,14,0.004107048358822868,0.0038500413667866117,Marks Inc
+466,misc_pos,fraud_Halvorson Group,2312,9,0.0028235243855119357,0.0038484048252699805,Halvorson Group
+154,grocery_net,fraud_Collier Inc,1290,5,0.0027059158031664363,0.0037917925038249236,Collier Inc
+185,grocery_net,fraud_Shields Inc,1292,5,0.0027059158031664363,0.003786344526089543,Shields Inc
+166,grocery_net,fraud_Jaskolski-Dibbert,1292,5,0.0027059158031664363,0.003786344526089543,Jaskolski-Dibbert
+14,entertainment,fraud_Effertz LLC,2600,10,0.0021821855301859335,0.003784525390006886,Effertz LLC
+121,gas_transport,fraud_Huels-Nolan,3714,14,0.004107048358822868,0.0037783704341589636,Huels-Nolan
+161,grocery_net,fraud_Gutmann Ltd,1300,5,0.0027059158031664363,0.003764708271654746,Gutmann Ltd
+176,grocery_net,fraud_Murray Ltd,1315,5,0.0027059158031664363,0.0037247997034039887,Murray Ltd
+132,gas_transport,fraud_Mraz-Herzog,3788,14,0.004107048358822868,0.003706457005113757,Mraz-Herzog
+106,gas_transport,"fraud_Connelly, Reichert and Fritsch",3788,14,0.004107048358822868,0.003706457005113757,"Connelly, Reichert and Fri"
+516,personal_care,fraud_Hills-Boyer,2663,10,0.002234376015729021,0.0037001221865989513,Hills-Boyer
+189,grocery_net,fraud_Spinka Inc,1328,5,0.0027059158031664363,0.0036908904624066135,Spinka Inc
+133,gas_transport,"fraud_Olson, Becker and Koch",3806,14,0.004107048358822868,0.003689376558085583,"Olson, Becker and Koch"
+150,grocery_net,"fraud_Adams, Kovacek and Kuhlman",1354,5,0.0027059158031664363,0.0036248910456097966,"Adams, Kovacek and Kuhlman"
+631,shopping_pos,fraud_Morissette PLC,3391,12,0.006342246174040053,0.003619084679863651,Morissette PLC
+284,health_fitness,fraud_Ratke and Sons,2433,9,0.0015162240196347767,0.0036129579162903582,Ratke and Sons
+692,travel,fraud_Satterfield-Lowe,1095,4,0.0027012808278285283,0.003573328939567241,Satterfield-Lowe
+464,misc_pos,fraud_Gutmann-Upton,2218,8,0.0028235243855119357,0.003573059723274889,Gutmann-Upton
+489,misc_pos,fraud_Thiel PLC,2232,8,0.0028235243855119357,0.0035516091074404774,Thiel PLC
+467,misc_pos,fraud_Herman Inc,2238,8,0.0028235243855119357,0.003542494627267405,Herman Inc
+480,misc_pos,fraud_Reynolds-Schinner,2240,8,0.0028235243855119357,0.0035394668540817066,Reynolds-Schinner
+118,gas_transport,fraud_Harris Inc,3700,13,0.004107048358822868,0.00352913285154797,Harris Inc
+493,misc_pos,"fraud_Turner, Ruecker and Parisian",2250,8,0.0028235243855119357,0.0035244052930005075,"Turner, Ruecker and Parisi"
+460,misc_pos,fraud_Dickinson-Rempel,2255,8,0.0028235243855119357,0.003516922479214944,Dickinson-Rempel
+34,entertainment,"fraud_Nicolas, Hills and McGlynn",2806,10,0.0021821855301859335,0.0035162486417820347,"Nicolas, Hills and McGlynn"
+455,misc_pos,fraud_Bruen-Yost,2266,8,0.0028235243855119357,0.0035005716139269623,Bruen-Yost
+142,gas_transport,"fraud_Schaefer, McGlynn and Bosco",3742,13,0.004107048358822868,0.0034905530546283934,"Schaefer, McGlynn and Bosc"
+456,misc_pos,fraud_Buckridge PLC,2278,8,0.0028235243855119357,0.003482906828659038,Buckridge PLC
+148,gas_transport,fraud_Torp-Labadie,3769,13,0.004107048358822868,0.0034661940645857553,Torp-Labadie
+145,gas_transport,"fraud_Streich, Hansen and Veum",3785,13,0.004107048358822868,0.0034519188766749774,"Streich, Hansen and Veum"
+484,misc_pos,fraud_Smith-Stokes,2306,8,0.0028235243855119357,0.003442374247111884,Smith-Stokes
+26,entertainment,fraud_Kassulke Inc,2601,9,0.0021821855301859335,0.0034128909859380205,Kassulke Inc
+457,misc_pos,fraud_Christiansen-Gusikowski,2330,8,0.0028235243855119357,0.0034083754891157175,Christiansen-Gusikowski
+123,gas_transport,fraud_Kling Inc,3841,13,0.004107048358822868,0.0034028685196351906,Kling Inc
+606,shopping_pos,"fraud_Bins, Balistreri and Beatty",3321,11,0.006342246174040053,0.0034008256700976337,"Bins, Balistreri and Beatt"
+653,travel,fraud_Boyer-Haley,1156,4,0.0027012808278285283,0.003399783505400361,Boyer-Haley
+468,misc_pos,fraud_Hermann-Gaylord,2338,8,0.0028235243855119357,0.0033971913201604567,Hermann-Gaylord
+524,personal_care,fraud_Langworth LLC,2624,9,0.002234376015729021,0.0033859903089474676,Langworth LLC
+685,travel,"fraud_Monahan, Hermann and Johns",1162,4,0.0027012808278285283,0.003383619716943624,"Monahan, Hermann and Johns"
+112,gas_transport,fraud_Emard Inc,3867,13,0.004107048358822868,0.0033805658774596135,Emard Inc
+486,misc_pos,fraud_Stamm-Rodriguez,2364,8,0.0028235243855119357,0.0033613443338275945,Stamm-Rodriguez
+18,entertainment,fraud_Gibson-Deckow,2647,9,0.0021821855301859335,0.0033557402814046572,Gibson-Deckow
+508,personal_care,fraud_Crooks and Sons,2649,9,0.002234376015729021,0.003355197381437942,Crooks and Sons
+72,food_dining,fraud_Kilback LLC,2646,9,0.0015742868622250902,0.0033348247218581606,Kilback LLC
+660,travel,fraud_Fritsch LLC,1195,4,0.0027012808278285283,0.003297396202921122,Fritsch LLC
+664,travel,"fraud_Hagenes, Hermann and Stroman",1199,4,0.0027012808278285283,0.0032872425579544675,"Hagenes, Hermann and Strom"
+129,gas_transport,"fraud_Lind, Huel and McClure",3714,12,0.004107048358822868,0.003253986585181512,"Lind, Huel and McClure"
+1,entertainment,fraud_Abshire PLC,2733,9,0.0021821855301859335,0.003253871709501798,Abshire PLC
+281,health_fitness,"fraud_Ledner, Hartmann and Feest",2436,8,0.0015162240196347767,0.003214362145884652,"Ledner, Hartmann and Feest"
+652,travel,fraud_Block-Hauck,1229,4,0.0027012808278285283,0.003213038437007414,Block-Hauck
+656,travel,fraud_Corwin-Romaguera,1231,4,0.0027012808278285283,0.003208210430340235,Corwin-Romaguera
+104,gas_transport,fraud_Brekke and Sons,3781,12,0.004107048358822868,0.003197811088864284,Brekke and Sons
+370,kids_pets,fraud_Hilpert-Conroy,3416,11,0.0018842637196375893,0.003182146294642707,Hilpert-Conroy
+120,gas_transport,fraud_Huels-Hahn,3835,12,0.004107048358822868,0.003153927531355092,Huels-Hahn
+163,grocery_net,fraud_Heller-Abshire,1255,4,0.0027059158031664363,0.003151728103554719,Heller-Abshire
+500,personal_care,fraud_Abbott-Steuber,2529,8,0.002234376015729021,0.00312797170086455,Abbott-Steuber
+364,kids_pets,fraud_Fahey Inc,3171,10,0.0018842637196375893,0.0031147741889219686,Fahey Inc
+158,grocery_net,fraud_Emmerich-Luettgen,1274,4,0.0027059158031664363,0.0031081452549611673,Emmerich-Luettgen
+545,personal_care,fraud_Watsica LLC,2549,8,0.002234376015729021,0.003104355455482409,Watsica LLC
+199,grocery_net,fraud_Wuckert-Walter,1286,4,0.0027059158031664363,0.003081234906433365,Wuckert-Walter
+506,personal_care,fraud_Bins-Howell,2573,8,0.002234376015729021,0.003076482454759784,Bins-Howell
+517,personal_care,fraud_Homenick LLC,2578,8,0.002234376015729021,0.0030707384621258037,Homenick LLC
+162,grocery_net,"fraud_Harris, Gusikowski and Heaney",1294,4,0.0027059158031664363,0.0030635520662242784,"Harris, Gusikowski and Hea"
+153,grocery_net,fraud_Cassin-Harvey,1296,4,0.0027059158031664363,0.0030591630231494586,Cassin-Harvey
+471,misc_pos,fraud_Keeling-Crist,2290,7,0.0028235243855119357,0.003047009388515144,Keeling-Crist
+488,misc_pos,"fraud_Terry, Johns and Bins",2295,7,0.0028235243855119357,0.003040648199812607,"Terry, Johns and Bins"
+497,misc_pos,fraud_Wiza LLC,2305,7,0.0028235243855119357,0.0030280051719547584,Wiza LLC
+473,misc_pos,"fraud_Lehner, Reichert and Mills",2311,7,0.0028235243855119357,0.0030204696966201552,"Lehner, Reichert and Mills"
+525,personal_care,fraud_Leffler-Goldner,2626,8,0.002234376015729021,0.003016668232418526,Leffler-Goldner
+495,misc_pos,"fraud_Wintheiser, Dietrich and Schimmel",2319,7,0.0028235243855119357,0.0030104805450811055,"Wintheiser, Dietrich and S"
+89,food_dining,"fraud_Schneider, Hayes and Nikolaus",2610,8,0.0015742868622250902,0.00301012128642897,"Schneider, Hayes and Nikol"
+9,entertainment,fraud_Dare-Marvin,2641,8,0.0021821855301859335,0.002998255583005689,Dare-Marvin
+6,entertainment,"fraud_Cormier, Stracke and Thiel",2648,8,0.0021821855301859335,0.0029906181051741606,"Cormier, Stracke and Thiel"
+194,grocery_net,"fraud_Towne, Walker and Borer",1332,4,0.0027059158031664363,0.0029822566901652543,"Towne, Walker and Borer"
+169,grocery_net,fraud_Kling-Grant,1336,4,0.0027059158031664363,0.0029739495684656296,Kling-Grant
+499,misc_pos,"fraud_Yost, Block and Koepp",2355,7,0.0028235243855119357,0.0029663350055198347,"Yost, Block and Koepp"
+43,entertainment,fraud_Spencer PLC,2672,8,0.0021821855301859335,0.002964725307726765,Spencer PLC
+137,gas_transport,"fraud_Raynor, Reinger and Hagenes",3763,11,0.004107048358822868,0.00295384541441426,"Raynor, Reinger and Hagene"
+49,entertainment,fraud_Wilkinson Ltd,2688,8,0.0021821855301859335,0.0029477111022304854,Wilkinson Ltd
+7,entertainment,fraud_Cruickshank-Mills,2692,8,0.0021821855301859335,0.002943488020422132,Cruickshank-Mills
+101,gas_transport,fraud_Berge LLC,3786,11,0.004107048358822868,0.0029363625414004857,Berge LLC
+38,entertainment,fraud_Reichel Inc,2726,8,0.0021821855301859335,0.002908074505668292,Reichel Inc
+289,health_fitness,"fraud_Runte, Green and Emard",2410,7,0.0015162240196347767,0.002849251952973497,"Runte, Green and Emard"
+362,kids_pets,"fraud_Dare, Casper and Bartoletti",3169,9,0.0018842637196375893,0.002810775886192646,"Dare, Casper and Bartolett"
+373,kids_pets,fraud_Larkin Ltd,3171,9,0.0018842637196375893,0.002809057282777059,Larkin Ltd
+114,gas_transport,fraud_Friesen-D'Amore,3640,10,0.004107048358822868,0.0027836109186851034,Friesen-D'Amore
+301,home,"fraud_Bahringer, Bergnaum and Quitzon",3552,10,0.001514978217814989,0.0027797091516378694,"Bahringer, Bergnaum and Qu"
+390,kids_pets,"fraud_Streich, Rolfson and Wilderman",3213,9,0.0018842637196375893,0.0027734459317729425,"Streich, Rolfson and Wilde"
+339,home,"fraud_Schiller, Blanda and Johnson",3585,10,0.001514978217814989,0.0027548162338620077,"Schiller, Blanda and Johns"
+356,kids_pets,fraud_Bode-Schuster,3257,9,0.0018842637196375893,0.002737094540352624,Bode-Schuster
+149,gas_transport,"fraud_Zieme, Bode and Dooley",3720,10,0.004107048358822868,0.002725315402063426,"Zieme, Bode and Dooley"
+657,travel,"fraud_Douglas, DuBuque and McKenzie",1101,3,0.0027012808278285283,0.002722837704232184,"Douglas, DuBuque and McKen"
+536,personal_care,fraud_Reichel LLC,2560,7,0.002234376015729021,0.0027155780457040987,Reichel LLC
+542,personal_care,fraud_Shanahan-Lehner,2563,7,0.002234376015729021,0.002712518813959032,Shanahan-Lehner
+478,misc_pos,"fraud_Monahan, Bogisich and Ledner",2223,6,0.0028235243855119357,0.0027044134475037425,"Monahan, Bogisich and Ledn"
+538,personal_care,fraud_Rolfson-Kunde,2578,7,0.002234376015729021,0.0026973254673535855,Rolfson-Kunde
+671,travel,fraud_Kessler Group,1119,3,0.0027012808278285283,0.0026826317332098873,Kessler Group
+511,personal_care,fraud_Erdman-Ebert,2599,7,0.002234376015729021,0.002676338496321935,Erdman-Ebert
+534,personal_care,fraud_Parker-Kunde,2603,7,0.002234376015729021,0.0026723779510073632,Parker-Kunde
+521,personal_care,fraud_Kozey-Kuhlman,2606,7,0.002234376015729021,0.0026694152260062463,Kozey-Kuhlman
+503,personal_care,fraud_Baumbach Ltd,2607,7,0.002234376015729021,0.002668429110296602,Baumbach Ltd
+672,travel,fraud_Kessler Inc,1130,3,0.0027012808278285283,0.0026586407177096364,Kessler Inc
+681,travel,fraud_Little-Gleichner,1131,3,0.0027012808278285283,0.002656480977077866,Little-Gleichner
+507,personal_care,"fraud_Bradtke, Torp and Bahringer",2623,7,0.002234376015729021,0.0026527497618703275,"Bradtke, Torp and Bahringe"
+23,entertainment,fraud_Howe PLC,2629,7,0.0021821855301859335,0.002645004966294831,Howe PLC
+514,personal_care,fraud_Gottlieb-Hansen,2631,7,0.002234376015729021,0.0026449789826337978,Gottlieb-Hansen
+41,entertainment,"fraud_Schroeder, Hauck and Treutel",2632,7,0.0021821855301859335,0.0026421004952483867,"Schroeder, Hauck and Treut"
+15,entertainment,"fraud_Effertz, Welch and Schowalter",2639,7,0.0021821855301859335,0.0026353481391086504,"Effertz, Welch and Schowal"
+472,misc_pos,fraud_Kemmer-Buckridge,2286,6,0.0028235243855119357,0.0026330060513626127,Kemmer-Buckridge
+676,travel,fraud_Kris-Kertzmann,1143,3,0.0027012808278285283,0.002630835143027235,Kris-Kertzmann
+12,entertainment,fraud_Donnelly LLC,2647,7,0.0021821855301859335,0.002627673299242298,Donnelly LLC
+654,travel,fraud_Breitenberg LLC,1146,3,0.0027012808278285283,0.002624500869007105,Breitenberg LLC
+679,travel,fraud_Leannon-Nikolaus,1146,3,0.0027012808278285283,0.002624500869007105,Leannon-Nikolaus
+11,entertainment,fraud_Dibbert-Green,2661,7,0.0021821855301859335,0.002614349349155593,Dibbert-Green
+31,entertainment,fraud_Larson-Moen,2662,7,0.0021821855301859335,0.0026134028070306276,Larson-Moen
+544,personal_care,"fraud_Walter, Hettinger and Kessler",2664,7,0.002234376015729021,0.0026134000005690675,"Walter, Hettinger and Kess"
+547,personal_care,fraud_Yost-Rogahn,2668,7,0.002234376015729021,0.002609623410972869,Yost-Rogahn
+678,travel,"fraud_Larson, Quitzon and Spencer",1155,3,0.0027012808278285283,0.002605679747237333,"Larson, Quitzon and Spence"
+518,personal_care,fraud_Kautzer and Sons,2680,7,0.002234376015729021,0.0025983588494866553,Kautzer and Sons
+2,entertainment,fraud_Bauch-Blanda,2686,7,0.0021821855301859335,0.002590889645735317,Bauch-Blanda
+661,travel,fraud_Gislason Group,1164,3,0.0027012808278285283,0.002587126647771244,Gislason Group
+476,misc_pos,fraud_McDermott-Rice,2349,6,0.0028235243855119357,0.002565272535137278,McDermott-Rice
+42,entertainment,fraud_Schuppe LLC,2722,7,0.0021821855301859335,0.002557837899723102,Schuppe LLC
+35,entertainment,fraud_Nienow PLC,2728,7,0.0021821855301859335,0.002552411086640238,Nienow PLC
+683,travel,"fraud_McLaughlin, Armstrong and Koepp",1183,3,0.0027012808278285283,0.00254881378237167,"McLaughlin, Armstrong and "
+651,travel,fraud_Bednar Inc,1190,3,0.0027012808278285283,0.0025349830099091883,Bednar Inc
+368,kids_pets,fraud_Hammes-Beatty,3150,8,0.0018842637196375893,0.0025195158067580796,Hammes-Beatty
+387,kids_pets,fraud_Schimmel-Olson,3159,8,0.0018842637196375893,0.0025125579539624914,Schimmel-Olson
+658,travel,fraud_Ebert-Daugherty,1203,3,0.0027012808278285283,0.002509691544729741,Ebert-Daugherty
+326,home,fraud_Lynch-Wisozk,3550,9,0.001514978217814989,0.0025072596772004107,Lynch-Wisozk
+359,kids_pets,fraud_Brown Inc,3174,8,0.0018842637196375893,0.0025010465400011482,Brown Inc
+136,gas_transport,"fraud_Raynor, Feest and Miller",3673,9,0.004107048358822868,0.0024942233861336566,"Raynor, Feest and Miller"
+363,kids_pets,fraud_Daugherty LLC,3201,8,0.0018842637196375893,0.002480589631009924,Daugherty LLC
+392,kids_pets,fraud_Ullrich Ltd,3202,8,0.0018842637196375893,0.002479838392478425,Ullrich Ltd
+668,travel,fraud_Hyatt-Blick,1219,3,0.0027012808278285283,0.0024792479778490166,Hyatt-Blick
+126,gas_transport,"fraud_Kutch, Hermiston and Farrell",3725,9,0.004107048358822868,0.002460314989773147,"Kutch, Hermiston and Farre"
+257,health_fitness,"fraud_Dare, Fritsch and Zboncak",2423,6,0.0015162240196347767,0.0024382173610636056,"Dare, Fritsch and Zboncak"
+352,kids_pets,fraud_Beer-Jast,3279,8,0.0018842637196375893,0.0024233283136915534,Beer-Jast
+285,health_fitness,fraud_Reilly and Sons,2439,6,0.0015162240196347767,0.0024228524623723818,Reilly and Sons
+294,health_fitness,fraud_Thompson-Gleason,2439,6,0.0015162240196347767,0.0024228524623723818,Thompson-Gleason
+386,kids_pets,fraud_Schaefer Ltd,3290,8,0.0018842637196375893,0.002415465006478985,Schaefer Ltd
+384,kids_pets,"fraud_Romaguera, Wehner and Tromp",3302,8,0.0018842637196375893,0.0024069448477259726,"Romaguera, Wehner and Trom"
+179,grocery_net,fraud_Pfeffer LLC,1260,3,0.0027059158031664363,0.0024048467502328264,Pfeffer LLC
+374,kids_pets,fraud_Little Ltd,3312,8,0.0018842637196375893,0.002399890495886213,Little Ltd
+187,grocery_net,fraud_Smitham-Boehm,1265,3,0.0027059158031664363,0.0023960377877777607,Smitham-Boehm
+254,health_fitness,"fraud_Conroy, Balistreri and Gorczany",2472,6,0.0015162240196347767,0.002391766097186422,"Conroy, Balistreri and Gor"
+180,grocery_net,fraud_Rempel PLC,1281,3,0.0027059158031664363,0.002368277755479105,Rempel PLC
+173,grocery_net,fraud_McCullough Group,1285,3,0.0027059158031664363,0.0023614379641275405,McCullough Group
+292,health_fitness,fraud_Shields-Wunsch,2512,6,0.0015162240196347767,0.002355138745008988,Shields-Wunsch
+171,grocery_net,fraud_Kutch Group,1289,3,0.0027059158031664363,0.0023546375668226376,Kutch Group
+528,personal_care,"fraud_Medhurst, Cartwright and Ebert",2547,6,0.002234376015729021,0.0023511286745647535,"Medhurst, Cartwright and E"
+165,grocery_net,fraud_Hintz-Bruen,1293,3,0.0027059158031664363,0.0023478762242043387,Hintz-Bruen
+323,home,"fraud_Koss, Hansen and Lueilwitz",3383,8,0.001514978217814989,0.002340366873896497,"Koss, Hansen and Lueilwitz"
+186,grocery_net,fraud_Skiles-Ankunding,1298,3,0.0027059158031664363,0.0023394789558774274,Skiles-Ankunding
+515,personal_care,"fraud_Hahn, Bahringer and McLaughlin",2570,6,0.002234376015729021,0.0023308755062070793,"Hahn, Bahringer and McLaug"
+527,personal_care,fraud_Marvin-Lind,2575,6,0.002234376015729021,0.0023265187295599633,Marvin-Lind
+73,food_dining,"fraud_Konopelski, Schneider and Hartmann",2556,6,0.0015742868622250902,0.0023183089933066676,"Konopelski, Schneider and "
+53,food_dining,fraud_Bahringer-Streich,2558,6,0.0015742868622250902,0.0023165645922582803,Bahringer-Streich
+182,grocery_net,fraud_Rowe-Vandervort,1313,3,0.0027059158031664363,0.0023146437228001725,Rowe-Vandervort
+75,food_dining,fraud_Kuhn Group,2563,6,0.0015742868622250902,0.002312215053031359,Kuhn Group
+183,grocery_net,fraud_Runolfsson and Sons,1315,3,0.0027059158031664363,0.0023113721415665327,Runolfsson and Sons
+52,food_dining,"fraud_Bahringer, Osinski and Block",2569,6,0.0015742868622250902,0.0023070171173557546,"Bahringer, Osinski and Blo"
+196,grocery_net,"fraud_Tromp, Kerluke and Glover",1318,3,0.0027059158031664363,0.0023064820735660394,"Tromp, Kerluke and Glover"
+184,grocery_net,"fraud_Rutherford, Homenick and Bergstrom",1320,3,0.0027059158031664363,0.002303233507265242,"Rutherford, Homenick and B"
+86,food_dining,fraud_Powlowski-Weimann,2581,6,0.0015742868622250902,0.002296691042977437,Powlowski-Weimann
+543,personal_care,fraud_Sporer-Keebler,2610,6,0.002234376015729021,0.002296471439694798,Sporer-Keebler
+175,grocery_net,"fraud_Morissette, Weber and Wiegand",1327,3,0.0027059158031664363,0.002291935234980129,"Morissette, Weber and Wieg"
+304,home,fraud_Botsford PLC,3470,8,0.001514978217814989,0.002283332723188095,Botsford PLC
+502,personal_care,fraud_Bartoletti and Sons,2630,6,0.002234376015729021,0.002279647473103627,Bartoletti and Sons
+491,misc_pos,fraud_Towne LLC,2218,5,0.0028235243855119357,0.0022788405688314037,Towne LLC
+329,home,"fraud_Moore, Williamson and Emmerich",3488,8,0.001514978217814989,0.0022718778767506966,"Moore, Williamson and Emme"
+348,home,"fraud_Wuckert, Wintheiser and Friesen",3494,8,0.001514978217814989,0.0022680850923153862,"Wuckert, Wintheiser and Fr"
+322,home,"fraud_Kling, Howe and Schneider",3495,8,0.001514978217814989,0.00226745419242879,"Kling, Howe and Schneider"
+61,food_dining,"fraud_Feil, Hilpert and Koss",2624,6,0.0015742868622250902,0.0022604363752652384,"Feil, Hilpert and Koss"
+346,home,"fraud_Windler, Goodwin and Kovacek",3507,8,0.001514978217814989,0.0022599106797287216,"Windler, Goodwin and Kovac"
+33,entertainment,fraud_Morissette LLC,2660,6,0.0021821855301859335,0.0022529777366009393,Morissette LLC
+77,food_dining,"fraud_Kutch, Steuber and Gerhold",2639,6,0.0015742868622250902,0.002248057205630708,"Kutch, Steuber and Gerhold"
+65,food_dining,fraud_Harris Group,2644,6,0.0015742868622250902,0.0022439608914805063,Harris Group
+501,personal_care,fraud_Auer LLC,2674,6,0.002234376015729021,0.0022434886811726396,Auer LLC
+21,entertainment,fraud_Heaney-Marquardt,2681,6,0.0021821855301859335,0.0022359649597334026,Heaney-Marquardt
+479,misc_pos,"fraud_Nienow, Ankunding and Collier",2268,5,0.0028235243855119357,0.002230723158171957,"Nienow, Ankunding and Coll"
+338,home,fraud_Renner Ltd,3570,8,0.001514978217814989,0.0022211165726925067,Renner Ltd
+62,food_dining,"fraud_Graham, Hegmann and Hammes",2673,6,0.0015742868622250902,0.0022204935759908076,"Graham, Hegmann and Hammes"
+13,entertainment,fraud_Douglas-White,2703,6,0.0021821855301859335,0.002218415466649516,Douglas-White
+305,home,fraud_Botsford and Sons,3576,8,0.001514978217814989,0.0022174912464041074,Botsford and Sons
+88,food_dining,fraud_Runte-Mohr,2684,6,0.0015742868622250902,0.0022117200740741773,Runte-Mohr
+300,home,fraud_Altenwerth-Kilback,3594,8,0.001514978217814989,0.002206685929015024,Altenwerth-Kilback
+378,kids_pets,fraud_Nolan-Williamson,3160,7,0.0018842637196375893,0.002205038764406061,Nolan-Williamson
+490,misc_pos,fraud_Torp-Lemke,2302,5,0.0028235243855119357,0.002199147559763195,Torp-Lemke
+389,kids_pets,fraud_Schoen-Quigley,3201,7,0.0018842637196375893,0.002177651127526131,Schoen-Quigley
+10,entertainment,fraud_Dibbert and Sons,2758,6,0.0021821855301859335,0.0021757237764235804,Dibbert and Sons
+391,kids_pets,fraud_Swift PLC,3246,7,0.0018842637196375893,0.002148364127903096,Swift PLC
+462,misc_pos,fraud_Flatley Group,2366,5,0.0028235243855119357,0.0021420731705398192,Flatley Group
+350,kids_pets,fraud_Barton LLC,3261,7,0.0018842637196375893,0.0021387760702064147,Barton LLC
+393,kids_pets,fraud_Waelchi Inc,3262,7,0.0018842637196375893,0.0021381399083770848,Waelchi Inc
+385,kids_pets,fraud_Ruecker-Mayert,3273,7,0.0018842637196375893,0.002131167024003486,Ruecker-Mayert
+380,kids_pets,"fraud_Pouros, Walker and Spencer",3279,7,0.0018842637196375893,0.002127382767672021,"Pouros, Walker and Spencer"
+306,home,fraud_Champlin and Sons,3344,7,0.001514978217814989,0.0020765092397739544,Champlin and Sons
+276,health_fitness,fraud_Jacobi Inc,2405,5,0.0015162240196347767,0.0020565358890073764,Jacobi Inc
+251,health_fitness,fraud_Bahringer Group,2435,5,0.0015162240196347767,0.0020321981861788864,Bahringer Group
+341,home,fraud_Skiles LLC,3458,7,0.001514978217814989,0.0020099769032550585,Skiles LLC
+303,home,fraud_Berge-Ullrich,3465,7,0.001514978217814989,0.00200603024453899,Berge-Ullrich
+510,personal_care,fraud_Emmerich-Rau,2510,5,0.002234376015729021,0.00200131708872525,Emmerich-Rau
+531,personal_care,fraud_Nader-Maggio,2540,5,0.002234376015729021,0.0019785748490806446,Nader-Maggio
+520,personal_care,fraud_Kirlin and Sons,2552,5,0.002234376015729021,0.0019696220217092393,Kirlin and Sons
+513,personal_care,fraud_Friesen-Ortiz,2571,5,0.002234376015729021,0.0019556112323372904,Friesen-Ortiz
+541,personal_care,"fraud_Schoen, Nienow and Bauch",2571,5,0.002234376015729021,0.0019556112323372904,"Schoen, Nienow and Bauch"
+537,personal_care,"fraud_Roberts, Ryan and Smith",2575,5,0.002234376015729021,0.0019526869538590288,"Roberts, Ryan and Smith"
+540,personal_care,fraud_Schmeler-Howe,2575,5,0.002234376015729021,0.0019526869538590288,Schmeler-Howe
+274,health_fitness,fraud_Hirthe-Beier,2541,5,0.0015162240196347767,0.0019506332457264208,Hirthe-Beier
+94,food_dining,"fraud_Turner, Ziemann and Lehner",2554,5,0.0015742868622250902,0.0019432662721260397,"Turner, Ziemann and Lehner"
+535,personal_care,fraud_Prosacco LLC,2589,5,0.002234376015729021,0.0019425204914737457,Prosacco LLC
+546,personal_care,fraud_Wilkinson LLC,2589,5,0.002234376015729021,0.0019425204914737457,Wilkinson LLC
+344,home,fraud_Terry Ltd,3583,7,0.001514978217814989,0.001941758843817947,Terry Ltd
+144,gas_transport,fraud_Sporer Inc,3719,7,0.004107048358822868,0.0019404830677879777,Sporer Inc
+79,food_dining,"fraud_Langosh, Wintheiser and Hyatt",2569,5,0.0015742868622250902,0.0019323449554973808,"Langosh, Wintheiser and Hy"
+30,entertainment,"fraud_Larkin, Stracke and Greenfelder",2602,5,0.0021821855301859335,0.0019312429877937057,"Larkin, Stracke and Greenf"
+512,personal_care,fraud_Erdman-Schaden,2605,5,0.002234376015729021,0.0019310305366258419,Erdman-Schaden
+530,personal_care,fraud_Morissette-Schaefer,2614,5,0.002234376015729021,0.001924626971839684,Morissette-Schaefer
+539,personal_care,fraud_Schiller Ltd,2625,5,0.002234376015729021,0.0019168578354395972,Schiller Ltd
+74,food_dining,"fraud_Koss, McLaughlin and Mayer",2608,5,0.0015742868622250902,0.001904515763006835,"Koss, McLaughlin and Mayer"
+58,food_dining,fraud_Daugherty-Thompson,2609,5,0.0015742868622250902,0.0019038127302408673,Daugherty-Thompson
+32,entertainment,fraud_Lind-Buckridge,2642,5,0.0021821855301859335,0.0019030702235662265,Lind-Buckridge
+377,kids_pets,"fraud_Metz, Russel and Metz",3163,6,0.0018842637196375893,0.0018965450113281517,"Metz, Russel and Metz"
+71,food_dining,fraud_Kilback Group,2620,5,0.0015742868622250902,0.0018961134875818048,Kilback Group
+696,travel,fraud_Treutel-King,1098,2,0.0027012808278285283,0.0018949316216885248,Treutel-King
+383,kids_pets,"fraud_Roberts, Daniel and Macejkovic",3166,6,0.0018842637196375893,0.0018948029307911082,"Roberts, Daniel and Macejk"
+358,kids_pets,fraud_Breitenberg-Hermiston,3168,6,0.0018842637196375893,0.001893643320674345,Breitenberg-Hermiston
+63,food_dining,fraud_Haag-Blanda,2624,5,0.0015742868622250902,0.0018933291799642104,Haag-Blanda
+19,entertainment,fraud_Goldner-Lemke,2665,5,0.0021821855301859335,0.0018872399830085326,Goldner-Lemke
+55,food_dining,fraud_Bernhard-Lesch,2645,5,0.0015742868622250902,0.0018788446944344296,Bernhard-Lesch
+509,personal_care,fraud_Dickinson Ltd,2684,5,0.002234376015729021,0.0018762347706799219,Dickinson Ltd
+532,personal_care,"fraud_Nienow, Barrows and Romaguera",2684,5,0.002234376015729021,0.0018762347706799219,"Nienow, Barrows and Romagu"
+684,travel,"fraud_Medhurst, Labadie and Gottlieb",1111,2,0.0027012808278285283,0.0018745896637348083,"Medhurst, Labadie and Gott"
+48,entertainment,"fraud_Welch, Rath and Koepp",2684,5,0.0021821855301859335,0.0018743601124348395,"Welch, Rath and Koepp"
+669,travel,fraud_Jerde-Hermann,1112,2,0.0027012808278285283,0.0018730429725931127,Jerde-Hermann
+46,entertainment,"fraud_Turcotte, McKenzie and Koss",2689,5,0.0021821855301859335,0.0018709998397341673,"Turcotte, McKenzie and Kos"
+16,entertainment,"fraud_Fadel, Mertz and Rippin",2693,5,0.0021821855301859335,0.001868320283930753,"Fadel, Mertz and Rippin"
+461,misc_pos,fraud_Eichmann-Russel,2196,4,0.0028235243855119357,0.0018651360795083598,Eichmann-Russel
+99,food_dining,fraud_Zboncak Ltd,2679,5,0.0015742868622250902,0.001855857749630266,Zboncak Ltd
+45,entertainment,fraud_Thiel-Thiel,2712,5,0.0021821855301859335,0.0018556964982285181,Thiel-Thiel
+17,entertainment,fraud_Frami Group,2714,5,0.0021821855301859335,0.0018543775952447026,Frami Group
+366,kids_pets,fraud_Gottlieb Group,3245,6,0.0018842637196375893,0.0018500527270444722,Gottlieb Group
+483,misc_pos,fraud_Simonis-Prohaska,2220,4,0.0028235243855119357,0.001845841568341032,Simonis-Prohaska
+357,kids_pets,fraud_Bogisich-Weimann,3260,6,0.0018842637196375893,0.001841793563084452,Bogisich-Weimann
+5,entertainment,fraud_Brown-Greenholt,2742,5,0.0021821855301859335,0.0018361078652422917,Brown-Greenholt
+371,kids_pets,fraud_Hoppe-Parisian,3288,6,0.0018842637196375893,0.0018265721286787955,Hoppe-Parisian
+382,kids_pets,fraud_Rau-Robel,3292,6,0.0018842637196375893,0.0018244181521119573,Rau-Robel
+481,misc_pos,fraud_Roberts-Beahan,2249,4,0.0028235243855119357,0.0018230534008306487,Roberts-Beahan
+477,misc_pos,fraud_McGlynn-Jaskolski,2250,4,0.0028235243855119357,0.0018222776334260399,McGlynn-Jaskolski
+396,kids_pets,fraud_Weimann-Lockman,3300,6,0.0018842637196375893,0.0018201254035187526,Weimann-Lockman
+388,kids_pets,fraud_Schoen Ltd,3302,6,0.0018842637196375893,0.001819055370947607,Schoen Ltd
+662,travel,fraud_Goyette-Herzog,1152,2,0.0027012808278285283,0.001813201344075761,Goyette-Herzog
+399,kids_pets,"fraud_Yost, Schamberger and Windler",3313,6,0.0018842637196375893,0.001813192608251907,"Yost, Schamberger and Wind"
+673,travel,"fraud_Kilback, Nitzsche and Leffler",1155,2,0.0027012808278285283,0.0018088669982333487,"Kilback, Nitzsche and Leff"
+459,misc_pos,fraud_Dickinson Ltd,2269,4,0.0028235243855119357,0.001807662489890753,Dickinson Ltd
+492,misc_pos,fraud_Turcotte-Halvorson,2271,4,0.0028235243855119357,0.0018061376796926166,Turcotte-Halvorson
+677,travel,"fraud_Kunze, Larkin and Mayert",1158,2,0.0027012808278285283,0.0018045533249466238,"Kunze, Larkin and Mayert"
+454,misc_pos,fraud_Boyer PLC,2282,4,0.0028235243855119357,0.0017977969935143551,Boyer PLC
+693,travel,"fraud_Schroeder, Wolff and Hermiston",1167,2,0.0027012808278285283,0.001791734871967524,"Schroeder, Wolff and Hermi"
+699,travel,fraud_Veum-Koelpin,1169,2,0.0027012808278285283,0.0017889110187414127,Veum-Koelpin
+451,misc_pos,fraud_Block Group,2297,4,0.0028235243855119357,0.001786546699437294,Block Group
+482,misc_pos,fraud_Schmeler Inc,2300,4,0.0028235243855119357,0.0017843135160629975,Schmeler Inc
+469,misc_pos,fraud_Herzog Ltd,2305,4,0.0028235243855119357,0.001780603924553511,Herzog Ltd
+494,misc_pos,fraud_Williamson LLC,2309,4,0.0028235243855119357,0.0017776473385434596,Williamson LLC
+474,misc_pos,fraud_Maggio-Fahey,2314,4,0.0028235243855119357,0.0017739653846525244,Maggio-Fahey
+682,travel,fraud_Lynch-Mohr,1180,2,0.0027012808278285283,0.0017735375646741036,Lynch-Mohr
+694,travel,fraud_Thiel Ltd,1186,2,0.0027012808278285283,0.0017652628948544734,Thiel Ltd
+695,travel,fraud_Tillman LLC,1188,2,0.0027012808278285283,0.001762521803402836,Tillman LLC
+470,misc_pos,fraud_Howe Ltd,2345,4,0.0028235243855119357,0.0017514733900004884,Howe Ltd
+670,travel,fraud_Johnston-Casper,1201,2,0.0027012808278285283,0.001744910132807727,Johnston-Casper
+324,home,fraud_Kutch-Ferry,3427,6,0.001514978217814989,0.001744116195571732,Kutch-Ferry
+666,travel,"fraud_Hartmann, Rowe and Hermann",1215,2,0.0027012808278285283,0.0017263331428006485,"Hartmann, Rowe and Hermann"
+343,home,fraud_Streich Ltd,3468,6,0.001514978217814989,0.0017240745016203751,Streich Ltd
+347,home,"fraud_Witting, Beer and Ernser",3468,6,0.001514978217814989,0.0017240745016203751,"Witting, Beer and Ernser"
+315,home,fraud_Ernser-Feest,3516,6,0.001514978217814989,0.0017011885569086004,Ernser-Feest
+327,home,"fraud_McDermott, Osinski and Morar",3527,6,0.001514978217814989,0.001696029176118417,"McDermott, Osinski and Mor"
+151,grocery_net,fraud_Bahringer-Larson,1240,2,0.0027059158031664363,0.0016944713285945102,Bahringer-Larson
+316,home,fraud_Gaylord-Powlowski,3534,6,0.001514978217814989,0.0016927621964175836,Gaylord-Powlowski
+155,grocery_net,fraud_Cummings Group,1250,2,0.0027059158031664363,0.0016819196891234398,Cummings Group
+258,health_fitness,fraud_Dare-Gibson,2373,4,0.0015162240196347767,0.0016787797824356963,Dare-Gibson
+164,grocery_net,fraud_Hills-Olson,1256,2,0.0027059158031664363,0.0016744775666051944,Hills-Olson
+160,grocery_net,fraud_Funk Group,1271,2,0.0027059158031664363,0.0016561572431193607,Funk Group
+278,health_fitness,"fraud_Klocko, Runolfsdottir and Breitenberg",2417,4,0.0015162240196347767,0.0016494328176255373,"Klocko, Runolfsdottir and "
+195,grocery_net,fraud_Trantow PLC,1281,2,0.0027059158031664363,0.0016441647938570917,Trantow PLC
+288,health_fitness,fraud_Roob-Okuneva,2442,4,0.0015162240196347767,0.0016332110157212735,Roob-Okuneva
+188,grocery_net,fraud_Smitham-Schiller,1301,2,0.0027059158031664363,0.0016206934905900383,Smitham-Schiller
+269,health_fitness,fraud_Hamill-D'Amore,2462,4,0.0015162240196347767,0.001620461515208227,Hamill-D'Amore
+156,grocery_net,fraud_Dach-Borer,1303,2,0.0027059158031664363,0.001618383164872875,Dach-Borer
+192,grocery_net,"fraud_Swaniawski, Bahringer and Ledner",1304,2,0.0027059158031664363,0.0016172304703109997,"Swaniawski, Bahringer and "
+272,health_fitness,"fraud_Hills, Hegmann and Schaefer",2482,4,0.0015162240196347767,0.0016079095282585118,"Hills, Hegmann and Schaefe"
+157,grocery_net,fraud_Dicki Ltd,1313,2,0.0027059158031664363,0.0016069296392899105,Dicki Ltd
+264,health_fitness,fraud_Friesen Ltd,2489,4,0.0015162240196347767,0.0016035621483057078,Friesen Ltd
+351,kids_pets,fraud_Bednar PLC,3143,5,0.0018842637196375893,0.0015998847893813626,Bednar PLC
+529,personal_care,fraud_Monahan-Morar,2542,4,0.002234376015729021,0.0015985759279231273,Monahan-Morar
+50,food_dining,fraud_Abernathy and Sons,2513,4,0.0015742868622250902,0.0015910557543905508,Abernathy and Sons
+191,grocery_net,"fraud_Stokes, Christiansen and Sipes",1329,2,0.0027059158031664363,0.0015889374249941524,"Stokes, Christiansen and S"
+298,health_fitness,fraud_Waters-Cruickshank,2524,4,0.0015162240196347767,0.0015821731714799837,Waters-Cruickshank
+275,health_fitness,"fraud_Hyatt, Russel and Gleichner",2531,4,0.0015162240196347767,0.0015779636647523668,"Hyatt, Russel and Gleichne"
+268,health_fitness,"fraud_Haley, Batz and Auer",2534,4,0.0015162240196347767,0.0015761664396216695,"Haley, Batz and Auer"
+250,health_fitness,fraud_Adams-Barrows,2535,4,0.0015162240196347767,0.0015755682739899345,Adams-Barrows
+522,personal_care,fraud_Kub PLC,2581,4,0.002234376015729021,0.0015753217462039918,Kub PLC
+375,kids_pets,"fraud_Lowe, Dietrich and Erdman",3222,5,0.0018842637196375893,0.001561838161337676,"Lowe, Dietrich and Erdman"
+549,personal_care,fraud_Zulauf LLC,2605,4,0.002234376015729021,0.0015613447695278751,Zulauf LLC
+361,kids_pets,fraud_Crona and Sons,3227,5,0.0018842637196375893,0.0015594909443834564,Crona and Sons
+54,food_dining,fraud_Bechtelar-Rippin,2566,4,0.0015742868622250902,0.0015594256137368753,Bechtelar-Rippin
+85,food_dining,fraud_O'Keefe-Wisoky,2570,4,0.0015742868622250902,0.0015570893955889548,O'Keefe-Wisoky
+68,food_dining,fraud_Jast and Sons,2574,4,0.0015742868622250902,0.001554760166874536,Jast and Sons
+98,food_dining,fraud_Zboncak LLC,2586,4,0.0015742868622250902,0.0015478141050716714,Zboncak LLC
+92,food_dining,fraud_Schuppe-Schuppe,2593,4,0.0015742868622250902,0.001543790822956743,Schuppe-Schuppe
+60,food_dining,fraud_Ernser-Lynch,2600,4,0.0015742868622250902,0.001539788402304633,Ernser-Lynch
+379,kids_pets,fraud_Pacocha-Weissnat,3271,5,0.0018842637196375893,0.0015391356784229483,Pacocha-Weissnat
+47,entertainment,fraud_Upton PLC,2644,4,0.0021821855301859335,0.0015372516592633357,Upton PLC
+505,personal_care,"fraud_Berge, Kautzer and Harris",2648,4,0.002234376015729021,0.0015369132465694695,"Berge, Kautzer and Harris"
+0,entertainment,fraud_Abbott-Rogahn,2647,4,0.0021821855301859335,0.0015355728259987596,Abbott-Rogahn
+27,entertainment,fraud_Kilback and Sons,2657,4,0.0021821855301859335,0.0015300031022918363,Kilback and Sons
+84,food_dining,fraud_O'Hara-Wilderman,2618,4,0.0015742868622250902,0.0015295911281171851,O'Hara-Wilderman
+28,entertainment,fraud_Klein Group,2664,4,0.0021821855301859335,0.0015261282753323419,Klein Group
+78,food_dining,"fraud_Lakin, Ferry and Beatty",2630,4,0.0015742868622250902,0.0015228676506309558,"Lakin, Ferry and Beatty"
+3,entertainment,fraud_Beier LLC,2676,4,0.0021821855301859335,0.0015195311790412798,Beier LLC
+97,food_dining,fraud_Will Ltd,2636,4,0.0015742868622250902,0.0015195280285900984,Will Ltd
+22,entertainment,"fraud_Hoppe, Harris and Bednar",2681,4,0.0021821855301859335,0.0015167991920239457,"Hoppe, Harris and Bednar"
+36,entertainment,fraud_Padberg-Rogahn,2696,4,0.0021821855301859335,0.0015086618573027873,Padberg-Rogahn
+80,food_dining,fraud_Leannon-Ward,2656,4,0.0015742868622250902,0.0015085009746816072,Leannon-Ward
+20,entertainment,fraud_Grimes LLC,2707,4,0.0021821855301859335,0.001502749751698822,Grimes LLC
+29,entertainment,fraud_Kling-Ernser,2709,4,0.0021821855301859335,0.0015016797981554264,Kling-Ernser
+87,food_dining,"fraud_Reinger, Weissnat and Strosin",2683,4,0.0015742868622250902,0.0014938658592247608,"Reinger, Weissnat and Stro"
+39,entertainment,"fraud_Runolfsdottir, Mueller and Hand",2727,4,0.0021821855301859335,0.0014921183420652964,"Runolfsdottir, Mueller and"
+331,home,fraud_O'Connell-Ullrich,3460,5,0.001514978217814989,0.0014470499499386234,O'Connell-Ullrich
+320,home,"fraud_Hettinger, McCullough and Fay",3471,5,0.001514978217814989,0.0014425925011989635,"Hettinger, McCullough and "
+308,home,"fraud_Cole, Hills and Jewess",3508,5,0.001514978217814989,0.0014277987310924332,"Cole, Hills and Jewess"
+321,home,fraud_Jakubowski Inc,3517,5,0.001514978217814989,0.0014242460109984791,Jakubowski Inc
+452,misc_pos,"fraud_Boehm, Block and Jakubowski",2214,3,0.0028235243855119357,0.0014184755568501268,"Boehm, Block and Jakubowsk"
+325,home,fraud_Kutch-Wilderman,3562,5,0.001514978217814989,0.001406744353299153,Kutch-Wilderman
+345,home,fraud_White and Sons,3570,5,0.001514978217814989,0.0014036778805944139,White and Sons
+330,home,"fraud_O'Connell, Botsford and Hand",3578,5,0.001514978217814989,0.0014006247476295538,"O'Connell, Botsford and Ha"
+332,home,"fraud_O'Reilly, Mohr and Purdy",3605,5,0.001514978217814989,0.0013904177656630227,"O'Reilly, Mohr and Purdy"
+475,misc_pos,fraud_McCullough LLC,2328,3,0.0028235243855119357,0.0013518749746915953,McCullough LLC
+394,kids_pets,fraud_Waelchi-Wolf,3117,4,0.0018842637196375893,0.0013019665439738138,Waelchi-Wolf
+297,health_fitness,"fraud_Turcotte, Batz and Buckridge",2349,3,0.0015162240196347767,0.0012869017566204482,"Turcotte, Batz and Buckrid"
+271,health_fitness,"fraud_Hermiston, Pacocha and Smith",2352,3,0.0015162240196347767,0.00128532724386765,"Hermiston, Pacocha and Smi"
+395,kids_pets,"fraud_Weber, Thiel and Hammes",3189,4,0.0018842637196375893,0.001273464996036412,"Weber, Thiel and Hammes"
+260,health_fitness,fraud_Erdman-Durgan,2391,3,0.0015162240196347767,0.001265203694084094,Erdman-Durgan
+277,health_fitness,fraud_Kertzmann LLC,2395,3,0.0015162240196347767,0.0012631753114082074,Kertzmann LLC
+365,kids_pets,fraud_Gleason and Sons,3216,4,0.0018842637196375893,0.0012630960108455244,Gleason and Sons
+372,kids_pets,"fraud_Lang, Towne and Schuppe",3226,4,0.0018842637196375893,0.0012592983679987249,"Lang, Towne and Schuppe"
+369,kids_pets,"fraud_Hauck, Dietrich and Funk",3230,4,0.0018842637196375893,0.0012577856972864141,"Hauck, Dietrich and Funk"
+267,health_fitness,fraud_Greenholt Ltd,2419,3,0.0015162240196347767,0.0012511402945468353,Greenholt Ltd
+360,kids_pets,fraud_Cartwright PLC,3258,4,0.0018842637196375893,0.0012472979070767597,Cartwright PLC
+273,health_fitness,"fraud_Hintz, Bauch and Smith",2427,3,0.0015162240196347767,0.0012471794230168095,"Hintz, Bauch and Smith"
+255,health_fitness,fraud_Cormier LLC,2429,3,0.0015162240196347767,0.0012461931205865868,Cormier LLC
+287,health_fitness,fraud_Romaguera Ltd,2433,3,0.0015162240196347767,0.0012442251882998333,Romaguera Ltd
+256,health_fitness,"fraud_Cronin, Kshlerin and Weber",2446,3,0.0015162240196347767,0.0012378721138898185,"Cronin, Kshlerin and Weber"
+253,health_fitness,fraud_Carroll PLC,2449,3,0.0015162240196347767,0.0012364152224258445,Carroll PLC
+295,health_fitness,"fraud_Torp, Muller and Borer",2452,3,0.0015162240196347767,0.0012349617562552812,"Torp, Muller and Borer"
+354,kids_pets,fraud_Bernier and Sons,3303,4,0.0018842637196375893,0.00123080410577836,Bernier and Sons
+293,health_fitness,"fraud_Swaniawski, Nitzsche and Welch",2471,3,0.0015162240196347767,0.0012258352399702364,"Swaniawski, Nitzsche and W"
+355,kids_pets,fraud_Bode-Rempel,3319,4,0.0018842637196375893,0.0012250442737536586,Bode-Rempel
+548,personal_care,"fraud_Zemlak, Tillman and Cremin",2538,3,0.002234376015729021,0.0012219247921049668,"Zemlak, Tillman and Cremin"
+263,health_fitness,fraud_Feil-Morar,2482,3,0.0015162240196347767,0.0012206128590098674,Feil-Morar
+261,health_fitness,fraud_Fadel Inc,2523,3,0.0015162240196347767,0.001201533511995226,Fadel Inc
+523,personal_care,fraud_Labadie LLC,2586,3,0.002234376015729021,0.001200088459260202,Labadie LLC
+57,food_dining,fraud_Conroy-Emard,2559,3,0.0015742868622250902,0.0011874496751494957,Conroy-Emard
+519,personal_care,"fraud_Kihn, Brakus and Goyette",2615,3,0.002234376015729021,0.0011872698348334816,"Kihn, Brakus and Goyette"
+82,food_dining,"fraud_McCullough, Hudson and Schuster",2567,3,0.0015742868622250902,0.0011838877713620207,"McCullough, Hudson and Sch"
+533,personal_care,fraud_Osinski Inc,2628,3,0.002234376015729021,0.0011816120240369875,Osinski Inc
+70,food_dining,fraud_Kihn-Schuster,2574,3,0.0015742868622250902,0.0011807885887144761,Kihn-Schuster
+337,home,fraud_Reilly LLC,3420,4,0.001514978217814989,0.001179402790278835,Reilly LLC
+349,home,fraud_Wuckert-Goldner,3425,4,0.001514978217814989,0.0011777298785195741,Wuckert-Goldner
+333,home,fraud_Padberg-Sauer,3432,4,0.001514978217814989,0.001175395759281285,Padberg-Sauer
+283,health_fitness,"fraud_Mueller, Gerhold and Mueller",2583,3,0.0015162240196347767,0.001174663586270398,"Mueller, Gerhold and Muell"
+64,food_dining,"fraud_Hagenes, Kohler and Hoppe",2590,3,0.0015742868622250902,0.0011737653108633863,"Hagenes, Kohler and Hoppe"
+93,food_dining,fraud_Stiedemann Ltd,2592,3,0.0015742868622250902,0.001172893271256504,Stiedemann Ltd
+8,entertainment,fraud_Cummerata-Hilpert,2658,3,0.0021821855301859335,0.0011668667704926008,Cummerata-Hilpert
+96,food_dining,fraud_Weber and Sons,2608,3,0.0015742868622250902,0.001165963325783792,Weber and Sons
+24,entertainment,fraud_Johns Inc,2676,3,0.0021821855301859335,0.0011593006314908477,Johns Inc
+25,entertainment,fraud_Johns-Hoeger,2681,3,0.0021821855301859335,0.0011572163081692173,Johns-Hoeger
+302,home,fraud_Beier and Sons,3492,4,0.001514978217814989,0.0011557621998278115,Beier and Sons
+56,food_dining,fraud_Connelly PLC,2633,3,0.0015742868622250902,0.001155297726389502,Connelly PLC
+90,food_dining,fraud_Schulist Ltd,2640,3,0.0015742868622250902,0.001152346235847631,Schulist Ltd
+307,home,fraud_Champlin-Casper,3505,4,0.001514978217814989,0.0011515944027133144,Champlin-Casper
+51,food_dining,"fraud_Armstrong, Walter and Gottlieb",2649,3,0.0015742868622250902,0.0011485735490078242,"Armstrong, Walter and Gott"
+342,home,fraud_Stark-Koss,3533,4,0.001514978217814989,0.0011427189159872004,Stark-Koss
+4,entertainment,fraud_Bins-Tillman,2729,3,0.0021821855301859335,0.0011375816730359114,Bins-Tillman
+310,home,fraud_Connelly-Carter,3555,4,0.001514978217814989,0.0011358407173136795,Connelly-Carter
+66,food_dining,"fraud_Hermiston, Russel and Price",2763,3,0.0015742868622250902,0.0011028392197773346,"Hermiston, Russel and Pric"
+698,travel,fraud_Turner LLC,1154,1,0.0027012808278285283,0.001012861310034173,Turner LLC
+170,grocery_net,"fraud_Kohler, Lindgren and Koelpin",1169,1,0.0027059158031664363,0.0010012542004071267,"Kohler, Lindgren and Koelp"
+691,travel,fraud_Romaguera and Sons,1172,1,0.0027012808278285283,0.0009985283669676514,Romaguera and Sons
+397,kids_pets,fraud_Wilkinson PLC,3110,3,0.0018842637196375893,0.0009932792436024172,Wilkinson PLC
+663,travel,fraud_Hackett Group,1185,1,0.0027012808278285283,0.0009884265235664224,Hackett Group
+687,travel,"fraud_Reichel, Bradtke and Blanda",1201,1,0.0027012808278285283,0.0009762706247370121,"Reichel, Bradtke and Bland"
+376,kids_pets,fraud_Lubowitz-Walter,3215,3,0.0018842637196375893,0.0009618179100946483,Lubowitz-Walter
+381,kids_pets,fraud_Rau-Grant,3249,3,0.0018842637196375893,0.0009520532612612001,Rau-Grant
+498,misc_pos,"fraud_Wiza, Schaden and Stark",2317,2,0.0028235243855119357,0.0009442914516140644,"Wiza, Schaden and Stark"
+177,grocery_net,fraud_Ortiz Group,1291,1,0.0027059158031664363,0.0009134375128085145,Ortiz Group
+174,grocery_net,fraud_Morar Inc,1292,1,0.0027059158031664363,0.0009127813076987382,Morar Inc
+313,home,"fraud_Durgan, Gislason and Spencer",3375,3,0.001514978217814989,0.000906905847994676,"Durgan, Gislason and Spenc"
+168,grocery_net,fraud_Kemmer-Reinger,1327,1,0.0027059158031664363,0.0008903935391146767,Kemmer-Reinger
+309,home,fraud_Collier LLC,3489,3,0.001514978217814989,0.0008780991423186121,Collier LLC
+296,health_fitness,fraud_Torphy-Kertzmann,2377,2,0.0015162240196347767,0.0008686404529525546,Torphy-Kertzmann
+311,home,"fraud_Crist, Jakubowski and Littel",3529,3,0.001514978217814989,0.0008684204524060344,"Crist, Jakubowski and Litt"
+319,home,"fraud_Gutmann, McLaughlin and Wiza",3531,3,0.001514978217814989,0.0008679421156104376,"Gutmann, McLaughlin and Wi"
+334,home,fraud_Pollich LLC,3558,3,0.001514978217814989,0.0008615357631988788,Pollich LLC
+336,home,fraud_Quitzon-Goyette,3562,3,0.001514978217814989,0.0008605947082964224,Quitzon-Goyette
+262,health_fitness,fraud_Fadel-Hilpert,2402,2,0.0015162240196347767,0.0008599609919917976,Fadel-Hilpert
+270,health_fitness,fraud_Heller PLC,2408,2,0.0015162240196347767,0.0008579036690444489,Heller PLC
+291,health_fitness,fraud_Schumm PLC,2425,2,0.0015162240196347767,0.0008521276839459318,Schumm PLC
+328,home,fraud_Medhurst Inc,3600,3,0.001514978217814989,0.0008517561680490538,Medhurst Inc
+312,home,"fraud_Denesik, Powlowski and Pouros",3611,3,0.001514978217814989,0.0008492314259718401,"Denesik, Powlowski and Pou"
+266,health_fitness,fraud_Graham and Sons,2435,2,0.0015162240196347767,0.0008487662335161648,Graham and Sons
+265,health_fitness,fraud_Fritsch and Sons,2436,2,0.0015162240196347767,0.0008484315465155669,Fritsch and Sons
+314,home,fraud_Eichmann-Kilback,3616,3,0.001514978217814989,0.0008480887572070772,Eichmann-Kilback
+526,personal_care,"fraud_Lubowitz, Terry and Stracke",2542,2,0.002234376015729021,0.0008415736569163143,"Lubowitz, Terry and Strack"
+280,health_fitness,fraud_Kulas Group,2466,2,0.0015162240196347767,0.0008385122377098511,Kulas Group
+282,health_fitness,"fraud_Mante, Luettgen and Hackett",2472,2,0.0015162240196347767,0.0008365561438427207,"Mante, Luettgen and Hacket"
+252,health_fitness,"fraud_Brown, Homenick and Lesch",2483,2,0.0015162240196347767,0.0008329935741244591,"Brown, Homenick and Lesch"
+67,food_dining,fraud_Jakubowski Group,2599,2,0.0015742868622250902,0.0007993437147915928,Jakubowski Group
+504,personal_care,"fraud_Becker, Harris and Harvey",2737,2,0.002234376015729021,0.000783728446095489,"Becker, Harris and Harvey"
+95,food_dining,fraud_Volkman PLC,2684,2,0.0015742868622250902,0.0007749384648787748,Volkman PLC
+69,food_dining,fraud_Kihn-Fritsch,2697,2,0.0015742868622250902,0.0007713366772336464,Kihn-Fritsch
+367,kids_pets,fraud_Goyette-Gerhold,3300,2,0.0018842637196375893,0.0006436548152834586,Goyette-Gerhold
+353,kids_pets,fraud_Berge-Hills,3317,2,0.0018842637196375893,0.0006404525525208543,Berge-Hills
+340,home,fraud_Schmidt-Larkin,3423,2,0.001514978217814989,0.0006107004887259434,Schmidt-Larkin
+317,home,fraud_Gerhold LLC,3441,2,0.001514978217814989,0.0006075961089470485,Gerhold LLC
+286,health_fitness,fraud_Rippin-VonRueden,2478,1,0.0015162240196347767,0.00044671156010996034,Rippin-VonRueden
+259,health_fitness,fraud_Dietrich-Fadel,2487,1,0.0015162240196347767,0.0004451574804652021,Dietrich-Fadel
+279,health_fitness,fraud_Kub-Heaney,2491,1,0.0015162240196347767,0.0004444702439071701,Kub-Heaney
+40,entertainment,"fraud_Schaefer, Fay and Hilll",2664,1,0.0021821855301859335,0.00044074477316157504,"Schaefer, Fay and Hilll"
+91,food_dining,"fraud_Schumm, McLaughlin and Carter",2566,1,0.0015742868622250902,0.00043414429340679254,"Schumm, McLaughlin and Car"
+59,food_dining,fraud_Deckow-Dare,2588,1,0.0015742868622250902,0.00043059102910063577,Deckow-Dare
+37,entertainment,"fraud_Parker, Nolan and Trantow",2795,1,0.0021821855301859335,0.0004208008818717076,"Parker, Nolan and Trantow"
+76,food_dining,fraud_Kuphal-Toy,2658,1,0.0015742868622250902,0.00041966232277828463,Kuphal-Toy
+81,food_dining,"fraud_Lesch, D'Amore and Brown",2659,1,0.0015742868622250902,0.0004195102161009456,"Lesch, D'Amore and Brown"
+398,kids_pets,fraud_Windler LLC,3170,1,0.0018842637196375893,0.00036343314127332076,Windler LLC
+335,home,"fraud_Prosacco, Kreiger and Kovacek",3454,1,0.001514978217814989,0.00032400051260030917,"Prosacco, Kreiger and Kova"
+689,travel,"fraud_Ritchie, Bradtke and Stiedemann",1090,0,0.0027012808278285283,0.00022699838889315364,"Ritchie, Bradtke and Stied"
+688,travel,fraud_Reichert-Weissnat,1123,0,0.0027012808278285283,0.00022087333015768834,Reichert-Weissnat
+667,travel,"fraud_Hodkiewicz, Prohaska and Paucek",1132,0,0.0027012808278285283,0.0002192598074536143,"Hodkiewicz, Prohaska and P"
+198,grocery_net,fraud_Wiegand-Lowe,1289,0,0.0027059158031664363,0.00019481035299974346,Wiegand-Lowe
+178,grocery_net,fraud_Paucek-Wiza,1307,0,0.0027059158031664363,0.0001923181096777851,Paucek-Wiza
+290,health_fitness,fraud_Schroeder Group,2420,0,0.0015162240196347767,6.0167619826776854e-05,Schroeder Group
+83,food_dining,fraud_McKenzie-Huels,2623,0,0.0015742868622250902,5.7814427551417196e-05,McKenzie-Huels
+318,home,fraud_Gulgowski LLC,3584,0,0.001514978217814989,4.112318723710611e-05,Gulgowski LLC

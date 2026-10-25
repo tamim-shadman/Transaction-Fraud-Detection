@@ -1,0 +1,10 @@
+metric,value,unit,source,status,note
+end_to_end_seconds,5513.0,seconds,logs/findings.md,measured,Start/end timestamps; timezone unstated.
+reported_duration_minutes,91.9,minutes,logs/findings.md,reported,Rounded summary.
+transactions_per_wall_second,336.0047161255215,rows/s,derived,derived,"Whole notebook, not inference throughput."
+source_data_mb,501.6,MB,logs/data_fingerprint.json,reported,CSV sizes.
+processed_memory_mb,636.4,MB,notebook cell 14,measured,After dtype discipline.
+figures,129.0,files,figures/,counted,
+interactive_artifacts,7.0,files,figures/,counted,
+tables,46.0,files,tables/,counted,
+shap_seconds,163.1,seconds,notebook cell 63,measured,"5,000 rows × 27 features."

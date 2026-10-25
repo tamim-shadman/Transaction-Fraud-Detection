@@ -1,0 +1,5 @@
+﻿grade,grade_label,definition,interpretation,color_hex,sort_order
+strong,Strong,Direct quantitative evidence with uncertainty or an explicit comparison; supports the stated claim.,Researcher-assigned grade in the project ledger. The notebook does not publish a formal rubric; this dashboard treats it as the strongest tier.,#1F9D73,0
+supports,Supports,"Quantitative evidence consistent with the claim, but narrower or less direct than a strong finding.","Researcher-assigned grade. May depend on a single figure, table or summary statistic.",#3B6FD4,1
+weak,Weak,A fragile or ambiguous signal that should not carry a conclusion on its own.,Only one ledger finding carries this grade: the PELT structural-break interpretation.,#D97A18,2
+caveat,Caveat,"A limitation, generator artifact or interpretation boundary rather than a positive claim.",Caveats are used to bound external validity and should travel with the findings they qualify.,#D1495B,3

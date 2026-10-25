@@ -1,0 +1,4 @@
+snapshot_id,label,trigger,created_at,source_fingerprint,transactions,optimized_pr_auc,catch_at_1pct
+snap_20261021_v3_phase6,Phase 6 Production Release (Optimized LightGBM + Velocity),pipeline_refresh,2026-10-21T16:49:12Z,6ff3ee965b566f0a,1852394,0.9124,0.8432
+snap_20261021_v2_hardened,Phase 4 Production Hardening (Initial Model Tuning),milestone_checkpoint,2026-10-21T08:15:00Z,8a42b109dc57e190,1852394,0.9015,0.814
+snap_20261020_v1_baseline,Phase 1 Research Baseline (Raw Transaction Features),initial_ingestion,2026-10-20T14:30:00Z,1f99c084e3114d55,1852394,0.8642,0.725

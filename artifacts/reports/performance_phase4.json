@@ -1,0 +1,335 @@
+{
+  "routes": [
+    {
+      "route": "/",
+      "clientRenderMs": 863.3,
+      "domContentLoaded": 61,
+      "load": 67,
+      "paints": {
+        "first-paint": 72,
+        "first-contentful-paint": 116
+      },
+      "jsBytes": 0,
+      "jsonBytes": 936034,
+      "requests": 46,
+      "nodes": 679,
+      "charts": 3,
+      "heapMb": 58
+    },
+    {
+      "route": "/portfolio",
+      "clientRenderMs": 763.2,
+      "domContentLoaded": 38,
+      "load": 43,
+      "paints": {
+        "first-paint": 60,
+        "first-contentful-paint": 76
+      },
+      "jsBytes": 0,
+      "jsonBytes": 962231,
+      "requests": 34,
+      "nodes": 707,
+      "charts": 0,
+      "heapMb": 64
+    },
+    {
+      "route": "/insights",
+      "clientRenderMs": 822.1,
+      "domContentLoaded": 63,
+      "load": 70,
+      "paints": {
+        "first-paint": 84,
+        "first-contentful-paint": 96
+      },
+      "jsBytes": 0,
+      "jsonBytes": 965805,
+      "requests": 35,
+      "nodes": 987,
+      "charts": 0,
+      "heapMb": 67
+    },
+    {
+      "route": "/program",
+      "clientRenderMs": 844.2,
+      "domContentLoaded": 65,
+      "load": 72,
+      "paints": {
+        "first-paint": 76,
+        "first-contentful-paint": 108
+      },
+      "jsBytes": 0,
+      "jsonBytes": 1006131,
+      "requests": 34,
+      "nodes": 920,
+      "charts": 0,
+      "heapMb": 77
+    },
+    {
+      "route": "/data-audit",
+      "clientRenderMs": 914.0,
+      "domContentLoaded": 70,
+      "load": 76,
+      "paints": {
+        "first-paint": 88,
+        "first-contentful-paint": 100
+      },
+      "jsBytes": 0,
+      "jsonBytes": 936034,
+      "requests": 47,
+      "nodes": 807,
+      "charts": 2,
+      "heapMb": 79
+    },
+    {
+      "route": "/distributions",
+      "clientRenderMs": 1219.0,
+      "domContentLoaded": 48,
+      "load": 48,
+      "paints": {
+        "first-paint": 472,
+        "first-contentful-paint": 472
+      },
+      "jsBytes": 0,
+      "jsonBytes": 936034,
+      "requests": 51,
+      "nodes": 667,
+      "charts": 4,
+      "heapMb": 101
+    },
+    {
+      "route": "/interactions",
+      "clientRenderMs": 1011.2,
+      "domContentLoaded": 47,
+      "load": 53,
+      "paints": {
+        "first-paint": 60,
+        "first-contentful-paint": 88
+      },
+      "jsBytes": 0,
+      "jsonBytes": 936034,
+      "requests": 50,
+      "nodes": 626,
+      "charts": 6,
+      "heapMb": 113
+    },
+    {
+      "route": "/temporal",
+      "clientRenderMs": 868.9,
+      "domContentLoaded": 53,
+      "load": 58,
+      "paints": {
+        "first-paint": 72,
+        "first-contentful-paint": 84
+      },
+      "jsBytes": 0,
+      "jsonBytes": 936034,
+      "requests": 50,
+      "nodes": 546,
+      "charts": 2,
+      "heapMb": 112
+    },
+    {
+      "route": "/advanced",
+      "clientRenderMs": 883.4,
+      "domContentLoaded": 44,
+      "load": 51,
+      "paints": {
+        "first-paint": 64,
+        "first-contentful-paint": 80
+      },
+      "jsBytes": 0,
+      "jsonBytes": 936034,
+      "requests": 50,
+      "nodes": 525,
+      "charts": 4,
+      "heapMb": 128
+    },
+    {
+      "route": "/statistics",
+      "clientRenderMs": 929.3,
+      "domContentLoaded": 70,
+      "load": 70,
+      "paints": {
+        "first-paint": 100,
+        "first-contentful-paint": 100
+      },
+      "jsBytes": 0,
+      "jsonBytes": 936034,
+      "requests": 50,
+      "nodes": 686,
+      "charts": 4,
+      "heapMb": 128
+    },
+    {
+      "route": "/features",
+      "clientRenderMs": 937.7,
+      "domContentLoaded": 39,
+      "load": 40,
+      "paints": {
+        "first-paint": 224,
+        "first-contentful-paint": 224
+      },
+      "jsBytes": 0,
+      "jsonBytes": 936034,
+      "requests": 50,
+      "nodes": 620,
+      "charts": 4,
+      "heapMb": 145
+    },
+    {
+      "route": "/model",
+      "clientRenderMs": 902.7,
+      "domContentLoaded": 45,
+      "load": 51,
+      "paints": {
+        "first-paint": 56,
+        "first-contentful-paint": 88
+      },
+      "jsBytes": 0,
+      "jsonBytes": 936034,
+      "requests": 47,
+      "nodes": 750,
+      "charts": 5,
+      "heapMb": 153
+    },
+    {
+      "route": "/economics",
+      "clientRenderMs": 869.8,
+      "domContentLoaded": 41,
+      "load": 47,
+      "paints": {
+        "first-paint": 60,
+        "first-contentful-paint": 76
+      },
+      "jsBytes": 0,
+      "jsonBytes": 936034,
+      "requests": 46,
+      "nodes": 906,
+      "charts": 3,
+      "heapMb": 160
+    },
+    {
+      "route": "/experiments",
+      "clientRenderMs": 824.0,
+      "domContentLoaded": 46,
+      "load": 52,
+      "paints": {
+        "first-paint": 60,
+        "first-contentful-paint": 76
+      },
+      "jsBytes": 0,
+      "jsonBytes": 970230,
+      "requests": 49,
+      "nodes": 649,
+      "charts": 1,
+      "heapMb": 160
+    },
+    {
+      "route": "/lineage",
+      "clientRenderMs": 824.2,
+      "domContentLoaded": 52,
+      "load": 58,
+      "paints": {
+        "first-paint": 68,
+        "first-contentful-paint": 84
+      },
+      "jsBytes": 0,
+      "jsonBytes": 1113123,
+      "requests": 48,
+      "nodes": 461,
+      "charts": 1,
+      "heapMb": 178
+    },
+    {
+      "route": "/logs",
+      "clientRenderMs": 795.1,
+      "domContentLoaded": 42,
+      "load": 48,
+      "paints": {
+        "first-paint": 60,
+        "first-contentful-paint": 76
+      },
+      "jsBytes": 0,
+      "jsonBytes": 1640246,
+      "requests": 34,
+      "nodes": 1227,
+      "charts": 0,
+      "heapMb": 175
+    },
+    {
+      "route": "/explore",
+      "clientRenderMs": 805.7,
+      "domContentLoaded": 66,
+      "load": 73,
+      "paints": {
+        "first-paint": 84,
+        "first-contentful-paint": 112
+      },
+      "jsBytes": 0,
+      "jsonBytes": 936421,
+      "requests": 35,
+      "nodes": 579,
+      "charts": 0,
+      "heapMb": 186
+    },
+    {
+      "route": "/metrics",
+      "clientRenderMs": 762.2,
+      "domContentLoaded": 37,
+      "load": 43,
+      "paints": {
+        "first-paint": 56,
+        "first-contentful-paint": 72
+      },
+      "jsBytes": 0,
+      "jsonBytes": 1032037,
+      "requests": 34,
+      "nodes": 909,
+      "charts": 0,
+      "heapMb": 140
+    },
+    {
+      "route": "/findings",
+      "clientRenderMs": 854.0,
+      "domContentLoaded": 46,
+      "load": 51,
+      "paints": {
+        "first-paint": 56,
+        "first-contentful-paint": 72
+      },
+      "jsBytes": 0,
+      "jsonBytes": 936034,
+      "requests": 46,
+      "nodes": 1650,
+      "charts": 1,
+      "heapMb": 158
+    },
+    {
+      "route": "/artifacts",
+      "clientRenderMs": 760.9,
+      "domContentLoaded": 47,
+      "load": 48,
+      "paints": {
+        "first-paint": 308,
+        "first-contentful-paint": 308
+      },
+      "jsBytes": 0,
+      "jsonBytes": 1408346,
+      "requests": 65,
+      "nodes": 665,
+      "charts": 0,
+      "heapMb": 169
+    }
+  ],
+  "interactions": {
+    "table_sort_avg_ms": 111.35,
+    "table_sort_trials_ms": [
+      121.71,
+      108.47,
+      92.77,
+      109.64,
+      124.16
+    ],
+    "filter_search_ms": 146.75
+  }
+}

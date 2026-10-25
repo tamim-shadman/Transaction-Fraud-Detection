@@ -1,0 +1,34 @@
+{
+  "timestamp": "2026-10-21T18:08:45.422029+00:00",
+  "benchmarks": [
+    {
+      "operation": "Source Discovery & SHA-256 Fingerprinting",
+      "file_count": 185,
+      "total_mb": 24.35,
+      "duration_sec": 0.0327,
+      "throughput_mb_per_sec": 744.39
+    },
+    {
+      "operation": "CSV Ingestion & Parsing (46 Tables)",
+      "table_count": 46,
+      "total_rows": 4559,
+      "total_mb": 0.397,
+      "duration_sec": 0.0068,
+      "rows_per_sec": 669880.0
+    },
+    {
+      "operation": "Scenario Simulation Engine (What-If Math)",
+      "iterations": 20000,
+      "total_evaluations": 140000,
+      "duration_sec": 0.014,
+      "evaluations_per_sec": 9984880.0
+    },
+    {
+      "operation": "Static JSON Evidence Layer Deserialization",
+      "file_count": 46,
+      "total_mb": 0.66,
+      "duration_sec": 0.466,
+      "files_per_sec": 98.7
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+,mean_val_pr_auc,sd_val_pr_auc,mean_test_pr_auc_from_folds,sd_test_pr_auc_from_folds,mean_ood_gap,n_folds
+0,0.9510414270082747,0.0152253832396225,0.47258036862267094,0.0760812880124376,0.47846105838560365,4

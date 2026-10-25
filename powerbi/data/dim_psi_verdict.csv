@@ -1,0 +1,4 @@
+﻿verdict,psi_rule,sort_order,color_hex
+stable,PSI < 0.10,1,#1F9D73
+moderate,0.10 ≤ PSI < 0.25,2,#D97A18
+severe,PSI ≥ 0.25,3,#D1495B

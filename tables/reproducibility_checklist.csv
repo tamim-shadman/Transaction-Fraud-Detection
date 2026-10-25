@@ -1,0 +1,12 @@
+,item,evidence,ok
+0,global random seed fixed,SEED=42,True
+1,all sampling fractions recorded,"{'map_scatter': {'fraud_kept': 9651, 'nonfraud_kept': 18427, 'nonfraud_frac': 0.01, 'n_points': 28078}, 'dr_embed': {'n': 50000, 'strategy': 'proportional stratified, seed=42'}}",True
+2,train/test time boundaries stated,"{'train_start': '2019-01-01 00:00:18', 'train_end': '2020-06-21 12:13:37', 'test_start': '2020-06-21 12:14:25', 'test_end': '2020-12-31 23:59:34', 'gap_days': 0.0005555555555555556}",True
+3,data-version hash recorded,"{'fraudTrain.csv': {'sha256_16': 'fd7139200dbfcbed', 'mb': 351.2}, 'fraudTest.csv': {'sha256_16': '12d553ab19440c75', 'mb': 150.4}}",True
+4,environment pinned per-run,/content/outputs/logs/env_snapshot.json,True
+5,effect sizes + CIs + n with every test,see §06 tables,True
+6,"consistent colors (fraud=red/orange, non-fraud=blue)",config §0.1,True
+7,consistent category labels across plots,CATEGORY_ORDER,True
+8,DR hyperparameters reported,perplexity / n_neighbors / min_dist in figure titles + §05,True
+9,walk-forward CV instead of single carve-out,"4 folds, mean±sd reported",True
+10,LightGBM determinism caveat,deterministic=True + force_row_wise=True set; n_jobs=-1 can still yield marginal nondeterminism on some builds — rerun-twice advised for exactness,True

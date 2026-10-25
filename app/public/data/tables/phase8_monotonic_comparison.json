@@ -1,0 +1,1 @@
+{"id":"phase8_monotonic_comparison","columns":["model","pr_auc","roc_auc"],"types":{"model":"text","pr_auc":"number","roc_auc":"number"},"rows":[{"model":"monotonic_constrained","pr_auc":0.5921751049650442,"roc_auc":0.9435379437250913},{"model":"unconstrained_final","pr_auc":0.5574801511963462,"roc_auc":0.9677282868198628}]}

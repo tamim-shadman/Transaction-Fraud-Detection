@@ -1,0 +1,1475 @@
+{
+  "generatedAt": "2026-10-21T12:46:12",
+  "name": "Fraud Evidence Console \u2014 Power BI import pack",
+  "version": "2.0.0",
+  "native_pbix": false,
+  "note": "This is an import-ready star schema, DAX library, theme and page specification. It is not a PBIX/PBIP file. Build the report in Power BI Desktop using the CSVs and the page specifications.",
+  "source": "app/public/data/manifest.json + analysis.json + phase2/*.json; tables/*.csv",
+  "counts": {
+    "tables": 71,
+    "dimensions": 14,
+    "facts": 57,
+    "measures": 137,
+    "pages": 20,
+    "relationships": 34,
+    "date_dimension_rows": 734
+  },
+  "tables": {
+    "dim_category.csv": {
+      "rows": 14,
+      "columns": [
+        "category",
+        "sort_order",
+        "is_online"
+      ],
+      "bytes": 321
+    },
+    "dim_date.csv": {
+      "rows": 734,
+      "columns": [
+        "date",
+        "year",
+        "quarter",
+        "month",
+        "month_name",
+        "month_short",
+        "day",
+        "day_of_week_num",
+        "day_name",
+        "day_short",
+        "iso_year",
+        "iso_week",
+        "week_end",
+        "is_weekend",
+        "year_month",
+        "week_label",
+        "sort_order"
+      ],
+      "bytes": 70366
+    },
+    "dim_experiment_group.csv": {
+      "rows": 5,
+      "columns": [
+        "group_id",
+        "group_label",
+        "metric_name",
+        "is_comparable",
+        "member_count",
+        "basis",
+        "limitations",
+        "sort_order"
+      ],
+      "bytes": 1785
+    },
+    "dim_grade.csv": {
+      "rows": 4,
+      "columns": [
+        "grade",
+        "grade_label",
+        "definition",
+        "interpretation",
+        "color_hex",
+        "sort_order"
+      ],
+      "bytes": 952
+    },
+    "dim_insight_scope.csv": {
+      "rows": 8,
+      "columns": [
+        "scope",
+        "scope_label",
+        "sort_order"
+      ],
+      "bytes": 198
+    },
+    "dim_node_type.csv": {
+      "rows": 11,
+      "columns": [
+        "node_type",
+        "label",
+        "node_count",
+        "sort_order"
+      ],
+      "bytes": 291
+    },
+    "dim_page.csv": {
+      "rows": 20,
+      "columns": [
+        "page_id",
+        "route",
+        "title",
+        "eyebrow",
+        "phase_ids",
+        "purpose",
+        "primary_question",
+        "visual_count",
+        "sort_order",
+        "target_width",
+        "target_height"
+      ],
+      "bytes": 4944
+    },
+    "dim_phase.csv": {
+      "rows": 10,
+      "columns": [
+        "phase_id",
+        "phase_num",
+        "phase_name",
+        "short_name",
+        "section",
+        "purpose",
+        "accent_hex",
+        "figure_count",
+        "table_count",
+        "interactive_count",
+        "finding_count",
+        "sort_order",
+        "is_report_phase"
+      ],
+      "bytes": 2436
+    },
+    "dim_provenance_status.csv": {
+      "rows": 2,
+      "columns": [
+        "provenance",
+        "label",
+        "rule",
+        "sort_order"
+      ],
+      "bytes": 219
+    },
+    "dim_psi_verdict.csv": {
+      "rows": 3,
+      "columns": [
+        "verdict",
+        "psi_rule",
+        "sort_order",
+        "color_hex"
+      ],
+      "bytes": 142
+    },
+    "dim_rq.csv": {
+      "rows": 8,
+      "columns": [
+        "rq_id",
+        "question",
+        "finding_count",
+        "strong_count",
+        "supports_count",
+        "caveat_count",
+        "weak_count",
+        "phase_ids",
+        "sort_order"
+      ],
+      "bytes": 1119
+    },
+    "dim_segment.csv": {
+      "rows": 3,
+      "columns": [
+        "segment",
+        "segment_label",
+        "sort_order"
+      ],
+      "bytes": 103
+    },
+    "dim_split.csv": {
+      "rows": 4,
+      "columns": [
+        "split",
+        "split_label",
+        "sort_order",
+        "is_overall"
+      ],
+      "bytes": 146
+    },
+    "dim_week.csv": {
+      "rows": 105,
+      "columns": [
+        "week_end",
+        "iso_year",
+        "iso_week",
+        "month",
+        "month_name",
+        "quarter",
+        "year",
+        "split",
+        "is_partial",
+        "sort_order"
+      ],
+      "bytes": 5213
+    },
+    "fact_ablation.csv": {
+      "rows": 6,
+      "columns": [
+        "model",
+        "n_features",
+        "pr_auc",
+        "roc_auc",
+        "delta_vs_full",
+        "is_full",
+        "source_delta_column_ignored"
+      ],
+      "bytes": 732
+    },
+    "fact_anomaly.csv": {
+      "rows": 3,
+      "columns": [
+        "model",
+        "auc",
+        "top_decile_precision",
+        "top_decile_lift",
+        "n_rows"
+      ],
+      "bytes": 240
+    },
+    "fact_anomaly_flag.csv": {
+      "rows": 10,
+      "columns": [
+        "anomaly_id",
+        "anomaly_series",
+        "anomaly_label",
+        "value",
+        "value_format",
+        "severity",
+        "method",
+        "threshold",
+        "reference_population",
+        "z_score",
+        "denominator",
+        "events",
+        "phase_id",
+        "primary_page_id",
+        "source",
+        "interpretation",
+        "not_a_proof"
+      ],
+      "bytes": 5126
+    },
+    "fact_artifact.csv": {
+      "rows": 136,
+      "columns": [
+        "artifact_id",
+        "artifact_type",
+        "title",
+        "caption",
+        "phase_id",
+        "artifact_group",
+        "bytes",
+        "width_px",
+        "height_px",
+        "thumbnail_path",
+        "full_path",
+        "source"
+      ],
+      "bytes": 35213
+    },
+    "fact_artifact_provenance.csv": {
+      "rows": 182,
+      "columns": [
+        "artifact_id",
+        "artifact_kind",
+        "artifact_title",
+        "phase_id",
+        "provenance",
+        "producing_cell",
+        "cell_write_line",
+        "related_finding_count",
+        "primary_rq_id",
+        "bytes",
+        "rows",
+        "primary_page_id"
+      ],
+      "bytes": 28214
+    },
+    "fact_audit_note.csv": {
+      "rows": 5,
+      "columns": [
+        "audit_note_id",
+        "title",
+        "status",
+        "claim",
+        "observation",
+        "implication",
+        "phase_id",
+        "sources"
+      ],
+      "bytes": 2636
+    },
+    "fact_calibration.csv": {
+      "rows": 1,
+      "columns": [
+        "temperature",
+        "ece_before",
+        "ece_after",
+        "brier_before",
+        "brier_after",
+        "nll_before",
+        "nll_after"
+      ],
+      "bytes": 217
+    },
+    "fact_capture.csv": {
+      "rows": 5,
+      "columns": [
+        "budget_pct",
+        "review_count",
+        "fraud_caught",
+        "precision",
+        "recall",
+        "usd_captured",
+        "usd_share",
+        "usd_per_review"
+      ],
+      "bytes": 638
+    },
+    "fact_card_profile.csv": {
+      "rows": 999,
+      "columns": [
+        "cc_num",
+        "transaction_count",
+        "fraud_count",
+        "fraud_rate",
+        "amount_mean",
+        "amount_std",
+        "hour_entropy",
+        "geo_entropy",
+        "fraud_rate_bin"
+      ],
+      "bytes": 92099
+    },
+    "fact_category.csv": {
+      "rows": 14,
+      "columns": [
+        "category",
+        "transaction_count",
+        "fraud_count",
+        "fraud_rate",
+        "ci_low",
+        "ci_high",
+        "q_vs_baseline",
+        "significant",
+        "sparse",
+        "baseline_rate"
+      ],
+      "bytes": 1937
+    },
+    "fact_checklist.csv": {
+      "rows": 11,
+      "columns": [
+        "item",
+        "evidence",
+        "passed"
+      ],
+      "bytes": 1298
+    },
+    "fact_chi2.csv": {
+      "rows": 5,
+      "columns": [
+        "variable",
+        "levels",
+        "chi2",
+        "degrees_of_freedom",
+        "p_value",
+        "cramers_v",
+        "n_rows"
+      ],
+      "bytes": 299
+    },
+    "fact_city.csv": {
+      "rows": 836,
+      "columns": [
+        "city",
+        "latitude",
+        "longitude",
+        "transaction_count",
+        "fraud_count",
+        "eb_fraud_rate"
+      ],
+      "bytes": 45522
+    },
+    "fact_class_balance.csv": {
+      "rows": 3,
+      "columns": [
+        "split",
+        "transaction_count",
+        "fraud_count",
+        "fraud_rate",
+        "sort_order"
+      ],
+      "bytes": 185
+    },
+    "fact_cluster.csv": {
+      "rows": 5,
+      "columns": [
+        "cluster_method",
+        "cluster_label",
+        "transaction_count",
+        "fraud_rate",
+        "fraud_count"
+      ],
+      "bytes": 292
+    },
+    "fact_contract.csv": {
+      "rows": 10,
+      "columns": [
+        "contract",
+        "observed_value",
+        "status"
+      ],
+      "bytes": 459
+    },
+    "fact_cost_sensitivity.csv": {
+      "rows": 5,
+      "columns": [
+        "fp_cost",
+        "optimal_threshold",
+        "expected_loss",
+        "recall",
+        "precision"
+      ],
+      "bytes": 473
+    },
+    "fact_data_quality.csv": {
+      "rows": 10,
+      "columns": [
+        "metric",
+        "value",
+        "unit",
+        "note"
+      ],
+      "bytes": 706
+    },
+    "fact_effect_size.csv": {
+      "rows": 11,
+      "columns": [
+        "feature",
+        "fraud_count",
+        "nonfraud_count",
+        "median_fraud",
+        "median_nonfraud",
+        "mann_whitney_u",
+        "p_value",
+        "ks_d",
+        "cohens_d",
+        "cliffs_delta",
+        "cliffs_low",
+        "cliffs_high",
+        "q_fdr"
+      ],
+      "bytes": 1344
+    },
+    "fact_embedding.csv": {
+      "rows": 7,
+      "columns": [
+        "embedding",
+        "auc"
+      ],
+      "bytes": 264
+    },
+    "fact_ensemble.csv": {
+      "rows": 2,
+      "columns": [
+        "model",
+        "pr_auc",
+        "roc_auc"
+      ],
+      "bytes": 138
+    },
+    "fact_experiment.csv": {
+      "rows": 26,
+      "columns": [
+        "experiment_id",
+        "experiment_family",
+        "group_id",
+        "rank_in_group",
+        "label",
+        "description",
+        "metric",
+        "pr_auc",
+        "roc_auc",
+        "test_pr_auc",
+        "test_roc_auc",
+        "n_features",
+        "n_train",
+        "n_rows",
+        "split",
+        "source",
+        "comparison_note",
+        "primary_page_id"
+      ],
+      "bytes": 9526
+    },
+    "fact_finding.csv": {
+      "rows": 64,
+      "columns": [
+        "finding_id",
+        "rq_id",
+        "phase_id",
+        "grade",
+        "finding",
+        "evidence",
+        "source_file",
+        "source_row",
+        "ledger_phase",
+        "cell_range",
+        "audit_note_id",
+        "audit_status",
+        "has_audit_note"
+      ],
+      "bytes": 27814
+    },
+    "fact_generator.csv": {
+      "rows": 7,
+      "columns": [
+        "metric",
+        "value"
+      ],
+      "bytes": 266
+    },
+    "fact_hazard.csv": {
+      "rows": 24,
+      "columns": [
+        "month",
+        "at_risk",
+        "first_fraud_events",
+        "hazard",
+        "ci_low",
+        "ci_high"
+      ],
+      "bytes": 1676
+    },
+    "fact_high_risk_combo.csv": {
+      "rows": 5,
+      "columns": [
+        "segment",
+        "transaction_count",
+        "fraud_rate",
+        "lift_vs_baseline"
+      ],
+      "bytes": 395
+    },
+    "fact_hour_encoding.csv": {
+      "rows": 3,
+      "columns": [
+        "encoding",
+        "validation_pr_auc"
+      ],
+      "bytes": 116
+    },
+    "fact_insight.csv": {
+      "rows": 15,
+      "columns": [
+        "insight_id",
+        "scope",
+        "phase_id",
+        "rq_id",
+        "priority",
+        "kind",
+        "title",
+        "statement",
+        "detail",
+        "confidence",
+        "caveat",
+        "primary_page_id",
+        "source_refs"
+      ],
+      "bytes": 8200
+    },
+    "fact_issue.csv": {
+      "rows": 16,
+      "columns": [
+        "issue_id",
+        "title",
+        "severity",
+        "category",
+        "scope",
+        "status",
+        "confidence",
+        "summary",
+        "impact",
+        "action",
+        "phase_id",
+        "evidence",
+        "sources"
+      ],
+      "bytes": 9719
+    },
+    "fact_kpi.csv": {
+      "rows": 10,
+      "columns": [
+        "kpi_id",
+        "label",
+        "value",
+        "format",
+        "display_value",
+        "unit",
+        "definition",
+        "formula",
+        "source",
+        "verification",
+        "context",
+        "primary_page_id"
+      ],
+      "bytes": 2525
+    },
+    "fact_learning_curve.csv": {
+      "rows": 5,
+      "columns": [
+        "train_fraction",
+        "n_train",
+        "pr_auc",
+        "roc_auc"
+      ],
+      "bytes": 293
+    },
+    "fact_leave_card_out.csv": {
+      "rows": 3,
+      "columns": [
+        "slice",
+        "n",
+        "fraud_count",
+        "pr_auc",
+        "roc_auc"
+      ],
+      "bytes": 274
+    },
+    "fact_lineage_edge.csv": {
+      "rows": 374,
+      "columns": [
+        "edge_id",
+        "from_node",
+        "to_node",
+        "relation",
+        "is_verified",
+        "primary_page_id"
+      ],
+      "bytes": 22178
+    },
+    "fact_lineage_node.csv": {
+      "rows": 292,
+      "columns": [
+        "node_id",
+        "node_label",
+        "node_type",
+        "phase_id",
+        "route",
+        "provenance",
+        "is_absent",
+        "grade",
+        "severity",
+        "primary_page_id"
+      ],
+      "bytes": 32807
+    },
+    "fact_log_pattern.csv": {
+      "rows": 629,
+      "columns": [
+        "pattern_id",
+        "severity",
+        "category",
+        "occurrence_count",
+        "phase_ids",
+        "cell_count",
+        "signature",
+        "example",
+        "primary_page_id"
+      ],
+      "bytes": 103903
+    },
+    "fact_logit.csv": {
+      "rows": 9,
+      "columns": [
+        "feature",
+        "coefficient",
+        "odds_ratio",
+        "naive_se",
+        "cluster_se",
+        "cluster_z",
+        "cluster_p",
+        "robust_or_low",
+        "robust_or_high",
+        "n_clusters"
+      ],
+      "bytes": 800
+    },
+    "fact_merchant.csv": {
+      "rows": 693,
+      "columns": [
+        "merchant",
+        "transaction_count",
+        "fraud_count",
+        "fraud_rate"
+      ],
+      "bytes": 31688
+    },
+    "fact_metric_catalog.csv": {
+      "rows": 155,
+      "columns": [
+        "metric_id",
+        "layer",
+        "metric_name",
+        "value_text",
+        "numeric_value",
+        "unit",
+        "confidence",
+        "validation_checks",
+        "source_file",
+        "source_locator",
+        "source_table_id",
+        "caveat",
+        "primary_page_id"
+      ],
+      "bytes": 22370
+    },
+    "fact_missing_column.csv": {
+      "rows": 11,
+      "columns": [
+        "column",
+        "dtype",
+        "missing_pct",
+        "non_null",
+        "unique_values",
+        "role"
+      ],
+      "bytes": 797
+    },
+    "fact_money_category.csv": {
+      "rows": 14,
+      "columns": [
+        "category",
+        "fraud_count",
+        "fraud_usd",
+        "usd_per_fraud"
+      ],
+      "bytes": 737
+    },
+    "fact_monotonic.csv": {
+      "rows": 2,
+      "columns": [
+        "model",
+        "pr_auc",
+        "roc_auc"
+      ],
+      "bytes": 145
+    },
+    "fact_notebook_cell.csv": {
+      "rows": 66,
+      "columns": [
+        "cell_index",
+        "cell_type",
+        "phase_id",
+        "is_code",
+        "execution_count",
+        "embedded_images",
+        "source_chars",
+        "output_chars",
+        "has_output",
+        "source_preview",
+        "output_preview"
+      ],
+      "bytes": 39655
+    },
+    "fact_posthoc.csv": {
+      "rows": 72,
+      "columns": [
+        "category_a",
+        "category_b",
+        "chi2",
+        "p_value",
+        "cramers_v",
+        "p_bonferroni"
+      ],
+      "bytes": 7438
+    },
+    "fact_project.csv": {
+      "rows": 7,
+      "columns": [
+        "project_id",
+        "title",
+        "short_title",
+        "track",
+        "lead_role",
+        "phase_range",
+        "cell_range",
+        "risk_level",
+        "status",
+        "finding_count",
+        "strong_count",
+        "artifact_count",
+        "route",
+        "primary_page_id"
+      ],
+      "bytes": 1741
+    },
+    "fact_psi.csv": {
+      "rows": 27,
+      "columns": [
+        "feature",
+        "family",
+        "n_train",
+        "n_test",
+        "psi",
+        "verdict",
+        "top_driver_bin"
+      ],
+      "bytes": 2114
+    },
+    "fact_quantile.csv": {
+      "rows": 9,
+      "columns": [
+        "quantile",
+        "amount_all",
+        "amount_fraud",
+        "amount_nonfraud"
+      ],
+      "bytes": 284
+    },
+    "fact_schema.csv": {
+      "rows": 72,
+      "columns": [
+        "column",
+        "dtype",
+        "non_null",
+        "missing_pct",
+        "unique_values",
+        "memory_mb",
+        "role",
+        "is_index_artifact"
+      ],
+      "bytes": 4796
+    },
+    "fact_segment_error.csv": {
+      "rows": 63,
+      "columns": [
+        "segment",
+        "segment_label",
+        "transaction_count",
+        "fraud_count",
+        "recall",
+        "false_positives"
+      ],
+      "bytes": 3096
+    },
+    "fact_source.csv": {
+      "rows": 6,
+      "columns": [
+        "source_name",
+        "role",
+        "present",
+        "bytes",
+        "hash_prefix",
+        "note"
+      ],
+      "bytes": 552
+    },
+    "fact_speed.csv": {
+      "rows": 5,
+      "columns": [
+        "speed_band_kmh",
+        "transaction_count",
+        "fraud_count",
+        "fraud_rate"
+      ],
+      "bytes": 243
+    },
+    "fact_table.csv": {
+      "rows": 46,
+      "columns": [
+        "table_id",
+        "title",
+        "category",
+        "description",
+        "phase_id",
+        "row_count",
+        "column_count",
+        "missing_cells",
+        "bytes",
+        "source"
+      ],
+      "bytes": 8262
+    },
+    "fact_threshold.csv": {
+      "rows": 3,
+      "columns": [
+        "threshold",
+        "tp",
+        "fp",
+        "fn",
+        "tn",
+        "precision",
+        "recall",
+        "f1",
+        "fp_cost_total",
+        "missed_usd",
+        "total_loss",
+        "usd_captured_share",
+        "is_cost_min",
+        "is_f1_max"
+      ],
+      "bytes": 597
+    },
+    "fact_time_decay.csv": {
+      "rows": 2,
+      "columns": [
+        "model",
+        "pr_auc",
+        "roc_auc"
+      ],
+      "bytes": 140
+    },
+    "fact_walkforward.csv": {
+      "rows": 4,
+      "columns": [
+        "fold",
+        "validation_window",
+        "n_train",
+        "n_val",
+        "validation_pr_auc",
+        "validation_roc_auc",
+        "test_pr_auc",
+        "test_roc_auc",
+        "ood_gap_pr"
+      ],
+      "bytes": 661
+    },
+    "fact_warning.csv": {
+      "rows": 9,
+      "columns": [
+        "warning_id",
+        "severity",
+        "category",
+        "message",
+        "detail",
+        "notebook_cell",
+        "phase_id"
+      ],
+      "bytes": 1370
+    },
+    "fact_weekly_rate.csv": {
+      "rows": 105,
+      "columns": [
+        "week_end",
+        "transaction_count",
+        "fraud_count",
+        "fraud_rate",
+        "sort_order"
+      ],
+      "bytes": 4575
+    },
+    "fact_zip3.csv": {
+      "rows": 532,
+      "columns": [
+        "zip3",
+        "transaction_count",
+        "fraud_count",
+        "fraud_rate",
+        "ci_low",
+        "ci_high",
+        "q_vs_baseline",
+        "sparse",
+        "significant",
+        "eb_fraud_rate"
+      ],
+      "bytes": 62334
+    }
+  },
+  "relationships": [
+    {
+      "from_table": "dim_phase",
+      "from_column": "phase_id",
+      "to_table": "fact_finding",
+      "to_column": "phase_id",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    },
+    {
+      "from_table": "dim_phase",
+      "from_column": "phase_id",
+      "to_table": "fact_table",
+      "to_column": "phase_id",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    },
+    {
+      "from_table": "dim_phase",
+      "from_column": "phase_id",
+      "to_table": "fact_artifact",
+      "to_column": "phase_id",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    },
+    {
+      "from_table": "dim_phase",
+      "from_column": "phase_id",
+      "to_table": "fact_issue",
+      "to_column": "phase_id",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    },
+    {
+      "from_table": "dim_phase",
+      "from_column": "phase_id",
+      "to_table": "fact_audit_note",
+      "to_column": "phase_id",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    },
+    {
+      "from_table": "dim_phase",
+      "from_column": "phase_id",
+      "to_table": "fact_warning",
+      "to_column": "phase_id",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    },
+    {
+      "from_table": "dim_rq",
+      "from_column": "rq_id",
+      "to_table": "fact_finding",
+      "to_column": "rq_id",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    },
+    {
+      "from_table": "dim_grade",
+      "from_column": "grade",
+      "to_table": "fact_finding",
+      "to_column": "grade",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    },
+    {
+      "from_table": "dim_page",
+      "from_column": "page_id",
+      "to_table": "fact_kpi",
+      "to_column": "primary_page_id",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    },
+    {
+      "from_table": "dim_page",
+      "from_column": "page_id",
+      "to_table": "fact_experiment",
+      "to_column": "primary_page_id",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    },
+    {
+      "from_table": "dim_split",
+      "from_column": "split",
+      "to_table": "fact_class_balance",
+      "to_column": "split",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    },
+    {
+      "from_table": "dim_week",
+      "from_column": "week_end",
+      "to_table": "fact_weekly_rate",
+      "to_column": "week_end",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    },
+    {
+      "from_table": "dim_date",
+      "from_column": "week_end",
+      "to_table": "dim_week",
+      "to_column": "week_end",
+      "cardinality": "*:1",
+      "cross_filter": "both"
+    },
+    {
+      "from_table": "dim_category",
+      "from_column": "category",
+      "to_table": "fact_category",
+      "to_column": "category",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    },
+    {
+      "from_table": "dim_category",
+      "from_column": "category",
+      "to_table": "fact_money_category",
+      "to_column": "category",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    },
+    {
+      "from_table": "dim_segment",
+      "from_column": "segment",
+      "to_table": "fact_segment_error",
+      "to_column": "segment",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    },
+    {
+      "from_table": "dim_psi_verdict",
+      "from_column": "verdict",
+      "to_table": "fact_psi",
+      "to_column": "verdict",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    },
+    {
+      "from_table": "dim_insight_scope",
+      "from_column": "scope",
+      "to_table": "fact_insight",
+      "to_column": "scope",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    },
+    {
+      "from_table": "dim_phase",
+      "from_column": "phase_id",
+      "to_table": "fact_insight",
+      "to_column": "phase_id",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    },
+    {
+      "from_table": "dim_rq",
+      "from_column": "rq_id",
+      "to_table": "fact_insight",
+      "to_column": "rq_id",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    },
+    {
+      "from_table": "dim_phase",
+      "from_column": "phase_id",
+      "to_table": "fact_anomaly_flag",
+      "to_column": "phase_id",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    },
+    {
+      "from_table": "dim_phase",
+      "from_column": "phase_id",
+      "to_table": "fact_artifact_provenance",
+      "to_column": "phase_id",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    },
+    {
+      "from_table": "dim_rq",
+      "from_column": "rq_id",
+      "to_table": "fact_artifact_provenance",
+      "to_column": "primary_rq_id",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    },
+    {
+      "from_table": "dim_provenance_status",
+      "from_column": "provenance",
+      "to_table": "fact_artifact_provenance",
+      "to_column": "provenance",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    },
+    {
+      "from_table": "dim_page",
+      "from_column": "page_id",
+      "to_table": "fact_metric_catalog",
+      "to_column": "primary_page_id",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    },
+    {
+      "from_table": "dim_page",
+      "from_column": "page_id",
+      "to_table": "fact_insight",
+      "to_column": "primary_page_id",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    },
+    {
+      "from_table": "dim_page",
+      "from_column": "page_id",
+      "to_table": "fact_anomaly_flag",
+      "to_column": "primary_page_id",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    },
+    {
+      "from_table": "dim_page",
+      "from_column": "page_id",
+      "to_table": "fact_artifact_provenance",
+      "to_column": "primary_page_id",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    },
+    {
+      "from_table": "dim_page",
+      "from_column": "page_id",
+      "to_table": "fact_log_pattern",
+      "to_column": "primary_page_id",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    },
+    {
+      "from_table": "dim_page",
+      "from_column": "page_id",
+      "to_table": "fact_lineage_node",
+      "to_column": "primary_page_id",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    },
+    {
+      "from_table": "dim_page",
+      "from_column": "page_id",
+      "to_table": "fact_lineage_edge",
+      "to_column": "primary_page_id",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    },
+    {
+      "from_table": "dim_experiment_group",
+      "from_column": "group_id",
+      "to_table": "fact_experiment",
+      "to_column": "group_id",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    },
+    {
+      "from_table": "dim_node_type",
+      "from_column": "node_type",
+      "to_table": "fact_lineage_node",
+      "to_column": "node_type",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    },
+    {
+      "from_table": "dim_page",
+      "from_column": "page_id",
+      "to_table": "fact_project",
+      "to_column": "primary_page_id",
+      "cardinality": "1:*",
+      "cross_filter": "single"
+    }
+  ],
+  "pages": [
+    {
+      "page_id": "PAGE-01",
+      "route": "/",
+      "title": "Overview",
+      "eyebrow": "Executive overview",
+      "phase_ids": "P0,P1,P7",
+      "purpose": "One-screen synthesis of scale, model evidence, transfer risk and review economics.",
+      "primary_question": "What does the program establish, and how far does it transfer?",
+      "visual_count": 8
+    },
+    {
+      "page_id": "PAGE-02",
+      "route": "/data-audit",
+      "title": "Data audit",
+      "eyebrow": "P0 \u00b7 Data audit & generator forensics",
+      "phase_ids": "P0",
+      "purpose": "Audit schema, missingness, contracts, split integrity and simulator artifacts before interpreting signal.",
+      "primary_question": "Is the dataset trustworthy enough to analyse?",
+      "visual_count": 9
+    },
+    {
+      "page_id": "PAGE-03",
+      "route": "/distributions",
+      "title": "Distributions",
+      "eyebrow": "P1 \u00b7 Univariate distributions",
+      "phase_ids": "P1",
+      "purpose": "Quantify amount, time, category and demographic separation with effect sizes.",
+      "primary_question": "How far do fraud and genuine transactions separate on each axis?",
+      "visual_count": 9
+    },
+    {
+      "page_id": "PAGE-04",
+      "route": "/interactions",
+      "title": "Interactions",
+      "eyebrow": "P2 \u00b7 Bivariate & interaction analysis",
+      "phase_ids": "P2",
+      "purpose": "Test card, category, geography and money interactions, separating simulator artifacts from signal.",
+      "primary_question": "Where does risk concentrate when variables interact?",
+      "visual_count": 10
+    },
+    {
+      "page_id": "PAGE-05",
+      "route": "/temporal",
+      "title": "Temporal",
+      "eyebrow": "P3 \u00b7 Temporal structure",
+      "phase_ids": "P3",
+      "purpose": "Track weekly rates, autocorrelation, STL, hazard and the 48-second train/test boundary.",
+      "primary_question": "When does fraud cluster, and what changes at the split?",
+      "visual_count": 7
+    },
+    {
+      "page_id": "PAGE-06",
+      "route": "/advanced",
+      "title": "Advanced viz",
+      "eyebrow": "P4 \u00b7 Unsupervised & dimensionality reduction",
+      "phase_ids": "P4",
+      "purpose": "Evaluate embeddings, clustering and anomaly detection without labels.",
+      "primary_question": "Does fraud separate without supervision?",
+      "visual_count": 9
+    },
+    {
+      "page_id": "PAGE-07",
+      "route": "/statistics",
+      "title": "Statistics",
+      "eyebrow": "P5 \u00b7 Statistical testing & effect sizes",
+      "phase_ids": "P5",
+      "purpose": "Replace significance-only claims with effect sizes, bootstrap intervals, FDR and clustered inference.",
+      "primary_question": "Which differences are large and robust, not merely significant?",
+      "visual_count": 8
+    },
+    {
+      "page_id": "PAGE-08",
+      "route": "/features",
+      "title": "Feature lab",
+      "eyebrow": "P6 \u00b7 Feature engineering & depth analyses",
+      "phase_ids": "P6",
+      "purpose": "Inspect causal encodings, velocity, high-risk combinations, hazard, EB shrinkage and leakage risk.",
+      "primary_question": "Which behavioural features are leak-aware and useful?",
+      "visual_count": 10
+    },
+    {
+      "page_id": "PAGE-09",
+      "route": "/model",
+      "title": "Model",
+      "eyebrow": "P7 \u00b7 Leak-aware model evaluation",
+      "phase_ids": "P7",
+      "purpose": "Evaluate ranking, drift, walk-forward transfer, calibration, robustness and segment errors.",
+      "primary_question": "How good is the model in-domain, and why does it fail out-of-domain?",
+      "visual_count": 11
+    },
+    {
+      "page_id": "PAGE-10",
+      "route": "/economics",
+      "title": "Economics",
+      "eyebrow": "P7 \u00b7 Review-budget economics",
+      "phase_ids": "P7",
+      "purpose": "Translate scores into capture@k, thresholds, missed dollars and false-positive cost.",
+      "primary_question": "What review budget buys the most fraud loss reduction?",
+      "visual_count": 8
+    },
+    {
+      "page_id": "PAGE-11",
+      "route": "/findings",
+      "title": "Findings",
+      "eyebrow": "Evidence ledger",
+      "phase_ids": "P0,P1,P2,P3,P4,P5,P6,P7",
+      "purpose": "Search and filter 64 graded findings, link them to evidence, and surface independent audit notes.",
+      "primary_question": "What exactly is claimed, at what grade, and on what evidence?",
+      "visual_count": 7
+    },
+    {
+      "page_id": "PAGE-12",
+      "route": "/artifacts",
+      "title": "Artifacts",
+      "eyebrow": "Report & reproducibility",
+      "phase_ids": "P0,P1,P2,P3,P4,P5,P6,P7,P8",
+      "purpose": "Browse 129 figures, 7 interactive artifacts, 46 tables, 66 notebook cells, logs, warnings and issues.",
+      "primary_question": "Can every displayed number be traced to a generated artifact?",
+      "visual_count": 8
+    },
+    {
+      "page_id": "PAGE-13",
+      "route": "/insights",
+      "title": "Insights",
+      "eyebrow": "Investigation intelligence",
+      "phase_ids": "P0,P1,P2,P3,P7",
+      "purpose": "Deterministic, source-linked insight statements plus the anomaly watch with explicit methods and thresholds.",
+      "primary_question": "What does the evidence actually say, and where is it bounded?",
+      "visual_count": 7
+    },
+    {
+      "page_id": "PAGE-14",
+      "route": "/experiments",
+      "title": "Experiments",
+      "eyebrow": "Comparison workspace",
+      "phase_ids": "P7",
+      "purpose": "Compare recorded model variants inside a shared evaluation family, with compatibility rules and absolute deltas.",
+      "primary_question": "Which comparisons are legitimate, and what exactly differs?",
+      "visual_count": 6
+    },
+    {
+      "page_id": "PAGE-15",
+      "route": "/logs",
+      "title": "Run logs",
+      "eyebrow": "Run record",
+      "phase_ids": "P0,P1,P2,P3,P4,P5,P6,P7,P8",
+      "purpose": "Classified log events, message patterns and warning families from the notebook, warning register and build logs.",
+      "primary_question": "What did the run record, and what did it skip?",
+      "visual_count": 6
+    },
+    {
+      "page_id": "PAGE-16",
+      "route": "/lineage",
+      "title": "Evidence map",
+      "eyebrow": "Lineage",
+      "phase_ids": "P0,P1,P2,P3,P4,P5,P6,P7,P8",
+      "purpose": "Trace sources, notebook cells, phases, findings and artifacts with verified and inferred edges.",
+      "primary_question": "How does one artifact connect back to the run that produced it?",
+      "visual_count": 5
+    },
+    {
+      "page_id": "PAGE-17",
+      "route": "/explore",
+      "title": "Data explorer",
+      "eyebrow": "Table exploration",
+      "phase_ids": "P0,P1,P2,P3,P4,P5,P6,P7,P8",
+      "purpose": "Profile any generated table: schema, completeness, distributions, value frequency and correlations.",
+      "primary_question": "What does the underlying table actually contain?",
+      "visual_count": 5
+    },
+    {
+      "page_id": "PAGE-18",
+      "route": "/metrics",
+      "title": "Metric catalog",
+      "eyebrow": "Semantic layer",
+      "phase_ids": "P0,P1,P2,P3,P4,P5,P6,P7,P8",
+      "purpose": "One definition, formula, source locator, validation check and caveat per metric.",
+      "primary_question": "What does each metric mean and where does it come from?",
+      "visual_count": 4
+    },
+    {
+      "page_id": "PAGE-19",
+      "route": "/program",
+      "title": "Program profile",
+      "eyebrow": "Research program",
+      "phase_ids": "P0,P1,P2,P3,P4,P5,P6,P7,P8",
+      "purpose": "The program dossier: research questions, nine phase dossiers, run provenance, sources and reproducibility checklist.",
+      "primary_question": "What was run, in what order, and what bounds it?",
+      "visual_count": 6
+    },
+    {
+      "page_id": "PAGE-20",
+      "route": "/portfolio",
+      "title": "Project portfolio",
+      "eyebrow": "Research initiatives",
+      "phase_ids": "P0,P1,P2,P3,P4,P5,P6,P7,P8",
+      "purpose": "Seven research project dossiers, deliverables, risk ratings and multi-track initiatives matrix.",
+      "primary_question": "What research initiatives comprise the fraud defense portfolio?",
+      "visual_count": 6
+    }
+  ],
+  "measures_file": "dax/measures.dax",
+  "theme_file": "theme/fraud_evidence_theme.json",
+  "page_spec": "pages/page_spec.md",
+  "model_guide": "relationships.md",
+  "date_dimension": {
+    "table": "dim_date",
+    "mark_as_date_table": "dim_date[date]",
+    "relationship": "dim_date[week_end] *:1 dim_week[week_end]",
+    "cross_filter": "both",
+    "why_bidirectional": "dim_date has one row per day and repeats week_end seven times; dim_week has one row per week_end. A date slicer must propagate from the many side to the one side. This is the only bidirectional relationship and the only relationship touching dim_date."
+  },
+  "caveats": [
+    "Raw Kaggle CSVs are absent; the pack is built from generated artifacts.",
+    "Test metrics are out-of-distribution transfer estimates, not production generalization.",
+    "The ablation source `delta_pr_auc` column is relative to raw-only; use `fact_ablation[delta_vs_full]`.",
+    "The threshold table's `fp_cost_total` is total cost at $5/FP, not a per-FP parameter.",
+    "The final week (2021-01-03) is a partial zero-fraud edge week; dim_week marks it is_partial = TRUE.",
+    "Fact tables are pre-aggregated snapshots, not transaction rows. Do not sum across fact tables.",
+    "The Power BI pack is not a native PBIX and has not been opened in Power BI Desktop on this machine.",
+    "fact_insight and fact_anomaly_flag carry the console's deterministic rules. They are not model-generated statements.",
+    "fact_lineage_edge.is_verified = FALSE marks an inferred edge; keep the distinction in any visual that draws the graph.",
+    "Experiment groups are not comparable across dim_experiment_group rows; compare inside one group_id."
+  ]
+}

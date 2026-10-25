@@ -1,0 +1,11 @@
+id,label,value,format,definition,formula,source,verification,context
+transactions,Transactions analysed,1852394.0,integer,Total rows across the train and test source frames.,"1,296,675 train + 555,719 test",phase0_class_balance.csv,Verified from source table,"9,651 fraud events"
+fraud_rate,Observed fraud rate,0.0052100147160917,percent3,Fraud transactions divided by all transactions.,"9,651 / 1,852,394",phase0_class_balance.csv,Recomputed 0.5210%,Train 0.579% · Test 0.386%
+findings,Graded findings,64.0,integer,Entries in the run's findings ledger.,Count of findings_ledger.json records,logs/findings_ledger.json,Verified; 64 records,30 strong · 6 caveats
+artifacts,Generated artifacts,182.0,integer,"PNG figures, interactive HTML artifacts and CSV tables in the output bundle.",129 PNG + 7 HTML + 46 CSV,figures/ & tables/,Counted from the workspace,129 figures · 7 interactive
+run_time,End-to-end run,5513.0,minutes,Wall-clock time between the documented run start and end.,"18:01:59 − 16:30:06 = 5,513 s",logs/findings.md,Derived from recorded timestamps,91.9 min reported
+strong_findings,Strong findings,30.0,integer,Findings assigned grade 'strong' in the source ledger.,COUNT(findings WHERE grade = 'strong'),logs/findings_ledger.json,Verified,46.9% of all findings
+test_pr_auc,Test PR-AUC,0.5574801511963462,decimal4,Average precision on the held-out test split for the final 27-feature LightGBM. This is a cross-boundary OOD estimate.,"sklearn.average_precision_score(y_test, p_test)",phase8_ablation_decomposed.csv · FULL row,Loaded from source table,"95% bootstrap CI [0.5365, 0.5784]"
+wf_pr_auc,Walk-forward PR-AUC,0.9510414270082748,decimal4,Mean in-domain validation PR-AUC across four time-ordered folds.,mean(fold PR-AUC),phase8_wf_vs_test.csv,Loaded from source table,±0.0152 SD
+ood_gap,OOD transfer gap,0.4784610583856036,decimal4,Mean fold validation PR-AUC minus the same folds' test PR-AUC.,0.951041 − 0.472580,phase8_wf_vs_test.csv,Loaded from source table,Positive gap = transfer loss
+capture_1pct,Capture at 1% budget,0.6545454545454545,percent2,Share of test fraud events caught when reviewing the top 1% of scored transactions.,"1,404 / 2,145",phase8_capture_at_k.csv,Loaded from source table,68.70% of fraud dollars

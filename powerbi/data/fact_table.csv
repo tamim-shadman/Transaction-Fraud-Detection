@@ -1,0 +1,47 @@
+﻿table_id,title,category,description,phase_id,row_count,column_count,missing_cells,bytes,source
+figure_index,Figure index,Report metadata,Caption registry for the 129 PNG figures produced by the run.,P8,129,2,0,11386,tables/figure_index.csv
+findings_ledger,Findings ledger,Report metadata,64 graded findings across eight pre-registered research questions.,P8,64,5,0,24141,tables/findings_ledger.csv
+phase0_class_balance,Class balance by split,Data quality,"Transaction and fraud counts for train, test and overall.",P0,3,4,0,153,tables/phase0_class_balance.csv
+phase0_contracts,Data contracts,Data quality,Ten domain and integrity checks with observed values and pass/flag status.,P0,10,4,0,464,tables/phase0_contracts.csv
+phase0_generator_forensics,Generator forensics,Data quality,"Evidence about simulator mechanics: timestamp offset, merchant coordinates, ZIP3 purity and distance.",P0,7,2,0,249,tables/phase0_generator_forensics.csv
+phase0_schema,Schema profile,Data quality,"Dtype, completeness, cardinality, memory and analytical role for the derived frame.",P0,72,7,4,4260,tables/phase0_schema.csv
+phase1_amt_quantiles,Amount quantiles,Descriptive,"Selected percentiles for all, fraud and non-fraud transaction amounts.",P1,9,4,0,277,tables/phase1_amt_quantiles.csv
+phase1_category_table,Category volumes & rates,Descriptive,Transaction counts and raw fraud rates for the 14 merchant categories.,P1,14,4,0,634,tables/phase1_category_table.csv
+phase1_covid_window,COVID-window rates,Descriptive,"Fraud-rate comparison for the Jan–Feb, Mar–Jun and Jul–Dec 2020 windows.",P1,3,3,0,158,tables/phase1_covid_window.csv
+phase1_merchant_table,Merchant rates,Descriptive,Unshrunk transaction counts and fraud rates for 693 merchants.,P1,693,4,0,32643,tables/phase1_merchant_table.csv
+phase2_card_profiles,Cardholder profiles,Behavioral,"One row per card: volume, fraud count, amount profile, hour entropy and fraud-rate bin.",P2,999,9,0,93112,tables/phase2_card_profiles.csv
+phase2_city_table,City-level risk,Geography,"836 cities with volume, fraud count and empirical-Bayes shrunk fraud rate.",P2,836,6,0,49718,tables/phase2_city_table.csv
+phase2_dist_rate_table,Distance bins,Geography,Fraud rate by card→merchant distance bin; distance is a simulator artifact.,P2,6,4,0,245,tables/phase2_dist_rate_table.csv
+phase2_mi_table,Mutual information,Association,Mutual-information ranking of candidate features against the fraud target.,P2,14,2,0,442,tables/phase2_mi_table.csv
+phase2_money_category,Fraud dollars by category,Money lens,"Fraud counts, total fraud dollars and dollars per fraud by category.",P2,14,4,0,744,tables/phase2_money_category.csv
+phase2_zip3_table,ZIP3 empirical Bayes,Geography,"532 ZIP3 prefixes with Wilson intervals, significance, sparsity and EB-shrunk rates.",P2,532,12,0,90266,tables/phase2_zip3_table.csv
+phase3_weekly_rate_table,Weekly fraud rate,Temporal,"105 weekly observations with volume, fraud count and fraud rate.",P3,105,4,0,4344,tables/phase3_weekly_rate_table.csv
+phase4_anomaly_summary,Anomaly detector comparison,Unsupervised,"Isolation Forest, autoencoder and LOF AUC and top-decile lift.",P4,3,5,0,231,tables/phase4_anomaly_summary.csv
+phase4_dbscan_clusters,DBSCAN clusters,Clustering,Cluster sizes and fraud rates; the noise group carries elevated risk.,P4,2,3,0,86,tables/phase4_dbscan_clusters.csv
+phase4_kmeans_cluster_rate,K-Means clusters,Clustering,"Three-cluster solution with size, fraud count and fraud rate.",P4,3,4,0,127,tables/phase4_kmeans_cluster_rate.csv
+phase4_separability_table,Embedding separability,Unsupervised,Logistic AUC on seven 2D embeddings; PCA(2) performs best.,P4,7,2,0,242,tables/phase4_separability_table.csv
+phase5_category_posthoc_pairs,Category post-hoc pairs,Statistics,Pairwise category tests with Cramér's V and Bonferroni-adjusted p-values.,P5,72,6,0,7696,tables/phase5_category_posthoc_pairs.csv
+phase5_category_rates,Category rates with intervals,Statistics,"Fraud rates, Wilson intervals, FDR-adjusted significance and sparsity flags by category.",P5,14,11,0,2316,tables/phase5_category_rates.csv
+phase5_chi2_cramers,Categorical association,Statistics,"Chi-square and uncorrected Cramér's V for category, gender, state, job and ZIP3.",P5,5,7,0,275,tables/phase5_chi2_cramers.csv
+phase5_cluster_robust_logit,Cluster-robust logit,Statistics,Card-clustered logistic coefficients and robust intervals for eight features.,P5,9,10,0,788,tables/phase5_cluster_robust_logit.csv
+phase5_mw_effect_sizes,Effect sizes,Statistics,"Mann–Whitney, Cliff's delta, KS, Cohen's d and bootstrap intervals for 11 features.",P5,11,14,0,1384,tables/phase5_mw_effect_sizes.csv
+phase7_hazard_table,Discrete-time hazard,Survival,Month-by-month hazard of first fraud with Wilson intervals.,P6,24,6,0,1751,tables/phase7_hazard_table.csv
+phase7_high_risk_combo,High-risk combinations,Behavioral,"Fraud rate and lift for night, risky category, high amount and their combination.",P6,5,4,0,385,tables/phase7_high_risk_combo.csv
+phase7_hour_encoding_comparison,Hour encoding comparison,Modeling,"Validation PR-AUC for raw, cyclical and one-hot hour encodings.",P6,3,2,0,94,tables/phase7_hour_encoding_comparison.csv
+phase7_merchant_eb_table,Merchant hierarchical EB,Behavioral,"700 merchant rows with category prior, EB-shrunk rate and cleaned merchant name.",P6,700,7,0,75970,tables/phase7_merchant_eb_table.csv
+phase7_speed_rate_table,Implied-speed risk,Behavioral,Fraud rate by implied card→merchant speed bin.,P6,5,4,0,207,tables/phase7_speed_rate_table.csv
+phase8_ablation_decomposed,Feature-family ablation,Model evaluation,PR/ROC AUC after removing feature families; localizes the transfer failure.,P7,6,5,0,565,tables/phase8_ablation_decomposed.csv
+phase8_calibration_temp,Temperature scaling,Model evaluation,Post-hoc calibration on the early-stopping split; not the test split.,P7,1,7,0,223,tables/phase8_calibration_temp.csv
+phase8_capture_at_k,Capture@k,Model economics,Fraud events and dollars captured at five review budgets.,P7,5,8,0,630,tables/phase8_capture_at_k.csv
+phase8_cost_sensitivity,Cost sensitivity,Model economics,"Optimal threshold, loss, recall and precision across false-positive costs.",P7,5,5,0,491,tables/phase8_cost_sensitivity.csv
+phase8_ensemble_comparison,Ensemble comparison,Model evaluation,Single final model versus the mean prediction of four walk-forward models.,P7,2,3,0,137,tables/phase8_ensemble_comparison.csv
+phase8_learning_curve,Learning curve,Model evaluation,Test PR/ROC AUC at five training-fraction levels; non-monotonic under OOD shift.,P7,5,4,0,286,tables/phase8_learning_curve.csv
+phase8_leave_card_out,Leave-card-out CV,Model evaluation,"PR/ROC AUC for seen cards, held-out cards and held-out-card test rows.",P7,3,5,0,270,tables/phase8_leave_card_out.csv
+phase8_monotonic_comparison,Monotonic constraints,Model evaluation,Audit-compliant monotonic model versus the unconstrained final model.,P7,2,3,0,144,tables/phase8_monotonic_comparison.csv
+phase8_psi,Population Stability Index,Drift,Per-feature train→test PSI with stability verdict and top driver bin.,P7,27,7,2,2182,tables/phase8_psi.csv
+phase8_segment_errors,Segment errors,Model evaluation,"Recall and false positives by category, hour bin and state at the cost-min operating point.",P7,63,8,126,3315,tables/phase8_segment_errors.csv
+phase8_threshold_table,Operating points,Model economics,"Confusion counts, precision, recall and dollar loss at three thresholds.",P7,3,11,0,474,tables/phase8_threshold_table.csv
+phase8_time_decay_comparison,Time-decay weighting,Model evaluation,180-day half-life weighting versus the unweighted final model.,P7,2,3,0,139,tables/phase8_time_decay_comparison.csv
+phase8_walkforward_cv,Walk-forward CV,Model evaluation,Four time-ordered folds with in-domain validation and cross-boundary test metrics.,P7,4,9,0,640,tables/phase8_walkforward_cv.csv
+phase8_wf_vs_test,OOD gap summary,Model evaluation,"Mean in-domain and test PR-AUC across folds, with the transfer gap.",P7,1,6,0,207,tables/phase8_wf_vs_test.csv
+reproducibility_checklist,Reproducibility checklist,Report metadata,Eleven run-level reproducibility checks and their evidence.,P8,11,3,0,1303,tables/reproducibility_checklist.csv

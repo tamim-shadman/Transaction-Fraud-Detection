@@ -1,0 +1,130 @@
+figure,caption
+/content/outputs/figures/phase0_missing_matrix.png,missingno matrix
+/content/outputs/figures/phase0_missing_bar.png,missingno bar
+/content/outputs/figures/phase0_temporal_coverage.png,daily volume by split + boundary
+/content/outputs/figures/phase0_txns_per_card.png,identifier audit: activity per card
+/content/outputs/figures/phase1_amt_hist.png,amount distribution raw + log
+/content/outputs/figures/phase1_amt_box_violin.png,amount box + violin
+/content/outputs/figures/phase1_amt_overlay.png,amount density — fraud vs non-fraud (log10 x)
+/content/outputs/figures/phase1_amt_ecdf.png,amount ECDF — fraud vs non-fraud
+/content/outputs/figures/phase1_qq_amt_age.png,ADDED: QQ plots amount vs lognormal / age vs normal
+/content/outputs/figures/phase1_hour.png,night-time fraud concentration (plan §3.2)
+/content/outputs/figures/phase1_dow.png,weekday pattern; Mon=0
+/content/outputs/figures/phase1_month.png,monthly drift
+/content/outputs/figures/phase1_hour_by_year.png,2019 vs 2020 hourly fraud-rate comparison
+/content/outputs/figures/phase1_covid_window.png,COVID behavioral shift focus (plan §3.2)
+/content/outputs/figures/phase1_night.png,is_night flag
+/content/outputs/figures/phase1_weekend.png,is_weekend flag
+/content/outputs/figures/phase1_category.png,category volume + fraud rate (labels consistent across all plots)
+/content/outputs/figures/phase1_gender.png,gender (plan §3.3)
+/content/outputs/figures/phase1_state_forest.png,states with largest n; grey = not sig.
+/content/outputs/figures/phase1_job.png,long-tail jobs merged into 'Other'
+/content/outputs/figures/phase1_merchant_topN.png,ADDED: merchant top-N by volume and by fraud rate
+/content/outputs/figures/phase1_citypop.png,city population distribution
+/content/outputs/figures/phase1_citypop_bins.png,city_pop binning
+/content/outputs/figures/phase1_geo_scatter.png,coordinate clouds — note merchant jitter (§01 forensics)
+/content/outputs/figures/phase1_age.png,age distribution + fraud overlay
+/content/outputs/figures/phase1_age_bins.png,age bins 18-25/26-35/36-50/51-65/65+ (plan §3.4)
+/content/outputs/figures/phase1_target_donut.png,class imbalance donut (plan §3.5)
+/content/outputs/figures/phase1_gender_x_category.png,target interaction matrix (plan §3.5)
+/content/outputs/figures/phase2_amt_by_category.png,conditional amount by category
+/content/outputs/figures/phase2_amtbin_x_hour.png,"amount bins [0,10)/[10,50)/[50,100)/[100,500)/[500+ (plan §4.1)"
+/content/outputs/figures/phase2_amt_cdf.png,amount CDF — fraud vs non-fraud
+/content/outputs/figures/phase2_category_x_hour.png,does fraud concentrate in specific time-category combinations?
+/content/outputs/figures/phase2_dow_x_hour_vol.png,plan §4.2
+/content/outputs/figures/phase2_dow_x_hour_rate.png,fraud rate — weekday × hour
+/content/outputs/figures/phase2_dist_overlay.png,distance density — fraud vs non-fraud
+/content/outputs/figures/phase2_dist_rate.png,distance threshold effect (plan §4.3)
+/content/outputs/figures/phase2_zip3_forest.png,ADDED: zip-prefix regional risk
+/content/outputs/figures/phase2_gender_x_category.png,fraud rate — gender × category
+/content/outputs/figures/phase2_age_x_category.png,fraud rate — age bin × category
+/content/outputs/figures/phase2_citypop_x_category.png,fraud rate — city-pop bin × category
+/content/outputs/figures/phase2_pairplot.png,ADDED: pairplot colored by fraud
+/content/outputs/figures/phase2_joint_amt_dist.png,ADDED: jointplot amount × distance
+/content/outputs/figures/phase2_joint_amt_age.png,ADDED: jointplot amount × age
+/content/outputs/figures/phase2_card_scatter.png,mean amount vs txn count colored by fraud rate (plan §4.5)
+/content/outputs/figures/phase2_card_rate_hist.png,per-card fraud rate bimodality (plan §4.5)
+/content/outputs/figures/phase2_lorenz_fraud.png,money lens: concentration of fraud dollars
+/content/outputs/figures/phase2_money_category.png,money lens: fraud $ by category
+/content/outputs/figures/phase2_money_month.png,money lens: monthly fraud $
+/content/outputs/figures/phase2_spearman.png,correlation structure (plan §4.6)
+/content/outputs/figures/phase2_mi.png,MI feature ranking (plan §4.6)
+/content/outputs/figures/phase2_cramers_v.png,categorical association matrix
+/content/outputs/figures/phase3_daily_rolling.png,daily aggregates with rolling means (plan §5.1)
+/content/outputs/figures/phase3_weekly_rate.png,weekly aggregation (plan §5.1)
+/content/outputs/figures/phase3_stl.png,STL decomposition (plan §5.1)
+/content/outputs/figures/phase3_acf_pacf.png,ACF/PACF of daily volume & fraud rate (plan §5.2)
+/content/outputs/figures/phase3_hour_x_dow_vol.png,volume — hour × weekday
+/content/outputs/figures/phase3_hour_x_dow_rate.png,fraud rate — hour × weekday
+/content/outputs/figures/phase3_month_x_dow.png,fraud rate — month × weekday
+/content/outputs/figures/phase3_year_x_month.png,fraud rate — year × month
+/content/outputs/figures/phase3_hour_x_month.png,fraud rate — hour × month
+/content/outputs/figures/phase3_changepoint.png,structural break detection with penalty sensitivity
+/content/outputs/figures/phase3_card_timelines.png,card-level time lines (plan §5.5)
+/content/outputs/figures/phase3_interarrival.png,inter-transaction time distribution
+/content/outputs/figures/phase4_pca_scree.png,PCA scree plot (plan §6.1)
+/content/outputs/figures/phase4_pca_scatter.png,PC1-PC2 scatter (plan §6.1)
+/content/outputs/figures/phase4_pca_contours.png,density contour overlay on PCA
+/content/outputs/figures/phase4_pca_biplot.png,PCA biplot (plan §6.1)
+/content/outputs/figures/phase4_tsne_p30.png,"t-SNE perplexity=30, n=20000"
+/content/outputs/figures/phase4_tsne_p50.png,"t-SNE perplexity=50, n=20000"
+/content/outputs/figures/phase4_tsne_p100.png,"t-SNE perplexity=100, n=20000"
+/content/outputs/figures/phase4_umap_nn15_md0.1.png,UMAP n_neighbors=15 min_dist=0.1
+/content/outputs/figures/phase4_umap_nn50_md0.1.png,UMAP n_neighbors=50 min_dist=0.1
+/content/outputs/figures/phase4_umap_nn15_md0.5.png,UMAP n_neighbors=15 min_dist=0.5
+/content/outputs/figures/phase4_separability.png,separability comparison across embeddings
+/content/outputs/figures/phase4_kmeans_selection.png,KMeans elbow + silhouette + CH (plan §6.2)
+/content/outputs/figures/phase4_kmeans_fraud_rate.png,fraud rate per cluster
+/content/outputs/figures/phase4_kmeans_radar.png,radar chart of cluster centers
+/content/outputs/figures/phase4_kmeans_x_category.png,cluster composition by category
+/content/outputs/figures/phase4_dbscan_kdist.png,DBSCAN eps tuning
+/content/outputs/figures/phase4_dbscan_rate.png,DBSCAN fraud rate per cluster incl. noise
+/content/outputs/figures/phase4_dendrogram.png,hierarchical dendrogram
+/content/outputs/figures/phase4_if_scores.png,IF anomaly score — fraud vs non-fraud (AUC=0.843)
+/content/outputs/figures/phase4_if_vs_amt.png,IF score vs amount
+/content/outputs/figures/phase4_ae_error.png,autoencoder reconstruction error — fraud vs non-fraud (AUC=0.731)
+/content/outputs/figures/phase4_lof_scores.png,LOF score — fraud vs non-fraud (AUC=0.881)
+/content/outputs/figures/phase4_parallel_coords.png,parallel coordinates fraud vs non-fraud
+/content/outputs/figures/phase4_andrews.png,Andrews curves
+/content/outputs/figures/phase4_hexbin_rate_contours.png,hexbin density + fraud-rate contours
+/content/outputs/figures/phase4_raincloud_amt_category.png,raincloud amount by category
+/content/outputs/figures/phase4_swarm_amt.png,swarm plot for small stratified samples
+/content/outputs/figures/phase5_effectsize_forest.png,ADDED: effect-size forest with bootstrap CIs + FDR
+/content/outputs/figures/phase5_forest_category.png,forest plot of category fraud rates vs baseline (plan §7.3)
+/content/outputs/figures/phase5_forest_hour.png,hour forest — night elevation with CIs
+/content/outputs/figures/phase5_forest_job.png,ADDED depth: job-level rates with uncertainty
+/content/outputs/figures/phase7_speed_rate.png,velocity feature: fraud rate by speed bin (plan §8.1)
+/content/outputs/figures/phase7_cnt24h_rate.png,trailing 24h window count vs fraud rate
+/content/outputs/figures/phase7_dist_artifact.png,distance artifact narrative (plan + review narrative)
+/content/outputs/figures/phase7_te_leak_demo.png,ADDED: leakage quantification naive vs causal TE
+/content/outputs/figures/phase7_combo_lift.png,interaction risk concentration
+/content/outputs/figures/phase7_cohort_heatmap.png,cohort analysis (review depth item)
+/content/outputs/figures/phase7_card_age_curve.png,customer-lifetime framing
+/content/outputs/figures/phase7_km_first_fraud.png,KM time-to-first-fraud (plan §11 review: FIX #8)
+/content/outputs/figures/phase7_discrete_hazard.png,discrete-time hazard vs flat baseline (FIX #8)
+/content/outputs/figures/phase7_txns_before_fraud.png,lifetime distribution (review depth item)
+/content/outputs/figures/phase7_fraud_event_sizes.png,repeated-fraud event analysis (review depth item)
+/content/outputs/figures/phase7_merchant_hier_eb.png,merchant hierarchical EB ranking (review depth item)
+/content/outputs/figures/phase8_adversarial_importance.png,ADDED FIX #3: adversarial validation w/ held-out AUC
+/content/outputs/figures/phase8_psi.png,"Population Stability Index, train vs test (FIX #9: per-feature drift diagnostic)"
+/content/outputs/figures/phase8_walkforward_cv.png,time-series CV (review rigor item)
+/content/outputs/figures/phase8_wf_vs_test.png,FIX #10: within-train walk-forward vs same-model-on-test — the visual form of the OOD-generalisation gap
+/content/outputs/figures/phase8_ensemble_comparison.png,FIX #16: single final model vs mean-prediction ensemble of the walk-forward fold models
+/content/outputs/figures/phase8_roc_pr_curves.png,ADDED: ROC + PR curves
+/content/outputs/figures/phase8_confusion_f1max.png,ADDED: confusion matrix at F1-max threshold
+/content/outputs/figures/phase8_calibration.png,ADDED: calibration + Brier + ECE
+/content/outputs/figures/phase8_calibration_temp.png,FIX #15: post-hoc temperature scaling — does calibration improve without retraining?
+/content/outputs/figures/phase8_leave_card_out.png,FIX #14: leave-card-out CV — cross-customer generalisation vs within-customer
+/content/outputs/figures/phase8_cost_curve.png,cost-sensitive loss vs threshold
+/content/outputs/figures/phase8_cost_sensitivity.png,FIX #12: operating-point stability under FP-cost sweep — is the cost-min threshold robust to the friction assumption?
+/content/outputs/figures/phase8_capture_at_k.png,review-budget economics (plan + review)
+/content/outputs/figures/phase8_learning_curve.png,learning curve
+/content/outputs/figures/phase8_ablation_decomposed.png,FIX #11: decomposed ablation — which feature family drives the OOD failure
+/content/outputs/figures/phase8_shap_importance.png,SHAP global importance
+/content/outputs/figures/phase8_shap_beeswarm.png,SHAP beeswarm (FIX #7 sizing)
+/content/outputs/figures/phase8_shap_dep_log_amt.png,SHAP dependence — log_amt
+/content/outputs/figures/phase8_shap_dep_cat_code.png,SHAP dependence — cat_code
+/content/outputs/figures/phase8_shap_dep_card_prior_f.png,SHAP dependence — card_prior_fraud
+/content/outputs/figures/phase8_shap_dep_n_prior.png,SHAP dependence — n_prior
+/content/outputs/figures/phase8_pdp_ice.png,PDP + ICE curves (review missing item)
+/content/outputs/figures/phase8_segment_recall.png,residual analysis by segment

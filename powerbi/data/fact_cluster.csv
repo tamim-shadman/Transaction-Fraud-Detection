@@ -1,0 +1,6 @@
+﻿cluster_method,cluster_label,transaction_count,fraud_rate,fraud_count
+DBSCAN,noise,395,0.060759493670886,24
+DBSCAN,0,9605,0.0015616866215512,15
+K-Means,cluster 0,10622,0.0071549614008661,76
+K-Means,cluster 1,28952,0.0028668140370268,83
+K-Means,cluster 2,10426,0.0097832342221369,102
